@@ -6,18 +6,30 @@ namespace Lebeg134.Module.Structures
 {
 	public class LockedStructure : Structure
 	{
-		Structure subject;
+		Structure _subject;
 		
+		LockedStructure(Structure subject)
+        {
+			subject.Off();
+			_subject = subject;
+        }
 		public static LockedStructure wrap( Structure subject )
 		{
-			return null;
+			return new LockedStructure(subject);
 		}
-		
-		public Structure unwrap(  )
+		public Structure unwrap()
 		{
-			return null;
+			_subject.On();
+			return _subject;
 		}
-		
-	}
+        public override void On()
+        {
+            //Do nothing
+        }
+        public override void Off()
+        {
+            //Do nothing
+        }
+    }
 	
 }

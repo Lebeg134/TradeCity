@@ -1,17 +1,15 @@
 /**
  * @(#) IProducer.cs
  */
-
+using Lebeg134.Module.Resources;
+using System.Collections.Generic;
+using Lebeg134.Module.TimeManager;
 namespace Lebeg134.Module.Structures
 {
-	using TimeManager = Lebeg134.Module.TimeManager;
-	
-	public interface IProducer : TimeManager.ITickable
+	public interface IProducer : ITickable
 	{
-		Lebeg134.Module.Resources.Resource getProuce(  );
-		
-		Lebeg134.Module.Resources.Resource produce(  );
-		
+		List<Resource> getProduce();
+		void Produce();
 	}
-	
+
 }

@@ -263,13 +263,13 @@
     <Compile Include="Lebeg134\Module\Structures\CommonBuilding.cs" />
     <Compile Include="Lebeg134\Module\Structures\CommonProdBuilding.cs" />
     <Compile Include="Lebeg134\Module\Structures\CosmeticStructures.cs" />
-    <Compile Include="Lebeg134\Module\Structures\IMapStructure.cs" />
+    <Compile Include="Lebeg134\Module\Map\IMapStructure.cs" />
     <Compile Include="Lebeg134\Module\Structures\IOwnable.cs" />
     <Compile Include="Lebeg134\Module\Structures\IProducer.cs" />
     <Compile Include="Lebeg134\Module\Structures\IUpgradeable.cs" />
-    <Compile Include="Lebeg134\Module\Structures\IUpgrProd.cs" />
     <Compile Include="Lebeg134\Module\Structures\Land.cs" />
     <Compile Include="Lebeg134\Module\Structures\LockedStructure.cs" />
+    <Compile Include="Lebeg134\Module\Structures\ProducerStrategy.cs" />
     <Compile Include="Lebeg134\Module\Structures\SpecialBuilding.cs" />
     <Compile Include="Lebeg134\Module\Structures\SpecialProdBuilding.cs" />
     <Compile Include="Lebeg134\Module\Structures\Structure.cs" />

@@ -2,10 +2,10 @@
  * @(#) IMapStructure.cs
  */
 
-namespace Lebeg134.Module.Structures
+namespace Lebeg134.Module.Map
 {
 	public interface IMapStructure
 	{
+		//TODO
 	}
-	
 }

@@ -112,6 +112,13 @@ namespace Lebeg134.Module.Session
         {
 
         }
+        public void giveRes(List<Resource> resources)
+        {
+            foreach (Resource res in resources)
+            {
+                giveRes(res);
+            }
+        }
 
         public void freeze()
         {

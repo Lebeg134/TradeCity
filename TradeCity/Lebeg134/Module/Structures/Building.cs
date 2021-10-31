@@ -10,9 +10,9 @@ namespace Lebeg134.Module.Structures
 {
     public class Building : Structure, IOwnable
     {
-        private static readonly IOwnable[] Criteria;
-        private static readonly Resource[] Cost;
-        private static Resource[] Upkeep;
+        protected static readonly IOwnable[] Criteria;
+        protected static readonly Resource[] Cost;
+        protected static Resource[] Upkeep;
         protected Player owner;
 
         public Building(Player owner = null)
@@ -25,7 +25,7 @@ namespace Lebeg134.Module.Structures
         }
         public void Build(Player by)
         {
-            if (by.checkResources(new List<Resource>(Cost))&&
+            if (by.checkResources(new List<Resource>(Cost)) &&
                 by.checkStructures(new List<IOwnable>(Criteria)))
             {
                 by.subRes(new List<Resource>(Cost));

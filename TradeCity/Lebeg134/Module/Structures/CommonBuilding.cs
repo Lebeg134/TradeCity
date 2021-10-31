@@ -9,9 +9,9 @@ namespace Lebeg134.Module.Structures
 {
     public class CommonBuilding : Building, IUpgradeable
     {
-        static readonly List<Resource>[] upgradeLevelsCosts;
-        static readonly List<Resource>[] upkeepLevels;
-        int level = 1; //Leveling starts from 1
+        protected static readonly List<Resource>[] upgradeLevelsCosts;
+        protected static readonly List<Resource>[] upkeepLevels;
+        protected int level = 1; //Leveling starts from 1
 
         public void levelUp()
         {
@@ -20,7 +20,7 @@ namespace Lebeg134.Module.Structures
         }
         public override List<Resource> getUpkeep()
         {
-            return upkeepLevels[level-1];
+            return upkeepLevels[level - 1];
         }
     }
 

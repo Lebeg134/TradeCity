@@ -13,7 +13,7 @@ namespace Lebeg134.Module.Structures
         private static readonly IOwnable[] Criteria;
         private static readonly Resource[] Cost;
         private static Resource[] Upkeep;
-        Player owner;
+        protected Player owner;
 
         public Building(Player owner = null)
         {
@@ -28,10 +28,7 @@ namespace Lebeg134.Module.Structures
             if (by.checkResources(new List<Resource>(Cost))&&
                 by.checkStructures(new List<IOwnable>(Criteria)))
             {
-                foreach (Resource resource in Cost)
-                {
-                    by.subRes(resource);
-                }
+                by.subRes(new List<Resource>(Cost));
                 by.giveStructure(this);
             }
         }

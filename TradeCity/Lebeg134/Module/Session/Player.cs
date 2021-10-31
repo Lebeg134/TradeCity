@@ -96,7 +96,13 @@ namespace Lebeg134.Module.Session
         {
 
         }
-
+        public void subRes(List<Resource> resources)
+        {
+            foreach (Resource res in resources)
+            {
+                subRes(res);
+            }
+        }
         public int getRes(Resource resource)
         {
             return 0;

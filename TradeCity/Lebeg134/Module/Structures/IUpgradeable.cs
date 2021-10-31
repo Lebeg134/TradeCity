@@ -4,10 +4,8 @@
 
 namespace Lebeg134.Module.Structures
 {
-	public interface IUpgradeable
-	{
-		void levelUp(  );
-		
-	}
-	
+    public interface IUpgradeable
+    {
+        void levelUp();
+    }
 }

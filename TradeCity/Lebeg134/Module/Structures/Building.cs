@@ -15,16 +15,17 @@ namespace Lebeg134.Module.Structures
         private static Resource[] Upkeep;
         Player owner;
 
-        public Building(Player owner)
+        public Building(Player owner = null)
         {
             this.owner = owner;
         }
-        public List<Resource> getUpkeep()
+        public virtual List<Resource> getUpkeep()
         {
             return new List<Resource>(Upkeep);
         }
         public void Build(Player by)
         {
+            //Move checks to Player
             bool canBuild = true;
             List<Resource> missingRes = new List<Resource>();
             List<IOwnable> missingCrit = new List<IOwnable>();

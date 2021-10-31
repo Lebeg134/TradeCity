@@ -10,17 +10,17 @@ namespace Lebeg134.Module.Map
 	{
 		Lebeg134.Module.Structures.Land subject;
 		
-		Integer curPrice;
+		int curPrice;
 		
-		Integer minBid;
+		int minBid;
 		
 		Lebeg134.Module.Session.Player lastBidder;
 		
-		Integer timeRemaining;
+		int timeRemaining;
 		
-		Integer timePerRound;
+		int timePerRound;
 		
-		public void bid( Lebeg134.Module.Session.Player by, Integer bid )
+		public void bid( Lebeg134.Module.Session.Player by, int bid )
 		{
 			
 		}

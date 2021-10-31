@@ -6,24 +6,24 @@ namespace Lebeg134.Module.Resources
 {
 	public class ContinousResource : Resource
 	{
-		static Integer baseline = 0;
+		static int baseline = 0;
 		
-		public void incBase( Integer by )
+		public void incBase( int by )
 		{
 			
 		}
 		
-		public void decBase( Integer by )
+		public void decBase( int by )
 		{
 			
 		}
 		
-		public void gain( Integer amount )
+		public void gain( int amount )
 		{
 			
 		}
 		
-		public void spend( Integer amount )
+		public void spend( int amount )
 		{
 			
 		}

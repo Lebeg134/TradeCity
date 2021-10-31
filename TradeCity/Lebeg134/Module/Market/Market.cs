@@ -6,7 +6,7 @@ namespace Lebeg134.Module.Market
 {
 	public class Market
 	{
-		void generateListing( ISellable of, Integer num )
+		void generateListing( ISellable of, int num )
 		{
 			
 		}
@@ -21,12 +21,12 @@ namespace Lebeg134.Module.Market
 			return 0;
 		}
 		
-		public Integer getMinSell( ISellable sellable )
+		public int getMinSell( ISellable sellable )
 		{
 			return null;
 		}
 		
-		public Integer getMaxBuy( ISellable sellable )
+		public int getMaxBuy( ISellable sellable )
 		{
 			return null;
 		}

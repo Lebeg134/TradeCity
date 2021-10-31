@@ -12,9 +12,9 @@ namespace Lebeg134.Module.Market
 		
 		ISellable forSellable;
 		
-		Integer timeLeft;
+		int timeLeft;
 		
-		public void conplete( Integer num, Lebeg134.Module.Session.Player by )
+		public void conplete( int num, Lebeg134.Module.Session.Player by )
 		{
 			
 		}

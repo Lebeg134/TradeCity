@@ -12,7 +12,7 @@ namespace Lebeg134.Module.Market
 		
 		public double sellLog;
 		
-		public Integer buyLog;
+		public int buyLog;
 		
 	}
 	

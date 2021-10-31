@@ -6,24 +6,24 @@ namespace Lebeg134.Module.Resources
 {
 	public class LimitResource : Resource
 	{
-		static Integer limit;
+		static int limit;
 		
-		public void incLimit( Integer by )
+		public void incLimit( int by )
 		{
 			
 		}
 		
-		public void decLimit( Integer by )
+		public void decLimit( int by )
 		{
 			
 		}
 		
-		public void gain( Integer amount )
+		public void gain( int amount )
 		{
 			
 		}
 		
-		public void spend( Integer amount )
+		public void spend( int amount )
 		{
 			
 		}

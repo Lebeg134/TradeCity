@@ -48,7 +48,7 @@ namespace Lebeg134.Module.Session
 			
 		}
 		
-		public Integer getRes( Lebeg134.Module.Resources.Resource resource )
+		public int getRes( Lebeg134.Module.Resources.Resource resource )
 		{
 			return null;
 		}

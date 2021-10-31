@@ -242,6 +242,96 @@
     <Compile Include="GumRuntimes\RectangleRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\SpriteRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\TextRuntime.Generated.cs" />
+    <Compile Include="Lebeg134\Module\Map\Auction.cs" />
+    <Compile Include="Lebeg134\Module\Map\Map.cs" />
+    <Compile Include="Lebeg134\Module\Market\ISellable.cs" />
+    <Compile Include="Lebeg134\Module\Market\Item.cs" />
+    <Compile Include="Lebeg134\Module\Market\Listing.cs" />
+    <Compile Include="Lebeg134\Module\Market\Market.cs" />
+    <Compile Include="Lebeg134\Module\Resources\ContinousResource.cs" />
+    <Compile Include="Lebeg134\Module\Resources\LimitResource.cs" />
+    <Compile Include="Lebeg134\Module\Resources\Resource.cs" />
+    <Compile Include="Lebeg134\Module\Resources\StandardResource.cs" />
+    <Compile Include="Lebeg134\Module\Session\BankruptPlayerStrategy.cs" />
+    <Compile Include="Lebeg134\Module\Session\Country.cs" />
+    <Compile Include="Lebeg134\Module\Session\FrozenPlayerStrategy.cs" />
+    <Compile Include="Lebeg134\Module\Session\IPlayerStrategy.cs" />
+    <Compile Include="Lebeg134\Module\Session\Player.cs" />
+    <Compile Include="Lebeg134\Module\Session\PlayerStrategyBase.cs" />
+    <Compile Include="Lebeg134\Module\Session\Session.cs" />
+    <Compile Include="Lebeg134\Module\Structures\Building.cs" />
+    <Compile Include="Lebeg134\Module\Structures\CommonBuilding.cs" />
+    <Compile Include="Lebeg134\Module\Structures\CommonProdBuilding.cs" />
+    <Compile Include="Lebeg134\Module\Structures\CosmeticStructures.cs" />
+    <Compile Include="Lebeg134\Module\Structures\IMapStructure.cs" />
+    <Compile Include="Lebeg134\Module\Structures\IOwnable.cs" />
+    <Compile Include="Lebeg134\Module\Structures\IProducer.cs" />
+    <Compile Include="Lebeg134\Module\Structures\IUpgradeable.cs" />
+    <Compile Include="Lebeg134\Module\Structures\IUpgrProd.cs" />
+    <Compile Include="Lebeg134\Module\Structures\Land.cs" />
+    <Compile Include="Lebeg134\Module\Structures\LockedStructure.cs" />
+    <Compile Include="Lebeg134\Module\Structures\SpecialBuilding.cs" />
+    <Compile Include="Lebeg134\Module\Structures\SpecialProdBuilding.cs" />
+    <Compile Include="Lebeg134\Module\Structures\Structure.cs" />
+    <Compile Include="Lebeg134\Module\TimeManager\Clock.cs" />
+    <Compile Include="Lebeg134\Module\TimeManager\ITickable.cs" />
+    <Compile Include="Lebeg134\Resources\Common\Iron.cs" />
+    <Compile Include="Lebeg134\Resources\Common\Steel.cs" />
+    <Compile Include="Lebeg134\Resources\Common\Water.cs" />
+    <Compile Include="Lebeg134\Resources\Common\Wood.cs" />
+    <Compile Include="Lebeg134\Resources\ConstructionIndustry\Bricks.cs" />
+    <Compile Include="Lebeg134\Resources\ConstructionIndustry\Concrete.cs" />
+    <Compile Include="Lebeg134\Resources\ConstructionIndustry\Glass.cs" />
+    <Compile Include="Lebeg134\Resources\ConstructionIndustry\Insulation.cs" />
+    <Compile Include="Lebeg134\Resources\ConstructionIndustry\Lumber.cs" />
+    <Compile Include="Lebeg134\Resources\ConstructionIndustry\ReinforcedConcrete.cs" />
+    <Compile Include="Lebeg134\Resources\ConstructionIndustry\Sand.cs" />
+    <Compile Include="Lebeg134\Resources\ConstructionIndustry\Stone.cs" />
+    <Compile Include="Lebeg134\Resources\EnergySector\Coal.cs" />
+    <Compile Include="Lebeg134\Resources\EnergySector\Electricity.cs" />
+    <Compile Include="Lebeg134\Resources\EnergySector\Steam.cs" />
+    <Compile Include="Lebeg134\Resources\OilIndustry\Chemicals.cs" />
+    <Compile Include="Lebeg134\Resources\OilIndustry\Fuel.cs" />
+    <Compile Include="Lebeg134\Resources\OilIndustry\Gas.cs" />
+    <Compile Include="Lebeg134\Resources\OilIndustry\Ink.cs" />
+    <Compile Include="Lebeg134\Resources\OilIndustry\Kerosene.cs" />
+    <Compile Include="Lebeg134\Resources\OilIndustry\Oil.cs" />
+    <Compile Include="Lebeg134\Resources\OilIndustry\Paint.cs" />
+    <Compile Include="Lebeg134\Resources\OilIndustry\Plastic.cs" />
+    <Compile Include="Lebeg134\Resources\Workforce\Population.cs" />
+    <Compile Include="Lebeg134\Resources\Workforce\Workforce.cs" />
+    <Compile Include="Lebeg134\Structures\Common\SteelForge.cs" />
+    <Compile Include="Lebeg134\Structures\ConstructionIndustry\AdvancedMaterialResearchLab.cs" />
+    <Compile Include="Lebeg134\Structures\ConstructionIndustry\ConcreteMixingPlant.cs" />
+    <Compile Include="Lebeg134\Structures\ConstructionIndustry\CraftsmanHQ.cs" />
+    <Compile Include="Lebeg134\Structures\ConstructionIndustry\GlassKiln.cs" />
+    <Compile Include="Lebeg134\Structures\ConstructionIndustry\InsulationFactory.cs" />
+    <Compile Include="Lebeg134\Structures\ConstructionIndustry\Lumberyard.cs" />
+    <Compile Include="Lebeg134\Structures\ConstructionIndustry\ReinforcedConcretePackager.cs" />
+    <Compile Include="Lebeg134\Structures\ConstructionIndustry\StoneCutter.cs" />
+    <Compile Include="Lebeg134\Structures\EnergySector\BiomassPowerplant.cs" />
+    <Compile Include="Lebeg134\Structures\EnergySector\CoalPowerplant.cs" />
+    <Compile Include="Lebeg134\Structures\EnergySector\FireStation.cs" />
+    <Compile Include="Lebeg134\Structures\EnergySector\FuelPowerplant.cs" />
+    <Compile Include="Lebeg134\Structures\EnergySector\FuelSafetyInstitute.cs" />
+    <Compile Include="Lebeg134\Structures\EnergySector\GasPowerplant.cs" />
+    <Compile Include="Lebeg134\Structures\EnergySector\GasSafetyInstitute.cs" />
+    <Compile Include="Lebeg134\Structures\EnergySector\HighEnergyFuelPowerplant.cs" />
+    <Compile Include="Lebeg134\Structures\Lands\ClearwaterLake.cs" />
+    <Compile Include="Lebeg134\Structures\Lands\CoalMine.cs" />
+    <Compile Include="Lebeg134\Structures\Lands\Forest.cs" />
+    <Compile Include="Lebeg134\Structures\Lands\IronMine.cs" />
+    <Compile Include="Lebeg134\Structures\Lands\OilField.cs" />
+    <Compile Include="Lebeg134\Structures\Lands\OilRig.cs" />
+    <Compile Include="Lebeg134\Structures\Lands\SandQuarry.cs" />
+    <Compile Include="Lebeg134\Structures\Lands\StoneQuarry.cs" />
+    <Compile Include="Lebeg134\Structures\Lands\Well.cs" />
+    <Compile Include="Lebeg134\Structures\OilIndustry\CatalyticReformer.cs" />
+    <Compile Include="Lebeg134\Structures\OilIndustry\ChemicalResearchFacility.cs" />
+    <Compile Include="Lebeg134\Structures\OilIndustry\ChemicalSafetyBureau.cs" />
+    <Compile Include="Lebeg134\Structures\OilIndustry\MeroxPlant.cs" />
+    <Compile Include="Lebeg134\Structures\OilIndustry\OilDistillery.cs" />
+    <Compile Include="Lebeg134\Structures\OilIndustry\Polymerizer.cs" />
     <Compile Include="Performance\IEntityFactory.Generated.cs" />
     <Compile Include="Performance\PoolList.Generated.cs" />
     <Compile Include="Program.cs" />
@@ -597,9 +687,7 @@
       <Version>12.0.3</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Lebeg134\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

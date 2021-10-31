@@ -35,7 +35,7 @@ namespace Lebeg134.Module.TimeManager
                 tickable.tick();
         }
     }
-    public enum Speed: int
+    public enum Speed : int
     {
         SLOW = 2000,
         NORMAL = 1000,

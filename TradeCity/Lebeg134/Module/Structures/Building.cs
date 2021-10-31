@@ -25,33 +25,8 @@ namespace Lebeg134.Module.Structures
         }
         public void Build(Player by)
         {
-            //Move checks to Player
-            bool canBuild = true;
-            List<Resource> missingRes = new List<Resource>();
-            List<IOwnable> missingCrit = new List<IOwnable>();
-            foreach (Resource res in Cost)
-            {
-                if (by.getRes(res) - res.amount() < 0)
-                {
-                    canBuild = false;
-                    missingRes.Add(res); // TODO amount of missing resources
-                }
-            }
-            if (!canBuild)
-                throw new NotEnoughResourceException(missingRes);
-            foreach (IOwnable ownable in Criteria)
-            {
-                if (!by.hasStructure(ownable))
-                {
-                    canBuild = false;
-                    missingCrit.Add(ownable);
-                }
-            }
-            if (!canBuild)
-            {
-                throw new MissingCriteriaException(missingCrit);
-            }
-            else
+            if (by.checkResources(new List<Resource>(Cost))&&
+                by.checkStructures(new List<IOwnable>(Criteria)))
             {
                 foreach (Resource resource in Cost)
                 {
@@ -67,12 +42,12 @@ namespace Lebeg134.Module.Structures
     }
 
     [Serializable]
-    internal class MissingCriteriaException : Exception
+    internal class MissingStructuresException : Exception
     {
-        List<IOwnable> missingCriteria;
-        public MissingCriteriaException(List<IOwnable> missingCriteria)
+        List<IOwnable> missingStructures;
+        public MissingStructuresException(List<IOwnable> missingStructures)
         {
-            this.missingCriteria = missingCriteria;
+            this.missingStructures = missingStructures;
         }
     }
 }

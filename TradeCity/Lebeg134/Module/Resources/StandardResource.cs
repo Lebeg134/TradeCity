@@ -5,7 +5,7 @@ using Lebeg134.Module.Market;
 
 namespace Lebeg134.Module.Resources
 {
-    public class StandardResource : Resource, Market.ISellable
+    public abstract class StandardResource : Resource, Market.ISellable
     {
         public double getValue()
         {

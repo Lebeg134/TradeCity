@@ -1,13 +1,11 @@
 /**
- * @(#) IOwnable.cs
- */
-
+* @(#) IOwnable.cs
+*/
+using Lebeg134.Module.Session;
 namespace Lebeg134.Module.Structures
 {
-	public interface IOwnable
-	{
-		void acquire( Lebeg134.Module.Session.Player by );
-		
-	}
-	
+    public interface IOwnable
+    {
+        void acquire(Player by);
+    }
 }

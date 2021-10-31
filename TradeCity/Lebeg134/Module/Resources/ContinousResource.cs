@@ -5,7 +5,7 @@ using Lebeg134.Module.TimeManager;
 
 namespace Lebeg134.Module.Resources
 {
-    public class ContinousResource : Resource, ITickable
+    public abstract class ContinousResource : Resource, ITickable
     {
         static int baseLine = 0;
         public void IncBase(int by)

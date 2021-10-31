@@ -4,7 +4,7 @@
 
 namespace Lebeg134.Module.Resources
 {
-    public class LimitResource : Resource
+    public abstract class LimitResource : Resource
     {
         static int limit;
 

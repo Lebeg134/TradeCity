@@ -14,7 +14,7 @@ namespace Lebeg134.Module.Resources
         protected int stock;
         public Resource(int amount = 0)
         {
-            if (amount >= 0)
+            if (amount > 0)
                 stock = amount;
             else
                 stock = 0;
@@ -25,14 +25,23 @@ namespace Lebeg134.Module.Resources
         }
         public virtual void gain(int amount)
         {
+            if (amount < 0)
+            {
+                throw new ArgumentException("Can not gain negative amount");
+            }
             stock += amount;
         }
         public virtual void spend(int amount)
         {
+            if (amount < 0)
+            {
+                throw new ArgumentException("Can not spend negative amount");
+            }
             if (stock >= amount)
                 stock -= amount;
             else throw new NotEnoughResourceException();
         }
+        public abstract Resource getNewResource(int amount);
         protected Resource Add(Resource B)
         {
             gain(B.stock);

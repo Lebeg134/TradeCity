@@ -1,0 +1,48 @@
+{
+  "UserEvents": {
+    "user": [
+      {
+        "NewName": " GameScreenGum.Button",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-10-17T21:05:52.509199Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " GameScreenGum.Container Button in  GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-10-17T21:06:00.9847966Z"
+      },
+      {
+        "NewName": " GameScreenGum.CircleInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-10-17T21:06:08.8050977Z"
+      },
+      {
+        "NewName": " GameScreenGum.ButtonInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-10-17T21:06:20.2008185Z"
+      },
+      {
+        "NewName": " Level1Gum.CircleInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-10-17T21:09:03.8262133Z"
+      },
+      {
+        "NewName": " Level2Gum.CircleInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-10-17T21:09:05.9887226Z"
+      }
+    ]
+  }
+}

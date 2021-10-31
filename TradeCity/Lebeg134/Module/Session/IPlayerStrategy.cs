@@ -12,7 +12,7 @@ namespace Lebeg134.Module.Session
 		
 		void unFreeze(  );
 		
-		Boolean isFrozen(  );
+		bool isFrozen(  );
 		
 		void goBankrupt(  );
 		

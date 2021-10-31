@@ -28,7 +28,7 @@ namespace Lebeg134.Module.Session
 			
 		}
 		
-		public Boolean hasStructure( Lebeg134.Module.Structures.IOwnable structure )
+		public bool hasStructure( Lebeg134.Module.Structures.IOwnable structure )
 		{
 			return null;
 		}
@@ -38,7 +38,7 @@ namespace Lebeg134.Module.Session
 			
 		}
 		
-		public Boolean hasRes( Lebeg134.Module.Resources.Resource res )
+		public bool hasRes( Lebeg134.Module.Resources.Resource res )
 		{
 			return null;
 		}
@@ -68,7 +68,7 @@ namespace Lebeg134.Module.Session
 			
 		}
 		
-		public Boolean isFrozen(  )
+		public bool isFrozen(  )
 		{
 			return null;
 		}

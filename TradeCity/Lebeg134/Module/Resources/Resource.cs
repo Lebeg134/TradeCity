@@ -2,7 +2,7 @@
 * @(#) Resource.cs
 */
 using System;
-using System.Runtime.Serialization;
+using System.Collections.Generic;
 
 namespace Lebeg134.Module.Resources
 {
@@ -18,6 +18,10 @@ namespace Lebeg134.Module.Resources
                 stock = amount;
             else
                 stock = 0;
+        }
+        public int amount()
+        {
+            return stock;
         }
         public virtual void gain(int amount)
         {
@@ -48,6 +52,14 @@ namespace Lebeg134.Module.Resources
             return A.Sub(B);
         }
     }
+
     [Serializable]
-    internal class NotEnoughResourceException : Exception { }
+    internal class NotEnoughResourceException : Exception
+    {
+        List<Resource> missingResources;
+        public NotEnoughResourceException(List<Resource> missingResources = null)
+        {
+            this.missingResources = missingResources;
+        }
+    }
 }

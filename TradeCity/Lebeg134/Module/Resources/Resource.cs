@@ -8,8 +8,10 @@ namespace Lebeg134.Module.Resources
 {
     public abstract class Resource
     {
-        static readonly int id = 0;
-        int stock;
+        //ID used to identify resource
+        //static readonly int id = 0; Might not even be needed
+        //Amount of resource stored
+        protected int stock;
         public Resource(int amount = 0)
         {
             if (amount >= 0)
@@ -17,12 +19,11 @@ namespace Lebeg134.Module.Resources
             else
                 stock = 0;
         }
-        public void gain(int amount)
+        public virtual void gain(int amount)
         {
             stock += amount;
         }
-
-        public void spend(int amount)
+        public virtual void spend(int amount)
         {
             if (stock >= amount)
                 stock -= amount;
@@ -47,7 +48,6 @@ namespace Lebeg134.Module.Resources
             return A.Sub(B);
         }
     }
-
     [Serializable]
     internal class NotEnoughResourceException : Exception { }
 }

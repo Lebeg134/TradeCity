@@ -1,35 +1,50 @@
 /**
  * @(#) Auction.cs
  */
+using Lebeg134.Module.Session;
+using Lebeg134.Module.Structures;
+using Lebeg134.Module.TimeManager;
 
 namespace Lebeg134.Module.Map
 {
-	using TimeManager = Lebeg134.Module.TimeManager;
-	
-	public class Auction : TimeManager.ITickable
-	{
-		Lebeg134.Module.Structures.Land subject;
-		
-		int curPrice;
-		
-		int minBid;
-		
-		Lebeg134.Module.Session.Player lastBidder;
-		
-		int timeRemaining;
-		
-		int timePerRound;
-		
-		public void bid( Lebeg134.Module.Session.Player by, int bid )
-		{
-			
-		}
-		
-		public void finish(  )
-		{
-			
-		}
-		
-	}
-	
+    public class Auction : ITickable
+    {
+        Land _subject;
+        int _currentPrice;
+        int _minBid;
+        Player _lastBidder;
+        int _timeRemaining;
+        int _timePerRound;
+
+        public Auction(Land subject, int minBid, int timePerRound, Player initiater = null)
+        {
+            _subject = subject;
+            _currentPrice = subject.GetStartingPrice();
+            _minBid = minBid;
+            _timeRemaining = timePerRound;
+            _timePerRound = timePerRound;
+            _lastBidder = initiater;
+        }
+        public void bid(Player by, int bid)
+        {
+            if (bid > _currentPrice + _minBid)
+            {
+                _timeRemaining = _timePerRound;
+                _lastBidder = by;
+            }
+        }
+        public void finish()
+        {
+            if (_lastBidder != null)
+            {
+                _subject.acquire(_lastBidder);
+            }
+        }
+        public void tick()
+        {
+            if (--_timeRemaining <= 0)
+                finish();
+        }
+    }
+
 }

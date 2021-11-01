@@ -12,10 +12,14 @@ namespace Lebeg134.Module.Structures
     {
         protected static readonly List<Resource>[] upgradeLevelsCosts;
         protected static readonly List<Resource>[] productionLevels;
-        protected static int startingPrice;
+        public static int StartingPrice { get; set; }
         protected Player owner;
         protected int level = 1; //Leveling starts from 1
 
+        public int GetStartingPrice()
+        {
+            return StartingPrice;
+        }
         public void acquire(Player by)
         {
             owner = by;

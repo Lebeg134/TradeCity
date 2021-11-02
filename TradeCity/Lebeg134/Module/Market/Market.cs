@@ -2,7 +2,7 @@
  * @(#) Market.cs
  */
 
-namespace Lebeg134.Module.Market
+namespace Lebeg134.Module.MarketNS
 {
 	public class Market
 	{

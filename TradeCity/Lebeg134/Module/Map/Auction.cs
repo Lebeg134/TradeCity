@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Lebeg134.Module.Map
+namespace Lebeg134.Module.MapNS
 {
     public class Auction : ITickable, IEqualityComparer<Auction>
     {

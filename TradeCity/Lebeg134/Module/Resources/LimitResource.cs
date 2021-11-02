@@ -30,6 +30,7 @@ namespace Lebeg134.Module.Resources
             else
             {
                 stock = limit;
+                //throw new ResourceLimitExceededException();
             }
         }
     }

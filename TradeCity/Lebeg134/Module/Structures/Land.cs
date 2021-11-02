@@ -1,7 +1,7 @@
 /**
 * @(#) Land.cs
 */
-using Lebeg134.Module.Map;
+using Lebeg134.Module.MapNS;
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Session;
 using Lebeg134.Module.TimeManager;

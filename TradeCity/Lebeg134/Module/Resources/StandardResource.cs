@@ -1,7 +1,7 @@
 /**
 * @(#) StandardResource.cs
 */
-using Lebeg134.Module.Market;
+using Lebeg134.Module.MarketNS;
 
 namespace Lebeg134.Module.Resources
 {

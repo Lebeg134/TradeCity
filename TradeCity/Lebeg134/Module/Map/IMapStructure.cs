@@ -3,7 +3,7 @@
 */
 using System.Collections.Generic;
 
-namespace Lebeg134.Module.Map
+namespace Lebeg134.Module.MapNS
 {
 	public interface IMapStructure : IEqualityComparer<IMapStructure>
 	{

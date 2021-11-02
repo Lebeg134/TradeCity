@@ -7,7 +7,7 @@ namespace Lebeg134.Module.Session
     public interface IPlayerStrategy
     {
         void freeze();
-        void unFreeze();
+        void unFreeze(IPlayerStrategy newStrategy);
         bool isFrozen();
         void goBankrupt();
         void tick();

@@ -10,19 +10,14 @@ namespace Lebeg134.Module.Session
 {
 
 
-    public class Player : ITickable
+    public partial class Player : ITickable
     {
         Session session;
         List<Building> ownedBuildings;
         List<Land> ownedLands;
-        //List<Resource> ownedResources;
         Dictionary<System.Type, Resource> ownedResources;
         IPlayerStrategy playerStrategy;
 
-        void simResources()
-        {
-
-        }
         public bool hasStructure(IOwnable structure)
         {
             foreach (Land land in ownedLands)
@@ -85,11 +80,6 @@ namespace Lebeg134.Module.Session
                 throw new NotEnoughResourceException(missingResources);
             return valid;
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="resource"></param>
-        /// <exception cref="NotEnoughResourceException"></exception>
         public void subRes(Resource resource)
         {
             ownedResources[resource.GetType()] -= resource;
@@ -124,9 +114,9 @@ namespace Lebeg134.Module.Session
         {
             playerStrategy.freeze();
         }
-        public void unFreeze()
+        public void unFreeze(IPlayerStrategy newStrategy)
         {
-            playerStrategy.unFreeze();
+            playerStrategy.unFreeze(newStrategy);
         }
         public bool isFrozen()
         {

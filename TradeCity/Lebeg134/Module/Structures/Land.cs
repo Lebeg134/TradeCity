@@ -4,6 +4,7 @@
 using Lebeg134.Module.Map;
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Session;
+using Lebeg134.Module.TimeManager;
 using System.Collections.Generic;
 
 namespace Lebeg134.Module.Structures
@@ -17,6 +18,10 @@ namespace Lebeg134.Module.Structures
         protected int level = 1; //Leveling starts from 1
         private int _x = -1, _y = -1;
 
+        public Land()
+        {
+            register();
+        }
         public bool Equals(Land A, Land B)
         {
             return A.GetType() == B.GetType() && A._x == B._x && A._y == B._y && A.owner == B.owner;
@@ -46,10 +51,18 @@ namespace Lebeg134.Module.Structures
         {
             Produce();
         }
+        public void register()
+        {
+            Clock.Instance.Register(this);
+        }
         public void SetCoords(int x, int y)
         {
             _x = x;
             _y = y;
+        }
+        public virtual bool IsAuctionable()
+        {
+            return true;
         }
         public bool Equals(IMapStructure a, IMapStructure b)
         {
@@ -80,8 +93,5 @@ namespace Lebeg134.Module.Structures
         {
             return GetHashCode((Land)obj);
         }
-
-
     }
-
 }

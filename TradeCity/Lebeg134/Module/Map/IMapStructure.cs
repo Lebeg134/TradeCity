@@ -8,6 +8,7 @@ namespace Lebeg134.Module.Map
 	public interface IMapStructure : IEqualityComparer<IMapStructure>
 	{
 		void SetCoords(int x, int y);
+		bool IsAuctionable();
 		//TODO when graphics
 	}
 }

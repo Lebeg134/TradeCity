@@ -41,11 +41,14 @@ namespace Lebeg134.Module.Map
                 _subject.acquire(_lastBidder);
             }
         }
-
         public void tick()
         {
             if (--_timeRemaining <= 0)
                 finish();
+        }
+        public void register()
+        {
+            //Do nothing - Auctions are ticked by container
         }
         public bool Equals(Auction x, Auction y)
         {
@@ -55,6 +58,7 @@ namespace Lebeg134.Module.Map
         {
             return _subject.GetHashCode();
         }
+        
     }
 
 }

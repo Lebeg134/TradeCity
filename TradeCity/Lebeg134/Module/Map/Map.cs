@@ -60,7 +60,14 @@ namespace Lebeg134.Module.Map
         {
             foreach (Auction auction in _liveAuctions)
             {
-                auction.tick();
+                try
+                {
+                    auction.tick();
+                }
+                catch (AuctionFinishedException)
+                {
+                    _liveAuctions.Remove(auction);
+                }
             }
         }
         public void register()

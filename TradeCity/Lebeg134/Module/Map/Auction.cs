@@ -4,7 +4,9 @@
 using Lebeg134.Module.Session;
 using Lebeg134.Module.Structures;
 using Lebeg134.Module.TimeManager;
+using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace Lebeg134.Module.Map
 {
@@ -39,6 +41,7 @@ namespace Lebeg134.Module.Map
             if (_lastBidder != null)
             {
                 _subject.acquire(_lastBidder);
+                throw new AuctionFinishedException();
             }
         }
         public void tick()
@@ -58,7 +61,24 @@ namespace Lebeg134.Module.Map
         {
             return _subject.GetHashCode();
         }
-        
     }
+    [Serializable]
+    internal class AuctionFinishedException : Exception
+    {
+        public AuctionFinishedException()
+        {
+        }
 
+        public AuctionFinishedException(string message) : base(message)
+        {
+        }
+
+        public AuctionFinishedException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+
+        protected AuctionFinishedException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
+        }
+    }
 }

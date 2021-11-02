@@ -253,7 +253,6 @@
     <Compile Include="Lebeg134\Module\Resources\Resource.cs" />
     <Compile Include="Lebeg134\Module\Resources\StandardResource.cs" />
     <Compile Include="Lebeg134\Module\Session\BankruptPlayerStrategy.cs" />
-    <Compile Include="Lebeg134\Module\Session\Country.cs" />
     <Compile Include="Lebeg134\Module\Session\FrozenPlayerStrategy.cs" />
     <Compile Include="Lebeg134\Module\Session\IPlayerStrategy.cs" />
     <Compile Include="Lebeg134\Module\Session\Player.cs" />

@@ -23,12 +23,6 @@ namespace Lebeg134.Module.Session
         {
 
         }
-
-        void goBankrupt()
-        {
-
-        }
-
         public bool hasStructure(IOwnable structure)
         {
             foreach (Land land in ownedLands)
@@ -61,7 +55,7 @@ namespace Lebeg134.Module.Session
         }
         public void giveStructure(IOwnable structure)
         {
-
+            structure.acquire(this);
         }
         public bool hasResource(Resource res)
         {
@@ -119,32 +113,39 @@ namespace Lebeg134.Module.Session
                 giveRes(res);
             }
         }
-
-        public void freeze()
-        {
-
-        }
-
-        public void unFreeze()
-        {
-
-        }
-
-        public bool isFrozen()
-        {
-            return false;
-        }
-
-        public void tick()
-        {
-
-        }
-
         public Resource getProduces()
         {
             return null;
         }
+        public void freeze()
+        {
+            playerStrategy.freeze();
+        }
 
+        public void unFreeze()
+        {
+            playerStrategy.unFreeze();
+        }
+
+        public bool isFrozen()
+        {
+            return playerStrategy.isFrozen();
+        }
+
+        public void goBankrupt()
+        {
+            playerStrategy.goBankrupt();
+        }
+
+        public void tick()
+        {
+            playerStrategy.tick();
+        }
+
+        public void register()
+        {
+            Clock.Instance.Register(this);
+        }
     }
 
 }

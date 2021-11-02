@@ -85,10 +85,14 @@ namespace Lebeg134.Module.Session
                 throw new NotEnoughResourceException(missingResources);
             return valid;
         }
-
-        public void subRes(Resource res)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resource"></param>
+        /// <exception cref="NotEnoughResourceException"></exception>
+        public void subRes(Resource resource)
         {
-
+            ownedResources[resource.GetType()] -= resource;
         }
         public void subRes(List<Resource> resources)
         {
@@ -99,12 +103,11 @@ namespace Lebeg134.Module.Session
         }
         public int getRes(Resource resource)
         {
-            return 0;
+            return ownedResources[resource.GetType()].amount();
         }
-
         public void giveRes(Resource resource)
         {
-
+            ownedResources[resource.GetType()] += resource;
         }
         public void giveRes(List<Resource> resources)
         {
@@ -121,27 +124,22 @@ namespace Lebeg134.Module.Session
         {
             playerStrategy.freeze();
         }
-
         public void unFreeze()
         {
             playerStrategy.unFreeze();
         }
-
         public bool isFrozen()
         {
             return playerStrategy.isFrozen();
         }
-
         public void goBankrupt()
         {
             playerStrategy.goBankrupt();
         }
-
         public void tick()
         {
             playerStrategy.tick();
         }
-
         public void register()
         {
             Clock.Instance.Register(this);

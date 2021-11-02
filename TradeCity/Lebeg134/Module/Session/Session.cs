@@ -2,8 +2,8 @@
  * @(#) Session.cs
  */
 using Lebeg134.Module.TimeManager;
-using Lebeg134.Module.Map;
-using Lebeg134.Module.Market;
+using Lebeg134.Module.MapNS;
+using Lebeg134.Module.MarketNS;
 using System.Collections.Generic;
 
 namespace Lebeg134.Module.Session

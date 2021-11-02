@@ -8,10 +8,19 @@ namespace Lebeg134.Module.TimeManager
 {
     public class Clock
     {
+        private static readonly Clock _instance = new Clock();
+        public static Clock Instance 
+        { 
+            get
+            {
+                return _instance;
+            } 
+        }
         Timer timer;
         List<ITickable> tickables = new List<ITickable>();
         int interval = (int)Speed.NORMAL;
-        public Clock()
+        static Clock() { }
+        private Clock()
         {
             timer = new Timer();
             timer.Interval = interval;
@@ -33,6 +42,10 @@ namespace Lebeg134.Module.TimeManager
         {
             foreach (ITickable tickable in tickables)
                 tickable.tick();
+        }
+        public void Register(ITickable tickable)
+        {
+            tickables.Add(tickable);
         }
     }
     public enum Speed : int

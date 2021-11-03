@@ -9,12 +9,12 @@ using static JHP4SD.Lebeg134.Module.Session.Player;
 
 namespace JHP4SD.Lebeg134.Module.Session
 {
-
     public class Session : ITickable
     {
         Market _market;
         List<Player> _players;
         Map _map;
+        Clock clock = Clock.Instance;
 
         public Session()
         {

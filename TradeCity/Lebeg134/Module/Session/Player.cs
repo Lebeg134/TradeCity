@@ -13,21 +13,15 @@ namespace JHP4SD.Lebeg134.Module.Session
     public partial class Player : ITickable
     {
         Session session;
-        List<Building> ownedBuildings;
-        List<Land> ownedLands;
+        List<IOwnable> owned;
         Dictionary<System.Type, Resource> ownedResources;
         IPlayerStrategy playerStrategy;
 
         public bool hasStructure(IOwnable structure)
         {
-            foreach (Land land in ownedLands)
+            foreach (IOwnable ownable in owned)
             {
-                if (land.GetType() == structure.GetType())
-                    return true;
-            }
-            foreach (Building building in ownedBuildings)
-            {
-                if (building.GetType() == structure.GetType())
+                if (ownable.GetType() == structure.GetType())
                     return true;
             }
             return false;

@@ -19,11 +19,7 @@ namespace JHP4SD.Lebeg134.Module.Session
             private void Produce()
             {
                 List<Resource> resources = new List<Resource>();
-                foreach (IProducer producer in player.ownedLands)
-                {
-                    producer.Produce();
-                }
-                foreach (IProducer producer in player.ownedBuildings)
+                foreach (IProducer producer in player.owned)
                 {
                     producer.Produce();
                 }

@@ -15,11 +15,7 @@ namespace JHP4SD.Lebeg134.Module.Session
             }
             private void DeleteOwnerships()
             {
-                foreach (IOwnable ownable in player.ownedBuildings)
-                {
-                    ownable.acquire(null);
-                }
-                foreach (IOwnable ownable in player.ownedLands)
+                foreach (IOwnable ownable in player.owned)
                 {
                     ownable.acquire(null);
                 }

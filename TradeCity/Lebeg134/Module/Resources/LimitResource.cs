@@ -2,7 +2,7 @@
  * @(#) LimitResource.cs
  */
 
-namespace Lebeg134.Module.Resources
+namespace JHP4SD.Lebeg134.Module.Resources
 {
     public abstract class LimitResource : Resource
     {

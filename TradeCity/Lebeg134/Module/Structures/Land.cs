@@ -1,13 +1,13 @@
 /**
 * @(#) Land.cs
 */
-using Lebeg134.Module.MapNS;
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
-using Lebeg134.Module.TimeManager;
+using JHP4SD.Lebeg134.Module.MapNS;
+using JHP4SD.Lebeg134.Module.Resources;
+using JHP4SD.Lebeg134.Module.Session;
+using JHP4SD.Lebeg134.Module.TimeManager;
 using System.Collections.Generic;
 
-namespace Lebeg134.Module.Structures
+namespace JHP4SD.Lebeg134.Module.Structures
 {
     public class Land : Structure, IUpgradeable, IProducer, IOwnable, IMapStructure
     {

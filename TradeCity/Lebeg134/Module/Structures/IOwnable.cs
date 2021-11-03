@@ -1,8 +1,8 @@
 /**
 * @(#) IOwnable.cs
 */
-using Lebeg134.Module.Session;
-namespace Lebeg134.Module.Structures
+using JHP4SD.Lebeg134.Module.Session;
+namespace JHP4SD.Lebeg134.Module.Structures
 {
     public interface IOwnable
     {

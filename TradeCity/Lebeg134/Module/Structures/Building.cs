@@ -1,12 +1,12 @@
 /**
  * @(#) Building.cs
  */
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
+using JHP4SD.Lebeg134.Module.Resources;
+using JHP4SD.Lebeg134.Module.Session;
 using System;
 using System.Collections.Generic;
 
-namespace Lebeg134.Module.Structures
+namespace JHP4SD.Lebeg134.Module.Structures
 {
     public class Building : Structure, IOwnable
     {

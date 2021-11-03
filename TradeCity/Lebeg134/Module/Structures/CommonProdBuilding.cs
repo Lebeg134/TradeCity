@@ -1,11 +1,11 @@
 /**
 * @(#) CommonProdBuilding.cs
 */
-using Lebeg134.Module.Resources;
+using JHP4SD.Lebeg134.Module.Resources;
 using System.Collections.Generic;
 
 
-namespace Lebeg134.Module.Structures
+namespace JHP4SD.Lebeg134.Module.Structures
 {
     public class CommonProdBuilding : CommonBuilding, IProducer
     {

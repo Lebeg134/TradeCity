@@ -4,7 +4,7 @@
 using System.Collections.Generic;
 using System.Timers;
 
-namespace Lebeg134.Module.TimeManager
+namespace JHP4SD.Lebeg134.Module.TimeManager
 {
     public class Clock
     {

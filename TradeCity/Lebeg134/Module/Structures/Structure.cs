@@ -2,7 +2,7 @@
 * @(#) Structure.cs
 */
 using System.Collections.Generic;
-namespace Lebeg134.Module.Structures
+namespace JHP4SD.Lebeg134.Module.Structures
 {
 	public abstract class Structure : IEqualityComparer<Structure>
 	{

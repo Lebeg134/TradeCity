@@ -2,7 +2,7 @@
  * @(#) ITickable.cs
  */
 
-namespace Lebeg134.Module.TimeManager
+namespace JHP4SD.Lebeg134.Module.TimeManager
 {
 	public interface ITickable
 	{

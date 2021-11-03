@@ -1,14 +1,14 @@
 /**
  * @(#) Auction.cs
  */
-using Lebeg134.Module.Session;
-using Lebeg134.Module.Structures;
-using Lebeg134.Module.TimeManager;
+using JHP4SD.Lebeg134.Module.Session;
+using JHP4SD.Lebeg134.Module.Structures;
+using JHP4SD.Lebeg134.Module.TimeManager;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Lebeg134.Module.MapNS
+namespace JHP4SD.Lebeg134.Module.MapNS
 {
     public class Auction : ITickable, IEqualityComparer<Auction>
     {

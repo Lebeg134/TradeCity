@@ -1,9 +1,9 @@
 /**
 * @(#) StandardResource.cs
 */
-using Lebeg134.Module.MarketNS;
+using JHP4SD.Lebeg134.Module.MarketNS;
 
-namespace Lebeg134.Module.Resources
+namespace JHP4SD.Lebeg134.Module.Resources
 {
     public abstract class StandardResource : Resource, Market.ISellable
     {

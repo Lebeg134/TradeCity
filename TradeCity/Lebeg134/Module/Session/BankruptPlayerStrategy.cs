@@ -1,8 +1,8 @@
 /**
 * @(#) BankruptPlayerStrategy.cs
 */
-using static Lebeg134.Module.Session.Player;
-namespace Lebeg134.Module.Session
+using static JHP4SD.Lebeg134.Module.Session.Player;
+namespace JHP4SD.Lebeg134.Module.Session
 {
 	public class BankruptPlayerStrategy : FrozenPlayerStrategy
 	{

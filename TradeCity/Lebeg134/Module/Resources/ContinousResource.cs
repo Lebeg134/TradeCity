@@ -1,9 +1,9 @@
 /**
 * @(#) ContinousResource.cs
 */
-using Lebeg134.Module.TimeManager;
+using JHP4SD.Lebeg134.Module.TimeManager;
 
-namespace Lebeg134.Module.Resources
+namespace JHP4SD.Lebeg134.Module.Resources
 {
     public abstract class ContinousResource : Resource, ITickable
     {

@@ -2,7 +2,7 @@
  * @(#) IPlayerStrategy.cs
  */
 
-namespace Lebeg134.Module.Session
+namespace JHP4SD.Lebeg134.Module.Session
 {
     public interface IPlayerStrategy
     {

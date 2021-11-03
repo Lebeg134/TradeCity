@@ -1,12 +1,12 @@
 /**
 * @(#) Player.cs
 */
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Structures;
-using Lebeg134.Module.TimeManager;
+using JHP4SD.Lebeg134.Module.Resources;
+using JHP4SD.Lebeg134.Module.Structures;
+using JHP4SD.Lebeg134.Module.TimeManager;
 using System.Collections.Generic;
 
-namespace Lebeg134.Module.Session
+namespace JHP4SD.Lebeg134.Module.Session
 {
 
 

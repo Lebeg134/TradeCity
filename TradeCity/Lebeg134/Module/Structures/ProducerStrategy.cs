@@ -1,10 +1,10 @@
 ﻿/**
 * @(#) ProducerStrategy.cs
 */
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
+using JHP4SD.Lebeg134.Module.Resources;
+using JHP4SD.Lebeg134.Module.Session;
 
-namespace Lebeg134.Module.Structures
+namespace JHP4SD.Lebeg134.Module.Structures
 {
     static class ProducerStrategy
     {

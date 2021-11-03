@@ -2,7 +2,7 @@
  * @(#) ISellable.cs
  */
 
-namespace Lebeg134.Module.MarketNS
+namespace JHP4SD.Lebeg134.Module.MarketNS
 {
     public interface ISellable
     {

@@ -2,7 +2,7 @@
  * @(#) Market.cs
  */
 
-namespace Lebeg134.Module.MarketNS
+namespace JHP4SD.Lebeg134.Module.MarketNS
 {
 	public class Market
 	{
@@ -11,7 +11,7 @@ namespace Lebeg134.Module.MarketNS
 			
 		}
 		
-		public void postListing( Listing listing, Lebeg134.Module.Session.Player by )
+		public void postListing( Listing listing, JHP4SD.Lebeg134.Module.Session.Player by )
 		{
 			
 		}
@@ -31,12 +31,12 @@ namespace Lebeg134.Module.MarketNS
 			return null;
 		}
 		
-		public void removePlayer( Lebeg134.Module.Session.Player player )
+		public void removePlayer( JHP4SD.Lebeg134.Module.Session.Player player )
 		{
 			
 		}
 		
-		public Listing searchPlayerListings( Lebeg134.Module.Session.Player player )
+		public Listing searchPlayerListings( JHP4SD.Lebeg134.Module.Session.Player player )
 		{
 			return null;
 		}

@@ -2,7 +2,7 @@
  * @(#) IUpgradeable.cs
  */
 
-namespace Lebeg134.Module.Structures
+namespace JHP4SD.Lebeg134.Module.Structures
 {
     public interface IUpgradeable
     {

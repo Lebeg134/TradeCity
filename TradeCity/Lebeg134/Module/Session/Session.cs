@@ -1,12 +1,12 @@
 /**
  * @(#) Session.cs
  */
-using Lebeg134.Module.TimeManager;
-using Lebeg134.Module.MapNS;
-using Lebeg134.Module.MarketNS;
+using JHP4SD.Lebeg134.Module.TimeManager;
+using JHP4SD.Lebeg134.Module.MapNS;
+using JHP4SD.Lebeg134.Module.MarketNS;
 using System.Collections.Generic;
 
-namespace Lebeg134.Module.Session
+namespace JHP4SD.Lebeg134.Module.Session
 {
 
     public class Session : ITickable

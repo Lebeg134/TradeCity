@@ -4,10 +4,12 @@
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Session;
 using JHP4SD.Lebeg134.Module.TimeManager;
+using System;
+using System.Collections.Generic;
 
 namespace JHP4SD.Lebeg134.Module.MarketNS
 {
-    public class Listing : ITickable
+    public class Listing : ITickable, IComparer<Listing>
     {
         private static readonly int defaultTime = 100;
         private ISellable _wantSellable;
@@ -55,8 +57,9 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
             if (all)
             {
                 count = _amount;
-                Resource sub = _forSellable.getNewResource(_amount);
+                Resource sub = _forSellable.getNewResource(_amount);                
                 _postedBy.checkResource(sub);
+                _postedBy.subRes(sub);
             }
             else
             {
@@ -72,7 +75,10 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
             }
             return count;
         }
-
+        public double value()
+        {
+            return _wantSellable.amount() / _forSellable.amount();
+        }
         public void tick()
         {
             if (--_timeLeft <= 0)
@@ -80,10 +86,14 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
                 cancel();
             }
         }
-
         public void register()
         {
             throw new System.NotImplementedException();
+        }
+
+        public int Compare(Listing x, Listing y)
+        {
+            return x.value().CompareTo(y.value());
         }
         //public void merge(Listing with) Not going to be used
         //{

@@ -50,6 +50,10 @@ namespace JHP4SD.Lebeg134.Module.Session
         {
             return ownedResources.ContainsKey(res.GetType());
         }
+        public bool checkResource(Resource res)
+        {
+            return checkResources(new List<Resource>() { res });
+        }
         public bool checkResources(List<Resource> resources, bool throwException = false)
         {
             bool valid = true;

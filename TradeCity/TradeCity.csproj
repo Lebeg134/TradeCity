@@ -245,7 +245,7 @@
     <Compile Include="Lebeg134\Module\Map\Auction.cs" />
     <Compile Include="Lebeg134\Module\Map\Map.cs" />
     <Compile Include="Lebeg134\Module\Market\ISellable.cs" />
-    <Compile Include="Lebeg134\Module\Market\Item.cs" />
+    <Compile Include="Lebeg134\Module\Market\ItemLog.cs" />
     <Compile Include="Lebeg134\Module\Market\Listing.cs" />
     <Compile Include="Lebeg134\Module\Market\Market.cs" />
     <Compile Include="Lebeg134\Module\Resources\ContinousResource.cs" />

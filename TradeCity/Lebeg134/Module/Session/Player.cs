@@ -100,10 +100,6 @@ namespace JHP4SD.Lebeg134.Module.Session
                 giveRes(res);
             }
         }
-        public Resource getProduces()
-        {
-            return null;
-        }
         public void freeze()
         {
             playerStrategy.freeze();

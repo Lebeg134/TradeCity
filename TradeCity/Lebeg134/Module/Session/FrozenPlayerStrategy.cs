@@ -22,7 +22,7 @@ namespace JHP4SD.Lebeg134.Module.Session
             {
                 return true;
             }
-            override public void tick()
+            public void tick()
             {
                 // Do nothing, player is frozen
             }

@@ -26,10 +26,6 @@ namespace JHP4SD.Lebeg134.Module.Session
             {
                 return false;
             }
-            public virtual void tick()
-            {
-                //Do something based on strategy
-            }
             public virtual void unFreeze(IPlayerStrategy newStrategy)
             {
                 // Player not frozen, do nothing

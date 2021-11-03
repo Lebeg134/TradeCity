@@ -12,7 +12,7 @@ namespace JHP4SD.Lebeg134.Module.Session
         public class StandardPlayerStrategy : PlayerStrategyBase
         {
             public StandardPlayerStrategy(Player subject) : base(subject) { }
-            public override void tick()
+            public void tick()
             {
                 Produce();
             }

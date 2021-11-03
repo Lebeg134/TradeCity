@@ -15,11 +15,12 @@ namespace JHP4SD.Lebeg134.Module.Session
             }
             public virtual void freeze()
             {
-                player.playerStrategy = new FrozenPlayerStrategy(player);
+                if(!player.isFrozen())
+                    player.playerStrategy = new FrozenPlayerStrategy(player);
             }
             public virtual void goBankrupt()
             {
-                throw new System.NotImplementedException();
+                player.playerStrategy = new BankruptPlayerStrategy(player);
             }
             public virtual bool isFrozen()
             {
@@ -27,7 +28,7 @@ namespace JHP4SD.Lebeg134.Module.Session
             }
             public virtual void tick()
             {
-                // TODO Do resource calculations
+                //Do something based on strategy
             }
             public virtual void unFreeze(IPlayerStrategy newStrategy)
             {

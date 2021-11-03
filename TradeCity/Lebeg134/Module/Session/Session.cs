@@ -5,6 +5,7 @@ using JHP4SD.Lebeg134.Module.TimeManager;
 using JHP4SD.Lebeg134.Module.MapNS;
 using JHP4SD.Lebeg134.Module.MarketNS;
 using System.Collections.Generic;
+using static JHP4SD.Lebeg134.Module.Session.Player;
 
 namespace JHP4SD.Lebeg134.Module.Session
 {
@@ -33,7 +34,7 @@ namespace JHP4SD.Lebeg134.Module.Session
             if (!_players.Contains(player))
                 _players.Add(player);
             else
-                player.unFreeze();
+                player.unFreeze(new StandardPlayerStrategy(player));
         }
         public void logout(Player player)
         {
@@ -42,6 +43,7 @@ namespace JHP4SD.Lebeg134.Module.Session
         }
         public void deletePlayer(Player player)
         {
+            player.goBankrupt();
             _players.Remove(player);
             //Remove ownerships
         }

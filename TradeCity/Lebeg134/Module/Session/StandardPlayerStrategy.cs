@@ -1,12 +1,35 @@
-﻿using System;
+﻿/**
+ * @(#) StandardPlayerStrategy.cs
+ */
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using JHP4SD.Lebeg134.Module.Resources;
+using JHP4SD.Lebeg134.Module.Structures;
 
 namespace JHP4SD.Lebeg134.Module.Session
 {
-    class StandardPlayerStrategy
+    public partial class Player
     {
+        public class StandardPlayerStrategy : PlayerStrategyBase
+        {
+            public StandardPlayerStrategy(Player subject) : base(subject) { }
+            public override void tick()
+            {
+                Produce();
+            }
+            private void Produce()
+            {
+                List<Resource> resources = new List<Resource>();
+                foreach (IProducer producer in player.ownedLands)
+                {
+                    producer.Produce();
+                }
+                foreach (IProducer producer in player.ownedBuildings)
+                {
+                    producer.Produce();
+                }
+            }
+        }
     }
+}
+    
 }

@@ -1,10 +1,10 @@
 /**
 * @(#) Market.cs
 */
-using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Session;
 using JHP4SD.Lebeg134.Module.TimeManager;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace JHP4SD.Lebeg134.Module.MarketNS
 {
@@ -26,39 +26,58 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
             int newAmount = post.lockResources(all);
             if (amount != newAmount)
                 post = new Listing(wantSellable, forSellable, by, newAmount);
-
             listings.Add(post);
             return amount;
         }
         public double getValueOf(ISellable sellable)
         {
+            //TODO
             return 0;
         }
         public Listing getMinSell(ISellable wantSellable, ISellable forSellable)
         {
-            List<Listing> listings = _listings[wantSellable.GetType()];
-            if (listings.Count != 0)
+            List<Listing> listings = _listings[wantSellable.GetType()].FindAll( x => x.ForSellable.Equals(forSellable));
+            if (listings.Count > 0)
             {
                 listings.Sort();
-                return listings[0];
+                return listings.First();
             }
             else
                 return null;
         }
-
-        public int getMaxBuy(ISellable sellable)
+        public Listing getMaxBuy(ISellable wantSellable, ISellable forSellable)
         {
-            return null;
+            List<Listing> listings = _listings[forSellable.GetType()].FindAll(x => x.WantSellable.Equals(wantSellable));
+            if (listings?.Count > 0)
+            {
+                listings.Sort();
+                return listings.Last();
+            }
+            else
+                return null;
         }
-
         public void removePlayer(Player player)
         {
-
+            foreach (List<Listing> list in _listings.Values)
+            {
+                foreach (Listing listing in list)
+                {
+                    if (listing.Poster.Equals(player))
+                    {
+                        listing.cancel();
+                        list.Remove(listing);
+                    }
+                }
+            }
         }
-
-        public Listing searchPlayerListings(Player player)
+        public List<Listing> getPlayerListingsList(Player player)
         {
-            return null;
+            List<Listing> myListings = new List<Listing>();
+            foreach (List<Listing> list in _listings.Values)
+            {
+                myListings.AddRange(list.FindAll(x => x.Poster.Equals(player)));
+            }
+            return myListings;
         }
 
         public void simulate()

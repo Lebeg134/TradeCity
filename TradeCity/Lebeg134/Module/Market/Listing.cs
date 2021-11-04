@@ -12,17 +12,17 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
     public class Listing : ITickable, IComparer<Listing>
     {
         private static readonly int defaultTime = 100;
-        private ISellable _wantSellable;
-        private ISellable _forSellable;
-        private Player _postedBy;
+        public ISellable WantSellable { get; }
+        public ISellable ForSellable { get; }
+        public Player Poster { get; }
         private int _amount;
         private int _timeLeft;
 
         public Listing(ISellable wantSellable, ISellable forSellable, Player postedBy, int amount = 1)
         {
-            _wantSellable = wantSellable;
-            _forSellable = forSellable;
-            _postedBy = postedBy;
+            WantSellable = wantSellable;
+            ForSellable = forSellable;
+            Poster = postedBy;
             _amount = amount;
             _timeLeft = defaultTime;
         }
@@ -31,13 +31,13 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
             if (number == -1)
                 number = _amount;
             int count = 0;
-            if (number <= 0 || _postedBy == by) return 0;
+            if (number <= 0 || Poster == by) return 0;
             for (; count <= number; count++)
             {
                 try
                 {
-                    by.subRes((Resource)_wantSellable);
-                    by.giveRes((Resource)_forSellable);
+                    by.subRes((Resource)WantSellable);
+                    by.giveRes((Resource)ForSellable);
                 }
                 catch (NotEnoughResourceException)
                 {
@@ -49,7 +49,7 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
         public void cancel()
         {
             for (; _amount > 0; _amount--)
-                _postedBy.giveRes((Resource)_forSellable);
+                Poster.giveRes((Resource)ForSellable);
         }
         public int lockResources(bool all = false)
         {
@@ -57,16 +57,16 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
             if (all)
             {
                 count = _amount;
-                Resource sub = _forSellable.getNewResource(_amount);                
-                _postedBy.checkResource(sub);
-                _postedBy.subRes(sub);
+                Resource sub = ForSellable.getNewResource(_amount);                
+                Poster.checkResource(sub);
+                Poster.subRes(sub);
             }
             else
             {
                 try
                 {
                     for (; count < _amount; count++)
-                        _postedBy.subRes((Resource)_forSellable);
+                        Poster.subRes((Resource)ForSellable);
                 }
                 catch (NotEnoughResourceException)
                 {
@@ -77,7 +77,7 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
         }
         public double value()
         {
-            return _wantSellable.amount() / _forSellable.amount();
+            return WantSellable.amount() / ForSellable.amount();
         }
         public void tick()
         {
@@ -97,7 +97,7 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
         }
         //public void merge(Listing with) Not going to be used
         //{
-        //    if (_wantSellable.Equals(with._wantSellable) && _forSellable.Equals(with._forSellable))
+        //    if (WantSellable.Equals(with.WantSellable) && ForSellable.Equals(with.ForSellable))
         //    {
         //        _amount += with._amount;
         //    }

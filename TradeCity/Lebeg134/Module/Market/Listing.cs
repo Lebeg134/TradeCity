@@ -57,7 +57,7 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
             if (all)
             {
                 count = _amount;
-                Resource sub = ForSellable.getNewResource(_amount);                
+                Resource sub = ForSellable.getNewResource(_amount);
                 Poster.checkResource(sub);
                 Poster.subRes(sub);
             }
@@ -90,17 +90,9 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
         {
             throw new System.NotImplementedException();
         }
-
         public int Compare(Listing x, Listing y)
         {
             return x.value().CompareTo(y.value());
         }
-        //public void merge(Listing with) Not going to be used
-        //{
-        //    if (WantSellable.Equals(with.WantSellable) && ForSellable.Equals(with.ForSellable))
-        //    {
-        //        _amount += with._amount;
-        //    }
-        //}
     }
 }

@@ -9,9 +9,7 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
     {
         double getValue();
         void simulatePrice();
-        void reportListing(Listing listing);
         Resource getNewResource(int amount);
         int amount();
     }
-
 }

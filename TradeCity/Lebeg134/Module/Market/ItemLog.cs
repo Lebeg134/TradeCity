@@ -11,5 +11,4 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
         List<double> sellLog;
         List<int> buyLog;
     }
-
 }

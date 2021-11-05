@@ -13,7 +13,6 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
         private Dictionary<System.Type, ItemLog> _registeredItems;
         private Dictionary<System.Type, List<Listing>> _listings;
 
-
         void generateListing(ISellable of, int num)
         {
 
@@ -36,7 +35,7 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
         }
         public Listing getMinSell(ISellable wantSellable, ISellable forSellable)
         {
-            List<Listing> listings = _listings[wantSellable.GetType()].FindAll( x => x.ForSellable.Equals(forSellable));
+            List<Listing> listings = _listings[wantSellable.GetType()].FindAll(x => x.ForSellable.Equals(forSellable));
             if (listings.Count > 0)
             {
                 listings.Sort();
@@ -79,17 +78,14 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
             }
             return myListings;
         }
-
         public void simulate()
         {
-
+            // Generate new listings
         }
-
         void autoCompleteListings()
         {
-
+            // Could be moved to postListing
         }
-
         public void tick()
         {
             foreach (List<Listing> list in _listings.Values)
@@ -106,5 +102,4 @@ namespace JHP4SD.Lebeg134.Module.MarketNS
             throw new System.NotImplementedException();
         }
     }
-
 }

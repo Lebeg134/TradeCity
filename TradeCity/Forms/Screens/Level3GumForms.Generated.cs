@@ -1,14 +1,14 @@
     namespace JHP4SD.FormsControls.Screens
     {
-        public partial class GameScreenGumForms
+        public partial class Level3GumForms
         {
             private Gum.Wireframe.GraphicalUiElement Visual;
-            public FlatRedBall.Forms.Controls.Button HelloButton { get; set; }
-            public GameScreenGumForms () 
+            public FlatRedBall.Forms.Controls.Button BackButton { get; set; }
+            public Level3GumForms () 
             {
                 CustomInitialize();
             }
-            public GameScreenGumForms (Gum.Wireframe.GraphicalUiElement visual) 
+            public Level3GumForms (Gum.Wireframe.GraphicalUiElement visual) 
             {
                 Visual = visual;
                 ReactToVisualChanged();
@@ -16,7 +16,7 @@
             }
             private void ReactToVisualChanged () 
             {
-                HelloButton = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("HelloButton").FormsControlAsObject;
+                BackButton = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("BackButton").FormsControlAsObject;
             }
             partial void CustomInitialize();
         }

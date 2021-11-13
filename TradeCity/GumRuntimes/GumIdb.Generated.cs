@@ -39,6 +39,7 @@
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("GameScreenGum", typeof(JHP4SD.GumRuntimes.GameScreenGumRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("Level1Gum", typeof(JHP4SD.GumRuntimes.Level1GumRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("Level2Gum", typeof(JHP4SD.GumRuntimes.Level2GumRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("Level3Gum", typeof(JHP4SD.GumRuntimes.Level3GumRuntime));
                 
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(FlatRedBall.Forms.Controls.Button)] = typeof(JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime);
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(FlatRedBall.Forms.Controls.CheckBox)] = typeof(JHP4SD.GumRuntimes.DefaultForms.CheckBoxRuntime);

@@ -3,6 +3,7 @@
         public partial class Level2GumForms
         {
             private Gum.Wireframe.GraphicalUiElement Visual;
+            public FlatRedBall.Forms.Controls.Button BackButton { get; set; }
             public Level2GumForms () 
             {
                 CustomInitialize();
@@ -15,6 +16,7 @@
             }
             private void ReactToVisualChanged () 
             {
+                BackButton = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("BackButton").FormsControlAsObject;
             }
             partial void CustomInitialize();
         }

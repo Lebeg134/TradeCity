@@ -21,8 +21,13 @@ namespace JHP4SD.Screens
 
         void CustomInitialize()
         {
+            Forms.SecretButton.Click += SecretButton_Click;
 
+        }
 
+        private void SecretButton_Click(object sender, EventArgs e)
+        {
+            MoveToScreen(typeof(Level3));
         }
 
         void CustomActivity(bool firstTimeCalled)

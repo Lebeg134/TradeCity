@@ -16,7 +16,7 @@ using FlatRedBall.Localization;
 
 namespace JHP4SD.Screens
 {
-    public partial class Level2
+    public partial class Level3
     {
 
         void CustomInitialize()
@@ -27,7 +27,7 @@ namespace JHP4SD.Screens
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            MoveToScreen(typeof(Level1));
+            MoveToScreen(typeof(Level2));
         }
 
         void CustomActivity(bool firstTimeCalled)

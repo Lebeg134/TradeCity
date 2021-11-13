@@ -21,8 +21,13 @@ namespace JHP4SD.Screens
 
         void CustomInitialize()
         {
+            Forms.HelloButton.Click += HelloButton_Click;
 
+        }
 
+        private void HelloButton_Click(object sender, EventArgs e)
+        {
+            MoveToScreen(typeof(Level2));
         }
 
         void CustomActivity(bool firstTimeCalled)

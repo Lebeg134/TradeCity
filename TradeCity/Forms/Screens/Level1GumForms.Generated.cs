@@ -3,6 +3,7 @@
         public partial class Level1GumForms
         {
             private Gum.Wireframe.GraphicalUiElement Visual;
+            public FlatRedBall.Forms.Controls.Button SecretButton { get; set; }
             public Level1GumForms () 
             {
                 CustomInitialize();
@@ -15,6 +16,7 @@
             }
             private void ReactToVisualChanged () 
             {
+                SecretButton = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("SecretButton").FormsControlAsObject;
             }
             partial void CustomInitialize();
         }

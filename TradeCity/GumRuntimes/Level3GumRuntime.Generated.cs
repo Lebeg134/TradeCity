@@ -1,7 +1,7 @@
     using System.Linq;
     namespace JHP4SD.GumRuntimes
     {
-        public partial class GameScreenGumRuntime : Gum.Wireframe.GraphicalUiElement
+        public partial class Level3GumRuntime : Gum.Wireframe.GraphicalUiElement
         {
             #region State Enums
             public enum VariableState
@@ -25,9 +25,12 @@
                     switch(mCurrentVariableState)
                     {
                         case  VariableState.Default:
-                            HelloButton.X = 40f;
-                            HelloButton.Y = 40f;
-                            HelloButton.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            BackButton.Text = "<- Back";
+                            BackButton.Width = 128f;
+                            BackButton.X = 40f;
+                            BackButton.Y = -40f;
+                            BackButton.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                            BackButton.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             break;
                     }
                 }
@@ -42,37 +45,61 @@
                     throw new System.Exception("interpolationValue cannot be NaN");
                 }
                 #endif
-                bool setHelloButtonXFirstValue = false;
-                bool setHelloButtonXSecondValue = false;
-                float HelloButtonXFirstValue= 0;
-                float HelloButtonXSecondValue= 0;
-                bool setHelloButtonYFirstValue = false;
-                bool setHelloButtonYSecondValue = false;
-                float HelloButtonYFirstValue= 0;
-                float HelloButtonYSecondValue= 0;
+                bool setBackButtonWidthFirstValue = false;
+                bool setBackButtonWidthSecondValue = false;
+                float BackButtonWidthFirstValue= 0;
+                float BackButtonWidthSecondValue= 0;
+                bool setBackButtonXFirstValue = false;
+                bool setBackButtonXSecondValue = false;
+                float BackButtonXFirstValue= 0;
+                float BackButtonXSecondValue= 0;
+                bool setBackButtonYFirstValue = false;
+                bool setBackButtonYSecondValue = false;
+                float BackButtonYFirstValue= 0;
+                float BackButtonYSecondValue= 0;
                 switch(firstState)
                 {
                     case  VariableState.Default:
-                        setHelloButtonXFirstValue = true;
-                        HelloButtonXFirstValue = 40f;
-                        setHelloButtonYFirstValue = true;
-                        HelloButtonYFirstValue = 40f;
                         if (interpolationValue < 1)
                         {
-                            this.HelloButton.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            this.BackButton.Text = "<- Back";
+                        }
+                        setBackButtonWidthFirstValue = true;
+                        BackButtonWidthFirstValue = 128f;
+                        setBackButtonXFirstValue = true;
+                        BackButtonXFirstValue = 40f;
+                        setBackButtonYFirstValue = true;
+                        BackButtonYFirstValue = -40f;
+                        if (interpolationValue < 1)
+                        {
+                            this.BackButton.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.BackButton.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
                         break;
                 }
                 switch(secondState)
                 {
                     case  VariableState.Default:
-                        setHelloButtonXSecondValue = true;
-                        HelloButtonXSecondValue = 40f;
-                        setHelloButtonYSecondValue = true;
-                        HelloButtonYSecondValue = 40f;
                         if (interpolationValue >= 1)
                         {
-                            this.HelloButton.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            this.BackButton.Text = "<- Back";
+                        }
+                        setBackButtonWidthSecondValue = true;
+                        BackButtonWidthSecondValue = 128f;
+                        setBackButtonXSecondValue = true;
+                        BackButtonXSecondValue = 40f;
+                        setBackButtonYSecondValue = true;
+                        BackButtonYSecondValue = -40f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.BackButton.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.BackButton.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
                         break;
                 }
@@ -81,13 +108,17 @@
                 {
                     SuspendLayout(true);
                 }
-                if (setHelloButtonXFirstValue && setHelloButtonXSecondValue)
+                if (setBackButtonWidthFirstValue && setBackButtonWidthSecondValue)
                 {
-                    HelloButton.X = HelloButtonXFirstValue * (1 - interpolationValue) + HelloButtonXSecondValue * interpolationValue;
+                    BackButton.Width = BackButtonWidthFirstValue * (1 - interpolationValue) + BackButtonWidthSecondValue * interpolationValue;
                 }
-                if (setHelloButtonYFirstValue && setHelloButtonYSecondValue)
+                if (setBackButtonXFirstValue && setBackButtonXSecondValue)
                 {
-                    HelloButton.Y = HelloButtonYFirstValue * (1 - interpolationValue) + HelloButtonYSecondValue * interpolationValue;
+                    BackButton.X = BackButtonXFirstValue * (1 - interpolationValue) + BackButtonXSecondValue * interpolationValue;
+                }
+                if (setBackButtonYFirstValue && setBackButtonYSecondValue)
+                {
+                    BackButton.Y = BackButtonYFirstValue * (1 - interpolationValue) + BackButtonYSecondValue * interpolationValue;
                 }
                 if (interpolationValue < 1)
                 {
@@ -104,7 +135,7 @@
             }
             #endregion
             #region State Interpolate To
-            public FlatRedBall.Glue.StateInterpolation.Tweener InterpolateTo (JHP4SD.GumRuntimes.GameScreenGumRuntime.VariableState fromState,JHP4SD.GumRuntimes.GameScreenGumRuntime.VariableState toState, double secondsToTake, FlatRedBall.Glue.StateInterpolation.InterpolationType interpolationType, FlatRedBall.Glue.StateInterpolation.Easing easing, object owner = null) 
+            public FlatRedBall.Glue.StateInterpolation.Tweener InterpolateTo (JHP4SD.GumRuntimes.Level3GumRuntime.VariableState fromState,JHP4SD.GumRuntimes.Level3GumRuntime.VariableState toState, double secondsToTake, FlatRedBall.Glue.StateInterpolation.InterpolationType interpolationType, FlatRedBall.Glue.StateInterpolation.Easing easing, object owner = null) 
             {
                 FlatRedBall.Glue.StateInterpolation.Tweener tweener = new FlatRedBall.Glue.StateInterpolation.Tweener(from:0, to:1, duration:(float)secondsToTake, type:interpolationType, easing:easing );
                 if (owner == null)
@@ -164,7 +195,7 @@
             public override void StopAnimations () 
             {
                 base.StopAnimations();
-                HelloButton.StopAnimations();
+                BackButton.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -180,25 +211,49 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.X",
-                            Type = "float",
-                            Value = HelloButton.X
+                            Name = "BackButton.Text",
+                            Type = "string",
+                            Value = BackButton.Text
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.Y",
+                            Name = "BackButton.Width",
                             Type = "float",
-                            Value = HelloButton.Y
+                            Value = BackButton.Width
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.Y Units",
+                            Name = "BackButton.X",
+                            Type = "float",
+                            Value = BackButton.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackButton.Y",
+                            Type = "float",
+                            Value = BackButton.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackButton.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = BackButton.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackButton.Y Units",
                             Type = "PositionUnitType",
-                            Value = HelloButton.YUnits
+                            Value = BackButton.YUnits
                         }
                         );
                         break;
@@ -214,25 +269,49 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.X",
-                            Type = "float",
-                            Value = HelloButton.X + 40f
+                            Name = "BackButton.Text",
+                            Type = "string",
+                            Value = BackButton.Text
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.Y",
+                            Name = "BackButton.Width",
                             Type = "float",
-                            Value = HelloButton.Y + 40f
+                            Value = BackButton.Width + 128f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.Y Units",
+                            Name = "BackButton.X",
+                            Type = "float",
+                            Value = BackButton.X + 40f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackButton.Y",
+                            Type = "float",
+                            Value = BackButton.Y + -40f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackButton.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = BackButton.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackButton.Y Units",
                             Type = "PositionUnitType",
-                            Value = HelloButton.YUnits
+                            Value = BackButton.YUnits
                         }
                         );
                         break;
@@ -254,13 +333,13 @@
                 base.ApplyState(state);
             }
             private bool tryCreateFormsObject;
-            public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime HelloButton { get; set; }
-            public GameScreenGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
+            public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime BackButton { get; set; }
+            public Level3GumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
                 if (fullInstantiation)
                 {
-                    Gum.DataTypes.ElementSave elementSave = Gum.Managers.ObjectFinder.Self.GumProjectSave.Screens.First(item => item.Name == "GameScreenGum");
+                    Gum.DataTypes.ElementSave elementSave = Gum.Managers.ObjectFinder.Self.GumProjectSave.Screens.First(item => item.Name == "Level3Gum");
                     this.ElementSave = elementSave;
                     string oldDirectory = FlatRedBall.IO.FileManager.RelativeDirectory;
                     FlatRedBall.IO.FileManager.RelativeDirectory = FlatRedBall.IO.FileManager.GetDirectory(Gum.Managers.ObjectFinder.Self.GumProjectSave.FullFileName);
@@ -281,10 +360,10 @@
             }
             private void AssignReferences () 
             {
-                HelloButton = this.GetGraphicalUiElementByName("HelloButton") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
+                BackButton = this.GetGraphicalUiElementByName("BackButton") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
                 if (tryCreateFormsObject)
                 {
-                    FormsControlAsObject = new JHP4SD.FormsControls.Screens.GameScreenGumForms(this);
+                    FormsControlAsObject = new JHP4SD.FormsControls.Screens.Level3GumForms(this);
                 }
             }
             public override void AddToManagers (RenderingLibrary.SystemManagers managers, RenderingLibrary.Graphics.Layer layer) 
@@ -296,6 +375,6 @@
                 CustomInitialize();
             }
             partial void CustomInitialize();
-            public JHP4SD.FormsControls.Screens.GameScreenGumForms FormsControl {get => (JHP4SD.FormsControls.Screens.GameScreenGumForms) FormsControlAsObject;}
+            public JHP4SD.FormsControls.Screens.Level3GumForms FormsControl {get => (JHP4SD.FormsControls.Screens.Level3GumForms) FormsControlAsObject;}
         }
     }

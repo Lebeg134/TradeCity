@@ -81,27 +81,6 @@
           "SourceFile": "FlatRedBall.Entities.CameraControllingEntity",
           "AttachToContainer": true,
           "GenerateTimedEmit": true
-        },
-        {
-          "InstanceName": "CircleRuntimeInstance",
-          "SourceClassType": "JHP4SD.GumRuntimes.CircleRuntime",
-          "Properties": [
-            {
-              "Name": "AssociateWithFactory",
-              "Value": true,
-              "Type": "Boolean"
-            },
-            {
-              "Name": "SourceType",
-              "Value": 2,
-              "Type": "SourceType"
-            }
-          ],
-          "InstructionSaves": [],
-          "SourceType": 2,
-          "SourceFile": "CircleRuntime",
-          "AttachToContainer": true,
-          "GenerateTimedEmit": true
         }
       ],
       "Name": "Screens\\GameScreen",
@@ -216,6 +195,67 @@
       ],
       "Name": "Screens\\Level2",
       "CustomClassesForExport": []
+    },
+    {
+      "Tags": [
+        "GLUE"
+      ],
+      "Source": "GLUE",
+      "BaseScreen": "Screens\\GameScreen",
+      "BaseElement": "Screens\\GameScreen",
+      "ReferencedFiles": [
+        {
+          "Name": "gumproject/Screens/Level3Gum.gusx",
+          "IsSharedStatic": true,
+          "RuntimeType": "JHP4SD.GumRuntimes.Level3GumRuntime",
+          "ProjectsToExcludeFrom": []
+        },
+        {
+          "Properties": [
+            {
+              "Name": "CreationOptions",
+              "Value": "{\"IncludeDefaultTileset\":false,\"IncludeGameplayLayer\":false,\"SolidCollisionCheckBoxVisibility\":2,\"IsSolidCollisionBorderChecked\":false,\"ShouldAddCollisionBorder\":false}"
+            }
+          ],
+          "Name": "Screens/Level3/Level3Map.tmx",
+          "IsSharedStatic": true,
+          "RuntimeType": "FlatRedBall.TileGraphics.LayeredTileMap",
+          "ProjectsToExcludeFrom": []
+        }
+      ],
+      "NamedObjects": [
+        {
+          "InstanceName": "Map",
+          "SourceClassType": "FlatRedBall.TileGraphics.LayeredTileMap",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 0,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "bool",
+              "Member": "CreateEntitiesFromTiles",
+              "Value": true,
+              "Time": 0.0
+            }
+          ],
+          "SourceFile": "Screens/Level3/Level3Map.tmx",
+          "SourceName": "Entire File (LayeredTileMap)",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true,
+          "DefinedByBase": true
+        }
+      ],
+      "Name": "Screens\\Level3",
+      "CustomClassesForExport": []
     }
   ],
   "Entities": [],
@@ -271,7 +311,7 @@
   ],
   "GlobalContentSettingsSave": {},
   "SyncedProjects": [],
-  "StartUpScreen": "Screens\\GameScreen",
+  "StartUpScreen": "Screens\\Level1",
   "ResolutionPresets": [],
   "PerformanceSettingsSave": {},
   "IgnoredDirectories": [],
@@ -310,13 +350,16 @@
     "Name": "Custom",
     "Is2D": true,
     "GenerateDisplayCode": true,
-    "ResolutionWidth": 800,
-    "ResolutionHeight": 600,
+    "ResolutionWidth": 1920,
+    "ResolutionHeight": 1080,
     "AspectRatioWidth": 16.0,
     "AspectRatioHeight": 9.0,
     "SupportLandscape": true,
+    "AllowWindowResizing": true,
     "Scale": 100,
     "ScaleGum": 100,
+    "ResizeBehavior": 1,
+    "ResizeBehaviorGum": 1,
     "DominantInternalCoordinates": 1,
     "TextureFilter": 1
   },

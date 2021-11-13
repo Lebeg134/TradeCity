@@ -10,48 +10,35 @@ using System.Collections.Generic;
 using System.Text;
 namespace JHP4SD.Screens
 {
-    public abstract partial class GameScreen : FlatRedBall.Screens.Screen
+    public partial class Level3 : GameScreen
     {
         #if DEBUG
         static bool HasBeenLoadedWithGlobalContentManager = false;
         #endif
-        protected static JHP4SD.GumRuntimes.GameScreenGumRuntime GameScreenGum;
+        protected static JHP4SD.GumRuntimes.Level3GumRuntime Level3Gum;
+        protected static FlatRedBall.TileGraphics.LayeredTileMap Level3Map;
         
-        protected FlatRedBall.TileGraphics.LayeredTileMap Map;
-        private FlatRedBall.Entities.CameraControllingEntity CameraControllingEntityInstance;
-        JHP4SD.FormsControls.Screens.GameScreenGumForms Forms;
-        JHP4SD.GumRuntimes.GameScreenGumRuntime GumScreen;
-        public GameScreen () 
-        	: base ("GameScreen")
+        JHP4SD.FormsControls.Screens.Level3GumForms Forms;
+        JHP4SD.GumRuntimes.Level3GumRuntime GumScreen;
+        public Level3 () 
+        	: base ()
         {
-            // Not instantiating for FlatRedBall.TileGraphics.LayeredTileMap Map in Screens\GameScreen (Screen) because properties on the object prevent it
         }
         public override void Initialize (bool addToManagers) 
         {
             LoadStaticContent(ContentManagerName);
-            // Not instantiating for FlatRedBall.TileGraphics.LayeredTileMap Map in Screens\GameScreen (Screen) because properties on the object prevent it
-            CameraControllingEntityInstance = new FlatRedBall.Entities.CameraControllingEntity();
-            CameraControllingEntityInstance.Name = "CameraControllingEntityInstance";
-            CameraControllingEntityInstance.CreationSource = "Glue";
-            Forms = new JHP4SD.FormsControls.Screens.GameScreenGumForms(GameScreenGum);
-            GumScreen = GameScreenGum;
+            Map = Level3Map;
+            Forms = new JHP4SD.FormsControls.Screens.Level3GumForms(Level3Gum);
+            GumScreen = Level3Gum;
             
             
-            PostInitialize();
             base.Initialize(addToManagers);
-            if (addToManagers)
-            {
-                AddToManagers();
-            }
         }
         public override void AddToManagers () 
         {
-            GameScreenGum.AddToManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged += RefreshLayoutInternal;
-            FlatRedBall.SpriteManager.AddPositionedObject(CameraControllingEntityInstance); CameraControllingEntityInstance.Activity();
-            FlatRedBall.TileEntities.TileEntityInstantiator.CreateEntitiesFrom(Map);
+            Level3Gum.AddToManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged += RefreshLayoutInternal;
+            Level3Map.AddToManagers(mLayer);
             base.AddToManagers();
-            AddToManagersBottomUp();
-            BeforeCustomInitialize?.Invoke();
             CustomInitialize();
         }
         public override void Activity (bool firstTimeCalled) 
@@ -59,7 +46,7 @@ namespace JHP4SD.Screens
             if (!IsPaused)
             {
                 
-                CameraControllingEntityInstance.Activity();
+                Level3Map?.AnimateSelf();;
             }
             else
             {
@@ -81,61 +68,57 @@ namespace JHP4SD.Screens
         public override void Destroy () 
         {
             base.Destroy();
-            GameScreenGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
-            GameScreenGum = null;
+            Level3Gum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
+            Level3Gum = null;
+            Level3Map.Destroy();
+            Level3Map = null;
             
-            if (CameraControllingEntityInstance != null)
+            if (Map != null)
             {
-                FlatRedBall.SpriteManager.RemovePositionedObject(CameraControllingEntityInstance);;
+                Map.Destroy();
             }
             FlatRedBall.Math.Collision.CollisionManager.Self.Relationships.Clear();
             CustomDestroy();
         }
-        public virtual void PostInitialize () 
+        public override void PostInitialize () 
         {
             bool oldShapeManagerSuppressAdd = FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue;
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = true;
-            if (Map!= null)
-            {
-            }
-            CameraControllingEntityInstance.Map = Map;
+            base.PostInitialize();
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
         }
-        public virtual void AddToManagersBottomUp () 
+        public override void AddToManagersBottomUp () 
         {
-            CameraSetup.ResetCamera(SpriteManager.Camera);
-            AssignCustomVariables(false);
+            base.AddToManagersBottomUp();
         }
-        public virtual void RemoveFromManagers () 
+        public override void RemoveFromManagers () 
         {
-            GameScreenGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
-            if (CameraControllingEntityInstance != null)
+            base.RemoveFromManagers();
+            Level3Gum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
+            Level3Map.Destroy();
+            if (Map != null)
             {
-                FlatRedBall.SpriteManager.RemovePositionedObject(CameraControllingEntityInstance);;
+                Map.Destroy();
             }
         }
-        public virtual void AssignCustomVariables (bool callOnContainedElements) 
+        public override void AssignCustomVariables (bool callOnContainedElements) 
         {
+            base.AssignCustomVariables(callOnContainedElements);
             if (callOnContainedElements)
             {
             }
-            if (Map != null)
-            {
-            }
-            CameraControllingEntityInstance.Map = Map;
         }
-        public virtual void ConvertToManuallyUpdated () 
+        public override void ConvertToManuallyUpdated () 
         {
-            if (Map != null)
-            {
-            }
+            base.ConvertToManuallyUpdated();
         }
-        public static void LoadStaticContent (string contentManagerName) 
+        public static new void LoadStaticContent (string contentManagerName) 
         {
             if (string.IsNullOrEmpty(contentManagerName))
             {
                 throw new System.ArgumentException("contentManagerName cannot be empty or null");
             }
+            JHP4SD.Screens.GameScreen.LoadStaticContent(contentManagerName);
             // Set the content manager for Gum
             var contentManagerWrapper = new FlatRedBall.Gum.ContentManagerWrapper();
             contentManagerWrapper.ContentManagerName = contentManagerName;
@@ -152,7 +135,8 @@ namespace JHP4SD.Screens
                 throw new System.Exception("This type has been loaded with a Global content manager, then loaded with a non-global.  This can lead to a lot of bugs");
             }
             #endif
-            if(GameScreenGum == null) GameScreenGum = (JHP4SD.GumRuntimes.GameScreenGumRuntime)GumRuntime.ElementSaveExtensions.CreateGueForElement(Gum.Managers.ObjectFinder.Self.GetScreen("GameScreenGum"), true);
+            if(Level3Gum == null) Level3Gum = (JHP4SD.GumRuntimes.Level3GumRuntime)GumRuntime.ElementSaveExtensions.CreateGueForElement(Gum.Managers.ObjectFinder.Self.GetScreen("Level3Gum"), true);
+            Level3Map = FlatRedBall.TileGraphics.LayeredTileMap.FromTiledMapSave("content/screens/level3/level3map.tmx", contentManagerName);
             CustomLoadStaticContent(contentManagerName);
         }
         public override void PauseThisScreen () 
@@ -166,21 +150,25 @@ namespace JHP4SD.Screens
             base.UnpauseThisScreen();
         }
         [System.Obsolete("Use GetFile instead")]
-        public static object GetStaticMember (string memberName) 
+        public static new object GetStaticMember (string memberName) 
         {
             switch(memberName)
             {
-                case  "GameScreenGum":
-                    return GameScreenGum;
+                case  "Level3Gum":
+                    return Level3Gum;
+                case  "Level3Map":
+                    return Level3Map;
             }
             return null;
         }
-        public static object GetFile (string memberName) 
+        public static new object GetFile (string memberName) 
         {
             switch(memberName)
             {
-                case  "GameScreenGum":
-                    return GameScreenGum;
+                case  "Level3Gum":
+                    return Level3Gum;
+                case  "Level3Map":
+                    return Level3Map;
             }
             return null;
         }
@@ -188,8 +176,10 @@ namespace JHP4SD.Screens
         {
             switch(memberName)
             {
-                case  "GameScreenGum":
-                    return GameScreenGum;
+                case  "Level3Gum":
+                    return Level3Gum;
+                case  "Level3Map":
+                    return Level3Map;
             }
             return null;
         }
@@ -198,7 +188,7 @@ namespace JHP4SD.Screens
         }
         private void RefreshLayoutInternal (object sender, EventArgs e) 
         {
-            GameScreenGum.UpdateLayout();
+            Level3Gum.UpdateLayout();
         }
         partial void CustomActivityEditMode();
     }

@@ -81,6 +81,8 @@
     <Compile Include="Forms\Screens\Level2GumForms.Generated.cs">
       <DependentUpon>Level2GumForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Screens\Level3GumForms.cs" />
+    <Compile Include="Forms\Screens\Level3GumForms.Generated.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Game1.Generated.cs">
       <DependentUpon>Game1.cs</DependentUpon>
@@ -237,6 +239,8 @@
     <Compile Include="GumRuntimes\Level2GumRuntime.Generated.cs">
       <DependentUpon>Level2GumRuntime.cs</DependentUpon>
     </Compile>
+    <Compile Include="GumRuntimes\Level3GumRuntime.cs" />
+    <Compile Include="GumRuntimes\Level3GumRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\NineSliceRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\PolygonRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\RectangleRuntime.Generated.cs" />
@@ -347,6 +351,10 @@
     <Compile Include="Screens\Level2.cs" />
     <Compile Include="Screens\Level2.Generated.cs">
       <DependentUpon>Level2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Level3.cs" />
+    <Compile Include="Screens\Level3.Generated.cs">
+      <DependentUpon>Level3.cs</DependentUpon>
     </Compile>
     <Compile Include="Setup\CameraSetup.cs" />
     <Compile Include="TileCollisions\CollidableListVsTileShapeCollectionRelationship.cs" />
@@ -529,6 +537,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>Level2Gum</Name>
     </None>
+    <None Include="content\gumproject\screens\level3gum.gusx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Level3Gum</Name>
+    </None>
     <None Include="content\gumproject\standards\circle.gutx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>circle</Name>
@@ -612,6 +624,18 @@
     <None Include="content\screens\level2\level2map.tmx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>Level2Map</Name>
+    </None>
+    <None Include="content\screens\level3\level3map.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Level3Map</Name>
+    </None>
+    <None Include="content\screens\level3\tiles.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>tiles</Name>
+    </None>
+    <None Include="content\screens\level3\tiles.tsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>tiles</Name>
     </None>
     <None Include="content\standardtileset.tsx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

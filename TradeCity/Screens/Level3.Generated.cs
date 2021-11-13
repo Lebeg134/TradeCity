@@ -18,16 +18,34 @@ namespace JHP4SD.Screens
         protected static JHP4SD.GumRuntimes.Level3GumRuntime Level3Gum;
         protected static FlatRedBall.TileGraphics.LayeredTileMap Level3Map;
         
+        private JHP4SD.Entities.CameraEntity CameraEntityInstance;
+        private FlatRedBall.Camera CameraInstance;
+        private FlatRedBall.Entities.CameraControllingEntity CameraControllingEntityInstance;
+        private JHP4SD.Entities.PlatformerGuy PlatformerGuy1;
         JHP4SD.FormsControls.Screens.Level3GumForms Forms;
         JHP4SD.GumRuntimes.Level3GumRuntime GumScreen;
         public Level3 () 
         	: base ()
         {
+            // skipping instantiation of FlatRedBall.Math.PositionedObjectList<PlatformerGuy> PlatformerGuyList in Screens\Level3 (Screen) because it has its InstantiatedByBase set to true
         }
         public override void Initialize (bool addToManagers) 
         {
             LoadStaticContent(ContentManagerName);
             Map = Level3Map;
+            CameraEntityInstance = new JHP4SD.Entities.CameraEntity(ContentManagerName, false);
+            CameraEntityInstance.Name = "CameraEntityInstance";
+            CameraEntityInstance.CreationSource = "Glue";
+            CameraInstance = new FlatRedBall.Camera();
+            CameraInstance.Name = "CameraInstance";
+            CameraInstance.CreationSource = "Glue";
+            CameraControllingEntityInstance = new FlatRedBall.Entities.CameraControllingEntity();
+            CameraControllingEntityInstance.Name = "CameraControllingEntityInstance";
+            CameraControllingEntityInstance.CreationSource = "Glue";
+            // skipping instantiation of FlatRedBall.Math.PositionedObjectList<PlatformerGuy> PlatformerGuyList in Screens\Level3 (Screen) because it has its InstantiatedByBase set to true
+            PlatformerGuy1 = new JHP4SD.Entities.PlatformerGuy(ContentManagerName, false);
+            PlatformerGuy1.Name = "PlatformerGuy1";
+            PlatformerGuy1.CreationSource = "Glue";
             Forms = new JHP4SD.FormsControls.Screens.Level3GumForms(Level3Gum);
             GumScreen = Level3Gum;
             
@@ -38,6 +56,9 @@ namespace JHP4SD.Screens
         {
             Level3Gum.AddToManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged += RefreshLayoutInternal;
             Level3Map.AddToManagers(mLayer);
+            CameraEntityInstance.AddToManagers(mLayer);
+            FlatRedBall.SpriteManager.AddPositionedObject(CameraControllingEntityInstance); CameraControllingEntityInstance.Activity();
+            PlatformerGuy1.AddToManagers(mLayer);
             base.AddToManagers();
             CustomInitialize();
         }
@@ -47,6 +68,8 @@ namespace JHP4SD.Screens
             {
                 
                 Level3Map?.AnimateSelf();;
+                CameraEntityInstance.Activity();
+                CameraControllingEntityInstance.Activity();
             }
             else
             {
@@ -61,6 +84,7 @@ namespace JHP4SD.Screens
         {
             if (FlatRedBall.Screens.ScreenManager.IsInEditMode)
             {
+                CameraEntityInstance.ActivityEditMode();
                 CustomActivityEditMode();
                 base.ActivityEditMode();
             }
@@ -73,10 +97,21 @@ namespace JHP4SD.Screens
             Level3Map.Destroy();
             Level3Map = null;
             
+            PlatformerGuyList.MakeOneWay();
+            if (CameraEntityInstance != null)
+            {
+                CameraEntityInstance.Destroy();
+                CameraEntityInstance.Detach();
+            }
+            if (CameraControllingEntityInstance != null)
+            {
+                FlatRedBall.SpriteManager.RemovePositionedObject(CameraControllingEntityInstance);;
+            }
             if (Map != null)
             {
                 Map.Destroy();
             }
+            PlatformerGuyList.MakeTwoWay();
             FlatRedBall.Math.Collision.CollisionManager.Self.Relationships.Clear();
             CustomDestroy();
         }
@@ -85,6 +120,25 @@ namespace JHP4SD.Screens
             bool oldShapeManagerSuppressAdd = FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue;
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = true;
             base.PostInitialize();
+            if (CameraEntityInstance.Parent == null)
+            {
+                CameraEntityInstance.X = 100f;
+            }
+            else
+            {
+                CameraEntityInstance.RelativeX = 100f;
+            }
+            if (CameraEntityInstance.Parent == null)
+            {
+                CameraEntityInstance.Y = 100f;
+            }
+            else
+            {
+                CameraEntityInstance.RelativeY = 100f;
+            }
+            CameraControllingEntityInstance.Targets.Clear(); CameraControllingEntityInstance.Targets.Add(CameraEntityInstance);
+            CameraControllingEntityInstance.Map = Map;
+            PlatformerGuyList.Add(PlatformerGuy1);
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
         }
         public override void AddToManagersBottomUp () 
@@ -96,6 +150,11 @@ namespace JHP4SD.Screens
             base.RemoveFromManagers();
             Level3Gum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
             Level3Map.Destroy();
+            CameraEntityInstance.RemoveFromManagers();
+            if (CameraControllingEntityInstance != null)
+            {
+                FlatRedBall.SpriteManager.RemovePositionedObject(CameraControllingEntityInstance);;
+            }
             if (Map != null)
             {
                 Map.Destroy();
@@ -106,11 +165,32 @@ namespace JHP4SD.Screens
             base.AssignCustomVariables(callOnContainedElements);
             if (callOnContainedElements)
             {
+                CameraEntityInstance.AssignCustomVariables(true);
+                PlatformerGuy1.AssignCustomVariables(true);
             }
+            if (CameraEntityInstance.Parent == null)
+            {
+                CameraEntityInstance.X = 100f;
+            }
+            else
+            {
+                CameraEntityInstance.RelativeX = 100f;
+            }
+            if (CameraEntityInstance.Parent == null)
+            {
+                CameraEntityInstance.Y = 100f;
+            }
+            else
+            {
+                CameraEntityInstance.RelativeY = 100f;
+            }
+            CameraControllingEntityInstance.Targets.Clear(); CameraControllingEntityInstance.Targets.Add(CameraEntityInstance);
+            CameraControllingEntityInstance.Map = Map;
         }
         public override void ConvertToManuallyUpdated () 
         {
             base.ConvertToManuallyUpdated();
+            CameraEntityInstance.ConvertToManuallyUpdated();
         }
         public static new void LoadStaticContent (string contentManagerName) 
         {
@@ -137,6 +217,7 @@ namespace JHP4SD.Screens
             #endif
             if(Level3Gum == null) Level3Gum = (JHP4SD.GumRuntimes.Level3GumRuntime)GumRuntime.ElementSaveExtensions.CreateGueForElement(Gum.Managers.ObjectFinder.Self.GetScreen("Level3Gum"), true);
             Level3Map = FlatRedBall.TileGraphics.LayeredTileMap.FromTiledMapSave("content/screens/level3/level3map.tmx", contentManagerName);
+            JHP4SD.Entities.CameraEntity.LoadStaticContent(contentManagerName);
             CustomLoadStaticContent(contentManagerName);
         }
         public override void PauseThisScreen () 

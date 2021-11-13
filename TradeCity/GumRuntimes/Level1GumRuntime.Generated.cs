@@ -29,15 +29,15 @@
                             ColoredRectangleInstance.Alpha = 255;
                             ColoredRectangleInstance.Blue = 139;
                             ColoredRectangleInstance.Green = 139;
-                            ColoredRectangleInstance.Height = 0f;
+                            ColoredRectangleInstance.Height = 270f;
                             ColoredRectangleInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             ColoredRectangleInstance.Red = 0;
-                            ColoredRectangleInstance.Width = 0f;
+                            ColoredRectangleInstance.Width = 428f;
                             ColoredRectangleInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
-                            ColoredRectangleInstance.X = 0f;
+                            ColoredRectangleInstance.X = 214f;
                             ColoredRectangleInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                             ColoredRectangleInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            ColoredRectangleInstance.Y = 0f;
+                            ColoredRectangleInstance.Y = 135f;
                             ColoredRectangleInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             ColoredRectangleInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             LeftCircle.Blue = 0;
@@ -152,7 +152,7 @@
                         setColoredRectangleInstanceGreenFirstValue = true;
                         ColoredRectangleInstanceGreenFirstValue = 139;
                         setColoredRectangleInstanceHeightFirstValue = true;
-                        ColoredRectangleInstanceHeightFirstValue = 0f;
+                        ColoredRectangleInstanceHeightFirstValue = 270f;
                         if (interpolationValue < 1)
                         {
                             this.ColoredRectangleInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
@@ -160,13 +160,13 @@
                         setColoredRectangleInstanceRedFirstValue = true;
                         ColoredRectangleInstanceRedFirstValue = 0;
                         setColoredRectangleInstanceWidthFirstValue = true;
-                        ColoredRectangleInstanceWidthFirstValue = 0f;
+                        ColoredRectangleInstanceWidthFirstValue = 428f;
                         if (interpolationValue < 1)
                         {
                             this.ColoredRectangleInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
                         setColoredRectangleInstanceXFirstValue = true;
-                        ColoredRectangleInstanceXFirstValue = 0f;
+                        ColoredRectangleInstanceXFirstValue = 214f;
                         if (interpolationValue < 1)
                         {
                             this.ColoredRectangleInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
@@ -176,7 +176,7 @@
                             this.ColoredRectangleInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         setColoredRectangleInstanceYFirstValue = true;
-                        ColoredRectangleInstanceYFirstValue = 0f;
+                        ColoredRectangleInstanceYFirstValue = 135f;
                         if (interpolationValue < 1)
                         {
                             this.ColoredRectangleInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
@@ -245,7 +245,7 @@
                         setColoredRectangleInstanceGreenSecondValue = true;
                         ColoredRectangleInstanceGreenSecondValue = 139;
                         setColoredRectangleInstanceHeightSecondValue = true;
-                        ColoredRectangleInstanceHeightSecondValue = 0f;
+                        ColoredRectangleInstanceHeightSecondValue = 270f;
                         if (interpolationValue >= 1)
                         {
                             this.ColoredRectangleInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
@@ -253,13 +253,13 @@
                         setColoredRectangleInstanceRedSecondValue = true;
                         ColoredRectangleInstanceRedSecondValue = 0;
                         setColoredRectangleInstanceWidthSecondValue = true;
-                        ColoredRectangleInstanceWidthSecondValue = 0f;
+                        ColoredRectangleInstanceWidthSecondValue = 428f;
                         if (interpolationValue >= 1)
                         {
                             this.ColoredRectangleInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
                         setColoredRectangleInstanceXSecondValue = true;
-                        ColoredRectangleInstanceXSecondValue = 0f;
+                        ColoredRectangleInstanceXSecondValue = 214f;
                         if (interpolationValue >= 1)
                         {
                             this.ColoredRectangleInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
@@ -269,7 +269,7 @@
                             this.ColoredRectangleInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         setColoredRectangleInstanceYSecondValue = true;
-                        ColoredRectangleInstanceYSecondValue = 0f;
+                        ColoredRectangleInstanceYSecondValue = 135f;
                         if (interpolationValue >= 1)
                         {
                             this.ColoredRectangleInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
@@ -780,7 +780,7 @@
                             SetsValue = true,
                             Name = "ColoredRectangleInstance.Height",
                             Type = "float",
-                            Value = ColoredRectangleInstance.Height + 0f
+                            Value = ColoredRectangleInstance.Height + 270f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -804,7 +804,7 @@
                             SetsValue = true,
                             Name = "ColoredRectangleInstance.Width",
                             Type = "float",
-                            Value = ColoredRectangleInstance.Width + 0f
+                            Value = ColoredRectangleInstance.Width + 428f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -820,7 +820,7 @@
                             SetsValue = true,
                             Name = "ColoredRectangleInstance.X",
                             Type = "float",
-                            Value = ColoredRectangleInstance.X + 0f
+                            Value = ColoredRectangleInstance.X + 214f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -844,7 +844,7 @@
                             SetsValue = true,
                             Name = "ColoredRectangleInstance.Y",
                             Type = "float",
-                            Value = ColoredRectangleInstance.Y + 0f
+                            Value = ColoredRectangleInstance.Y + 135f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

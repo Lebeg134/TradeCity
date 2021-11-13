@@ -352,3 +352,14 @@ MigrationBackup/
 # FlatRedBall
 
 #TODO
+*.aeproperties
+*.Generated.cs
+*.Generated.Event.cs
+TiledObjects.Generated.xml
+*.csvSettings
+*.sln.metaproj
+tradecity/tradecity/bin/
+tradecity/bin/
+tradecity/tradecity/obj/
+tradecity/obj/
+tradecity/tradecityContent/obj/

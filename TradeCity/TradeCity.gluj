@@ -49,8 +49,8 @@
           "GenerateTimedEmit": true
         },
         {
-          "InstanceName": "CameraControllingEntityInstance",
-          "SourceClassType": "FlatRedBall.Entities.CameraControllingEntity",
+          "InstanceName": "PlatformerGuyList",
+          "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
           "Properties": [
             {
               "Name": "AssociateWithFactory",
@@ -61,24 +61,25 @@
               "Name": "SourceType",
               "Value": 2,
               "Type": "SourceType"
-            }
-          ],
-          "InstructionSaves": [
-            {
-              "Type": "string",
-              "Member": "Map",
-              "Value": "Map",
-              "Time": 0.0
             },
             {
-              "Type": "string",
-              "Member": "Targets",
-              "Value": "PlayerList",
-              "Time": 0.0
+              "Name": "SortAxis",
+              "Value": 0
+            },
+            {
+              "Name": "PartitionWidthHeight",
+              "Value": 32.0
+            },
+            {
+              "Name": "IsSortListEveryFrameChecked",
+              "Value": true
             }
           ],
+          "InstructionSaves": [],
           "SourceType": 2,
-          "SourceFile": "FlatRedBall.Entities.CameraControllingEntity",
+          "SourceFile": "PositionedObjectList (Generic)",
+          "SourceClassGenericType": "Entities\\PlatformerGuy",
+          "ExposedInDerived": true,
           "AttachToContainer": true,
           "GenerateTimedEmit": true
         }
@@ -136,6 +137,31 @@
           "AttachToContainer": true,
           "GenerateTimedEmit": true,
           "DefinedByBase": true
+        },
+        {
+          "InstanceName": "PlatformerGuyList",
+          "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [],
+          "SourceType": 2,
+          "SourceFile": "PositionedObjectList (Generic)",
+          "SourceClassGenericType": "Entities\\PlatformerGuy",
+          "ExposedInDerived": true,
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true,
+          "DefinedByBase": true,
+          "InstantiatedByBase": true
         }
       ],
       "Name": "Screens\\Level1",
@@ -191,6 +217,43 @@
           "AttachToContainer": true,
           "GenerateTimedEmit": true,
           "DefinedByBase": true
+        },
+        {
+          "InstanceName": "PlatformerGuyList",
+          "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            },
+            {
+              "Name": "SortAxis",
+              "Value": 0
+            },
+            {
+              "Name": "PartitionWidthHeight",
+              "Value": 32.0
+            },
+            {
+              "Name": "IsSortListEveryFrameChecked",
+              "Value": true
+            }
+          ],
+          "InstructionSaves": [],
+          "SourceType": 2,
+          "SourceFile": "PositionedObjectList (Generic)",
+          "SourceClassGenericType": "Entities\\PlatformerGuy",
+          "ExposedInDerived": true,
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true,
+          "DefinedByBase": true,
+          "InstantiatedByBase": true
         }
       ],
       "Name": "Screens\\Level2",
@@ -225,6 +288,154 @@
       ],
       "NamedObjects": [
         {
+          "InstanceName": "CameraEntityInstance",
+          "SourceClassType": "Entities\\CameraEntity",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 1,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "float",
+              "Member": "X",
+              "Value": 100.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "Y",
+              "Value": 100.0,
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 1,
+          "SourceFile": "Entities/CameraEntity",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        },
+        {
+          "InstanceName": "CameraInstance",
+          "SourceClassType": "FlatRedBall.Camera",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [],
+          "SourceType": 2,
+          "SourceFile": "Camera",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        },
+        {
+          "InstanceName": "CameraControllingEntityInstance",
+          "SourceClassType": "FlatRedBall.Entities.CameraControllingEntity",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "string",
+              "Member": "Map",
+              "Value": "Map",
+              "Time": 0.0
+            },
+            {
+              "Type": "string",
+              "Member": "Targets",
+              "Value": "CameraEntityInstance",
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 2,
+          "SourceFile": "Camera Controlling Entity",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        },
+        {
+          "InstanceName": "PlatformerGuyList",
+          "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            },
+            {
+              "Name": "SortAxis",
+              "Value": 0
+            },
+            {
+              "Name": "PartitionWidthHeight",
+              "Value": 32.0
+            },
+            {
+              "Name": "IsSortListEveryFrameChecked",
+              "Value": true
+            }
+          ],
+          "InstructionSaves": [],
+          "SourceType": 2,
+          "SourceFile": "PositionedObjectList (Generic)",
+          "SourceClassGenericType": "Entities\\PlatformerGuy",
+          "ExposedInDerived": true,
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true,
+          "DefinedByBase": true,
+          "InstantiatedByBase": true,
+          "ContainedObjects": [
+            {
+              "InstanceName": "PlatformerGuy1",
+              "SourceClassType": "Entities\\PlatformerGuy",
+              "Properties": [
+                {
+                  "Name": "AssociateWithFactory",
+                  "Value": true,
+                  "Type": "Boolean"
+                },
+                {
+                  "Name": "SourceType",
+                  "Value": 1,
+                  "Type": "SourceType"
+                }
+              ],
+              "InstructionSaves": [],
+              "SourceType": 1,
+              "AttachToContainer": true,
+              "GenerateTimedEmit": true
+            }
+          ]
+        },
+        {
           "InstanceName": "Map",
           "SourceClassType": "FlatRedBall.TileGraphics.LayeredTileMap",
           "Properties": [
@@ -258,7 +469,306 @@
       "CustomClassesForExport": []
     }
   ],
-  "Entities": [],
+  "Entities": [
+    {
+      "Tags": [
+        "GLUE"
+      ],
+      "Source": "GLUE",
+      "CreatedByOtherEntities": true,
+      "Is2D": true,
+      "ReferencedFiles": [
+        {
+          "Name": "Entities/CameraEntity/TopDownValuesStatic.csv",
+          "IsSharedStatic": true,
+          "HasPublicProperty": true,
+          "CreatesDictionary": true,
+          "ProjectsToExcludeFrom": []
+        }
+      ],
+      "CustomVariables": [
+        {
+          "Properties": [
+            {
+              "Name": "Type",
+              "Value": "float",
+              "Type": "String"
+            }
+          ],
+          "Name": "X",
+          "DefaultValue": 500.0
+        },
+        {
+          "Properties": [
+            {
+              "Name": "Type",
+              "Value": "float",
+              "Type": "String"
+            }
+          ],
+          "Name": "Y",
+          "DefaultValue": 500.0
+        },
+        {
+          "Properties": [
+            {
+              "Name": "Type",
+              "Value": "float",
+              "Type": "String"
+            }
+          ],
+          "Name": "Z"
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "InputDevice",
+          "Value": 0
+        },
+        {
+          "Name": "ImplementsICollidable",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "IsTopDown",
+          "Value": true,
+          "Type": "Boolean"
+        }
+      ],
+      "NamedObjects": [
+        {
+          "InstanceName": "TextInstance",
+          "SourceClassType": "FlatRedBall.Graphics.Text",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "string",
+              "Member": "DisplayText",
+              "Value": "Camera",
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 2,
+          "SourceFile": "Text",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        },
+        {
+          "InstanceName": "CircleInstance",
+          "SourceClassType": "FlatRedBall.Math.Geometry.Circle",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "float",
+              "Member": "Radius",
+              "Value": 16.0,
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 2,
+          "SourceFile": "Circle",
+          "HasPublicProperty": true,
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        }
+      ],
+      "Name": "Entities\\CameraEntity",
+      "CustomClassesForExport": []
+    },
+    {
+      "Tags": [
+        "GLUE"
+      ],
+      "Source": "GLUE",
+      "CreatedByOtherEntities": true,
+      "Is2D": true,
+      "ReferencedFiles": [
+        {
+          "Name": "Entities/PlatformerGuy/PlatformerValuesStatic.csv",
+          "IsSharedStatic": true,
+          "HasPublicProperty": true,
+          "CreatesDictionary": true,
+          "ProjectsToExcludeFrom": []
+        }
+      ],
+      "CustomVariables": [
+        {
+          "Properties": [
+            {
+              "Name": "Type",
+              "Value": "float",
+              "Type": "String"
+            }
+          ],
+          "Name": "X"
+        },
+        {
+          "Properties": [
+            {
+              "Name": "Type",
+              "Value": "float",
+              "Type": "String"
+            }
+          ],
+          "Name": "Y"
+        },
+        {
+          "Properties": [
+            {
+              "Name": "Type",
+              "Value": "float",
+              "Type": "String"
+            }
+          ],
+          "Name": "Z"
+        },
+        {
+          "Properties": [
+            {
+              "Name": "Type",
+              "Value": "JHP4SD.DataTypes.PlatformerValues",
+              "Type": "String"
+            }
+          ],
+          "Name": "GroundMovement",
+          "DefaultValue": "Ground in PlatformerValuesStatic.csv",
+          "SetByDerived": true,
+          "CreatesEvent": true
+        },
+        {
+          "Properties": [
+            {
+              "Name": "Type",
+              "Value": "JHP4SD.DataTypes.PlatformerValues",
+              "Type": "String"
+            }
+          ],
+          "Name": "AirMovement",
+          "DefaultValue": "Air in PlatformerValuesStatic.csv",
+          "SetByDerived": true,
+          "CreatesEvent": true
+        },
+        {
+          "Properties": [
+            {
+              "Name": "Type",
+              "Value": "JHP4SD.DataTypes.PlatformerValues",
+              "Type": "String"
+            }
+          ],
+          "Name": "AfterDoubleJump",
+          "SetByDerived": true,
+          "CreatesEvent": true
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "InputDevice",
+          "Value": 0
+        },
+        {
+          "Name": "ImplementsICollidable",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "IsPlatformer",
+          "Value": true,
+          "Type": "Boolean"
+        }
+      ],
+      "NamedObjects": [
+        {
+          "InstanceName": "SpriteInstance",
+          "SourceClassType": "FlatRedBall.Sprite",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "float",
+              "Member": "TextureScale",
+              "Value": 1.0,
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 2,
+          "SourceFile": "Sprite",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        },
+        {
+          "InstanceName": "AxisAlignedRectangleInstance",
+          "SourceClassType": "FlatRedBall.Math.Geometry.AxisAlignedRectangle",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "float",
+              "Member": "Height",
+              "Value": 32.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "Width",
+              "Value": 32.0,
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 2,
+          "SourceFile": "AxisAlignedRectangle",
+          "HasPublicProperty": true,
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        }
+      ],
+      "Name": "Entities\\PlatformerGuy",
+      "CustomClassesForExport": []
+    }
+  ],
   "GlobalFiles": [
     {
       "Properties": [
@@ -332,6 +842,22 @@
       ],
       "Name": "TileMapInfo",
       "GenerateCode": true
+    },
+    {
+      "CsvFilesUsingThis": [
+        "Entities/CameraEntity/TopDownValuesStatic.csv"
+      ],
+      "RequiredProperties": [],
+      "Name": "TopDownValues",
+      "GenerateCode": true
+    },
+    {
+      "CsvFilesUsingThis": [
+        "Entities/PlatformerGuy/PlatformerValuesStatic.csv"
+      ],
+      "RequiredProperties": [],
+      "Name": "PlatformerValues",
+      "GenerateCode": true
     }
   ],
   "ApplyToFixedResolutionPlatforms": true,
@@ -350,16 +876,15 @@
     "Name": "Custom",
     "Is2D": true,
     "GenerateDisplayCode": true,
-    "ResolutionWidth": 1920,
-    "ResolutionHeight": 1080,
+    "ResolutionWidth": 1280,
+    "ResolutionHeight": 720,
+    "FixedAspectRatio": true,
     "AspectRatioWidth": 16.0,
     "AspectRatioHeight": 9.0,
     "SupportLandscape": true,
     "AllowWindowResizing": true,
     "Scale": 100,
     "ScaleGum": 100,
-    "ResizeBehavior": 1,
-    "ResizeBehaviorGum": 1,
     "DominantInternalCoordinates": 1,
     "TextureFilter": 1
   },

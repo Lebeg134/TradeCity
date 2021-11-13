@@ -26,6 +26,12 @@ namespace JHP4SD.Lebeg134.Module.Session
             {
                 return false;
             }
+
+            public void tick()
+            {
+                throw new System.NotImplementedException();
+            }
+
             public virtual void unFreeze(IPlayerStrategy newStrategy)
             {
                 // Player not frozen, do nothing

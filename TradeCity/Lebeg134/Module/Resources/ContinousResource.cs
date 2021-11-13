@@ -24,5 +24,10 @@ namespace JHP4SD.Lebeg134.Module.Resources
         {
             reset();
         }
+
+        public void register()
+        {
+            Clock.Instance.Register(this);
+        }
     }
 }

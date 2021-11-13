@@ -2,6 +2,7 @@
 * @(#) SpecialProdBuilding.cs
 */
 using JHP4SD.Lebeg134.Module.Resources;
+using JHP4SD.Lebeg134.Module.TimeManager;
 using System.Collections.Generic;
 namespace JHP4SD.Lebeg134.Module.Structures
 {
@@ -17,6 +18,12 @@ namespace JHP4SD.Lebeg134.Module.Structures
         {
             ProducerStrategy.Produce(owner, this);
         }
+
+        public void register()
+        {
+            Clock.Instance.Register(this);
+        }
+
         public void tick()
         {
             Produce();

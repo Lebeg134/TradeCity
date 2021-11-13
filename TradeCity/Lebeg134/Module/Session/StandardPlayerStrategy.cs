@@ -27,5 +27,3 @@ namespace JHP4SD.Lebeg134.Module.Session
         }
     }
 }
-    
-}

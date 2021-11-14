@@ -23,13 +23,11 @@ namespace JHP4SD.Screens
         public Level1 () 
         	: base ()
         {
-            // skipping instantiation of FlatRedBall.Math.PositionedObjectList<PlatformerGuy> PlatformerGuyList in Screens\Level1 (Screen) because it has its InstantiatedByBase set to true
         }
         public override void Initialize (bool addToManagers) 
         {
             LoadStaticContent(ContentManagerName);
             Map = Level1Map;
-            // skipping instantiation of FlatRedBall.Math.PositionedObjectList<PlatformerGuy> PlatformerGuyList in Screens\Level1 (Screen) because it has its InstantiatedByBase set to true
             Forms = new JHP4SD.FormsControls.Screens.Level1GumForms(Level1Gum);
             GumScreen = Level1Gum;
             
@@ -75,12 +73,10 @@ namespace JHP4SD.Screens
             Level1Map.Destroy();
             Level1Map = null;
             
-            PlatformerGuyList.MakeOneWay();
             if (Map != null)
             {
                 Map.Destroy();
             }
-            PlatformerGuyList.MakeTwoWay();
             FlatRedBall.Math.Collision.CollisionManager.Self.Relationships.Clear();
             CustomDestroy();
         }

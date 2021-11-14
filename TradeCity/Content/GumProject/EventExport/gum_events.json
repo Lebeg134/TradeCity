@@ -133,6 +133,13 @@
         "ElementType": "Screens",
         "EventType": 7,
         "TimestampUtc": "2021-11-13T20:26:29.3887617Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Level4Gum",
+        "ElementType": "Screens",
+        "EventType": 1,
+        "TimestampUtc": "2021-11-14T00:10:48.1460303Z"
       }
     ]
   }

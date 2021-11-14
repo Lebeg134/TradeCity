@@ -18,21 +18,17 @@ namespace JHP4SD.Screens
         protected static JHP4SD.GumRuntimes.GameScreenGumRuntime GameScreenGum;
         
         protected FlatRedBall.TileGraphics.LayeredTileMap Map;
-        protected FlatRedBall.Math.PositionedObjectList<JHP4SD.Entities.PlatformerGuy> PlatformerGuyList;
         JHP4SD.FormsControls.Screens.GameScreenGumForms Forms;
         JHP4SD.GumRuntimes.GameScreenGumRuntime GumScreen;
         public GameScreen () 
         	: base ("GameScreen")
         {
             // Not instantiating for FlatRedBall.TileGraphics.LayeredTileMap Map in Screens\GameScreen (Screen) because properties on the object prevent it
-            PlatformerGuyList = new FlatRedBall.Math.PositionedObjectList<JHP4SD.Entities.PlatformerGuy>();
-            PlatformerGuyList.Name = "PlatformerGuyList";
         }
         public override void Initialize (bool addToManagers) 
         {
             LoadStaticContent(ContentManagerName);
             // Not instantiating for FlatRedBall.TileGraphics.LayeredTileMap Map in Screens\GameScreen (Screen) because properties on the object prevent it
-            PlatformerGuyList.Clear();
             Forms = new JHP4SD.FormsControls.Screens.GameScreenGumForms(GameScreenGum);
             GumScreen = GameScreenGum;
             
@@ -47,8 +43,6 @@ namespace JHP4SD.Screens
         public override void AddToManagers () 
         {
             GameScreenGum.AddToManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged += RefreshLayoutInternal;
-            Factories.PlatformerGuyFactory.Initialize(ContentManagerName);
-            Factories.PlatformerGuyFactory.AddList(PlatformerGuyList);
             FlatRedBall.TileEntities.TileEntityInstantiator.CreateEntitiesFrom(Map);
             base.AddToManagers();
             AddToManagersBottomUp();
@@ -60,14 +54,6 @@ namespace JHP4SD.Screens
             if (!IsPaused)
             {
                 
-                for (int i = PlatformerGuyList.Count - 1; i > -1; i--)
-                {
-                    if (i < PlatformerGuyList.Count)
-                    {
-                        // We do the extra if-check because activity could destroy any number of entities
-                        PlatformerGuyList[i].Activity();
-                    }
-                }
             }
             else
             {
@@ -82,10 +68,6 @@ namespace JHP4SD.Screens
         {
             if (FlatRedBall.Screens.ScreenManager.IsInEditMode)
             {
-                foreach (var item in PlatformerGuyList)
-                {
-                    item.ActivityEditMode();
-                }
                 CustomActivityEditMode();
                 base.ActivityEditMode();
             }
@@ -93,16 +75,9 @@ namespace JHP4SD.Screens
         public override void Destroy () 
         {
             base.Destroy();
-            Factories.PlatformerGuyFactory.Destroy();
             GameScreenGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
             GameScreenGum = null;
             
-            PlatformerGuyList.MakeOneWay();
-            for (int i = PlatformerGuyList.Count - 1; i > -1; i--)
-            {
-                PlatformerGuyList[i].Destroy();
-            }
-            PlatformerGuyList.MakeTwoWay();
             FlatRedBall.Math.Collision.CollisionManager.Self.Relationships.Clear();
             CustomDestroy();
         }
@@ -123,10 +98,6 @@ namespace JHP4SD.Screens
         public virtual void RemoveFromManagers () 
         {
             GameScreenGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
-            for (int i = PlatformerGuyList.Count - 1; i > -1; i--)
-            {
-                PlatformerGuyList[i].Destroy();
-            }
         }
         public virtual void AssignCustomVariables (bool callOnContainedElements) 
         {
@@ -141,10 +112,6 @@ namespace JHP4SD.Screens
         {
             if (Map != null)
             {
-            }
-            for (int i = 0; i < PlatformerGuyList.Count; i++)
-            {
-                PlatformerGuyList[i].ConvertToManuallyUpdated();
             }
         }
         public static void LoadStaticContent (string contentManagerName) 

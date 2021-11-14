@@ -1,5 +1,4 @@
-﻿#define IncludeSetVariable
-#define SupportsEditMode
+﻿#define SupportsEditMode
 #define HasGum
 using JHP4SD;
 

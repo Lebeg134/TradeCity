@@ -70,16 +70,11 @@
     <Compile Include="DataTypes\PlatformerValues.Generated.cs" />
     <Compile Include="DataTypes\TileMapInfo.Generated.cs" />
     <Compile Include="DataTypes\TopDownValues.Generated.cs" />
-    <Compile Include="Entities\CameraEntity.cs" />
-    <Compile Include="Entities\CameraEntity.Generated.cs">
-      <DependentUpon>CameraEntity.cs</DependentUpon>
+    <Compile Include="Entities\CameraMidpoint.cs" />
+    <Compile Include="Entities\CameraMidpoint.Generated.cs">
+      <DependentUpon>CameraMidpoint.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entities\PlatformerGuy.cs" />
-    <Compile Include="Entities\PlatformerGuy.Generated.cs">
-      <DependentUpon>PlatformerGuy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Factories\CameraEntityFactory.Generated.cs" />
-    <Compile Include="Factories\PlatformerGuyFactory.Generated.cs" />
+    <Compile Include="Factories\CameraMidpointFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
     <Compile Include="Forms\Screens\GameScreenGumForms.cs" />
     <Compile Include="Forms\Screens\GameScreenGumForms.Generated.cs">
@@ -355,7 +350,6 @@
     <Compile Include="Performance\IEntityFactory.Generated.cs" />
     <Compile Include="Performance\PoolList.Generated.cs" />
     <Compile Include="Platformer\Enums.Generated.cs" />
-    <Compile Include="Profile\ProfileManagerBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Screens\GameScreen.cs" />
@@ -445,13 +439,9 @@
     <Content Include="Content\shader.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="content\entities\cameraentity\topdownvaluesstatic.csv">
+    <None Include="content\entities\cameramidpoint\topdownvaluesstatic.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>TopDownValuesStatic</Name>
-    </None>
-    <None Include="content\entities\platformerguy\platformervaluesstatic.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>PlatformerValuesStatic</Name>
     </None>
     <None Include="content\gumproject\components\defaultforms\button.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

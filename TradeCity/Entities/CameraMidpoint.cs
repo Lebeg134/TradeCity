@@ -11,7 +11,7 @@ using FlatRedBall.Math.Geometry;
 
 namespace JHP4SD.Entities
 {
-    public partial class CameraEntity
+    public partial class CameraMidpoint
     {
         /// <summary>
         /// Initialization logic which is execute only one time for this Entity (unless the Entity is pooled).

@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <objecttypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <objecttype name="CameraEntity" />
-  <objecttype name="PlatformerGuy">
-    <property name="GroundMovement" type="JHP4SD.DataTypes.PlatformerValues" default="Ground in PlatformerValuesStatic.csv" />
-    <property name="AirMovement" type="JHP4SD.DataTypes.PlatformerValues" default="Air in PlatformerValuesStatic.csv" />
-    <property name="AfterDoubleJump" type="JHP4SD.DataTypes.PlatformerValues" />
-  </objecttype>
+  <objecttype name="CameraMidpoint" />
 </objecttypes>

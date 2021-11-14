@@ -140,6 +140,7 @@ namespace JHP4SD.Screens
             }
             CameraControllingEntityInstance.Targets.Clear(); CameraControllingEntityInstance.Targets.Add(CameraMidpointInstance);
             CameraControllingEntityInstance.Map = Map;
+            CameraControllingEntityInstance.LerpSmooth = false;
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
         }
         public override void AddToManagersBottomUp () 
@@ -190,6 +191,7 @@ namespace JHP4SD.Screens
             }
             CameraControllingEntityInstance.Targets.Clear(); CameraControllingEntityInstance.Targets.Add(CameraMidpointInstance);
             CameraControllingEntityInstance.Map = Map;
+            CameraControllingEntityInstance.LerpSmooth = false;
         }
         public override void ConvertToManuallyUpdated () 
         {

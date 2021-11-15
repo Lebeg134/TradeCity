@@ -241,6 +241,12 @@
           ],
           "InstructionSaves": [
             {
+              "Type": "bool",
+              "Member": "LerpSmooth",
+              "Value": false,
+              "Time": 0.0
+            },
+            {
               "Type": "string",
               "Member": "Map",
               "Value": "Map",
@@ -250,12 +256,6 @@
               "Type": "string",
               "Member": "Targets",
               "Value": "CameraMidpointInstance",
-              "Time": 0.0
-            },
-            {
-              "Type": "bool",
-              "Member": "LerpSmooth",
-              "Value": false,
               "Time": 0.0
             }
           ],

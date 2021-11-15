@@ -18,6 +18,8 @@ namespace JHP4SD.Screens
         protected static JHP4SD.GumRuntimes.MapGumRuntime MapGum;
         protected static FlatRedBall.TileGraphics.LayeredTileMap CountryMap;
         
+        private FlatRedBall.Camera CameraInstance;
+        private JHP4SD.Entities.CameraMidpoint CameraMidpointInstance;
         JHP4SD.FormsControls.Screens.MapGumForms Forms;
         JHP4SD.GumRuntimes.MapGumRuntime GumScreen;
         public Map () 
@@ -28,6 +30,12 @@ namespace JHP4SD.Screens
         {
             LoadStaticContent(ContentManagerName);
             Map = CountryMap;
+            CameraInstance = new FlatRedBall.Camera();
+            CameraInstance.Name = "CameraInstance";
+            CameraInstance.CreationSource = "Glue";
+            CameraMidpointInstance = new JHP4SD.Entities.CameraMidpoint(ContentManagerName, false);
+            CameraMidpointInstance.Name = "CameraMidpointInstance";
+            CameraMidpointInstance.CreationSource = "Glue";
             Forms = new JHP4SD.FormsControls.Screens.MapGumForms(MapGum);
             GumScreen = MapGum;
             
@@ -38,6 +46,7 @@ namespace JHP4SD.Screens
         {
             MapGum.AddToManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged += RefreshLayoutInternal;
             CountryMap.AddToManagers(mLayer);
+            CameraMidpointInstance.AddToManagers(mLayer);
             base.AddToManagers();
             CustomInitialize();
         }
@@ -47,6 +56,7 @@ namespace JHP4SD.Screens
             {
                 
                 CountryMap?.AnimateSelf();;
+                CameraMidpointInstance.Activity();
             }
             else
             {
@@ -61,6 +71,7 @@ namespace JHP4SD.Screens
         {
             if (FlatRedBall.Screens.ScreenManager.IsInEditMode)
             {
+                CameraMidpointInstance.ActivityEditMode();
                 CustomActivityEditMode();
                 base.ActivityEditMode();
             }
@@ -77,6 +88,11 @@ namespace JHP4SD.Screens
             {
                 Map.Destroy();
             }
+            if (CameraMidpointInstance != null)
+            {
+                CameraMidpointInstance.Destroy();
+                CameraMidpointInstance.Detach();
+            }
             FlatRedBall.Math.Collision.CollisionManager.Self.Relationships.Clear();
             CustomDestroy();
         }
@@ -85,6 +101,41 @@ namespace JHP4SD.Screens
             bool oldShapeManagerSuppressAdd = FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue;
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = true;
             base.PostInitialize();
+            if (CameraInstance.Parent == null)
+            {
+                CameraInstance.X = 0f;
+            }
+            else
+            {
+                CameraInstance.RelativeX = 0f;
+            }
+            if (CameraInstance.Parent == null)
+            {
+                CameraInstance.Y = 0f;
+            }
+            else
+            {
+                CameraInstance.RelativeY = 0f;
+            }
+            if (CameraInstance.Parent == null)
+            {
+                CameraInstance.Z = 0f;
+            }
+            else
+            {
+                CameraInstance.RelativeZ = 0f;
+            }
+            if (CameraInstance.Parent == null)
+            {
+                CameraInstance.RotationX = 15f;
+            }
+            else
+            {
+                CameraInstance.RelativeRotationX = 15f;
+            }
+            CameraInstance.Orthogonal = true;
+            CameraInstance.TopDestination = 150f;
+            CameraInstance.BottomDestination = 150f;
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
         }
         public override void AddToManagersBottomUp () 
@@ -100,17 +151,55 @@ namespace JHP4SD.Screens
             {
                 Map.Destroy();
             }
+            CameraMidpointInstance.RemoveFromManagers();
         }
         public override void AssignCustomVariables (bool callOnContainedElements) 
         {
             base.AssignCustomVariables(callOnContainedElements);
             if (callOnContainedElements)
             {
+                CameraMidpointInstance.AssignCustomVariables(true);
             }
+            if (CameraInstance.Parent == null)
+            {
+                CameraInstance.X = 0f;
+            }
+            else
+            {
+                CameraInstance.RelativeX = 0f;
+            }
+            if (CameraInstance.Parent == null)
+            {
+                CameraInstance.Y = 0f;
+            }
+            else
+            {
+                CameraInstance.RelativeY = 0f;
+            }
+            if (CameraInstance.Parent == null)
+            {
+                CameraInstance.Z = 0f;
+            }
+            else
+            {
+                CameraInstance.RelativeZ = 0f;
+            }
+            if (CameraInstance.Parent == null)
+            {
+                CameraInstance.RotationX = 15f;
+            }
+            else
+            {
+                CameraInstance.RelativeRotationX = 15f;
+            }
+            CameraInstance.Orthogonal = true;
+            CameraInstance.TopDestination = 150f;
+            CameraInstance.BottomDestination = 150f;
         }
         public override void ConvertToManuallyUpdated () 
         {
             base.ConvertToManuallyUpdated();
+            CameraMidpointInstance.ConvertToManuallyUpdated();
         }
         public static new void LoadStaticContent (string contentManagerName) 
         {
@@ -137,6 +226,7 @@ namespace JHP4SD.Screens
             #endif
             if(MapGum == null) MapGum = (JHP4SD.GumRuntimes.MapGumRuntime)GumRuntime.ElementSaveExtensions.CreateGueForElement(Gum.Managers.ObjectFinder.Self.GetScreen("MapGum"), true);
             CountryMap = FlatRedBall.TileGraphics.LayeredTileMap.FromTiledMapSave("content/screens/map/countrymap.tmx", contentManagerName);
+            JHP4SD.Entities.CameraMidpoint.LoadStaticContent(contentManagerName);
             CustomLoadStaticContent(contentManagerName);
         }
         public override void PauseThisScreen () 

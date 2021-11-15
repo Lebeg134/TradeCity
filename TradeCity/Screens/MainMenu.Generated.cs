@@ -10,35 +10,39 @@ using System.Collections.Generic;
 using System.Text;
 namespace JHP4SD.Screens
 {
-    public partial class Level1 : GameScreen
+    public partial class MainMenu : FlatRedBall.Screens.Screen
     {
         #if DEBUG
         static bool HasBeenLoadedWithGlobalContentManager = false;
         #endif
-        protected static JHP4SD.GumRuntimes.Level1GumRuntime Level1Gum;
-        protected static FlatRedBall.TileGraphics.LayeredTileMap Level1Map;
+        protected static JHP4SD.GumRuntimes.MainMenuGumRuntime MainMenuGum;
         
-        JHP4SD.FormsControls.Screens.Level1GumForms Forms;
-        JHP4SD.GumRuntimes.Level1GumRuntime GumScreen;
-        public Level1 () 
-        	: base ()
+        JHP4SD.FormsControls.Screens.MainMenuGumForms Forms;
+        JHP4SD.GumRuntimes.MainMenuGumRuntime GumScreen;
+        public MainMenu () 
+        	: base ("MainMenu")
         {
         }
         public override void Initialize (bool addToManagers) 
         {
             LoadStaticContent(ContentManagerName);
-            Map = Level1Map;
-            Forms = new JHP4SD.FormsControls.Screens.Level1GumForms(Level1Gum);
-            GumScreen = Level1Gum;
+            Forms = new JHP4SD.FormsControls.Screens.MainMenuGumForms(MainMenuGum);
+            GumScreen = MainMenuGum;
             
             
+            PostInitialize();
             base.Initialize(addToManagers);
+            if (addToManagers)
+            {
+                AddToManagers();
+            }
         }
         public override void AddToManagers () 
         {
-            Level1Gum.AddToManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged += RefreshLayoutInternal;
-            Level1Map.AddToManagers(mLayer);
+            MainMenuGum.AddToManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged += RefreshLayoutInternal;
             base.AddToManagers();
+            AddToManagersBottomUp();
+            BeforeCustomInitialize?.Invoke();
             CustomInitialize();
         }
         public override void Activity (bool firstTimeCalled) 
@@ -46,7 +50,6 @@ namespace JHP4SD.Screens
             if (!IsPaused)
             {
                 
-                Level1Map?.AnimateSelf();;
             }
             else
             {
@@ -68,57 +71,42 @@ namespace JHP4SD.Screens
         public override void Destroy () 
         {
             base.Destroy();
-            Level1Gum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
-            Level1Gum = null;
-            Level1Map.Destroy();
-            Level1Map = null;
+            MainMenuGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
+            MainMenuGum = null;
             
-            if (Map != null)
-            {
-                Map.Destroy();
-            }
             FlatRedBall.Math.Collision.CollisionManager.Self.Relationships.Clear();
             CustomDestroy();
         }
-        public override void PostInitialize () 
+        public virtual void PostInitialize () 
         {
             bool oldShapeManagerSuppressAdd = FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue;
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = true;
-            base.PostInitialize();
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
         }
-        public override void AddToManagersBottomUp () 
+        public virtual void AddToManagersBottomUp () 
         {
-            base.AddToManagersBottomUp();
+            CameraSetup.ResetCamera(SpriteManager.Camera);
+            AssignCustomVariables(false);
         }
-        public override void RemoveFromManagers () 
+        public virtual void RemoveFromManagers () 
         {
-            base.RemoveFromManagers();
-            Level1Gum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
-            Level1Map.Destroy();
-            if (Map != null)
-            {
-                Map.Destroy();
-            }
+            MainMenuGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
         }
-        public override void AssignCustomVariables (bool callOnContainedElements) 
+        public virtual void AssignCustomVariables (bool callOnContainedElements) 
         {
-            base.AssignCustomVariables(callOnContainedElements);
             if (callOnContainedElements)
             {
             }
         }
-        public override void ConvertToManuallyUpdated () 
+        public virtual void ConvertToManuallyUpdated () 
         {
-            base.ConvertToManuallyUpdated();
         }
-        public static new void LoadStaticContent (string contentManagerName) 
+        public static void LoadStaticContent (string contentManagerName) 
         {
             if (string.IsNullOrEmpty(contentManagerName))
             {
                 throw new System.ArgumentException("contentManagerName cannot be empty or null");
             }
-            JHP4SD.Screens.GameScreen.LoadStaticContent(contentManagerName);
             // Set the content manager for Gum
             var contentManagerWrapper = new FlatRedBall.Gum.ContentManagerWrapper();
             contentManagerWrapper.ContentManagerName = contentManagerName;
@@ -135,8 +123,7 @@ namespace JHP4SD.Screens
                 throw new System.Exception("This type has been loaded with a Global content manager, then loaded with a non-global.  This can lead to a lot of bugs");
             }
             #endif
-            if(Level1Gum == null) Level1Gum = (JHP4SD.GumRuntimes.Level1GumRuntime)GumRuntime.ElementSaveExtensions.CreateGueForElement(Gum.Managers.ObjectFinder.Self.GetScreen("Level1Gum"), true);
-            Level1Map = FlatRedBall.TileGraphics.LayeredTileMap.FromTiledMapSave("content/screens/level1/level1map.tmx", contentManagerName);
+            if(MainMenuGum == null) MainMenuGum = (JHP4SD.GumRuntimes.MainMenuGumRuntime)GumRuntime.ElementSaveExtensions.CreateGueForElement(Gum.Managers.ObjectFinder.Self.GetScreen("MainMenuGum"), true);
             CustomLoadStaticContent(contentManagerName);
         }
         public override void PauseThisScreen () 
@@ -150,25 +137,21 @@ namespace JHP4SD.Screens
             base.UnpauseThisScreen();
         }
         [System.Obsolete("Use GetFile instead")]
-        public static new object GetStaticMember (string memberName) 
+        public static object GetStaticMember (string memberName) 
         {
             switch(memberName)
             {
-                case  "Level1Gum":
-                    return Level1Gum;
-                case  "Level1Map":
-                    return Level1Map;
+                case  "MainMenuGum":
+                    return MainMenuGum;
             }
             return null;
         }
-        public static new object GetFile (string memberName) 
+        public static object GetFile (string memberName) 
         {
             switch(memberName)
             {
-                case  "Level1Gum":
-                    return Level1Gum;
-                case  "Level1Map":
-                    return Level1Map;
+                case  "MainMenuGum":
+                    return MainMenuGum;
             }
             return null;
         }
@@ -176,10 +159,8 @@ namespace JHP4SD.Screens
         {
             switch(memberName)
             {
-                case  "Level1Gum":
-                    return Level1Gum;
-                case  "Level1Map":
-                    return Level1Map;
+                case  "MainMenuGum":
+                    return MainMenuGum;
             }
             return null;
         }
@@ -188,7 +169,7 @@ namespace JHP4SD.Screens
         }
         private void RefreshLayoutInternal (object sender, EventArgs e) 
         {
-            Level1Gum.UpdateLayout();
+            MainMenuGum.UpdateLayout();
         }
         partial void CustomActivityEditMode();
     }

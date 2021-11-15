@@ -5,6 +5,18 @@
     <Name>Default</Name>
     <Variable>
       <Type>float</Type>
+      <Name>HelloButton.Height</Name>
+      <Value xsi:type="xsd:float">44</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>HelloButton.Width</Name>
+      <Value xsi:type="xsd:float">79</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
       <Name>HelloButton.X</Name>
       <Value xsi:type="xsd:float">40</Value>
       <SetsValue>true</SetsValue>

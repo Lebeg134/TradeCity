@@ -36,10 +36,13 @@
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/TreeViewItem", typeof(JHP4SD.GumRuntimes.DefaultForms.TreeViewItemRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/TreeViewToggleButton", typeof(JHP4SD.GumRuntimes.DefaultForms.TreeViewToggleButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/UserControl", typeof(JHP4SD.GumRuntimes.DefaultForms.UserControlRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("CityGum", typeof(JHP4SD.GumRuntimes.CityGumRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("GameScreenGum", typeof(JHP4SD.GumRuntimes.GameScreenGumRuntime));
-                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("Level1Gum", typeof(JHP4SD.GumRuntimes.Level1GumRuntime));
-                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("Level2Gum", typeof(JHP4SD.GumRuntimes.Level2GumRuntime));
-                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("Level3Gum", typeof(JHP4SD.GumRuntimes.Level3GumRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("MainMenuGum", typeof(JHP4SD.GumRuntimes.MainMenuGumRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("MapGum", typeof(JHP4SD.GumRuntimes.MapGumRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("MarketGum", typeof(JHP4SD.GumRuntimes.MarketGumRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("MultiplayerGum", typeof(JHP4SD.GumRuntimes.MultiplayerGumRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("SettingsGum", typeof(JHP4SD.GumRuntimes.SettingsGumRuntime));
                 
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(FlatRedBall.Forms.Controls.Button)] = typeof(JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime);
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(FlatRedBall.Forms.Controls.CheckBox)] = typeof(JHP4SD.GumRuntimes.DefaultForms.CheckBoxRuntime);

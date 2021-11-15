@@ -76,22 +76,26 @@
     </Compile>
     <Compile Include="Factories\CameraMidpointFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
+    <Compile Include="Forms\Screens\CityGumForms.cs" />
+    <Compile Include="Forms\Screens\CityGumForms.Generated.cs">
+      <DependentUpon>CityGumForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Screens\GameScreenGumForms.cs" />
     <Compile Include="Forms\Screens\GameScreenGumForms.Generated.cs">
       <DependentUpon>GameScreenGumForms.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Screens\Level1GumForms.cs" />
-    <Compile Include="Forms\Screens\Level1GumForms.Generated.cs">
-      <DependentUpon>Level1GumForms.cs</DependentUpon>
+    <Compile Include="Forms\Screens\MainMenuGumForms.cs" />
+    <Compile Include="Forms\Screens\MainMenuGumForms.Generated.cs">
+      <DependentUpon>MainMenuGumForms.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Screens\Level2GumForms.cs" />
-    <Compile Include="Forms\Screens\Level2GumForms.Generated.cs">
-      <DependentUpon>Level2GumForms.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Screens\Level3GumForms.cs" />
-    <Compile Include="Forms\Screens\Level3GumForms.Generated.cs">
-      <DependentUpon>Level3GumForms.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Forms\Screens\MapGumForms.cs" />
+    <Compile Include="Forms\Screens\MapGumForms.Generated.cs" />
+    <Compile Include="Forms\Screens\MarketGumForms.cs" />
+    <Compile Include="Forms\Screens\MarketGumForms.Generated.cs" />
+    <Compile Include="Forms\Screens\MultiplayerGumForms.cs" />
+    <Compile Include="Forms\Screens\MultiplayerGumForms.Generated.cs" />
+    <Compile Include="Forms\Screens\SettingsGumForms.cs" />
+    <Compile Include="Forms\Screens\SettingsGumForms.Generated.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Game1.Generated.cs">
       <DependentUpon>Game1.cs</DependentUpon>
@@ -141,6 +145,10 @@
     <Compile Include="GumRuntimes\Behaviors\ITreeViewItemBehavior.Generated.cs" />
     <Compile Include="GumRuntimes\Behaviors\IUserControlBehavior.Generated.cs" />
     <Compile Include="GumRuntimes\CircleRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\CityGumRuntime.cs" />
+    <Compile Include="GumRuntimes\CityGumRuntime.Generated.cs">
+      <DependentUpon>CityGumRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\ColoredRectangleRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\ContainerRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\DefaultForms\ButtonRuntime.cs" />
@@ -240,21 +248,21 @@
       <DependentUpon>GameScreenGumRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\GumIdb.Generated.cs" />
-    <Compile Include="GumRuntimes\Level1GumRuntime.cs" />
-    <Compile Include="GumRuntimes\Level1GumRuntime.Generated.cs">
-      <DependentUpon>Level1GumRuntime.cs</DependentUpon>
+    <Compile Include="GumRuntimes\MainMenuGumRuntime.cs" />
+    <Compile Include="GumRuntimes\MainMenuGumRuntime.Generated.cs">
+      <DependentUpon>MainMenuGumRuntime.cs</DependentUpon>
     </Compile>
-    <Compile Include="GumRuntimes\Level2GumRuntime.cs" />
-    <Compile Include="GumRuntimes\Level2GumRuntime.Generated.cs">
-      <DependentUpon>Level2GumRuntime.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GumRuntimes\Level3GumRuntime.cs" />
-    <Compile Include="GumRuntimes\Level3GumRuntime.Generated.cs">
-      <DependentUpon>Level3GumRuntime.cs</DependentUpon>
-    </Compile>
+    <Compile Include="GumRuntimes\MapGumRuntime.cs" />
+    <Compile Include="GumRuntimes\MapGumRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\MarketGumRuntime.cs" />
+    <Compile Include="GumRuntimes\MarketGumRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\MultiplayerGumRuntime.cs" />
+    <Compile Include="GumRuntimes\MultiplayerGumRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\NineSliceRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\PolygonRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\RectangleRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\SettingsGumRuntime.cs" />
+    <Compile Include="GumRuntimes\SettingsGumRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\SpriteRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\TextRuntime.Generated.cs" />
     <Compile Include="Lebeg134\Module\Map\Auction.cs" />
@@ -352,21 +360,33 @@
     <Compile Include="Platformer\Enums.Generated.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\City.cs" />
+    <Compile Include="Screens\City.Generated.cs">
+      <DependentUpon>City.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\GameScreen.cs" />
     <Compile Include="Screens\GameScreen.Generated.cs">
       <DependentUpon>GameScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Level1.cs" />
-    <Compile Include="Screens\Level1.Generated.cs">
-      <DependentUpon>Level1.cs</DependentUpon>
+    <Compile Include="Screens\MainMenu.cs" />
+    <Compile Include="Screens\MainMenu.Generated.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Level2.cs" />
-    <Compile Include="Screens\Level2.Generated.cs">
-      <DependentUpon>Level2.cs</DependentUpon>
+    <Compile Include="Screens\Map.cs" />
+    <Compile Include="Screens\Map.Generated.cs">
+      <DependentUpon>Map.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Level3.cs" />
-    <Compile Include="Screens\Level3.Generated.cs">
-      <DependentUpon>Level3.cs</DependentUpon>
+    <Compile Include="Screens\Market.cs" />
+    <Compile Include="Screens\Market.Generated.cs">
+      <DependentUpon>Market.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Multiplayer.cs" />
+    <Compile Include="Screens\Multiplayer.Generated.cs">
+      <DependentUpon>Multiplayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Settings.cs" />
+    <Compile Include="Screens\Settings.Generated.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="Setup\CameraSetup.cs" />
     <Compile Include="TileCollisions\CollidableListVsTileShapeCollectionRelationship.cs" />
@@ -547,21 +567,33 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>GumProject</Name>
     </None>
+    <None Include="content\gumproject\screens\citygum.gusx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>CityGum</Name>
+    </None>
     <None Include="content\gumproject\screens\gamescreengum.gusx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>GameScreenGum</Name>
     </None>
-    <None Include="content\gumproject\screens\level1gum.gusx">
+    <None Include="content\gumproject\screens\mainmenugum.gusx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>Level1Gum</Name>
+      <Name>MainMenuGum</Name>
     </None>
-    <None Include="content\gumproject\screens\level2gum.gusx">
+    <None Include="content\gumproject\screens\mapgum.gusx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>Level2Gum</Name>
+      <Name>MapGum</Name>
     </None>
-    <None Include="content\gumproject\screens\level3gum.gusx">
+    <None Include="content\gumproject\screens\marketgum.gusx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>Level3Gum</Name>
+      <Name>MarketGum</Name>
+    </None>
+    <None Include="content\gumproject\screens\multiplayergum.gusx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>MultiplayerGum</Name>
+    </None>
+    <None Include="content\gumproject\screens\settingsgum.gusx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>SettingsGum</Name>
     </None>
     <None Include="content\gumproject\standards\circle.gutx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -639,17 +671,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>uispritesheet</Name>
     </None>
-    <None Include="content\screens\level1\level1map.tmx">
+    <None Include="content\screens\city\citymap.tmx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>Level1Map</Name>
-    </None>
-    <None Include="content\screens\level2\level2map.tmx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>Level2Map</Name>
-    </None>
-    <None Include="content\screens\level3\level3map.tmx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>Level3Map</Name>
+      <Name>CityMap</Name>
     </None>
     <None Include="content\screens\level3\tiles.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -658,6 +682,10 @@
     <None Include="content\screens\level3\tiles.tsx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>tiles</Name>
+    </None>
+    <None Include="content\screens\map\countrymap.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>CountryMap</Name>
     </None>
     <None Include="content\standardtileset.tsx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

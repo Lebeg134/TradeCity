@@ -2,8 +2,8 @@
 <GumProjectSave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <CustomProperties />
   <Version>1</Version>
-  <DefaultCanvasWidth>320</DefaultCanvasWidth>
-  <DefaultCanvasHeight>180</DefaultCanvasHeight>
+  <DefaultCanvasWidth>1920</DefaultCanvasWidth>
+  <DefaultCanvasHeight>1080</DefaultCanvasHeight>
   <ShowOutlines>true</ShowOutlines>
   <ConvertVariablesOnUnitTypeChange>false</ConvertVariablesOnUnitTypeChange>
   <RestrictToUnitValues>true</RestrictToUnitValues>
@@ -13,22 +13,37 @@
   <ShowLocalizationInGum>true</ShowLocalizationInGum>
   <CurrentLanguageIndex>0</CurrentLanguageIndex>
   <ScreenReference>
+    <Name>CityGum</Name>
+    <ElementType>Screen</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
+  </ScreenReference>
+  <ScreenReference>
     <Name>GameScreenGum</Name>
     <ElementType>Screen</ElementType>
     <LinkType>ReferenceOriginal</LinkType>
   </ScreenReference>
   <ScreenReference>
-    <Name>Level1Gum</Name>
+    <Name>MainMenuGum</Name>
     <ElementType>Screen</ElementType>
     <LinkType>ReferenceOriginal</LinkType>
   </ScreenReference>
   <ScreenReference>
-    <Name>Level2Gum</Name>
+    <Name>MapGum</Name>
     <ElementType>Screen</ElementType>
     <LinkType>ReferenceOriginal</LinkType>
   </ScreenReference>
   <ScreenReference>
-    <Name>Level3Gum</Name>
+    <Name>MarketGum</Name>
+    <ElementType>Screen</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
+  </ScreenReference>
+  <ScreenReference>
+    <Name>MultiplayerGum</Name>
+    <ElementType>Screen</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
+  </ScreenReference>
+  <ScreenReference>
+    <Name>SettingsGum</Name>
     <ElementType>Screen</ElementType>
     <LinkType>ReferenceOriginal</LinkType>
   </ScreenReference>

@@ -16,11 +16,12 @@ using FlatRedBall.Localization;
 
 namespace JHP4SD.Screens
 {
-    public partial class GameScreen
+    public partial class City
     {
 
         void CustomInitialize()
         {
+
 
         }
 

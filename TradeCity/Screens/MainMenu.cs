@@ -16,18 +16,13 @@ using FlatRedBall.Localization;
 
 namespace JHP4SD.Screens
 {
-    public partial class Level3
+    public partial class MainMenu
     {
 
         void CustomInitialize()
         {
-            Forms.BackButton.Click += BackButton_Click;
 
-        }
 
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            MoveToScreen(typeof(Level2));
         }
 
         void CustomActivity(bool firstTimeCalled)

@@ -1,95 +1,179 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ScreenSave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>Level1Gum</Name>
+  <Name>MainMenuGum</Name>
   <State>
     <Name>Default</Name>
     <Variable>
-      <Type>int</Type>
-      <Name>ColoredRectangleInstance.Alpha</Name>
-      <Value xsi:type="xsd:int">255</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>ColoredRectangleInstance.Blue</Name>
-      <Value xsi:type="xsd:int">139</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>ColoredRectangleInstance.Green</Name>
-      <Value xsi:type="xsd:int">139</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>float</Type>
-      <Name>ColoredRectangleInstance.Height</Name>
-      <Value xsi:type="xsd:float">0</Value>
+      <Name>ButtonInstance.Height</Name>
+      <Value xsi:type="xsd:float">50</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
-      <Name>ColoredRectangleInstance.Height Units</Name>
-      <Value xsi:type="xsd:int">2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>ColoredRectangleInstance.Parent</Name>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>ColoredRectangleInstance.Red</Name>
+      <Name>ButtonInstance.Height Units</Name>
       <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ColoredRectangleInstance.Width</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>DimensionUnitType</Type>
-      <Name>ColoredRectangleInstance.Width Units</Name>
-      <Value xsi:type="xsd:int">2</Value>
+      <Name>ButtonInstance.Width</Name>
+      <Value xsi:type="xsd:float">50</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ColoredRectangleInstance.X</Name>
+      <Name>ButtonInstance.X</Name>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ButtonInstance.Y</Name>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ButtonInstance1.Height</Name>
+      <Value xsi:type="xsd:float">50</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>ButtonInstance1.Height Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>ButtonInstance1.Parent</Name>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ButtonInstance1.Width</Name>
+      <Value xsi:type="xsd:float">50</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ButtonInstance1.X</Name>
       <Value xsi:type="xsd:float">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>HorizontalAlignment</Type>
-      <Name>ColoredRectangleInstance.X Origin</Name>
-      <Value xsi:type="xsd:int">1</Value>
+      <Name>ButtonInstance1.X Origin</Name>
+      <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>PositionUnitType</Type>
-      <Name>ColoredRectangleInstance.X Units</Name>
-      <Value xsi:type="xsd:int">6</Value>
+      <Name>ButtonInstance1.X Units</Name>
+      <Value xsi:type="xsd:int">4</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ColoredRectangleInstance.Y</Name>
+      <Name>ButtonInstance1.Y</Name>
       <Value xsi:type="xsd:float">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>VerticalAlignment</Type>
-      <Name>ColoredRectangleInstance.Y Origin</Name>
-      <Value xsi:type="xsd:int">1</Value>
+      <Name>ButtonInstance1.Y Origin</Name>
+      <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>PositionUnitType</Type>
-      <Name>ColoredRectangleInstance.Y Units</Name>
-      <Value xsi:type="xsd:int">7</Value>
+      <Name>ButtonInstance1.Y Units</Name>
+      <Value xsi:type="xsd:int">5</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ButtonInstance2.Height</Name>
+      <Value xsi:type="xsd:float">50</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>ButtonInstance2.Height Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ButtonInstance2.Width</Name>
+      <Value xsi:type="xsd:float">50</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ButtonInstance2.X</Name>
+      <Value xsi:type="xsd:float">910</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ButtonInstance2.Y</Name>
+      <Value xsi:type="xsd:float">490</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ButtonInstance3.Height</Name>
+      <Value xsi:type="xsd:float">50</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>ButtonInstance3.Height Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ButtonInstance3.Width</Name>
+      <Value xsi:type="xsd:float">50</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ButtonInstance3.X</Name>
+      <Value xsi:type="xsd:float">-910</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>HorizontalAlignment</Type>
+      <Name>ButtonInstance3.X Origin</Name>
+      <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>PositionUnitType</Type>
+      <Name>ButtonInstance3.X Units</Name>
+      <Value xsi:type="xsd:int">4</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ButtonInstance3.Y</Name>
+      <Value xsi:type="xsd:float">-490</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>VerticalAlignment</Type>
+      <Name>ButtonInstance3.Y Origin</Name>
+      <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>PositionUnitType</Type>
+      <Name>ButtonInstance3.Y Units</Name>
+      <Value xsi:type="xsd:int">5</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -98,121 +182,24 @@
       <Value xsi:type="xsd:boolean">false</Value>
       <SetsValue>true</SetsValue>
     </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>LeftCircle.Blue</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>LeftCircle.Green</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>LeftCircle.Red</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>State</Type>
-      <Name>LeftCircle.State</Name>
-      <Value xsi:type="xsd:string">Default</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>LeftCircle.X</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>LeftCircle.Y</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>VerticalAlignment</Type>
-      <Name>LeftCircle.Y Origin</Name>
-      <Value xsi:type="xsd:int">2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>LeftCircle.Y Units</Name>
-      <Value xsi:type="xsd:int">5</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>SecretButton.Height</Name>
-      <Value xsi:type="xsd:float">50</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>SecretButton.Text</Name>
-      <Value xsi:type="xsd:string">;)</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>SecretButton.Width</Name>
-      <Value xsi:type="xsd:float">50</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>SecretButton.X</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>HorizontalAlignment</Type>
-      <Name>SecretButton.X Origin</Name>
-      <Value xsi:type="xsd:int">2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>SecretButton.X Units</Name>
-      <Value xsi:type="xsd:int">4</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>SecretButton.Y</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>VerticalAlignment</Type>
-      <Name>SecretButton.Y Origin</Name>
-      <Value xsi:type="xsd:int">2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>SecretButton.Y Units</Name>
-      <Value xsi:type="xsd:int">5</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
   </State>
   <Instance>
-    <Name>ColoredRectangleInstance</Name>
-    <BaseType>ColoredRectangle</BaseType>
+    <Name>ButtonInstance</Name>
+    <BaseType>DefaultForms/Button</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>LeftCircle</Name>
-    <BaseType>Circle</BaseType>
+    <Name>ButtonInstance2</Name>
+    <BaseType>DefaultForms/Button</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>SecretButton</Name>
+    <Name>ButtonInstance3</Name>
+    <BaseType>DefaultForms/Button</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>ButtonInstance1</Name>
     <BaseType>DefaultForms/Button</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>

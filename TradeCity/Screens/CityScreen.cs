@@ -16,7 +16,7 @@ using FlatRedBall.Localization;
 
 namespace JHP4SD.Screens
 {
-    public partial class MainMenu
+    public partial class CityScreen
     {
 
         void CustomInitialize()

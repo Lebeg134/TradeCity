@@ -11,23 +11,23 @@ using FlatRedBall.Graphics.Animation;
 using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 using FlatRedBall.Localization;
+using Microsoft.Xna.Framework.Input;
 
 
 
 namespace JHP4SD.Screens
 {
-    public partial class City
+    public partial class MapScreen
     {
-
+        Camera mainCamera = FlatRedBall.Camera.Main;
         void CustomInitialize()
         {
-
-
+            
         }
 
         void CustomActivity(bool firstTimeCalled)
         {
-
+            
 
         }
 

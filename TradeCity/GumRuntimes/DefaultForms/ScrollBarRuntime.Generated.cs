@@ -32,13 +32,16 @@
                             ThumbInstance.Parent = this.GetGraphicalUiElementByName("ThumbContainer") ?? this;
                             SpriteInstance1.Parent = this.GetGraphicalUiElementByName("UpButtonInstance") ?? this;
                             SpriteInstance2.Parent = this.GetGraphicalUiElementByName("DownButtonInstance") ?? this;
-                            BackgroundInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                            BackgroundInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                             Height = 384f;
                             Width = 36f;
                             X = 0f;
                             Y = 0f;
+                            BackgroundInstance.Blue = 128;
+                            BackgroundInstance.Green = 128;
                             BackgroundInstance.Height = 0f;
                             BackgroundInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            BackgroundInstance.Red = 128;
                             BackgroundInstance.Width = 0f;
                             BackgroundInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             BackgroundInstance.X = 0f;
@@ -140,14 +143,26 @@
                     throw new System.Exception("interpolationValue cannot be NaN");
                 }
                 #endif
+                bool setBackgroundInstanceBlueFirstValue = false;
+                bool setBackgroundInstanceBlueSecondValue = false;
+                int BackgroundInstanceBlueFirstValue= 0;
+                int BackgroundInstanceBlueSecondValue= 0;
                 bool setBackgroundInstanceCurrentColorCategoryStateFirstValue = false;
                 bool setBackgroundInstanceCurrentColorCategoryStateSecondValue = false;
                 JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory BackgroundInstanceCurrentColorCategoryStateFirstValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                 JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory BackgroundInstanceCurrentColorCategoryStateSecondValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                bool setBackgroundInstanceGreenFirstValue = false;
+                bool setBackgroundInstanceGreenSecondValue = false;
+                int BackgroundInstanceGreenFirstValue= 0;
+                int BackgroundInstanceGreenSecondValue= 0;
                 bool setBackgroundInstanceHeightFirstValue = false;
                 bool setBackgroundInstanceHeightSecondValue = false;
                 float BackgroundInstanceHeightFirstValue= 0;
                 float BackgroundInstanceHeightSecondValue= 0;
+                bool setBackgroundInstanceRedFirstValue = false;
+                bool setBackgroundInstanceRedSecondValue = false;
+                int BackgroundInstanceRedFirstValue= 0;
+                int BackgroundInstanceRedSecondValue= 0;
                 bool setBackgroundInstanceWidthFirstValue = false;
                 bool setBackgroundInstanceWidthSecondValue = false;
                 float BackgroundInstanceWidthFirstValue= 0;
@@ -291,14 +306,20 @@
                 switch(firstState)
                 {
                     case  VariableState.Default:
+                        setBackgroundInstanceBlueFirstValue = true;
+                        BackgroundInstanceBlueFirstValue = 128;
                         setBackgroundInstanceCurrentColorCategoryStateFirstValue = true;
-                        BackgroundInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        BackgroundInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                        setBackgroundInstanceGreenFirstValue = true;
+                        BackgroundInstanceGreenFirstValue = 128;
                         setBackgroundInstanceHeightFirstValue = true;
                         BackgroundInstanceHeightFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
                             this.BackgroundInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
+                        setBackgroundInstanceRedFirstValue = true;
+                        BackgroundInstanceRedFirstValue = 128;
                         setBackgroundInstanceWidthFirstValue = true;
                         BackgroundInstanceWidthFirstValue = 0f;
                         if (interpolationValue < 1)
@@ -542,14 +563,20 @@
                 switch(secondState)
                 {
                     case  VariableState.Default:
+                        setBackgroundInstanceBlueSecondValue = true;
+                        BackgroundInstanceBlueSecondValue = 128;
                         setBackgroundInstanceCurrentColorCategoryStateSecondValue = true;
-                        BackgroundInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        BackgroundInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                        setBackgroundInstanceGreenSecondValue = true;
+                        BackgroundInstanceGreenSecondValue = 128;
                         setBackgroundInstanceHeightSecondValue = true;
                         BackgroundInstanceHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
                             this.BackgroundInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
+                        setBackgroundInstanceRedSecondValue = true;
+                        BackgroundInstanceRedSecondValue = 128;
                         setBackgroundInstanceWidthSecondValue = true;
                         BackgroundInstanceWidthSecondValue = 0f;
                         if (interpolationValue >= 1)
@@ -795,13 +822,25 @@
                 {
                     SuspendLayout(true);
                 }
+                if (setBackgroundInstanceBlueFirstValue && setBackgroundInstanceBlueSecondValue)
+                {
+                    BackgroundInstance.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(BackgroundInstanceBlueFirstValue* (1 - interpolationValue) + BackgroundInstanceBlueSecondValue * interpolationValue);
+                }
                 if (setBackgroundInstanceCurrentColorCategoryStateFirstValue && setBackgroundInstanceCurrentColorCategoryStateSecondValue)
                 {
                     BackgroundInstance.InterpolateBetween(BackgroundInstanceCurrentColorCategoryStateFirstValue, BackgroundInstanceCurrentColorCategoryStateSecondValue, interpolationValue);
                 }
+                if (setBackgroundInstanceGreenFirstValue && setBackgroundInstanceGreenSecondValue)
+                {
+                    BackgroundInstance.Green = FlatRedBall.Math.MathFunctions.RoundToInt(BackgroundInstanceGreenFirstValue* (1 - interpolationValue) + BackgroundInstanceGreenSecondValue * interpolationValue);
+                }
                 if (setBackgroundInstanceHeightFirstValue && setBackgroundInstanceHeightSecondValue)
                 {
                     BackgroundInstance.Height = BackgroundInstanceHeightFirstValue * (1 - interpolationValue) + BackgroundInstanceHeightSecondValue * interpolationValue;
+                }
+                if (setBackgroundInstanceRedFirstValue && setBackgroundInstanceRedSecondValue)
+                {
+                    BackgroundInstance.Red = FlatRedBall.Math.MathFunctions.RoundToInt(BackgroundInstanceRedFirstValue* (1 - interpolationValue) + BackgroundInstanceRedSecondValue * interpolationValue);
                 }
                 if (setBackgroundInstanceWidthFirstValue && setBackgroundInstanceWidthSecondValue)
                 {
@@ -1155,9 +1194,25 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "BackgroundInstance.Blue",
+                            Type = "int",
+                            Value = BackgroundInstance.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "BackgroundInstance.ColorCategoryState",
                             Type = "ColorCategoryState",
                             Value = BackgroundInstance.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundInstance.Green",
+                            Type = "int",
+                            Value = BackgroundInstance.Green
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1174,6 +1229,14 @@
                             Name = "BackgroundInstance.Height Units",
                             Type = "DimensionUnitType",
                             Value = BackgroundInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundInstance.Red",
+                            Type = "int",
+                            Value = BackgroundInstance.Red
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1805,9 +1868,25 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "BackgroundInstance.Blue",
+                            Type = "int",
+                            Value = BackgroundInstance.Blue + 128
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "BackgroundInstance.ColorCategoryState",
                             Type = "ColorCategoryState",
                             Value = BackgroundInstance.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundInstance.Green",
+                            Type = "int",
+                            Value = BackgroundInstance.Green + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1824,6 +1903,14 @@
                             Name = "BackgroundInstance.Height Units",
                             Type = "DimensionUnitType",
                             Value = BackgroundInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundInstance.Red",
+                            Type = "int",
+                            Value = BackgroundInstance.Red + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

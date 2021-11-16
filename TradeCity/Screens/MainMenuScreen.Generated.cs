@@ -10,35 +10,39 @@ using System.Collections.Generic;
 using System.Text;
 namespace JHP4SD.Screens
 {
-    public partial class City : GameScreen
+    public partial class MainMenuScreen : FlatRedBall.Screens.Screen
     {
         #if DEBUG
         static bool HasBeenLoadedWithGlobalContentManager = false;
         #endif
-        protected static JHP4SD.GumRuntimes.CityGumRuntime CityGum;
-        protected static FlatRedBall.TileGraphics.LayeredTileMap CityMap;
+        protected static JHP4SD.GumRuntimes.MainMenuGumRuntime MainMenuGum;
         
-        JHP4SD.FormsControls.Screens.CityGumForms Forms;
-        JHP4SD.GumRuntimes.CityGumRuntime GumScreen;
-        public City () 
-        	: base ()
+        JHP4SD.FormsControls.Screens.MainMenuGumForms Forms;
+        JHP4SD.GumRuntimes.MainMenuGumRuntime GumScreen;
+        public MainMenuScreen () 
+        	: base ("MainMenuScreen")
         {
         }
         public override void Initialize (bool addToManagers) 
         {
             LoadStaticContent(ContentManagerName);
-            Map = CityMap;
-            Forms = new JHP4SD.FormsControls.Screens.CityGumForms(CityGum);
-            GumScreen = CityGum;
+            Forms = new JHP4SD.FormsControls.Screens.MainMenuGumForms(MainMenuGum);
+            GumScreen = MainMenuGum;
             
             
+            PostInitialize();
             base.Initialize(addToManagers);
+            if (addToManagers)
+            {
+                AddToManagers();
+            }
         }
         public override void AddToManagers () 
         {
-            CityGum.AddToManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged += RefreshLayoutInternal;
-            CityMap.AddToManagers(mLayer);
+            MainMenuGum.AddToManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged += RefreshLayoutInternal;
             base.AddToManagers();
+            AddToManagersBottomUp();
+            BeforeCustomInitialize?.Invoke();
             CustomInitialize();
         }
         public override void Activity (bool firstTimeCalled) 
@@ -46,7 +50,6 @@ namespace JHP4SD.Screens
             if (!IsPaused)
             {
                 
-                CityMap?.AnimateSelf();;
             }
             else
             {
@@ -68,57 +71,42 @@ namespace JHP4SD.Screens
         public override void Destroy () 
         {
             base.Destroy();
-            CityGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
-            CityGum = null;
-            CityMap.Destroy();
-            CityMap = null;
+            MainMenuGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
+            MainMenuGum = null;
             
-            if (Map != null)
-            {
-                Map.Destroy();
-            }
             FlatRedBall.Math.Collision.CollisionManager.Self.Relationships.Clear();
             CustomDestroy();
         }
-        public override void PostInitialize () 
+        public virtual void PostInitialize () 
         {
             bool oldShapeManagerSuppressAdd = FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue;
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = true;
-            base.PostInitialize();
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
         }
-        public override void AddToManagersBottomUp () 
+        public virtual void AddToManagersBottomUp () 
         {
-            base.AddToManagersBottomUp();
+            CameraSetup.ResetCamera(SpriteManager.Camera);
+            AssignCustomVariables(false);
         }
-        public override void RemoveFromManagers () 
+        public virtual void RemoveFromManagers () 
         {
-            base.RemoveFromManagers();
-            CityGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
-            CityMap.Destroy();
-            if (Map != null)
-            {
-                Map.Destroy();
-            }
+            MainMenuGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
         }
-        public override void AssignCustomVariables (bool callOnContainedElements) 
+        public virtual void AssignCustomVariables (bool callOnContainedElements) 
         {
-            base.AssignCustomVariables(callOnContainedElements);
             if (callOnContainedElements)
             {
             }
         }
-        public override void ConvertToManuallyUpdated () 
+        public virtual void ConvertToManuallyUpdated () 
         {
-            base.ConvertToManuallyUpdated();
         }
-        public static new void LoadStaticContent (string contentManagerName) 
+        public static void LoadStaticContent (string contentManagerName) 
         {
             if (string.IsNullOrEmpty(contentManagerName))
             {
                 throw new System.ArgumentException("contentManagerName cannot be empty or null");
             }
-            JHP4SD.Screens.GameScreen.LoadStaticContent(contentManagerName);
             // Set the content manager for Gum
             var contentManagerWrapper = new FlatRedBall.Gum.ContentManagerWrapper();
             contentManagerWrapper.ContentManagerName = contentManagerName;
@@ -135,8 +123,7 @@ namespace JHP4SD.Screens
                 throw new System.Exception("This type has been loaded with a Global content manager, then loaded with a non-global.  This can lead to a lot of bugs");
             }
             #endif
-            if(CityGum == null) CityGum = (JHP4SD.GumRuntimes.CityGumRuntime)GumRuntime.ElementSaveExtensions.CreateGueForElement(Gum.Managers.ObjectFinder.Self.GetScreen("CityGum"), true);
-            CityMap = FlatRedBall.TileGraphics.LayeredTileMap.FromTiledMapSave("content/screens/city/citymap.tmx", contentManagerName);
+            if(MainMenuGum == null) MainMenuGum = (JHP4SD.GumRuntimes.MainMenuGumRuntime)GumRuntime.ElementSaveExtensions.CreateGueForElement(Gum.Managers.ObjectFinder.Self.GetScreen("MainMenuGum"), true);
             CustomLoadStaticContent(contentManagerName);
         }
         public override void PauseThisScreen () 
@@ -150,25 +137,21 @@ namespace JHP4SD.Screens
             base.UnpauseThisScreen();
         }
         [System.Obsolete("Use GetFile instead")]
-        public static new object GetStaticMember (string memberName) 
+        public static object GetStaticMember (string memberName) 
         {
             switch(memberName)
             {
-                case  "CityGum":
-                    return CityGum;
-                case  "CityMap":
-                    return CityMap;
+                case  "MainMenuGum":
+                    return MainMenuGum;
             }
             return null;
         }
-        public static new object GetFile (string memberName) 
+        public static object GetFile (string memberName) 
         {
             switch(memberName)
             {
-                case  "CityGum":
-                    return CityGum;
-                case  "CityMap":
-                    return CityMap;
+                case  "MainMenuGum":
+                    return MainMenuGum;
             }
             return null;
         }
@@ -176,10 +159,8 @@ namespace JHP4SD.Screens
         {
             switch(memberName)
             {
-                case  "CityGum":
-                    return CityGum;
-                case  "CityMap":
-                    return CityMap;
+                case  "MainMenuGum":
+                    return MainMenuGum;
             }
             return null;
         }
@@ -188,7 +169,7 @@ namespace JHP4SD.Screens
         }
         private void RefreshLayoutInternal (object sender, EventArgs e) 
         {
-            CityGum.UpdateLayout();
+            MainMenuGum.UpdateLayout();
         }
         partial void CustomActivityEditMode();
     }

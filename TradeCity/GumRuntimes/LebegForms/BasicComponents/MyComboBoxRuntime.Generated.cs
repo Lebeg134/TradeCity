@@ -35,8 +35,7 @@
                         case  VariableState.Default:
                             SpriteInstance.Parent = this.GetGraphicalUiElementByName("NineSliceInstance") ?? this;
                             PaceholderText.Parent = this.GetGraphicalUiElementByName("NineSliceInstance") ?? this;
-                            PaceholderText.Parent = this.GetGraphicalUiElementByName("NineSliceInstance") ?? this;
-                            NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                            NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                             TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                             Height = 48f;
                             Width = 250f;
@@ -46,8 +45,11 @@
                             ListBoxInstance.X = 0f;
                             ListBoxInstance.Y = 0f;
                             ListBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            NineSliceInstance.Blue = 128;
+                            NineSliceInstance.Green = 128;
                             NineSliceInstance.Height = 0f;
                             NineSliceInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            NineSliceInstance.Red = 128;
                             NineSliceInstance.Width = 0f;
                             NineSliceInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             NineSliceInstance.X = 0f;
@@ -79,32 +81,18 @@
                             SpriteInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             SpriteInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             PaceholderText.Alpha = 150;
-                            PaceholderText.Alpha = 150;
-                            PaceholderText.Blue = 0;
                             PaceholderText.Blue = 0;
                             PaceholderText.FontSize = 16;
-                            PaceholderText.FontSize = 16;
-                            PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                            PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                            PaceholderText.IsItalic = false;
                             PaceholderText.IsItalic = false;
                             PaceholderText.Rotation = -20f;
-                            PaceholderText.Rotation = -20f;
-                            PaceholderText.Text = "PLACEHOLDER";
                             PaceholderText.Text = "PLACEHOLDER";
                             PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                            PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                            PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                            PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                            PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                            PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                            PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             break;
                     }
@@ -124,28 +112,28 @@
                         switch(mCurrentComboBoxCategoryState)
                         {
                             case  ComboBoxCategory.Enabled:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
-                                TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
-                                NineSliceInstance.Blue = 255;
-                                NineSliceInstance.Green = 255;
-                                NineSliceInstance.Red = 255;
-                                break;
-                            case  ComboBoxCategory.Disabled:
                                 NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                                 TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                                 NineSliceInstance.Blue = 255;
                                 NineSliceInstance.Green = 255;
                                 NineSliceInstance.Red = 255;
                                 break;
+                            case  ComboBoxCategory.Disabled:
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Red;
+                                TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
+                                NineSliceInstance.Blue = 255;
+                                NineSliceInstance.Green = 255;
+                                NineSliceInstance.Red = 255;
+                                break;
                             case  ComboBoxCategory.Highlighted:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                                 TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
                                 NineSliceInstance.Blue = 255;
                                 NineSliceInstance.Green = 255;
                                 NineSliceInstance.Red = 255;
                                 break;
                             case  ComboBoxCategory.Pushed:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                                 TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
                                 NineSliceInstance.Blue = 200;
                                 NineSliceInstance.Green = 200;
@@ -185,14 +173,26 @@
                 bool setListBoxInstanceYSecondValue = false;
                 float ListBoxInstanceYFirstValue= 0;
                 float ListBoxInstanceYSecondValue= 0;
+                bool setNineSliceInstanceBlueFirstValue = false;
+                bool setNineSliceInstanceBlueSecondValue = false;
+                int NineSliceInstanceBlueFirstValue= 0;
+                int NineSliceInstanceBlueSecondValue= 0;
                 bool setNineSliceInstanceCurrentColorCategoryStateFirstValue = false;
                 bool setNineSliceInstanceCurrentColorCategoryStateSecondValue = false;
                 JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory NineSliceInstanceCurrentColorCategoryStateFirstValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                 JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory NineSliceInstanceCurrentColorCategoryStateSecondValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                bool setNineSliceInstanceGreenFirstValue = false;
+                bool setNineSliceInstanceGreenSecondValue = false;
+                int NineSliceInstanceGreenFirstValue= 0;
+                int NineSliceInstanceGreenSecondValue= 0;
                 bool setNineSliceInstanceHeightFirstValue = false;
                 bool setNineSliceInstanceHeightSecondValue = false;
                 float NineSliceInstanceHeightFirstValue= 0;
                 float NineSliceInstanceHeightSecondValue= 0;
+                bool setNineSliceInstanceRedFirstValue = false;
+                bool setNineSliceInstanceRedSecondValue = false;
+                int NineSliceInstanceRedFirstValue= 0;
+                int NineSliceInstanceRedSecondValue= 0;
                 bool setNineSliceInstanceWidthFirstValue = false;
                 bool setNineSliceInstanceWidthSecondValue = false;
                 float NineSliceInstanceWidthFirstValue= 0;
@@ -286,14 +286,20 @@
                         {
                             this.ListBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
+                        setNineSliceInstanceBlueFirstValue = true;
+                        NineSliceInstanceBlueFirstValue = 128;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                        setNineSliceInstanceGreenFirstValue = true;
+                        NineSliceInstanceGreenFirstValue = 128;
                         setNineSliceInstanceHeightFirstValue = true;
                         NineSliceInstanceHeightFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
                             this.NineSliceInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
+                        setNineSliceInstanceRedFirstValue = true;
+                        NineSliceInstanceRedFirstValue = 128;
                         setNineSliceInstanceWidthFirstValue = true;
                         NineSliceInstanceWidthFirstValue = 0f;
                         if (interpolationValue < 1)
@@ -322,27 +328,13 @@
                         }
                         setPaceholderTextAlphaFirstValue = true;
                         PaceholderTextAlphaFirstValue = 150;
-                        setPaceholderTextAlphaFirstValue = true;
-                        PaceholderTextAlphaFirstValue = 150;
                         setPaceholderTextBlueFirstValue = true;
                         PaceholderTextBlueFirstValue = 0;
-                        setPaceholderTextBlueFirstValue = true;
-                        PaceholderTextBlueFirstValue = 0;
-                        setPaceholderTextFontSizeFirstValue = true;
-                        PaceholderTextFontSizeFirstValue = 16;
                         setPaceholderTextFontSizeFirstValue = true;
                         PaceholderTextFontSizeFirstValue = 16;
                         if (interpolationValue < 1)
                         {
                             this.PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                         }
                         if (interpolationValue < 1)
                         {
@@ -354,31 +346,13 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            this.PaceholderText.IsItalic = false;
-                        }
-                        if (interpolationValue < 1)
-                        {
                             this.PaceholderText.Parent = this.GetGraphicalUiElementByName("NineSliceInstance") ?? this;
                         }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("NineSliceInstance") ?? this;
-                        }
-                        setPaceholderTextRotationFirstValue = true;
-                        PaceholderTextRotationFirstValue = -20f;
                         setPaceholderTextRotationFirstValue = true;
                         PaceholderTextRotationFirstValue = -20f;
                         if (interpolationValue < 1)
                         {
                             this.PaceholderText.Text = "PLACEHOLDER";
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.Text = "PLACEHOLDER";
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
                         }
                         if (interpolationValue < 1)
                         {
@@ -390,14 +364,6 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            this.PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
                             this.PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                         }
                         if (interpolationValue < 1)
@@ -406,19 +372,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            this.PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
-                        if (interpolationValue < 1)
-                        {
                             this.PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         if (interpolationValue < 1)
                         {
@@ -525,14 +479,20 @@
                         {
                             this.ListBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
+                        setNineSliceInstanceBlueSecondValue = true;
+                        NineSliceInstanceBlueSecondValue = 128;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                        setNineSliceInstanceGreenSecondValue = true;
+                        NineSliceInstanceGreenSecondValue = 128;
                         setNineSliceInstanceHeightSecondValue = true;
                         NineSliceInstanceHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
                             this.NineSliceInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
+                        setNineSliceInstanceRedSecondValue = true;
+                        NineSliceInstanceRedSecondValue = 128;
                         setNineSliceInstanceWidthSecondValue = true;
                         NineSliceInstanceWidthSecondValue = 0f;
                         if (interpolationValue >= 1)
@@ -561,27 +521,13 @@
                         }
                         setPaceholderTextAlphaSecondValue = true;
                         PaceholderTextAlphaSecondValue = 150;
-                        setPaceholderTextAlphaSecondValue = true;
-                        PaceholderTextAlphaSecondValue = 150;
                         setPaceholderTextBlueSecondValue = true;
                         PaceholderTextBlueSecondValue = 0;
-                        setPaceholderTextBlueSecondValue = true;
-                        PaceholderTextBlueSecondValue = 0;
-                        setPaceholderTextFontSizeSecondValue = true;
-                        PaceholderTextFontSizeSecondValue = 16;
                         setPaceholderTextFontSizeSecondValue = true;
                         PaceholderTextFontSizeSecondValue = 16;
                         if (interpolationValue >= 1)
                         {
                             this.PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                         }
                         if (interpolationValue >= 1)
                         {
@@ -593,31 +539,13 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.PaceholderText.IsItalic = false;
-                        }
-                        if (interpolationValue >= 1)
-                        {
                             this.PaceholderText.Parent = this.GetGraphicalUiElementByName("NineSliceInstance") ?? this;
                         }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("NineSliceInstance") ?? this;
-                        }
-                        setPaceholderTextRotationSecondValue = true;
-                        PaceholderTextRotationSecondValue = -20f;
                         setPaceholderTextRotationSecondValue = true;
                         PaceholderTextRotationSecondValue = -20f;
                         if (interpolationValue >= 1)
                         {
                             this.PaceholderText.Text = "PLACEHOLDER";
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.Text = "PLACEHOLDER";
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
                         }
                         if (interpolationValue >= 1)
                         {
@@ -629,14 +557,6 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
                             this.PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                         }
                         if (interpolationValue >= 1)
@@ -645,19 +565,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
-                        if (interpolationValue >= 1)
-                        {
                             this.PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         if (interpolationValue >= 1)
                         {
@@ -768,13 +676,25 @@
                 {
                     ListBoxInstance.Y = ListBoxInstanceYFirstValue * (1 - interpolationValue) + ListBoxInstanceYSecondValue * interpolationValue;
                 }
+                if (setNineSliceInstanceBlueFirstValue && setNineSliceInstanceBlueSecondValue)
+                {
+                    NineSliceInstance.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(NineSliceInstanceBlueFirstValue* (1 - interpolationValue) + NineSliceInstanceBlueSecondValue * interpolationValue);
+                }
                 if (setNineSliceInstanceCurrentColorCategoryStateFirstValue && setNineSliceInstanceCurrentColorCategoryStateSecondValue)
                 {
                     NineSliceInstance.InterpolateBetween(NineSliceInstanceCurrentColorCategoryStateFirstValue, NineSliceInstanceCurrentColorCategoryStateSecondValue, interpolationValue);
                 }
+                if (setNineSliceInstanceGreenFirstValue && setNineSliceInstanceGreenSecondValue)
+                {
+                    NineSliceInstance.Green = FlatRedBall.Math.MathFunctions.RoundToInt(NineSliceInstanceGreenFirstValue* (1 - interpolationValue) + NineSliceInstanceGreenSecondValue * interpolationValue);
+                }
                 if (setNineSliceInstanceHeightFirstValue && setNineSliceInstanceHeightSecondValue)
                 {
                     NineSliceInstance.Height = NineSliceInstanceHeightFirstValue * (1 - interpolationValue) + NineSliceInstanceHeightSecondValue * interpolationValue;
+                }
+                if (setNineSliceInstanceRedFirstValue && setNineSliceInstanceRedSecondValue)
+                {
+                    NineSliceInstance.Red = FlatRedBall.Math.MathFunctions.RoundToInt(NineSliceInstanceRedFirstValue* (1 - interpolationValue) + NineSliceInstanceRedSecondValue * interpolationValue);
                 }
                 if (setNineSliceInstanceWidthFirstValue && setNineSliceInstanceWidthSecondValue)
                 {
@@ -895,7 +815,7 @@
                         setNineSliceInstanceBlueFirstValue = true;
                         NineSliceInstanceBlueFirstValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setNineSliceInstanceGreenFirstValue = true;
                         NineSliceInstanceGreenFirstValue = 255;
                         setNineSliceInstanceRedFirstValue = true;
@@ -907,7 +827,7 @@
                         setNineSliceInstanceBlueFirstValue = true;
                         NineSliceInstanceBlueFirstValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Red;
                         setNineSliceInstanceGreenFirstValue = true;
                         NineSliceInstanceGreenFirstValue = 255;
                         setNineSliceInstanceRedFirstValue = true;
@@ -919,7 +839,7 @@
                         setNineSliceInstanceBlueFirstValue = true;
                         NineSliceInstanceBlueFirstValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                         setNineSliceInstanceGreenFirstValue = true;
                         NineSliceInstanceGreenFirstValue = 255;
                         setNineSliceInstanceRedFirstValue = true;
@@ -931,7 +851,7 @@
                         setNineSliceInstanceBlueFirstValue = true;
                         NineSliceInstanceBlueFirstValue = 200;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                         setNineSliceInstanceGreenFirstValue = true;
                         NineSliceInstanceGreenFirstValue = 200;
                         setNineSliceInstanceRedFirstValue = true;
@@ -946,7 +866,7 @@
                         setNineSliceInstanceBlueSecondValue = true;
                         NineSliceInstanceBlueSecondValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setNineSliceInstanceGreenSecondValue = true;
                         NineSliceInstanceGreenSecondValue = 255;
                         setNineSliceInstanceRedSecondValue = true;
@@ -958,7 +878,7 @@
                         setNineSliceInstanceBlueSecondValue = true;
                         NineSliceInstanceBlueSecondValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Red;
                         setNineSliceInstanceGreenSecondValue = true;
                         NineSliceInstanceGreenSecondValue = 255;
                         setNineSliceInstanceRedSecondValue = true;
@@ -970,7 +890,7 @@
                         setNineSliceInstanceBlueSecondValue = true;
                         NineSliceInstanceBlueSecondValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                         setNineSliceInstanceGreenSecondValue = true;
                         NineSliceInstanceGreenSecondValue = 255;
                         setNineSliceInstanceRedSecondValue = true;
@@ -982,7 +902,7 @@
                         setNineSliceInstanceBlueSecondValue = true;
                         NineSliceInstanceBlueSecondValue = 200;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                         setNineSliceInstanceGreenSecondValue = true;
                         NineSliceInstanceGreenSecondValue = 200;
                         setNineSliceInstanceRedSecondValue = true;
@@ -1226,9 +1146,25 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "NineSliceInstance.Blue",
+                            Type = "int",
+                            Value = NineSliceInstance.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "NineSliceInstance.ColorCategoryState",
                             Type = "ColorCategoryState",
                             Value = NineSliceInstance.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Green",
+                            Type = "int",
+                            Value = NineSliceInstance.Green
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1245,6 +1181,14 @@
                             Name = "NineSliceInstance.Height Units",
                             Type = "DimensionUnitType",
                             Value = NineSliceInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Red",
+                            Type = "int",
+                            Value = NineSliceInstance.Red
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1514,33 +1458,9 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Alpha",
-                            Type = "int",
-                            Value = PaceholderText.Alpha
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "PaceholderText.Blue",
                             Type = "int",
                             Value = PaceholderText.Blue
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Blue",
-                            Type = "int",
-                            Value = PaceholderText.Blue
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.FontSize",
-                            Type = "int",
-                            Value = PaceholderText.FontSize
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1562,33 +1482,9 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Height Units",
-                            Type = "DimensionUnitType",
-                            Value = PaceholderText.HeightUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "PaceholderText.HorizontalAlignment",
                             Type = "HorizontalAlignment",
                             Value = PaceholderText.HorizontalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.HorizontalAlignment",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.HorizontalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.IsItalic",
-                            Type = "bool",
-                            Value = PaceholderText.IsItalic
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1610,33 +1506,9 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "PaceholderText.Rotation",
                             Type = "float",
                             Value = PaceholderText.Rotation
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Rotation",
-                            Type = "float",
-                            Value = PaceholderText.Rotation
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Text",
-                            Type = "string",
-                            Value = PaceholderText.Text
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1658,33 +1530,9 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.VerticalAlignment",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.VerticalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "PaceholderText.Width Units",
                             Type = "DimensionUnitType",
                             Value = PaceholderText.WidthUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Width Units",
-                            Type = "DimensionUnitType",
-                            Value = PaceholderText.WidthUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.X Origin",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.XOrigin
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1706,33 +1554,9 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.X Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.XUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "PaceholderText.Y Origin",
                             Type = "VerticalAlignment",
                             Value = PaceholderText.YOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Y Origin",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.YOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Y Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.YUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1820,9 +1644,25 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "NineSliceInstance.Blue",
+                            Type = "int",
+                            Value = NineSliceInstance.Blue + 128
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "NineSliceInstance.ColorCategoryState",
                             Type = "ColorCategoryState",
                             Value = NineSliceInstance.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Green",
+                            Type = "int",
+                            Value = NineSliceInstance.Green + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1839,6 +1679,14 @@
                             Name = "NineSliceInstance.Height Units",
                             Type = "DimensionUnitType",
                             Value = NineSliceInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Red",
+                            Type = "int",
+                            Value = NineSliceInstance.Red + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2108,33 +1956,9 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Alpha",
-                            Type = "int",
-                            Value = PaceholderText.Alpha + 150
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "PaceholderText.Blue",
                             Type = "int",
                             Value = PaceholderText.Blue + 0
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Blue",
-                            Type = "int",
-                            Value = PaceholderText.Blue + 0
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.FontSize",
-                            Type = "int",
-                            Value = PaceholderText.FontSize + 16
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2156,33 +1980,9 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Height Units",
-                            Type = "DimensionUnitType",
-                            Value = PaceholderText.HeightUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "PaceholderText.HorizontalAlignment",
                             Type = "HorizontalAlignment",
                             Value = PaceholderText.HorizontalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.HorizontalAlignment",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.HorizontalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.IsItalic",
-                            Type = "bool",
-                            Value = PaceholderText.IsItalic
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2204,33 +2004,9 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "PaceholderText.Rotation",
                             Type = "float",
                             Value = PaceholderText.Rotation + -20f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Rotation",
-                            Type = "float",
-                            Value = PaceholderText.Rotation + -20f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Text",
-                            Type = "string",
-                            Value = PaceholderText.Text
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2252,33 +2028,9 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.VerticalAlignment",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.VerticalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "PaceholderText.Width Units",
                             Type = "DimensionUnitType",
                             Value = PaceholderText.WidthUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Width Units",
-                            Type = "DimensionUnitType",
-                            Value = PaceholderText.WidthUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.X Origin",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.XOrigin
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2300,33 +2052,9 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.X Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.XUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "PaceholderText.Y Origin",
                             Type = "VerticalAlignment",
                             Value = PaceholderText.YOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Y Origin",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.YOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Y Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.YUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2715,7 +2443,7 @@
                 base.ApplyState(state);
             }
             private bool tryCreateFormsObject;
-            public JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime ListBoxInstance { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.MyListBoxRuntime ListBoxInstance { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime NineSliceInstance { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime TextInstance { get; set; }
             public JHP4SD.GumRuntimes.SpriteRuntime SpriteInstance { get; set; }
@@ -2748,7 +2476,7 @@
             }
             private void AssignReferences () 
             {
-                ListBoxInstance = this.GetGraphicalUiElementByName("ListBoxInstance") as JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime;
+                ListBoxInstance = this.GetGraphicalUiElementByName("ListBoxInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.MyListBoxRuntime;
                 NineSliceInstance = this.GetGraphicalUiElementByName("NineSliceInstance") as JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime;
                 TextInstance = this.GetGraphicalUiElementByName("TextInstance") as JHP4SD.GumRuntimes.TextRuntime;
                 SpriteInstance = this.GetGraphicalUiElementByName("SpriteInstance") as JHP4SD.GumRuntimes.SpriteRuntime;

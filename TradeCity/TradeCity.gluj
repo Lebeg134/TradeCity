@@ -10,6 +10,7 @@
         "GLUE"
       ],
       "Source": "GLUE",
+      "IsOnOwnLayer": true,
       "BaseScreen": "Screens\\GameScreen",
       "BaseElement": "Screens\\GameScreen",
       "ReferencedFiles": [
@@ -63,7 +64,7 @@
           "DefinedByBase": true
         }
       ],
-      "Name": "Screens\\City",
+      "Name": "Screens\\CityScreen",
       "CustomClassesForExport": []
     },
     {
@@ -126,7 +127,7 @@
           "ProjectsToExcludeFrom": []
         }
       ],
-      "Name": "Screens\\MainMenu",
+      "Name": "Screens\\MainMenuScreen",
       "CustomClassesForExport": []
     },
     {
@@ -272,7 +273,7 @@
           "GenerateTimedEmit": true
         }
       ],
-      "Name": "Screens\\Map",
+      "Name": "Screens\\MapScreen",
       "CustomClassesForExport": []
     },
     {
@@ -321,7 +322,7 @@
           "DefinedByBase": true
         }
       ],
-      "Name": "Screens\\Market",
+      "Name": "Screens\\MarketScreen",
       "CustomClassesForExport": []
     },
     {
@@ -337,7 +338,7 @@
           "ProjectsToExcludeFrom": []
         }
       ],
-      "Name": "Screens\\Multiplayer",
+      "Name": "Screens\\MultiplayerScreen",
       "CustomClassesForExport": []
     },
     {
@@ -353,7 +354,7 @@
           "ProjectsToExcludeFrom": []
         }
       ],
-      "Name": "Screens\\Settings",
+      "Name": "Screens\\SettingsScreen",
       "CustomClassesForExport": []
     }
   ],
@@ -515,7 +516,7 @@
   ],
   "GlobalContentSettingsSave": {},
   "SyncedProjects": [],
-  "StartUpScreen": "Screens\\MainMenu",
+  "StartUpScreen": "Screens\\MainMenuScreen",
   "ResolutionPresets": [],
   "PerformanceSettingsSave": {},
   "IgnoredDirectories": [],

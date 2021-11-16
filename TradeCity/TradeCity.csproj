@@ -257,17 +257,21 @@
     </Compile>
     <Compile Include="GumRuntimes\GumIdb.Generated.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\BackButtonRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\BackButtonRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\BackButtonRuntime.Generated.cs">
+      <DependentUpon>BackButtonRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\ExitButtonRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ExitButtonRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ExitButtonRuntime.Generated.cs">
+      <DependentUpon>ExitButtonRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\MainMenuButtonRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\MainMenuButtonRuntime.Generated.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\MyComboBoxRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\MyComboBoxRuntime.Generated.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\MyListBoxRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\MyListBoxRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\MainMenuButtonRuntime.Generated.cs">
+      <DependentUpon>MainMenuButtonRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.Generated.cs">
+      <DependentUpon>TopicRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\MainMenuGumRuntime.cs" />
     <Compile Include="GumRuntimes\MainMenuGumRuntime.Generated.cs">
       <DependentUpon>MainMenuGumRuntime.cs</DependentUpon>
@@ -388,33 +392,33 @@
     <Compile Include="Platformer\Enums.Generated.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Screens\City.cs" />
-    <Compile Include="Screens\City.Generated.cs">
-      <DependentUpon>City.cs</DependentUpon>
+    <Compile Include="Screens\CityScreen.cs" />
+    <Compile Include="Screens\CityScreen.Generated.cs">
+      <DependentUpon>cityscreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\GameScreen.cs" />
     <Compile Include="Screens\GameScreen.Generated.cs">
       <DependentUpon>GameScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\MainMenu.cs" />
-    <Compile Include="Screens\MainMenu.Generated.cs">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <Compile Include="Screens\MainMenuScreen.cs" />
+    <Compile Include="Screens\MainMenuScreen.Generated.cs">
+      <DependentUpon>mainmenuscreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Map.cs" />
-    <Compile Include="Screens\Map.Generated.cs">
-      <DependentUpon>Map.cs</DependentUpon>
+    <Compile Include="Screens\MapScreen.cs" />
+    <Compile Include="Screens\MapScreen.Generated.cs">
+      <DependentUpon>mapscreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Market.cs" />
-    <Compile Include="Screens\Market.Generated.cs">
-      <DependentUpon>Market.cs</DependentUpon>
+    <Compile Include="Screens\MarketScreen.cs" />
+    <Compile Include="Screens\MarketScreen.Generated.cs">
+      <DependentUpon>marketscreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Multiplayer.cs" />
-    <Compile Include="Screens\Multiplayer.Generated.cs">
-      <DependentUpon>Multiplayer.cs</DependentUpon>
+    <Compile Include="Screens\MultiplayerScreen.cs" />
+    <Compile Include="Screens\MultiplayerScreen.Generated.cs">
+      <DependentUpon>multiplayerscreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Settings.cs" />
-    <Compile Include="Screens\Settings.Generated.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <Compile Include="Screens\SettingsScreen.cs" />
+    <Compile Include="Screens\SettingsScreen.Generated.cs">
+      <DependentUpon>settingsscreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Setup\CameraSetup.cs" />
     <Compile Include="TileCollisions\CollidableListVsTileShapeCollectionRelationship.cs" />
@@ -594,14 +598,6 @@
     <None Include="content\gumproject\components\lebegforms\basiccomponents\mainmenubutton.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>mainmenubutton</Name>
-    </None>
-    <None Include="content\gumproject\components\lebegforms\basiccomponents\mycombobox.gucx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>mycombobox</Name>
-    </None>
-    <None Include="content\gumproject\components\lebegforms\basiccomponents\mylistbox.gucx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>mylistbox</Name>
     </None>
     <None Include="content\gumproject\components\lebegforms\complexcomponents\topic.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -10,24 +10,24 @@ using System.Collections.Generic;
 using System.Text;
 namespace JHP4SD.Screens
 {
-    public partial class Multiplayer : FlatRedBall.Screens.Screen
+    public partial class SettingsScreen : FlatRedBall.Screens.Screen
     {
         #if DEBUG
         static bool HasBeenLoadedWithGlobalContentManager = false;
         #endif
-        protected static JHP4SD.GumRuntimes.MultiplayerGumRuntime MultiplayerGum;
+        protected static JHP4SD.GumRuntimes.SettingsGumRuntime SettingsGum;
         
-        JHP4SD.FormsControls.Screens.MultiplayerGumForms Forms;
-        JHP4SD.GumRuntimes.MultiplayerGumRuntime GumScreen;
-        public Multiplayer () 
-        	: base ("Multiplayer")
+        JHP4SD.FormsControls.Screens.SettingsGumForms Forms;
+        JHP4SD.GumRuntimes.SettingsGumRuntime GumScreen;
+        public SettingsScreen () 
+        	: base ("SettingsScreen")
         {
         }
         public override void Initialize (bool addToManagers) 
         {
             LoadStaticContent(ContentManagerName);
-            Forms = new JHP4SD.FormsControls.Screens.MultiplayerGumForms(MultiplayerGum);
-            GumScreen = MultiplayerGum;
+            Forms = new JHP4SD.FormsControls.Screens.SettingsGumForms(SettingsGum);
+            GumScreen = SettingsGum;
             
             
             PostInitialize();
@@ -39,7 +39,7 @@ namespace JHP4SD.Screens
         }
         public override void AddToManagers () 
         {
-            MultiplayerGum.AddToManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged += RefreshLayoutInternal;
+            SettingsGum.AddToManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged += RefreshLayoutInternal;
             base.AddToManagers();
             AddToManagersBottomUp();
             BeforeCustomInitialize?.Invoke();
@@ -71,8 +71,8 @@ namespace JHP4SD.Screens
         public override void Destroy () 
         {
             base.Destroy();
-            MultiplayerGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
-            MultiplayerGum = null;
+            SettingsGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
+            SettingsGum = null;
             
             FlatRedBall.Math.Collision.CollisionManager.Self.Relationships.Clear();
             CustomDestroy();
@@ -90,7 +90,7 @@ namespace JHP4SD.Screens
         }
         public virtual void RemoveFromManagers () 
         {
-            MultiplayerGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
+            SettingsGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
         }
         public virtual void AssignCustomVariables (bool callOnContainedElements) 
         {
@@ -123,7 +123,7 @@ namespace JHP4SD.Screens
                 throw new System.Exception("This type has been loaded with a Global content manager, then loaded with a non-global.  This can lead to a lot of bugs");
             }
             #endif
-            if(MultiplayerGum == null) MultiplayerGum = (JHP4SD.GumRuntimes.MultiplayerGumRuntime)GumRuntime.ElementSaveExtensions.CreateGueForElement(Gum.Managers.ObjectFinder.Self.GetScreen("MultiplayerGum"), true);
+            if(SettingsGum == null) SettingsGum = (JHP4SD.GumRuntimes.SettingsGumRuntime)GumRuntime.ElementSaveExtensions.CreateGueForElement(Gum.Managers.ObjectFinder.Self.GetScreen("SettingsGum"), true);
             CustomLoadStaticContent(contentManagerName);
         }
         public override void PauseThisScreen () 
@@ -141,8 +141,8 @@ namespace JHP4SD.Screens
         {
             switch(memberName)
             {
-                case  "MultiplayerGum":
-                    return MultiplayerGum;
+                case  "SettingsGum":
+                    return SettingsGum;
             }
             return null;
         }
@@ -150,8 +150,8 @@ namespace JHP4SD.Screens
         {
             switch(memberName)
             {
-                case  "MultiplayerGum":
-                    return MultiplayerGum;
+                case  "SettingsGum":
+                    return SettingsGum;
             }
             return null;
         }
@@ -159,8 +159,8 @@ namespace JHP4SD.Screens
         {
             switch(memberName)
             {
-                case  "MultiplayerGum":
-                    return MultiplayerGum;
+                case  "SettingsGum":
+                    return SettingsGum;
             }
             return null;
         }
@@ -169,7 +169,7 @@ namespace JHP4SD.Screens
         }
         private void RefreshLayoutInternal (object sender, EventArgs e) 
         {
-            MultiplayerGum.UpdateLayout();
+            SettingsGum.UpdateLayout();
         }
         partial void CustomActivityEditMode();
     }

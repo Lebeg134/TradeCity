@@ -16,7 +16,7 @@ using FlatRedBall.Localization;
 
 namespace JHP4SD.Screens
 {
-    public partial class Multiplayer
+    public partial class MultiplayerScreen
     {
 
         void CustomInitialize()

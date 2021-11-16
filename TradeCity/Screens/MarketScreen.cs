@@ -16,7 +16,7 @@ using FlatRedBall.Localization;
 
 namespace JHP4SD.Screens
 {
-    public partial class Market
+    public partial class MarketScreen
     {
 
         void CustomInitialize()

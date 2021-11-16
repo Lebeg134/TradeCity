@@ -118,105 +118,63 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>bool</Type>
-      <Name>IsXamarinFormsControl</Name>
-      <Value xsi:type="xsd:boolean">false</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>float</Type>
-      <Name>MyComboBoxInstance.Height</Name>
-      <Value xsi:type="xsd:float">79</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>MyComboBoxInstance.Parent</Name>
-      <Value xsi:type="xsd:string">ResolutionTopic</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>MyComboBoxInstance.Width</Name>
-      <Value xsi:type="xsd:float">98</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>DimensionUnitType</Type>
-      <Name>MyComboBoxInstance.Width Units</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>MyComboBoxInstance.X</Name>
-      <Value xsi:type="xsd:float">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>MyComboBoxInstance.X Units</Name>
-      <Value xsi:type="xsd:int">2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>MyComboBoxInstance.Y</Name>
-      <Value xsi:type="xsd:float">56</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>ResolutionTopic.Height</Name>
+      <Name>GraphicsTopic.Height</Name>
       <Value xsi:type="xsd:float">40</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
-      <Name>ResolutionTopic.Height Units</Name>
+      <Name>GraphicsTopic.Height Units</Name>
       <Value xsi:type="xsd:int">4</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>string</Type>
-      <Name>ResolutionTopic.Parent</Name>
+      <Name>GraphicsTopic.Parent</Name>
       <Value xsi:type="xsd:string">BackgroundColor</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>string</Type>
-      <Name>ResolutionTopic.TopicName</Name>
-      <Value xsi:type="xsd:string">Resolution</Value>
+      <Name>GraphicsTopic.TopicName</Name>
+      <Value xsi:type="xsd:string">Graphics</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ResolutionTopic.Width</Name>
+      <Name>GraphicsTopic.Width</Name>
       <Value xsi:type="xsd:float">47</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
-      <Name>ResolutionTopic.Width Units</Name>
+      <Name>GraphicsTopic.Width Units</Name>
       <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ResolutionTopic.X</Name>
+      <Name>GraphicsTopic.X</Name>
       <Value xsi:type="xsd:float">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>PositionUnitType</Type>
-      <Name>ResolutionTopic.X Units</Name>
+      <Name>GraphicsTopic.X Units</Name>
       <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ResolutionTopic.Y</Name>
+      <Name>GraphicsTopic.Y</Name>
       <Value xsi:type="xsd:float">152</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>bool</Type>
+      <Name>IsXamarinFormsControl</Name>
+      <Value xsi:type="xsd:boolean">false</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -350,18 +308,13 @@
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>ResolutionTopic</Name>
+    <Name>GraphicsTopic</Name>
     <BaseType>LebegForms/ComplexComponents/Topic</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
     <Name>SoudTopic</Name>
     <BaseType>LebegForms/ComplexComponents/Topic</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
-    <Name>MyComboBoxInstance</Name>
-    <BaseType>LebegForms/BasicComponents/MyComboBox</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
 </ScreenSave>

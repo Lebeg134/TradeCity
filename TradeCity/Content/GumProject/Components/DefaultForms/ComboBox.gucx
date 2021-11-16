@@ -60,7 +60,7 @@
     <Variable>
       <Type>ColorCategoryState</Type>
       <Name>NineSliceInstance.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">Blue</Value>
+      <Value xsi:type="xsd:string">Black</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -301,7 +301,7 @@
       <Variable>
         <Type>ColorCategoryState</Type>
         <Name>NineSliceInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Blue</Value>
+        <Value xsi:type="xsd:string">Black</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -373,7 +373,7 @@
       <Variable>
         <Type>ColorCategoryState</Type>
         <Name>NineSliceInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Yellow</Value>
+        <Value xsi:type="xsd:string">Green</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -408,7 +408,7 @@
       <Variable>
         <Type>ColorCategoryState</Type>
         <Name>NineSliceInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Yellow</Value>
+        <Value xsi:type="xsd:string">Green</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>

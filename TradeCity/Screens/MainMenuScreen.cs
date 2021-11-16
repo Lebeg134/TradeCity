@@ -11,23 +11,35 @@ using FlatRedBall.Graphics.Animation;
 using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 using FlatRedBall.Localization;
-using Microsoft.Xna.Framework.Input;
 
 
 
 namespace JHP4SD.Screens
 {
-    public partial class Map
+    public partial class MainMenuScreen
     {
-        Camera mainCamera = FlatRedBall.Camera.Main;
+
         void CustomInitialize()
         {
-            
+            Forms.NewGameButton.Click += NewGameButton_Click;
+            Forms.MultiplayerButton.IsEnabled = false;
+            Forms.LoadGameButton.IsEnabled = false;
+            Forms.SettingsButton.Click += SettingsButton_Click;
+        }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            MoveToScreen(typeof(SettingsScreen));
+        }
+
+        private void NewGameButton_Click(object sender, EventArgs e)
+        {
+            Forms.NewGameButton.IsEnabled = false;
         }
 
         void CustomActivity(bool firstTimeCalled)
         {
-            
+
 
         }
 

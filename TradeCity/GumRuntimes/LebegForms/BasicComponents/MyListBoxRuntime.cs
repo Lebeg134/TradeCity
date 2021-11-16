@@ -6,7 +6,7 @@ namespace JHP4SD.GumRuntimes.DefaultForms
 {
     public partial class MyListBoxRuntime
     {
-        partial void CustomInitialize () 
+        void CustomInitialize () 
         {
         }
     }

@@ -34,7 +34,7 @@
                     {
                         case  VariableState.Default:
                             SpriteInstance.Parent = this.GetGraphicalUiElementByName("NineSliceInstance") ?? this;
-                            NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                            NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                             TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                             Height = 48f;
                             Width = 250f;
@@ -94,7 +94,7 @@
                         switch(mCurrentComboBoxCategoryState)
                         {
                             case  ComboBoxCategory.Enabled:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                                 TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                                 NineSliceInstance.Blue = 255;
                                 NineSliceInstance.Green = 255;
@@ -108,14 +108,14 @@
                                 NineSliceInstance.Red = 255;
                                 break;
                             case  ComboBoxCategory.Highlighted:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                                 TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
                                 NineSliceInstance.Blue = 255;
                                 NineSliceInstance.Green = 255;
                                 NineSliceInstance.Red = 255;
                                 break;
                             case  ComboBoxCategory.Pushed:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                                 TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
                                 NineSliceInstance.Blue = 200;
                                 NineSliceInstance.Green = 200;
@@ -241,7 +241,7 @@
                             this.ListBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setNineSliceInstanceHeightFirstValue = true;
                         NineSliceInstanceHeightFirstValue = 0f;
                         if (interpolationValue < 1)
@@ -376,7 +376,7 @@
                             this.ListBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setNineSliceInstanceHeightSecondValue = true;
                         NineSliceInstanceHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
@@ -625,7 +625,7 @@
                         setNineSliceInstanceBlueFirstValue = true;
                         NineSliceInstanceBlueFirstValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setNineSliceInstanceGreenFirstValue = true;
                         NineSliceInstanceGreenFirstValue = 255;
                         setNineSliceInstanceRedFirstValue = true;
@@ -649,7 +649,7 @@
                         setNineSliceInstanceBlueFirstValue = true;
                         NineSliceInstanceBlueFirstValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                         setNineSliceInstanceGreenFirstValue = true;
                         NineSliceInstanceGreenFirstValue = 255;
                         setNineSliceInstanceRedFirstValue = true;
@@ -661,7 +661,7 @@
                         setNineSliceInstanceBlueFirstValue = true;
                         NineSliceInstanceBlueFirstValue = 200;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                         setNineSliceInstanceGreenFirstValue = true;
                         NineSliceInstanceGreenFirstValue = 200;
                         setNineSliceInstanceRedFirstValue = true;
@@ -676,7 +676,7 @@
                         setNineSliceInstanceBlueSecondValue = true;
                         NineSliceInstanceBlueSecondValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setNineSliceInstanceGreenSecondValue = true;
                         NineSliceInstanceGreenSecondValue = 255;
                         setNineSliceInstanceRedSecondValue = true;
@@ -700,7 +700,7 @@
                         setNineSliceInstanceBlueSecondValue = true;
                         NineSliceInstanceBlueSecondValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                         setNineSliceInstanceGreenSecondValue = true;
                         NineSliceInstanceGreenSecondValue = 255;
                         setNineSliceInstanceRedSecondValue = true;
@@ -712,7 +712,7 @@
                         setNineSliceInstanceBlueSecondValue = true;
                         NineSliceInstanceBlueSecondValue = 200;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                         setNineSliceInstanceGreenSecondValue = true;
                         NineSliceInstanceGreenSecondValue = 200;
                         setNineSliceInstanceRedSecondValue = true;

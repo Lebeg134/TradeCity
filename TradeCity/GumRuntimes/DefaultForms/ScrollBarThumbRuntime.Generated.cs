@@ -33,7 +33,7 @@
                     switch(mCurrentVariableState)
                     {
                         case  VariableState.Default:
-                            BackgroundInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                            BackgroundInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                             BackgroundInstance.Height = 0f;
                             BackgroundInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             BackgroundInstance.Width = 0f;
@@ -107,7 +107,7 @@
                 {
                     case  VariableState.Default:
                         setBackgroundInstanceCurrentColorCategoryStateFirstValue = true;
-                        BackgroundInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        BackgroundInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setBackgroundInstanceHeightFirstValue = true;
                         BackgroundInstanceHeightFirstValue = 0f;
                         if (interpolationValue < 1)
@@ -146,7 +146,7 @@
                 {
                     case  VariableState.Default:
                         setBackgroundInstanceCurrentColorCategoryStateSecondValue = true;
-                        BackgroundInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        BackgroundInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setBackgroundInstanceHeightSecondValue = true;
                         BackgroundInstanceHeightSecondValue = 0f;
                         if (interpolationValue >= 1)

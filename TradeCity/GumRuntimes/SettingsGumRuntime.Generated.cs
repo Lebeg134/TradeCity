@@ -26,9 +26,8 @@
                     {
                         case  VariableState.Default:
                             SettingsText.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
-                            ResolutionTopic.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
+                            GraphicsTopic.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
                             SoudTopic.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
-                            MyComboBoxInstance.Parent = this.GetGraphicalUiElementByName("ResolutionTopic");
                             BackgroundColor.Blue = 128;
                             BackgroundColor.Green = 128;
                             BackgroundColor.Height = 0f;
@@ -56,14 +55,14 @@
                             SettingsText.X = 2f;
                             SettingsText.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                             SettingsText.Y = 40f;
-                            ResolutionTopic.Height = 40f;
-                            ResolutionTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
-                            ResolutionTopic.TopicName = "Resolution";
-                            ResolutionTopic.Width = 47f;
-                            ResolutionTopic.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                            ResolutionTopic.X = 2f;
-                            ResolutionTopic.XUnits = Gum.Converters.GeneralUnitType.Percentage;
-                            ResolutionTopic.Y = 152f;
+                            GraphicsTopic.Height = 40f;
+                            GraphicsTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            GraphicsTopic.TopicName = "Graphics";
+                            GraphicsTopic.Width = 47f;
+                            GraphicsTopic.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            GraphicsTopic.X = 2f;
+                            GraphicsTopic.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                            GraphicsTopic.Y = 152f;
                             SoudTopic.Height = 40f;
                             SoudTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                             SoudTopic.TopicName = "Sound";
@@ -73,12 +72,6 @@
                             SoudTopic.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             SoudTopic.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                             SoudTopic.Y = 152f;
-                            MyComboBoxInstance.Height = 79f;
-                            MyComboBoxInstance.Width = 98f;
-                            MyComboBoxInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                            MyComboBoxInstance.X = 1f;
-                            MyComboBoxInstance.XUnits = Gum.Converters.GeneralUnitType.Percentage;
-                            MyComboBoxInstance.Y = 56f;
                             break;
                     }
                 }
@@ -129,38 +122,22 @@
                 bool setBackgroundColorYSecondValue = false;
                 float BackgroundColorYFirstValue= 0;
                 float BackgroundColorYSecondValue= 0;
-                bool setMyComboBoxInstanceHeightFirstValue = false;
-                bool setMyComboBoxInstanceHeightSecondValue = false;
-                float MyComboBoxInstanceHeightFirstValue= 0;
-                float MyComboBoxInstanceHeightSecondValue= 0;
-                bool setMyComboBoxInstanceWidthFirstValue = false;
-                bool setMyComboBoxInstanceWidthSecondValue = false;
-                float MyComboBoxInstanceWidthFirstValue= 0;
-                float MyComboBoxInstanceWidthSecondValue= 0;
-                bool setMyComboBoxInstanceXFirstValue = false;
-                bool setMyComboBoxInstanceXSecondValue = false;
-                float MyComboBoxInstanceXFirstValue= 0;
-                float MyComboBoxInstanceXSecondValue= 0;
-                bool setMyComboBoxInstanceYFirstValue = false;
-                bool setMyComboBoxInstanceYSecondValue = false;
-                float MyComboBoxInstanceYFirstValue= 0;
-                float MyComboBoxInstanceYSecondValue= 0;
-                bool setResolutionTopicHeightFirstValue = false;
-                bool setResolutionTopicHeightSecondValue = false;
-                float ResolutionTopicHeightFirstValue= 0;
-                float ResolutionTopicHeightSecondValue= 0;
-                bool setResolutionTopicWidthFirstValue = false;
-                bool setResolutionTopicWidthSecondValue = false;
-                float ResolutionTopicWidthFirstValue= 0;
-                float ResolutionTopicWidthSecondValue= 0;
-                bool setResolutionTopicXFirstValue = false;
-                bool setResolutionTopicXSecondValue = false;
-                float ResolutionTopicXFirstValue= 0;
-                float ResolutionTopicXSecondValue= 0;
-                bool setResolutionTopicYFirstValue = false;
-                bool setResolutionTopicYSecondValue = false;
-                float ResolutionTopicYFirstValue= 0;
-                float ResolutionTopicYSecondValue= 0;
+                bool setGraphicsTopicHeightFirstValue = false;
+                bool setGraphicsTopicHeightSecondValue = false;
+                float GraphicsTopicHeightFirstValue= 0;
+                float GraphicsTopicHeightSecondValue= 0;
+                bool setGraphicsTopicWidthFirstValue = false;
+                bool setGraphicsTopicWidthSecondValue = false;
+                float GraphicsTopicWidthFirstValue= 0;
+                float GraphicsTopicWidthSecondValue= 0;
+                bool setGraphicsTopicXFirstValue = false;
+                bool setGraphicsTopicXSecondValue = false;
+                float GraphicsTopicXFirstValue= 0;
+                float GraphicsTopicXSecondValue= 0;
+                bool setGraphicsTopicYFirstValue = false;
+                bool setGraphicsTopicYSecondValue = false;
+                float GraphicsTopicYFirstValue= 0;
+                float GraphicsTopicYSecondValue= 0;
                 bool setSettingsTextBlueFirstValue = false;
                 bool setSettingsTextBlueSecondValue = false;
                 int SettingsTextBlueFirstValue= 0;
@@ -262,54 +239,34 @@
                         {
                             this.BackgroundColor.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
-                        setMyComboBoxInstanceHeightFirstValue = true;
-                        MyComboBoxInstanceHeightFirstValue = 79f;
+                        setGraphicsTopicHeightFirstValue = true;
+                        GraphicsTopicHeightFirstValue = 40f;
                         if (interpolationValue < 1)
                         {
-                            this.MyComboBoxInstance.Parent = this.GetGraphicalUiElementByName("ResolutionTopic");
-                        }
-                        setMyComboBoxInstanceWidthFirstValue = true;
-                        MyComboBoxInstanceWidthFirstValue = 98f;
-                        if (interpolationValue < 1)
-                        {
-                            this.MyComboBoxInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        setMyComboBoxInstanceXFirstValue = true;
-                        MyComboBoxInstanceXFirstValue = 1f;
-                        if (interpolationValue < 1)
-                        {
-                            this.MyComboBoxInstance.XUnits = Gum.Converters.GeneralUnitType.Percentage;
-                        }
-                        setMyComboBoxInstanceYFirstValue = true;
-                        MyComboBoxInstanceYFirstValue = 56f;
-                        setResolutionTopicHeightFirstValue = true;
-                        ResolutionTopicHeightFirstValue = 40f;
-                        if (interpolationValue < 1)
-                        {
-                            this.ResolutionTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            this.GraphicsTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.ResolutionTopic.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
+                            this.GraphicsTopic.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
                         }
                         if (interpolationValue < 1)
                         {
-                            this.ResolutionTopic.TopicName = "Resolution";
+                            this.GraphicsTopic.TopicName = "Graphics";
                         }
-                        setResolutionTopicWidthFirstValue = true;
-                        ResolutionTopicWidthFirstValue = 47f;
+                        setGraphicsTopicWidthFirstValue = true;
+                        GraphicsTopicWidthFirstValue = 47f;
                         if (interpolationValue < 1)
                         {
-                            this.ResolutionTopic.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            this.GraphicsTopic.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
-                        setResolutionTopicXFirstValue = true;
-                        ResolutionTopicXFirstValue = 2f;
+                        setGraphicsTopicXFirstValue = true;
+                        GraphicsTopicXFirstValue = 2f;
                         if (interpolationValue < 1)
                         {
-                            this.ResolutionTopic.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                            this.GraphicsTopic.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                         }
-                        setResolutionTopicYFirstValue = true;
-                        ResolutionTopicYFirstValue = 152f;
+                        setGraphicsTopicYFirstValue = true;
+                        GraphicsTopicYFirstValue = 152f;
                         setSettingsTextBlueFirstValue = true;
                         SettingsTextBlueFirstValue = 0;
                         setSettingsTextFontSizeFirstValue = true;
@@ -429,54 +386,34 @@
                         {
                             this.BackgroundColor.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
-                        setMyComboBoxInstanceHeightSecondValue = true;
-                        MyComboBoxInstanceHeightSecondValue = 79f;
+                        setGraphicsTopicHeightSecondValue = true;
+                        GraphicsTopicHeightSecondValue = 40f;
                         if (interpolationValue >= 1)
                         {
-                            this.MyComboBoxInstance.Parent = this.GetGraphicalUiElementByName("ResolutionTopic");
-                        }
-                        setMyComboBoxInstanceWidthSecondValue = true;
-                        MyComboBoxInstanceWidthSecondValue = 98f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.MyComboBoxInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        setMyComboBoxInstanceXSecondValue = true;
-                        MyComboBoxInstanceXSecondValue = 1f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.MyComboBoxInstance.XUnits = Gum.Converters.GeneralUnitType.Percentage;
-                        }
-                        setMyComboBoxInstanceYSecondValue = true;
-                        MyComboBoxInstanceYSecondValue = 56f;
-                        setResolutionTopicHeightSecondValue = true;
-                        ResolutionTopicHeightSecondValue = 40f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.ResolutionTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            this.GraphicsTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.ResolutionTopic.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
+                            this.GraphicsTopic.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.ResolutionTopic.TopicName = "Resolution";
+                            this.GraphicsTopic.TopicName = "Graphics";
                         }
-                        setResolutionTopicWidthSecondValue = true;
-                        ResolutionTopicWidthSecondValue = 47f;
+                        setGraphicsTopicWidthSecondValue = true;
+                        GraphicsTopicWidthSecondValue = 47f;
                         if (interpolationValue >= 1)
                         {
-                            this.ResolutionTopic.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            this.GraphicsTopic.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
-                        setResolutionTopicXSecondValue = true;
-                        ResolutionTopicXSecondValue = 2f;
+                        setGraphicsTopicXSecondValue = true;
+                        GraphicsTopicXSecondValue = 2f;
                         if (interpolationValue >= 1)
                         {
-                            this.ResolutionTopic.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                            this.GraphicsTopic.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                         }
-                        setResolutionTopicYSecondValue = true;
-                        ResolutionTopicYSecondValue = 152f;
+                        setGraphicsTopicYSecondValue = true;
+                        GraphicsTopicYSecondValue = 152f;
                         setSettingsTextBlueSecondValue = true;
                         SettingsTextBlueSecondValue = 0;
                         setSettingsTextFontSizeSecondValue = true;
@@ -576,37 +513,21 @@
                 {
                     BackgroundColor.Y = BackgroundColorYFirstValue * (1 - interpolationValue) + BackgroundColorYSecondValue * interpolationValue;
                 }
-                if (setMyComboBoxInstanceHeightFirstValue && setMyComboBoxInstanceHeightSecondValue)
+                if (setGraphicsTopicHeightFirstValue && setGraphicsTopicHeightSecondValue)
                 {
-                    MyComboBoxInstance.Height = MyComboBoxInstanceHeightFirstValue * (1 - interpolationValue) + MyComboBoxInstanceHeightSecondValue * interpolationValue;
+                    GraphicsTopic.Height = GraphicsTopicHeightFirstValue * (1 - interpolationValue) + GraphicsTopicHeightSecondValue * interpolationValue;
                 }
-                if (setMyComboBoxInstanceWidthFirstValue && setMyComboBoxInstanceWidthSecondValue)
+                if (setGraphicsTopicWidthFirstValue && setGraphicsTopicWidthSecondValue)
                 {
-                    MyComboBoxInstance.Width = MyComboBoxInstanceWidthFirstValue * (1 - interpolationValue) + MyComboBoxInstanceWidthSecondValue * interpolationValue;
+                    GraphicsTopic.Width = GraphicsTopicWidthFirstValue * (1 - interpolationValue) + GraphicsTopicWidthSecondValue * interpolationValue;
                 }
-                if (setMyComboBoxInstanceXFirstValue && setMyComboBoxInstanceXSecondValue)
+                if (setGraphicsTopicXFirstValue && setGraphicsTopicXSecondValue)
                 {
-                    MyComboBoxInstance.X = MyComboBoxInstanceXFirstValue * (1 - interpolationValue) + MyComboBoxInstanceXSecondValue * interpolationValue;
+                    GraphicsTopic.X = GraphicsTopicXFirstValue * (1 - interpolationValue) + GraphicsTopicXSecondValue * interpolationValue;
                 }
-                if (setMyComboBoxInstanceYFirstValue && setMyComboBoxInstanceYSecondValue)
+                if (setGraphicsTopicYFirstValue && setGraphicsTopicYSecondValue)
                 {
-                    MyComboBoxInstance.Y = MyComboBoxInstanceYFirstValue * (1 - interpolationValue) + MyComboBoxInstanceYSecondValue * interpolationValue;
-                }
-                if (setResolutionTopicHeightFirstValue && setResolutionTopicHeightSecondValue)
-                {
-                    ResolutionTopic.Height = ResolutionTopicHeightFirstValue * (1 - interpolationValue) + ResolutionTopicHeightSecondValue * interpolationValue;
-                }
-                if (setResolutionTopicWidthFirstValue && setResolutionTopicWidthSecondValue)
-                {
-                    ResolutionTopic.Width = ResolutionTopicWidthFirstValue * (1 - interpolationValue) + ResolutionTopicWidthSecondValue * interpolationValue;
-                }
-                if (setResolutionTopicXFirstValue && setResolutionTopicXSecondValue)
-                {
-                    ResolutionTopic.X = ResolutionTopicXFirstValue * (1 - interpolationValue) + ResolutionTopicXSecondValue * interpolationValue;
-                }
-                if (setResolutionTopicYFirstValue && setResolutionTopicYSecondValue)
-                {
-                    ResolutionTopic.Y = ResolutionTopicYFirstValue * (1 - interpolationValue) + ResolutionTopicYSecondValue * interpolationValue;
+                    GraphicsTopic.Y = GraphicsTopicYFirstValue * (1 - interpolationValue) + GraphicsTopicYSecondValue * interpolationValue;
                 }
                 if (setSettingsTextBlueFirstValue && setSettingsTextBlueSecondValue)
                 {
@@ -724,9 +645,8 @@
             {
                 base.StopAnimations();
                 BackButtonInstance.StopAnimations();
-                ResolutionTopic.StopAnimations();
+                GraphicsTopic.StopAnimations();
                 SoudTopic.StopAnimations();
-                MyComboBoxInstance.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -966,73 +886,73 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.Height",
+                            Name = "GraphicsTopic.Height",
                             Type = "float",
-                            Value = ResolutionTopic.Height
+                            Value = GraphicsTopic.Height
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.Height Units",
+                            Name = "GraphicsTopic.Height Units",
                             Type = "DimensionUnitType",
-                            Value = ResolutionTopic.HeightUnits
+                            Value = GraphicsTopic.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.Parent",
+                            Name = "GraphicsTopic.Parent",
                             Type = "string",
-                            Value = ResolutionTopic.Parent
+                            Value = GraphicsTopic.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.TopicName",
+                            Name = "GraphicsTopic.TopicName",
                             Type = "string",
-                            Value = ResolutionTopic.TopicName
+                            Value = GraphicsTopic.TopicName
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.Width",
+                            Name = "GraphicsTopic.Width",
                             Type = "float",
-                            Value = ResolutionTopic.Width
+                            Value = GraphicsTopic.Width
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.Width Units",
+                            Name = "GraphicsTopic.Width Units",
                             Type = "DimensionUnitType",
-                            Value = ResolutionTopic.WidthUnits
+                            Value = GraphicsTopic.WidthUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.X",
+                            Name = "GraphicsTopic.X",
                             Type = "float",
-                            Value = ResolutionTopic.X
+                            Value = GraphicsTopic.X
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.X Units",
+                            Name = "GraphicsTopic.X Units",
                             Type = "PositionUnitType",
-                            Value = ResolutionTopic.XUnits
+                            Value = GraphicsTopic.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.Y",
+                            Name = "GraphicsTopic.Y",
                             Type = "float",
-                            Value = ResolutionTopic.Y
+                            Value = GraphicsTopic.Y
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1113,62 +1033,6 @@
                             Name = "SoudTopic.Y",
                             Type = "float",
                             Value = SoudTopic.Y
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "MyComboBoxInstance.Height",
-                            Type = "float",
-                            Value = MyComboBoxInstance.Height
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "MyComboBoxInstance.Parent",
-                            Type = "string",
-                            Value = MyComboBoxInstance.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "MyComboBoxInstance.Width",
-                            Type = "float",
-                            Value = MyComboBoxInstance.Width
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "MyComboBoxInstance.Width Units",
-                            Type = "DimensionUnitType",
-                            Value = MyComboBoxInstance.WidthUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "MyComboBoxInstance.X",
-                            Type = "float",
-                            Value = MyComboBoxInstance.X
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "MyComboBoxInstance.X Units",
-                            Type = "PositionUnitType",
-                            Value = MyComboBoxInstance.XUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "MyComboBoxInstance.Y",
-                            Type = "float",
-                            Value = MyComboBoxInstance.Y
                         }
                         );
                         break;
@@ -1408,73 +1272,73 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.Height",
+                            Name = "GraphicsTopic.Height",
                             Type = "float",
-                            Value = ResolutionTopic.Height + 40f
+                            Value = GraphicsTopic.Height + 40f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.Height Units",
+                            Name = "GraphicsTopic.Height Units",
                             Type = "DimensionUnitType",
-                            Value = ResolutionTopic.HeightUnits
+                            Value = GraphicsTopic.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.Parent",
+                            Name = "GraphicsTopic.Parent",
                             Type = "string",
-                            Value = ResolutionTopic.Parent
+                            Value = GraphicsTopic.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.TopicName",
+                            Name = "GraphicsTopic.TopicName",
                             Type = "string",
-                            Value = ResolutionTopic.TopicName
+                            Value = GraphicsTopic.TopicName
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.Width",
+                            Name = "GraphicsTopic.Width",
                             Type = "float",
-                            Value = ResolutionTopic.Width + 47f
+                            Value = GraphicsTopic.Width + 47f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.Width Units",
+                            Name = "GraphicsTopic.Width Units",
                             Type = "DimensionUnitType",
-                            Value = ResolutionTopic.WidthUnits
+                            Value = GraphicsTopic.WidthUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.X",
+                            Name = "GraphicsTopic.X",
                             Type = "float",
-                            Value = ResolutionTopic.X + 2f
+                            Value = GraphicsTopic.X + 2f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.X Units",
+                            Name = "GraphicsTopic.X Units",
                             Type = "PositionUnitType",
-                            Value = ResolutionTopic.XUnits
+                            Value = GraphicsTopic.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResolutionTopic.Y",
+                            Name = "GraphicsTopic.Y",
                             Type = "float",
-                            Value = ResolutionTopic.Y + 152f
+                            Value = GraphicsTopic.Y + 152f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1557,62 +1421,6 @@
                             Value = SoudTopic.Y + 152f
                         }
                         );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "MyComboBoxInstance.Height",
-                            Type = "float",
-                            Value = MyComboBoxInstance.Height + 79f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "MyComboBoxInstance.Parent",
-                            Type = "string",
-                            Value = MyComboBoxInstance.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "MyComboBoxInstance.Width",
-                            Type = "float",
-                            Value = MyComboBoxInstance.Width + 98f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "MyComboBoxInstance.Width Units",
-                            Type = "DimensionUnitType",
-                            Value = MyComboBoxInstance.WidthUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "MyComboBoxInstance.X",
-                            Type = "float",
-                            Value = MyComboBoxInstance.X + 1f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "MyComboBoxInstance.X Units",
-                            Type = "PositionUnitType",
-                            Value = MyComboBoxInstance.XUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "MyComboBoxInstance.Y",
-                            Type = "float",
-                            Value = MyComboBoxInstance.Y + 56f
-                        }
-                        );
                         break;
                 }
                 return newState;
@@ -1635,9 +1443,8 @@
             public JHP4SD.GumRuntimes.ColoredRectangleRuntime BackgroundColor { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.BackButtonRuntime BackButtonInstance { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime SettingsText { get; set; }
-            public JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TopicRuntime ResolutionTopic { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TopicRuntime GraphicsTopic { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TopicRuntime SoudTopic { get; set; }
-            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.MyComboBoxRuntime MyComboBoxInstance { get; set; }
             public SettingsGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -1667,9 +1474,8 @@
                 BackgroundColor = this.GetGraphicalUiElementByName("BackgroundColor") as JHP4SD.GumRuntimes.ColoredRectangleRuntime;
                 BackButtonInstance = this.GetGraphicalUiElementByName("BackButtonInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.BackButtonRuntime;
                 SettingsText = this.GetGraphicalUiElementByName("SettingsText") as JHP4SD.GumRuntimes.TextRuntime;
-                ResolutionTopic = this.GetGraphicalUiElementByName("ResolutionTopic") as JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TopicRuntime;
+                GraphicsTopic = this.GetGraphicalUiElementByName("GraphicsTopic") as JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TopicRuntime;
                 SoudTopic = this.GetGraphicalUiElementByName("SoudTopic") as JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TopicRuntime;
-                MyComboBoxInstance = this.GetGraphicalUiElementByName("MyComboBoxInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.MyComboBoxRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Screens.SettingsGumForms(this);

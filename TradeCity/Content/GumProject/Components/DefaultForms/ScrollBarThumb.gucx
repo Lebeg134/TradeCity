@@ -7,7 +7,7 @@
     <Variable>
       <Type>ColorCategoryState</Type>
       <Name>BackgroundInstance.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">Blue</Value>
+      <Value xsi:type="xsd:string">Black</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

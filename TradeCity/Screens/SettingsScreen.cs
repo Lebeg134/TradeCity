@@ -11,18 +11,22 @@ using FlatRedBall.Graphics.Animation;
 using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 using FlatRedBall.Localization;
-
-
+using FlatRedBall.Forms.Controls;
 
 namespace JHP4SD.Screens
 {
-    public partial class Settings
+    public partial class SettingsScreen
     {
-
+        static int _lastSelected = 1;
+        
         void CustomInitialize()
         {
 
+        }
 
+        private void BackButtonInstance_Click(object sender, EventArgs e)
+        {
+            MoveToScreen(typeof(MainMenuScreen));
         }
 
         void CustomActivity(bool firstTimeCalled)
@@ -42,6 +46,7 @@ namespace JHP4SD.Screens
 
 
         }
+
 
     }
 }

@@ -394,7 +394,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Screens\CityScreen.cs" />
     <Compile Include="Screens\CityScreen.Generated.cs">
-      <DependentUpon>cityscreen.cs</DependentUpon>
+      <DependentUpon>CityScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\GameScreen.cs" />
     <Compile Include="Screens\GameScreen.Generated.cs">
@@ -402,23 +402,23 @@
     </Compile>
     <Compile Include="Screens\MainMenuScreen.cs" />
     <Compile Include="Screens\MainMenuScreen.Generated.cs">
-      <DependentUpon>mainmenuscreen.cs</DependentUpon>
+      <DependentUpon>MainMenuScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\MapScreen.cs" />
     <Compile Include="Screens\MapScreen.Generated.cs">
-      <DependentUpon>mapscreen.cs</DependentUpon>
+      <DependentUpon>MapScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\MarketScreen.cs" />
     <Compile Include="Screens\MarketScreen.Generated.cs">
-      <DependentUpon>marketscreen.cs</DependentUpon>
+      <DependentUpon>MarketScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\MultiplayerScreen.cs" />
     <Compile Include="Screens\MultiplayerScreen.Generated.cs">
-      <DependentUpon>multiplayerscreen.cs</DependentUpon>
+      <DependentUpon>MultiplayerScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\SettingsScreen.cs" />
     <Compile Include="Screens\SettingsScreen.Generated.cs">
-      <DependentUpon>settingsscreen.cs</DependentUpon>
+      <DependentUpon>SettingsScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Setup\CameraSetup.cs" />
     <Compile Include="TileCollisions\CollidableListVsTileShapeCollectionRelationship.cs" />

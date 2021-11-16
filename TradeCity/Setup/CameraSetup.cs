@@ -43,7 +43,7 @@
                 TextureFilter = Microsoft.Xna.Framework.Graphics.TextureFilter.Point,
                 ResizeBehavior = ResizeBehavior.IncreaseVisibleArea,
                 ScaleGum = 25f,
-                ResizeBehaviorGum = ResizeBehavior.IncreaseVisibleArea,
+                ResizeBehaviorGum = ResizeBehavior.StretchVisibleArea,
                 DominantInternalCoordinates = WidthOrHeight.Height,
             }
             ;

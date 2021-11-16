@@ -3,10 +3,11 @@
         public partial class MainMenuGumForms
         {
             private Gum.Wireframe.GraphicalUiElement Visual;
-            public FlatRedBall.Forms.Controls.Button ButtonInstance { get; set; }
-            public FlatRedBall.Forms.Controls.Button ButtonInstance2 { get; set; }
-            public FlatRedBall.Forms.Controls.Button ButtonInstance3 { get; set; }
-            public FlatRedBall.Forms.Controls.Button ButtonInstance1 { get; set; }
+            public FlatRedBall.Forms.Controls.Button NewGameButton { get; set; }
+            public FlatRedBall.Forms.Controls.Button LoadGameButton { get; set; }
+            public FlatRedBall.Forms.Controls.Button MultiplayerButton { get; set; }
+            public FlatRedBall.Forms.Controls.Button SettingsButton { get; set; }
+            public FlatRedBall.Forms.Controls.Button ExitButtonInstance { get; set; }
             public MainMenuGumForms () 
             {
                 CustomInitialize();
@@ -19,10 +20,11 @@
             }
             private void ReactToVisualChanged () 
             {
-                ButtonInstance = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("ButtonInstance").FormsControlAsObject;
-                ButtonInstance2 = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("ButtonInstance2").FormsControlAsObject;
-                ButtonInstance3 = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("ButtonInstance3").FormsControlAsObject;
-                ButtonInstance1 = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("ButtonInstance1").FormsControlAsObject;
+                NewGameButton = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("NewGameButton").FormsControlAsObject;
+                LoadGameButton = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("LoadGameButton").FormsControlAsObject;
+                MultiplayerButton = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("MultiplayerButton").FormsControlAsObject;
+                SettingsButton = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("SettingsButton").FormsControlAsObject;
+                ExitButtonInstance = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("ExitButtonInstance").FormsControlAsObject;
             }
             partial void CustomInitialize();
         }

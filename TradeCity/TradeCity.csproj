@@ -256,6 +256,18 @@
       <DependentUpon>GameScreenGumRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\GumIdb.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\BackButtonRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\BackButtonRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ExitButtonRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ExitButtonRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\MainMenuButtonRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\MainMenuButtonRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\MyComboBoxRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\MyComboBoxRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\MyListBoxRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\MyListBoxRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\MainMenuGumRuntime.cs" />
     <Compile Include="GumRuntimes\MainMenuGumRuntime.Generated.cs">
       <DependentUpon>MainMenuGumRuntime.cs</DependentUpon>
@@ -571,6 +583,86 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>usercontrol</Name>
     </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\backbutton.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>backbutton</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\exitbutton.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>exitbutton</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\mainmenubutton.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>mainmenubutton</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\mycombobox.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>mycombobox</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\mylistbox.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>mylistbox</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\complexcomponents\topic.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>topic</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\resources\placeholdergradient.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>placeholdergradient</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_0</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_1</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_2</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_3</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_4</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_5</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_6</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_7</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_8</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_9</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font16arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font16arial</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font16arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font16arial_0</Name>
+    </None>
     <None Include="content\gumproject\fontcache\font18arial.fnt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>font18arial</Name>
@@ -578,6 +670,38 @@
     <None Include="content\gumproject\fontcache\font18arial_0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>font18arial_0</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font24arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font24arial</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font24arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font24arial_0</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font32arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font32arial</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font32arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font32arial_0</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font72arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font72arial</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font72arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font72arial_0</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font72arial_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font72arial_1</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font72arial_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font72arial_2</Name>
     </None>
     <None Include="content\gumproject\gumproject.gumx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -606,6 +730,10 @@
     <None Include="content\gumproject\screens\multiplayergum.gusx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>MultiplayerGum</Name>
+    </None>
+    <None Include="content\gumproject\screens\resources\citynight.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>citynight</Name>
     </None>
     <None Include="content\gumproject\screens\settingsgum.gusx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -204,8 +204,26 @@
           "InstructionSaves": [
             {
               "Type": "float",
+              "Member": "BottomDestination",
+              "Value": 150.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "bool",
+              "Member": "Orthogonal",
+              "Value": true,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
               "Member": "RotationX",
               "Value": 15.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "TopDestination",
+              "Value": 150.0,
               "Time": 0.0
             },
             {
@@ -224,24 +242,6 @@
               "Type": "float",
               "Member": "Z",
               "Value": 0.0,
-              "Time": 0.0
-            },
-            {
-              "Type": "float",
-              "Member": "TopDestination",
-              "Value": 150.0,
-              "Time": 0.0
-            },
-            {
-              "Type": "float",
-              "Member": "BottomDestination",
-              "Value": 150.0,
-              "Time": 0.0
-            },
-            {
-              "Type": "bool",
-              "Member": "Orthogonal",
-              "Value": true,
               "Time": 0.0
             }
           ],
@@ -267,7 +267,7 @@
           ],
           "InstructionSaves": [],
           "SourceType": 1,
-          "SourceFile": "Entities\\CameraMidpoint",
+          "SourceFile": "Entities/CameraMidpoint",
           "AttachToContainer": true,
           "GenerateTimedEmit": true
         }
@@ -578,7 +578,6 @@
     "Scale": 400,
     "ScaleGum": 25,
     "ResizeBehavior": 1,
-    "ResizeBehaviorGum": 1,
     "DominantInternalCoordinates": 1,
     "TextureFilter": 1
   },

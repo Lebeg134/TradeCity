@@ -1148,6 +1148,594 @@
         "ElementType": "Screens",
         "EventType": 6,
         "TimestampUtc": "2021-11-16T20:20:48.0626194Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T21:41:17.6248514Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.TopContainer",
+        "OldName": "LebegForms/ComplexComponents/Topic.ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T21:41:27.8361985Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/Topic.Container TopContainer in LebegForms/ComplexComponents/Topic",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T21:42:56.8897077Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T21:43:10.7744055Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.BottomContainer",
+        "OldName": "LebegForms/ComplexComponents/Topic.ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T21:43:18.0182066Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/Topic.Container BottomContainer in LebegForms/ComplexComponents/Topic",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T21:43:21.2217617Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T21:43:23.4062883Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.TopContainer",
+        "OldName": "LebegForms/ComplexComponents/Topic.ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T21:43:29.1872867Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T21:43:32.0145127Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.BottomContainer",
+        "OldName": "LebegForms/ComplexComponents/Topic.ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T21:43:38.159466Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/Topic.Rectangle Top in LebegForms/ComplexComponents/Topic",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T21:43:56.3768145Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.BackgroundColor1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T21:45:20.5428224Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.BottomBackgroundColor",
+        "OldName": "LebegForms/ComplexComponents/Topic.BackgroundColor1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T21:45:34.1095925Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.TopBackgroundColor",
+        "OldName": "LebegForms/ComplexComponents/Topic.BackgroundColor",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T21:45:37.8615052Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.TopBorder",
+        "OldName": "LebegForms/ComplexComponents/Topic.Border",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T21:45:44.5703371Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.TopText",
+        "OldName": "LebegForms/ComplexComponents/Topic.TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T21:45:50.338467Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.TopBorder1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T21:45:52.793463Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.BottomBorder",
+        "OldName": "LebegForms/ComplexComponents/Topic.TopBorder1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T21:46:00.5604761Z"
+      },
+      {
+        "NewName": " SettingsGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T21:46:27.100463Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " SettingsGum.Text TextInstance in  SettingsGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T21:46:33.6488222Z"
+      },
+      {
+        "NewName": " SettingsGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T21:50:03.8307387Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " SettingsGum.Text TextInstance in  SettingsGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T21:50:09.7323687Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/Topic.ColoredRectangle BottomBackgroundColor in LebegForms/ComplexComponents/Topic",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T21:51:02.2964537Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/Topic.Rectangle BottomBorder in LebegForms/ComplexComponents/Topic",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T21:51:05.64379Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/Topic.Container BottomContainer in LebegForms/ComplexComponents/Topic",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T21:51:13.459157Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T21:51:22.4914184Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/Topic.Container TopContainer in LebegForms/ComplexComponents/Topic",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T21:53:18.8928174Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/Topic.Container ContainerInstance in LebegForms/ComplexComponents/Topic",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T21:53:35.7988959Z"
+      },
+      {
+        "NewName": " SettingsGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T21:53:44.1046875Z"
+      },
+      {
+        "NewName": " SettingsGum.RectangleInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T21:53:54.3374294Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.ColoredRectangleInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T21:55:54.287179Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " SettingsGum.Rectangle RectangleInstance in  SettingsGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T21:58:11.4275496Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/Topic.ColoredRectangle ColoredRectangleInstance in LebegForms/ComplexComponents/Topic",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T21:58:15.6969577Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TopicEnd",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-11-16T21:58:28.9715598Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TopicEnd.ColoredRectangleInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T21:59:30.5490896Z"
+      },
+      {
+        "NewName": " SettingsGum.TopicEndInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T21:59:46.520107Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/TopicEnd.ColoredRectangle ColoredRectangleInstance in LebegForms/ComplexComponents/TopicEnd",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:00:25.5373518Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TopicEnd.RectangleInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:00:28.8225338Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " SettingsGum.LebegForms/ComplexComponents/TopicEnd TopicEndInstance in  SettingsGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:01:36.0601592Z"
+      },
+      {
+        "NewName": " SettingsGum.ComboBoxInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:01:48.7276368Z"
+      },
+      {
+        "NewName": " SettingsGum.TopicEndInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:03:02.230009Z"
+      },
+      {
+        "NewName": " SettingsGum.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:05:21.9965573Z"
+      },
+      {
+        "NewName": " SettingsGum.ButtonInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:05:29.68219Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " SettingsGum.LebegForms/ComplexComponents/TopicEnd TopicEndInstance in  SettingsGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:05:31.4022997Z"
+      },
+      {
+        "NewName": " SettingsGum.TopicEndInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:05:32.5573528Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.ColoredFrameInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:09:04.8947046Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.ColoredFrameInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:09:43.1503994Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.TopColoredFrameInstance",
+        "OldName": "LebegForms/ComplexComponents/Topic.ColoredFrameInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T22:09:49.6673404Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.BottomColoredFrameInstance",
+        "OldName": "LebegForms/ComplexComponents/Topic.ColoredFrameInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T22:09:56.4171767Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " SettingsGum.Container ContainerInstance in  SettingsGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:15:03.8988192Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/TopicEnd",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2021-11-16T22:15:16.672123Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " SettingsGum.Text TextInstance in  SettingsGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:16:39.9354905Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " SettingsGum.DefaultForms/ComboBox ComboBoxInstance in  SettingsGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:16:41.3395287Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " SettingsGum.DefaultForms/Button ButtonInstance in  SettingsGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:16:43.6965394Z"
+      },
+      {
+        "NewName": " SettingsGum.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:16:54.9584811Z"
+      },
+      {
+        "NewName": " SettingsGum.ButtonInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:17:03.9264437Z"
+      },
+      {
+        "NewName": " SettingsGum.ComboBoxInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:17:09.6534644Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/Topic.ColoredRectangle TopBackgroundColor in LebegForms/ComplexComponents/Topic",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:19:22.8264408Z"
+      },
+      {
+        "NewName": " SettingsGum.ComboBoxInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:20:06.3435464Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/Topic.DefaultForms/ColoredFrame BottomColoredFrameInstance in LebegForms/ComplexComponents/Topic",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:20:33.5769425Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/Topic.Rectangle TopBorder in LebegForms/ComplexComponents/Topic",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:20:40.5666557Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.ColoredFrameInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:21:02.0175125Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " SettingsGum.DefaultForms/ComboBox ComboBoxInstance1 in  SettingsGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:28:20.0922393Z"
+      },
+      {
+        "NewName": " SettingsGum.ContainerInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:28:25.7243931Z"
+      },
+      {
+        "NewName": " SettingsGum.ResolutionContainer",
+        "OldName": " SettingsGum.ContainerInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T22:28:35.6021561Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/Topic.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:31:15.5887651Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/Topic.Container ContainerInstance in LebegForms/ComplexComponents/Topic",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:31:20.5837356Z"
+      },
+      {
+        "NewName": " SettingsGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:31:30.2161981Z"
+      },
+      {
+        "NewName": " SettingsGum.ResolutionText",
+        "OldName": " SettingsGum.TextInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T22:31:35.8654284Z"
+      },
+      {
+        "NewName": " SettingsGum.ComboBoxInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:33:21.4966424Z"
+      },
+      {
+        "NewName": " SettingsGum.ResolutionComboBox",
+        "OldName": " SettingsGum.ComboBoxInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T22:33:29.6611278Z"
+      },
+      {
+        "NewName": " SettingsGum.ContainerInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:34:35.7295177Z"
+      },
+      {
+        "NewName": " SettingsGum.FullscreenContainer",
+        "OldName": " SettingsGum.ContainerInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T22:34:48.1822142Z"
+      },
+      {
+        "NewName": " SettingsGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:35:17.0884237Z"
+      },
+      {
+        "NewName": " SettingsGum.FullscreenText",
+        "OldName": " SettingsGum.TextInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T22:35:26.3532353Z"
+      },
+      {
+        "NewName": " SettingsGum.WindowModeText",
+        "OldName": " SettingsGum.FullscreenText",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T22:35:49.9696931Z"
+      },
+      {
+        "NewName": " SettingsGum.ContainerInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:36:25.5901288Z"
+      },
+      {
+        "NewName": " SettingsGum.GraphicsContainer",
+        "OldName": " SettingsGum.ContainerInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T22:36:43.0651808Z"
+      },
+      {
+        "NewName": " SettingsGum.ComboBoxInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-16T22:38:38.921638Z"
+      },
+      {
+        "NewName": " SettingsGum.WondowModeComboBox",
+        "OldName": " SettingsGum.ComboBoxInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T22:38:50.0615946Z"
+      },
+      {
+        "NewName": " SettingsGum.WindowModeComboBox",
+        "OldName": " SettingsGum.WondowModeComboBox",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-16T22:39:01.6405296Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " SettingsGum.Container ContainerInstance in  SettingsGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:39:46.6859619Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " SettingsGum.DefaultForms/Button ButtonInstance in  SettingsGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:39:50.2492556Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " SettingsGum.DefaultForms/ComboBox ComboBoxInstance in  SettingsGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-16T22:39:52.2738396Z"
       }
     ],
     "torok": [

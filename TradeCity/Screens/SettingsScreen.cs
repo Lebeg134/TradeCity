@@ -21,7 +21,13 @@ namespace JHP4SD.Screens
         
         void CustomInitialize()
         {
+            var comboBox = Forms.ComboBoxInstance;
+            comboBox.Items.Add("Option1");
+            comboBox.Items.Add("Option2");
+            comboBox.Items.Add("Option3");
 
+
+            Forms.BackButtonInstance.Click += BackButtonInstance_Click;
         }
 
         private void BackButtonInstance_Click(object sender, EventArgs e)

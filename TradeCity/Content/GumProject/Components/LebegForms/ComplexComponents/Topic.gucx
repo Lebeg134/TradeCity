@@ -5,174 +5,68 @@
   <State>
     <Name>Default</Name>
     <Variable>
-      <Type>int</Type>
-      <Name>BackgroundColor.Alpha</Name>
-      <ExposedAsName>Alpha</ExposedAsName>
-      <SetsValue>false</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>Blend</Type>
-      <Name>BackgroundColor.Blend</Name>
-      <ExposedAsName>Blend</ExposedAsName>
-      <SetsValue>false</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>BackgroundColor.Blue</Name>
-      <Value xsi:type="xsd:int">105</Value>
-      <ExposedAsName>Blue</ExposedAsName>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>BackgroundColor.Green</Name>
-      <Value xsi:type="xsd:int">105</Value>
-      <ExposedAsName>Green</ExposedAsName>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>BackgroundColor.Height</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>DimensionUnitType</Type>
-      <Name>BackgroundColor.Height Units</Name>
-      <Value xsi:type="xsd:int">2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>BackgroundColor.Red</Name>
-      <Value xsi:type="xsd:int">105</Value>
-      <ExposedAsName>Red</ExposedAsName>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>BackgroundColor.Width</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>DimensionUnitType</Type>
-      <Name>BackgroundColor.Width Units</Name>
-      <Value xsi:type="xsd:int">2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>BackgroundColor.X</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>HorizontalAlignment</Type>
-      <Name>BackgroundColor.X Origin</Name>
+      <Type>ChildrenLayout</Type>
+      <Name>Children Layout</Name>
       <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>BackgroundColor.X Units</Name>
-      <Value xsi:type="xsd:int">6</Value>
+      <Type>bool</Type>
+      <Name>Clips Children</Name>
+      <Value xsi:type="xsd:boolean">false</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>BackgroundColor.Y</Name>
-      <Value xsi:type="xsd:float">0</Value>
+      <Name>ColoredFrameInstance.Height</Name>
+      <Value xsi:type="xsd:float">-22</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>ColoredFrameInstance.Height Units</Name>
+      <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ColoredFrameInstance.Width</Name>
+      <Value xsi:type="xsd:float">100</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>ColoredFrameInstance.Width Units</Name>
+      <Value xsi:type="xsd:int">1</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ColoredFrameInstance.Y</Name>
+      <Value xsi:type="xsd:float">10</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>VerticalAlignment</Type>
-      <Name>BackgroundColor.Y Origin</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>BackgroundColor.Y Units</Name>
-      <Value xsi:type="xsd:int">7</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>Border.Blue</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>Border.Green</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>Border.Height</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>DimensionUnitType</Type>
-      <Name>Border.Height Units</Name>
+      <Name>ColoredFrameInstance.Y Origin</Name>
       <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>int</Type>
-      <Name>Border.Red</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>Border.Width</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>DimensionUnitType</Type>
-      <Name>Border.Width Units</Name>
-      <Value xsi:type="xsd:int">2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>Border.X</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>HorizontalAlignment</Type>
-      <Name>Border.X Origin</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>PositionUnitType</Type>
-      <Name>Border.X Units</Name>
-      <Value xsi:type="xsd:int">6</Value>
+      <Name>ColoredFrameInstance.Y Units</Name>
+      <Value xsi:type="xsd:int">5</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>Contained Type</Name>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>Border.Y</Name>
+      <Name>Height</Name>
       <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>VerticalAlignment</Type>
-      <Name>Border.Y Origin</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>Border.Y Units</Name>
-      <Value xsi:type="xsd:int">7</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -193,235 +87,200 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>int</Type>
-      <Name>TextInstance.Blue</Name>
+      <Type>ColorCategoryState</Type>
+      <Name>TopColoredFrameInstance.ColorCategoryState</Name>
+      <Value xsi:type="xsd:string">Black</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>TopColoredFrameInstance.Height</Name>
+      <Value xsi:type="xsd:float">6</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>TopColoredFrameInstance.Height Units</Name>
+      <Value xsi:type="xsd:int">4</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>TopColoredFrameInstance.Width</Name>
+      <Value xsi:type="xsd:float">100</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>TopColoredFrameInstance.Width Units</Name>
+      <Value xsi:type="xsd:int">1</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>PositionUnitType</Type>
+      <Name>TopColoredFrameInstance.X Units</Name>
       <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>int</Type>
+      <Name>TopText.Blue</Name>
+      <Value xsi:type="xsd:int">255</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>string</Type>
-      <Name>TextInstance.Font</Name>
+      <Name>TopText.Font</Name>
       <Value xsi:type="xsd:string">Arial</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
-      <Name>TextInstance.FontSize</Name>
+      <Name>TopText.FontSize</Name>
       <Value xsi:type="xsd:int">24</Value>
       <ExposedAsName>TopicFontSize</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
-      <Name>TextInstance.Green</Name>
-      <Value xsi:type="xsd:int">0</Value>
+      <Name>TopText.Green</Name>
+      <Value xsi:type="xsd:int">255</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>TextInstance.Height</Name>
+      <Name>TopText.Height</Name>
       <Value xsi:type="xsd:float">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
-      <Name>TextInstance.Height Units</Name>
-      <Value xsi:type="xsd:int">0</Value>
+      <Name>TopText.Height Units</Name>
+      <Value xsi:type="xsd:int">4</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>HorizontalAlignment</Type>
-      <Name>TextInstance.HorizontalAlignment</Name>
+      <Name>TopText.HorizontalAlignment</Name>
       <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int?</Type>
-      <Name>TextInstance.MaxLettersToShow</Name>
+      <Name>TopText.MaxLettersToShow</Name>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>string</Type>
-      <Name>TextInstance.Parent</Name>
-      <Value xsi:type="xsd:string">Top</Value>
+      <Name>TopText.Parent</Name>
+      <Value xsi:type="xsd:string">TopColoredFrameInstance</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
-      <Name>TextInstance.Red</Name>
-      <Value xsi:type="xsd:int">0</Value>
+      <Name>TopText.Red</Name>
+      <Value xsi:type="xsd:int">255</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>string</Type>
-      <Name>TextInstance.Text</Name>
+      <Name>TopText.Text</Name>
       <Value xsi:type="xsd:string">TopicName</Value>
       <ExposedAsName>TopicName</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>VerticalAlignment</Type>
-      <Name>TextInstance.VerticalAlignment</Name>
+      <Name>TopText.VerticalAlignment</Name>
       <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>bool</Type>
-      <Name>TextInstance.Visible</Name>
+      <Name>TopText.Visible</Name>
       <Value xsi:type="xsd:boolean">true</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>TextInstance.Width</Name>
+      <Name>TopText.Width</Name>
       <Value xsi:type="xsd:float">95</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
-      <Name>TextInstance.Width Units</Name>
+      <Name>TopText.Width Units</Name>
       <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>TextInstance.X</Name>
+      <Name>TopText.X</Name>
       <Value xsi:type="xsd:float">5</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>HorizontalAlignment</Type>
-      <Name>TextInstance.X Origin</Name>
+      <Name>TopText.X Origin</Name>
       <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>PositionUnitType</Type>
-      <Name>TextInstance.X Units</Name>
+      <Name>TopText.X Units</Name>
       <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>TextInstance.Y</Name>
+      <Name>TopText.Y</Name>
       <Value xsi:type="xsd:float">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>VerticalAlignment</Type>
-      <Name>TextInstance.Y Origin</Name>
+      <Name>TopText.Y Origin</Name>
       <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>PositionUnitType</Type>
-      <Name>TextInstance.Y Units</Name>
+      <Name>TopText.Y Units</Name>
       <Value xsi:type="xsd:int">7</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>int</Type>
-      <Name>Top.Blue</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>Top.Green</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>float</Type>
-      <Name>Top.Height</Name>
-      <Value xsi:type="xsd:float">20</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>DimensionUnitType</Type>
-      <Name>Top.Height Units</Name>
-      <Value xsi:type="xsd:int">4</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>Top.Red</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>Top.Width</Name>
-      <Value xsi:type="xsd:float">100</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>DimensionUnitType</Type>
-      <Name>Top.Width Units</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>Top.X</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>HorizontalAlignment</Type>
-      <Name>Top.X Origin</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>Top.X Units</Name>
-      <Value xsi:type="xsd:int">6</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>Top.Y</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>VerticalAlignment</Type>
-      <Name>Top.Y Origin</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>Top.Y Units</Name>
-      <Value xsi:type="xsd:int">1</Value>
+      <Name>Width</Name>
+      <Value xsi:type="xsd:float">250</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
       <Name>Width Units</Name>
-      <Value xsi:type="xsd:int">4</Value>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>bool</Type>
+      <Name>Wraps Children</Name>
+      <Value xsi:type="xsd:boolean">false</Value>
       <SetsValue>true</SetsValue>
     </Variable>
   </State>
   <Instance>
-    <Name>BackgroundColor</Name>
-    <BaseType>ColoredRectangle</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
-    <Name>Border</Name>
-    <BaseType>Rectangle</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
-    <Name>Top</Name>
-    <BaseType>Rectangle</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
-    <Name>TextInstance</Name>
+    <Name>TopText</Name>
     <BaseType>Text</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>TopColoredFrameInstance</Name>
+    <BaseType>DefaultForms/ColoredFrame</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>ColoredFrameInstance</Name>
+    <BaseType>DefaultForms/ColoredFrame</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Behaviors />

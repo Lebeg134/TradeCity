@@ -25,9 +25,13 @@
                     switch(mCurrentVariableState)
                     {
                         case  VariableState.Default:
-                            SettingsText.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
-                            GraphicsTopic.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
-                            SoudTopic.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
+                            ResolutionContainer.Parent = this.GetGraphicalUiElementByName("GraphicsContainer");
+                            ResolutionText.Parent = this.GetGraphicalUiElementByName("ResolutionContainer");
+                            ResolutionComboBox.Parent = this.GetGraphicalUiElementByName("ResolutionContainer");
+                            FullscreenContainer.Parent = this.GetGraphicalUiElementByName("GraphicsContainer");
+                            WindowModeText.Parent = this.GetGraphicalUiElementByName("FullscreenContainer");
+                            GraphicsContainer.Parent = this.GetGraphicalUiElementByName("GraphicsTopic");
+                            WindowModeComboBox.Parent = this.GetGraphicalUiElementByName("FullscreenContainer");
                             BackgroundColor.Blue = 128;
                             BackgroundColor.Green = 128;
                             BackgroundColor.Height = 0f;
@@ -55,7 +59,8 @@
                             SettingsText.X = 2f;
                             SettingsText.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                             SettingsText.Y = 40f;
-                            GraphicsTopic.Height = 40f;
+                            GraphicsTopic.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
+                            GraphicsTopic.Height = 0f;
                             GraphicsTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                             GraphicsTopic.TopicName = "Graphics";
                             GraphicsTopic.Width = 47f;
@@ -63,7 +68,9 @@
                             GraphicsTopic.X = 2f;
                             GraphicsTopic.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                             GraphicsTopic.Y = 152f;
-                            SoudTopic.Height = 40f;
+                            GraphicsTopic.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                            SoudTopic.ChildrenLayout = Gum.Managers.ChildrenLayout.TopToBottomStack;
+                            SoudTopic.Height = 0f;
                             SoudTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                             SoudTopic.TopicName = "Sound";
                             SoudTopic.Width = 47f;
@@ -72,6 +79,61 @@
                             SoudTopic.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             SoudTopic.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                             SoudTopic.Y = 152f;
+                            ResolutionContainer.Height = 0f;
+                            ResolutionContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            ResolutionContainer.Width = 100f;
+                            ResolutionContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            ResolutionContainer.X = 0f;
+                            ResolutionContainer.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            ResolutionContainer.Y = 0f;
+                            ResolutionContainer.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                            ResolutionText.Blue = 0;
+                            ResolutionText.Green = 0;
+                            ResolutionText.Height = 0f;
+                            ResolutionText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            ResolutionText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                            ResolutionText.Red = 0;
+                            ResolutionText.Text = "Resolution:";
+                            ResolutionText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            ResolutionText.Width = 0f;
+                            ResolutionText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            ResolutionText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                            ResolutionText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            ResolutionText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            ResolutionText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            ResolutionComboBox.Width = 50f;
+                            ResolutionComboBox.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            ResolutionComboBox.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            ResolutionComboBox.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            FullscreenContainer.Height = 0f;
+                            FullscreenContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            FullscreenContainer.Width = 100f;
+                            FullscreenContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            FullscreenContainer.X = 0f;
+                            FullscreenContainer.Y = 5f;
+                            WindowModeText.Blue = 0;
+                            WindowModeText.Green = 0;
+                            WindowModeText.Height = 0f;
+                            WindowModeText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            WindowModeText.Red = 0;
+                            WindowModeText.Text = "Window mode:";
+                            WindowModeText.Width = 0f;
+                            WindowModeText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            WindowModeText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            WindowModeText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            WindowModeText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            GraphicsContainer.ChildrenLayout = Gum.Managers.ChildrenLayout.TopToBottomStack;
+                            GraphicsContainer.Height = 0f;
+                            GraphicsContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            GraphicsContainer.Width = 98f;
+                            GraphicsContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            GraphicsContainer.X = 1f;
+                            GraphicsContainer.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                            GraphicsContainer.Y = 40f;
+                            WindowModeComboBox.Width = 50f;
+                            WindowModeComboBox.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            WindowModeComboBox.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            WindowModeComboBox.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             break;
                     }
                 }
@@ -122,6 +184,38 @@
                 bool setBackgroundColorYSecondValue = false;
                 float BackgroundColorYFirstValue= 0;
                 float BackgroundColorYSecondValue= 0;
+                bool setFullscreenContainerHeightFirstValue = false;
+                bool setFullscreenContainerHeightSecondValue = false;
+                float FullscreenContainerHeightFirstValue= 0;
+                float FullscreenContainerHeightSecondValue= 0;
+                bool setFullscreenContainerWidthFirstValue = false;
+                bool setFullscreenContainerWidthSecondValue = false;
+                float FullscreenContainerWidthFirstValue= 0;
+                float FullscreenContainerWidthSecondValue= 0;
+                bool setFullscreenContainerXFirstValue = false;
+                bool setFullscreenContainerXSecondValue = false;
+                float FullscreenContainerXFirstValue= 0;
+                float FullscreenContainerXSecondValue= 0;
+                bool setFullscreenContainerYFirstValue = false;
+                bool setFullscreenContainerYSecondValue = false;
+                float FullscreenContainerYFirstValue= 0;
+                float FullscreenContainerYSecondValue= 0;
+                bool setGraphicsContainerHeightFirstValue = false;
+                bool setGraphicsContainerHeightSecondValue = false;
+                float GraphicsContainerHeightFirstValue= 0;
+                float GraphicsContainerHeightSecondValue= 0;
+                bool setGraphicsContainerWidthFirstValue = false;
+                bool setGraphicsContainerWidthSecondValue = false;
+                float GraphicsContainerWidthFirstValue= 0;
+                float GraphicsContainerWidthSecondValue= 0;
+                bool setGraphicsContainerXFirstValue = false;
+                bool setGraphicsContainerXSecondValue = false;
+                float GraphicsContainerXFirstValue= 0;
+                float GraphicsContainerXSecondValue= 0;
+                bool setGraphicsContainerYFirstValue = false;
+                bool setGraphicsContainerYSecondValue = false;
+                float GraphicsContainerYFirstValue= 0;
+                float GraphicsContainerYSecondValue= 0;
                 bool setGraphicsTopicHeightFirstValue = false;
                 bool setGraphicsTopicHeightSecondValue = false;
                 float GraphicsTopicHeightFirstValue= 0;
@@ -138,6 +232,46 @@
                 bool setGraphicsTopicYSecondValue = false;
                 float GraphicsTopicYFirstValue= 0;
                 float GraphicsTopicYSecondValue= 0;
+                bool setResolutionComboBoxWidthFirstValue = false;
+                bool setResolutionComboBoxWidthSecondValue = false;
+                float ResolutionComboBoxWidthFirstValue= 0;
+                float ResolutionComboBoxWidthSecondValue= 0;
+                bool setResolutionContainerHeightFirstValue = false;
+                bool setResolutionContainerHeightSecondValue = false;
+                float ResolutionContainerHeightFirstValue= 0;
+                float ResolutionContainerHeightSecondValue= 0;
+                bool setResolutionContainerWidthFirstValue = false;
+                bool setResolutionContainerWidthSecondValue = false;
+                float ResolutionContainerWidthFirstValue= 0;
+                float ResolutionContainerWidthSecondValue= 0;
+                bool setResolutionContainerXFirstValue = false;
+                bool setResolutionContainerXSecondValue = false;
+                float ResolutionContainerXFirstValue= 0;
+                float ResolutionContainerXSecondValue= 0;
+                bool setResolutionContainerYFirstValue = false;
+                bool setResolutionContainerYSecondValue = false;
+                float ResolutionContainerYFirstValue= 0;
+                float ResolutionContainerYSecondValue= 0;
+                bool setResolutionTextBlueFirstValue = false;
+                bool setResolutionTextBlueSecondValue = false;
+                int ResolutionTextBlueFirstValue= 0;
+                int ResolutionTextBlueSecondValue= 0;
+                bool setResolutionTextGreenFirstValue = false;
+                bool setResolutionTextGreenSecondValue = false;
+                int ResolutionTextGreenFirstValue= 0;
+                int ResolutionTextGreenSecondValue= 0;
+                bool setResolutionTextHeightFirstValue = false;
+                bool setResolutionTextHeightSecondValue = false;
+                float ResolutionTextHeightFirstValue= 0;
+                float ResolutionTextHeightSecondValue= 0;
+                bool setResolutionTextRedFirstValue = false;
+                bool setResolutionTextRedSecondValue = false;
+                int ResolutionTextRedFirstValue= 0;
+                int ResolutionTextRedSecondValue= 0;
+                bool setResolutionTextWidthFirstValue = false;
+                bool setResolutionTextWidthSecondValue = false;
+                float ResolutionTextWidthFirstValue= 0;
+                float ResolutionTextWidthSecondValue= 0;
                 bool setSettingsTextBlueFirstValue = false;
                 bool setSettingsTextBlueSecondValue = false;
                 int SettingsTextBlueFirstValue= 0;
@@ -178,6 +312,30 @@
                 bool setSoudTopicYSecondValue = false;
                 float SoudTopicYFirstValue= 0;
                 float SoudTopicYSecondValue= 0;
+                bool setWindowModeComboBoxWidthFirstValue = false;
+                bool setWindowModeComboBoxWidthSecondValue = false;
+                float WindowModeComboBoxWidthFirstValue= 0;
+                float WindowModeComboBoxWidthSecondValue= 0;
+                bool setWindowModeTextBlueFirstValue = false;
+                bool setWindowModeTextBlueSecondValue = false;
+                int WindowModeTextBlueFirstValue= 0;
+                int WindowModeTextBlueSecondValue= 0;
+                bool setWindowModeTextGreenFirstValue = false;
+                bool setWindowModeTextGreenSecondValue = false;
+                int WindowModeTextGreenFirstValue= 0;
+                int WindowModeTextGreenSecondValue= 0;
+                bool setWindowModeTextHeightFirstValue = false;
+                bool setWindowModeTextHeightSecondValue = false;
+                float WindowModeTextHeightFirstValue= 0;
+                float WindowModeTextHeightSecondValue= 0;
+                bool setWindowModeTextRedFirstValue = false;
+                bool setWindowModeTextRedSecondValue = false;
+                int WindowModeTextRedFirstValue= 0;
+                int WindowModeTextRedSecondValue= 0;
+                bool setWindowModeTextWidthFirstValue = false;
+                bool setWindowModeTextWidthSecondValue = false;
+                float WindowModeTextWidthFirstValue= 0;
+                float WindowModeTextWidthSecondValue= 0;
                 switch(firstState)
                 {
                     case  VariableState.Default:
@@ -239,15 +397,63 @@
                         {
                             this.BackgroundColor.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
-                        setGraphicsTopicHeightFirstValue = true;
-                        GraphicsTopicHeightFirstValue = 40f;
+                        setFullscreenContainerHeightFirstValue = true;
+                        FullscreenContainerHeightFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
-                            this.GraphicsTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            this.FullscreenContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.GraphicsTopic.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
+                            this.FullscreenContainer.Parent = this.GetGraphicalUiElementByName("GraphicsContainer");
+                        }
+                        setFullscreenContainerWidthFirstValue = true;
+                        FullscreenContainerWidthFirstValue = 100f;
+                        if (interpolationValue < 1)
+                        {
+                            this.FullscreenContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setFullscreenContainerXFirstValue = true;
+                        FullscreenContainerXFirstValue = 0f;
+                        setFullscreenContainerYFirstValue = true;
+                        FullscreenContainerYFirstValue = 5f;
+                        if (interpolationValue < 1)
+                        {
+                            this.GraphicsContainer.ChildrenLayout = Gum.Managers.ChildrenLayout.TopToBottomStack;
+                        }
+                        setGraphicsContainerHeightFirstValue = true;
+                        GraphicsContainerHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.GraphicsContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.GraphicsContainer.Parent = this.GetGraphicalUiElementByName("GraphicsTopic");
+                        }
+                        setGraphicsContainerWidthFirstValue = true;
+                        GraphicsContainerWidthFirstValue = 98f;
+                        if (interpolationValue < 1)
+                        {
+                            this.GraphicsContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setGraphicsContainerXFirstValue = true;
+                        GraphicsContainerXFirstValue = 1f;
+                        if (interpolationValue < 1)
+                        {
+                            this.GraphicsContainer.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                        }
+                        setGraphicsContainerYFirstValue = true;
+                        GraphicsContainerYFirstValue = 40f;
+                        if (interpolationValue < 1)
+                        {
+                            this.GraphicsTopic.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
+                        }
+                        setGraphicsTopicHeightFirstValue = true;
+                        GraphicsTopicHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.GraphicsTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                         }
                         if (interpolationValue < 1)
                         {
@@ -267,16 +473,112 @@
                         }
                         setGraphicsTopicYFirstValue = true;
                         GraphicsTopicYFirstValue = 152f;
+                        if (interpolationValue < 1)
+                        {
+                            this.GraphicsTopic.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionComboBox.Parent = this.GetGraphicalUiElementByName("ResolutionContainer");
+                        }
+                        setResolutionComboBoxWidthFirstValue = true;
+                        ResolutionComboBoxWidthFirstValue = 50f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionComboBox.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionComboBox.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionComboBox.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setResolutionContainerHeightFirstValue = true;
+                        ResolutionContainerHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionContainer.Parent = this.GetGraphicalUiElementByName("GraphicsContainer");
+                        }
+                        setResolutionContainerWidthFirstValue = true;
+                        ResolutionContainerWidthFirstValue = 100f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setResolutionContainerXFirstValue = true;
+                        ResolutionContainerXFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionContainer.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        setResolutionContainerYFirstValue = true;
+                        ResolutionContainerYFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionContainer.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                        }
+                        setResolutionTextBlueFirstValue = true;
+                        ResolutionTextBlueFirstValue = 0;
+                        setResolutionTextGreenFirstValue = true;
+                        ResolutionTextGreenFirstValue = 0;
+                        setResolutionTextHeightFirstValue = true;
+                        ResolutionTextHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionText.Parent = this.GetGraphicalUiElementByName("ResolutionContainer");
+                        }
+                        setResolutionTextRedFirstValue = true;
+                        ResolutionTextRedFirstValue = 0;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionText.Text = "Resolution:";
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        setResolutionTextWidthFirstValue = true;
+                        ResolutionTextWidthFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResolutionText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
                         setSettingsTextBlueFirstValue = true;
                         SettingsTextBlueFirstValue = 0;
                         setSettingsTextFontSizeFirstValue = true;
                         SettingsTextFontSizeFirstValue = 72;
                         setSettingsTextGreenFirstValue = true;
                         SettingsTextGreenFirstValue = 0;
-                        if (interpolationValue < 1)
-                        {
-                            this.SettingsText.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
-                        }
                         setSettingsTextRedFirstValue = true;
                         SettingsTextRedFirstValue = 0;
                         if (interpolationValue < 1)
@@ -291,15 +593,15 @@
                         }
                         setSettingsTextYFirstValue = true;
                         SettingsTextYFirstValue = 40f;
+                        if (interpolationValue < 1)
+                        {
+                            this.SoudTopic.ChildrenLayout = Gum.Managers.ChildrenLayout.TopToBottomStack;
+                        }
                         setSoudTopicHeightFirstValue = true;
-                        SoudTopicHeightFirstValue = 40f;
+                        SoudTopicHeightFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
                             this.SoudTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.SoudTopic.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
                         }
                         if (interpolationValue < 1)
                         {
@@ -323,6 +625,62 @@
                         }
                         setSoudTopicYFirstValue = true;
                         SoudTopicYFirstValue = 152f;
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeComboBox.Parent = this.GetGraphicalUiElementByName("FullscreenContainer");
+                        }
+                        setWindowModeComboBoxWidthFirstValue = true;
+                        WindowModeComboBoxWidthFirstValue = 50f;
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeComboBox.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeComboBox.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeComboBox.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setWindowModeTextBlueFirstValue = true;
+                        WindowModeTextBlueFirstValue = 0;
+                        setWindowModeTextGreenFirstValue = true;
+                        WindowModeTextGreenFirstValue = 0;
+                        setWindowModeTextHeightFirstValue = true;
+                        WindowModeTextHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeText.Parent = this.GetGraphicalUiElementByName("FullscreenContainer");
+                        }
+                        setWindowModeTextRedFirstValue = true;
+                        WindowModeTextRedFirstValue = 0;
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeText.Text = "Window mode:";
+                        }
+                        setWindowModeTextWidthFirstValue = true;
+                        WindowModeTextWidthFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
                         break;
                 }
                 switch(secondState)
@@ -386,15 +744,63 @@
                         {
                             this.BackgroundColor.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
-                        setGraphicsTopicHeightSecondValue = true;
-                        GraphicsTopicHeightSecondValue = 40f;
+                        setFullscreenContainerHeightSecondValue = true;
+                        FullscreenContainerHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
-                            this.GraphicsTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            this.FullscreenContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.GraphicsTopic.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
+                            this.FullscreenContainer.Parent = this.GetGraphicalUiElementByName("GraphicsContainer");
+                        }
+                        setFullscreenContainerWidthSecondValue = true;
+                        FullscreenContainerWidthSecondValue = 100f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.FullscreenContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setFullscreenContainerXSecondValue = true;
+                        FullscreenContainerXSecondValue = 0f;
+                        setFullscreenContainerYSecondValue = true;
+                        FullscreenContainerYSecondValue = 5f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.GraphicsContainer.ChildrenLayout = Gum.Managers.ChildrenLayout.TopToBottomStack;
+                        }
+                        setGraphicsContainerHeightSecondValue = true;
+                        GraphicsContainerHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.GraphicsContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.GraphicsContainer.Parent = this.GetGraphicalUiElementByName("GraphicsTopic");
+                        }
+                        setGraphicsContainerWidthSecondValue = true;
+                        GraphicsContainerWidthSecondValue = 98f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.GraphicsContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setGraphicsContainerXSecondValue = true;
+                        GraphicsContainerXSecondValue = 1f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.GraphicsContainer.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                        }
+                        setGraphicsContainerYSecondValue = true;
+                        GraphicsContainerYSecondValue = 40f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.GraphicsTopic.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
+                        }
+                        setGraphicsTopicHeightSecondValue = true;
+                        GraphicsTopicHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.GraphicsTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                         }
                         if (interpolationValue >= 1)
                         {
@@ -414,16 +820,112 @@
                         }
                         setGraphicsTopicYSecondValue = true;
                         GraphicsTopicYSecondValue = 152f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.GraphicsTopic.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionComboBox.Parent = this.GetGraphicalUiElementByName("ResolutionContainer");
+                        }
+                        setResolutionComboBoxWidthSecondValue = true;
+                        ResolutionComboBoxWidthSecondValue = 50f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionComboBox.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionComboBox.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionComboBox.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setResolutionContainerHeightSecondValue = true;
+                        ResolutionContainerHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionContainer.Parent = this.GetGraphicalUiElementByName("GraphicsContainer");
+                        }
+                        setResolutionContainerWidthSecondValue = true;
+                        ResolutionContainerWidthSecondValue = 100f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setResolutionContainerXSecondValue = true;
+                        ResolutionContainerXSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionContainer.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        setResolutionContainerYSecondValue = true;
+                        ResolutionContainerYSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionContainer.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                        }
+                        setResolutionTextBlueSecondValue = true;
+                        ResolutionTextBlueSecondValue = 0;
+                        setResolutionTextGreenSecondValue = true;
+                        ResolutionTextGreenSecondValue = 0;
+                        setResolutionTextHeightSecondValue = true;
+                        ResolutionTextHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionText.Parent = this.GetGraphicalUiElementByName("ResolutionContainer");
+                        }
+                        setResolutionTextRedSecondValue = true;
+                        ResolutionTextRedSecondValue = 0;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionText.Text = "Resolution:";
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        setResolutionTextWidthSecondValue = true;
+                        ResolutionTextWidthSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResolutionText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
                         setSettingsTextBlueSecondValue = true;
                         SettingsTextBlueSecondValue = 0;
                         setSettingsTextFontSizeSecondValue = true;
                         SettingsTextFontSizeSecondValue = 72;
                         setSettingsTextGreenSecondValue = true;
                         SettingsTextGreenSecondValue = 0;
-                        if (interpolationValue >= 1)
-                        {
-                            this.SettingsText.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
-                        }
                         setSettingsTextRedSecondValue = true;
                         SettingsTextRedSecondValue = 0;
                         if (interpolationValue >= 1)
@@ -438,15 +940,15 @@
                         }
                         setSettingsTextYSecondValue = true;
                         SettingsTextYSecondValue = 40f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.SoudTopic.ChildrenLayout = Gum.Managers.ChildrenLayout.TopToBottomStack;
+                        }
                         setSoudTopicHeightSecondValue = true;
-                        SoudTopicHeightSecondValue = 40f;
+                        SoudTopicHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
                             this.SoudTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.SoudTopic.Parent = this.GetGraphicalUiElementByName("BackgroundColor");
                         }
                         if (interpolationValue >= 1)
                         {
@@ -470,6 +972,62 @@
                         }
                         setSoudTopicYSecondValue = true;
                         SoudTopicYSecondValue = 152f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeComboBox.Parent = this.GetGraphicalUiElementByName("FullscreenContainer");
+                        }
+                        setWindowModeComboBoxWidthSecondValue = true;
+                        WindowModeComboBoxWidthSecondValue = 50f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeComboBox.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeComboBox.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeComboBox.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setWindowModeTextBlueSecondValue = true;
+                        WindowModeTextBlueSecondValue = 0;
+                        setWindowModeTextGreenSecondValue = true;
+                        WindowModeTextGreenSecondValue = 0;
+                        setWindowModeTextHeightSecondValue = true;
+                        WindowModeTextHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeText.Parent = this.GetGraphicalUiElementByName("FullscreenContainer");
+                        }
+                        setWindowModeTextRedSecondValue = true;
+                        WindowModeTextRedSecondValue = 0;
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeText.Text = "Window mode:";
+                        }
+                        setWindowModeTextWidthSecondValue = true;
+                        WindowModeTextWidthSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
                         break;
                 }
                 var wasSuppressed = mIsLayoutSuspended;
@@ -513,6 +1071,38 @@
                 {
                     BackgroundColor.Y = BackgroundColorYFirstValue * (1 - interpolationValue) + BackgroundColorYSecondValue * interpolationValue;
                 }
+                if (setFullscreenContainerHeightFirstValue && setFullscreenContainerHeightSecondValue)
+                {
+                    FullscreenContainer.Height = FullscreenContainerHeightFirstValue * (1 - interpolationValue) + FullscreenContainerHeightSecondValue * interpolationValue;
+                }
+                if (setFullscreenContainerWidthFirstValue && setFullscreenContainerWidthSecondValue)
+                {
+                    FullscreenContainer.Width = FullscreenContainerWidthFirstValue * (1 - interpolationValue) + FullscreenContainerWidthSecondValue * interpolationValue;
+                }
+                if (setFullscreenContainerXFirstValue && setFullscreenContainerXSecondValue)
+                {
+                    FullscreenContainer.X = FullscreenContainerXFirstValue * (1 - interpolationValue) + FullscreenContainerXSecondValue * interpolationValue;
+                }
+                if (setFullscreenContainerYFirstValue && setFullscreenContainerYSecondValue)
+                {
+                    FullscreenContainer.Y = FullscreenContainerYFirstValue * (1 - interpolationValue) + FullscreenContainerYSecondValue * interpolationValue;
+                }
+                if (setGraphicsContainerHeightFirstValue && setGraphicsContainerHeightSecondValue)
+                {
+                    GraphicsContainer.Height = GraphicsContainerHeightFirstValue * (1 - interpolationValue) + GraphicsContainerHeightSecondValue * interpolationValue;
+                }
+                if (setGraphicsContainerWidthFirstValue && setGraphicsContainerWidthSecondValue)
+                {
+                    GraphicsContainer.Width = GraphicsContainerWidthFirstValue * (1 - interpolationValue) + GraphicsContainerWidthSecondValue * interpolationValue;
+                }
+                if (setGraphicsContainerXFirstValue && setGraphicsContainerXSecondValue)
+                {
+                    GraphicsContainer.X = GraphicsContainerXFirstValue * (1 - interpolationValue) + GraphicsContainerXSecondValue * interpolationValue;
+                }
+                if (setGraphicsContainerYFirstValue && setGraphicsContainerYSecondValue)
+                {
+                    GraphicsContainer.Y = GraphicsContainerYFirstValue * (1 - interpolationValue) + GraphicsContainerYSecondValue * interpolationValue;
+                }
                 if (setGraphicsTopicHeightFirstValue && setGraphicsTopicHeightSecondValue)
                 {
                     GraphicsTopic.Height = GraphicsTopicHeightFirstValue * (1 - interpolationValue) + GraphicsTopicHeightSecondValue * interpolationValue;
@@ -528,6 +1118,46 @@
                 if (setGraphicsTopicYFirstValue && setGraphicsTopicYSecondValue)
                 {
                     GraphicsTopic.Y = GraphicsTopicYFirstValue * (1 - interpolationValue) + GraphicsTopicYSecondValue * interpolationValue;
+                }
+                if (setResolutionComboBoxWidthFirstValue && setResolutionComboBoxWidthSecondValue)
+                {
+                    ResolutionComboBox.Width = ResolutionComboBoxWidthFirstValue * (1 - interpolationValue) + ResolutionComboBoxWidthSecondValue * interpolationValue;
+                }
+                if (setResolutionContainerHeightFirstValue && setResolutionContainerHeightSecondValue)
+                {
+                    ResolutionContainer.Height = ResolutionContainerHeightFirstValue * (1 - interpolationValue) + ResolutionContainerHeightSecondValue * interpolationValue;
+                }
+                if (setResolutionContainerWidthFirstValue && setResolutionContainerWidthSecondValue)
+                {
+                    ResolutionContainer.Width = ResolutionContainerWidthFirstValue * (1 - interpolationValue) + ResolutionContainerWidthSecondValue * interpolationValue;
+                }
+                if (setResolutionContainerXFirstValue && setResolutionContainerXSecondValue)
+                {
+                    ResolutionContainer.X = ResolutionContainerXFirstValue * (1 - interpolationValue) + ResolutionContainerXSecondValue * interpolationValue;
+                }
+                if (setResolutionContainerYFirstValue && setResolutionContainerYSecondValue)
+                {
+                    ResolutionContainer.Y = ResolutionContainerYFirstValue * (1 - interpolationValue) + ResolutionContainerYSecondValue * interpolationValue;
+                }
+                if (setResolutionTextBlueFirstValue && setResolutionTextBlueSecondValue)
+                {
+                    ResolutionText.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(ResolutionTextBlueFirstValue* (1 - interpolationValue) + ResolutionTextBlueSecondValue * interpolationValue);
+                }
+                if (setResolutionTextGreenFirstValue && setResolutionTextGreenSecondValue)
+                {
+                    ResolutionText.Green = FlatRedBall.Math.MathFunctions.RoundToInt(ResolutionTextGreenFirstValue* (1 - interpolationValue) + ResolutionTextGreenSecondValue * interpolationValue);
+                }
+                if (setResolutionTextHeightFirstValue && setResolutionTextHeightSecondValue)
+                {
+                    ResolutionText.Height = ResolutionTextHeightFirstValue * (1 - interpolationValue) + ResolutionTextHeightSecondValue * interpolationValue;
+                }
+                if (setResolutionTextRedFirstValue && setResolutionTextRedSecondValue)
+                {
+                    ResolutionText.Red = FlatRedBall.Math.MathFunctions.RoundToInt(ResolutionTextRedFirstValue* (1 - interpolationValue) + ResolutionTextRedSecondValue * interpolationValue);
+                }
+                if (setResolutionTextWidthFirstValue && setResolutionTextWidthSecondValue)
+                {
+                    ResolutionText.Width = ResolutionTextWidthFirstValue * (1 - interpolationValue) + ResolutionTextWidthSecondValue * interpolationValue;
                 }
                 if (setSettingsTextBlueFirstValue && setSettingsTextBlueSecondValue)
                 {
@@ -568,6 +1198,30 @@
                 if (setSoudTopicYFirstValue && setSoudTopicYSecondValue)
                 {
                     SoudTopic.Y = SoudTopicYFirstValue * (1 - interpolationValue) + SoudTopicYSecondValue * interpolationValue;
+                }
+                if (setWindowModeComboBoxWidthFirstValue && setWindowModeComboBoxWidthSecondValue)
+                {
+                    WindowModeComboBox.Width = WindowModeComboBoxWidthFirstValue * (1 - interpolationValue) + WindowModeComboBoxWidthSecondValue * interpolationValue;
+                }
+                if (setWindowModeTextBlueFirstValue && setWindowModeTextBlueSecondValue)
+                {
+                    WindowModeText.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(WindowModeTextBlueFirstValue* (1 - interpolationValue) + WindowModeTextBlueSecondValue * interpolationValue);
+                }
+                if (setWindowModeTextGreenFirstValue && setWindowModeTextGreenSecondValue)
+                {
+                    WindowModeText.Green = FlatRedBall.Math.MathFunctions.RoundToInt(WindowModeTextGreenFirstValue* (1 - interpolationValue) + WindowModeTextGreenSecondValue * interpolationValue);
+                }
+                if (setWindowModeTextHeightFirstValue && setWindowModeTextHeightSecondValue)
+                {
+                    WindowModeText.Height = WindowModeTextHeightFirstValue * (1 - interpolationValue) + WindowModeTextHeightSecondValue * interpolationValue;
+                }
+                if (setWindowModeTextRedFirstValue && setWindowModeTextRedSecondValue)
+                {
+                    WindowModeText.Red = FlatRedBall.Math.MathFunctions.RoundToInt(WindowModeTextRedFirstValue* (1 - interpolationValue) + WindowModeTextRedSecondValue * interpolationValue);
+                }
+                if (setWindowModeTextWidthFirstValue && setWindowModeTextWidthSecondValue)
+                {
+                    WindowModeText.Width = WindowModeTextWidthFirstValue * (1 - interpolationValue) + WindowModeTextWidthSecondValue * interpolationValue;
                 }
                 if (interpolationValue < 1)
                 {
@@ -647,6 +1301,8 @@
                 BackButtonInstance.StopAnimations();
                 GraphicsTopic.StopAnimations();
                 SoudTopic.StopAnimations();
+                ResolutionComboBox.StopAnimations();
+                WindowModeComboBox.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -838,14 +1494,6 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "SettingsText.Parent",
-                            Type = "string",
-                            Value = SettingsText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "SettingsText.Red",
                             Type = "int",
                             Value = SettingsText.Red
@@ -886,6 +1534,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "GraphicsTopic.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = GraphicsTopic.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "GraphicsTopic.Height",
                             Type = "float",
                             Value = GraphicsTopic.Height
@@ -897,14 +1553,6 @@
                             Name = "GraphicsTopic.Height Units",
                             Type = "DimensionUnitType",
                             Value = GraphicsTopic.HeightUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "GraphicsTopic.Parent",
-                            Type = "string",
-                            Value = GraphicsTopic.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -958,6 +1606,22 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "GraphicsTopic.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = GraphicsTopic.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoudTopic.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = SoudTopic.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SoudTopic.Height",
                             Type = "float",
                             Value = SoudTopic.Height
@@ -969,14 +1633,6 @@
                             Name = "SoudTopic.Height Units",
                             Type = "DimensionUnitType",
                             Value = SoudTopic.HeightUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "SoudTopic.Parent",
-                            Type = "string",
-                            Value = SoudTopic.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1033,6 +1689,502 @@
                             Name = "SoudTopic.Y",
                             Type = "float",
                             Value = SoudTopic.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.Height",
+                            Type = "float",
+                            Value = ResolutionContainer.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = ResolutionContainer.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.Parent",
+                            Type = "string",
+                            Value = ResolutionContainer.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.Width",
+                            Type = "float",
+                            Value = ResolutionContainer.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = ResolutionContainer.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.X",
+                            Type = "float",
+                            Value = ResolutionContainer.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.X Units",
+                            Type = "PositionUnitType",
+                            Value = ResolutionContainer.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.Y",
+                            Type = "float",
+                            Value = ResolutionContainer.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = ResolutionContainer.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Blue",
+                            Type = "int",
+                            Value = ResolutionText.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Green",
+                            Type = "int",
+                            Value = ResolutionText.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Height",
+                            Type = "float",
+                            Value = ResolutionText.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = ResolutionText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = ResolutionText.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Parent",
+                            Type = "string",
+                            Value = ResolutionText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Red",
+                            Type = "int",
+                            Value = ResolutionText.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Text",
+                            Type = "string",
+                            Value = ResolutionText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.VerticalAlignment",
+                            Type = "VerticalAlignment",
+                            Value = ResolutionText.VerticalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Width",
+                            Type = "float",
+                            Value = ResolutionText.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = ResolutionText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = ResolutionText.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.X Units",
+                            Type = "PositionUnitType",
+                            Value = ResolutionText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = ResolutionText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = ResolutionText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionComboBox.Parent",
+                            Type = "string",
+                            Value = ResolutionComboBox.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionComboBox.Width",
+                            Type = "float",
+                            Value = ResolutionComboBox.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionComboBox.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = ResolutionComboBox.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionComboBox.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = ResolutionComboBox.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionComboBox.X Units",
+                            Type = "PositionUnitType",
+                            Value = ResolutionComboBox.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "FullscreenContainer.Height",
+                            Type = "float",
+                            Value = FullscreenContainer.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "FullscreenContainer.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = FullscreenContainer.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "FullscreenContainer.Parent",
+                            Type = "string",
+                            Value = FullscreenContainer.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "FullscreenContainer.Width",
+                            Type = "float",
+                            Value = FullscreenContainer.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "FullscreenContainer.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = FullscreenContainer.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "FullscreenContainer.X",
+                            Type = "float",
+                            Value = FullscreenContainer.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "FullscreenContainer.Y",
+                            Type = "float",
+                            Value = FullscreenContainer.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Blue",
+                            Type = "int",
+                            Value = WindowModeText.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Green",
+                            Type = "int",
+                            Value = WindowModeText.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Height",
+                            Type = "float",
+                            Value = WindowModeText.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = WindowModeText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Parent",
+                            Type = "string",
+                            Value = WindowModeText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Red",
+                            Type = "int",
+                            Value = WindowModeText.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Text",
+                            Type = "string",
+                            Value = WindowModeText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Width",
+                            Type = "float",
+                            Value = WindowModeText.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = WindowModeText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.X Units",
+                            Type = "PositionUnitType",
+                            Value = WindowModeText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = WindowModeText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = WindowModeText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = GraphicsContainer.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.Height",
+                            Type = "float",
+                            Value = GraphicsContainer.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = GraphicsContainer.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.Parent",
+                            Type = "string",
+                            Value = GraphicsContainer.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.Width",
+                            Type = "float",
+                            Value = GraphicsContainer.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = GraphicsContainer.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.X",
+                            Type = "float",
+                            Value = GraphicsContainer.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.X Units",
+                            Type = "PositionUnitType",
+                            Value = GraphicsContainer.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.Y",
+                            Type = "float",
+                            Value = GraphicsContainer.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeComboBox.Parent",
+                            Type = "string",
+                            Value = WindowModeComboBox.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeComboBox.Width",
+                            Type = "float",
+                            Value = WindowModeComboBox.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeComboBox.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = WindowModeComboBox.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeComboBox.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = WindowModeComboBox.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeComboBox.X Units",
+                            Type = "PositionUnitType",
+                            Value = WindowModeComboBox.XUnits
                         }
                         );
                         break;
@@ -1224,14 +2376,6 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "SettingsText.Parent",
-                            Type = "string",
-                            Value = SettingsText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "SettingsText.Red",
                             Type = "int",
                             Value = SettingsText.Red + 0
@@ -1272,9 +2416,17 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "GraphicsTopic.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = GraphicsTopic.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "GraphicsTopic.Height",
                             Type = "float",
-                            Value = GraphicsTopic.Height + 40f
+                            Value = GraphicsTopic.Height + 0f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1283,14 +2435,6 @@
                             Name = "GraphicsTopic.Height Units",
                             Type = "DimensionUnitType",
                             Value = GraphicsTopic.HeightUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "GraphicsTopic.Parent",
-                            Type = "string",
-                            Value = GraphicsTopic.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1344,9 +2488,25 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "GraphicsTopic.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = GraphicsTopic.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoudTopic.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = SoudTopic.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SoudTopic.Height",
                             Type = "float",
-                            Value = SoudTopic.Height + 40f
+                            Value = SoudTopic.Height + 0f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1355,14 +2515,6 @@
                             Name = "SoudTopic.Height Units",
                             Type = "DimensionUnitType",
                             Value = SoudTopic.HeightUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "SoudTopic.Parent",
-                            Type = "string",
-                            Value = SoudTopic.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1421,6 +2573,502 @@
                             Value = SoudTopic.Y + 152f
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.Height",
+                            Type = "float",
+                            Value = ResolutionContainer.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = ResolutionContainer.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.Parent",
+                            Type = "string",
+                            Value = ResolutionContainer.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.Width",
+                            Type = "float",
+                            Value = ResolutionContainer.Width + 100f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = ResolutionContainer.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.X",
+                            Type = "float",
+                            Value = ResolutionContainer.X + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.X Units",
+                            Type = "PositionUnitType",
+                            Value = ResolutionContainer.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.Y",
+                            Type = "float",
+                            Value = ResolutionContainer.Y + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionContainer.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = ResolutionContainer.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Blue",
+                            Type = "int",
+                            Value = ResolutionText.Blue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Green",
+                            Type = "int",
+                            Value = ResolutionText.Green + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Height",
+                            Type = "float",
+                            Value = ResolutionText.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = ResolutionText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = ResolutionText.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Parent",
+                            Type = "string",
+                            Value = ResolutionText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Red",
+                            Type = "int",
+                            Value = ResolutionText.Red + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Text",
+                            Type = "string",
+                            Value = ResolutionText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.VerticalAlignment",
+                            Type = "VerticalAlignment",
+                            Value = ResolutionText.VerticalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Width",
+                            Type = "float",
+                            Value = ResolutionText.Width + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = ResolutionText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = ResolutionText.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.X Units",
+                            Type = "PositionUnitType",
+                            Value = ResolutionText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = ResolutionText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = ResolutionText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionComboBox.Parent",
+                            Type = "string",
+                            Value = ResolutionComboBox.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionComboBox.Width",
+                            Type = "float",
+                            Value = ResolutionComboBox.Width + 50f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionComboBox.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = ResolutionComboBox.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionComboBox.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = ResolutionComboBox.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResolutionComboBox.X Units",
+                            Type = "PositionUnitType",
+                            Value = ResolutionComboBox.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "FullscreenContainer.Height",
+                            Type = "float",
+                            Value = FullscreenContainer.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "FullscreenContainer.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = FullscreenContainer.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "FullscreenContainer.Parent",
+                            Type = "string",
+                            Value = FullscreenContainer.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "FullscreenContainer.Width",
+                            Type = "float",
+                            Value = FullscreenContainer.Width + 100f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "FullscreenContainer.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = FullscreenContainer.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "FullscreenContainer.X",
+                            Type = "float",
+                            Value = FullscreenContainer.X + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "FullscreenContainer.Y",
+                            Type = "float",
+                            Value = FullscreenContainer.Y + 5f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Blue",
+                            Type = "int",
+                            Value = WindowModeText.Blue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Green",
+                            Type = "int",
+                            Value = WindowModeText.Green + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Height",
+                            Type = "float",
+                            Value = WindowModeText.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = WindowModeText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Parent",
+                            Type = "string",
+                            Value = WindowModeText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Red",
+                            Type = "int",
+                            Value = WindowModeText.Red + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Text",
+                            Type = "string",
+                            Value = WindowModeText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Width",
+                            Type = "float",
+                            Value = WindowModeText.Width + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = WindowModeText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.X Units",
+                            Type = "PositionUnitType",
+                            Value = WindowModeText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = WindowModeText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = WindowModeText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = GraphicsContainer.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.Height",
+                            Type = "float",
+                            Value = GraphicsContainer.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = GraphicsContainer.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.Parent",
+                            Type = "string",
+                            Value = GraphicsContainer.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.Width",
+                            Type = "float",
+                            Value = GraphicsContainer.Width + 98f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = GraphicsContainer.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.X",
+                            Type = "float",
+                            Value = GraphicsContainer.X + 1f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.X Units",
+                            Type = "PositionUnitType",
+                            Value = GraphicsContainer.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GraphicsContainer.Y",
+                            Type = "float",
+                            Value = GraphicsContainer.Y + 40f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeComboBox.Parent",
+                            Type = "string",
+                            Value = WindowModeComboBox.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeComboBox.Width",
+                            Type = "float",
+                            Value = WindowModeComboBox.Width + 50f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeComboBox.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = WindowModeComboBox.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeComboBox.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = WindowModeComboBox.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WindowModeComboBox.X Units",
+                            Type = "PositionUnitType",
+                            Value = WindowModeComboBox.XUnits
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -1445,6 +3093,13 @@
             public JHP4SD.GumRuntimes.TextRuntime SettingsText { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TopicRuntime GraphicsTopic { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TopicRuntime SoudTopic { get; set; }
+            public JHP4SD.GumRuntimes.ContainerRuntime ResolutionContainer { get; set; }
+            public JHP4SD.GumRuntimes.TextRuntime ResolutionText { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.ComboBoxRuntime ResolutionComboBox { get; set; }
+            public JHP4SD.GumRuntimes.ContainerRuntime FullscreenContainer { get; set; }
+            public JHP4SD.GumRuntimes.TextRuntime WindowModeText { get; set; }
+            public JHP4SD.GumRuntimes.ContainerRuntime GraphicsContainer { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.ComboBoxRuntime WindowModeComboBox { get; set; }
             public SettingsGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -1476,6 +3131,13 @@
                 SettingsText = this.GetGraphicalUiElementByName("SettingsText") as JHP4SD.GumRuntimes.TextRuntime;
                 GraphicsTopic = this.GetGraphicalUiElementByName("GraphicsTopic") as JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TopicRuntime;
                 SoudTopic = this.GetGraphicalUiElementByName("SoudTopic") as JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TopicRuntime;
+                ResolutionContainer = this.GetGraphicalUiElementByName("ResolutionContainer") as JHP4SD.GumRuntimes.ContainerRuntime;
+                ResolutionText = this.GetGraphicalUiElementByName("ResolutionText") as JHP4SD.GumRuntimes.TextRuntime;
+                ResolutionComboBox = this.GetGraphicalUiElementByName("ResolutionComboBox") as JHP4SD.GumRuntimes.DefaultForms.ComboBoxRuntime;
+                FullscreenContainer = this.GetGraphicalUiElementByName("FullscreenContainer") as JHP4SD.GumRuntimes.ContainerRuntime;
+                WindowModeText = this.GetGraphicalUiElementByName("WindowModeText") as JHP4SD.GumRuntimes.TextRuntime;
+                GraphicsContainer = this.GetGraphicalUiElementByName("GraphicsContainer") as JHP4SD.GumRuntimes.ContainerRuntime;
+                WindowModeComboBox = this.GetGraphicalUiElementByName("WindowModeComboBox") as JHP4SD.GumRuntimes.DefaultForms.ComboBoxRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Screens.SettingsGumForms(this);

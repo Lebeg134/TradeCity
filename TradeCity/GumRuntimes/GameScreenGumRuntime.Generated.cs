@@ -25,11 +25,17 @@
                     switch(mCurrentVariableState)
                     {
                         case  VariableState.Default:
-                            HelloButton.Height = 44f;
-                            HelloButton.Width = 79f;
-                            HelloButton.X = 40f;
-                            HelloButton.Y = 40f;
-                            HelloButton.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            PlayButtonInstance.Height = 100f;
+                            PlayButtonInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.PercentageOfOtherDimension;
+                            PlayButtonInstance.Width = 250f;
+                            PlayButtonInstance.X = 352f;
+                            PlayButtonInstance.Y = -378f;
+                            PlayButtonInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                            PlayButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            BackButtonInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            BackButtonInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            BackButtonInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                            BackButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             break;
                     }
                 }
@@ -44,53 +50,101 @@
                     throw new System.Exception("interpolationValue cannot be NaN");
                 }
                 #endif
-                bool setHelloButtonHeightFirstValue = false;
-                bool setHelloButtonHeightSecondValue = false;
-                float HelloButtonHeightFirstValue= 0;
-                float HelloButtonHeightSecondValue= 0;
-                bool setHelloButtonWidthFirstValue = false;
-                bool setHelloButtonWidthSecondValue = false;
-                float HelloButtonWidthFirstValue= 0;
-                float HelloButtonWidthSecondValue= 0;
-                bool setHelloButtonXFirstValue = false;
-                bool setHelloButtonXSecondValue = false;
-                float HelloButtonXFirstValue= 0;
-                float HelloButtonXSecondValue= 0;
-                bool setHelloButtonYFirstValue = false;
-                bool setHelloButtonYSecondValue = false;
-                float HelloButtonYFirstValue= 0;
-                float HelloButtonYSecondValue= 0;
+                bool setPlayButtonInstanceHeightFirstValue = false;
+                bool setPlayButtonInstanceHeightSecondValue = false;
+                float PlayButtonInstanceHeightFirstValue= 0;
+                float PlayButtonInstanceHeightSecondValue= 0;
+                bool setPlayButtonInstanceWidthFirstValue = false;
+                bool setPlayButtonInstanceWidthSecondValue = false;
+                float PlayButtonInstanceWidthFirstValue= 0;
+                float PlayButtonInstanceWidthSecondValue= 0;
+                bool setPlayButtonInstanceXFirstValue = false;
+                bool setPlayButtonInstanceXSecondValue = false;
+                float PlayButtonInstanceXFirstValue= 0;
+                float PlayButtonInstanceXSecondValue= 0;
+                bool setPlayButtonInstanceYFirstValue = false;
+                bool setPlayButtonInstanceYSecondValue = false;
+                float PlayButtonInstanceYFirstValue= 0;
+                float PlayButtonInstanceYSecondValue= 0;
                 switch(firstState)
                 {
                     case  VariableState.Default:
-                        setHelloButtonHeightFirstValue = true;
-                        HelloButtonHeightFirstValue = 44f;
-                        setHelloButtonWidthFirstValue = true;
-                        HelloButtonWidthFirstValue = 79f;
-                        setHelloButtonXFirstValue = true;
-                        HelloButtonXFirstValue = 40f;
-                        setHelloButtonYFirstValue = true;
-                        HelloButtonYFirstValue = 40f;
                         if (interpolationValue < 1)
                         {
-                            this.HelloButton.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            this.BackButtonInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.BackButtonInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.BackButtonInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.BackButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setPlayButtonInstanceHeightFirstValue = true;
+                        PlayButtonInstanceHeightFirstValue = 100f;
+                        if (interpolationValue < 1)
+                        {
+                            this.PlayButtonInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.PercentageOfOtherDimension;
+                        }
+                        setPlayButtonInstanceWidthFirstValue = true;
+                        PlayButtonInstanceWidthFirstValue = 250f;
+                        setPlayButtonInstanceXFirstValue = true;
+                        PlayButtonInstanceXFirstValue = 352f;
+                        setPlayButtonInstanceYFirstValue = true;
+                        PlayButtonInstanceYFirstValue = -378f;
+                        if (interpolationValue < 1)
+                        {
+                            this.PlayButtonInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.PlayButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
                         break;
                 }
                 switch(secondState)
                 {
                     case  VariableState.Default:
-                        setHelloButtonHeightSecondValue = true;
-                        HelloButtonHeightSecondValue = 44f;
-                        setHelloButtonWidthSecondValue = true;
-                        HelloButtonWidthSecondValue = 79f;
-                        setHelloButtonXSecondValue = true;
-                        HelloButtonXSecondValue = 40f;
-                        setHelloButtonYSecondValue = true;
-                        HelloButtonYSecondValue = 40f;
                         if (interpolationValue >= 1)
                         {
-                            this.HelloButton.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            this.BackButtonInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.BackButtonInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.BackButtonInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.BackButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setPlayButtonInstanceHeightSecondValue = true;
+                        PlayButtonInstanceHeightSecondValue = 100f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.PlayButtonInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.PercentageOfOtherDimension;
+                        }
+                        setPlayButtonInstanceWidthSecondValue = true;
+                        PlayButtonInstanceWidthSecondValue = 250f;
+                        setPlayButtonInstanceXSecondValue = true;
+                        PlayButtonInstanceXSecondValue = 352f;
+                        setPlayButtonInstanceYSecondValue = true;
+                        PlayButtonInstanceYSecondValue = -378f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.PlayButtonInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.PlayButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
                         break;
                 }
@@ -99,21 +153,21 @@
                 {
                     SuspendLayout(true);
                 }
-                if (setHelloButtonHeightFirstValue && setHelloButtonHeightSecondValue)
+                if (setPlayButtonInstanceHeightFirstValue && setPlayButtonInstanceHeightSecondValue)
                 {
-                    HelloButton.Height = HelloButtonHeightFirstValue * (1 - interpolationValue) + HelloButtonHeightSecondValue * interpolationValue;
+                    PlayButtonInstance.Height = PlayButtonInstanceHeightFirstValue * (1 - interpolationValue) + PlayButtonInstanceHeightSecondValue * interpolationValue;
                 }
-                if (setHelloButtonWidthFirstValue && setHelloButtonWidthSecondValue)
+                if (setPlayButtonInstanceWidthFirstValue && setPlayButtonInstanceWidthSecondValue)
                 {
-                    HelloButton.Width = HelloButtonWidthFirstValue * (1 - interpolationValue) + HelloButtonWidthSecondValue * interpolationValue;
+                    PlayButtonInstance.Width = PlayButtonInstanceWidthFirstValue * (1 - interpolationValue) + PlayButtonInstanceWidthSecondValue * interpolationValue;
                 }
-                if (setHelloButtonXFirstValue && setHelloButtonXSecondValue)
+                if (setPlayButtonInstanceXFirstValue && setPlayButtonInstanceXSecondValue)
                 {
-                    HelloButton.X = HelloButtonXFirstValue * (1 - interpolationValue) + HelloButtonXSecondValue * interpolationValue;
+                    PlayButtonInstance.X = PlayButtonInstanceXFirstValue * (1 - interpolationValue) + PlayButtonInstanceXSecondValue * interpolationValue;
                 }
-                if (setHelloButtonYFirstValue && setHelloButtonYSecondValue)
+                if (setPlayButtonInstanceYFirstValue && setPlayButtonInstanceYSecondValue)
                 {
-                    HelloButton.Y = HelloButtonYFirstValue * (1 - interpolationValue) + HelloButtonYSecondValue * interpolationValue;
+                    PlayButtonInstance.Y = PlayButtonInstanceYFirstValue * (1 - interpolationValue) + PlayButtonInstanceYSecondValue * interpolationValue;
                 }
                 if (interpolationValue < 1)
                 {
@@ -190,7 +244,8 @@
             public override void StopAnimations () 
             {
                 base.StopAnimations();
-                HelloButton.StopAnimations();
+                PlayButtonInstance.StopAnimations();
+                BackButtonInstance.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -206,41 +261,89 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.Height",
+                            Name = "PlayButtonInstance.Height",
                             Type = "float",
-                            Value = HelloButton.Height
+                            Value = PlayButtonInstance.Height
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.Width",
-                            Type = "float",
-                            Value = HelloButton.Width
+                            Name = "PlayButtonInstance.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = PlayButtonInstance.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.X",
+                            Name = "PlayButtonInstance.Width",
                             Type = "float",
-                            Value = HelloButton.X
+                            Value = PlayButtonInstance.Width
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.Y",
+                            Name = "PlayButtonInstance.X",
                             Type = "float",
-                            Value = HelloButton.Y
+                            Value = PlayButtonInstance.X
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.Y Units",
+                            Name = "PlayButtonInstance.Y",
+                            Type = "float",
+                            Value = PlayButtonInstance.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PlayButtonInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = PlayButtonInstance.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PlayButtonInstance.Y Units",
                             Type = "PositionUnitType",
-                            Value = HelloButton.YUnits
+                            Value = PlayButtonInstance.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackButtonInstance.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = BackButtonInstance.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackButtonInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = BackButtonInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackButtonInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = BackButtonInstance.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackButtonInstance.Y Units",
+                            Type = "PositionUnitType",
+                            Value = BackButtonInstance.YUnits
                         }
                         );
                         break;
@@ -256,41 +359,89 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.Height",
+                            Name = "PlayButtonInstance.Height",
                             Type = "float",
-                            Value = HelloButton.Height + 44f
+                            Value = PlayButtonInstance.Height + 100f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.Width",
-                            Type = "float",
-                            Value = HelloButton.Width + 79f
+                            Name = "PlayButtonInstance.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = PlayButtonInstance.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.X",
+                            Name = "PlayButtonInstance.Width",
                             Type = "float",
-                            Value = HelloButton.X + 40f
+                            Value = PlayButtonInstance.Width + 250f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.Y",
+                            Name = "PlayButtonInstance.X",
                             Type = "float",
-                            Value = HelloButton.Y + 40f
+                            Value = PlayButtonInstance.X + 352f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "HelloButton.Y Units",
+                            Name = "PlayButtonInstance.Y",
+                            Type = "float",
+                            Value = PlayButtonInstance.Y + -378f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PlayButtonInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = PlayButtonInstance.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PlayButtonInstance.Y Units",
                             Type = "PositionUnitType",
-                            Value = HelloButton.YUnits
+                            Value = PlayButtonInstance.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackButtonInstance.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = BackButtonInstance.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackButtonInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = BackButtonInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackButtonInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = BackButtonInstance.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackButtonInstance.Y Units",
+                            Type = "PositionUnitType",
+                            Value = BackButtonInstance.YUnits
                         }
                         );
                         break;
@@ -312,7 +463,8 @@
                 base.ApplyState(state);
             }
             private bool tryCreateFormsObject;
-            public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime HelloButton { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.PlayButtonRuntime PlayButtonInstance { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.BackButtonRuntime BackButtonInstance { get; set; }
             public GameScreenGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -339,7 +491,8 @@
             }
             private void AssignReferences () 
             {
-                HelloButton = this.GetGraphicalUiElementByName("HelloButton") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
+                PlayButtonInstance = this.GetGraphicalUiElementByName("PlayButtonInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.PlayButtonRuntime;
+                BackButtonInstance = this.GetGraphicalUiElementByName("BackButtonInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.BackButtonRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Screens.GameScreenGumForms(this);

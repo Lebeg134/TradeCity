@@ -69,6 +69,7 @@
                             HighlightRectangle.Height = 0f;
                             HighlightRectangle.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             HighlightRectangle.Red = 255;
+                            HighlightRectangle.Visible = false;
                             HighlightRectangle.Width = 0f;
                             HighlightRectangle.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             HighlightRectangle.X = 0f;
@@ -287,6 +288,10 @@
                         }
                         setHighlightRectangleRedFirstValue = true;
                         HighlightRectangleRedFirstValue = 255;
+                        if (interpolationValue < 1)
+                        {
+                            this.HighlightRectangle.Visible = false;
+                        }
                         setHighlightRectangleWidthFirstValue = true;
                         HighlightRectangleWidthFirstValue = 0f;
                         if (interpolationValue < 1)
@@ -434,6 +439,10 @@
                         }
                         setHighlightRectangleRedSecondValue = true;
                         HighlightRectangleRedSecondValue = 255;
+                        if (interpolationValue >= 1)
+                        {
+                            this.HighlightRectangle.Visible = false;
+                        }
                         setHighlightRectangleWidthSecondValue = true;
                         HighlightRectangleWidthSecondValue = 0f;
                         if (interpolationValue >= 1)
@@ -1667,6 +1676,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "HighlightRectangle.Visible",
+                            Type = "bool",
+                            Value = HighlightRectangle.Visible
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "HighlightRectangle.Width",
                             Type = "float",
                             Value = HighlightRectangle.Width
@@ -2008,6 +2025,14 @@
                             Name = "HighlightRectangle.Red",
                             Type = "int",
                             Value = HighlightRectangle.Red + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "HighlightRectangle.Visible",
+                            Type = "bool",
+                            Value = HighlightRectangle.Visible
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

@@ -21,7 +21,12 @@ namespace JHP4SD.Screens
 
         void CustomInitialize()
         {
+            Forms.BackButtonInstance.Click += BackButtonInstance_Click;
+        }
 
+        private void BackButtonInstance_Click(object sender, EventArgs e)
+        {
+            MoveToScreen(typeof(MainMenuScreen));
         }
 
         void CustomActivity(bool firstTimeCalled)

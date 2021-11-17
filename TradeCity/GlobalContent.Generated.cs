@@ -45,7 +45,7 @@ namespace JHP4SD
         public static void Initialize () 
         {
             
-            FlatRedBall.Gum.GumIdb.StaticInitialize("content/gumproject/gumproject.gumx"); FlatRedBall.Gum.GumIdbExtensions.RegisterTypes();  FlatRedBall.Gui.GuiManager.BringsClickedWindowsToFront = false;FlatRedBall.Gum.GumIdb.FixedCanvasAspectRatio = 16.0m/9.0m;Gum.Wireframe.GraphicalUiElement.ShowLineRectangles = false;
+            FlatRedBall.Gum.GumIdb.StaticInitialize("content/gumproject/gumproject.gumx"); FlatRedBall.Gum.GumIdbExtensions.RegisterTypes();  FlatRedBall.Gui.GuiManager.BringsClickedWindowsToFront = false;FlatRedBall.Gum.GumIdb.FixedCanvasAspectRatio = null;Gum.Wireframe.GraphicalUiElement.ShowLineRectangles = false;
             			IsInitialized = true;
             #if DEBUG && WINDOWS
             InitializeFileWatch();

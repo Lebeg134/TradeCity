@@ -3,7 +3,8 @@
         public partial class GameScreenGumForms
         {
             private Gum.Wireframe.GraphicalUiElement Visual;
-            public FlatRedBall.Forms.Controls.Button HelloButton { get; set; }
+            public FlatRedBall.Forms.Controls.ToggleButton PlayButtonInstance { get; set; }
+            public FlatRedBall.Forms.Controls.Button BackButtonInstance { get; set; }
             public GameScreenGumForms () 
             {
                 CustomInitialize();
@@ -16,7 +17,8 @@
             }
             private void ReactToVisualChanged () 
             {
-                HelloButton = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("HelloButton").FormsControlAsObject;
+                PlayButtonInstance = (FlatRedBall.Forms.Controls.ToggleButton)Visual.GetGraphicalUiElementByName("PlayButtonInstance").FormsControlAsObject;
+                BackButtonInstance = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("BackButtonInstance").FormsControlAsObject;
             }
             partial void CustomInitialize();
         }

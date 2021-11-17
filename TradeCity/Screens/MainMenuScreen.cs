@@ -34,7 +34,7 @@ namespace JHP4SD.Screens
 
         private void NewGameButton_Click(object sender, EventArgs e)
         {
-            Forms.NewGameButton.IsEnabled = false;
+            MoveToScreen(typeof(CityScreen));
         }
 
         void CustomActivity(bool firstTimeCalled)

@@ -269,9 +269,13 @@
       <DependentUpon>MainMenuButtonRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\PlayButtonRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\PlayButtonRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\PlayButtonRuntime.Generated.cs">
+      <DependentUpon>PlayButtonRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\ScreenSelectorRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\ComplexComponents\ScreenSelectorRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\ComplexComponents\ScreenSelectorRuntime.Generated.cs">
+      <DependentUpon>ScreenSelectorRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.Generated.cs">
       <DependentUpon>TopicRuntime.cs</DependentUpon>

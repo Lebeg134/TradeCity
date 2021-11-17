@@ -103,39 +103,39 @@ namespace JHP4SD.Screens
             base.PostInitialize();
             if (CameraInstance.Parent == null)
             {
-                CameraInstance.X = 0;
+                CameraInstance.X = 0f;
             }
             else
             {
-                CameraInstance.RelativeX = 0;
+                CameraInstance.RelativeX = 0f;
             }
             if (CameraInstance.Parent == null)
             {
-                CameraInstance.Y = 0;
+                CameraInstance.Y = 0f;
             }
             else
             {
-                CameraInstance.RelativeY = 0;
+                CameraInstance.RelativeY = 0f;
             }
             if (CameraInstance.Parent == null)
             {
-                CameraInstance.Z = 0;
+                CameraInstance.Z = 0f;
             }
             else
             {
-                CameraInstance.RelativeZ = 0;
+                CameraInstance.RelativeZ = 0f;
             }
             if (CameraInstance.Parent == null)
             {
-                CameraInstance.RotationX = 15;
+                CameraInstance.RotationX = 15f;
             }
             else
             {
-                CameraInstance.RelativeRotationX = 15;
+                CameraInstance.RelativeRotationX = 15f;
             }
             CameraInstance.Orthogonal = true;
-            CameraInstance.TopDestination = 150;
-            CameraInstance.BottomDestination = 150;
+            CameraInstance.TopDestination = 150f;
+            CameraInstance.BottomDestination = 150f;
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
         }
         public override void AddToManagersBottomUp () 
@@ -162,39 +162,39 @@ namespace JHP4SD.Screens
             }
             if (CameraInstance.Parent == null)
             {
-                CameraInstance.X = 0;
+                CameraInstance.X = 0f;
             }
             else
             {
-                CameraInstance.RelativeX = 0;
+                CameraInstance.RelativeX = 0f;
             }
             if (CameraInstance.Parent == null)
             {
-                CameraInstance.Y = 0;
+                CameraInstance.Y = 0f;
             }
             else
             {
-                CameraInstance.RelativeY = 0;
+                CameraInstance.RelativeY = 0f;
             }
             if (CameraInstance.Parent == null)
             {
-                CameraInstance.Z = 0;
+                CameraInstance.Z = 0f;
             }
             else
             {
-                CameraInstance.RelativeZ = 0;
+                CameraInstance.RelativeZ = 0f;
             }
             if (CameraInstance.Parent == null)
             {
-                CameraInstance.RotationX = 15;
+                CameraInstance.RotationX = 15f;
             }
             else
             {
-                CameraInstance.RelativeRotationX = 15;
+                CameraInstance.RelativeRotationX = 15f;
             }
             CameraInstance.Orthogonal = true;
-            CameraInstance.TopDestination = 150;
-            CameraInstance.BottomDestination = 150;
+            CameraInstance.TopDestination = 150f;
+            CameraInstance.BottomDestination = 150f;
         }
         public override void ConvertToManuallyUpdated () 
         {

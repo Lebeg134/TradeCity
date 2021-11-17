@@ -29,10 +29,12 @@
                             HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                             Width = 0f;
                             WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
-                            TextInstance.Height = 1f;
-                            TextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
-                            TextInstance.Width = 1f;
-                            TextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            TextInstance.Height = 0f;
+                            TextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            TextInstance.Text = "999";
+                            TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            TextInstance.Width = 0f;
+                            TextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             break;
                     }
                 }
@@ -73,16 +75,24 @@
                             this.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                         }
                         setTextInstanceHeightFirstValue = true;
-                        TextInstanceHeightFirstValue = 1f;
+                        TextInstanceHeightFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
-                            this.TextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            this.TextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance.Text = "999";
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
                         }
                         setTextInstanceWidthFirstValue = true;
-                        TextInstanceWidthFirstValue = 1f;
+                        TextInstanceWidthFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
-                            this.TextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            this.TextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
                         setWidthFirstValue = true;
                         WidthFirstValue = 0f;
@@ -102,16 +112,24 @@
                             this.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                         }
                         setTextInstanceHeightSecondValue = true;
-                        TextInstanceHeightSecondValue = 1f;
+                        TextInstanceHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
-                            this.TextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            this.TextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance.Text = "999";
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
                         }
                         setTextInstanceWidthSecondValue = true;
-                        TextInstanceWidthSecondValue = 1f;
+                        TextInstanceWidthSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
-                            this.TextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            this.TextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
                         setWidthSecondValue = true;
                         WidthSecondValue = 0f;
@@ -280,6 +298,22 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "TextInstance.Text",
+                            Type = "string",
+                            Value = TextInstance.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.VerticalAlignment",
+                            Type = "VerticalAlignment",
+                            Value = TextInstance.VerticalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "TextInstance.Width",
                             Type = "float",
                             Value = TextInstance.Width
@@ -340,7 +374,7 @@
                             SetsValue = true,
                             Name = "TextInstance.Height",
                             Type = "float",
-                            Value = TextInstance.Height + 1f
+                            Value = TextInstance.Height + 0f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -354,9 +388,25 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "TextInstance.Text",
+                            Type = "string",
+                            Value = TextInstance.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.VerticalAlignment",
+                            Type = "VerticalAlignment",
+                            Value = TextInstance.VerticalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "TextInstance.Width",
                             Type = "float",
-                            Value = TextInstance.Width + 1f
+                            Value = TextInstance.Width + 0f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -387,6 +437,102 @@
             }
             private bool tryCreateFormsObject;
             public JHP4SD.GumRuntimes.TextRuntime TextInstance { get; set; }
+            public int LabelTextAlpha
+            {
+                get
+                {
+                    return TextInstance.Alpha;
+                }
+                set
+                {
+                    if (TextInstance.Alpha != value)
+                    {
+                        TextInstance.Alpha = value;
+                        LabelTextAlphaChanged?.Invoke(this, null);
+                    }
+                }
+            }
+            public int LabelTextBlue
+            {
+                get
+                {
+                    return TextInstance.Blue;
+                }
+                set
+                {
+                    if (TextInstance.Blue != value)
+                    {
+                        TextInstance.Blue = value;
+                        LabelTextBlueChanged?.Invoke(this, null);
+                    }
+                }
+            }
+            public int LabelTextGreen
+            {
+                get
+                {
+                    return TextInstance.Green;
+                }
+                set
+                {
+                    if (TextInstance.Green != value)
+                    {
+                        TextInstance.Green = value;
+                        LabelTextGreenChanged?.Invoke(this, null);
+                    }
+                }
+            }
+            public RenderingLibrary.Graphics.HorizontalAlignment LabelTextHorizontalAlignment
+            {
+                get
+                {
+                    return TextInstance.HorizontalAlignment;
+                }
+                set
+                {
+                    if (TextInstance.HorizontalAlignment != value)
+                    {
+                        TextInstance.HorizontalAlignment = value;
+                        LabelTextHorizontalAlignmentChanged?.Invoke(this, null);
+                    }
+                }
+            }
+            public int LabelTextRed
+            {
+                get
+                {
+                    return TextInstance.Red;
+                }
+                set
+                {
+                    if (TextInstance.Red != value)
+                    {
+                        TextInstance.Red = value;
+                        LabelTextRedChanged?.Invoke(this, null);
+                    }
+                }
+            }
+            public RenderingLibrary.Graphics.VerticalAlignment LabelTextInstanceVerticalAlignment
+            {
+                get
+                {
+                    return TextInstance.VerticalAlignment;
+                }
+                set
+                {
+                    if (TextInstance.VerticalAlignment != value)
+                    {
+                        TextInstance.VerticalAlignment = value;
+                        LabelTextInstanceVerticalAlignmentChanged?.Invoke(this, null);
+                    }
+                }
+            }
+            public event System.EventHandler LabelTextAlphaChanged;
+            public event System.EventHandler LabelTextBlueChanged;
+            public event System.EventHandler LabelTextGreenChanged;
+            public event System.EventHandler LabelTextHorizontalAlignmentChanged;
+            public event System.EventHandler LabelTextRedChanged;
+            public event System.EventHandler LabelTextInstanceVerticalAlignmentChanged;
             public LabelRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             	: base(false, tryCreateFormsObject)
             {

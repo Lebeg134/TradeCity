@@ -24,7 +24,14 @@
     <Variable>
       <Type>float</Type>
       <Name>ListBoxInstance.Height</Name>
-      <Value xsi:type="xsd:float">180</Value>
+      <Value xsi:type="xsd:float">150</Value>
+      <ExposedAsName>ListBoxInstanceHeight</ExposedAsName>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>ListBoxInstance.Height Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

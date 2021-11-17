@@ -28,10 +28,18 @@
                             ResolutionContainer.Parent = this.GetGraphicalUiElementByName("GraphicsContainer");
                             ResolutionText.Parent = this.GetGraphicalUiElementByName("ResolutionContainer");
                             ResolutionComboBox.Parent = this.GetGraphicalUiElementByName("ResolutionContainer");
-                            FullscreenContainer.Parent = this.GetGraphicalUiElementByName("GraphicsContainer");
-                            WindowModeText.Parent = this.GetGraphicalUiElementByName("FullscreenContainer");
+                            WindowModeContainer.Parent = this.GetGraphicalUiElementByName("GraphicsContainer");
+                            WindowModeText.Parent = this.GetGraphicalUiElementByName("WindowModeContainer");
+                            VolumeText.Parent = this.GetGraphicalUiElementByName("VolumeContainer");
                             GraphicsContainer.Parent = this.GetGraphicalUiElementByName("GraphicsTopic");
-                            WindowModeComboBox.Parent = this.GetGraphicalUiElementByName("FullscreenContainer");
+                            WindowModeComboBox.Parent = this.GetGraphicalUiElementByName("WindowModeContainer");
+                            SoundContainer.Parent = this.GetGraphicalUiElementByName("SoudTopic");
+                            VolumeContainer.Parent = this.GetGraphicalUiElementByName("SoundContainer");
+                            VolumeSlider.Parent = this.GetGraphicalUiElementByName("VolumeContainer");
+                            VolumeMinText.Parent = this.GetGraphicalUiElementByName("VolumeSlider");
+                            VolumeSliderInstance.Parent = this.GetGraphicalUiElementByName("VolumeSlider");
+                            VolumeMaxText.Parent = this.GetGraphicalUiElementByName("VolumeSlider");
+                            CurrentVolumeLabel.Parent = this.GetGraphicalUiElementByName("VolumeContainer");
                             BackgroundColor.Blue = 128;
                             BackgroundColor.Green = 128;
                             BackgroundColor.Height = 0f;
@@ -69,7 +77,7 @@
                             GraphicsTopic.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                             GraphicsTopic.Y = 152f;
                             GraphicsTopic.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
-                            SoudTopic.ChildrenLayout = Gum.Managers.ChildrenLayout.TopToBottomStack;
+                            SoudTopic.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
                             SoudTopic.Height = 0f;
                             SoudTopic.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                             SoudTopic.TopicName = "Sound";
@@ -101,16 +109,17 @@
                             ResolutionText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                             ResolutionText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             ResolutionText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            ResolutionComboBox.ListBoxInstanceHeight = 96f;
                             ResolutionComboBox.Width = 50f;
                             ResolutionComboBox.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             ResolutionComboBox.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             ResolutionComboBox.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
-                            FullscreenContainer.Height = 0f;
-                            FullscreenContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
-                            FullscreenContainer.Width = 100f;
-                            FullscreenContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                            FullscreenContainer.X = 0f;
-                            FullscreenContainer.Y = 5f;
+                            WindowModeContainer.Height = 0f;
+                            WindowModeContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            WindowModeContainer.Width = 100f;
+                            WindowModeContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            WindowModeContainer.X = 0f;
+                            WindowModeContainer.Y = 5f;
                             WindowModeText.Blue = 0;
                             WindowModeText.Green = 0;
                             WindowModeText.Height = 0f;
@@ -122,6 +131,17 @@
                             WindowModeText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                             WindowModeText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             WindowModeText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            VolumeText.Blue = 0;
+                            VolumeText.Green = 0;
+                            VolumeText.Height = 0f;
+                            VolumeText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            VolumeText.Red = 0;
+                            VolumeText.Text = "Volume:";
+                            VolumeText.Width = 0f;
+                            VolumeText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            VolumeText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            VolumeText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            VolumeText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             GraphicsContainer.ChildrenLayout = Gum.Managers.ChildrenLayout.TopToBottomStack;
                             GraphicsContainer.Height = 0f;
                             GraphicsContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
@@ -130,10 +150,71 @@
                             GraphicsContainer.X = 1f;
                             GraphicsContainer.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                             GraphicsContainer.Y = 40f;
+                            WindowModeComboBox.ListBoxInstanceHeight = 64f;
                             WindowModeComboBox.Width = 50f;
                             WindowModeComboBox.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             WindowModeComboBox.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             WindowModeComboBox.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            SoundContainer.Height = 0f;
+                            SoundContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            SoundContainer.Width = 98f;
+                            SoundContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            SoundContainer.X = 1f;
+                            SoundContainer.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                            SoundContainer.Y = 40f;
+                            VolumeContainer.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
+                            VolumeContainer.Height = 0f;
+                            VolumeContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            VolumeContainer.Width = 0f;
+                            VolumeContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            VolumeSlider.Height = 0f;
+                            VolumeSlider.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            VolumeSlider.Width = 80f;
+                            VolumeSlider.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            VolumeSlider.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            VolumeSlider.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            VolumeMinText.Blue = 0;
+                            VolumeMinText.FontSize = 24;
+                            VolumeMinText.Green = 0;
+                            VolumeMinText.Height = 0f;
+                            VolumeMinText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            VolumeMinText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                            VolumeMinText.Red = 0;
+                            VolumeMinText.Text = "0";
+                            VolumeMinText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            VolumeMinText.Width = 2f;
+                            VolumeMinText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            VolumeMinText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            VolumeMinText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            VolumeSliderInstance.Width = 92f;
+                            VolumeSliderInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            VolumeSliderInstance.X = 2f;
+                            VolumeSliderInstance.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                            VolumeMaxText.Blue = 0;
+                            VolumeMaxText.FontSize = 24;
+                            VolumeMaxText.Green = 0;
+                            VolumeMaxText.Height = 0f;
+                            VolumeMaxText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            VolumeMaxText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            VolumeMaxText.Red = 0;
+                            VolumeMaxText.Text = "100";
+                            VolumeMaxText.Width = 5f;
+                            VolumeMaxText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            VolumeMaxText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            VolumeMaxText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            VolumeMaxText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            VolumeMaxText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            CurrentVolumeLabel.Height = 100f;
+                            CurrentVolumeLabel.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            CurrentVolumeLabel.LabelTextAlpha = 255;
+                            CurrentVolumeLabel.LabelTextBlue = 0;
+                            CurrentVolumeLabel.LabelTextGreen = 0;
+                            CurrentVolumeLabel.LabelTextRed = 0;
+                            CurrentVolumeLabel.Width = 10f;
+                            CurrentVolumeLabel.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            CurrentVolumeLabel.X = 20f;
+                            CurrentVolumeLabel.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            CurrentVolumeLabel.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                             break;
                     }
                 }
@@ -184,22 +265,34 @@
                 bool setBackgroundColorYSecondValue = false;
                 float BackgroundColorYFirstValue= 0;
                 float BackgroundColorYSecondValue= 0;
-                bool setFullscreenContainerHeightFirstValue = false;
-                bool setFullscreenContainerHeightSecondValue = false;
-                float FullscreenContainerHeightFirstValue= 0;
-                float FullscreenContainerHeightSecondValue= 0;
-                bool setFullscreenContainerWidthFirstValue = false;
-                bool setFullscreenContainerWidthSecondValue = false;
-                float FullscreenContainerWidthFirstValue= 0;
-                float FullscreenContainerWidthSecondValue= 0;
-                bool setFullscreenContainerXFirstValue = false;
-                bool setFullscreenContainerXSecondValue = false;
-                float FullscreenContainerXFirstValue= 0;
-                float FullscreenContainerXSecondValue= 0;
-                bool setFullscreenContainerYFirstValue = false;
-                bool setFullscreenContainerYSecondValue = false;
-                float FullscreenContainerYFirstValue= 0;
-                float FullscreenContainerYSecondValue= 0;
+                bool setCurrentVolumeLabelHeightFirstValue = false;
+                bool setCurrentVolumeLabelHeightSecondValue = false;
+                float CurrentVolumeLabelHeightFirstValue= 0;
+                float CurrentVolumeLabelHeightSecondValue= 0;
+                bool setCurrentVolumeLabelLabelTextAlphaFirstValue = false;
+                bool setCurrentVolumeLabelLabelTextAlphaSecondValue = false;
+                int CurrentVolumeLabelLabelTextAlphaFirstValue= 0;
+                int CurrentVolumeLabelLabelTextAlphaSecondValue= 0;
+                bool setCurrentVolumeLabelLabelTextBlueFirstValue = false;
+                bool setCurrentVolumeLabelLabelTextBlueSecondValue = false;
+                int CurrentVolumeLabelLabelTextBlueFirstValue= 0;
+                int CurrentVolumeLabelLabelTextBlueSecondValue= 0;
+                bool setCurrentVolumeLabelLabelTextGreenFirstValue = false;
+                bool setCurrentVolumeLabelLabelTextGreenSecondValue = false;
+                int CurrentVolumeLabelLabelTextGreenFirstValue= 0;
+                int CurrentVolumeLabelLabelTextGreenSecondValue= 0;
+                bool setCurrentVolumeLabelLabelTextRedFirstValue = false;
+                bool setCurrentVolumeLabelLabelTextRedSecondValue = false;
+                int CurrentVolumeLabelLabelTextRedFirstValue= 0;
+                int CurrentVolumeLabelLabelTextRedSecondValue= 0;
+                bool setCurrentVolumeLabelWidthFirstValue = false;
+                bool setCurrentVolumeLabelWidthSecondValue = false;
+                float CurrentVolumeLabelWidthFirstValue= 0;
+                float CurrentVolumeLabelWidthSecondValue= 0;
+                bool setCurrentVolumeLabelXFirstValue = false;
+                bool setCurrentVolumeLabelXSecondValue = false;
+                float CurrentVolumeLabelXFirstValue= 0;
+                float CurrentVolumeLabelXSecondValue= 0;
                 bool setGraphicsContainerHeightFirstValue = false;
                 bool setGraphicsContainerHeightSecondValue = false;
                 float GraphicsContainerHeightFirstValue= 0;
@@ -232,6 +325,10 @@
                 bool setGraphicsTopicYSecondValue = false;
                 float GraphicsTopicYFirstValue= 0;
                 float GraphicsTopicYSecondValue= 0;
+                bool setResolutionComboBoxListBoxInstanceHeightFirstValue = false;
+                bool setResolutionComboBoxListBoxInstanceHeightSecondValue = false;
+                float ResolutionComboBoxListBoxInstanceHeightFirstValue= 0;
+                float ResolutionComboBoxListBoxInstanceHeightSecondValue= 0;
                 bool setResolutionComboBoxWidthFirstValue = false;
                 bool setResolutionComboBoxWidthSecondValue = false;
                 float ResolutionComboBoxWidthFirstValue= 0;
@@ -312,10 +409,138 @@
                 bool setSoudTopicYSecondValue = false;
                 float SoudTopicYFirstValue= 0;
                 float SoudTopicYSecondValue= 0;
+                bool setSoundContainerHeightFirstValue = false;
+                bool setSoundContainerHeightSecondValue = false;
+                float SoundContainerHeightFirstValue= 0;
+                float SoundContainerHeightSecondValue= 0;
+                bool setSoundContainerWidthFirstValue = false;
+                bool setSoundContainerWidthSecondValue = false;
+                float SoundContainerWidthFirstValue= 0;
+                float SoundContainerWidthSecondValue= 0;
+                bool setSoundContainerXFirstValue = false;
+                bool setSoundContainerXSecondValue = false;
+                float SoundContainerXFirstValue= 0;
+                float SoundContainerXSecondValue= 0;
+                bool setSoundContainerYFirstValue = false;
+                bool setSoundContainerYSecondValue = false;
+                float SoundContainerYFirstValue= 0;
+                float SoundContainerYSecondValue= 0;
+                bool setVolumeContainerHeightFirstValue = false;
+                bool setVolumeContainerHeightSecondValue = false;
+                float VolumeContainerHeightFirstValue= 0;
+                float VolumeContainerHeightSecondValue= 0;
+                bool setVolumeContainerWidthFirstValue = false;
+                bool setVolumeContainerWidthSecondValue = false;
+                float VolumeContainerWidthFirstValue= 0;
+                float VolumeContainerWidthSecondValue= 0;
+                bool setVolumeMaxTextBlueFirstValue = false;
+                bool setVolumeMaxTextBlueSecondValue = false;
+                int VolumeMaxTextBlueFirstValue= 0;
+                int VolumeMaxTextBlueSecondValue= 0;
+                bool setVolumeMaxTextFontSizeFirstValue = false;
+                bool setVolumeMaxTextFontSizeSecondValue = false;
+                int VolumeMaxTextFontSizeFirstValue= 0;
+                int VolumeMaxTextFontSizeSecondValue= 0;
+                bool setVolumeMaxTextGreenFirstValue = false;
+                bool setVolumeMaxTextGreenSecondValue = false;
+                int VolumeMaxTextGreenFirstValue= 0;
+                int VolumeMaxTextGreenSecondValue= 0;
+                bool setVolumeMaxTextHeightFirstValue = false;
+                bool setVolumeMaxTextHeightSecondValue = false;
+                float VolumeMaxTextHeightFirstValue= 0;
+                float VolumeMaxTextHeightSecondValue= 0;
+                bool setVolumeMaxTextRedFirstValue = false;
+                bool setVolumeMaxTextRedSecondValue = false;
+                int VolumeMaxTextRedFirstValue= 0;
+                int VolumeMaxTextRedSecondValue= 0;
+                bool setVolumeMaxTextWidthFirstValue = false;
+                bool setVolumeMaxTextWidthSecondValue = false;
+                float VolumeMaxTextWidthFirstValue= 0;
+                float VolumeMaxTextWidthSecondValue= 0;
+                bool setVolumeMinTextBlueFirstValue = false;
+                bool setVolumeMinTextBlueSecondValue = false;
+                int VolumeMinTextBlueFirstValue= 0;
+                int VolumeMinTextBlueSecondValue= 0;
+                bool setVolumeMinTextFontSizeFirstValue = false;
+                bool setVolumeMinTextFontSizeSecondValue = false;
+                int VolumeMinTextFontSizeFirstValue= 0;
+                int VolumeMinTextFontSizeSecondValue= 0;
+                bool setVolumeMinTextGreenFirstValue = false;
+                bool setVolumeMinTextGreenSecondValue = false;
+                int VolumeMinTextGreenFirstValue= 0;
+                int VolumeMinTextGreenSecondValue= 0;
+                bool setVolumeMinTextHeightFirstValue = false;
+                bool setVolumeMinTextHeightSecondValue = false;
+                float VolumeMinTextHeightFirstValue= 0;
+                float VolumeMinTextHeightSecondValue= 0;
+                bool setVolumeMinTextRedFirstValue = false;
+                bool setVolumeMinTextRedSecondValue = false;
+                int VolumeMinTextRedFirstValue= 0;
+                int VolumeMinTextRedSecondValue= 0;
+                bool setVolumeMinTextWidthFirstValue = false;
+                bool setVolumeMinTextWidthSecondValue = false;
+                float VolumeMinTextWidthFirstValue= 0;
+                float VolumeMinTextWidthSecondValue= 0;
+                bool setVolumeSliderHeightFirstValue = false;
+                bool setVolumeSliderHeightSecondValue = false;
+                float VolumeSliderHeightFirstValue= 0;
+                float VolumeSliderHeightSecondValue= 0;
+                bool setVolumeSliderWidthFirstValue = false;
+                bool setVolumeSliderWidthSecondValue = false;
+                float VolumeSliderWidthFirstValue= 0;
+                float VolumeSliderWidthSecondValue= 0;
+                bool setVolumeSliderInstanceWidthFirstValue = false;
+                bool setVolumeSliderInstanceWidthSecondValue = false;
+                float VolumeSliderInstanceWidthFirstValue= 0;
+                float VolumeSliderInstanceWidthSecondValue= 0;
+                bool setVolumeSliderInstanceXFirstValue = false;
+                bool setVolumeSliderInstanceXSecondValue = false;
+                float VolumeSliderInstanceXFirstValue= 0;
+                float VolumeSliderInstanceXSecondValue= 0;
+                bool setVolumeTextBlueFirstValue = false;
+                bool setVolumeTextBlueSecondValue = false;
+                int VolumeTextBlueFirstValue= 0;
+                int VolumeTextBlueSecondValue= 0;
+                bool setVolumeTextGreenFirstValue = false;
+                bool setVolumeTextGreenSecondValue = false;
+                int VolumeTextGreenFirstValue= 0;
+                int VolumeTextGreenSecondValue= 0;
+                bool setVolumeTextHeightFirstValue = false;
+                bool setVolumeTextHeightSecondValue = false;
+                float VolumeTextHeightFirstValue= 0;
+                float VolumeTextHeightSecondValue= 0;
+                bool setVolumeTextRedFirstValue = false;
+                bool setVolumeTextRedSecondValue = false;
+                int VolumeTextRedFirstValue= 0;
+                int VolumeTextRedSecondValue= 0;
+                bool setVolumeTextWidthFirstValue = false;
+                bool setVolumeTextWidthSecondValue = false;
+                float VolumeTextWidthFirstValue= 0;
+                float VolumeTextWidthSecondValue= 0;
+                bool setWindowModeComboBoxListBoxInstanceHeightFirstValue = false;
+                bool setWindowModeComboBoxListBoxInstanceHeightSecondValue = false;
+                float WindowModeComboBoxListBoxInstanceHeightFirstValue= 0;
+                float WindowModeComboBoxListBoxInstanceHeightSecondValue= 0;
                 bool setWindowModeComboBoxWidthFirstValue = false;
                 bool setWindowModeComboBoxWidthSecondValue = false;
                 float WindowModeComboBoxWidthFirstValue= 0;
                 float WindowModeComboBoxWidthSecondValue= 0;
+                bool setWindowModeContainerHeightFirstValue = false;
+                bool setWindowModeContainerHeightSecondValue = false;
+                float WindowModeContainerHeightFirstValue= 0;
+                float WindowModeContainerHeightSecondValue= 0;
+                bool setWindowModeContainerWidthFirstValue = false;
+                bool setWindowModeContainerWidthSecondValue = false;
+                float WindowModeContainerWidthFirstValue= 0;
+                float WindowModeContainerWidthSecondValue= 0;
+                bool setWindowModeContainerXFirstValue = false;
+                bool setWindowModeContainerXSecondValue = false;
+                float WindowModeContainerXFirstValue= 0;
+                float WindowModeContainerXSecondValue= 0;
+                bool setWindowModeContainerYFirstValue = false;
+                bool setWindowModeContainerYSecondValue = false;
+                float WindowModeContainerYFirstValue= 0;
+                float WindowModeContainerYSecondValue= 0;
                 bool setWindowModeTextBlueFirstValue = false;
                 bool setWindowModeTextBlueSecondValue = false;
                 int WindowModeTextBlueFirstValue= 0;
@@ -397,26 +622,40 @@
                         {
                             this.BackgroundColor.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
-                        setFullscreenContainerHeightFirstValue = true;
-                        FullscreenContainerHeightFirstValue = 0f;
+                        setCurrentVolumeLabelHeightFirstValue = true;
+                        CurrentVolumeLabelHeightFirstValue = 100f;
                         if (interpolationValue < 1)
                         {
-                            this.FullscreenContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            this.CurrentVolumeLabel.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setCurrentVolumeLabelLabelTextAlphaFirstValue = true;
+                        CurrentVolumeLabelLabelTextAlphaFirstValue = 255;
+                        setCurrentVolumeLabelLabelTextBlueFirstValue = true;
+                        CurrentVolumeLabelLabelTextBlueFirstValue = 0;
+                        setCurrentVolumeLabelLabelTextGreenFirstValue = true;
+                        CurrentVolumeLabelLabelTextGreenFirstValue = 0;
+                        setCurrentVolumeLabelLabelTextRedFirstValue = true;
+                        CurrentVolumeLabelLabelTextRedFirstValue = 0;
+                        if (interpolationValue < 1)
+                        {
+                            this.CurrentVolumeLabel.Parent = this.GetGraphicalUiElementByName("VolumeContainer");
+                        }
+                        setCurrentVolumeLabelWidthFirstValue = true;
+                        CurrentVolumeLabelWidthFirstValue = 10f;
+                        if (interpolationValue < 1)
+                        {
+                            this.CurrentVolumeLabel.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setCurrentVolumeLabelXFirstValue = true;
+                        CurrentVolumeLabelXFirstValue = 20f;
+                        if (interpolationValue < 1)
+                        {
+                            this.CurrentVolumeLabel.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.FullscreenContainer.Parent = this.GetGraphicalUiElementByName("GraphicsContainer");
+                            this.CurrentVolumeLabel.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                         }
-                        setFullscreenContainerWidthFirstValue = true;
-                        FullscreenContainerWidthFirstValue = 100f;
-                        if (interpolationValue < 1)
-                        {
-                            this.FullscreenContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        setFullscreenContainerXFirstValue = true;
-                        FullscreenContainerXFirstValue = 0f;
-                        setFullscreenContainerYFirstValue = true;
-                        FullscreenContainerYFirstValue = 5f;
                         if (interpolationValue < 1)
                         {
                             this.GraphicsContainer.ChildrenLayout = Gum.Managers.ChildrenLayout.TopToBottomStack;
@@ -477,6 +716,8 @@
                         {
                             this.GraphicsTopic.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
                         }
+                        setResolutionComboBoxListBoxInstanceHeightFirstValue = true;
+                        ResolutionComboBoxListBoxInstanceHeightFirstValue = 96f;
                         if (interpolationValue < 1)
                         {
                             this.ResolutionComboBox.Parent = this.GetGraphicalUiElementByName("ResolutionContainer");
@@ -595,7 +836,7 @@
                         SettingsTextYFirstValue = 40f;
                         if (interpolationValue < 1)
                         {
-                            this.SoudTopic.ChildrenLayout = Gum.Managers.ChildrenLayout.TopToBottomStack;
+                            this.SoudTopic.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
                         }
                         setSoudTopicHeightFirstValue = true;
                         SoudTopicHeightFirstValue = 0f;
@@ -625,9 +866,225 @@
                         }
                         setSoudTopicYFirstValue = true;
                         SoudTopicYFirstValue = 152f;
+                        setSoundContainerHeightFirstValue = true;
+                        SoundContainerHeightFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
-                            this.WindowModeComboBox.Parent = this.GetGraphicalUiElementByName("FullscreenContainer");
+                            this.SoundContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.SoundContainer.Parent = this.GetGraphicalUiElementByName("SoudTopic");
+                        }
+                        setSoundContainerWidthFirstValue = true;
+                        SoundContainerWidthFirstValue = 98f;
+                        if (interpolationValue < 1)
+                        {
+                            this.SoundContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setSoundContainerXFirstValue = true;
+                        SoundContainerXFirstValue = 1f;
+                        if (interpolationValue < 1)
+                        {
+                            this.SoundContainer.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                        }
+                        setSoundContainerYFirstValue = true;
+                        SoundContainerYFirstValue = 40f;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeContainer.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
+                        }
+                        setVolumeContainerHeightFirstValue = true;
+                        VolumeContainerHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeContainer.Parent = this.GetGraphicalUiElementByName("SoundContainer");
+                        }
+                        setVolumeContainerWidthFirstValue = true;
+                        VolumeContainerWidthFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setVolumeMaxTextBlueFirstValue = true;
+                        VolumeMaxTextBlueFirstValue = 0;
+                        setVolumeMaxTextFontSizeFirstValue = true;
+                        VolumeMaxTextFontSizeFirstValue = 24;
+                        setVolumeMaxTextGreenFirstValue = true;
+                        VolumeMaxTextGreenFirstValue = 0;
+                        setVolumeMaxTextHeightFirstValue = true;
+                        VolumeMaxTextHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMaxText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMaxText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMaxText.Parent = this.GetGraphicalUiElementByName("VolumeSlider");
+                        }
+                        setVolumeMaxTextRedFirstValue = true;
+                        VolumeMaxTextRedFirstValue = 0;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMaxText.Text = "100";
+                        }
+                        setVolumeMaxTextWidthFirstValue = true;
+                        VolumeMaxTextWidthFirstValue = 5f;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMaxText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMaxText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMaxText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMaxText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMaxText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setVolumeMinTextBlueFirstValue = true;
+                        VolumeMinTextBlueFirstValue = 0;
+                        setVolumeMinTextFontSizeFirstValue = true;
+                        VolumeMinTextFontSizeFirstValue = 24;
+                        setVolumeMinTextGreenFirstValue = true;
+                        VolumeMinTextGreenFirstValue = 0;
+                        setVolumeMinTextHeightFirstValue = true;
+                        VolumeMinTextHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMinText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMinText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMinText.Parent = this.GetGraphicalUiElementByName("VolumeSlider");
+                        }
+                        setVolumeMinTextRedFirstValue = true;
+                        VolumeMinTextRedFirstValue = 0;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMinText.Text = "0";
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMinText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        setVolumeMinTextWidthFirstValue = true;
+                        VolumeMinTextWidthFirstValue = 2f;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMinText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMinText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeMinText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setVolumeSliderHeightFirstValue = true;
+                        VolumeSliderHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeSlider.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeSlider.Parent = this.GetGraphicalUiElementByName("VolumeContainer");
+                        }
+                        setVolumeSliderWidthFirstValue = true;
+                        VolumeSliderWidthFirstValue = 80f;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeSlider.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeSlider.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeSlider.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeSliderInstance.Parent = this.GetGraphicalUiElementByName("VolumeSlider");
+                        }
+                        setVolumeSliderInstanceWidthFirstValue = true;
+                        VolumeSliderInstanceWidthFirstValue = 92f;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeSliderInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setVolumeSliderInstanceXFirstValue = true;
+                        VolumeSliderInstanceXFirstValue = 2f;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeSliderInstance.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                        }
+                        setVolumeTextBlueFirstValue = true;
+                        VolumeTextBlueFirstValue = 0;
+                        setVolumeTextGreenFirstValue = true;
+                        VolumeTextGreenFirstValue = 0;
+                        setVolumeTextHeightFirstValue = true;
+                        VolumeTextHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeText.Parent = this.GetGraphicalUiElementByName("VolumeContainer");
+                        }
+                        setVolumeTextRedFirstValue = true;
+                        VolumeTextRedFirstValue = 0;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeText.Text = "Volume:";
+                        }
+                        setVolumeTextWidthFirstValue = true;
+                        VolumeTextWidthFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.VolumeText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setWindowModeComboBoxListBoxInstanceHeightFirstValue = true;
+                        WindowModeComboBoxListBoxInstanceHeightFirstValue = 64f;
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeComboBox.Parent = this.GetGraphicalUiElementByName("WindowModeContainer");
                         }
                         setWindowModeComboBoxWidthFirstValue = true;
                         WindowModeComboBoxWidthFirstValue = 50f;
@@ -643,6 +1100,26 @@
                         {
                             this.WindowModeComboBox.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
+                        setWindowModeContainerHeightFirstValue = true;
+                        WindowModeContainerHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeContainer.Parent = this.GetGraphicalUiElementByName("GraphicsContainer");
+                        }
+                        setWindowModeContainerWidthFirstValue = true;
+                        WindowModeContainerWidthFirstValue = 100f;
+                        if (interpolationValue < 1)
+                        {
+                            this.WindowModeContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setWindowModeContainerXFirstValue = true;
+                        WindowModeContainerXFirstValue = 0f;
+                        setWindowModeContainerYFirstValue = true;
+                        WindowModeContainerYFirstValue = 5f;
                         setWindowModeTextBlueFirstValue = true;
                         WindowModeTextBlueFirstValue = 0;
                         setWindowModeTextGreenFirstValue = true;
@@ -655,7 +1132,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            this.WindowModeText.Parent = this.GetGraphicalUiElementByName("FullscreenContainer");
+                            this.WindowModeText.Parent = this.GetGraphicalUiElementByName("WindowModeContainer");
                         }
                         setWindowModeTextRedFirstValue = true;
                         WindowModeTextRedFirstValue = 0;
@@ -744,26 +1221,40 @@
                         {
                             this.BackgroundColor.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
-                        setFullscreenContainerHeightSecondValue = true;
-                        FullscreenContainerHeightSecondValue = 0f;
+                        setCurrentVolumeLabelHeightSecondValue = true;
+                        CurrentVolumeLabelHeightSecondValue = 100f;
                         if (interpolationValue >= 1)
                         {
-                            this.FullscreenContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            this.CurrentVolumeLabel.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setCurrentVolumeLabelLabelTextAlphaSecondValue = true;
+                        CurrentVolumeLabelLabelTextAlphaSecondValue = 255;
+                        setCurrentVolumeLabelLabelTextBlueSecondValue = true;
+                        CurrentVolumeLabelLabelTextBlueSecondValue = 0;
+                        setCurrentVolumeLabelLabelTextGreenSecondValue = true;
+                        CurrentVolumeLabelLabelTextGreenSecondValue = 0;
+                        setCurrentVolumeLabelLabelTextRedSecondValue = true;
+                        CurrentVolumeLabelLabelTextRedSecondValue = 0;
+                        if (interpolationValue >= 1)
+                        {
+                            this.CurrentVolumeLabel.Parent = this.GetGraphicalUiElementByName("VolumeContainer");
+                        }
+                        setCurrentVolumeLabelWidthSecondValue = true;
+                        CurrentVolumeLabelWidthSecondValue = 10f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.CurrentVolumeLabel.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setCurrentVolumeLabelXSecondValue = true;
+                        CurrentVolumeLabelXSecondValue = 20f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.CurrentVolumeLabel.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.FullscreenContainer.Parent = this.GetGraphicalUiElementByName("GraphicsContainer");
+                            this.CurrentVolumeLabel.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                         }
-                        setFullscreenContainerWidthSecondValue = true;
-                        FullscreenContainerWidthSecondValue = 100f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.FullscreenContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        setFullscreenContainerXSecondValue = true;
-                        FullscreenContainerXSecondValue = 0f;
-                        setFullscreenContainerYSecondValue = true;
-                        FullscreenContainerYSecondValue = 5f;
                         if (interpolationValue >= 1)
                         {
                             this.GraphicsContainer.ChildrenLayout = Gum.Managers.ChildrenLayout.TopToBottomStack;
@@ -824,6 +1315,8 @@
                         {
                             this.GraphicsTopic.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
                         }
+                        setResolutionComboBoxListBoxInstanceHeightSecondValue = true;
+                        ResolutionComboBoxListBoxInstanceHeightSecondValue = 96f;
                         if (interpolationValue >= 1)
                         {
                             this.ResolutionComboBox.Parent = this.GetGraphicalUiElementByName("ResolutionContainer");
@@ -942,7 +1435,7 @@
                         SettingsTextYSecondValue = 40f;
                         if (interpolationValue >= 1)
                         {
-                            this.SoudTopic.ChildrenLayout = Gum.Managers.ChildrenLayout.TopToBottomStack;
+                            this.SoudTopic.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
                         }
                         setSoudTopicHeightSecondValue = true;
                         SoudTopicHeightSecondValue = 0f;
@@ -972,9 +1465,225 @@
                         }
                         setSoudTopicYSecondValue = true;
                         SoudTopicYSecondValue = 152f;
+                        setSoundContainerHeightSecondValue = true;
+                        SoundContainerHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
-                            this.WindowModeComboBox.Parent = this.GetGraphicalUiElementByName("FullscreenContainer");
+                            this.SoundContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.SoundContainer.Parent = this.GetGraphicalUiElementByName("SoudTopic");
+                        }
+                        setSoundContainerWidthSecondValue = true;
+                        SoundContainerWidthSecondValue = 98f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.SoundContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setSoundContainerXSecondValue = true;
+                        SoundContainerXSecondValue = 1f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.SoundContainer.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                        }
+                        setSoundContainerYSecondValue = true;
+                        SoundContainerYSecondValue = 40f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeContainer.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
+                        }
+                        setVolumeContainerHeightSecondValue = true;
+                        VolumeContainerHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeContainer.Parent = this.GetGraphicalUiElementByName("SoundContainer");
+                        }
+                        setVolumeContainerWidthSecondValue = true;
+                        VolumeContainerWidthSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setVolumeMaxTextBlueSecondValue = true;
+                        VolumeMaxTextBlueSecondValue = 0;
+                        setVolumeMaxTextFontSizeSecondValue = true;
+                        VolumeMaxTextFontSizeSecondValue = 24;
+                        setVolumeMaxTextGreenSecondValue = true;
+                        VolumeMaxTextGreenSecondValue = 0;
+                        setVolumeMaxTextHeightSecondValue = true;
+                        VolumeMaxTextHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMaxText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMaxText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMaxText.Parent = this.GetGraphicalUiElementByName("VolumeSlider");
+                        }
+                        setVolumeMaxTextRedSecondValue = true;
+                        VolumeMaxTextRedSecondValue = 0;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMaxText.Text = "100";
+                        }
+                        setVolumeMaxTextWidthSecondValue = true;
+                        VolumeMaxTextWidthSecondValue = 5f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMaxText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMaxText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMaxText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMaxText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMaxText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setVolumeMinTextBlueSecondValue = true;
+                        VolumeMinTextBlueSecondValue = 0;
+                        setVolumeMinTextFontSizeSecondValue = true;
+                        VolumeMinTextFontSizeSecondValue = 24;
+                        setVolumeMinTextGreenSecondValue = true;
+                        VolumeMinTextGreenSecondValue = 0;
+                        setVolumeMinTextHeightSecondValue = true;
+                        VolumeMinTextHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMinText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMinText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMinText.Parent = this.GetGraphicalUiElementByName("VolumeSlider");
+                        }
+                        setVolumeMinTextRedSecondValue = true;
+                        VolumeMinTextRedSecondValue = 0;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMinText.Text = "0";
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMinText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        setVolumeMinTextWidthSecondValue = true;
+                        VolumeMinTextWidthSecondValue = 2f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMinText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMinText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeMinText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setVolumeSliderHeightSecondValue = true;
+                        VolumeSliderHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeSlider.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeSlider.Parent = this.GetGraphicalUiElementByName("VolumeContainer");
+                        }
+                        setVolumeSliderWidthSecondValue = true;
+                        VolumeSliderWidthSecondValue = 80f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeSlider.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeSlider.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeSlider.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeSliderInstance.Parent = this.GetGraphicalUiElementByName("VolumeSlider");
+                        }
+                        setVolumeSliderInstanceWidthSecondValue = true;
+                        VolumeSliderInstanceWidthSecondValue = 92f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeSliderInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setVolumeSliderInstanceXSecondValue = true;
+                        VolumeSliderInstanceXSecondValue = 2f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeSliderInstance.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                        }
+                        setVolumeTextBlueSecondValue = true;
+                        VolumeTextBlueSecondValue = 0;
+                        setVolumeTextGreenSecondValue = true;
+                        VolumeTextGreenSecondValue = 0;
+                        setVolumeTextHeightSecondValue = true;
+                        VolumeTextHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeText.Parent = this.GetGraphicalUiElementByName("VolumeContainer");
+                        }
+                        setVolumeTextRedSecondValue = true;
+                        VolumeTextRedSecondValue = 0;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeText.Text = "Volume:";
+                        }
+                        setVolumeTextWidthSecondValue = true;
+                        VolumeTextWidthSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.VolumeText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setWindowModeComboBoxListBoxInstanceHeightSecondValue = true;
+                        WindowModeComboBoxListBoxInstanceHeightSecondValue = 64f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeComboBox.Parent = this.GetGraphicalUiElementByName("WindowModeContainer");
                         }
                         setWindowModeComboBoxWidthSecondValue = true;
                         WindowModeComboBoxWidthSecondValue = 50f;
@@ -990,6 +1699,26 @@
                         {
                             this.WindowModeComboBox.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
+                        setWindowModeContainerHeightSecondValue = true;
+                        WindowModeContainerHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeContainer.Parent = this.GetGraphicalUiElementByName("GraphicsContainer");
+                        }
+                        setWindowModeContainerWidthSecondValue = true;
+                        WindowModeContainerWidthSecondValue = 100f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.WindowModeContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setWindowModeContainerXSecondValue = true;
+                        WindowModeContainerXSecondValue = 0f;
+                        setWindowModeContainerYSecondValue = true;
+                        WindowModeContainerYSecondValue = 5f;
                         setWindowModeTextBlueSecondValue = true;
                         WindowModeTextBlueSecondValue = 0;
                         setWindowModeTextGreenSecondValue = true;
@@ -1002,7 +1731,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.WindowModeText.Parent = this.GetGraphicalUiElementByName("FullscreenContainer");
+                            this.WindowModeText.Parent = this.GetGraphicalUiElementByName("WindowModeContainer");
                         }
                         setWindowModeTextRedSecondValue = true;
                         WindowModeTextRedSecondValue = 0;
@@ -1071,21 +1800,33 @@
                 {
                     BackgroundColor.Y = BackgroundColorYFirstValue * (1 - interpolationValue) + BackgroundColorYSecondValue * interpolationValue;
                 }
-                if (setFullscreenContainerHeightFirstValue && setFullscreenContainerHeightSecondValue)
+                if (setCurrentVolumeLabelHeightFirstValue && setCurrentVolumeLabelHeightSecondValue)
                 {
-                    FullscreenContainer.Height = FullscreenContainerHeightFirstValue * (1 - interpolationValue) + FullscreenContainerHeightSecondValue * interpolationValue;
+                    CurrentVolumeLabel.Height = CurrentVolumeLabelHeightFirstValue * (1 - interpolationValue) + CurrentVolumeLabelHeightSecondValue * interpolationValue;
                 }
-                if (setFullscreenContainerWidthFirstValue && setFullscreenContainerWidthSecondValue)
+                if (setCurrentVolumeLabelLabelTextAlphaFirstValue && setCurrentVolumeLabelLabelTextAlphaSecondValue)
                 {
-                    FullscreenContainer.Width = FullscreenContainerWidthFirstValue * (1 - interpolationValue) + FullscreenContainerWidthSecondValue * interpolationValue;
+                    CurrentVolumeLabel.LabelTextAlpha = FlatRedBall.Math.MathFunctions.RoundToInt(CurrentVolumeLabelLabelTextAlphaFirstValue* (1 - interpolationValue) + CurrentVolumeLabelLabelTextAlphaSecondValue * interpolationValue);
                 }
-                if (setFullscreenContainerXFirstValue && setFullscreenContainerXSecondValue)
+                if (setCurrentVolumeLabelLabelTextBlueFirstValue && setCurrentVolumeLabelLabelTextBlueSecondValue)
                 {
-                    FullscreenContainer.X = FullscreenContainerXFirstValue * (1 - interpolationValue) + FullscreenContainerXSecondValue * interpolationValue;
+                    CurrentVolumeLabel.LabelTextBlue = FlatRedBall.Math.MathFunctions.RoundToInt(CurrentVolumeLabelLabelTextBlueFirstValue* (1 - interpolationValue) + CurrentVolumeLabelLabelTextBlueSecondValue * interpolationValue);
                 }
-                if (setFullscreenContainerYFirstValue && setFullscreenContainerYSecondValue)
+                if (setCurrentVolumeLabelLabelTextGreenFirstValue && setCurrentVolumeLabelLabelTextGreenSecondValue)
                 {
-                    FullscreenContainer.Y = FullscreenContainerYFirstValue * (1 - interpolationValue) + FullscreenContainerYSecondValue * interpolationValue;
+                    CurrentVolumeLabel.LabelTextGreen = FlatRedBall.Math.MathFunctions.RoundToInt(CurrentVolumeLabelLabelTextGreenFirstValue* (1 - interpolationValue) + CurrentVolumeLabelLabelTextGreenSecondValue * interpolationValue);
+                }
+                if (setCurrentVolumeLabelLabelTextRedFirstValue && setCurrentVolumeLabelLabelTextRedSecondValue)
+                {
+                    CurrentVolumeLabel.LabelTextRed = FlatRedBall.Math.MathFunctions.RoundToInt(CurrentVolumeLabelLabelTextRedFirstValue* (1 - interpolationValue) + CurrentVolumeLabelLabelTextRedSecondValue * interpolationValue);
+                }
+                if (setCurrentVolumeLabelWidthFirstValue && setCurrentVolumeLabelWidthSecondValue)
+                {
+                    CurrentVolumeLabel.Width = CurrentVolumeLabelWidthFirstValue * (1 - interpolationValue) + CurrentVolumeLabelWidthSecondValue * interpolationValue;
+                }
+                if (setCurrentVolumeLabelXFirstValue && setCurrentVolumeLabelXSecondValue)
+                {
+                    CurrentVolumeLabel.X = CurrentVolumeLabelXFirstValue * (1 - interpolationValue) + CurrentVolumeLabelXSecondValue * interpolationValue;
                 }
                 if (setGraphicsContainerHeightFirstValue && setGraphicsContainerHeightSecondValue)
                 {
@@ -1118,6 +1859,10 @@
                 if (setGraphicsTopicYFirstValue && setGraphicsTopicYSecondValue)
                 {
                     GraphicsTopic.Y = GraphicsTopicYFirstValue * (1 - interpolationValue) + GraphicsTopicYSecondValue * interpolationValue;
+                }
+                if (setResolutionComboBoxListBoxInstanceHeightFirstValue && setResolutionComboBoxListBoxInstanceHeightSecondValue)
+                {
+                    ResolutionComboBox.ListBoxInstanceHeight = ResolutionComboBoxListBoxInstanceHeightFirstValue * (1 - interpolationValue) + ResolutionComboBoxListBoxInstanceHeightSecondValue * interpolationValue;
                 }
                 if (setResolutionComboBoxWidthFirstValue && setResolutionComboBoxWidthSecondValue)
                 {
@@ -1199,9 +1944,137 @@
                 {
                     SoudTopic.Y = SoudTopicYFirstValue * (1 - interpolationValue) + SoudTopicYSecondValue * interpolationValue;
                 }
+                if (setSoundContainerHeightFirstValue && setSoundContainerHeightSecondValue)
+                {
+                    SoundContainer.Height = SoundContainerHeightFirstValue * (1 - interpolationValue) + SoundContainerHeightSecondValue * interpolationValue;
+                }
+                if (setSoundContainerWidthFirstValue && setSoundContainerWidthSecondValue)
+                {
+                    SoundContainer.Width = SoundContainerWidthFirstValue * (1 - interpolationValue) + SoundContainerWidthSecondValue * interpolationValue;
+                }
+                if (setSoundContainerXFirstValue && setSoundContainerXSecondValue)
+                {
+                    SoundContainer.X = SoundContainerXFirstValue * (1 - interpolationValue) + SoundContainerXSecondValue * interpolationValue;
+                }
+                if (setSoundContainerYFirstValue && setSoundContainerYSecondValue)
+                {
+                    SoundContainer.Y = SoundContainerYFirstValue * (1 - interpolationValue) + SoundContainerYSecondValue * interpolationValue;
+                }
+                if (setVolumeContainerHeightFirstValue && setVolumeContainerHeightSecondValue)
+                {
+                    VolumeContainer.Height = VolumeContainerHeightFirstValue * (1 - interpolationValue) + VolumeContainerHeightSecondValue * interpolationValue;
+                }
+                if (setVolumeContainerWidthFirstValue && setVolumeContainerWidthSecondValue)
+                {
+                    VolumeContainer.Width = VolumeContainerWidthFirstValue * (1 - interpolationValue) + VolumeContainerWidthSecondValue * interpolationValue;
+                }
+                if (setVolumeMaxTextBlueFirstValue && setVolumeMaxTextBlueSecondValue)
+                {
+                    VolumeMaxText.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(VolumeMaxTextBlueFirstValue* (1 - interpolationValue) + VolumeMaxTextBlueSecondValue * interpolationValue);
+                }
+                if (setVolumeMaxTextFontSizeFirstValue && setVolumeMaxTextFontSizeSecondValue)
+                {
+                    VolumeMaxText.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(VolumeMaxTextFontSizeFirstValue* (1 - interpolationValue) + VolumeMaxTextFontSizeSecondValue * interpolationValue);
+                }
+                if (setVolumeMaxTextGreenFirstValue && setVolumeMaxTextGreenSecondValue)
+                {
+                    VolumeMaxText.Green = FlatRedBall.Math.MathFunctions.RoundToInt(VolumeMaxTextGreenFirstValue* (1 - interpolationValue) + VolumeMaxTextGreenSecondValue * interpolationValue);
+                }
+                if (setVolumeMaxTextHeightFirstValue && setVolumeMaxTextHeightSecondValue)
+                {
+                    VolumeMaxText.Height = VolumeMaxTextHeightFirstValue * (1 - interpolationValue) + VolumeMaxTextHeightSecondValue * interpolationValue;
+                }
+                if (setVolumeMaxTextRedFirstValue && setVolumeMaxTextRedSecondValue)
+                {
+                    VolumeMaxText.Red = FlatRedBall.Math.MathFunctions.RoundToInt(VolumeMaxTextRedFirstValue* (1 - interpolationValue) + VolumeMaxTextRedSecondValue * interpolationValue);
+                }
+                if (setVolumeMaxTextWidthFirstValue && setVolumeMaxTextWidthSecondValue)
+                {
+                    VolumeMaxText.Width = VolumeMaxTextWidthFirstValue * (1 - interpolationValue) + VolumeMaxTextWidthSecondValue * interpolationValue;
+                }
+                if (setVolumeMinTextBlueFirstValue && setVolumeMinTextBlueSecondValue)
+                {
+                    VolumeMinText.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(VolumeMinTextBlueFirstValue* (1 - interpolationValue) + VolumeMinTextBlueSecondValue * interpolationValue);
+                }
+                if (setVolumeMinTextFontSizeFirstValue && setVolumeMinTextFontSizeSecondValue)
+                {
+                    VolumeMinText.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(VolumeMinTextFontSizeFirstValue* (1 - interpolationValue) + VolumeMinTextFontSizeSecondValue * interpolationValue);
+                }
+                if (setVolumeMinTextGreenFirstValue && setVolumeMinTextGreenSecondValue)
+                {
+                    VolumeMinText.Green = FlatRedBall.Math.MathFunctions.RoundToInt(VolumeMinTextGreenFirstValue* (1 - interpolationValue) + VolumeMinTextGreenSecondValue * interpolationValue);
+                }
+                if (setVolumeMinTextHeightFirstValue && setVolumeMinTextHeightSecondValue)
+                {
+                    VolumeMinText.Height = VolumeMinTextHeightFirstValue * (1 - interpolationValue) + VolumeMinTextHeightSecondValue * interpolationValue;
+                }
+                if (setVolumeMinTextRedFirstValue && setVolumeMinTextRedSecondValue)
+                {
+                    VolumeMinText.Red = FlatRedBall.Math.MathFunctions.RoundToInt(VolumeMinTextRedFirstValue* (1 - interpolationValue) + VolumeMinTextRedSecondValue * interpolationValue);
+                }
+                if (setVolumeMinTextWidthFirstValue && setVolumeMinTextWidthSecondValue)
+                {
+                    VolumeMinText.Width = VolumeMinTextWidthFirstValue * (1 - interpolationValue) + VolumeMinTextWidthSecondValue * interpolationValue;
+                }
+                if (setVolumeSliderHeightFirstValue && setVolumeSliderHeightSecondValue)
+                {
+                    VolumeSlider.Height = VolumeSliderHeightFirstValue * (1 - interpolationValue) + VolumeSliderHeightSecondValue * interpolationValue;
+                }
+                if (setVolumeSliderWidthFirstValue && setVolumeSliderWidthSecondValue)
+                {
+                    VolumeSlider.Width = VolumeSliderWidthFirstValue * (1 - interpolationValue) + VolumeSliderWidthSecondValue * interpolationValue;
+                }
+                if (setVolumeSliderInstanceWidthFirstValue && setVolumeSliderInstanceWidthSecondValue)
+                {
+                    VolumeSliderInstance.Width = VolumeSliderInstanceWidthFirstValue * (1 - interpolationValue) + VolumeSliderInstanceWidthSecondValue * interpolationValue;
+                }
+                if (setVolumeSliderInstanceXFirstValue && setVolumeSliderInstanceXSecondValue)
+                {
+                    VolumeSliderInstance.X = VolumeSliderInstanceXFirstValue * (1 - interpolationValue) + VolumeSliderInstanceXSecondValue * interpolationValue;
+                }
+                if (setVolumeTextBlueFirstValue && setVolumeTextBlueSecondValue)
+                {
+                    VolumeText.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(VolumeTextBlueFirstValue* (1 - interpolationValue) + VolumeTextBlueSecondValue * interpolationValue);
+                }
+                if (setVolumeTextGreenFirstValue && setVolumeTextGreenSecondValue)
+                {
+                    VolumeText.Green = FlatRedBall.Math.MathFunctions.RoundToInt(VolumeTextGreenFirstValue* (1 - interpolationValue) + VolumeTextGreenSecondValue * interpolationValue);
+                }
+                if (setVolumeTextHeightFirstValue && setVolumeTextHeightSecondValue)
+                {
+                    VolumeText.Height = VolumeTextHeightFirstValue * (1 - interpolationValue) + VolumeTextHeightSecondValue * interpolationValue;
+                }
+                if (setVolumeTextRedFirstValue && setVolumeTextRedSecondValue)
+                {
+                    VolumeText.Red = FlatRedBall.Math.MathFunctions.RoundToInt(VolumeTextRedFirstValue* (1 - interpolationValue) + VolumeTextRedSecondValue * interpolationValue);
+                }
+                if (setVolumeTextWidthFirstValue && setVolumeTextWidthSecondValue)
+                {
+                    VolumeText.Width = VolumeTextWidthFirstValue * (1 - interpolationValue) + VolumeTextWidthSecondValue * interpolationValue;
+                }
+                if (setWindowModeComboBoxListBoxInstanceHeightFirstValue && setWindowModeComboBoxListBoxInstanceHeightSecondValue)
+                {
+                    WindowModeComboBox.ListBoxInstanceHeight = WindowModeComboBoxListBoxInstanceHeightFirstValue * (1 - interpolationValue) + WindowModeComboBoxListBoxInstanceHeightSecondValue * interpolationValue;
+                }
                 if (setWindowModeComboBoxWidthFirstValue && setWindowModeComboBoxWidthSecondValue)
                 {
                     WindowModeComboBox.Width = WindowModeComboBoxWidthFirstValue * (1 - interpolationValue) + WindowModeComboBoxWidthSecondValue * interpolationValue;
+                }
+                if (setWindowModeContainerHeightFirstValue && setWindowModeContainerHeightSecondValue)
+                {
+                    WindowModeContainer.Height = WindowModeContainerHeightFirstValue * (1 - interpolationValue) + WindowModeContainerHeightSecondValue * interpolationValue;
+                }
+                if (setWindowModeContainerWidthFirstValue && setWindowModeContainerWidthSecondValue)
+                {
+                    WindowModeContainer.Width = WindowModeContainerWidthFirstValue * (1 - interpolationValue) + WindowModeContainerWidthSecondValue * interpolationValue;
+                }
+                if (setWindowModeContainerXFirstValue && setWindowModeContainerXSecondValue)
+                {
+                    WindowModeContainer.X = WindowModeContainerXFirstValue * (1 - interpolationValue) + WindowModeContainerXSecondValue * interpolationValue;
+                }
+                if (setWindowModeContainerYFirstValue && setWindowModeContainerYSecondValue)
+                {
+                    WindowModeContainer.Y = WindowModeContainerYFirstValue * (1 - interpolationValue) + WindowModeContainerYSecondValue * interpolationValue;
                 }
                 if (setWindowModeTextBlueFirstValue && setWindowModeTextBlueSecondValue)
                 {
@@ -1303,6 +2176,8 @@
                 SoudTopic.StopAnimations();
                 ResolutionComboBox.StopAnimations();
                 WindowModeComboBox.StopAnimations();
+                VolumeSliderInstance.StopAnimations();
+                CurrentVolumeLabel.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -1886,6 +2761,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "ResolutionComboBox.ListBoxInstanceHeight",
+                            Type = "float",
+                            Value = ResolutionComboBox.ListBoxInstanceHeight
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "ResolutionComboBox.Parent",
                             Type = "string",
                             Value = ResolutionComboBox.Parent
@@ -1926,57 +2809,57 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "FullscreenContainer.Height",
+                            Name = "WindowModeContainer.Height",
                             Type = "float",
-                            Value = FullscreenContainer.Height
+                            Value = WindowModeContainer.Height
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "FullscreenContainer.Height Units",
+                            Name = "WindowModeContainer.Height Units",
                             Type = "DimensionUnitType",
-                            Value = FullscreenContainer.HeightUnits
+                            Value = WindowModeContainer.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "FullscreenContainer.Parent",
+                            Name = "WindowModeContainer.Parent",
                             Type = "string",
-                            Value = FullscreenContainer.Parent
+                            Value = WindowModeContainer.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "FullscreenContainer.Width",
+                            Name = "WindowModeContainer.Width",
                             Type = "float",
-                            Value = FullscreenContainer.Width
+                            Value = WindowModeContainer.Width
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "FullscreenContainer.Width Units",
+                            Name = "WindowModeContainer.Width Units",
                             Type = "DimensionUnitType",
-                            Value = FullscreenContainer.WidthUnits
+                            Value = WindowModeContainer.WidthUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "FullscreenContainer.X",
+                            Name = "WindowModeContainer.X",
                             Type = "float",
-                            Value = FullscreenContainer.X
+                            Value = WindowModeContainer.X
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "FullscreenContainer.Y",
+                            Name = "WindowModeContainer.Y",
                             Type = "float",
-                            Value = FullscreenContainer.Y
+                            Value = WindowModeContainer.Y
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2078,6 +2961,102 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "VolumeText.Blue",
+                            Type = "int",
+                            Value = VolumeText.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Green",
+                            Type = "int",
+                            Value = VolumeText.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Height",
+                            Type = "float",
+                            Value = VolumeText.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Parent",
+                            Type = "string",
+                            Value = VolumeText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Red",
+                            Type = "int",
+                            Value = VolumeText.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Text",
+                            Type = "string",
+                            Value = VolumeText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Width",
+                            Type = "float",
+                            Value = VolumeText.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.X Units",
+                            Type = "PositionUnitType",
+                            Value = VolumeText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = VolumeText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = VolumeText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "GraphicsContainer.Children Layout",
                             Type = "ChildrenLayout",
                             Value = GraphicsContainer.ChildrenLayout
@@ -2150,6 +3129,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "WindowModeComboBox.ListBoxInstanceHeight",
+                            Type = "float",
+                            Value = WindowModeComboBox.ListBoxInstanceHeight
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "WindowModeComboBox.Parent",
                             Type = "string",
                             Value = WindowModeComboBox.Parent
@@ -2185,6 +3172,542 @@
                             Name = "WindowModeComboBox.X Units",
                             Type = "PositionUnitType",
                             Value = WindowModeComboBox.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.Height",
+                            Type = "float",
+                            Value = SoundContainer.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = SoundContainer.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.Parent",
+                            Type = "string",
+                            Value = SoundContainer.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.Width",
+                            Type = "float",
+                            Value = SoundContainer.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SoundContainer.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.X",
+                            Type = "float",
+                            Value = SoundContainer.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.X Units",
+                            Type = "PositionUnitType",
+                            Value = SoundContainer.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.Y",
+                            Type = "float",
+                            Value = SoundContainer.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeContainer.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = VolumeContainer.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeContainer.Height",
+                            Type = "float",
+                            Value = VolumeContainer.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeContainer.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeContainer.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeContainer.Parent",
+                            Type = "string",
+                            Value = VolumeContainer.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeContainer.Width",
+                            Type = "float",
+                            Value = VolumeContainer.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeContainer.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeContainer.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSlider.Height",
+                            Type = "float",
+                            Value = VolumeSlider.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSlider.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeSlider.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSlider.Parent",
+                            Type = "string",
+                            Value = VolumeSlider.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSlider.Width",
+                            Type = "float",
+                            Value = VolumeSlider.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSlider.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeSlider.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSlider.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = VolumeSlider.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSlider.X Units",
+                            Type = "PositionUnitType",
+                            Value = VolumeSlider.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Blue",
+                            Type = "int",
+                            Value = VolumeMinText.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.FontSize",
+                            Type = "int",
+                            Value = VolumeMinText.FontSize
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Green",
+                            Type = "int",
+                            Value = VolumeMinText.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Height",
+                            Type = "float",
+                            Value = VolumeMinText.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeMinText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = VolumeMinText.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Parent",
+                            Type = "string",
+                            Value = VolumeMinText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Red",
+                            Type = "int",
+                            Value = VolumeMinText.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Text",
+                            Type = "string",
+                            Value = VolumeMinText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.VerticalAlignment",
+                            Type = "VerticalAlignment",
+                            Value = VolumeMinText.VerticalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Width",
+                            Type = "float",
+                            Value = VolumeMinText.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeMinText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = VolumeMinText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = VolumeMinText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSliderInstance.Parent",
+                            Type = "string",
+                            Value = VolumeSliderInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSliderInstance.Width",
+                            Type = "float",
+                            Value = VolumeSliderInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSliderInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeSliderInstance.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSliderInstance.X",
+                            Type = "float",
+                            Value = VolumeSliderInstance.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSliderInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = VolumeSliderInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Blue",
+                            Type = "int",
+                            Value = VolumeMaxText.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.FontSize",
+                            Type = "int",
+                            Value = VolumeMaxText.FontSize
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Green",
+                            Type = "int",
+                            Value = VolumeMaxText.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Height",
+                            Type = "float",
+                            Value = VolumeMaxText.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeMaxText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = VolumeMaxText.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Parent",
+                            Type = "string",
+                            Value = VolumeMaxText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Red",
+                            Type = "int",
+                            Value = VolumeMaxText.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Text",
+                            Type = "string",
+                            Value = VolumeMaxText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Width",
+                            Type = "float",
+                            Value = VolumeMaxText.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeMaxText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = VolumeMaxText.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.X Units",
+                            Type = "PositionUnitType",
+                            Value = VolumeMaxText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = VolumeMaxText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = VolumeMaxText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.Height",
+                            Type = "float",
+                            Value = CurrentVolumeLabel.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = CurrentVolumeLabel.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.LabelTextAlpha",
+                            Type = "int",
+                            Value = CurrentVolumeLabel.LabelTextAlpha
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.LabelTextBlue",
+                            Type = "int",
+                            Value = CurrentVolumeLabel.LabelTextBlue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.LabelTextGreen",
+                            Type = "int",
+                            Value = CurrentVolumeLabel.LabelTextGreen
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.LabelTextRed",
+                            Type = "int",
+                            Value = CurrentVolumeLabel.LabelTextRed
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.Parent",
+                            Type = "string",
+                            Value = CurrentVolumeLabel.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.Width",
+                            Type = "float",
+                            Value = CurrentVolumeLabel.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = CurrentVolumeLabel.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.X",
+                            Type = "float",
+                            Value = CurrentVolumeLabel.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = CurrentVolumeLabel.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.X Units",
+                            Type = "PositionUnitType",
+                            Value = CurrentVolumeLabel.XUnits
                         }
                         );
                         break;
@@ -2768,6 +4291,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "ResolutionComboBox.ListBoxInstanceHeight",
+                            Type = "float",
+                            Value = ResolutionComboBox.ListBoxInstanceHeight + 96f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "ResolutionComboBox.Parent",
                             Type = "string",
                             Value = ResolutionComboBox.Parent
@@ -2808,57 +4339,57 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "FullscreenContainer.Height",
+                            Name = "WindowModeContainer.Height",
                             Type = "float",
-                            Value = FullscreenContainer.Height + 0f
+                            Value = WindowModeContainer.Height + 0f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "FullscreenContainer.Height Units",
+                            Name = "WindowModeContainer.Height Units",
                             Type = "DimensionUnitType",
-                            Value = FullscreenContainer.HeightUnits
+                            Value = WindowModeContainer.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "FullscreenContainer.Parent",
+                            Name = "WindowModeContainer.Parent",
                             Type = "string",
-                            Value = FullscreenContainer.Parent
+                            Value = WindowModeContainer.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "FullscreenContainer.Width",
+                            Name = "WindowModeContainer.Width",
                             Type = "float",
-                            Value = FullscreenContainer.Width + 100f
+                            Value = WindowModeContainer.Width + 100f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "FullscreenContainer.Width Units",
+                            Name = "WindowModeContainer.Width Units",
                             Type = "DimensionUnitType",
-                            Value = FullscreenContainer.WidthUnits
+                            Value = WindowModeContainer.WidthUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "FullscreenContainer.X",
+                            Name = "WindowModeContainer.X",
                             Type = "float",
-                            Value = FullscreenContainer.X + 0f
+                            Value = WindowModeContainer.X + 0f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "FullscreenContainer.Y",
+                            Name = "WindowModeContainer.Y",
                             Type = "float",
-                            Value = FullscreenContainer.Y + 5f
+                            Value = WindowModeContainer.Y + 5f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2960,6 +4491,102 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "VolumeText.Blue",
+                            Type = "int",
+                            Value = VolumeText.Blue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Green",
+                            Type = "int",
+                            Value = VolumeText.Green + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Height",
+                            Type = "float",
+                            Value = VolumeText.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Parent",
+                            Type = "string",
+                            Value = VolumeText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Red",
+                            Type = "int",
+                            Value = VolumeText.Red + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Text",
+                            Type = "string",
+                            Value = VolumeText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Width",
+                            Type = "float",
+                            Value = VolumeText.Width + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.X Units",
+                            Type = "PositionUnitType",
+                            Value = VolumeText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = VolumeText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = VolumeText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "GraphicsContainer.Children Layout",
                             Type = "ChildrenLayout",
                             Value = GraphicsContainer.ChildrenLayout
@@ -3032,6 +4659,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "WindowModeComboBox.ListBoxInstanceHeight",
+                            Type = "float",
+                            Value = WindowModeComboBox.ListBoxInstanceHeight + 64f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "WindowModeComboBox.Parent",
                             Type = "string",
                             Value = WindowModeComboBox.Parent
@@ -3069,6 +4704,542 @@
                             Value = WindowModeComboBox.XUnits
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.Height",
+                            Type = "float",
+                            Value = SoundContainer.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = SoundContainer.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.Parent",
+                            Type = "string",
+                            Value = SoundContainer.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.Width",
+                            Type = "float",
+                            Value = SoundContainer.Width + 98f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SoundContainer.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.X",
+                            Type = "float",
+                            Value = SoundContainer.X + 1f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.X Units",
+                            Type = "PositionUnitType",
+                            Value = SoundContainer.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SoundContainer.Y",
+                            Type = "float",
+                            Value = SoundContainer.Y + 40f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeContainer.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = VolumeContainer.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeContainer.Height",
+                            Type = "float",
+                            Value = VolumeContainer.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeContainer.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeContainer.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeContainer.Parent",
+                            Type = "string",
+                            Value = VolumeContainer.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeContainer.Width",
+                            Type = "float",
+                            Value = VolumeContainer.Width + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeContainer.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeContainer.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSlider.Height",
+                            Type = "float",
+                            Value = VolumeSlider.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSlider.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeSlider.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSlider.Parent",
+                            Type = "string",
+                            Value = VolumeSlider.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSlider.Width",
+                            Type = "float",
+                            Value = VolumeSlider.Width + 80f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSlider.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeSlider.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSlider.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = VolumeSlider.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSlider.X Units",
+                            Type = "PositionUnitType",
+                            Value = VolumeSlider.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Blue",
+                            Type = "int",
+                            Value = VolumeMinText.Blue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.FontSize",
+                            Type = "int",
+                            Value = VolumeMinText.FontSize + 24
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Green",
+                            Type = "int",
+                            Value = VolumeMinText.Green + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Height",
+                            Type = "float",
+                            Value = VolumeMinText.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeMinText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = VolumeMinText.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Parent",
+                            Type = "string",
+                            Value = VolumeMinText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Red",
+                            Type = "int",
+                            Value = VolumeMinText.Red + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Text",
+                            Type = "string",
+                            Value = VolumeMinText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.VerticalAlignment",
+                            Type = "VerticalAlignment",
+                            Value = VolumeMinText.VerticalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Width",
+                            Type = "float",
+                            Value = VolumeMinText.Width + 2f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeMinText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = VolumeMinText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMinText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = VolumeMinText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSliderInstance.Parent",
+                            Type = "string",
+                            Value = VolumeSliderInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSliderInstance.Width",
+                            Type = "float",
+                            Value = VolumeSliderInstance.Width + 92f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSliderInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeSliderInstance.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSliderInstance.X",
+                            Type = "float",
+                            Value = VolumeSliderInstance.X + 2f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeSliderInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = VolumeSliderInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Blue",
+                            Type = "int",
+                            Value = VolumeMaxText.Blue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.FontSize",
+                            Type = "int",
+                            Value = VolumeMaxText.FontSize + 24
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Green",
+                            Type = "int",
+                            Value = VolumeMaxText.Green + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Height",
+                            Type = "float",
+                            Value = VolumeMaxText.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeMaxText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = VolumeMaxText.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Parent",
+                            Type = "string",
+                            Value = VolumeMaxText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Red",
+                            Type = "int",
+                            Value = VolumeMaxText.Red + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Text",
+                            Type = "string",
+                            Value = VolumeMaxText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Width",
+                            Type = "float",
+                            Value = VolumeMaxText.Width + 5f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = VolumeMaxText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = VolumeMaxText.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.X Units",
+                            Type = "PositionUnitType",
+                            Value = VolumeMaxText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = VolumeMaxText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "VolumeMaxText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = VolumeMaxText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.Height",
+                            Type = "float",
+                            Value = CurrentVolumeLabel.Height + 100f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = CurrentVolumeLabel.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.LabelTextAlpha",
+                            Type = "int",
+                            Value = CurrentVolumeLabel.LabelTextAlpha + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.LabelTextBlue",
+                            Type = "int",
+                            Value = CurrentVolumeLabel.LabelTextBlue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.LabelTextGreen",
+                            Type = "int",
+                            Value = CurrentVolumeLabel.LabelTextGreen + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.LabelTextRed",
+                            Type = "int",
+                            Value = CurrentVolumeLabel.LabelTextRed + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.Parent",
+                            Type = "string",
+                            Value = CurrentVolumeLabel.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.Width",
+                            Type = "float",
+                            Value = CurrentVolumeLabel.Width + 10f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = CurrentVolumeLabel.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.X",
+                            Type = "float",
+                            Value = CurrentVolumeLabel.X + 20f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = CurrentVolumeLabel.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.X Units",
+                            Type = "PositionUnitType",
+                            Value = CurrentVolumeLabel.XUnits
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -3096,10 +5267,18 @@
             public JHP4SD.GumRuntimes.ContainerRuntime ResolutionContainer { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime ResolutionText { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.ComboBoxRuntime ResolutionComboBox { get; set; }
-            public JHP4SD.GumRuntimes.ContainerRuntime FullscreenContainer { get; set; }
+            public JHP4SD.GumRuntimes.ContainerRuntime WindowModeContainer { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime WindowModeText { get; set; }
+            public JHP4SD.GumRuntimes.TextRuntime VolumeText { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime GraphicsContainer { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.ComboBoxRuntime WindowModeComboBox { get; set; }
+            public JHP4SD.GumRuntimes.ContainerRuntime SoundContainer { get; set; }
+            public JHP4SD.GumRuntimes.ContainerRuntime VolumeContainer { get; set; }
+            public JHP4SD.GumRuntimes.ContainerRuntime VolumeSlider { get; set; }
+            public JHP4SD.GumRuntimes.TextRuntime VolumeMinText { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.SliderRuntime VolumeSliderInstance { get; set; }
+            public JHP4SD.GumRuntimes.TextRuntime VolumeMaxText { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.LabelRuntime CurrentVolumeLabel { get; set; }
             public SettingsGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -3134,10 +5313,18 @@
                 ResolutionContainer = this.GetGraphicalUiElementByName("ResolutionContainer") as JHP4SD.GumRuntimes.ContainerRuntime;
                 ResolutionText = this.GetGraphicalUiElementByName("ResolutionText") as JHP4SD.GumRuntimes.TextRuntime;
                 ResolutionComboBox = this.GetGraphicalUiElementByName("ResolutionComboBox") as JHP4SD.GumRuntimes.DefaultForms.ComboBoxRuntime;
-                FullscreenContainer = this.GetGraphicalUiElementByName("FullscreenContainer") as JHP4SD.GumRuntimes.ContainerRuntime;
+                WindowModeContainer = this.GetGraphicalUiElementByName("WindowModeContainer") as JHP4SD.GumRuntimes.ContainerRuntime;
                 WindowModeText = this.GetGraphicalUiElementByName("WindowModeText") as JHP4SD.GumRuntimes.TextRuntime;
+                VolumeText = this.GetGraphicalUiElementByName("VolumeText") as JHP4SD.GumRuntimes.TextRuntime;
                 GraphicsContainer = this.GetGraphicalUiElementByName("GraphicsContainer") as JHP4SD.GumRuntimes.ContainerRuntime;
                 WindowModeComboBox = this.GetGraphicalUiElementByName("WindowModeComboBox") as JHP4SD.GumRuntimes.DefaultForms.ComboBoxRuntime;
+                SoundContainer = this.GetGraphicalUiElementByName("SoundContainer") as JHP4SD.GumRuntimes.ContainerRuntime;
+                VolumeContainer = this.GetGraphicalUiElementByName("VolumeContainer") as JHP4SD.GumRuntimes.ContainerRuntime;
+                VolumeSlider = this.GetGraphicalUiElementByName("VolumeSlider") as JHP4SD.GumRuntimes.ContainerRuntime;
+                VolumeMinText = this.GetGraphicalUiElementByName("VolumeMinText") as JHP4SD.GumRuntimes.TextRuntime;
+                VolumeSliderInstance = this.GetGraphicalUiElementByName("VolumeSliderInstance") as JHP4SD.GumRuntimes.DefaultForms.SliderRuntime;
+                VolumeMaxText = this.GetGraphicalUiElementByName("VolumeMaxText") as JHP4SD.GumRuntimes.TextRuntime;
+                CurrentVolumeLabel = this.GetGraphicalUiElementByName("CurrentVolumeLabel") as JHP4SD.GumRuntimes.DefaultForms.LabelRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Screens.SettingsGumForms(this);

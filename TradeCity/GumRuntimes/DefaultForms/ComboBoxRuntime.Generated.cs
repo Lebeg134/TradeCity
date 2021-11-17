@@ -38,7 +38,8 @@
                             TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                             Height = 48f;
                             Width = 250f;
-                            ListBoxInstance.Height = 180f;
+                            ListBoxInstance.Height = 150f;
+                            ListBoxInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                             ListBoxInstance.Width = 0f;
                             ListBoxInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             ListBoxInstance.X = 0f;
@@ -225,7 +226,11 @@
                         setHeightFirstValue = true;
                         HeightFirstValue = 48f;
                         setListBoxInstanceHeightFirstValue = true;
-                        ListBoxInstanceHeightFirstValue = 180f;
+                        ListBoxInstanceHeightFirstValue = 150f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ListBoxInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                        }
                         setListBoxInstanceWidthFirstValue = true;
                         ListBoxInstanceWidthFirstValue = 0f;
                         if (interpolationValue < 1)
@@ -360,7 +365,11 @@
                         setHeightSecondValue = true;
                         HeightSecondValue = 48f;
                         setListBoxInstanceHeightSecondValue = true;
-                        ListBoxInstanceHeightSecondValue = 180f;
+                        ListBoxInstanceHeightSecondValue = 150f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ListBoxInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                        }
                         setListBoxInstanceWidthSecondValue = true;
                         ListBoxInstanceWidthSecondValue = 0f;
                         if (interpolationValue >= 1)
@@ -916,6 +925,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "ListBoxInstance.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = ListBoxInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "ListBoxInstance.Width",
                             Type = "float",
                             Value = ListBoxInstance.Width
@@ -1264,7 +1281,15 @@
                             SetsValue = true,
                             Name = "ListBoxInstance.Height",
                             Type = "float",
-                            Value = ListBoxInstance.Height + 180f
+                            Value = ListBoxInstance.Height + 150f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ListBoxInstance.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = ListBoxInstance.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1969,7 +1994,23 @@
             public JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime NineSliceInstance { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime TextInstance { get; set; }
             public JHP4SD.GumRuntimes.SpriteRuntime SpriteInstance { get; set; }
+            public float ListBoxInstanceHeight
+            {
+                get
+                {
+                    return ListBoxInstance.Height;
+                }
+                set
+                {
+                    if (ListBoxInstance.Height != value)
+                    {
+                        ListBoxInstance.Height = value;
+                        ListBoxInstanceHeightChanged?.Invoke(this, null);
+                    }
+                }
+            }
             public event FlatRedBall.Gui.WindowEvent ListBoxInstanceClick;
+            public event System.EventHandler ListBoxInstanceHeightChanged;
             public ComboBoxRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             	: base(false, tryCreateFormsObject)
             {

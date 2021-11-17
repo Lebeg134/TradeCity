@@ -6,6 +6,8 @@
             public FlatRedBall.Forms.Controls.Button BackButtonInstance { get; set; }
             public FlatRedBall.Forms.Controls.ComboBox ResolutionComboBox { get; set; }
             public FlatRedBall.Forms.Controls.ComboBox WindowModeComboBox { get; set; }
+            public FlatRedBall.Forms.Controls.Slider VolumeSliderInstance { get; set; }
+            public FlatRedBall.Forms.Controls.Label CurrentVolumeLabel { get; set; }
             public SettingsGumForms () 
             {
                 CustomInitialize();
@@ -21,6 +23,8 @@
                 BackButtonInstance = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("BackButtonInstance").FormsControlAsObject;
                 ResolutionComboBox = (FlatRedBall.Forms.Controls.ComboBox)Visual.GetGraphicalUiElementByName("ResolutionComboBox").FormsControlAsObject;
                 WindowModeComboBox = (FlatRedBall.Forms.Controls.ComboBox)Visual.GetGraphicalUiElementByName("WindowModeComboBox").FormsControlAsObject;
+                VolumeSliderInstance = (FlatRedBall.Forms.Controls.Slider)Visual.GetGraphicalUiElementByName("VolumeSliderInstance").FormsControlAsObject;
+                CurrentVolumeLabel = (FlatRedBall.Forms.Controls.Label)Visual.GetGraphicalUiElementByName("CurrentVolumeLabel").FormsControlAsObject;
             }
             partial void CustomInitialize();
         }

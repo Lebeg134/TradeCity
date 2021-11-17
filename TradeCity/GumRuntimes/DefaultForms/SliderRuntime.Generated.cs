@@ -31,10 +31,14 @@
                         case  VariableState.Default:
                             LineInstance.Parent = this.GetGraphicalUiElementByName("TrackInstance") ?? this;
                             ThumbInstance.Parent = this.GetGraphicalUiElementByName("TrackInstance") ?? this;
+                            LineInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                             Height = 48f;
                             Width = 484f;
+                            LineInstance.Blue = 128;
+                            LineInstance.Green = 128;
                             LineInstance.Height = 16f;
                             LineInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            LineInstance.Red = 128;
                             LineInstance.Width = 0f;
                             LineInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             LineInstance.X = 0f;
@@ -95,10 +99,26 @@
                 bool setHeightSecondValue = false;
                 float HeightFirstValue= 0;
                 float HeightSecondValue= 0;
+                bool setLineInstanceBlueFirstValue = false;
+                bool setLineInstanceBlueSecondValue = false;
+                int LineInstanceBlueFirstValue= 0;
+                int LineInstanceBlueSecondValue= 0;
+                bool setLineInstanceCurrentColorCategoryStateFirstValue = false;
+                bool setLineInstanceCurrentColorCategoryStateSecondValue = false;
+                JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory LineInstanceCurrentColorCategoryStateFirstValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory LineInstanceCurrentColorCategoryStateSecondValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                bool setLineInstanceGreenFirstValue = false;
+                bool setLineInstanceGreenSecondValue = false;
+                int LineInstanceGreenFirstValue= 0;
+                int LineInstanceGreenSecondValue= 0;
                 bool setLineInstanceHeightFirstValue = false;
                 bool setLineInstanceHeightSecondValue = false;
                 float LineInstanceHeightFirstValue= 0;
                 float LineInstanceHeightSecondValue= 0;
+                bool setLineInstanceRedFirstValue = false;
+                bool setLineInstanceRedSecondValue = false;
+                int LineInstanceRedFirstValue= 0;
+                int LineInstanceRedSecondValue= 0;
                 bool setLineInstanceWidthFirstValue = false;
                 bool setLineInstanceWidthSecondValue = false;
                 float LineInstanceWidthFirstValue= 0;
@@ -152,6 +172,12 @@
                     case  VariableState.Default:
                         setHeightFirstValue = true;
                         HeightFirstValue = 48f;
+                        setLineInstanceBlueFirstValue = true;
+                        LineInstanceBlueFirstValue = 128;
+                        setLineInstanceCurrentColorCategoryStateFirstValue = true;
+                        LineInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                        setLineInstanceGreenFirstValue = true;
+                        LineInstanceGreenFirstValue = 128;
                         setLineInstanceHeightFirstValue = true;
                         LineInstanceHeightFirstValue = 16f;
                         if (interpolationValue < 1)
@@ -162,6 +188,8 @@
                         {
                             this.LineInstance.Parent = this.GetGraphicalUiElementByName("TrackInstance") ?? this;
                         }
+                        setLineInstanceRedFirstValue = true;
+                        LineInstanceRedFirstValue = 128;
                         setLineInstanceWidthFirstValue = true;
                         LineInstanceWidthFirstValue = 0f;
                         if (interpolationValue < 1)
@@ -253,6 +281,12 @@
                     case  VariableState.Default:
                         setHeightSecondValue = true;
                         HeightSecondValue = 48f;
+                        setLineInstanceBlueSecondValue = true;
+                        LineInstanceBlueSecondValue = 128;
+                        setLineInstanceCurrentColorCategoryStateSecondValue = true;
+                        LineInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                        setLineInstanceGreenSecondValue = true;
+                        LineInstanceGreenSecondValue = 128;
                         setLineInstanceHeightSecondValue = true;
                         LineInstanceHeightSecondValue = 16f;
                         if (interpolationValue >= 1)
@@ -263,6 +297,8 @@
                         {
                             this.LineInstance.Parent = this.GetGraphicalUiElementByName("TrackInstance") ?? this;
                         }
+                        setLineInstanceRedSecondValue = true;
+                        LineInstanceRedSecondValue = 128;
                         setLineInstanceWidthSecondValue = true;
                         LineInstanceWidthSecondValue = 0f;
                         if (interpolationValue >= 1)
@@ -358,9 +394,25 @@
                 {
                     Height = HeightFirstValue * (1 - interpolationValue) + HeightSecondValue * interpolationValue;
                 }
+                if (setLineInstanceBlueFirstValue && setLineInstanceBlueSecondValue)
+                {
+                    LineInstance.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(LineInstanceBlueFirstValue* (1 - interpolationValue) + LineInstanceBlueSecondValue * interpolationValue);
+                }
+                if (setLineInstanceCurrentColorCategoryStateFirstValue && setLineInstanceCurrentColorCategoryStateSecondValue)
+                {
+                    LineInstance.InterpolateBetween(LineInstanceCurrentColorCategoryStateFirstValue, LineInstanceCurrentColorCategoryStateSecondValue, interpolationValue);
+                }
+                if (setLineInstanceGreenFirstValue && setLineInstanceGreenSecondValue)
+                {
+                    LineInstance.Green = FlatRedBall.Math.MathFunctions.RoundToInt(LineInstanceGreenFirstValue* (1 - interpolationValue) + LineInstanceGreenSecondValue * interpolationValue);
+                }
                 if (setLineInstanceHeightFirstValue && setLineInstanceHeightSecondValue)
                 {
                     LineInstance.Height = LineInstanceHeightFirstValue * (1 - interpolationValue) + LineInstanceHeightSecondValue * interpolationValue;
+                }
+                if (setLineInstanceRedFirstValue && setLineInstanceRedSecondValue)
+                {
+                    LineInstance.Red = FlatRedBall.Math.MathFunctions.RoundToInt(LineInstanceRedFirstValue* (1 - interpolationValue) + LineInstanceRedSecondValue * interpolationValue);
                 }
                 if (setLineInstanceWidthFirstValue && setLineInstanceWidthSecondValue)
                 {
@@ -604,6 +656,30 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "LineInstance.Blue",
+                            Type = "int",
+                            Value = LineInstance.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LineInstance.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = LineInstance.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LineInstance.Green",
+                            Type = "int",
+                            Value = LineInstance.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "LineInstance.Height",
                             Type = "float",
                             Value = LineInstance.Height
@@ -623,6 +699,14 @@
                             Name = "LineInstance.Parent",
                             Type = "string",
                             Value = LineInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LineInstance.Red",
+                            Type = "int",
+                            Value = LineInstance.Red
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -862,6 +946,30 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "LineInstance.Blue",
+                            Type = "int",
+                            Value = LineInstance.Blue + 128
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LineInstance.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = LineInstance.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LineInstance.Green",
+                            Type = "int",
+                            Value = LineInstance.Green + 128
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "LineInstance.Height",
                             Type = "float",
                             Value = LineInstance.Height + 16f
@@ -881,6 +989,14 @@
                             Name = "LineInstance.Parent",
                             Type = "string",
                             Value = LineInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LineInstance.Red",
+                            Type = "int",
+                            Value = LineInstance.Red + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

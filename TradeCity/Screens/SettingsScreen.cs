@@ -19,6 +19,7 @@ namespace JHP4SD.Screens
     {
         static int _resolutionLastSelected = 1;
         static int _windowModeLastSelected = 0;
+        static double _currentVolume = 100;
 
         void CustomInitialize()
         {
@@ -35,8 +36,21 @@ namespace JHP4SD.Screens
             windowModeComboBox.SelectedIndex = _windowModeLastSelected;
             windowModeComboBox.SelectionChanged += WindowModeComboBox_SelectionChanged;
 
+            var volumeSlider = Forms.VolumeSliderInstance;
+            volumeSlider.Value = _currentVolume;
+            volumeSlider.LargeChange = 10;
+            volumeSlider.SmallChange = 1;
+            Forms.CurrentVolumeLabel.Text = string.Format("{0:0}", _currentVolume);
+            volumeSlider.ValueChanged += VolumeSlider_ValueChanged;
+
 
             Forms.BackButtonInstance.Click += BackButtonInstance_Click;
+        }
+
+        private void VolumeSlider_ValueChanged(object sender, EventArgs e)
+        {
+            _currentVolume = Forms.VolumeSliderInstance.Value;
+            Forms.CurrentVolumeLabel.Text = string.Format("{0:0}", _currentVolume);
         }
 
         private void WindowModeComboBox_SelectionChanged(object arg1, SelectionChangedEventArgs arg2)

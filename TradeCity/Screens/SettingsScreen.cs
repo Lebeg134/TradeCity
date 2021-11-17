@@ -15,11 +15,24 @@ using FlatRedBall.Forms.Controls;
 
 namespace JHP4SD.Screens
 {
+    struct SliderInfo
+    {
+    
+        public double lastSelected { get; set; }
+        public Label displayLabel { get; set; }
+        public SliderInfo(double parLastSelected, Label parDisplayLabel)
+        {
+            lastSelected = parLastSelected;
+            displayLabel = parDisplayLabel;
+        }
+    }
     public partial class SettingsScreen
     {
         static int _resolutionLastSelected = 1;
         static int _windowModeLastSelected = 0;
         static double _currentVolume = 100;
+        static double _currentMusic = 50;
+        Dictionary<Slider, SliderInfo> sliders = new Dictionary<Slider, SliderInfo>();
 
         void CustomInitialize()
         {
@@ -36,22 +49,44 @@ namespace JHP4SD.Screens
             windowModeComboBox.SelectedIndex = _windowModeLastSelected;
             windowModeComboBox.SelectionChanged += WindowModeComboBox_SelectionChanged;
 
-            var volumeSlider = Forms.VolumeSliderInstance;
-            volumeSlider.Value = _currentVolume;
-            volumeSlider.LargeChange = 10;
-            volumeSlider.SmallChange = 1;
-            Forms.CurrentVolumeLabel.Text = string.Format("{0:0}", _currentVolume);
-            volumeSlider.ValueChanged += VolumeSlider_ValueChanged;
 
+            sliders.Add(Forms.VolumeSliderInstance, new SliderInfo(_currentVolume, Forms.CurrentVolumeLabel));
+            sliders.Add(Forms.MusicSliderInstance, new SliderInfo(_currentMusic, Forms.CurrentMusicVolumeLabel));
+            Forms.VolumeSliderInstance.ValueChanged += VolumeSlider_ValueChanged;
+            Forms.MusicSliderInstance.ValueChanged += MusicSliderInstance_ValueChanged;
+            foreach (Slider slider in sliders.Keys)
+            {
+                slider.Value = sliders[slider].lastSelected;
+                slider.LargeChange = 10;
+                slider.IsMoveToPointEnabled = true;
+                slider.ValueChanged += UpdateSlider;
+            }
+            
+            UpdateSliders();
 
             Forms.BackButtonInstance.Click += BackButtonInstance_Click;
         }
-
         private void VolumeSlider_ValueChanged(object sender, EventArgs e)
         {
             _currentVolume = Forms.VolumeSliderInstance.Value;
-            Forms.CurrentVolumeLabel.Text = string.Format("{0:0}", _currentVolume);
         }
+        private void MusicSliderInstance_ValueChanged(object sender, EventArgs e)
+        {
+            _currentMusic = Forms.MusicSliderInstance.Value;
+        }
+
+        private void UpdateSliders()
+        {
+            foreach (Slider slider in sliders.Keys)
+            {
+                sliders[slider].displayLabel.Text = string.Format("{0:0}", slider.Value);
+            }
+        }
+        private void UpdateSlider(object sender, EventArgs e)
+        {
+            UpdateSliders();
+        }
+        
 
         private void WindowModeComboBox_SelectionChanged(object arg1, SelectionChangedEventArgs arg2)
         {

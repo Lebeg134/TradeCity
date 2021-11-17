@@ -2095,6 +2095,118 @@
         "ElementType": "Screens",
         "EventType": 7,
         "TimestampUtc": "2021-11-17T08:45:09.9259764Z"
+      },
+      {
+        "NewName": " SettingsGum.VolumeContainer1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T09:27:20.8145596Z"
+      },
+      {
+        "NewName": " SettingsGum.CurrentVolumeLabel1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T09:27:20.8451924Z"
+      },
+      {
+        "NewName": " SettingsGum.VolumeSlider1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T09:27:20.8541674Z"
+      },
+      {
+        "NewName": " SettingsGum.VolumeMaxText1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T09:27:20.8611452Z"
+      },
+      {
+        "NewName": " SettingsGum.VolumeMinText1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T09:27:20.8665555Z"
+      },
+      {
+        "NewName": " SettingsGum.VolumeSliderInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T09:27:20.8734413Z"
+      },
+      {
+        "NewName": " SettingsGum.VolumeText1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T09:27:20.8823905Z"
+      },
+      {
+        "NewName": " SettingsGum.MusicContainer",
+        "OldName": " SettingsGum.VolumeContainer1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T09:27:52.1791164Z"
+      },
+      {
+        "NewName": " SettingsGum.MusicText",
+        "OldName": " SettingsGum.VolumeText1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T09:28:00.5538954Z"
+      },
+      {
+        "NewName": " SettingsGum.MusicSlider",
+        "OldName": " SettingsGum.VolumeSlider1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T09:28:09.4684847Z"
+      },
+      {
+        "NewName": " SettingsGum.MusicMinText1",
+        "OldName": " SettingsGum.VolumeMinText1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T09:28:17.7172005Z"
+      },
+      {
+        "NewName": " SettingsGum.MusicSliderInstance",
+        "OldName": " SettingsGum.VolumeSliderInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T09:28:34.1881619Z"
+      },
+      {
+        "NewName": " SettingsGum.MusicMinText",
+        "OldName": " SettingsGum.MusicMinText1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T09:28:36.9629583Z"
+      },
+      {
+        "NewName": " SettingsGum.MusicMaxText",
+        "OldName": " SettingsGum.VolumeMaxText1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T09:28:44.793841Z"
+      },
+      {
+        "NewName": " SettingsGum.CurrentMusicVolumeLabel",
+        "OldName": " SettingsGum.CurrentVolumeLabel1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T09:29:00.6463325Z"
+      },
+      {
+        "NewName": " SettingsGum.RectangleInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T09:31:00.3231347Z"
       }
     ]
   }

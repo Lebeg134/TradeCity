@@ -528,6 +528,22 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>pause</Name>
     </None>
+    <None Include="content\globalcontent\screen\cityinternal.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>cityinternal</Name>
+    </None>
+    <None Include="content\globalcontent\screen\citynight.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>citynight</Name>
+    </None>
+    <None Include="content\globalcontent\screen\mapplaceholder.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>mapplaceholder</Name>
+    </None>
+    <None Include="content\globalcontent\screen\marketplaceholder.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>marketplaceholder</Name>
+    </None>
     <None Include="content\gumproject\components\defaultforms\button.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>button</Name>
@@ -771,14 +787,6 @@
     <None Include="content\gumproject\screens\multiplayergum.gusx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>MultiplayerGum</Name>
-    </None>
-    <None Include="content\gumproject\screens\resources\cityinternal.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>cityinternal</Name>
-    </None>
-    <None Include="content\gumproject\screens\resources\citynight.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>citynight</Name>
     </None>
     <None Include="content\gumproject\screens\settingsgum.gusx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -8,8 +8,6 @@ namespace JHP4SD.GumRuntimes.DefaultForms
     {
         void CustomInitialize () 
         {
-            
-            //Custom Code
         }
     }
 }

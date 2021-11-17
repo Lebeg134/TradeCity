@@ -65,6 +65,12 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>ColorCategoryState</Type>
+      <Name>ColoredFrameInstance.ColorCategoryState</Name>
+      <Value xsi:type="xsd:string">TransparentBlack</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>ColoredFrameInstance.Height</Name>
       <Value xsi:type="xsd:float">90</Value>

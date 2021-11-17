@@ -37,7 +37,7 @@
       <IsFile>true</IsFile>
       <Type>string</Type>
       <Name>BackgroundImage.SourceFile</Name>
-      <Value xsi:type="xsd:string">Screens/Resources/CityNight.jpg</Value>
+      <Value xsi:type="xsd:string">../GlobalContent/Screen/CityNight.jpg</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

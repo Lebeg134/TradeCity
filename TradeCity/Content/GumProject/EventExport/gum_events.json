@@ -1981,6 +1981,48 @@
         "ElementType": "Components",
         "EventType": 5,
         "TimestampUtc": "2021-11-17T20:13:02.108124Z"
+      },
+      {
+        "NewName": " MapGum.SpriteInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T20:59:43.6476027Z"
+      },
+      {
+        "NewName": " MapGum.PaceholderText",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T20:59:43.6495863Z"
+      },
+      {
+        "NewName": " MarketGum.SpriteInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T20:59:44.7431979Z"
+      },
+      {
+        "NewName": " MarketGum.PaceholderText",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T20:59:44.7457018Z"
+      },
+      {
+        "NewName": " MapGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T20:59:51.3598263Z"
+      },
+      {
+        "NewName": " MarketGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T20:59:52.6187449Z"
       }
     ],
     "torok": [

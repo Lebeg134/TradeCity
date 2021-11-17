@@ -28,7 +28,7 @@
                             PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance");
                             SpriteInstance.Height = 0f;
                             SpriteInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
-                            SetProperty("SpriteInstance.SourceFile", "Screens/Resources/CityInternal.jpg");
+                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/Screen/CityInternal.jpg");
                             SpriteInstance.Width = 0f;
                             SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             SpriteInstance.X = 0f;
@@ -215,7 +215,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            SetProperty("SpriteInstance.SourceFile", "Screens/Resources/CityInternal.jpg");
+                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/Screen/CityInternal.jpg");
                         }
                         setSpriteInstanceWidthFirstValue = true;
                         SpriteInstanceWidthFirstValue = 0f;
@@ -358,7 +358,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            SetProperty("SpriteInstance.SourceFile", "Screens/Resources/CityInternal.jpg");
+                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/Screen/CityInternal.jpg");
                         }
                         setSpriteInstanceWidthSecondValue = true;
                         SpriteInstanceWidthSecondValue = 0f;

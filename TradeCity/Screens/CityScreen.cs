@@ -22,7 +22,6 @@ namespace JHP4SD.Screens
         void CustomInitialize()
         {
 
-
         }
 
         void CustomActivity(bool firstTimeCalled)

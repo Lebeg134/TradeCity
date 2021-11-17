@@ -127,7 +127,7 @@
       <IsFile>true</IsFile>
       <Type>string</Type>
       <Name>SpriteInstance.SourceFile</Name>
-      <Value xsi:type="xsd:string">Screens/Resources/CityInternal.jpg</Value>
+      <Value xsi:type="xsd:string">../GlobalContent/Screen/CityInternal.jpg</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

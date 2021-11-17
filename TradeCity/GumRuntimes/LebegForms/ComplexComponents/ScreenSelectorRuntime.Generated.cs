@@ -35,6 +35,7 @@
                             CityTab.Parent = this.GetGraphicalUiElementByName("TabContainer") ?? this;
                             MapTab.Parent = this.GetGraphicalUiElementByName("TabContainer") ?? this;
                             MarketTab.Parent = this.GetGraphicalUiElementByName("TabContainer") ?? this;
+                            ColoredFrameInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.TransparentBlack;
                             ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
                             Height = 108f;
                             HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
@@ -138,6 +139,10 @@
                 bool setCityTabYSecondValue = false;
                 float CityTabYFirstValue= 0;
                 float CityTabYSecondValue= 0;
+                bool setColoredFrameInstanceCurrentColorCategoryStateFirstValue = false;
+                bool setColoredFrameInstanceCurrentColorCategoryStateSecondValue = false;
+                JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory ColoredFrameInstanceCurrentColorCategoryStateFirstValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory ColoredFrameInstanceCurrentColorCategoryStateSecondValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                 bool setColoredFrameInstanceHeightFirstValue = false;
                 bool setColoredFrameInstanceHeightSecondValue = false;
                 float ColoredFrameInstanceHeightFirstValue= 0;
@@ -241,6 +246,8 @@
                         }
                         setCityTabYFirstValue = true;
                         CityTabYFirstValue = 0f;
+                        setColoredFrameInstanceCurrentColorCategoryStateFirstValue = true;
+                        ColoredFrameInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.TransparentBlack;
                         setColoredFrameInstanceHeightFirstValue = true;
                         ColoredFrameInstanceHeightFirstValue = 90f;
                         if (interpolationValue < 1)
@@ -416,6 +423,8 @@
                         }
                         setCityTabYSecondValue = true;
                         CityTabYSecondValue = 0f;
+                        setColoredFrameInstanceCurrentColorCategoryStateSecondValue = true;
+                        ColoredFrameInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.TransparentBlack;
                         setColoredFrameInstanceHeightSecondValue = true;
                         ColoredFrameInstanceHeightSecondValue = 90f;
                         if (interpolationValue >= 1)
@@ -576,6 +585,10 @@
                 if (setCityTabYFirstValue && setCityTabYSecondValue)
                 {
                     CityTab.Y = CityTabYFirstValue * (1 - interpolationValue) + CityTabYSecondValue * interpolationValue;
+                }
+                if (setColoredFrameInstanceCurrentColorCategoryStateFirstValue && setColoredFrameInstanceCurrentColorCategoryStateSecondValue)
+                {
+                    ColoredFrameInstance.InterpolateBetween(ColoredFrameInstanceCurrentColorCategoryStateFirstValue, ColoredFrameInstanceCurrentColorCategoryStateSecondValue, interpolationValue);
                 }
                 if (setColoredFrameInstanceHeightFirstValue && setColoredFrameInstanceHeightSecondValue)
                 {
@@ -904,6 +917,14 @@
                             Name = "Y Units",
                             Type = "PositionUnitType",
                             Value = YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ColoredFrameInstance.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = ColoredFrameInstance.CurrentColorCategoryState
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1338,6 +1359,14 @@
                             Name = "Y Units",
                             Type = "PositionUnitType",
                             Value = YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ColoredFrameInstance.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = ColoredFrameInstance.CurrentColorCategoryState
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

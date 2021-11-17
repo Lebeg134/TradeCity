@@ -31,7 +31,7 @@
                             BackgroundImage.Height = 0f;
                             BackgroundImage.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             BackgroundImage.Red = 255;
-                            SetProperty("BackgroundImage.SourceFile", "Screens/Resources/CityNight.jpg");
+                            SetProperty("BackgroundImage.SourceFile", "../GlobalContent/Screen/CityNight.jpg");
                             BackgroundImage.Width = 0f;
                             BackgroundImage.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             BackgroundImage.X = 0f;
@@ -241,7 +241,7 @@
                         BackgroundImageRedFirstValue = 255;
                         if (interpolationValue < 1)
                         {
-                            SetProperty("BackgroundImage.SourceFile", "Screens/Resources/CityNight.jpg");
+                            SetProperty("BackgroundImage.SourceFile", "../GlobalContent/Screen/CityNight.jpg");
                         }
                         setBackgroundImageWidthFirstValue = true;
                         BackgroundImageWidthFirstValue = 0f;
@@ -446,7 +446,7 @@
                         BackgroundImageRedSecondValue = 255;
                         if (interpolationValue >= 1)
                         {
-                            SetProperty("BackgroundImage.SourceFile", "Screens/Resources/CityNight.jpg");
+                            SetProperty("BackgroundImage.SourceFile", "../GlobalContent/Screen/CityNight.jpg");
                         }
                         setBackgroundImageWidthSecondValue = true;
                         BackgroundImageWidthSecondValue = 0f;

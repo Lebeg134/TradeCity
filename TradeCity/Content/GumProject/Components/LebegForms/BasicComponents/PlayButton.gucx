@@ -83,6 +83,18 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>float</Type>
+      <Name>SpriteInstance.Height</Name>
+      <Value xsi:type="xsd:float">75</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>SpriteInstance.Height Units</Name>
+      <Value xsi:type="xsd:int">1</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>string</Type>
       <Name>SpriteInstance.Parent</Name>
       <Value xsi:type="xsd:string">ColoredFrameInstance</Value>
@@ -99,6 +111,18 @@
       <Type>bool</Type>
       <Name>SpriteInstance.Visible</Name>
       <Value xsi:type="xsd:boolean">true</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>SpriteInstance.Width</Name>
+      <Value xsi:type="xsd:float">75</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>SpriteInstance.Width Units</Name>
+      <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -213,6 +237,18 @@
         <Value xsi:type="xsd:float">0</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Width Units</Name>
+        <Value xsi:type="xsd:int">2</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Height Units</Name>
+        <Value xsi:type="xsd:int">2</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
       <VariableList xsi:type="VariableListSaveOfString">
         <Type>string</Type>
         <Name>SpriteInstance.AnimationFrames</Name>
@@ -276,6 +312,18 @@
         <Value xsi:type="xsd:float">0</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Width Units</Name>
+        <Value xsi:type="xsd:int">2</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Height Units</Name>
+        <Value xsi:type="xsd:int">2</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>DisabledOn</Name>
@@ -330,6 +378,18 @@
         <Type>float</Type>
         <Name>ColoredFrameInstance.Width</Name>
         <Value xsi:type="xsd:float">0</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Width Units</Name>
+        <Value xsi:type="xsd:int">2</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Height Units</Name>
+        <Value xsi:type="xsd:int">2</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <VariableList xsi:type="VariableListSaveOfString">
@@ -395,6 +455,18 @@
         <Value xsi:type="xsd:float">0</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Width Units</Name>
+        <Value xsi:type="xsd:int">2</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Height Units</Name>
+        <Value xsi:type="xsd:int">2</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
       <VariableList xsi:type="VariableListSaveOfString">
         <Type>string</Type>
         <Name>SpriteInstance.AnimationFrames</Name>
@@ -451,6 +523,18 @@
         <Type>float</Type>
         <Name>ColoredFrameInstance.Width</Name>
         <Value xsi:type="xsd:float">0</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Width Units</Name>
+        <Value xsi:type="xsd:int">2</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Height Units</Name>
+        <Value xsi:type="xsd:int">2</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <VariableList xsi:type="VariableListSaveOfString">
@@ -516,6 +600,18 @@
         <Value xsi:type="xsd:string">../GlobalContent/gameicons/PNG/White/1x/forward.png</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Width Units</Name>
+        <Value xsi:type="xsd:int">2</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Height Units</Name>
+        <Value xsi:type="xsd:int">2</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>PushedOn</Name>
@@ -549,7 +645,13 @@
       <Variable>
         <Type>float</Type>
         <Name>ColoredFrameInstance.Height</Name>
-        <Value xsi:type="xsd:float">-6</Value>
+        <Value xsi:type="xsd:float">92</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Height Units</Name>
+        <Value xsi:type="xsd:int">1</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -562,7 +664,13 @@
       <Variable>
         <Type>float</Type>
         <Name>ColoredFrameInstance.Width</Name>
-        <Value xsi:type="xsd:float">-6</Value>
+        <Value xsi:type="xsd:float">92</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Width Units</Name>
+        <Value xsi:type="xsd:int">1</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -605,7 +713,13 @@
       <Variable>
         <Type>float</Type>
         <Name>ColoredFrameInstance.Height</Name>
-        <Value xsi:type="xsd:float">-6</Value>
+        <Value xsi:type="xsd:float">92</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Height Units</Name>
+        <Value xsi:type="xsd:int">1</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -618,7 +732,13 @@
       <Variable>
         <Type>float</Type>
         <Name>ColoredFrameInstance.Width</Name>
-        <Value xsi:type="xsd:float">-6</Value>
+        <Value xsi:type="xsd:float">92</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>DimensionUnitType</Type>
+        <Name>ColoredFrameInstance.Width Units</Name>
+        <Value xsi:type="xsd:int">1</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>

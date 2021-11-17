@@ -2403,6 +2403,13 @@
         "ElementType": "Components",
         "EventType": 3,
         "TimestampUtc": "2021-11-17T14:36:49.995034Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-11-17T14:45:48.4442341Z"
       }
     ]
   }

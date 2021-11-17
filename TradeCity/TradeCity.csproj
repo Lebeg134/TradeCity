@@ -270,6 +270,8 @@
     </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\PlayButtonRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\PlayButtonRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\ComplexComponents\ScreenSelectorRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\ComplexComponents\ScreenSelectorRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.Generated.cs">
       <DependentUpon>TopicRuntime.cs</DependentUpon>
@@ -624,6 +626,10 @@
     <None Include="content\gumproject\components\lebegforms\basiccomponents\playbutton.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>playbutton</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\complexcomponents\screenselector.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>screenselector</Name>
     </None>
     <None Include="content\gumproject\components\lebegforms\complexcomponents\topic.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

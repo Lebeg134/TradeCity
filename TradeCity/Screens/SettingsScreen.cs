@@ -21,10 +21,11 @@ namespace JHP4SD.Screens
         
         void CustomInitialize()
         {
-            var comboBox = Forms.ComboBoxInstance;
-            comboBox.Items.Add("Option1");
-            comboBox.Items.Add("Option2");
-            comboBox.Items.Add("Option3");
+            var comboBox = Forms.ResolutionComboBox;
+            comboBox.Items.Add("2560x1440");
+            comboBox.Items.Add("1920x1080");
+            comboBox.Items.Add("1280x720");
+            
 
 
             Forms.BackButtonInstance.Click += BackButtonInstance_Click;

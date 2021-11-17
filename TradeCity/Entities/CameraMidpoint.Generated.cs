@@ -133,8 +133,8 @@ namespace JHP4SD.Entities
                 mAxisAlignedRectangleInstance.CopyAbsoluteToRelative();
                 mAxisAlignedRectangleInstance.AttachTo(this, false);
             }
-            AxisAlignedRectangleInstance.Width = 8f;
-            AxisAlignedRectangleInstance.Height = 8f;
+            AxisAlignedRectangleInstance.Width = 8;
+            AxisAlignedRectangleInstance.Height = 8;
             mGeneratedCollision = new FlatRedBall.Math.Geometry.ShapeCollection();
             Collision.AxisAlignedRectangles.AddOneWay(mAxisAlignedRectangleInstance);
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
@@ -157,8 +157,8 @@ namespace JHP4SD.Entities
             if (callOnContainedElements)
             {
             }
-            AxisAlignedRectangleInstance.Width = 8f;
-            AxisAlignedRectangleInstance.Height = 8f;
+            AxisAlignedRectangleInstance.Width = 8;
+            AxisAlignedRectangleInstance.Height = 8;
         }
         public virtual void ConvertToManuallyUpdated () 
         {

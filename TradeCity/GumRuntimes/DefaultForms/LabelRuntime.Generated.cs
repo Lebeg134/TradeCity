@@ -467,6 +467,21 @@
                     }
                 }
             }
+            public int FontSize
+            {
+                get
+                {
+                    return TextInstance.FontSize;
+                }
+                set
+                {
+                    if (TextInstance.FontSize != value)
+                    {
+                        TextInstance.FontSize = value;
+                        FontSizeChanged?.Invoke(this, null);
+                    }
+                }
+            }
             public int LabelTextGreen
             {
                 get
@@ -529,6 +544,7 @@
             }
             public event System.EventHandler LabelTextAlphaChanged;
             public event System.EventHandler LabelTextBlueChanged;
+            public event System.EventHandler FontSizeChanged;
             public event System.EventHandler LabelTextGreenChanged;
             public event System.EventHandler LabelTextHorizontalAlignmentChanged;
             public event System.EventHandler LabelTextRedChanged;

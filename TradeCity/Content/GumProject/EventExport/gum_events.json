@@ -2207,6 +2207,104 @@
         "ElementType": "Screens",
         "EventType": 5,
         "TimestampUtc": "2021-11-17T09:31:00.3231347Z"
+      },
+      {
+        "NewName": " SettingsGum.MusicContainer1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T10:30:36.3373669Z"
+      },
+      {
+        "NewName": " SettingsGum.CurrentMusicVolumeLabel1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T10:30:36.3533296Z"
+      },
+      {
+        "NewName": " SettingsGum.MusicSlider1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T10:30:36.3687385Z"
+      },
+      {
+        "NewName": " SettingsGum.MusicMaxText1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T10:30:36.3837697Z"
+      },
+      {
+        "NewName": " SettingsGum.MusicMinText1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T10:30:36.3996209Z"
+      },
+      {
+        "NewName": " SettingsGum.MusicSliderInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T10:30:36.4151768Z"
+      },
+      {
+        "NewName": " SettingsGum.MusicText1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T10:30:36.4510633Z"
+      },
+      {
+        "NewName": " SettingsGum.EffectsContainer",
+        "OldName": " SettingsGum.MusicContainer1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T10:31:24.5289894Z"
+      },
+      {
+        "NewName": " SettingsGum.EffectsText",
+        "OldName": " SettingsGum.MusicText1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T10:31:33.0714675Z"
+      },
+      {
+        "NewName": " SettingsGum.EffectsSlider",
+        "OldName": " SettingsGum.MusicSlider1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T10:31:49.7700596Z"
+      },
+      {
+        "NewName": " SettingsGum.EffectsMinText",
+        "OldName": " SettingsGum.MusicMinText1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T10:32:00.5303087Z"
+      },
+      {
+        "NewName": " SettingsGum.EffectsSliderInstance",
+        "OldName": " SettingsGum.MusicSliderInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T10:32:15.1970086Z"
+      },
+      {
+        "NewName": " SettingsGum.EffectsMaxText",
+        "OldName": " SettingsGum.MusicMaxText1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T10:32:25.0898955Z"
+      },
+      {
+        "NewName": " SettingsGum.CurrentEffectsVolumeLabel",
+        "OldName": " SettingsGum.CurrentMusicVolumeLabel1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T10:32:40.3744892Z"
       }
     ]
   }

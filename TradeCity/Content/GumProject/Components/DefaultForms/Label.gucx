@@ -41,6 +41,12 @@
     </Variable>
     <Variable>
       <Type>int</Type>
+      <Name>TextInstance.FontSize</Name>
+      <ExposedAsName>FontSize</ExposedAsName>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>int</Type>
       <Name>TextInstance.Green</Name>
       <ExposedAsName>LabelTextGreen</ExposedAsName>
       <SetsValue>false</SetsValue>

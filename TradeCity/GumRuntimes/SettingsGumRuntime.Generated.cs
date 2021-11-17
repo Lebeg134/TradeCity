@@ -32,21 +32,28 @@
                             WindowModeText.Parent = this.GetGraphicalUiElementByName("WindowModeContainer");
                             VolumeText.Parent = this.GetGraphicalUiElementByName("VolumeContainer");
                             MusicText.Parent = this.GetGraphicalUiElementByName("MusicContainer");
+                            EffectsText.Parent = this.GetGraphicalUiElementByName("EffectsContainer");
                             GraphicsContainer.Parent = this.GetGraphicalUiElementByName("GraphicsTopic");
                             WindowModeComboBox.Parent = this.GetGraphicalUiElementByName("WindowModeContainer");
                             SoundContainer.Parent = this.GetGraphicalUiElementByName("SoudTopic");
                             VolumeContainer.Parent = this.GetGraphicalUiElementByName("SoundContainer");
                             MusicContainer.Parent = this.GetGraphicalUiElementByName("SoundContainer");
+                            EffectsContainer.Parent = this.GetGraphicalUiElementByName("SoundContainer");
                             VolumeSlider.Parent = this.GetGraphicalUiElementByName("VolumeContainer");
                             MusicSlider.Parent = this.GetGraphicalUiElementByName("MusicContainer");
+                            EffectsSlider.Parent = this.GetGraphicalUiElementByName("EffectsContainer");
                             VolumeMinText.Parent = this.GetGraphicalUiElementByName("VolumeSlider");
                             MusicMinText.Parent = this.GetGraphicalUiElementByName("MusicSlider");
+                            EffectsMinText.Parent = this.GetGraphicalUiElementByName("EffectsSlider");
                             VolumeSliderInstance.Parent = this.GetGraphicalUiElementByName("VolumeSlider");
                             MusicSliderInstance.Parent = this.GetGraphicalUiElementByName("MusicSlider");
+                            EffectsSliderInstance.Parent = this.GetGraphicalUiElementByName("EffectsSlider");
                             VolumeMaxText.Parent = this.GetGraphicalUiElementByName("VolumeSlider");
                             MusicMaxText.Parent = this.GetGraphicalUiElementByName("MusicSlider");
+                            EffectsMaxText.Parent = this.GetGraphicalUiElementByName("EffectsSlider");
                             CurrentVolumeLabel.Parent = this.GetGraphicalUiElementByName("VolumeContainer");
                             CurrentMusicVolumeLabel.Parent = this.GetGraphicalUiElementByName("MusicContainer");
+                            CurrentEffectsVolumeLabel.Parent = this.GetGraphicalUiElementByName("EffectsContainer");
                             RectangleInstance.Parent = this.GetGraphicalUiElementByName("VolumeContainer");
                             BackgroundColor.Blue = 128;
                             BackgroundColor.Green = 128;
@@ -161,6 +168,17 @@
                             MusicText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                             MusicText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             MusicText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            EffectsText.Blue = 0;
+                            EffectsText.Green = 0;
+                            EffectsText.Height = 0f;
+                            EffectsText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            EffectsText.Red = 0;
+                            EffectsText.Text = "Effects:";
+                            EffectsText.Width = 0f;
+                            EffectsText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            EffectsText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            EffectsText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            EffectsText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             GraphicsContainer.ChildrenLayout = Gum.Managers.ChildrenLayout.TopToBottomStack;
                             GraphicsContainer.Height = 0f;
                             GraphicsContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
@@ -192,6 +210,11 @@
                             MusicContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                             MusicContainer.Width = 0f;
                             MusicContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            EffectsContainer.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
+                            EffectsContainer.Height = 0f;
+                            EffectsContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            EffectsContainer.Width = 0f;
+                            EffectsContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             VolumeSlider.Height = 0f;
                             VolumeSlider.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                             VolumeSlider.Width = 80f;
@@ -204,6 +227,12 @@
                             MusicSlider.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             MusicSlider.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             MusicSlider.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            EffectsSlider.Height = 0f;
+                            EffectsSlider.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            EffectsSlider.Width = 80f;
+                            EffectsSlider.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            EffectsSlider.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            EffectsSlider.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             VolumeMinText.Blue = 0;
                             VolumeMinText.FontSize = 24;
                             VolumeMinText.Green = 0;
@@ -230,6 +259,19 @@
                             MusicMinText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             MusicMinText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             MusicMinText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            EffectsMinText.Blue = 0;
+                            EffectsMinText.FontSize = 24;
+                            EffectsMinText.Green = 0;
+                            EffectsMinText.Height = 0f;
+                            EffectsMinText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            EffectsMinText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                            EffectsMinText.Red = 0;
+                            EffectsMinText.Text = "0";
+                            EffectsMinText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            EffectsMinText.Width = 2f;
+                            EffectsMinText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            EffectsMinText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            EffectsMinText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             VolumeSliderInstance.Width = 92f;
                             VolumeSliderInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             VolumeSliderInstance.X = 2f;
@@ -238,6 +280,10 @@
                             MusicSliderInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             MusicSliderInstance.X = 2f;
                             MusicSliderInstance.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                            EffectsSliderInstance.Width = 92f;
+                            EffectsSliderInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            EffectsSliderInstance.X = 2f;
+                            EffectsSliderInstance.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                             VolumeMaxText.Blue = 0;
                             VolumeMaxText.FontSize = 24;
                             VolumeMaxText.Green = 0;
@@ -266,6 +312,21 @@
                             MusicMaxText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             MusicMaxText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             MusicMaxText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            EffectsMaxText.Blue = 0;
+                            EffectsMaxText.FontSize = 24;
+                            EffectsMaxText.Green = 0;
+                            EffectsMaxText.Height = 0f;
+                            EffectsMaxText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            EffectsMaxText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            EffectsMaxText.Red = 0;
+                            EffectsMaxText.Text = "100";
+                            EffectsMaxText.Width = 5f;
+                            EffectsMaxText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            EffectsMaxText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            EffectsMaxText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            EffectsMaxText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            EffectsMaxText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            CurrentVolumeLabel.FontSize = 24;
                             CurrentVolumeLabel.Height = 100f;
                             CurrentVolumeLabel.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             CurrentVolumeLabel.LabelTextAlpha = 255;
@@ -277,6 +338,7 @@
                             CurrentVolumeLabel.X = 20f;
                             CurrentVolumeLabel.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             CurrentVolumeLabel.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                            CurrentMusicVolumeLabel.FontSize = 24;
                             CurrentMusicVolumeLabel.Height = 100f;
                             CurrentMusicVolumeLabel.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             CurrentMusicVolumeLabel.LabelTextAlpha = 255;
@@ -288,6 +350,18 @@
                             CurrentMusicVolumeLabel.X = 20f;
                             CurrentMusicVolumeLabel.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             CurrentMusicVolumeLabel.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                            CurrentEffectsVolumeLabel.FontSize = 24;
+                            CurrentEffectsVolumeLabel.Height = 100f;
+                            CurrentEffectsVolumeLabel.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            CurrentEffectsVolumeLabel.LabelTextAlpha = 255;
+                            CurrentEffectsVolumeLabel.LabelTextBlue = 0;
+                            CurrentEffectsVolumeLabel.LabelTextGreen = 0;
+                            CurrentEffectsVolumeLabel.LabelTextRed = 0;
+                            CurrentEffectsVolumeLabel.Width = 10f;
+                            CurrentEffectsVolumeLabel.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            CurrentEffectsVolumeLabel.X = 20f;
+                            CurrentEffectsVolumeLabel.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            CurrentEffectsVolumeLabel.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                             RectangleInstance.Blue = 0;
                             RectangleInstance.Green = 0;
                             RectangleInstance.Height = 0f;
@@ -345,6 +419,42 @@
                 bool setBackgroundColorYSecondValue = false;
                 float BackgroundColorYFirstValue= 0;
                 float BackgroundColorYSecondValue= 0;
+                bool setCurrentEffectsVolumeLabelFontSizeFirstValue = false;
+                bool setCurrentEffectsVolumeLabelFontSizeSecondValue = false;
+                int CurrentEffectsVolumeLabelFontSizeFirstValue= 0;
+                int CurrentEffectsVolumeLabelFontSizeSecondValue= 0;
+                bool setCurrentEffectsVolumeLabelHeightFirstValue = false;
+                bool setCurrentEffectsVolumeLabelHeightSecondValue = false;
+                float CurrentEffectsVolumeLabelHeightFirstValue= 0;
+                float CurrentEffectsVolumeLabelHeightSecondValue= 0;
+                bool setCurrentEffectsVolumeLabelLabelTextAlphaFirstValue = false;
+                bool setCurrentEffectsVolumeLabelLabelTextAlphaSecondValue = false;
+                int CurrentEffectsVolumeLabelLabelTextAlphaFirstValue= 0;
+                int CurrentEffectsVolumeLabelLabelTextAlphaSecondValue= 0;
+                bool setCurrentEffectsVolumeLabelLabelTextBlueFirstValue = false;
+                bool setCurrentEffectsVolumeLabelLabelTextBlueSecondValue = false;
+                int CurrentEffectsVolumeLabelLabelTextBlueFirstValue= 0;
+                int CurrentEffectsVolumeLabelLabelTextBlueSecondValue= 0;
+                bool setCurrentEffectsVolumeLabelLabelTextGreenFirstValue = false;
+                bool setCurrentEffectsVolumeLabelLabelTextGreenSecondValue = false;
+                int CurrentEffectsVolumeLabelLabelTextGreenFirstValue= 0;
+                int CurrentEffectsVolumeLabelLabelTextGreenSecondValue= 0;
+                bool setCurrentEffectsVolumeLabelLabelTextRedFirstValue = false;
+                bool setCurrentEffectsVolumeLabelLabelTextRedSecondValue = false;
+                int CurrentEffectsVolumeLabelLabelTextRedFirstValue= 0;
+                int CurrentEffectsVolumeLabelLabelTextRedSecondValue= 0;
+                bool setCurrentEffectsVolumeLabelWidthFirstValue = false;
+                bool setCurrentEffectsVolumeLabelWidthSecondValue = false;
+                float CurrentEffectsVolumeLabelWidthFirstValue= 0;
+                float CurrentEffectsVolumeLabelWidthSecondValue= 0;
+                bool setCurrentEffectsVolumeLabelXFirstValue = false;
+                bool setCurrentEffectsVolumeLabelXSecondValue = false;
+                float CurrentEffectsVolumeLabelXFirstValue= 0;
+                float CurrentEffectsVolumeLabelXSecondValue= 0;
+                bool setCurrentMusicVolumeLabelFontSizeFirstValue = false;
+                bool setCurrentMusicVolumeLabelFontSizeSecondValue = false;
+                int CurrentMusicVolumeLabelFontSizeFirstValue= 0;
+                int CurrentMusicVolumeLabelFontSizeSecondValue= 0;
                 bool setCurrentMusicVolumeLabelHeightFirstValue = false;
                 bool setCurrentMusicVolumeLabelHeightSecondValue = false;
                 float CurrentMusicVolumeLabelHeightFirstValue= 0;
@@ -373,6 +483,10 @@
                 bool setCurrentMusicVolumeLabelXSecondValue = false;
                 float CurrentMusicVolumeLabelXFirstValue= 0;
                 float CurrentMusicVolumeLabelXSecondValue= 0;
+                bool setCurrentVolumeLabelFontSizeFirstValue = false;
+                bool setCurrentVolumeLabelFontSizeSecondValue = false;
+                int CurrentVolumeLabelFontSizeFirstValue= 0;
+                int CurrentVolumeLabelFontSizeSecondValue= 0;
                 bool setCurrentVolumeLabelHeightFirstValue = false;
                 bool setCurrentVolumeLabelHeightSecondValue = false;
                 float CurrentVolumeLabelHeightFirstValue= 0;
@@ -401,6 +515,98 @@
                 bool setCurrentVolumeLabelXSecondValue = false;
                 float CurrentVolumeLabelXFirstValue= 0;
                 float CurrentVolumeLabelXSecondValue= 0;
+                bool setEffectsContainerHeightFirstValue = false;
+                bool setEffectsContainerHeightSecondValue = false;
+                float EffectsContainerHeightFirstValue= 0;
+                float EffectsContainerHeightSecondValue= 0;
+                bool setEffectsContainerWidthFirstValue = false;
+                bool setEffectsContainerWidthSecondValue = false;
+                float EffectsContainerWidthFirstValue= 0;
+                float EffectsContainerWidthSecondValue= 0;
+                bool setEffectsMaxTextBlueFirstValue = false;
+                bool setEffectsMaxTextBlueSecondValue = false;
+                int EffectsMaxTextBlueFirstValue= 0;
+                int EffectsMaxTextBlueSecondValue= 0;
+                bool setEffectsMaxTextFontSizeFirstValue = false;
+                bool setEffectsMaxTextFontSizeSecondValue = false;
+                int EffectsMaxTextFontSizeFirstValue= 0;
+                int EffectsMaxTextFontSizeSecondValue= 0;
+                bool setEffectsMaxTextGreenFirstValue = false;
+                bool setEffectsMaxTextGreenSecondValue = false;
+                int EffectsMaxTextGreenFirstValue= 0;
+                int EffectsMaxTextGreenSecondValue= 0;
+                bool setEffectsMaxTextHeightFirstValue = false;
+                bool setEffectsMaxTextHeightSecondValue = false;
+                float EffectsMaxTextHeightFirstValue= 0;
+                float EffectsMaxTextHeightSecondValue= 0;
+                bool setEffectsMaxTextRedFirstValue = false;
+                bool setEffectsMaxTextRedSecondValue = false;
+                int EffectsMaxTextRedFirstValue= 0;
+                int EffectsMaxTextRedSecondValue= 0;
+                bool setEffectsMaxTextWidthFirstValue = false;
+                bool setEffectsMaxTextWidthSecondValue = false;
+                float EffectsMaxTextWidthFirstValue= 0;
+                float EffectsMaxTextWidthSecondValue= 0;
+                bool setEffectsMinTextBlueFirstValue = false;
+                bool setEffectsMinTextBlueSecondValue = false;
+                int EffectsMinTextBlueFirstValue= 0;
+                int EffectsMinTextBlueSecondValue= 0;
+                bool setEffectsMinTextFontSizeFirstValue = false;
+                bool setEffectsMinTextFontSizeSecondValue = false;
+                int EffectsMinTextFontSizeFirstValue= 0;
+                int EffectsMinTextFontSizeSecondValue= 0;
+                bool setEffectsMinTextGreenFirstValue = false;
+                bool setEffectsMinTextGreenSecondValue = false;
+                int EffectsMinTextGreenFirstValue= 0;
+                int EffectsMinTextGreenSecondValue= 0;
+                bool setEffectsMinTextHeightFirstValue = false;
+                bool setEffectsMinTextHeightSecondValue = false;
+                float EffectsMinTextHeightFirstValue= 0;
+                float EffectsMinTextHeightSecondValue= 0;
+                bool setEffectsMinTextRedFirstValue = false;
+                bool setEffectsMinTextRedSecondValue = false;
+                int EffectsMinTextRedFirstValue= 0;
+                int EffectsMinTextRedSecondValue= 0;
+                bool setEffectsMinTextWidthFirstValue = false;
+                bool setEffectsMinTextWidthSecondValue = false;
+                float EffectsMinTextWidthFirstValue= 0;
+                float EffectsMinTextWidthSecondValue= 0;
+                bool setEffectsSliderHeightFirstValue = false;
+                bool setEffectsSliderHeightSecondValue = false;
+                float EffectsSliderHeightFirstValue= 0;
+                float EffectsSliderHeightSecondValue= 0;
+                bool setEffectsSliderWidthFirstValue = false;
+                bool setEffectsSliderWidthSecondValue = false;
+                float EffectsSliderWidthFirstValue= 0;
+                float EffectsSliderWidthSecondValue= 0;
+                bool setEffectsSliderInstanceWidthFirstValue = false;
+                bool setEffectsSliderInstanceWidthSecondValue = false;
+                float EffectsSliderInstanceWidthFirstValue= 0;
+                float EffectsSliderInstanceWidthSecondValue= 0;
+                bool setEffectsSliderInstanceXFirstValue = false;
+                bool setEffectsSliderInstanceXSecondValue = false;
+                float EffectsSliderInstanceXFirstValue= 0;
+                float EffectsSliderInstanceXSecondValue= 0;
+                bool setEffectsTextBlueFirstValue = false;
+                bool setEffectsTextBlueSecondValue = false;
+                int EffectsTextBlueFirstValue= 0;
+                int EffectsTextBlueSecondValue= 0;
+                bool setEffectsTextGreenFirstValue = false;
+                bool setEffectsTextGreenSecondValue = false;
+                int EffectsTextGreenFirstValue= 0;
+                int EffectsTextGreenSecondValue= 0;
+                bool setEffectsTextHeightFirstValue = false;
+                bool setEffectsTextHeightSecondValue = false;
+                float EffectsTextHeightFirstValue= 0;
+                float EffectsTextHeightSecondValue= 0;
+                bool setEffectsTextRedFirstValue = false;
+                bool setEffectsTextRedSecondValue = false;
+                int EffectsTextRedFirstValue= 0;
+                int EffectsTextRedSecondValue= 0;
+                bool setEffectsTextWidthFirstValue = false;
+                bool setEffectsTextWidthSecondValue = false;
+                float EffectsTextWidthFirstValue= 0;
+                float EffectsTextWidthSecondValue= 0;
                 bool setGraphicsContainerHeightFirstValue = false;
                 bool setGraphicsContainerHeightSecondValue = false;
                 float GraphicsContainerHeightFirstValue= 0;
@@ -842,6 +1048,44 @@
                         {
                             this.BackgroundColor.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
+                        setCurrentEffectsVolumeLabelFontSizeFirstValue = true;
+                        CurrentEffectsVolumeLabelFontSizeFirstValue = 24;
+                        setCurrentEffectsVolumeLabelHeightFirstValue = true;
+                        CurrentEffectsVolumeLabelHeightFirstValue = 100f;
+                        if (interpolationValue < 1)
+                        {
+                            this.CurrentEffectsVolumeLabel.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setCurrentEffectsVolumeLabelLabelTextAlphaFirstValue = true;
+                        CurrentEffectsVolumeLabelLabelTextAlphaFirstValue = 255;
+                        setCurrentEffectsVolumeLabelLabelTextBlueFirstValue = true;
+                        CurrentEffectsVolumeLabelLabelTextBlueFirstValue = 0;
+                        setCurrentEffectsVolumeLabelLabelTextGreenFirstValue = true;
+                        CurrentEffectsVolumeLabelLabelTextGreenFirstValue = 0;
+                        setCurrentEffectsVolumeLabelLabelTextRedFirstValue = true;
+                        CurrentEffectsVolumeLabelLabelTextRedFirstValue = 0;
+                        if (interpolationValue < 1)
+                        {
+                            this.CurrentEffectsVolumeLabel.Parent = this.GetGraphicalUiElementByName("EffectsContainer");
+                        }
+                        setCurrentEffectsVolumeLabelWidthFirstValue = true;
+                        CurrentEffectsVolumeLabelWidthFirstValue = 10f;
+                        if (interpolationValue < 1)
+                        {
+                            this.CurrentEffectsVolumeLabel.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setCurrentEffectsVolumeLabelXFirstValue = true;
+                        CurrentEffectsVolumeLabelXFirstValue = 20f;
+                        if (interpolationValue < 1)
+                        {
+                            this.CurrentEffectsVolumeLabel.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.CurrentEffectsVolumeLabel.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                        }
+                        setCurrentMusicVolumeLabelFontSizeFirstValue = true;
+                        CurrentMusicVolumeLabelFontSizeFirstValue = 24;
                         setCurrentMusicVolumeLabelHeightFirstValue = true;
                         CurrentMusicVolumeLabelHeightFirstValue = 100f;
                         if (interpolationValue < 1)
@@ -876,6 +1120,8 @@
                         {
                             this.CurrentMusicVolumeLabel.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                         }
+                        setCurrentVolumeLabelFontSizeFirstValue = true;
+                        CurrentVolumeLabelFontSizeFirstValue = 24;
                         setCurrentVolumeLabelHeightFirstValue = true;
                         CurrentVolumeLabelHeightFirstValue = 100f;
                         if (interpolationValue < 1)
@@ -909,6 +1155,196 @@
                         if (interpolationValue < 1)
                         {
                             this.CurrentVolumeLabel.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsContainer.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
+                        }
+                        setEffectsContainerHeightFirstValue = true;
+                        EffectsContainerHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsContainer.Parent = this.GetGraphicalUiElementByName("SoundContainer");
+                        }
+                        setEffectsContainerWidthFirstValue = true;
+                        EffectsContainerWidthFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setEffectsMaxTextBlueFirstValue = true;
+                        EffectsMaxTextBlueFirstValue = 0;
+                        setEffectsMaxTextFontSizeFirstValue = true;
+                        EffectsMaxTextFontSizeFirstValue = 24;
+                        setEffectsMaxTextGreenFirstValue = true;
+                        EffectsMaxTextGreenFirstValue = 0;
+                        setEffectsMaxTextHeightFirstValue = true;
+                        EffectsMaxTextHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMaxText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMaxText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMaxText.Parent = this.GetGraphicalUiElementByName("EffectsSlider");
+                        }
+                        setEffectsMaxTextRedFirstValue = true;
+                        EffectsMaxTextRedFirstValue = 0;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMaxText.Text = "100";
+                        }
+                        setEffectsMaxTextWidthFirstValue = true;
+                        EffectsMaxTextWidthFirstValue = 5f;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMaxText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMaxText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMaxText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMaxText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMaxText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setEffectsMinTextBlueFirstValue = true;
+                        EffectsMinTextBlueFirstValue = 0;
+                        setEffectsMinTextFontSizeFirstValue = true;
+                        EffectsMinTextFontSizeFirstValue = 24;
+                        setEffectsMinTextGreenFirstValue = true;
+                        EffectsMinTextGreenFirstValue = 0;
+                        setEffectsMinTextHeightFirstValue = true;
+                        EffectsMinTextHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMinText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMinText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMinText.Parent = this.GetGraphicalUiElementByName("EffectsSlider");
+                        }
+                        setEffectsMinTextRedFirstValue = true;
+                        EffectsMinTextRedFirstValue = 0;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMinText.Text = "0";
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMinText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        setEffectsMinTextWidthFirstValue = true;
+                        EffectsMinTextWidthFirstValue = 2f;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMinText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMinText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsMinText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setEffectsSliderHeightFirstValue = true;
+                        EffectsSliderHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsSlider.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsSlider.Parent = this.GetGraphicalUiElementByName("EffectsContainer");
+                        }
+                        setEffectsSliderWidthFirstValue = true;
+                        EffectsSliderWidthFirstValue = 80f;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsSlider.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsSlider.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsSlider.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsSliderInstance.Parent = this.GetGraphicalUiElementByName("EffectsSlider");
+                        }
+                        setEffectsSliderInstanceWidthFirstValue = true;
+                        EffectsSliderInstanceWidthFirstValue = 92f;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsSliderInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setEffectsSliderInstanceXFirstValue = true;
+                        EffectsSliderInstanceXFirstValue = 2f;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsSliderInstance.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                        }
+                        setEffectsTextBlueFirstValue = true;
+                        EffectsTextBlueFirstValue = 0;
+                        setEffectsTextGreenFirstValue = true;
+                        EffectsTextGreenFirstValue = 0;
+                        setEffectsTextHeightFirstValue = true;
+                        EffectsTextHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsText.Parent = this.GetGraphicalUiElementByName("EffectsContainer");
+                        }
+                        setEffectsTextRedFirstValue = true;
+                        EffectsTextRedFirstValue = 0;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsText.Text = "Effects:";
+                        }
+                        setEffectsTextWidthFirstValue = true;
+                        EffectsTextWidthFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EffectsText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         if (interpolationValue < 1)
                         {
@@ -1691,6 +2127,44 @@
                         {
                             this.BackgroundColor.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
+                        setCurrentEffectsVolumeLabelFontSizeSecondValue = true;
+                        CurrentEffectsVolumeLabelFontSizeSecondValue = 24;
+                        setCurrentEffectsVolumeLabelHeightSecondValue = true;
+                        CurrentEffectsVolumeLabelHeightSecondValue = 100f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.CurrentEffectsVolumeLabel.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setCurrentEffectsVolumeLabelLabelTextAlphaSecondValue = true;
+                        CurrentEffectsVolumeLabelLabelTextAlphaSecondValue = 255;
+                        setCurrentEffectsVolumeLabelLabelTextBlueSecondValue = true;
+                        CurrentEffectsVolumeLabelLabelTextBlueSecondValue = 0;
+                        setCurrentEffectsVolumeLabelLabelTextGreenSecondValue = true;
+                        CurrentEffectsVolumeLabelLabelTextGreenSecondValue = 0;
+                        setCurrentEffectsVolumeLabelLabelTextRedSecondValue = true;
+                        CurrentEffectsVolumeLabelLabelTextRedSecondValue = 0;
+                        if (interpolationValue >= 1)
+                        {
+                            this.CurrentEffectsVolumeLabel.Parent = this.GetGraphicalUiElementByName("EffectsContainer");
+                        }
+                        setCurrentEffectsVolumeLabelWidthSecondValue = true;
+                        CurrentEffectsVolumeLabelWidthSecondValue = 10f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.CurrentEffectsVolumeLabel.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setCurrentEffectsVolumeLabelXSecondValue = true;
+                        CurrentEffectsVolumeLabelXSecondValue = 20f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.CurrentEffectsVolumeLabel.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.CurrentEffectsVolumeLabel.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                        }
+                        setCurrentMusicVolumeLabelFontSizeSecondValue = true;
+                        CurrentMusicVolumeLabelFontSizeSecondValue = 24;
                         setCurrentMusicVolumeLabelHeightSecondValue = true;
                         CurrentMusicVolumeLabelHeightSecondValue = 100f;
                         if (interpolationValue >= 1)
@@ -1725,6 +2199,8 @@
                         {
                             this.CurrentMusicVolumeLabel.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                         }
+                        setCurrentVolumeLabelFontSizeSecondValue = true;
+                        CurrentVolumeLabelFontSizeSecondValue = 24;
                         setCurrentVolumeLabelHeightSecondValue = true;
                         CurrentVolumeLabelHeightSecondValue = 100f;
                         if (interpolationValue >= 1)
@@ -1758,6 +2234,196 @@
                         if (interpolationValue >= 1)
                         {
                             this.CurrentVolumeLabel.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsContainer.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
+                        }
+                        setEffectsContainerHeightSecondValue = true;
+                        EffectsContainerHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsContainer.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsContainer.Parent = this.GetGraphicalUiElementByName("SoundContainer");
+                        }
+                        setEffectsContainerWidthSecondValue = true;
+                        EffectsContainerWidthSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsContainer.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setEffectsMaxTextBlueSecondValue = true;
+                        EffectsMaxTextBlueSecondValue = 0;
+                        setEffectsMaxTextFontSizeSecondValue = true;
+                        EffectsMaxTextFontSizeSecondValue = 24;
+                        setEffectsMaxTextGreenSecondValue = true;
+                        EffectsMaxTextGreenSecondValue = 0;
+                        setEffectsMaxTextHeightSecondValue = true;
+                        EffectsMaxTextHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMaxText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMaxText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMaxText.Parent = this.GetGraphicalUiElementByName("EffectsSlider");
+                        }
+                        setEffectsMaxTextRedSecondValue = true;
+                        EffectsMaxTextRedSecondValue = 0;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMaxText.Text = "100";
+                        }
+                        setEffectsMaxTextWidthSecondValue = true;
+                        EffectsMaxTextWidthSecondValue = 5f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMaxText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMaxText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMaxText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMaxText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMaxText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setEffectsMinTextBlueSecondValue = true;
+                        EffectsMinTextBlueSecondValue = 0;
+                        setEffectsMinTextFontSizeSecondValue = true;
+                        EffectsMinTextFontSizeSecondValue = 24;
+                        setEffectsMinTextGreenSecondValue = true;
+                        EffectsMinTextGreenSecondValue = 0;
+                        setEffectsMinTextHeightSecondValue = true;
+                        EffectsMinTextHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMinText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMinText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMinText.Parent = this.GetGraphicalUiElementByName("EffectsSlider");
+                        }
+                        setEffectsMinTextRedSecondValue = true;
+                        EffectsMinTextRedSecondValue = 0;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMinText.Text = "0";
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMinText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        setEffectsMinTextWidthSecondValue = true;
+                        EffectsMinTextWidthSecondValue = 2f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMinText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMinText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsMinText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setEffectsSliderHeightSecondValue = true;
+                        EffectsSliderHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsSlider.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsSlider.Parent = this.GetGraphicalUiElementByName("EffectsContainer");
+                        }
+                        setEffectsSliderWidthSecondValue = true;
+                        EffectsSliderWidthSecondValue = 80f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsSlider.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsSlider.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsSlider.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsSliderInstance.Parent = this.GetGraphicalUiElementByName("EffectsSlider");
+                        }
+                        setEffectsSliderInstanceWidthSecondValue = true;
+                        EffectsSliderInstanceWidthSecondValue = 92f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsSliderInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setEffectsSliderInstanceXSecondValue = true;
+                        EffectsSliderInstanceXSecondValue = 2f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsSliderInstance.XUnits = Gum.Converters.GeneralUnitType.Percentage;
+                        }
+                        setEffectsTextBlueSecondValue = true;
+                        EffectsTextBlueSecondValue = 0;
+                        setEffectsTextGreenSecondValue = true;
+                        EffectsTextGreenSecondValue = 0;
+                        setEffectsTextHeightSecondValue = true;
+                        EffectsTextHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsText.Parent = this.GetGraphicalUiElementByName("EffectsContainer");
+                        }
+                        setEffectsTextRedSecondValue = true;
+                        EffectsTextRedSecondValue = 0;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsText.Text = "Effects:";
+                        }
+                        setEffectsTextWidthSecondValue = true;
+                        EffectsTextWidthSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EffectsText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         if (interpolationValue >= 1)
                         {
@@ -2520,6 +3186,42 @@
                 {
                     BackgroundColor.Y = BackgroundColorYFirstValue * (1 - interpolationValue) + BackgroundColorYSecondValue * interpolationValue;
                 }
+                if (setCurrentEffectsVolumeLabelFontSizeFirstValue && setCurrentEffectsVolumeLabelFontSizeSecondValue)
+                {
+                    CurrentEffectsVolumeLabel.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(CurrentEffectsVolumeLabelFontSizeFirstValue* (1 - interpolationValue) + CurrentEffectsVolumeLabelFontSizeSecondValue * interpolationValue);
+                }
+                if (setCurrentEffectsVolumeLabelHeightFirstValue && setCurrentEffectsVolumeLabelHeightSecondValue)
+                {
+                    CurrentEffectsVolumeLabel.Height = CurrentEffectsVolumeLabelHeightFirstValue * (1 - interpolationValue) + CurrentEffectsVolumeLabelHeightSecondValue * interpolationValue;
+                }
+                if (setCurrentEffectsVolumeLabelLabelTextAlphaFirstValue && setCurrentEffectsVolumeLabelLabelTextAlphaSecondValue)
+                {
+                    CurrentEffectsVolumeLabel.LabelTextAlpha = FlatRedBall.Math.MathFunctions.RoundToInt(CurrentEffectsVolumeLabelLabelTextAlphaFirstValue* (1 - interpolationValue) + CurrentEffectsVolumeLabelLabelTextAlphaSecondValue * interpolationValue);
+                }
+                if (setCurrentEffectsVolumeLabelLabelTextBlueFirstValue && setCurrentEffectsVolumeLabelLabelTextBlueSecondValue)
+                {
+                    CurrentEffectsVolumeLabel.LabelTextBlue = FlatRedBall.Math.MathFunctions.RoundToInt(CurrentEffectsVolumeLabelLabelTextBlueFirstValue* (1 - interpolationValue) + CurrentEffectsVolumeLabelLabelTextBlueSecondValue * interpolationValue);
+                }
+                if (setCurrentEffectsVolumeLabelLabelTextGreenFirstValue && setCurrentEffectsVolumeLabelLabelTextGreenSecondValue)
+                {
+                    CurrentEffectsVolumeLabel.LabelTextGreen = FlatRedBall.Math.MathFunctions.RoundToInt(CurrentEffectsVolumeLabelLabelTextGreenFirstValue* (1 - interpolationValue) + CurrentEffectsVolumeLabelLabelTextGreenSecondValue * interpolationValue);
+                }
+                if (setCurrentEffectsVolumeLabelLabelTextRedFirstValue && setCurrentEffectsVolumeLabelLabelTextRedSecondValue)
+                {
+                    CurrentEffectsVolumeLabel.LabelTextRed = FlatRedBall.Math.MathFunctions.RoundToInt(CurrentEffectsVolumeLabelLabelTextRedFirstValue* (1 - interpolationValue) + CurrentEffectsVolumeLabelLabelTextRedSecondValue * interpolationValue);
+                }
+                if (setCurrentEffectsVolumeLabelWidthFirstValue && setCurrentEffectsVolumeLabelWidthSecondValue)
+                {
+                    CurrentEffectsVolumeLabel.Width = CurrentEffectsVolumeLabelWidthFirstValue * (1 - interpolationValue) + CurrentEffectsVolumeLabelWidthSecondValue * interpolationValue;
+                }
+                if (setCurrentEffectsVolumeLabelXFirstValue && setCurrentEffectsVolumeLabelXSecondValue)
+                {
+                    CurrentEffectsVolumeLabel.X = CurrentEffectsVolumeLabelXFirstValue * (1 - interpolationValue) + CurrentEffectsVolumeLabelXSecondValue * interpolationValue;
+                }
+                if (setCurrentMusicVolumeLabelFontSizeFirstValue && setCurrentMusicVolumeLabelFontSizeSecondValue)
+                {
+                    CurrentMusicVolumeLabel.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(CurrentMusicVolumeLabelFontSizeFirstValue* (1 - interpolationValue) + CurrentMusicVolumeLabelFontSizeSecondValue * interpolationValue);
+                }
                 if (setCurrentMusicVolumeLabelHeightFirstValue && setCurrentMusicVolumeLabelHeightSecondValue)
                 {
                     CurrentMusicVolumeLabel.Height = CurrentMusicVolumeLabelHeightFirstValue * (1 - interpolationValue) + CurrentMusicVolumeLabelHeightSecondValue * interpolationValue;
@@ -2548,6 +3250,10 @@
                 {
                     CurrentMusicVolumeLabel.X = CurrentMusicVolumeLabelXFirstValue * (1 - interpolationValue) + CurrentMusicVolumeLabelXSecondValue * interpolationValue;
                 }
+                if (setCurrentVolumeLabelFontSizeFirstValue && setCurrentVolumeLabelFontSizeSecondValue)
+                {
+                    CurrentVolumeLabel.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(CurrentVolumeLabelFontSizeFirstValue* (1 - interpolationValue) + CurrentVolumeLabelFontSizeSecondValue * interpolationValue);
+                }
                 if (setCurrentVolumeLabelHeightFirstValue && setCurrentVolumeLabelHeightSecondValue)
                 {
                     CurrentVolumeLabel.Height = CurrentVolumeLabelHeightFirstValue * (1 - interpolationValue) + CurrentVolumeLabelHeightSecondValue * interpolationValue;
@@ -2575,6 +3281,98 @@
                 if (setCurrentVolumeLabelXFirstValue && setCurrentVolumeLabelXSecondValue)
                 {
                     CurrentVolumeLabel.X = CurrentVolumeLabelXFirstValue * (1 - interpolationValue) + CurrentVolumeLabelXSecondValue * interpolationValue;
+                }
+                if (setEffectsContainerHeightFirstValue && setEffectsContainerHeightSecondValue)
+                {
+                    EffectsContainer.Height = EffectsContainerHeightFirstValue * (1 - interpolationValue) + EffectsContainerHeightSecondValue * interpolationValue;
+                }
+                if (setEffectsContainerWidthFirstValue && setEffectsContainerWidthSecondValue)
+                {
+                    EffectsContainer.Width = EffectsContainerWidthFirstValue * (1 - interpolationValue) + EffectsContainerWidthSecondValue * interpolationValue;
+                }
+                if (setEffectsMaxTextBlueFirstValue && setEffectsMaxTextBlueSecondValue)
+                {
+                    EffectsMaxText.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(EffectsMaxTextBlueFirstValue* (1 - interpolationValue) + EffectsMaxTextBlueSecondValue * interpolationValue);
+                }
+                if (setEffectsMaxTextFontSizeFirstValue && setEffectsMaxTextFontSizeSecondValue)
+                {
+                    EffectsMaxText.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(EffectsMaxTextFontSizeFirstValue* (1 - interpolationValue) + EffectsMaxTextFontSizeSecondValue * interpolationValue);
+                }
+                if (setEffectsMaxTextGreenFirstValue && setEffectsMaxTextGreenSecondValue)
+                {
+                    EffectsMaxText.Green = FlatRedBall.Math.MathFunctions.RoundToInt(EffectsMaxTextGreenFirstValue* (1 - interpolationValue) + EffectsMaxTextGreenSecondValue * interpolationValue);
+                }
+                if (setEffectsMaxTextHeightFirstValue && setEffectsMaxTextHeightSecondValue)
+                {
+                    EffectsMaxText.Height = EffectsMaxTextHeightFirstValue * (1 - interpolationValue) + EffectsMaxTextHeightSecondValue * interpolationValue;
+                }
+                if (setEffectsMaxTextRedFirstValue && setEffectsMaxTextRedSecondValue)
+                {
+                    EffectsMaxText.Red = FlatRedBall.Math.MathFunctions.RoundToInt(EffectsMaxTextRedFirstValue* (1 - interpolationValue) + EffectsMaxTextRedSecondValue * interpolationValue);
+                }
+                if (setEffectsMaxTextWidthFirstValue && setEffectsMaxTextWidthSecondValue)
+                {
+                    EffectsMaxText.Width = EffectsMaxTextWidthFirstValue * (1 - interpolationValue) + EffectsMaxTextWidthSecondValue * interpolationValue;
+                }
+                if (setEffectsMinTextBlueFirstValue && setEffectsMinTextBlueSecondValue)
+                {
+                    EffectsMinText.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(EffectsMinTextBlueFirstValue* (1 - interpolationValue) + EffectsMinTextBlueSecondValue * interpolationValue);
+                }
+                if (setEffectsMinTextFontSizeFirstValue && setEffectsMinTextFontSizeSecondValue)
+                {
+                    EffectsMinText.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(EffectsMinTextFontSizeFirstValue* (1 - interpolationValue) + EffectsMinTextFontSizeSecondValue * interpolationValue);
+                }
+                if (setEffectsMinTextGreenFirstValue && setEffectsMinTextGreenSecondValue)
+                {
+                    EffectsMinText.Green = FlatRedBall.Math.MathFunctions.RoundToInt(EffectsMinTextGreenFirstValue* (1 - interpolationValue) + EffectsMinTextGreenSecondValue * interpolationValue);
+                }
+                if (setEffectsMinTextHeightFirstValue && setEffectsMinTextHeightSecondValue)
+                {
+                    EffectsMinText.Height = EffectsMinTextHeightFirstValue * (1 - interpolationValue) + EffectsMinTextHeightSecondValue * interpolationValue;
+                }
+                if (setEffectsMinTextRedFirstValue && setEffectsMinTextRedSecondValue)
+                {
+                    EffectsMinText.Red = FlatRedBall.Math.MathFunctions.RoundToInt(EffectsMinTextRedFirstValue* (1 - interpolationValue) + EffectsMinTextRedSecondValue * interpolationValue);
+                }
+                if (setEffectsMinTextWidthFirstValue && setEffectsMinTextWidthSecondValue)
+                {
+                    EffectsMinText.Width = EffectsMinTextWidthFirstValue * (1 - interpolationValue) + EffectsMinTextWidthSecondValue * interpolationValue;
+                }
+                if (setEffectsSliderHeightFirstValue && setEffectsSliderHeightSecondValue)
+                {
+                    EffectsSlider.Height = EffectsSliderHeightFirstValue * (1 - interpolationValue) + EffectsSliderHeightSecondValue * interpolationValue;
+                }
+                if (setEffectsSliderWidthFirstValue && setEffectsSliderWidthSecondValue)
+                {
+                    EffectsSlider.Width = EffectsSliderWidthFirstValue * (1 - interpolationValue) + EffectsSliderWidthSecondValue * interpolationValue;
+                }
+                if (setEffectsSliderInstanceWidthFirstValue && setEffectsSliderInstanceWidthSecondValue)
+                {
+                    EffectsSliderInstance.Width = EffectsSliderInstanceWidthFirstValue * (1 - interpolationValue) + EffectsSliderInstanceWidthSecondValue * interpolationValue;
+                }
+                if (setEffectsSliderInstanceXFirstValue && setEffectsSliderInstanceXSecondValue)
+                {
+                    EffectsSliderInstance.X = EffectsSliderInstanceXFirstValue * (1 - interpolationValue) + EffectsSliderInstanceXSecondValue * interpolationValue;
+                }
+                if (setEffectsTextBlueFirstValue && setEffectsTextBlueSecondValue)
+                {
+                    EffectsText.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(EffectsTextBlueFirstValue* (1 - interpolationValue) + EffectsTextBlueSecondValue * interpolationValue);
+                }
+                if (setEffectsTextGreenFirstValue && setEffectsTextGreenSecondValue)
+                {
+                    EffectsText.Green = FlatRedBall.Math.MathFunctions.RoundToInt(EffectsTextGreenFirstValue* (1 - interpolationValue) + EffectsTextGreenSecondValue * interpolationValue);
+                }
+                if (setEffectsTextHeightFirstValue && setEffectsTextHeightSecondValue)
+                {
+                    EffectsText.Height = EffectsTextHeightFirstValue * (1 - interpolationValue) + EffectsTextHeightSecondValue * interpolationValue;
+                }
+                if (setEffectsTextRedFirstValue && setEffectsTextRedSecondValue)
+                {
+                    EffectsText.Red = FlatRedBall.Math.MathFunctions.RoundToInt(EffectsTextRedFirstValue* (1 - interpolationValue) + EffectsTextRedSecondValue * interpolationValue);
+                }
+                if (setEffectsTextWidthFirstValue && setEffectsTextWidthSecondValue)
+                {
+                    EffectsText.Width = EffectsTextWidthFirstValue * (1 - interpolationValue) + EffectsTextWidthSecondValue * interpolationValue;
                 }
                 if (setGraphicsContainerHeightFirstValue && setGraphicsContainerHeightSecondValue)
                 {
@@ -3038,8 +3836,10 @@
                 WindowModeComboBox.StopAnimations();
                 VolumeSliderInstance.StopAnimations();
                 MusicSliderInstance.StopAnimations();
+                EffectsSliderInstance.StopAnimations();
                 CurrentVolumeLabel.StopAnimations();
                 CurrentMusicVolumeLabel.StopAnimations();
+                CurrentEffectsVolumeLabel.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -4015,6 +4815,102 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "EffectsText.Blue",
+                            Type = "int",
+                            Value = EffectsText.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Green",
+                            Type = "int",
+                            Value = EffectsText.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Height",
+                            Type = "float",
+                            Value = EffectsText.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Parent",
+                            Type = "string",
+                            Value = EffectsText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Red",
+                            Type = "int",
+                            Value = EffectsText.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Text",
+                            Type = "string",
+                            Value = EffectsText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Width",
+                            Type = "float",
+                            Value = EffectsText.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.X Units",
+                            Type = "PositionUnitType",
+                            Value = EffectsText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = EffectsText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = EffectsText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "GraphicsContainer.Children Layout",
                             Type = "ChildrenLayout",
                             Value = GraphicsContainer.ChildrenLayout
@@ -4303,6 +5199,54 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "EffectsContainer.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = EffectsContainer.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsContainer.Height",
+                            Type = "float",
+                            Value = EffectsContainer.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsContainer.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsContainer.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsContainer.Parent",
+                            Type = "string",
+                            Value = EffectsContainer.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsContainer.Width",
+                            Type = "float",
+                            Value = EffectsContainer.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsContainer.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsContainer.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "VolumeSlider.Height",
                             Type = "float",
                             Value = VolumeSlider.Height
@@ -4410,6 +5354,62 @@
                             Name = "MusicSlider.X Units",
                             Type = "PositionUnitType",
                             Value = MusicSlider.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSlider.Height",
+                            Type = "float",
+                            Value = EffectsSlider.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSlider.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsSlider.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSlider.Parent",
+                            Type = "string",
+                            Value = EffectsSlider.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSlider.Width",
+                            Type = "float",
+                            Value = EffectsSlider.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSlider.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsSlider.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSlider.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = EffectsSlider.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSlider.X Units",
+                            Type = "PositionUnitType",
+                            Value = EffectsSlider.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -4639,6 +5639,118 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "EffectsMinText.Blue",
+                            Type = "int",
+                            Value = EffectsMinText.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.FontSize",
+                            Type = "int",
+                            Value = EffectsMinText.FontSize
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Green",
+                            Type = "int",
+                            Value = EffectsMinText.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Height",
+                            Type = "float",
+                            Value = EffectsMinText.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsMinText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = EffectsMinText.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Parent",
+                            Type = "string",
+                            Value = EffectsMinText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Red",
+                            Type = "int",
+                            Value = EffectsMinText.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Text",
+                            Type = "string",
+                            Value = EffectsMinText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.VerticalAlignment",
+                            Type = "VerticalAlignment",
+                            Value = EffectsMinText.VerticalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Width",
+                            Type = "float",
+                            Value = EffectsMinText.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsMinText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = EffectsMinText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = EffectsMinText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "VolumeSliderInstance.Parent",
                             Type = "string",
                             Value = VolumeSliderInstance.Parent
@@ -4714,6 +5826,46 @@
                             Name = "MusicSliderInstance.X Units",
                             Type = "PositionUnitType",
                             Value = MusicSliderInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSliderInstance.Parent",
+                            Type = "string",
+                            Value = EffectsSliderInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSliderInstance.Width",
+                            Type = "float",
+                            Value = EffectsSliderInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSliderInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsSliderInstance.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSliderInstance.X",
+                            Type = "float",
+                            Value = EffectsSliderInstance.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSliderInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = EffectsSliderInstance.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -4959,6 +6111,134 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "EffectsMaxText.Blue",
+                            Type = "int",
+                            Value = EffectsMaxText.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.FontSize",
+                            Type = "int",
+                            Value = EffectsMaxText.FontSize
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Green",
+                            Type = "int",
+                            Value = EffectsMaxText.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Height",
+                            Type = "float",
+                            Value = EffectsMaxText.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsMaxText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = EffectsMaxText.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Parent",
+                            Type = "string",
+                            Value = EffectsMaxText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Red",
+                            Type = "int",
+                            Value = EffectsMaxText.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Text",
+                            Type = "string",
+                            Value = EffectsMaxText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Width",
+                            Type = "float",
+                            Value = EffectsMaxText.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsMaxText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = EffectsMaxText.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.X Units",
+                            Type = "PositionUnitType",
+                            Value = EffectsMaxText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = EffectsMaxText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = EffectsMaxText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.FontSize",
+                            Type = "int",
+                            Value = CurrentVolumeLabel.FontSize
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "CurrentVolumeLabel.Height",
                             Type = "float",
                             Value = CurrentVolumeLabel.Height
@@ -5055,6 +6335,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "CurrentMusicVolumeLabel.FontSize",
+                            Type = "int",
+                            Value = CurrentMusicVolumeLabel.FontSize
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "CurrentMusicVolumeLabel.Height",
                             Type = "float",
                             Value = CurrentMusicVolumeLabel.Height
@@ -5146,6 +6434,110 @@
                             Name = "CurrentMusicVolumeLabel.X Units",
                             Type = "PositionUnitType",
                             Value = CurrentMusicVolumeLabel.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.FontSize",
+                            Type = "int",
+                            Value = CurrentEffectsVolumeLabel.FontSize
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.Height",
+                            Type = "float",
+                            Value = CurrentEffectsVolumeLabel.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = CurrentEffectsVolumeLabel.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.LabelTextAlpha",
+                            Type = "int",
+                            Value = CurrentEffectsVolumeLabel.LabelTextAlpha
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.LabelTextBlue",
+                            Type = "int",
+                            Value = CurrentEffectsVolumeLabel.LabelTextBlue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.LabelTextGreen",
+                            Type = "int",
+                            Value = CurrentEffectsVolumeLabel.LabelTextGreen
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.LabelTextRed",
+                            Type = "int",
+                            Value = CurrentEffectsVolumeLabel.LabelTextRed
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.Parent",
+                            Type = "string",
+                            Value = CurrentEffectsVolumeLabel.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.Width",
+                            Type = "float",
+                            Value = CurrentEffectsVolumeLabel.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = CurrentEffectsVolumeLabel.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.X",
+                            Type = "float",
+                            Value = CurrentEffectsVolumeLabel.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = CurrentEffectsVolumeLabel.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.X Units",
+                            Type = "PositionUnitType",
+                            Value = CurrentEffectsVolumeLabel.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -6185,6 +7577,102 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "EffectsText.Blue",
+                            Type = "int",
+                            Value = EffectsText.Blue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Green",
+                            Type = "int",
+                            Value = EffectsText.Green + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Height",
+                            Type = "float",
+                            Value = EffectsText.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Parent",
+                            Type = "string",
+                            Value = EffectsText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Red",
+                            Type = "int",
+                            Value = EffectsText.Red + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Text",
+                            Type = "string",
+                            Value = EffectsText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Width",
+                            Type = "float",
+                            Value = EffectsText.Width + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.X Units",
+                            Type = "PositionUnitType",
+                            Value = EffectsText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = EffectsText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = EffectsText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "GraphicsContainer.Children Layout",
                             Type = "ChildrenLayout",
                             Value = GraphicsContainer.ChildrenLayout
@@ -6473,6 +7961,54 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "EffectsContainer.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = EffectsContainer.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsContainer.Height",
+                            Type = "float",
+                            Value = EffectsContainer.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsContainer.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsContainer.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsContainer.Parent",
+                            Type = "string",
+                            Value = EffectsContainer.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsContainer.Width",
+                            Type = "float",
+                            Value = EffectsContainer.Width + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsContainer.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsContainer.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "VolumeSlider.Height",
                             Type = "float",
                             Value = VolumeSlider.Height + 0f
@@ -6580,6 +8116,62 @@
                             Name = "MusicSlider.X Units",
                             Type = "PositionUnitType",
                             Value = MusicSlider.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSlider.Height",
+                            Type = "float",
+                            Value = EffectsSlider.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSlider.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsSlider.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSlider.Parent",
+                            Type = "string",
+                            Value = EffectsSlider.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSlider.Width",
+                            Type = "float",
+                            Value = EffectsSlider.Width + 80f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSlider.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsSlider.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSlider.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = EffectsSlider.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSlider.X Units",
+                            Type = "PositionUnitType",
+                            Value = EffectsSlider.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -6809,6 +8401,118 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "EffectsMinText.Blue",
+                            Type = "int",
+                            Value = EffectsMinText.Blue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.FontSize",
+                            Type = "int",
+                            Value = EffectsMinText.FontSize + 24
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Green",
+                            Type = "int",
+                            Value = EffectsMinText.Green + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Height",
+                            Type = "float",
+                            Value = EffectsMinText.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsMinText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = EffectsMinText.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Parent",
+                            Type = "string",
+                            Value = EffectsMinText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Red",
+                            Type = "int",
+                            Value = EffectsMinText.Red + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Text",
+                            Type = "string",
+                            Value = EffectsMinText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.VerticalAlignment",
+                            Type = "VerticalAlignment",
+                            Value = EffectsMinText.VerticalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Width",
+                            Type = "float",
+                            Value = EffectsMinText.Width + 2f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsMinText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = EffectsMinText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMinText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = EffectsMinText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "VolumeSliderInstance.Parent",
                             Type = "string",
                             Value = VolumeSliderInstance.Parent
@@ -6884,6 +8588,46 @@
                             Name = "MusicSliderInstance.X Units",
                             Type = "PositionUnitType",
                             Value = MusicSliderInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSliderInstance.Parent",
+                            Type = "string",
+                            Value = EffectsSliderInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSliderInstance.Width",
+                            Type = "float",
+                            Value = EffectsSliderInstance.Width + 92f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSliderInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsSliderInstance.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSliderInstance.X",
+                            Type = "float",
+                            Value = EffectsSliderInstance.X + 2f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsSliderInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = EffectsSliderInstance.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -7129,6 +8873,134 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "EffectsMaxText.Blue",
+                            Type = "int",
+                            Value = EffectsMaxText.Blue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.FontSize",
+                            Type = "int",
+                            Value = EffectsMaxText.FontSize + 24
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Green",
+                            Type = "int",
+                            Value = EffectsMaxText.Green + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Height",
+                            Type = "float",
+                            Value = EffectsMaxText.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsMaxText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = EffectsMaxText.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Parent",
+                            Type = "string",
+                            Value = EffectsMaxText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Red",
+                            Type = "int",
+                            Value = EffectsMaxText.Red + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Text",
+                            Type = "string",
+                            Value = EffectsMaxText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Width",
+                            Type = "float",
+                            Value = EffectsMaxText.Width + 5f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = EffectsMaxText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = EffectsMaxText.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.X Units",
+                            Type = "PositionUnitType",
+                            Value = EffectsMaxText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = EffectsMaxText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EffectsMaxText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = EffectsMaxText.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentVolumeLabel.FontSize",
+                            Type = "int",
+                            Value = CurrentVolumeLabel.FontSize + 24
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "CurrentVolumeLabel.Height",
                             Type = "float",
                             Value = CurrentVolumeLabel.Height + 100f
@@ -7220,6 +9092,14 @@
                             Name = "CurrentVolumeLabel.X Units",
                             Type = "PositionUnitType",
                             Value = CurrentVolumeLabel.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentMusicVolumeLabel.FontSize",
+                            Type = "int",
+                            Value = CurrentMusicVolumeLabel.FontSize + 24
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -7321,6 +9201,110 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.FontSize",
+                            Type = "int",
+                            Value = CurrentEffectsVolumeLabel.FontSize + 24
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.Height",
+                            Type = "float",
+                            Value = CurrentEffectsVolumeLabel.Height + 100f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = CurrentEffectsVolumeLabel.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.LabelTextAlpha",
+                            Type = "int",
+                            Value = CurrentEffectsVolumeLabel.LabelTextAlpha + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.LabelTextBlue",
+                            Type = "int",
+                            Value = CurrentEffectsVolumeLabel.LabelTextBlue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.LabelTextGreen",
+                            Type = "int",
+                            Value = CurrentEffectsVolumeLabel.LabelTextGreen + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.LabelTextRed",
+                            Type = "int",
+                            Value = CurrentEffectsVolumeLabel.LabelTextRed + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.Parent",
+                            Type = "string",
+                            Value = CurrentEffectsVolumeLabel.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.Width",
+                            Type = "float",
+                            Value = CurrentEffectsVolumeLabel.Width + 10f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = CurrentEffectsVolumeLabel.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.X",
+                            Type = "float",
+                            Value = CurrentEffectsVolumeLabel.X + 20f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = CurrentEffectsVolumeLabel.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CurrentEffectsVolumeLabel.X Units",
+                            Type = "PositionUnitType",
+                            Value = CurrentEffectsVolumeLabel.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "RectangleInstance.Blue",
                             Type = "int",
                             Value = RectangleInstance.Blue + 0
@@ -7413,21 +9397,28 @@
             public JHP4SD.GumRuntimes.TextRuntime WindowModeText { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime VolumeText { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime MusicText { get; set; }
+            public JHP4SD.GumRuntimes.TextRuntime EffectsText { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime GraphicsContainer { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.ComboBoxRuntime WindowModeComboBox { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime SoundContainer { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime VolumeContainer { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime MusicContainer { get; set; }
+            public JHP4SD.GumRuntimes.ContainerRuntime EffectsContainer { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime VolumeSlider { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime MusicSlider { get; set; }
+            public JHP4SD.GumRuntimes.ContainerRuntime EffectsSlider { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime VolumeMinText { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime MusicMinText { get; set; }
+            public JHP4SD.GumRuntimes.TextRuntime EffectsMinText { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.SliderRuntime VolumeSliderInstance { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.SliderRuntime MusicSliderInstance { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.SliderRuntime EffectsSliderInstance { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime VolumeMaxText { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime MusicMaxText { get; set; }
+            public JHP4SD.GumRuntimes.TextRuntime EffectsMaxText { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.LabelRuntime CurrentVolumeLabel { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.LabelRuntime CurrentMusicVolumeLabel { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.LabelRuntime CurrentEffectsVolumeLabel { get; set; }
             public JHP4SD.GumRuntimes.RectangleRuntime RectangleInstance { get; set; }
             public SettingsGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
@@ -7467,21 +9458,28 @@
                 WindowModeText = this.GetGraphicalUiElementByName("WindowModeText") as JHP4SD.GumRuntimes.TextRuntime;
                 VolumeText = this.GetGraphicalUiElementByName("VolumeText") as JHP4SD.GumRuntimes.TextRuntime;
                 MusicText = this.GetGraphicalUiElementByName("MusicText") as JHP4SD.GumRuntimes.TextRuntime;
+                EffectsText = this.GetGraphicalUiElementByName("EffectsText") as JHP4SD.GumRuntimes.TextRuntime;
                 GraphicsContainer = this.GetGraphicalUiElementByName("GraphicsContainer") as JHP4SD.GumRuntimes.ContainerRuntime;
                 WindowModeComboBox = this.GetGraphicalUiElementByName("WindowModeComboBox") as JHP4SD.GumRuntimes.DefaultForms.ComboBoxRuntime;
                 SoundContainer = this.GetGraphicalUiElementByName("SoundContainer") as JHP4SD.GumRuntimes.ContainerRuntime;
                 VolumeContainer = this.GetGraphicalUiElementByName("VolumeContainer") as JHP4SD.GumRuntimes.ContainerRuntime;
                 MusicContainer = this.GetGraphicalUiElementByName("MusicContainer") as JHP4SD.GumRuntimes.ContainerRuntime;
+                EffectsContainer = this.GetGraphicalUiElementByName("EffectsContainer") as JHP4SD.GumRuntimes.ContainerRuntime;
                 VolumeSlider = this.GetGraphicalUiElementByName("VolumeSlider") as JHP4SD.GumRuntimes.ContainerRuntime;
                 MusicSlider = this.GetGraphicalUiElementByName("MusicSlider") as JHP4SD.GumRuntimes.ContainerRuntime;
+                EffectsSlider = this.GetGraphicalUiElementByName("EffectsSlider") as JHP4SD.GumRuntimes.ContainerRuntime;
                 VolumeMinText = this.GetGraphicalUiElementByName("VolumeMinText") as JHP4SD.GumRuntimes.TextRuntime;
                 MusicMinText = this.GetGraphicalUiElementByName("MusicMinText") as JHP4SD.GumRuntimes.TextRuntime;
+                EffectsMinText = this.GetGraphicalUiElementByName("EffectsMinText") as JHP4SD.GumRuntimes.TextRuntime;
                 VolumeSliderInstance = this.GetGraphicalUiElementByName("VolumeSliderInstance") as JHP4SD.GumRuntimes.DefaultForms.SliderRuntime;
                 MusicSliderInstance = this.GetGraphicalUiElementByName("MusicSliderInstance") as JHP4SD.GumRuntimes.DefaultForms.SliderRuntime;
+                EffectsSliderInstance = this.GetGraphicalUiElementByName("EffectsSliderInstance") as JHP4SD.GumRuntimes.DefaultForms.SliderRuntime;
                 VolumeMaxText = this.GetGraphicalUiElementByName("VolumeMaxText") as JHP4SD.GumRuntimes.TextRuntime;
                 MusicMaxText = this.GetGraphicalUiElementByName("MusicMaxText") as JHP4SD.GumRuntimes.TextRuntime;
+                EffectsMaxText = this.GetGraphicalUiElementByName("EffectsMaxText") as JHP4SD.GumRuntimes.TextRuntime;
                 CurrentVolumeLabel = this.GetGraphicalUiElementByName("CurrentVolumeLabel") as JHP4SD.GumRuntimes.DefaultForms.LabelRuntime;
                 CurrentMusicVolumeLabel = this.GetGraphicalUiElementByName("CurrentMusicVolumeLabel") as JHP4SD.GumRuntimes.DefaultForms.LabelRuntime;
+                CurrentEffectsVolumeLabel = this.GetGraphicalUiElementByName("CurrentEffectsVolumeLabel") as JHP4SD.GumRuntimes.DefaultForms.LabelRuntime;
                 RectangleInstance = this.GetGraphicalUiElementByName("RectangleInstance") as JHP4SD.GumRuntimes.RectangleRuntime;
                 if (tryCreateFormsObject)
                 {

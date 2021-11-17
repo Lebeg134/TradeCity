@@ -352,3 +352,6 @@ MigrationBackup/
 *.aeproperties
 *.csvSettings
 *.sln.metaproj
+
+# Custom git ignores
+GumLastChangeFilePath.txt

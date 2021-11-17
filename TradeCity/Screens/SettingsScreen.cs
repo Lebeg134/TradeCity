@@ -32,7 +32,7 @@ namespace JHP4SD.Screens
         static int _windowModeLastSelected = 0;
         static double _currentVolume = 100;
         static double _currentMusic = 50;
-        static double _currentEffect = 75;
+        static double _currentEffects = 75;
         Dictionary<Slider, SliderInfo> sliders = new Dictionary<Slider, SliderInfo>();
 
         void CustomInitialize()
@@ -53,7 +53,7 @@ namespace JHP4SD.Screens
 
             sliders.Add(Forms.VolumeSliderInstance, new SliderInfo(_currentVolume, Forms.CurrentVolumeLabel));
             sliders.Add(Forms.MusicSliderInstance, new SliderInfo(_currentMusic, Forms.CurrentMusicVolumeLabel));
-            sliders.Add(Forms.EffectsSliderInstance, new SliderInfo(_currentEffect, Forms.CurrentEffectsVolumeLabel));
+            sliders.Add(Forms.EffectsSliderInstance, new SliderInfo(_currentEffects, Forms.CurrentEffectsVolumeLabel));
             Forms.VolumeSliderInstance.ValueChanged += VolumeSlider_ValueChanged;
             Forms.MusicSliderInstance.ValueChanged += MusicSliderInstance_ValueChanged;
             Forms.EffectsSliderInstance.ValueChanged += EffectsSliderInstance_ValueChanged;
@@ -77,29 +77,39 @@ namespace JHP4SD.Screens
 
             if (_currentVolume == 0)
             {
-
+                foreach(Slider slider in sliders.Keys)
+                {
+                    if (slider.Equals(Forms.VolumeSliderInstance)) continue;
+                    slider.Value = Forms.VolumeSliderInstance.Value;
+                }
             }
-            double volumeChange = Forms.VolumeSliderInstance.Value / _currentVolume;
-            foreach (Slider slider in sliders.Keys)
+            else
             {
-                if (slider.Equals(Forms.VolumeSliderInstance)) continue;
-                slider.Value *= volumeChange;
+                double volumeChange = Forms.VolumeSliderInstance.Value / _currentVolume;
+                foreach (Slider slider in sliders.Keys)
+                {
+                    if (slider.Equals(Forms.VolumeSliderInstance)) continue;
+                    slider.Value *= volumeChange;
+                }
             }
             _currentVolume = Forms.VolumeSliderInstance.Value;
-
         }
         private void MusicSliderInstance_ValueChanged(object sender, EventArgs e)
         {
             _currentMusic = Forms.MusicSliderInstance.Value;
-            if (_currentMusic > _currentVolume)
+            if (_currentMusic > Forms.VolumeSliderInstance.Value)
             {
-                Forms.MusicSliderInstance.Value = _currentVolume;
+                Forms.MusicSliderInstance.Value = Forms.VolumeSliderInstance.Value;
             }
 
         }
         private void EffectsSliderInstance_ValueChanged(object sender, EventArgs e)
         {
-            _currentEffect = Forms.EffectsSliderInstance.Value;
+            _currentEffects = Forms.EffectsSliderInstance.Value;
+            if (_currentEffects > Forms.VolumeSliderInstance.Value)
+            {
+                Forms.EffectsSliderInstance.Value = Forms.VolumeSliderInstance.Value;
+            }
         }
 
         private void UpdateSliders()

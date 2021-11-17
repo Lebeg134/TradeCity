@@ -53,19 +53,25 @@
     <Variable>
       <Type>float</Type>
       <Name>PlayButtonInstance.Width</Name>
-      <Value xsi:type="xsd:float">250</Value>
+      <Value xsi:type="xsd:float">80</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
       <Name>PlayButtonInstance.X</Name>
-      <Value xsi:type="xsd:float">352</Value>
+      <Value xsi:type="xsd:float">10</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>PositionUnitType</Type>
+      <Name>PlayButtonInstance.X Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
       <Name>PlayButtonInstance.Y</Name>
-      <Value xsi:type="xsd:float">-378</Value>
+      <Value xsi:type="xsd:float">-118</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -89,6 +95,11 @@
   <Instance>
     <Name>BackButtonInstance</Name>
     <BaseType>LebegForms/BasicComponents/BackButton</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>ScreenSelectorInstance</Name>
+    <BaseType>LebegForms/ComplexComponents/ScreenSelector</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
 </ScreenSave>

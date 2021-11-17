@@ -1736,6 +1736,251 @@
         "ElementType": "Screens",
         "EventType": 6,
         "TimestampUtc": "2021-11-16T22:39:52.2738396Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T19:33:43.8851046Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.TabContainer",
+        "OldName": "LebegForms/ComplexComponents/ScreenSelector.ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T19:33:57.2510659Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.ButtonInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T19:34:23.5942162Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.CityTab",
+        "OldName": "LebegForms/ComplexComponents/ScreenSelector.ButtonInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T19:43:16.5325326Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.CityTab1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T19:43:45.8939163Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.CityTab2",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T19:43:47.1497957Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.MapTab",
+        "OldName": "LebegForms/ComplexComponents/ScreenSelector.CityTab2",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T19:46:19.7038558Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/ScreenSelector.DefaultForms/Button CityTab in LebegForms/ComplexComponents/ScreenSelector",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-17T19:46:26.7162833Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/ScreenSelector.DefaultForms/Button MapTab in LebegForms/ComplexComponents/ScreenSelector",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-17T19:46:27.6824891Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/ScreenSelector.DefaultForms/Button CityTab1 in LebegForms/ComplexComponents/ScreenSelector",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-17T19:46:28.5685538Z"
+      },
+      {
+        "NewName": "DefaultForms/Button1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-11-17T19:46:31.990761Z"
+      },
+      {
+        "NewName": "DefaultForms/Button2",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-11-17T19:46:38.0599129Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DefaultForms/Button2",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2021-11-17T19:46:43.4964269Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DefaultForms/Button1",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2021-11-17T19:46:45.5127333Z"
+      },
+      {
+        "NewName": "DefaultForms/Button1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-11-17T19:46:49.1082401Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/Button1",
+        "OldName": "DefaultForms/Button1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2021-11-17T19:46:56.2514532Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/TabButton",
+        "OldName": "LebegForms/BasicComponents/Button1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2021-11-17T19:47:23.1565433Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.TabButtonInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T19:47:40.2684789Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.Tab",
+        "OldName": "LebegForms/ComplexComponents/ScreenSelector.TabButtonInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T19:47:49.0038102Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.Tab1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T19:48:18.6130313Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.Tab2",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T19:48:19.1457542Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.CityTab",
+        "OldName": "LebegForms/ComplexComponents/ScreenSelector.Tab",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T19:48:42.9024533Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.MapTab",
+        "OldName": "LebegForms/ComplexComponents/ScreenSelector.Tab2",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T19:48:54.1532391Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.MarketTab",
+        "OldName": "LebegForms/ComplexComponents/ScreenSelector.Tab1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-11-17T19:49:05.2311525Z"
+      },
+      {
+        "NewName": " GameScreenGum.ScreenSelectorInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T19:55:09.8064659Z"
+      },
+      {
+        "NewName": "Default",
+        "OldName": "EnabledOff1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2021-11-17T20:08:47.7360318Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.ColoredFrameInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T20:12:54.0085723Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/ScreenSelector.Container TabContainer in LebegForms/ComplexComponents/ScreenSelector",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-17T20:13:00.3423633Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/ScreenSelector.LebegForms/BasicComponents/TabButton CityTab in LebegForms/ComplexComponents/ScreenSelector",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-17T20:13:00.3661711Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/ScreenSelector.LebegForms/BasicComponents/TabButton MapTab in LebegForms/ComplexComponents/ScreenSelector",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-17T20:13:00.3686496Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/ScreenSelector.LebegForms/BasicComponents/TabButton MarketTab in LebegForms/ComplexComponents/ScreenSelector",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-17T20:13:00.3711304Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.TabContainer",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T20:13:02.1016755Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.CityTab",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T20:13:02.1041575Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.MapTab",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T20:13:02.1061403Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/ScreenSelector.MarketTab",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T20:13:02.108124Z"
       }
     ],
     "torok": [

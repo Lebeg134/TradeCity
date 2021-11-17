@@ -38,9 +38,9 @@
                     {
                         case  VariableState.Default:
                             SpriteInstance.Parent = this.GetGraphicalUiElementByName("ColoredFrameInstance") ?? this;
-                            ColoredFrameInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
-                            Height = 75f;
-                            Width = 75f;
+                            ColoredFrameInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
+                            Height = 80f;
+                            Width = 80f;
                             ColoredFrameInstance.Height = 0f;
                             ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             ColoredFrameInstance.Width = 0f;
@@ -51,11 +51,11 @@
                             ColoredFrameInstance.Y = 0f;
                             ColoredFrameInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             ColoredFrameInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            SpriteInstance.Height = 75f;
-                            SpriteInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/checkmark.png");
+                            SpriteInstance.Height = 100f;
+                            SpriteInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.MaintainFileAspectRatio;
+                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/forward.png");
                             SpriteInstance.Visible = true;
-                            SpriteInstance.Width = 75f;
+                            SpriteInstance.Width = 80f;
                             SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             SpriteInstance.X = 0f;
                             SpriteInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
@@ -91,6 +91,8 @@
                                 ColoredFrameInstance.Width = 0f;
                                 ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                                 SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/pause.png");
+                                SpriteInstance.Width = 80f;
+                                SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 break;
                             case  ToggleCategory.EnabledOff:
                                 ColoredFrameInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
@@ -103,6 +105,8 @@
                                 ColoredFrameInstance.Width = 0f;
                                 ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                                 SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/forward.png");
+                                SpriteInstance.Width = 80f;
+                                SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 break;
                             case  ToggleCategory.DisabledOn:
                                 ColoredFrameInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
@@ -115,6 +119,8 @@
                                 ColoredFrameInstance.Width = 0f;
                                 ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                                 SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/cross.png");
+                                SpriteInstance.Width = 80f;
+                                SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 break;
                             case  ToggleCategory.DisabledOff:
                                 ColoredFrameInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
@@ -127,53 +133,63 @@
                                 ColoredFrameInstance.Width = 0f;
                                 ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                                 SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/cross.png");
+                                SpriteInstance.Width = 80f;
+                                SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 break;
                             case  ToggleCategory.HighlightedOn:
                                 ColoredFrameInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                                 ColoredFrameInstance.Blue = 128;
                                 ColoredFrameInstance.Green = 128;
-                                ColoredFrameInstance.Height = 0f;
-                                ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                                ColoredFrameInstance.Height = 104f;
+                                ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 ColoredFrameInstance.Red = 128;
-                                ColoredFrameInstance.Width = 0f;
-                                ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                                ColoredFrameInstance.Width = 104f;
+                                ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/pause.png");
+                                SpriteInstance.Width = 80f;
+                                SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 break;
                             case  ToggleCategory.HighlightedOff:
                                 ColoredFrameInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                                 ColoredFrameInstance.Blend = Gum.RenderingLibrary.Blend.Normal;
                                 ColoredFrameInstance.Blue = 0;
                                 ColoredFrameInstance.Green = 255;
-                                ColoredFrameInstance.Height = 0f;
-                                ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                                ColoredFrameInstance.Height = 104f;
+                                ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 ColoredFrameInstance.Red = 0;
-                                ColoredFrameInstance.Width = 0f;
-                                ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                                ColoredFrameInstance.Width = 104f;
+                                ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/forward.png");
+                                SpriteInstance.Width = 80f;
+                                SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 break;
                             case  ToggleCategory.PushedOn:
                                 ColoredFrameInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                                 ColoredFrameInstance.Blend = Gum.RenderingLibrary.Blend.Normal;
                                 ColoredFrameInstance.Blue = 128;
                                 ColoredFrameInstance.Green = 128;
-                                ColoredFrameInstance.Height = 92f;
+                                ColoredFrameInstance.Height = 96f;
                                 ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 ColoredFrameInstance.Red = 128;
-                                ColoredFrameInstance.Width = 92f;
+                                ColoredFrameInstance.Width = 96f;
                                 ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/forward.png");
+                                SpriteInstance.Width = 80f;
+                                SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 break;
                             case  ToggleCategory.PushedOff:
                                 ColoredFrameInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                                 ColoredFrameInstance.Blend = Gum.RenderingLibrary.Blend.Normal;
                                 ColoredFrameInstance.Blue = 128;
                                 ColoredFrameInstance.Green = 128;
-                                ColoredFrameInstance.Height = 92f;
+                                ColoredFrameInstance.Height = 96f;
                                 ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 ColoredFrameInstance.Red = 128;
-                                ColoredFrameInstance.Width = 92f;
+                                ColoredFrameInstance.Width = 96f;
                                 ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/pause.png");
+                                SpriteInstance.Width = 80f;
+                                SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                                 break;
                         }
                     }
@@ -237,7 +253,7 @@
                 {
                     case  VariableState.Default:
                         setColoredFrameInstanceCurrentColorCategoryStateFirstValue = true;
-                        ColoredFrameInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        ColoredFrameInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                         setColoredFrameInstanceHeightFirstValue = true;
                         ColoredFrameInstanceHeightFirstValue = 0f;
                         if (interpolationValue < 1)
@@ -271,12 +287,12 @@
                             this.ColoredFrameInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         setHeightFirstValue = true;
-                        HeightFirstValue = 75f;
+                        HeightFirstValue = 80f;
                         setSpriteInstanceHeightFirstValue = true;
-                        SpriteInstanceHeightFirstValue = 75f;
+                        SpriteInstanceHeightFirstValue = 100f;
                         if (interpolationValue < 1)
                         {
-                            this.SpriteInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            this.SpriteInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.MaintainFileAspectRatio;
                         }
                         if (interpolationValue < 1)
                         {
@@ -284,14 +300,14 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/checkmark.png");
+                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/forward.png");
                         }
                         if (interpolationValue < 1)
                         {
                             this.SpriteInstance.Visible = true;
                         }
                         setSpriteInstanceWidthFirstValue = true;
-                        SpriteInstanceWidthFirstValue = 75f;
+                        SpriteInstanceWidthFirstValue = 80f;
                         if (interpolationValue < 1)
                         {
                             this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
@@ -317,14 +333,14 @@
                             this.SpriteInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         setWidthFirstValue = true;
-                        WidthFirstValue = 75f;
+                        WidthFirstValue = 80f;
                         break;
                 }
                 switch(secondState)
                 {
                     case  VariableState.Default:
                         setColoredFrameInstanceCurrentColorCategoryStateSecondValue = true;
-                        ColoredFrameInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        ColoredFrameInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Green;
                         setColoredFrameInstanceHeightSecondValue = true;
                         ColoredFrameInstanceHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
@@ -358,12 +374,12 @@
                             this.ColoredFrameInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         setHeightSecondValue = true;
-                        HeightSecondValue = 75f;
+                        HeightSecondValue = 80f;
                         setSpriteInstanceHeightSecondValue = true;
-                        SpriteInstanceHeightSecondValue = 75f;
+                        SpriteInstanceHeightSecondValue = 100f;
                         if (interpolationValue >= 1)
                         {
-                            this.SpriteInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            this.SpriteInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.MaintainFileAspectRatio;
                         }
                         if (interpolationValue >= 1)
                         {
@@ -371,14 +387,14 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/checkmark.png");
+                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/forward.png");
                         }
                         if (interpolationValue >= 1)
                         {
                             this.SpriteInstance.Visible = true;
                         }
                         setSpriteInstanceWidthSecondValue = true;
-                        SpriteInstanceWidthSecondValue = 75f;
+                        SpriteInstanceWidthSecondValue = 80f;
                         if (interpolationValue >= 1)
                         {
                             this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
@@ -404,7 +420,7 @@
                             this.SpriteInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         setWidthSecondValue = true;
-                        WidthSecondValue = 75f;
+                        WidthSecondValue = 80f;
                         break;
                 }
                 var wasSuppressed = mIsLayoutSuspended;
@@ -501,6 +517,10 @@
                 bool setColoredFrameInstanceWidthSecondValue = false;
                 float ColoredFrameInstanceWidthFirstValue= 0;
                 float ColoredFrameInstanceWidthSecondValue= 0;
+                bool setSpriteInstanceWidthFirstValue = false;
+                bool setSpriteInstanceWidthSecondValue = false;
+                float SpriteInstanceWidthFirstValue= 0;
+                float SpriteInstanceWidthSecondValue= 0;
                 switch(firstState)
                 {
                     case  ToggleCategory.EnabledOn:
@@ -532,6 +552,12 @@
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/pause.png");
                         }
+                        setSpriteInstanceWidthFirstValue = true;
+                        SpriteInstanceWidthFirstValue = 80f;
+                        if (interpolationValue < 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
                         break;
                     case  ToggleCategory.EnabledOff:
                         if (interpolationValue < 1)
@@ -561,6 +587,12 @@
                         if (interpolationValue < 1)
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/forward.png");
+                        }
+                        setSpriteInstanceWidthFirstValue = true;
+                        SpriteInstanceWidthFirstValue = 80f;
+                        if (interpolationValue < 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         break;
                     case  ToggleCategory.DisabledOn:
@@ -592,6 +624,12 @@
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/cross.png");
                         }
+                        setSpriteInstanceWidthFirstValue = true;
+                        SpriteInstanceWidthFirstValue = 80f;
+                        if (interpolationValue < 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
                         break;
                     case  ToggleCategory.DisabledOff:
                         if (interpolationValue < 1)
@@ -622,6 +660,12 @@
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/cross.png");
                         }
+                        setSpriteInstanceWidthFirstValue = true;
+                        SpriteInstanceWidthFirstValue = 80f;
+                        if (interpolationValue < 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
                         break;
                     case  ToggleCategory.HighlightedOn:
                         setColoredFrameInstanceBlueFirstValue = true;
@@ -631,22 +675,28 @@
                         setColoredFrameInstanceGreenFirstValue = true;
                         ColoredFrameInstanceGreenFirstValue = 128;
                         setColoredFrameInstanceHeightFirstValue = true;
-                        ColoredFrameInstanceHeightFirstValue = 0f;
+                        ColoredFrameInstanceHeightFirstValue = 104f;
                         if (interpolationValue < 1)
                         {
-                            this.ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            this.ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         setColoredFrameInstanceRedFirstValue = true;
                         ColoredFrameInstanceRedFirstValue = 128;
                         setColoredFrameInstanceWidthFirstValue = true;
-                        ColoredFrameInstanceWidthFirstValue = 0f;
+                        ColoredFrameInstanceWidthFirstValue = 104f;
                         if (interpolationValue < 1)
                         {
-                            this.ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            this.ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         if (interpolationValue < 1)
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/pause.png");
+                        }
+                        setSpriteInstanceWidthFirstValue = true;
+                        SpriteInstanceWidthFirstValue = 80f;
+                        if (interpolationValue < 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         break;
                     case  ToggleCategory.HighlightedOff:
@@ -661,22 +711,28 @@
                         setColoredFrameInstanceGreenFirstValue = true;
                         ColoredFrameInstanceGreenFirstValue = 255;
                         setColoredFrameInstanceHeightFirstValue = true;
-                        ColoredFrameInstanceHeightFirstValue = 0f;
+                        ColoredFrameInstanceHeightFirstValue = 104f;
                         if (interpolationValue < 1)
                         {
-                            this.ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            this.ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         setColoredFrameInstanceRedFirstValue = true;
                         ColoredFrameInstanceRedFirstValue = 0;
                         setColoredFrameInstanceWidthFirstValue = true;
-                        ColoredFrameInstanceWidthFirstValue = 0f;
+                        ColoredFrameInstanceWidthFirstValue = 104f;
                         if (interpolationValue < 1)
                         {
-                            this.ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            this.ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         if (interpolationValue < 1)
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/forward.png");
+                        }
+                        setSpriteInstanceWidthFirstValue = true;
+                        SpriteInstanceWidthFirstValue = 80f;
+                        if (interpolationValue < 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         break;
                     case  ToggleCategory.PushedOn:
@@ -691,7 +747,7 @@
                         setColoredFrameInstanceGreenFirstValue = true;
                         ColoredFrameInstanceGreenFirstValue = 128;
                         setColoredFrameInstanceHeightFirstValue = true;
-                        ColoredFrameInstanceHeightFirstValue = 92f;
+                        ColoredFrameInstanceHeightFirstValue = 96f;
                         if (interpolationValue < 1)
                         {
                             this.ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
@@ -699,7 +755,7 @@
                         setColoredFrameInstanceRedFirstValue = true;
                         ColoredFrameInstanceRedFirstValue = 128;
                         setColoredFrameInstanceWidthFirstValue = true;
-                        ColoredFrameInstanceWidthFirstValue = 92f;
+                        ColoredFrameInstanceWidthFirstValue = 96f;
                         if (interpolationValue < 1)
                         {
                             this.ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
@@ -707,6 +763,12 @@
                         if (interpolationValue < 1)
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/forward.png");
+                        }
+                        setSpriteInstanceWidthFirstValue = true;
+                        SpriteInstanceWidthFirstValue = 80f;
+                        if (interpolationValue < 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         break;
                     case  ToggleCategory.PushedOff:
@@ -721,7 +783,7 @@
                         setColoredFrameInstanceGreenFirstValue = true;
                         ColoredFrameInstanceGreenFirstValue = 128;
                         setColoredFrameInstanceHeightFirstValue = true;
-                        ColoredFrameInstanceHeightFirstValue = 92f;
+                        ColoredFrameInstanceHeightFirstValue = 96f;
                         if (interpolationValue < 1)
                         {
                             this.ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
@@ -729,7 +791,7 @@
                         setColoredFrameInstanceRedFirstValue = true;
                         ColoredFrameInstanceRedFirstValue = 128;
                         setColoredFrameInstanceWidthFirstValue = true;
-                        ColoredFrameInstanceWidthFirstValue = 92f;
+                        ColoredFrameInstanceWidthFirstValue = 96f;
                         if (interpolationValue < 1)
                         {
                             this.ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
@@ -737,6 +799,12 @@
                         if (interpolationValue < 1)
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/pause.png");
+                        }
+                        setSpriteInstanceWidthFirstValue = true;
+                        SpriteInstanceWidthFirstValue = 80f;
+                        if (interpolationValue < 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         break;
                 }
@@ -771,6 +839,12 @@
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/pause.png");
                         }
+                        setSpriteInstanceWidthSecondValue = true;
+                        SpriteInstanceWidthSecondValue = 80f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
                         break;
                     case  ToggleCategory.EnabledOff:
                         if (interpolationValue >= 1)
@@ -800,6 +874,12 @@
                         if (interpolationValue >= 1)
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/forward.png");
+                        }
+                        setSpriteInstanceWidthSecondValue = true;
+                        SpriteInstanceWidthSecondValue = 80f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         break;
                     case  ToggleCategory.DisabledOn:
@@ -831,6 +911,12 @@
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/cross.png");
                         }
+                        setSpriteInstanceWidthSecondValue = true;
+                        SpriteInstanceWidthSecondValue = 80f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
                         break;
                     case  ToggleCategory.DisabledOff:
                         if (interpolationValue >= 1)
@@ -861,6 +947,12 @@
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/cross.png");
                         }
+                        setSpriteInstanceWidthSecondValue = true;
+                        SpriteInstanceWidthSecondValue = 80f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
                         break;
                     case  ToggleCategory.HighlightedOn:
                         setColoredFrameInstanceBlueSecondValue = true;
@@ -870,22 +962,28 @@
                         setColoredFrameInstanceGreenSecondValue = true;
                         ColoredFrameInstanceGreenSecondValue = 128;
                         setColoredFrameInstanceHeightSecondValue = true;
-                        ColoredFrameInstanceHeightSecondValue = 0f;
+                        ColoredFrameInstanceHeightSecondValue = 104f;
                         if (interpolationValue >= 1)
                         {
-                            this.ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            this.ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         setColoredFrameInstanceRedSecondValue = true;
                         ColoredFrameInstanceRedSecondValue = 128;
                         setColoredFrameInstanceWidthSecondValue = true;
-                        ColoredFrameInstanceWidthSecondValue = 0f;
+                        ColoredFrameInstanceWidthSecondValue = 104f;
                         if (interpolationValue >= 1)
                         {
-                            this.ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            this.ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         if (interpolationValue >= 1)
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/pause.png");
+                        }
+                        setSpriteInstanceWidthSecondValue = true;
+                        SpriteInstanceWidthSecondValue = 80f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         break;
                     case  ToggleCategory.HighlightedOff:
@@ -900,22 +998,28 @@
                         setColoredFrameInstanceGreenSecondValue = true;
                         ColoredFrameInstanceGreenSecondValue = 255;
                         setColoredFrameInstanceHeightSecondValue = true;
-                        ColoredFrameInstanceHeightSecondValue = 0f;
+                        ColoredFrameInstanceHeightSecondValue = 104f;
                         if (interpolationValue >= 1)
                         {
-                            this.ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            this.ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         setColoredFrameInstanceRedSecondValue = true;
                         ColoredFrameInstanceRedSecondValue = 0;
                         setColoredFrameInstanceWidthSecondValue = true;
-                        ColoredFrameInstanceWidthSecondValue = 0f;
+                        ColoredFrameInstanceWidthSecondValue = 104f;
                         if (interpolationValue >= 1)
                         {
-                            this.ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            this.ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         if (interpolationValue >= 1)
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/forward.png");
+                        }
+                        setSpriteInstanceWidthSecondValue = true;
+                        SpriteInstanceWidthSecondValue = 80f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         break;
                     case  ToggleCategory.PushedOn:
@@ -930,7 +1034,7 @@
                         setColoredFrameInstanceGreenSecondValue = true;
                         ColoredFrameInstanceGreenSecondValue = 128;
                         setColoredFrameInstanceHeightSecondValue = true;
-                        ColoredFrameInstanceHeightSecondValue = 92f;
+                        ColoredFrameInstanceHeightSecondValue = 96f;
                         if (interpolationValue >= 1)
                         {
                             this.ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
@@ -938,7 +1042,7 @@
                         setColoredFrameInstanceRedSecondValue = true;
                         ColoredFrameInstanceRedSecondValue = 128;
                         setColoredFrameInstanceWidthSecondValue = true;
-                        ColoredFrameInstanceWidthSecondValue = 92f;
+                        ColoredFrameInstanceWidthSecondValue = 96f;
                         if (interpolationValue >= 1)
                         {
                             this.ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
@@ -946,6 +1050,12 @@
                         if (interpolationValue >= 1)
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/forward.png");
+                        }
+                        setSpriteInstanceWidthSecondValue = true;
+                        SpriteInstanceWidthSecondValue = 80f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         break;
                     case  ToggleCategory.PushedOff:
@@ -960,7 +1070,7 @@
                         setColoredFrameInstanceGreenSecondValue = true;
                         ColoredFrameInstanceGreenSecondValue = 128;
                         setColoredFrameInstanceHeightSecondValue = true;
-                        ColoredFrameInstanceHeightSecondValue = 92f;
+                        ColoredFrameInstanceHeightSecondValue = 96f;
                         if (interpolationValue >= 1)
                         {
                             this.ColoredFrameInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
@@ -968,7 +1078,7 @@
                         setColoredFrameInstanceRedSecondValue = true;
                         ColoredFrameInstanceRedSecondValue = 128;
                         setColoredFrameInstanceWidthSecondValue = true;
-                        ColoredFrameInstanceWidthSecondValue = 92f;
+                        ColoredFrameInstanceWidthSecondValue = 96f;
                         if (interpolationValue >= 1)
                         {
                             this.ColoredFrameInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
@@ -976,6 +1086,12 @@
                         if (interpolationValue >= 1)
                         {
                             SetProperty("SpriteInstance.SourceFile", "../GlobalContent/gameicons/PNG/White/1x/pause.png");
+                        }
+                        setSpriteInstanceWidthSecondValue = true;
+                        SpriteInstanceWidthSecondValue = 80f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                         }
                         break;
                 }
@@ -1007,6 +1123,10 @@
                 if (setColoredFrameInstanceWidthFirstValue && setColoredFrameInstanceWidthSecondValue)
                 {
                     ColoredFrameInstance.Width = ColoredFrameInstanceWidthFirstValue * (1 - interpolationValue) + ColoredFrameInstanceWidthSecondValue * interpolationValue;
+                }
+                if (setSpriteInstanceWidthFirstValue && setSpriteInstanceWidthSecondValue)
+                {
+                    SpriteInstance.Width = SpriteInstanceWidthFirstValue * (1 - interpolationValue) + SpriteInstanceWidthSecondValue * interpolationValue;
                 }
                 if (interpolationValue < 1)
                 {
@@ -1373,7 +1493,7 @@
                             SetsValue = true,
                             Name = "Height",
                             Type = "float",
-                            Value = Height + 75f
+                            Value = Height + 80f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1381,7 +1501,7 @@
                             SetsValue = true,
                             Name = "Width",
                             Type = "float",
-                            Value = Width + 75f
+                            Value = Width + 80f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1477,7 +1597,7 @@
                             SetsValue = true,
                             Name = "SpriteInstance.Height",
                             Type = "float",
-                            Value = SpriteInstance.Height + 75f
+                            Value = SpriteInstance.Height + 100f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1517,7 +1637,7 @@
                             SetsValue = true,
                             Name = "SpriteInstance.Width",
                             Type = "float",
-                            Value = SpriteInstance.Width + 75f
+                            Value = SpriteInstance.Width + 80f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1666,6 +1786,22 @@
                             Value = SpriteInstance.SourceFile
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
+                        }
+                        );
                         break;
                     case  ToggleCategory.EnabledOff:
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1746,6 +1882,22 @@
                             Name = "SpriteInstance.SourceFile",
                             Type = "string",
                             Value = SpriteInstance.SourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
                         }
                         );
                         break;
@@ -1830,6 +1982,22 @@
                             Value = SpriteInstance.SourceFile
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
+                        }
+                        );
                         break;
                     case  ToggleCategory.DisabledOff:
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1912,6 +2080,22 @@
                             Value = SpriteInstance.SourceFile
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
+                        }
+                        );
                         break;
                     case  ToggleCategory.HighlightedOn:
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1984,6 +2168,22 @@
                             Name = "SpriteInstance.SourceFile",
                             Type = "string",
                             Value = SpriteInstance.SourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
                         }
                         );
                         break;
@@ -2068,6 +2268,22 @@
                             Value = SpriteInstance.SourceFile
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
+                        }
+                        );
                         break;
                     case  ToggleCategory.PushedOn:
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2150,6 +2366,22 @@
                             Value = SpriteInstance.SourceFile
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
+                        }
+                        );
                         break;
                     case  ToggleCategory.PushedOff:
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2230,6 +2462,22 @@
                             Name = "SpriteInstance.SourceFile",
                             Type = "string",
                             Value = SpriteInstance.SourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
                         }
                         );
                         break;
@@ -2322,6 +2570,22 @@
                             Value = SpriteInstance.SourceFile
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width + 80f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
+                        }
+                        );
                         break;
                     case  ToggleCategory.EnabledOff:
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2402,6 +2666,22 @@
                             Name = "SpriteInstance.SourceFile",
                             Type = "string",
                             Value = SpriteInstance.SourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width + 80f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
                         }
                         );
                         break;
@@ -2486,6 +2766,22 @@
                             Value = SpriteInstance.SourceFile
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width + 80f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
+                        }
+                        );
                         break;
                     case  ToggleCategory.DisabledOff:
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2568,6 +2864,22 @@
                             Value = SpriteInstance.SourceFile
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width + 80f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
+                        }
+                        );
                         break;
                     case  ToggleCategory.HighlightedOn:
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2599,7 +2911,7 @@
                             SetsValue = true,
                             Name = "ColoredFrameInstance.Height",
                             Type = "float",
-                            Value = ColoredFrameInstance.Height + 0f
+                            Value = ColoredFrameInstance.Height + 104f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2623,7 +2935,7 @@
                             SetsValue = true,
                             Name = "ColoredFrameInstance.Width",
                             Type = "float",
-                            Value = ColoredFrameInstance.Width + 0f
+                            Value = ColoredFrameInstance.Width + 104f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2640,6 +2952,22 @@
                             Name = "SpriteInstance.SourceFile",
                             Type = "string",
                             Value = SpriteInstance.SourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width + 80f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
                         }
                         );
                         break;
@@ -2681,7 +3009,7 @@
                             SetsValue = true,
                             Name = "ColoredFrameInstance.Height",
                             Type = "float",
-                            Value = ColoredFrameInstance.Height + 0f
+                            Value = ColoredFrameInstance.Height + 104f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2705,7 +3033,7 @@
                             SetsValue = true,
                             Name = "ColoredFrameInstance.Width",
                             Type = "float",
-                            Value = ColoredFrameInstance.Width + 0f
+                            Value = ColoredFrameInstance.Width + 104f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2722,6 +3050,22 @@
                             Name = "SpriteInstance.SourceFile",
                             Type = "string",
                             Value = SpriteInstance.SourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width + 80f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
                         }
                         );
                         break;
@@ -2763,7 +3107,7 @@
                             SetsValue = true,
                             Name = "ColoredFrameInstance.Height",
                             Type = "float",
-                            Value = ColoredFrameInstance.Height + 92f
+                            Value = ColoredFrameInstance.Height + 96f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2787,7 +3131,7 @@
                             SetsValue = true,
                             Name = "ColoredFrameInstance.Width",
                             Type = "float",
-                            Value = ColoredFrameInstance.Width + 92f
+                            Value = ColoredFrameInstance.Width + 96f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2804,6 +3148,22 @@
                             Name = "SpriteInstance.SourceFile",
                             Type = "string",
                             Value = SpriteInstance.SourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width + 80f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
                         }
                         );
                         break;
@@ -2845,7 +3205,7 @@
                             SetsValue = true,
                             Name = "ColoredFrameInstance.Height",
                             Type = "float",
-                            Value = ColoredFrameInstance.Height + 92f
+                            Value = ColoredFrameInstance.Height + 96f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2869,7 +3229,7 @@
                             SetsValue = true,
                             Name = "ColoredFrameInstance.Width",
                             Type = "float",
-                            Value = ColoredFrameInstance.Width + 92f
+                            Value = ColoredFrameInstance.Width + 96f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2886,6 +3246,22 @@
                             Name = "SpriteInstance.SourceFile",
                             Type = "string",
                             Value = SpriteInstance.SourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width",
+                            Type = "float",
+                            Value = SpriteInstance.Width + 80f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = SpriteInstance.WidthUnits
                         }
                         );
                         break;

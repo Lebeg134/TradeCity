@@ -53,6 +53,11 @@
     <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
+    <Name>LebegForms/BasicComponents/TabButton</Name>
+    <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
+  </ComponentReference>
+  <ComponentReference>
     <Name>DefaultForms/CheckBox</Name>
     <ElementType>Component</ElementType>
     <LinkType>ReferenceOriginal</LinkType>
@@ -294,5 +299,11 @@
   </BehaviorReference>
   <BehaviorReference>
     <Name>UserControlBehavior</Name>
+  </BehaviorReference>
+  <BehaviorReference>
+    <Name>ResourceChange</Name>
+  </BehaviorReference>
+  <BehaviorReference>
+    <Name>ResourceChange</Name>
   </BehaviorReference>
 </GumProjectSave>

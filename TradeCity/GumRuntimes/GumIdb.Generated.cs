@@ -14,6 +14,7 @@
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("Sprite", typeof(JHP4SD.GumRuntimes.SpriteRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("Text", typeof(JHP4SD.GumRuntimes.TextRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/Button", typeof(JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/TabButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.TabButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/CheckBox", typeof(JHP4SD.GumRuntimes.DefaultForms.CheckBoxRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/ColoredFrame", typeof(JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/ComboBox", typeof(JHP4SD.GumRuntimes.DefaultForms.ComboBoxRuntime));
@@ -69,6 +70,7 @@
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(FlatRedBall.Forms.Controls.TreeView)] = typeof(JHP4SD.GumRuntimes.DefaultForms.TreeViewRuntime);
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(FlatRedBall.Forms.Controls.TreeViewItem)] = typeof(JHP4SD.GumRuntimes.DefaultForms.TreeViewItemRuntime);
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(FlatRedBall.Forms.Controls.UserControl)] = typeof(JHP4SD.GumRuntimes.DefaultForms.UserControlRuntime);
+                FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(JHP4SD.FormsControls.Components.LebegForms.ComplexComponents.ScreenSelectorForms)] = typeof(JHP4SD.GumRuntimes.LebegForms.ComplexComponents.ScreenSelectorRuntime);
             }
         }
     }

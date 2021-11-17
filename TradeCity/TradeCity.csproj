@@ -76,6 +76,8 @@
     </Compile>
     <Compile Include="Factories\CameraMidpointFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
+    <Compile Include="Forms\Components\LebegForms\ComplexComponents\ScreenSelectorForms.cs" />
+    <Compile Include="Forms\Components\LebegForms\ComplexComponents\ScreenSelectorForms.Generated.cs" />
     <Compile Include="Forms\Screens\CityGumForms.cs" />
     <Compile Include="Forms\Screens\CityGumForms.Generated.cs">
       <DependentUpon>CityGumForms.cs</DependentUpon>
@@ -143,6 +145,7 @@
     <Compile Include="GumRuntimes\Behaviors\IOnScreenKeyboardBehavior.Generated.cs" />
     <Compile Include="GumRuntimes\Behaviors\IPasswordBoxBehavior.Generated.cs" />
     <Compile Include="GumRuntimes\Behaviors\IRadioButtonBehavior.Generated.cs" />
+    <Compile Include="GumRuntimes\Behaviors\IResourceChange.Generated.cs" />
     <Compile Include="GumRuntimes\Behaviors\IScrollBarBehavior.Generated.cs" />
     <Compile Include="GumRuntimes\Behaviors\IScrollViewerBehavior.Generated.cs" />
     <Compile Include="GumRuntimes\Behaviors\ISliderBehavior.Generated.cs" />
@@ -272,6 +275,8 @@
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\PlayButtonRuntime.Generated.cs">
       <DependentUpon>PlayButtonRuntime.cs</DependentUpon>
     </Compile>
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\TabButtonRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\TabButtonRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\ScreenSelectorRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\ScreenSelectorRuntime.Generated.cs">
       <DependentUpon>ScreenSelectorRuntime.cs</DependentUpon>
@@ -630,6 +635,10 @@
     <None Include="content\gumproject\components\lebegforms\basiccomponents\playbutton.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>playbutton</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\tabbutton.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>tabbutton</Name>
     </None>
     <None Include="content\gumproject\components\lebegforms\complexcomponents\screenselector.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

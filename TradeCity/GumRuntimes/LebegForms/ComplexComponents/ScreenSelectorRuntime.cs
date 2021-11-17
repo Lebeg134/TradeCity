@@ -7,13 +7,28 @@ namespace JHP4SD.GumRuntimes.LebegForms.ComplexComponents
 {
     public partial class ScreenSelectorRuntime
     {
-        //static Selection? _currentScreen = Selection.CitySelected;
+        static Selection? _currentScreen = Selection.CitySelected;
         partial void CustomInitialize () 
         {
-            //CurrentSelectionState = _currentScreen;
-            ApplyState();
-            
+            MoveToState(_currentScreen);
+
+            CityTab.Click += CityTab_Click;
+            MapTab.Click += MapTab_Click;
+            MarketTab.Click += MarketTab_Click;
         }
+        private void CityTab_Click(FlatRedBall.Gui.IWindow window)
+        {
+            MoveToState(Selection.CitySelected);
+        }
+        private void MapTab_Click(FlatRedBall.Gui.IWindow window)
+        {
+            MoveToState(Selection.MapSelected);
+        }
+        private void MarketTab_Click(FlatRedBall.Gui.IWindow window)
+        {
+            MoveToState(Selection.MarketSelected);
+        }
+
         public void ApplyState()
         {
             CityTab.Enabled = true;
@@ -34,27 +49,11 @@ namespace JHP4SD.GumRuntimes.LebegForms.ComplexComponents
                     break;
             }
         }
-        public void MoveToState(Selection newState)
+        public void MoveToState(Selection? newState)
         {
-            CurrentSelectionState = newState;
+            _currentScreen = newState;
+            CurrentSelectionState = _currentScreen;
+            ApplyState();
         }
-        //public void SetSelectedIndex(int index)
-        //{
-        //    switch (index)
-        //    {
-        //        default:
-        //        case 0:
-        //            CurrentSelectionState = Selection.CitySelected;
-        //            break;
-        //        case 1:
-        //            CurrentSelectionState = Selection.MapSelected;
-        //            break;
-        //        case 2:
-        //            CurrentSelectionState = Selection.MarketSelected;
-        //            break;
-        //    }
-        //    _currentScreen = CurrentSelectionState;
-        //}
-
     }
 }

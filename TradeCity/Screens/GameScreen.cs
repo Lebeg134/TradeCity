@@ -22,6 +22,25 @@ namespace JHP4SD.Screens
         void CustomInitialize()
         {
             Forms.BackButtonInstance.Click += BackButtonInstance_Click;
+
+            Forms.ScreenSelectorInstance.CityTab.Click += CityTab_Click;
+            Forms.ScreenSelectorInstance.MapTab.Click += MapTab_Click;
+            Forms.ScreenSelectorInstance.MarketTab.Click += MarketTab_Click;
+        }
+
+        private void CityTab_Click(object sender, EventArgs e)
+        {
+            MoveToScreen(typeof(CityScreen));
+        }
+
+        private void MapTab_Click(object sender, EventArgs e)
+        {
+            MoveToScreen(typeof(MapScreen));
+        }
+
+        private void MarketTab_Click(object sender, EventArgs e)
+        {
+            MoveToScreen(typeof(MarketScreen));
         }
 
         private void BackButtonInstance_Click(object sender, EventArgs e)

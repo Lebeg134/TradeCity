@@ -89,13 +89,21 @@
       <DependentUpon>MainMenuGumForms.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Screens\MapGumForms.cs" />
-    <Compile Include="Forms\Screens\MapGumForms.Generated.cs" />
+    <Compile Include="Forms\Screens\MapGumForms.Generated.cs">
+      <DependentUpon>MapGumForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Screens\MarketGumForms.cs" />
-    <Compile Include="Forms\Screens\MarketGumForms.Generated.cs" />
+    <Compile Include="Forms\Screens\MarketGumForms.Generated.cs">
+      <DependentUpon>MarketGumForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Screens\MultiplayerGumForms.cs" />
-    <Compile Include="Forms\Screens\MultiplayerGumForms.Generated.cs" />
+    <Compile Include="Forms\Screens\MultiplayerGumForms.Generated.cs">
+      <DependentUpon>MultiplayerGumForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Screens\SettingsGumForms.cs" />
-    <Compile Include="Forms\Screens\SettingsGumForms.Generated.cs" />
+    <Compile Include="Forms\Screens\SettingsGumForms.Generated.cs">
+      <DependentUpon>SettingsGumForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Game1.cs" />
     <Compile Include="Game1.Generated.cs">
       <DependentUpon>Game1.cs</DependentUpon>
@@ -253,16 +261,24 @@
       <DependentUpon>MainMenuGumRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\MapGumRuntime.cs" />
-    <Compile Include="GumRuntimes\MapGumRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\MapGumRuntime.Generated.cs">
+      <DependentUpon>MapGumRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\MarketGumRuntime.cs" />
-    <Compile Include="GumRuntimes\MarketGumRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\MarketGumRuntime.Generated.cs">
+      <DependentUpon>MarketGumRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\MultiplayerGumRuntime.cs" />
-    <Compile Include="GumRuntimes\MultiplayerGumRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\MultiplayerGumRuntime.Generated.cs">
+      <DependentUpon>MultiplayerGumRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\NineSliceRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\PolygonRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\RectangleRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\SettingsGumRuntime.cs" />
-    <Compile Include="GumRuntimes\SettingsGumRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\SettingsGumRuntime.Generated.cs">
+      <DependentUpon>SettingsGumRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\SpriteRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\TextRuntime.Generated.cs" />
     <Compile Include="Lebeg134\Module\Map\Auction.cs" />

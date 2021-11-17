@@ -256,6 +256,22 @@
       <DependentUpon>GameScreenGumRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\GumIdb.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\BackButtonRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\BackButtonRuntime.Generated.cs">
+      <DependentUpon>BackButtonRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ExitButtonRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ExitButtonRuntime.Generated.cs">
+      <DependentUpon>ExitButtonRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\MainMenuButtonRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\MainMenuButtonRuntime.Generated.cs">
+      <DependentUpon>MainMenuButtonRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.Generated.cs">
+      <DependentUpon>TopicRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\MainMenuGumRuntime.cs" />
     <Compile Include="GumRuntimes\MainMenuGumRuntime.Generated.cs">
       <DependentUpon>MainMenuGumRuntime.cs</DependentUpon>
@@ -376,33 +392,33 @@
     <Compile Include="Platformer\Enums.Generated.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Screens\City.cs" />
-    <Compile Include="Screens\City.Generated.cs">
-      <DependentUpon>City.cs</DependentUpon>
+    <Compile Include="Screens\CityScreen.cs" />
+    <Compile Include="Screens\CityScreen.Generated.cs">
+      <DependentUpon>CityScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\GameScreen.cs" />
     <Compile Include="Screens\GameScreen.Generated.cs">
       <DependentUpon>GameScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\MainMenu.cs" />
-    <Compile Include="Screens\MainMenu.Generated.cs">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <Compile Include="Screens\MainMenuScreen.cs" />
+    <Compile Include="Screens\MainMenuScreen.Generated.cs">
+      <DependentUpon>MainMenuScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Map.cs" />
-    <Compile Include="Screens\Map.Generated.cs">
-      <DependentUpon>Map.cs</DependentUpon>
+    <Compile Include="Screens\MapScreen.cs" />
+    <Compile Include="Screens\MapScreen.Generated.cs">
+      <DependentUpon>MapScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Market.cs" />
-    <Compile Include="Screens\Market.Generated.cs">
-      <DependentUpon>Market.cs</DependentUpon>
+    <Compile Include="Screens\MarketScreen.cs" />
+    <Compile Include="Screens\MarketScreen.Generated.cs">
+      <DependentUpon>MarketScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Multiplayer.cs" />
-    <Compile Include="Screens\Multiplayer.Generated.cs">
-      <DependentUpon>Multiplayer.cs</DependentUpon>
+    <Compile Include="Screens\MultiplayerScreen.cs" />
+    <Compile Include="Screens\MultiplayerScreen.Generated.cs">
+      <DependentUpon>MultiplayerScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Settings.cs" />
-    <Compile Include="Screens\Settings.Generated.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <Compile Include="Screens\SettingsScreen.cs" />
+    <Compile Include="Screens\SettingsScreen.Generated.cs">
+      <DependentUpon>SettingsScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Setup\CameraSetup.cs" />
     <Compile Include="TileCollisions\CollidableListVsTileShapeCollectionRelationship.cs" />
@@ -571,6 +587,78 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>usercontrol</Name>
     </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\backbutton.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>backbutton</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\exitbutton.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>exitbutton</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\mainmenubutton.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>mainmenubutton</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\complexcomponents\topic.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>topic</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\resources\placeholdergradient.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>placeholdergradient</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_0</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_1</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_2</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_3</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_4</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_5</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_6</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_7</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_8</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font128arial_9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font128arial_9</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font16arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font16arial</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font16arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font16arial_0</Name>
+    </None>
     <None Include="content\gumproject\fontcache\font18arial.fnt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>font18arial</Name>
@@ -578,6 +666,38 @@
     <None Include="content\gumproject\fontcache\font18arial_0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>font18arial_0</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font24arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font24arial</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font24arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font24arial_0</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font32arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font32arial</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font32arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font32arial_0</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font72arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font72arial</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font72arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font72arial_0</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font72arial_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font72arial_1</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font72arial_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font72arial_2</Name>
     </None>
     <None Include="content\gumproject\gumproject.gumx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -606,6 +726,10 @@
     <None Include="content\gumproject\screens\multiplayergum.gusx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>MultiplayerGum</Name>
+    </None>
+    <None Include="content\gumproject\screens\resources\citynight.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>citynight</Name>
     </None>
     <None Include="content\gumproject\screens\settingsgum.gusx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -691,17 +815,17 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>CityMap</Name>
     </None>
-    <None Include="content\screens\level3\tiles.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>tiles</Name>
-    </None>
-    <None Include="content\screens\level3\tiles.tsx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>tiles</Name>
-    </None>
     <None Include="content\screens\map\countrymap.tmx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>CountryMap</Name>
+    </None>
+    <None Include="content\screens\map\tiles.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>tiles</Name>
+    </None>
+    <None Include="content\screens\map\tiles.tsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>tiles</Name>
     </None>
     <None Include="content\standardtileset.tsx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

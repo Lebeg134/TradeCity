@@ -25,34 +25,71 @@
                     switch(mCurrentVariableState)
                     {
                         case  VariableState.Default:
-                            ButtonInstance.Height = 50f;
-                            ButtonInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
-                            ButtonInstance.Width = 50f;
-                            ButtonInstance.X = 0f;
-                            ButtonInstance.Y = 0f;
-                            ButtonInstance2.Height = 50f;
-                            ButtonInstance2.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
-                            ButtonInstance2.Width = 50f;
-                            ButtonInstance2.X = 910f;
-                            ButtonInstance2.Y = 490f;
-                            ButtonInstance3.Height = 50f;
-                            ButtonInstance3.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
-                            ButtonInstance3.Width = 50f;
-                            ButtonInstance3.X = -910f;
-                            ButtonInstance3.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
-                            ButtonInstance3.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
-                            ButtonInstance3.Y = -490f;
-                            ButtonInstance3.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
-                            ButtonInstance3.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
-                            ButtonInstance1.Height = 50f;
-                            ButtonInstance1.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
-                            ButtonInstance1.Width = 50f;
-                            ButtonInstance1.X = 0f;
-                            ButtonInstance1.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
-                            ButtonInstance1.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
-                            ButtonInstance1.Y = 0f;
-                            ButtonInstance1.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
-                            ButtonInstance1.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            PaceholderText.Parent = this.GetGraphicalUiElementByName("BackgroundImage");
+                            BackgroundImage.Blue = 255;
+                            BackgroundImage.Green = 255;
+                            BackgroundImage.Height = 0f;
+                            BackgroundImage.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            BackgroundImage.Red = 255;
+                            SetProperty("BackgroundImage.SourceFile", "Screens/Resources/CityNight.jpg");
+                            BackgroundImage.Width = 0f;
+                            BackgroundImage.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            BackgroundImage.X = 0f;
+                            BackgroundImage.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                            BackgroundImage.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            BackgroundImage.Y = 0f;
+                            BackgroundImage.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            BackgroundImage.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            NewGameButton.MainButtonText = "New Game";
+                            NewGameButton.X = 40f;
+                            NewGameButton.Y = 40f;
+                            LoadGameButton.MainButtonText = "Load Game";
+                            LoadGameButton.WrapsChildren = false;
+                            LoadGameButton.X = 40f;
+                            LoadGameButton.Y = 230f;
+                            MultiplayerButton.MainButtonText = "Multiplayer";
+                            MultiplayerButton.X = 40f;
+                            MultiplayerButton.Y = 420f;
+                            SettingsButton.MainButtonText = "Settings";
+                            SettingsButton.X = 40f;
+                            SettingsButton.Y = 610f;
+                            ExitButtonInstance.X = 40f;
+                            ExitButtonInstance.Y = -40f;
+                            ExitButtonInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                            ExitButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            GameName.Blue = 0;
+                            GameName.FontSize = 128;
+                            GameName.Green = 255;
+                            GameName.Height = 0f;
+                            GameName.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            GameName.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            GameName.Red = 255;
+                            GameName.Text = "Trade City";
+                            GameName.UseFontSmoothing = true;
+                            GameName.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                            GameName.Width = 0f;
+                            GameName.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            GameName.X = 0f;
+                            GameName.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            GameName.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            GameName.Y = 0f;
+                            GameName.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                            GameName.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            PaceholderText.Alpha = 150;
+                            PaceholderText.Blue = 0;
+                            PaceholderText.FontSize = 128;
+                            PaceholderText.Height = 100f;
+                            PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                            PaceholderText.IsItalic = false;
+                            PaceholderText.Rotation = -20f;
+                            PaceholderText.Text = "PLACEHOLDER";
+                            PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                            PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             break;
                     }
                 }
@@ -67,238 +104,534 @@
                     throw new System.Exception("interpolationValue cannot be NaN");
                 }
                 #endif
-                bool setButtonInstanceHeightFirstValue = false;
-                bool setButtonInstanceHeightSecondValue = false;
-                float ButtonInstanceHeightFirstValue= 0;
-                float ButtonInstanceHeightSecondValue= 0;
-                bool setButtonInstanceWidthFirstValue = false;
-                bool setButtonInstanceWidthSecondValue = false;
-                float ButtonInstanceWidthFirstValue= 0;
-                float ButtonInstanceWidthSecondValue= 0;
-                bool setButtonInstanceXFirstValue = false;
-                bool setButtonInstanceXSecondValue = false;
-                float ButtonInstanceXFirstValue= 0;
-                float ButtonInstanceXSecondValue= 0;
-                bool setButtonInstanceYFirstValue = false;
-                bool setButtonInstanceYSecondValue = false;
-                float ButtonInstanceYFirstValue= 0;
-                float ButtonInstanceYSecondValue= 0;
-                bool setButtonInstance1HeightFirstValue = false;
-                bool setButtonInstance1HeightSecondValue = false;
-                float ButtonInstance1HeightFirstValue= 0;
-                float ButtonInstance1HeightSecondValue= 0;
-                bool setButtonInstance1WidthFirstValue = false;
-                bool setButtonInstance1WidthSecondValue = false;
-                float ButtonInstance1WidthFirstValue= 0;
-                float ButtonInstance1WidthSecondValue= 0;
-                bool setButtonInstance1XFirstValue = false;
-                bool setButtonInstance1XSecondValue = false;
-                float ButtonInstance1XFirstValue= 0;
-                float ButtonInstance1XSecondValue= 0;
-                bool setButtonInstance1YFirstValue = false;
-                bool setButtonInstance1YSecondValue = false;
-                float ButtonInstance1YFirstValue= 0;
-                float ButtonInstance1YSecondValue= 0;
-                bool setButtonInstance2HeightFirstValue = false;
-                bool setButtonInstance2HeightSecondValue = false;
-                float ButtonInstance2HeightFirstValue= 0;
-                float ButtonInstance2HeightSecondValue= 0;
-                bool setButtonInstance2WidthFirstValue = false;
-                bool setButtonInstance2WidthSecondValue = false;
-                float ButtonInstance2WidthFirstValue= 0;
-                float ButtonInstance2WidthSecondValue= 0;
-                bool setButtonInstance2XFirstValue = false;
-                bool setButtonInstance2XSecondValue = false;
-                float ButtonInstance2XFirstValue= 0;
-                float ButtonInstance2XSecondValue= 0;
-                bool setButtonInstance2YFirstValue = false;
-                bool setButtonInstance2YSecondValue = false;
-                float ButtonInstance2YFirstValue= 0;
-                float ButtonInstance2YSecondValue= 0;
-                bool setButtonInstance3HeightFirstValue = false;
-                bool setButtonInstance3HeightSecondValue = false;
-                float ButtonInstance3HeightFirstValue= 0;
-                float ButtonInstance3HeightSecondValue= 0;
-                bool setButtonInstance3WidthFirstValue = false;
-                bool setButtonInstance3WidthSecondValue = false;
-                float ButtonInstance3WidthFirstValue= 0;
-                float ButtonInstance3WidthSecondValue= 0;
-                bool setButtonInstance3XFirstValue = false;
-                bool setButtonInstance3XSecondValue = false;
-                float ButtonInstance3XFirstValue= 0;
-                float ButtonInstance3XSecondValue= 0;
-                bool setButtonInstance3YFirstValue = false;
-                bool setButtonInstance3YSecondValue = false;
-                float ButtonInstance3YFirstValue= 0;
-                float ButtonInstance3YSecondValue= 0;
+                bool setBackgroundImageBlueFirstValue = false;
+                bool setBackgroundImageBlueSecondValue = false;
+                int BackgroundImageBlueFirstValue= 0;
+                int BackgroundImageBlueSecondValue= 0;
+                bool setBackgroundImageGreenFirstValue = false;
+                bool setBackgroundImageGreenSecondValue = false;
+                int BackgroundImageGreenFirstValue= 0;
+                int BackgroundImageGreenSecondValue= 0;
+                bool setBackgroundImageHeightFirstValue = false;
+                bool setBackgroundImageHeightSecondValue = false;
+                float BackgroundImageHeightFirstValue= 0;
+                float BackgroundImageHeightSecondValue= 0;
+                bool setBackgroundImageRedFirstValue = false;
+                bool setBackgroundImageRedSecondValue = false;
+                int BackgroundImageRedFirstValue= 0;
+                int BackgroundImageRedSecondValue= 0;
+                bool setBackgroundImageWidthFirstValue = false;
+                bool setBackgroundImageWidthSecondValue = false;
+                float BackgroundImageWidthFirstValue= 0;
+                float BackgroundImageWidthSecondValue= 0;
+                bool setBackgroundImageXFirstValue = false;
+                bool setBackgroundImageXSecondValue = false;
+                float BackgroundImageXFirstValue= 0;
+                float BackgroundImageXSecondValue= 0;
+                bool setBackgroundImageYFirstValue = false;
+                bool setBackgroundImageYSecondValue = false;
+                float BackgroundImageYFirstValue= 0;
+                float BackgroundImageYSecondValue= 0;
+                bool setExitButtonInstanceXFirstValue = false;
+                bool setExitButtonInstanceXSecondValue = false;
+                float ExitButtonInstanceXFirstValue= 0;
+                float ExitButtonInstanceXSecondValue= 0;
+                bool setExitButtonInstanceYFirstValue = false;
+                bool setExitButtonInstanceYSecondValue = false;
+                float ExitButtonInstanceYFirstValue= 0;
+                float ExitButtonInstanceYSecondValue= 0;
+                bool setGameNameBlueFirstValue = false;
+                bool setGameNameBlueSecondValue = false;
+                int GameNameBlueFirstValue= 0;
+                int GameNameBlueSecondValue= 0;
+                bool setGameNameFontSizeFirstValue = false;
+                bool setGameNameFontSizeSecondValue = false;
+                int GameNameFontSizeFirstValue= 0;
+                int GameNameFontSizeSecondValue= 0;
+                bool setGameNameGreenFirstValue = false;
+                bool setGameNameGreenSecondValue = false;
+                int GameNameGreenFirstValue= 0;
+                int GameNameGreenSecondValue= 0;
+                bool setGameNameHeightFirstValue = false;
+                bool setGameNameHeightSecondValue = false;
+                float GameNameHeightFirstValue= 0;
+                float GameNameHeightSecondValue= 0;
+                bool setGameNameRedFirstValue = false;
+                bool setGameNameRedSecondValue = false;
+                int GameNameRedFirstValue= 0;
+                int GameNameRedSecondValue= 0;
+                bool setGameNameWidthFirstValue = false;
+                bool setGameNameWidthSecondValue = false;
+                float GameNameWidthFirstValue= 0;
+                float GameNameWidthSecondValue= 0;
+                bool setGameNameXFirstValue = false;
+                bool setGameNameXSecondValue = false;
+                float GameNameXFirstValue= 0;
+                float GameNameXSecondValue= 0;
+                bool setGameNameYFirstValue = false;
+                bool setGameNameYSecondValue = false;
+                float GameNameYFirstValue= 0;
+                float GameNameYSecondValue= 0;
+                bool setLoadGameButtonXFirstValue = false;
+                bool setLoadGameButtonXSecondValue = false;
+                float LoadGameButtonXFirstValue= 0;
+                float LoadGameButtonXSecondValue= 0;
+                bool setLoadGameButtonYFirstValue = false;
+                bool setLoadGameButtonYSecondValue = false;
+                float LoadGameButtonYFirstValue= 0;
+                float LoadGameButtonYSecondValue= 0;
+                bool setMultiplayerButtonXFirstValue = false;
+                bool setMultiplayerButtonXSecondValue = false;
+                float MultiplayerButtonXFirstValue= 0;
+                float MultiplayerButtonXSecondValue= 0;
+                bool setMultiplayerButtonYFirstValue = false;
+                bool setMultiplayerButtonYSecondValue = false;
+                float MultiplayerButtonYFirstValue= 0;
+                float MultiplayerButtonYSecondValue= 0;
+                bool setNewGameButtonXFirstValue = false;
+                bool setNewGameButtonXSecondValue = false;
+                float NewGameButtonXFirstValue= 0;
+                float NewGameButtonXSecondValue= 0;
+                bool setNewGameButtonYFirstValue = false;
+                bool setNewGameButtonYSecondValue = false;
+                float NewGameButtonYFirstValue= 0;
+                float NewGameButtonYSecondValue= 0;
+                bool setPaceholderTextAlphaFirstValue = false;
+                bool setPaceholderTextAlphaSecondValue = false;
+                int PaceholderTextAlphaFirstValue= 0;
+                int PaceholderTextAlphaSecondValue= 0;
+                bool setPaceholderTextBlueFirstValue = false;
+                bool setPaceholderTextBlueSecondValue = false;
+                int PaceholderTextBlueFirstValue= 0;
+                int PaceholderTextBlueSecondValue= 0;
+                bool setPaceholderTextFontSizeFirstValue = false;
+                bool setPaceholderTextFontSizeSecondValue = false;
+                int PaceholderTextFontSizeFirstValue= 0;
+                int PaceholderTextFontSizeSecondValue= 0;
+                bool setPaceholderTextHeightFirstValue = false;
+                bool setPaceholderTextHeightSecondValue = false;
+                float PaceholderTextHeightFirstValue= 0;
+                float PaceholderTextHeightSecondValue= 0;
+                bool setPaceholderTextRotationFirstValue = false;
+                bool setPaceholderTextRotationSecondValue = false;
+                float PaceholderTextRotationFirstValue= 0;
+                float PaceholderTextRotationSecondValue= 0;
+                bool setSettingsButtonXFirstValue = false;
+                bool setSettingsButtonXSecondValue = false;
+                float SettingsButtonXFirstValue= 0;
+                float SettingsButtonXSecondValue= 0;
+                bool setSettingsButtonYFirstValue = false;
+                bool setSettingsButtonYSecondValue = false;
+                float SettingsButtonYFirstValue= 0;
+                float SettingsButtonYSecondValue= 0;
                 switch(firstState)
                 {
                     case  VariableState.Default:
-                        setButtonInstanceHeightFirstValue = true;
-                        ButtonInstanceHeightFirstValue = 50f;
+                        setBackgroundImageBlueFirstValue = true;
+                        BackgroundImageBlueFirstValue = 255;
+                        setBackgroundImageGreenFirstValue = true;
+                        BackgroundImageGreenFirstValue = 255;
+                        setBackgroundImageHeightFirstValue = true;
+                        BackgroundImageHeightFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
-                            this.ButtonInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            this.BackgroundImage.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
-                        setButtonInstanceWidthFirstValue = true;
-                        ButtonInstanceWidthFirstValue = 50f;
-                        setButtonInstanceXFirstValue = true;
-                        ButtonInstanceXFirstValue = 0f;
-                        setButtonInstanceYFirstValue = true;
-                        ButtonInstanceYFirstValue = 0f;
-                        setButtonInstance1HeightFirstValue = true;
-                        ButtonInstance1HeightFirstValue = 50f;
+                        setBackgroundImageRedFirstValue = true;
+                        BackgroundImageRedFirstValue = 255;
                         if (interpolationValue < 1)
                         {
-                            this.ButtonInstance1.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            SetProperty("BackgroundImage.SourceFile", "Screens/Resources/CityNight.jpg");
                         }
-                        setButtonInstance1WidthFirstValue = true;
-                        ButtonInstance1WidthFirstValue = 50f;
-                        setButtonInstance1XFirstValue = true;
-                        ButtonInstance1XFirstValue = 0f;
+                        setBackgroundImageWidthFirstValue = true;
+                        BackgroundImageWidthFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
-                            this.ButtonInstance1.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            this.BackgroundImage.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
+                        setBackgroundImageXFirstValue = true;
+                        BackgroundImageXFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
-                            this.ButtonInstance1.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
-                        }
-                        setButtonInstance1YFirstValue = true;
-                        ButtonInstance1YFirstValue = 0f;
-                        if (interpolationValue < 1)
-                        {
-                            this.ButtonInstance1.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                            this.BackgroundImage.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.ButtonInstance1.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            this.BackgroundImage.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
-                        setButtonInstance2HeightFirstValue = true;
-                        ButtonInstance2HeightFirstValue = 50f;
+                        setBackgroundImageYFirstValue = true;
+                        BackgroundImageYFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
-                            this.ButtonInstance2.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
-                        }
-                        setButtonInstance2WidthFirstValue = true;
-                        ButtonInstance2WidthFirstValue = 50f;
-                        setButtonInstance2XFirstValue = true;
-                        ButtonInstance2XFirstValue = 910f;
-                        setButtonInstance2YFirstValue = true;
-                        ButtonInstance2YFirstValue = 490f;
-                        setButtonInstance3HeightFirstValue = true;
-                        ButtonInstance3HeightFirstValue = 50f;
-                        if (interpolationValue < 1)
-                        {
-                            this.ButtonInstance3.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
-                        }
-                        setButtonInstance3WidthFirstValue = true;
-                        ButtonInstance3WidthFirstValue = 50f;
-                        setButtonInstance3XFirstValue = true;
-                        ButtonInstance3XFirstValue = -910f;
-                        if (interpolationValue < 1)
-                        {
-                            this.ButtonInstance3.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            this.BackgroundImage.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.ButtonInstance3.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            this.BackgroundImage.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
-                        setButtonInstance3YFirstValue = true;
-                        ButtonInstance3YFirstValue = -490f;
+                        setExitButtonInstanceXFirstValue = true;
+                        ExitButtonInstanceXFirstValue = 40f;
+                        setExitButtonInstanceYFirstValue = true;
+                        ExitButtonInstanceYFirstValue = -40f;
                         if (interpolationValue < 1)
                         {
-                            this.ButtonInstance3.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                            this.ExitButtonInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.ButtonInstance3.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            this.ExitButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
+                        setGameNameBlueFirstValue = true;
+                        GameNameBlueFirstValue = 0;
+                        setGameNameFontSizeFirstValue = true;
+                        GameNameFontSizeFirstValue = 128;
+                        setGameNameGreenFirstValue = true;
+                        GameNameGreenFirstValue = 255;
+                        setGameNameHeightFirstValue = true;
+                        GameNameHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.GameName.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.GameName.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        setGameNameRedFirstValue = true;
+                        GameNameRedFirstValue = 255;
+                        if (interpolationValue < 1)
+                        {
+                            this.GameName.Text = "Trade City";
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.GameName.UseFontSmoothing = true;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.GameName.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        setGameNameWidthFirstValue = true;
+                        GameNameWidthFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.GameName.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                        }
+                        setGameNameXFirstValue = true;
+                        GameNameXFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.GameName.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.GameName.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setGameNameYFirstValue = true;
+                        GameNameYFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.GameName.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.GameName.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.LoadGameButton.MainButtonText = "Load Game";
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.LoadGameButton.WrapsChildren = false;
+                        }
+                        setLoadGameButtonXFirstValue = true;
+                        LoadGameButtonXFirstValue = 40f;
+                        setLoadGameButtonYFirstValue = true;
+                        LoadGameButtonYFirstValue = 230f;
+                        if (interpolationValue < 1)
+                        {
+                            this.MultiplayerButton.MainButtonText = "Multiplayer";
+                        }
+                        setMultiplayerButtonXFirstValue = true;
+                        MultiplayerButtonXFirstValue = 40f;
+                        setMultiplayerButtonYFirstValue = true;
+                        MultiplayerButtonYFirstValue = 420f;
+                        if (interpolationValue < 1)
+                        {
+                            this.NewGameButton.MainButtonText = "New Game";
+                        }
+                        setNewGameButtonXFirstValue = true;
+                        NewGameButtonXFirstValue = 40f;
+                        setNewGameButtonYFirstValue = true;
+                        NewGameButtonYFirstValue = 40f;
+                        setPaceholderTextAlphaFirstValue = true;
+                        PaceholderTextAlphaFirstValue = 150;
+                        setPaceholderTextBlueFirstValue = true;
+                        PaceholderTextBlueFirstValue = 0;
+                        setPaceholderTextFontSizeFirstValue = true;
+                        PaceholderTextFontSizeFirstValue = 128;
+                        setPaceholderTextHeightFirstValue = true;
+                        PaceholderTextHeightFirstValue = 100f;
+                        if (interpolationValue < 1)
+                        {
+                            this.PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.PaceholderText.IsItalic = false;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("BackgroundImage");
+                        }
+                        setPaceholderTextRotationFirstValue = true;
+                        PaceholderTextRotationFirstValue = -20f;
+                        if (interpolationValue < 1)
+                        {
+                            this.PaceholderText.Text = "PLACEHOLDER";
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.SettingsButton.MainButtonText = "Settings";
+                        }
+                        setSettingsButtonXFirstValue = true;
+                        SettingsButtonXFirstValue = 40f;
+                        setSettingsButtonYFirstValue = true;
+                        SettingsButtonYFirstValue = 610f;
                         break;
                 }
                 switch(secondState)
                 {
                     case  VariableState.Default:
-                        setButtonInstanceHeightSecondValue = true;
-                        ButtonInstanceHeightSecondValue = 50f;
+                        setBackgroundImageBlueSecondValue = true;
+                        BackgroundImageBlueSecondValue = 255;
+                        setBackgroundImageGreenSecondValue = true;
+                        BackgroundImageGreenSecondValue = 255;
+                        setBackgroundImageHeightSecondValue = true;
+                        BackgroundImageHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
-                            this.ButtonInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            this.BackgroundImage.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
-                        setButtonInstanceWidthSecondValue = true;
-                        ButtonInstanceWidthSecondValue = 50f;
-                        setButtonInstanceXSecondValue = true;
-                        ButtonInstanceXSecondValue = 0f;
-                        setButtonInstanceYSecondValue = true;
-                        ButtonInstanceYSecondValue = 0f;
-                        setButtonInstance1HeightSecondValue = true;
-                        ButtonInstance1HeightSecondValue = 50f;
+                        setBackgroundImageRedSecondValue = true;
+                        BackgroundImageRedSecondValue = 255;
                         if (interpolationValue >= 1)
                         {
-                            this.ButtonInstance1.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            SetProperty("BackgroundImage.SourceFile", "Screens/Resources/CityNight.jpg");
                         }
-                        setButtonInstance1WidthSecondValue = true;
-                        ButtonInstance1WidthSecondValue = 50f;
-                        setButtonInstance1XSecondValue = true;
-                        ButtonInstance1XSecondValue = 0f;
+                        setBackgroundImageWidthSecondValue = true;
+                        BackgroundImageWidthSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
-                            this.ButtonInstance1.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            this.BackgroundImage.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
+                        setBackgroundImageXSecondValue = true;
+                        BackgroundImageXSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
-                            this.ButtonInstance1.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
-                        }
-                        setButtonInstance1YSecondValue = true;
-                        ButtonInstance1YSecondValue = 0f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.ButtonInstance1.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                            this.BackgroundImage.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.ButtonInstance1.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            this.BackgroundImage.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
-                        setButtonInstance2HeightSecondValue = true;
-                        ButtonInstance2HeightSecondValue = 50f;
+                        setBackgroundImageYSecondValue = true;
+                        BackgroundImageYSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
-                            this.ButtonInstance2.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
-                        }
-                        setButtonInstance2WidthSecondValue = true;
-                        ButtonInstance2WidthSecondValue = 50f;
-                        setButtonInstance2XSecondValue = true;
-                        ButtonInstance2XSecondValue = 910f;
-                        setButtonInstance2YSecondValue = true;
-                        ButtonInstance2YSecondValue = 490f;
-                        setButtonInstance3HeightSecondValue = true;
-                        ButtonInstance3HeightSecondValue = 50f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.ButtonInstance3.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
-                        }
-                        setButtonInstance3WidthSecondValue = true;
-                        ButtonInstance3WidthSecondValue = 50f;
-                        setButtonInstance3XSecondValue = true;
-                        ButtonInstance3XSecondValue = -910f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.ButtonInstance3.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            this.BackgroundImage.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.ButtonInstance3.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            this.BackgroundImage.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
-                        setButtonInstance3YSecondValue = true;
-                        ButtonInstance3YSecondValue = -490f;
+                        setExitButtonInstanceXSecondValue = true;
+                        ExitButtonInstanceXSecondValue = 40f;
+                        setExitButtonInstanceYSecondValue = true;
+                        ExitButtonInstanceYSecondValue = -40f;
                         if (interpolationValue >= 1)
                         {
-                            this.ButtonInstance3.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                            this.ExitButtonInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.ButtonInstance3.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            this.ExitButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
+                        setGameNameBlueSecondValue = true;
+                        GameNameBlueSecondValue = 0;
+                        setGameNameFontSizeSecondValue = true;
+                        GameNameFontSizeSecondValue = 128;
+                        setGameNameGreenSecondValue = true;
+                        GameNameGreenSecondValue = 255;
+                        setGameNameHeightSecondValue = true;
+                        GameNameHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.GameName.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.GameName.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        setGameNameRedSecondValue = true;
+                        GameNameRedSecondValue = 255;
+                        if (interpolationValue >= 1)
+                        {
+                            this.GameName.Text = "Trade City";
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.GameName.UseFontSmoothing = true;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.GameName.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        setGameNameWidthSecondValue = true;
+                        GameNameWidthSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.GameName.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                        }
+                        setGameNameXSecondValue = true;
+                        GameNameXSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.GameName.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.GameName.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setGameNameYSecondValue = true;
+                        GameNameYSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.GameName.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.GameName.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.LoadGameButton.MainButtonText = "Load Game";
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.LoadGameButton.WrapsChildren = false;
+                        }
+                        setLoadGameButtonXSecondValue = true;
+                        LoadGameButtonXSecondValue = 40f;
+                        setLoadGameButtonYSecondValue = true;
+                        LoadGameButtonYSecondValue = 230f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.MultiplayerButton.MainButtonText = "Multiplayer";
+                        }
+                        setMultiplayerButtonXSecondValue = true;
+                        MultiplayerButtonXSecondValue = 40f;
+                        setMultiplayerButtonYSecondValue = true;
+                        MultiplayerButtonYSecondValue = 420f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.NewGameButton.MainButtonText = "New Game";
+                        }
+                        setNewGameButtonXSecondValue = true;
+                        NewGameButtonXSecondValue = 40f;
+                        setNewGameButtonYSecondValue = true;
+                        NewGameButtonYSecondValue = 40f;
+                        setPaceholderTextAlphaSecondValue = true;
+                        PaceholderTextAlphaSecondValue = 150;
+                        setPaceholderTextBlueSecondValue = true;
+                        PaceholderTextBlueSecondValue = 0;
+                        setPaceholderTextFontSizeSecondValue = true;
+                        PaceholderTextFontSizeSecondValue = 128;
+                        setPaceholderTextHeightSecondValue = true;
+                        PaceholderTextHeightSecondValue = 100f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.PaceholderText.IsItalic = false;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("BackgroundImage");
+                        }
+                        setPaceholderTextRotationSecondValue = true;
+                        PaceholderTextRotationSecondValue = -20f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.PaceholderText.Text = "PLACEHOLDER";
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.SettingsButton.MainButtonText = "Settings";
+                        }
+                        setSettingsButtonXSecondValue = true;
+                        SettingsButtonXSecondValue = 40f;
+                        setSettingsButtonYSecondValue = true;
+                        SettingsButtonYSecondValue = 610f;
                         break;
                 }
                 var wasSuppressed = mIsLayoutSuspended;
@@ -306,69 +639,125 @@
                 {
                     SuspendLayout(true);
                 }
-                if (setButtonInstanceHeightFirstValue && setButtonInstanceHeightSecondValue)
+                if (setBackgroundImageBlueFirstValue && setBackgroundImageBlueSecondValue)
                 {
-                    ButtonInstance.Height = ButtonInstanceHeightFirstValue * (1 - interpolationValue) + ButtonInstanceHeightSecondValue * interpolationValue;
+                    BackgroundImage.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(BackgroundImageBlueFirstValue* (1 - interpolationValue) + BackgroundImageBlueSecondValue * interpolationValue);
                 }
-                if (setButtonInstanceWidthFirstValue && setButtonInstanceWidthSecondValue)
+                if (setBackgroundImageGreenFirstValue && setBackgroundImageGreenSecondValue)
                 {
-                    ButtonInstance.Width = ButtonInstanceWidthFirstValue * (1 - interpolationValue) + ButtonInstanceWidthSecondValue * interpolationValue;
+                    BackgroundImage.Green = FlatRedBall.Math.MathFunctions.RoundToInt(BackgroundImageGreenFirstValue* (1 - interpolationValue) + BackgroundImageGreenSecondValue * interpolationValue);
                 }
-                if (setButtonInstanceXFirstValue && setButtonInstanceXSecondValue)
+                if (setBackgroundImageHeightFirstValue && setBackgroundImageHeightSecondValue)
                 {
-                    ButtonInstance.X = ButtonInstanceXFirstValue * (1 - interpolationValue) + ButtonInstanceXSecondValue * interpolationValue;
+                    BackgroundImage.Height = BackgroundImageHeightFirstValue * (1 - interpolationValue) + BackgroundImageHeightSecondValue * interpolationValue;
                 }
-                if (setButtonInstanceYFirstValue && setButtonInstanceYSecondValue)
+                if (setBackgroundImageRedFirstValue && setBackgroundImageRedSecondValue)
                 {
-                    ButtonInstance.Y = ButtonInstanceYFirstValue * (1 - interpolationValue) + ButtonInstanceYSecondValue * interpolationValue;
+                    BackgroundImage.Red = FlatRedBall.Math.MathFunctions.RoundToInt(BackgroundImageRedFirstValue* (1 - interpolationValue) + BackgroundImageRedSecondValue * interpolationValue);
                 }
-                if (setButtonInstance1HeightFirstValue && setButtonInstance1HeightSecondValue)
+                if (setBackgroundImageWidthFirstValue && setBackgroundImageWidthSecondValue)
                 {
-                    ButtonInstance1.Height = ButtonInstance1HeightFirstValue * (1 - interpolationValue) + ButtonInstance1HeightSecondValue * interpolationValue;
+                    BackgroundImage.Width = BackgroundImageWidthFirstValue * (1 - interpolationValue) + BackgroundImageWidthSecondValue * interpolationValue;
                 }
-                if (setButtonInstance1WidthFirstValue && setButtonInstance1WidthSecondValue)
+                if (setBackgroundImageXFirstValue && setBackgroundImageXSecondValue)
                 {
-                    ButtonInstance1.Width = ButtonInstance1WidthFirstValue * (1 - interpolationValue) + ButtonInstance1WidthSecondValue * interpolationValue;
+                    BackgroundImage.X = BackgroundImageXFirstValue * (1 - interpolationValue) + BackgroundImageXSecondValue * interpolationValue;
                 }
-                if (setButtonInstance1XFirstValue && setButtonInstance1XSecondValue)
+                if (setBackgroundImageYFirstValue && setBackgroundImageYSecondValue)
                 {
-                    ButtonInstance1.X = ButtonInstance1XFirstValue * (1 - interpolationValue) + ButtonInstance1XSecondValue * interpolationValue;
+                    BackgroundImage.Y = BackgroundImageYFirstValue * (1 - interpolationValue) + BackgroundImageYSecondValue * interpolationValue;
                 }
-                if (setButtonInstance1YFirstValue && setButtonInstance1YSecondValue)
+                if (setExitButtonInstanceXFirstValue && setExitButtonInstanceXSecondValue)
                 {
-                    ButtonInstance1.Y = ButtonInstance1YFirstValue * (1 - interpolationValue) + ButtonInstance1YSecondValue * interpolationValue;
+                    ExitButtonInstance.X = ExitButtonInstanceXFirstValue * (1 - interpolationValue) + ExitButtonInstanceXSecondValue * interpolationValue;
                 }
-                if (setButtonInstance2HeightFirstValue && setButtonInstance2HeightSecondValue)
+                if (setExitButtonInstanceYFirstValue && setExitButtonInstanceYSecondValue)
                 {
-                    ButtonInstance2.Height = ButtonInstance2HeightFirstValue * (1 - interpolationValue) + ButtonInstance2HeightSecondValue * interpolationValue;
+                    ExitButtonInstance.Y = ExitButtonInstanceYFirstValue * (1 - interpolationValue) + ExitButtonInstanceYSecondValue * interpolationValue;
                 }
-                if (setButtonInstance2WidthFirstValue && setButtonInstance2WidthSecondValue)
+                if (setGameNameBlueFirstValue && setGameNameBlueSecondValue)
                 {
-                    ButtonInstance2.Width = ButtonInstance2WidthFirstValue * (1 - interpolationValue) + ButtonInstance2WidthSecondValue * interpolationValue;
+                    GameName.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(GameNameBlueFirstValue* (1 - interpolationValue) + GameNameBlueSecondValue * interpolationValue);
                 }
-                if (setButtonInstance2XFirstValue && setButtonInstance2XSecondValue)
+                if (setGameNameFontSizeFirstValue && setGameNameFontSizeSecondValue)
                 {
-                    ButtonInstance2.X = ButtonInstance2XFirstValue * (1 - interpolationValue) + ButtonInstance2XSecondValue * interpolationValue;
+                    GameName.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(GameNameFontSizeFirstValue* (1 - interpolationValue) + GameNameFontSizeSecondValue * interpolationValue);
                 }
-                if (setButtonInstance2YFirstValue && setButtonInstance2YSecondValue)
+                if (setGameNameGreenFirstValue && setGameNameGreenSecondValue)
                 {
-                    ButtonInstance2.Y = ButtonInstance2YFirstValue * (1 - interpolationValue) + ButtonInstance2YSecondValue * interpolationValue;
+                    GameName.Green = FlatRedBall.Math.MathFunctions.RoundToInt(GameNameGreenFirstValue* (1 - interpolationValue) + GameNameGreenSecondValue * interpolationValue);
                 }
-                if (setButtonInstance3HeightFirstValue && setButtonInstance3HeightSecondValue)
+                if (setGameNameHeightFirstValue && setGameNameHeightSecondValue)
                 {
-                    ButtonInstance3.Height = ButtonInstance3HeightFirstValue * (1 - interpolationValue) + ButtonInstance3HeightSecondValue * interpolationValue;
+                    GameName.Height = GameNameHeightFirstValue * (1 - interpolationValue) + GameNameHeightSecondValue * interpolationValue;
                 }
-                if (setButtonInstance3WidthFirstValue && setButtonInstance3WidthSecondValue)
+                if (setGameNameRedFirstValue && setGameNameRedSecondValue)
                 {
-                    ButtonInstance3.Width = ButtonInstance3WidthFirstValue * (1 - interpolationValue) + ButtonInstance3WidthSecondValue * interpolationValue;
+                    GameName.Red = FlatRedBall.Math.MathFunctions.RoundToInt(GameNameRedFirstValue* (1 - interpolationValue) + GameNameRedSecondValue * interpolationValue);
                 }
-                if (setButtonInstance3XFirstValue && setButtonInstance3XSecondValue)
+                if (setGameNameWidthFirstValue && setGameNameWidthSecondValue)
                 {
-                    ButtonInstance3.X = ButtonInstance3XFirstValue * (1 - interpolationValue) + ButtonInstance3XSecondValue * interpolationValue;
+                    GameName.Width = GameNameWidthFirstValue * (1 - interpolationValue) + GameNameWidthSecondValue * interpolationValue;
                 }
-                if (setButtonInstance3YFirstValue && setButtonInstance3YSecondValue)
+                if (setGameNameXFirstValue && setGameNameXSecondValue)
                 {
-                    ButtonInstance3.Y = ButtonInstance3YFirstValue * (1 - interpolationValue) + ButtonInstance3YSecondValue * interpolationValue;
+                    GameName.X = GameNameXFirstValue * (1 - interpolationValue) + GameNameXSecondValue * interpolationValue;
+                }
+                if (setGameNameYFirstValue && setGameNameYSecondValue)
+                {
+                    GameName.Y = GameNameYFirstValue * (1 - interpolationValue) + GameNameYSecondValue * interpolationValue;
+                }
+                if (setLoadGameButtonXFirstValue && setLoadGameButtonXSecondValue)
+                {
+                    LoadGameButton.X = LoadGameButtonXFirstValue * (1 - interpolationValue) + LoadGameButtonXSecondValue * interpolationValue;
+                }
+                if (setLoadGameButtonYFirstValue && setLoadGameButtonYSecondValue)
+                {
+                    LoadGameButton.Y = LoadGameButtonYFirstValue * (1 - interpolationValue) + LoadGameButtonYSecondValue * interpolationValue;
+                }
+                if (setMultiplayerButtonXFirstValue && setMultiplayerButtonXSecondValue)
+                {
+                    MultiplayerButton.X = MultiplayerButtonXFirstValue * (1 - interpolationValue) + MultiplayerButtonXSecondValue * interpolationValue;
+                }
+                if (setMultiplayerButtonYFirstValue && setMultiplayerButtonYSecondValue)
+                {
+                    MultiplayerButton.Y = MultiplayerButtonYFirstValue * (1 - interpolationValue) + MultiplayerButtonYSecondValue * interpolationValue;
+                }
+                if (setNewGameButtonXFirstValue && setNewGameButtonXSecondValue)
+                {
+                    NewGameButton.X = NewGameButtonXFirstValue * (1 - interpolationValue) + NewGameButtonXSecondValue * interpolationValue;
+                }
+                if (setNewGameButtonYFirstValue && setNewGameButtonYSecondValue)
+                {
+                    NewGameButton.Y = NewGameButtonYFirstValue * (1 - interpolationValue) + NewGameButtonYSecondValue * interpolationValue;
+                }
+                if (setPaceholderTextAlphaFirstValue && setPaceholderTextAlphaSecondValue)
+                {
+                    PaceholderText.Alpha = FlatRedBall.Math.MathFunctions.RoundToInt(PaceholderTextAlphaFirstValue* (1 - interpolationValue) + PaceholderTextAlphaSecondValue * interpolationValue);
+                }
+                if (setPaceholderTextBlueFirstValue && setPaceholderTextBlueSecondValue)
+                {
+                    PaceholderText.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(PaceholderTextBlueFirstValue* (1 - interpolationValue) + PaceholderTextBlueSecondValue * interpolationValue);
+                }
+                if (setPaceholderTextFontSizeFirstValue && setPaceholderTextFontSizeSecondValue)
+                {
+                    PaceholderText.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(PaceholderTextFontSizeFirstValue* (1 - interpolationValue) + PaceholderTextFontSizeSecondValue * interpolationValue);
+                }
+                if (setPaceholderTextHeightFirstValue && setPaceholderTextHeightSecondValue)
+                {
+                    PaceholderText.Height = PaceholderTextHeightFirstValue * (1 - interpolationValue) + PaceholderTextHeightSecondValue * interpolationValue;
+                }
+                if (setPaceholderTextRotationFirstValue && setPaceholderTextRotationSecondValue)
+                {
+                    PaceholderText.Rotation = PaceholderTextRotationFirstValue * (1 - interpolationValue) + PaceholderTextRotationSecondValue * interpolationValue;
+                }
+                if (setSettingsButtonXFirstValue && setSettingsButtonXSecondValue)
+                {
+                    SettingsButton.X = SettingsButtonXFirstValue * (1 - interpolationValue) + SettingsButtonXSecondValue * interpolationValue;
+                }
+                if (setSettingsButtonYFirstValue && setSettingsButtonYSecondValue)
+                {
+                    SettingsButton.Y = SettingsButtonYFirstValue * (1 - interpolationValue) + SettingsButtonYSecondValue * interpolationValue;
                 }
                 if (interpolationValue < 1)
                 {
@@ -445,10 +834,11 @@
             public override void StopAnimations () 
             {
                 base.StopAnimations();
-                ButtonInstance.StopAnimations();
-                ButtonInstance2.StopAnimations();
-                ButtonInstance3.StopAnimations();
-                ButtonInstance1.StopAnimations();
+                NewGameButton.StopAnimations();
+                LoadGameButton.StopAnimations();
+                MultiplayerButton.StopAnimations();
+                SettingsButton.StopAnimations();
+                ExitButtonInstance.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -464,225 +854,521 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance.Height",
-                            Type = "float",
-                            Value = ButtonInstance.Height
+                            Name = "BackgroundImage.Blue",
+                            Type = "int",
+                            Value = BackgroundImage.Blue
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance.Height Units",
+                            Name = "BackgroundImage.Green",
+                            Type = "int",
+                            Value = BackgroundImage.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundImage.Height",
+                            Type = "float",
+                            Value = BackgroundImage.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundImage.Height Units",
                             Type = "DimensionUnitType",
-                            Value = ButtonInstance.HeightUnits
+                            Value = BackgroundImage.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance.Width",
+                            Name = "BackgroundImage.Red",
+                            Type = "int",
+                            Value = BackgroundImage.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundImage.SourceFile",
+                            Type = "string",
+                            Value = BackgroundImage.SourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundImage.Width",
                             Type = "float",
-                            Value = ButtonInstance.Width
+                            Value = BackgroundImage.Width
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance.X",
-                            Type = "float",
-                            Value = ButtonInstance.X
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance.Y",
-                            Type = "float",
-                            Value = ButtonInstance.Y
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance2.Height",
-                            Type = "float",
-                            Value = ButtonInstance2.Height
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance2.Height Units",
+                            Name = "BackgroundImage.Width Units",
                             Type = "DimensionUnitType",
-                            Value = ButtonInstance2.HeightUnits
+                            Value = BackgroundImage.WidthUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance2.Width",
+                            Name = "BackgroundImage.X",
                             Type = "float",
-                            Value = ButtonInstance2.Width
+                            Value = BackgroundImage.X
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance2.X",
-                            Type = "float",
-                            Value = ButtonInstance2.X
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance2.Y",
-                            Type = "float",
-                            Value = ButtonInstance2.Y
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance3.Height",
-                            Type = "float",
-                            Value = ButtonInstance3.Height
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance3.Height Units",
-                            Type = "DimensionUnitType",
-                            Value = ButtonInstance3.HeightUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance3.Width",
-                            Type = "float",
-                            Value = ButtonInstance3.Width
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance3.X",
-                            Type = "float",
-                            Value = ButtonInstance3.X
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance3.X Origin",
+                            Name = "BackgroundImage.X Origin",
                             Type = "HorizontalAlignment",
-                            Value = ButtonInstance3.XOrigin
+                            Value = BackgroundImage.XOrigin
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance3.X Units",
+                            Name = "BackgroundImage.X Units",
                             Type = "PositionUnitType",
-                            Value = ButtonInstance3.XUnits
+                            Value = BackgroundImage.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance3.Y",
+                            Name = "BackgroundImage.Y",
                             Type = "float",
-                            Value = ButtonInstance3.Y
+                            Value = BackgroundImage.Y
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance3.Y Origin",
+                            Name = "BackgroundImage.Y Origin",
                             Type = "VerticalAlignment",
-                            Value = ButtonInstance3.YOrigin
+                            Value = BackgroundImage.YOrigin
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance3.Y Units",
+                            Name = "BackgroundImage.Y Units",
                             Type = "PositionUnitType",
-                            Value = ButtonInstance3.YUnits
+                            Value = BackgroundImage.YUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance1.Height",
+                            Name = "NewGameButton.MainButtonText",
+                            Type = "string",
+                            Value = NewGameButton.MainButtonText
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NewGameButton.X",
                             Type = "float",
-                            Value = ButtonInstance1.Height
+                            Value = NewGameButton.X
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance1.Height Units",
+                            Name = "NewGameButton.Y",
+                            Type = "float",
+                            Value = NewGameButton.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LoadGameButton.MainButtonText",
+                            Type = "string",
+                            Value = LoadGameButton.MainButtonText
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LoadGameButton.Wraps Children",
+                            Type = "bool",
+                            Value = LoadGameButton.WrapsChildren
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LoadGameButton.X",
+                            Type = "float",
+                            Value = LoadGameButton.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LoadGameButton.Y",
+                            Type = "float",
+                            Value = LoadGameButton.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MultiplayerButton.MainButtonText",
+                            Type = "string",
+                            Value = MultiplayerButton.MainButtonText
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MultiplayerButton.X",
+                            Type = "float",
+                            Value = MultiplayerButton.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MultiplayerButton.Y",
+                            Type = "float",
+                            Value = MultiplayerButton.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SettingsButton.MainButtonText",
+                            Type = "string",
+                            Value = SettingsButton.MainButtonText
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SettingsButton.X",
+                            Type = "float",
+                            Value = SettingsButton.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SettingsButton.Y",
+                            Type = "float",
+                            Value = SettingsButton.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ExitButtonInstance.X",
+                            Type = "float",
+                            Value = ExitButtonInstance.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ExitButtonInstance.Y",
+                            Type = "float",
+                            Value = ExitButtonInstance.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ExitButtonInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = ExitButtonInstance.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ExitButtonInstance.Y Units",
+                            Type = "PositionUnitType",
+                            Value = ExitButtonInstance.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Blue",
+                            Type = "int",
+                            Value = GameName.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.FontSize",
+                            Type = "int",
+                            Value = GameName.FontSize
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Green",
+                            Type = "int",
+                            Value = GameName.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Height",
+                            Type = "float",
+                            Value = GameName.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Height Units",
                             Type = "DimensionUnitType",
-                            Value = ButtonInstance1.HeightUnits
+                            Value = GameName.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance1.Width",
-                            Type = "float",
-                            Value = ButtonInstance1.Width
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance1.X",
-                            Type = "float",
-                            Value = ButtonInstance1.X
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance1.X Origin",
+                            Name = "GameName.HorizontalAlignment",
                             Type = "HorizontalAlignment",
-                            Value = ButtonInstance1.XOrigin
+                            Value = GameName.HorizontalAlignment
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance1.X Units",
-                            Type = "PositionUnitType",
-                            Value = ButtonInstance1.XUnits
+                            Name = "GameName.Red",
+                            Type = "int",
+                            Value = GameName.Red
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance1.Y",
-                            Type = "float",
-                            Value = ButtonInstance1.Y
+                            Name = "GameName.Text",
+                            Type = "string",
+                            Value = GameName.Text
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance1.Y Origin",
+                            Name = "GameName.UseFontSmoothing",
+                            Type = "bool",
+                            Value = GameName.UseFontSmoothing
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.VerticalAlignment",
                             Type = "VerticalAlignment",
-                            Value = ButtonInstance1.YOrigin
+                            Value = GameName.VerticalAlignment
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance1.Y Units",
+                            Name = "GameName.Width",
+                            Type = "float",
+                            Value = GameName.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = GameName.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.X",
+                            Type = "float",
+                            Value = GameName.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = GameName.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.X Units",
                             Type = "PositionUnitType",
-                            Value = ButtonInstance1.YUnits
+                            Value = GameName.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Y",
+                            Type = "float",
+                            Value = GameName.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = GameName.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Y Units",
+                            Type = "PositionUnitType",
+                            Value = GameName.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Alpha",
+                            Type = "int",
+                            Value = PaceholderText.Alpha
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Blue",
+                            Type = "int",
+                            Value = PaceholderText.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.FontSize",
+                            Type = "int",
+                            Value = PaceholderText.FontSize
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Height",
+                            Type = "float",
+                            Value = PaceholderText.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = PaceholderText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = PaceholderText.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.IsItalic",
+                            Type = "bool",
+                            Value = PaceholderText.IsItalic
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Parent",
+                            Type = "string",
+                            Value = PaceholderText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Rotation",
+                            Type = "float",
+                            Value = PaceholderText.Rotation
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Text",
+                            Type = "string",
+                            Value = PaceholderText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.VerticalAlignment",
+                            Type = "VerticalAlignment",
+                            Value = PaceholderText.VerticalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = PaceholderText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = PaceholderText.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.X Units",
+                            Type = "PositionUnitType",
+                            Value = PaceholderText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = PaceholderText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = PaceholderText.YUnits
                         }
                         );
                         break;
@@ -698,225 +1384,521 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance.Height",
-                            Type = "float",
-                            Value = ButtonInstance.Height + 50f
+                            Name = "BackgroundImage.Blue",
+                            Type = "int",
+                            Value = BackgroundImage.Blue + 255
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance.Height Units",
+                            Name = "BackgroundImage.Green",
+                            Type = "int",
+                            Value = BackgroundImage.Green + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundImage.Height",
+                            Type = "float",
+                            Value = BackgroundImage.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundImage.Height Units",
                             Type = "DimensionUnitType",
-                            Value = ButtonInstance.HeightUnits
+                            Value = BackgroundImage.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance.Width",
+                            Name = "BackgroundImage.Red",
+                            Type = "int",
+                            Value = BackgroundImage.Red + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundImage.SourceFile",
+                            Type = "string",
+                            Value = BackgroundImage.SourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundImage.Width",
                             Type = "float",
-                            Value = ButtonInstance.Width + 50f
+                            Value = BackgroundImage.Width + 0f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance.X",
-                            Type = "float",
-                            Value = ButtonInstance.X + 0f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance.Y",
-                            Type = "float",
-                            Value = ButtonInstance.Y + 0f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance2.Height",
-                            Type = "float",
-                            Value = ButtonInstance2.Height + 50f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance2.Height Units",
+                            Name = "BackgroundImage.Width Units",
                             Type = "DimensionUnitType",
-                            Value = ButtonInstance2.HeightUnits
+                            Value = BackgroundImage.WidthUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance2.Width",
+                            Name = "BackgroundImage.X",
                             Type = "float",
-                            Value = ButtonInstance2.Width + 50f
+                            Value = BackgroundImage.X + 0f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance2.X",
-                            Type = "float",
-                            Value = ButtonInstance2.X + 910f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance2.Y",
-                            Type = "float",
-                            Value = ButtonInstance2.Y + 490f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance3.Height",
-                            Type = "float",
-                            Value = ButtonInstance3.Height + 50f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance3.Height Units",
-                            Type = "DimensionUnitType",
-                            Value = ButtonInstance3.HeightUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance3.Width",
-                            Type = "float",
-                            Value = ButtonInstance3.Width + 50f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance3.X",
-                            Type = "float",
-                            Value = ButtonInstance3.X + -910f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance3.X Origin",
+                            Name = "BackgroundImage.X Origin",
                             Type = "HorizontalAlignment",
-                            Value = ButtonInstance3.XOrigin
+                            Value = BackgroundImage.XOrigin
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance3.X Units",
+                            Name = "BackgroundImage.X Units",
                             Type = "PositionUnitType",
-                            Value = ButtonInstance3.XUnits
+                            Value = BackgroundImage.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance3.Y",
+                            Name = "BackgroundImage.Y",
                             Type = "float",
-                            Value = ButtonInstance3.Y + -490f
+                            Value = BackgroundImage.Y + 0f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance3.Y Origin",
+                            Name = "BackgroundImage.Y Origin",
                             Type = "VerticalAlignment",
-                            Value = ButtonInstance3.YOrigin
+                            Value = BackgroundImage.YOrigin
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance3.Y Units",
+                            Name = "BackgroundImage.Y Units",
                             Type = "PositionUnitType",
-                            Value = ButtonInstance3.YUnits
+                            Value = BackgroundImage.YUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance1.Height",
+                            Name = "NewGameButton.MainButtonText",
+                            Type = "string",
+                            Value = NewGameButton.MainButtonText
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NewGameButton.X",
                             Type = "float",
-                            Value = ButtonInstance1.Height + 50f
+                            Value = NewGameButton.X + 40f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance1.Height Units",
+                            Name = "NewGameButton.Y",
+                            Type = "float",
+                            Value = NewGameButton.Y + 40f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LoadGameButton.MainButtonText",
+                            Type = "string",
+                            Value = LoadGameButton.MainButtonText
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LoadGameButton.Wraps Children",
+                            Type = "bool",
+                            Value = LoadGameButton.WrapsChildren
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LoadGameButton.X",
+                            Type = "float",
+                            Value = LoadGameButton.X + 40f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LoadGameButton.Y",
+                            Type = "float",
+                            Value = LoadGameButton.Y + 230f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MultiplayerButton.MainButtonText",
+                            Type = "string",
+                            Value = MultiplayerButton.MainButtonText
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MultiplayerButton.X",
+                            Type = "float",
+                            Value = MultiplayerButton.X + 40f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MultiplayerButton.Y",
+                            Type = "float",
+                            Value = MultiplayerButton.Y + 420f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SettingsButton.MainButtonText",
+                            Type = "string",
+                            Value = SettingsButton.MainButtonText
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SettingsButton.X",
+                            Type = "float",
+                            Value = SettingsButton.X + 40f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SettingsButton.Y",
+                            Type = "float",
+                            Value = SettingsButton.Y + 610f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ExitButtonInstance.X",
+                            Type = "float",
+                            Value = ExitButtonInstance.X + 40f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ExitButtonInstance.Y",
+                            Type = "float",
+                            Value = ExitButtonInstance.Y + -40f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ExitButtonInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = ExitButtonInstance.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ExitButtonInstance.Y Units",
+                            Type = "PositionUnitType",
+                            Value = ExitButtonInstance.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Blue",
+                            Type = "int",
+                            Value = GameName.Blue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.FontSize",
+                            Type = "int",
+                            Value = GameName.FontSize + 128
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Green",
+                            Type = "int",
+                            Value = GameName.Green + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Height",
+                            Type = "float",
+                            Value = GameName.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Height Units",
                             Type = "DimensionUnitType",
-                            Value = ButtonInstance1.HeightUnits
+                            Value = GameName.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance1.Width",
-                            Type = "float",
-                            Value = ButtonInstance1.Width + 50f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance1.X",
-                            Type = "float",
-                            Value = ButtonInstance1.X + 0f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ButtonInstance1.X Origin",
+                            Name = "GameName.HorizontalAlignment",
                             Type = "HorizontalAlignment",
-                            Value = ButtonInstance1.XOrigin
+                            Value = GameName.HorizontalAlignment
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance1.X Units",
-                            Type = "PositionUnitType",
-                            Value = ButtonInstance1.XUnits
+                            Name = "GameName.Red",
+                            Type = "int",
+                            Value = GameName.Red + 255
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance1.Y",
-                            Type = "float",
-                            Value = ButtonInstance1.Y + 0f
+                            Name = "GameName.Text",
+                            Type = "string",
+                            Value = GameName.Text
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance1.Y Origin",
+                            Name = "GameName.UseFontSmoothing",
+                            Type = "bool",
+                            Value = GameName.UseFontSmoothing
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.VerticalAlignment",
                             Type = "VerticalAlignment",
-                            Value = ButtonInstance1.YOrigin
+                            Value = GameName.VerticalAlignment
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance1.Y Units",
+                            Name = "GameName.Width",
+                            Type = "float",
+                            Value = GameName.Width + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = GameName.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.X",
+                            Type = "float",
+                            Value = GameName.X + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = GameName.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.X Units",
                             Type = "PositionUnitType",
-                            Value = ButtonInstance1.YUnits
+                            Value = GameName.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Y",
+                            Type = "float",
+                            Value = GameName.Y + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = GameName.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "GameName.Y Units",
+                            Type = "PositionUnitType",
+                            Value = GameName.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Alpha",
+                            Type = "int",
+                            Value = PaceholderText.Alpha + 150
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Blue",
+                            Type = "int",
+                            Value = PaceholderText.Blue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.FontSize",
+                            Type = "int",
+                            Value = PaceholderText.FontSize + 128
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Height",
+                            Type = "float",
+                            Value = PaceholderText.Height + 100f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = PaceholderText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = PaceholderText.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.IsItalic",
+                            Type = "bool",
+                            Value = PaceholderText.IsItalic
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Parent",
+                            Type = "string",
+                            Value = PaceholderText.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Rotation",
+                            Type = "float",
+                            Value = PaceholderText.Rotation + -20f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Text",
+                            Type = "string",
+                            Value = PaceholderText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.VerticalAlignment",
+                            Type = "VerticalAlignment",
+                            Value = PaceholderText.VerticalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = PaceholderText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = PaceholderText.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.X Units",
+                            Type = "PositionUnitType",
+                            Value = PaceholderText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = PaceholderText.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "PaceholderText.Y Units",
+                            Type = "PositionUnitType",
+                            Value = PaceholderText.YUnits
                         }
                         );
                         break;
@@ -938,10 +1920,14 @@
                 base.ApplyState(state);
             }
             private bool tryCreateFormsObject;
-            public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime ButtonInstance { get; set; }
-            public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime ButtonInstance2 { get; set; }
-            public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime ButtonInstance3 { get; set; }
-            public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime ButtonInstance1 { get; set; }
+            public JHP4SD.GumRuntimes.SpriteRuntime BackgroundImage { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.MainMenuButtonRuntime NewGameButton { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.MainMenuButtonRuntime LoadGameButton { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.MainMenuButtonRuntime MultiplayerButton { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.MainMenuButtonRuntime SettingsButton { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ExitButtonRuntime ExitButtonInstance { get; set; }
+            public JHP4SD.GumRuntimes.TextRuntime GameName { get; set; }
+            public JHP4SD.GumRuntimes.TextRuntime PaceholderText { get; set; }
             public MainMenuGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -968,10 +1954,14 @@
             }
             private void AssignReferences () 
             {
-                ButtonInstance = this.GetGraphicalUiElementByName("ButtonInstance") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
-                ButtonInstance2 = this.GetGraphicalUiElementByName("ButtonInstance2") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
-                ButtonInstance3 = this.GetGraphicalUiElementByName("ButtonInstance3") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
-                ButtonInstance1 = this.GetGraphicalUiElementByName("ButtonInstance1") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
+                BackgroundImage = this.GetGraphicalUiElementByName("BackgroundImage") as JHP4SD.GumRuntimes.SpriteRuntime;
+                NewGameButton = this.GetGraphicalUiElementByName("NewGameButton") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.MainMenuButtonRuntime;
+                LoadGameButton = this.GetGraphicalUiElementByName("LoadGameButton") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.MainMenuButtonRuntime;
+                MultiplayerButton = this.GetGraphicalUiElementByName("MultiplayerButton") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.MainMenuButtonRuntime;
+                SettingsButton = this.GetGraphicalUiElementByName("SettingsButton") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.MainMenuButtonRuntime;
+                ExitButtonInstance = this.GetGraphicalUiElementByName("ExitButtonInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ExitButtonRuntime;
+                GameName = this.GetGraphicalUiElementByName("GameName") as JHP4SD.GumRuntimes.TextRuntime;
+                PaceholderText = this.GetGraphicalUiElementByName("PaceholderText") as JHP4SD.GumRuntimes.TextRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Screens.MainMenuGumForms(this);

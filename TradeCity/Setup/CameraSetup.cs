@@ -34,15 +34,15 @@
             public static CameraSetupData Data = new CameraSetupData
             {
                 Scale = 400f,
-                ResolutionWidth = 240,
-                ResolutionHeight = 180,
+                ResolutionWidth = 480,
+                ResolutionHeight = 270,
                 Is2D = true,
                 AspectRatio = 1.7777777777777777777777777778m,
                 IsFullScreen = false,
-                AllowWidowResizing = false,
+                AllowWidowResizing = true,
                 TextureFilter = Microsoft.Xna.Framework.Graphics.TextureFilter.Point,
                 ResizeBehavior = ResizeBehavior.IncreaseVisibleArea,
-                ScaleGum = 100f,
+                ScaleGum = 25f,
                 ResizeBehaviorGum = ResizeBehavior.StretchVisibleArea,
                 DominantInternalCoordinates = WidthOrHeight.Height,
             }

@@ -36,6 +36,10 @@
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/TreeViewItem", typeof(JHP4SD.GumRuntimes.DefaultForms.TreeViewItemRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/TreeViewToggleButton", typeof(JHP4SD.GumRuntimes.DefaultForms.TreeViewToggleButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/UserControl", typeof(JHP4SD.GumRuntimes.DefaultForms.UserControlRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/BackButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.BackButtonRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/ExitButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.ExitButtonRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/MainMenuButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.MainMenuButtonRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/ComplexComponents/Topic", typeof(JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TopicRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("CityGum", typeof(JHP4SD.GumRuntimes.CityGumRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("GameScreenGum", typeof(JHP4SD.GumRuntimes.GameScreenGumRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("MainMenuGum", typeof(JHP4SD.GumRuntimes.MainMenuGumRuntime));

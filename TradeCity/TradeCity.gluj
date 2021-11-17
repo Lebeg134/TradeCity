@@ -10,6 +10,7 @@
         "GLUE"
       ],
       "Source": "GLUE",
+      "IsOnOwnLayer": true,
       "BaseScreen": "Screens\\GameScreen",
       "BaseElement": "Screens\\GameScreen",
       "ReferencedFiles": [
@@ -63,7 +64,7 @@
           "DefinedByBase": true
         }
       ],
-      "Name": "Screens\\City",
+      "Name": "Screens\\CityScreen",
       "CustomClassesForExport": []
     },
     {
@@ -126,7 +127,7 @@
           "ProjectsToExcludeFrom": []
         }
       ],
-      "Name": "Screens\\MainMenu",
+      "Name": "Screens\\MainMenuScreen",
       "CustomClassesForExport": []
     },
     {
@@ -185,9 +186,94 @@
           "AttachToContainer": true,
           "GenerateTimedEmit": true,
           "DefinedByBase": true
+        },
+        {
+          "InstanceName": "CameraInstance",
+          "SourceClassType": "FlatRedBall.Camera",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "float",
+              "Member": "BottomDestination",
+              "Value": 150.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "bool",
+              "Member": "Orthogonal",
+              "Value": true,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "RotationX",
+              "Value": 15.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "TopDestination",
+              "Value": 150.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "X",
+              "Value": 0.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "Y",
+              "Value": 0.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "Z",
+              "Value": 0.0,
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 2,
+          "SourceFile": "Camera",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        },
+        {
+          "InstanceName": "CameraMidpointInstance",
+          "SourceClassType": "Entities\\CameraMidpoint",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 1,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [],
+          "SourceType": 1,
+          "SourceFile": "Entities/CameraMidpoint",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
         }
       ],
-      "Name": "Screens\\Map",
+      "Name": "Screens\\MapScreen",
       "CustomClassesForExport": []
     },
     {
@@ -236,7 +322,7 @@
           "DefinedByBase": true
         }
       ],
-      "Name": "Screens\\Market",
+      "Name": "Screens\\MarketScreen",
       "CustomClassesForExport": []
     },
     {
@@ -252,7 +338,7 @@
           "ProjectsToExcludeFrom": []
         }
       ],
-      "Name": "Screens\\Multiplayer",
+      "Name": "Screens\\MultiplayerScreen",
       "CustomClassesForExport": []
     },
     {
@@ -268,7 +354,7 @@
           "ProjectsToExcludeFrom": []
         }
       ],
-      "Name": "Screens\\Settings",
+      "Name": "Screens\\SettingsScreen",
       "CustomClassesForExport": []
     }
   ],
@@ -430,7 +516,7 @@
   ],
   "GlobalContentSettingsSave": {},
   "SyncedProjects": [],
-  "StartUpScreen": "Screens\\MainMenu",
+  "StartUpScreen": "Screens\\MainMenuScreen",
   "ResolutionPresets": [],
   "PerformanceSettingsSave": {},
   "IgnoredDirectories": [],
@@ -483,14 +569,15 @@
     "Name": "Custom",
     "Is2D": true,
     "GenerateDisplayCode": true,
-    "ResolutionWidth": 240,
-    "ResolutionHeight": 180,
+    "ResolutionWidth": 480,
+    "ResolutionHeight": 270,
     "FixedAspectRatio": true,
     "AspectRatioWidth": 16.0,
     "AspectRatioHeight": 9.0,
     "SupportLandscape": true,
+    "AllowWindowResizing": true,
     "Scale": 400,
-    "ScaleGum": 100,
+    "ScaleGum": 25,
     "ResizeBehavior": 1,
     "DominantInternalCoordinates": 1,
     "TextureFilter": 1

@@ -36,7 +36,7 @@
                     switch(mCurrentVariableState)
                     {
                         case  VariableState.Default:
-                            NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                            NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                             TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                             Height = 48f;
                             Width = 256f;
@@ -276,7 +276,7 @@
                             this.HighlightRectangle.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setNineSliceInstanceHeightFirstValue = true;
                         NineSliceInstanceHeightFirstValue = 0f;
                         if (interpolationValue < 1)
@@ -401,7 +401,7 @@
                             this.HighlightRectangle.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setNineSliceInstanceHeightSecondValue = true;
                         NineSliceInstanceHeightSecondValue = 0f;
                         if (interpolationValue >= 1)

@@ -17,18 +17,36 @@ namespace JHP4SD.Screens
 {
     public partial class SettingsScreen
     {
-        static int _lastSelected = 1;
-        
+        static int _resolutionLastSelected = 1;
+        static int _windowModeLastSelected = 0;
+
         void CustomInitialize()
         {
-            var comboBox = Forms.ResolutionComboBox;
-            comboBox.Items.Add("2560x1440");
-            comboBox.Items.Add("1920x1080");
-            comboBox.Items.Add("1280x720");
-            
+            var resolutionComboBox = Forms.ResolutionComboBox;
+            resolutionComboBox.Items.Add("2560x1440");
+            resolutionComboBox.Items.Add("1920x1080");
+            resolutionComboBox.Items.Add("1280x720");
+            resolutionComboBox.SelectedIndex = _resolutionLastSelected;
+            resolutionComboBox.SelectionChanged += ResolutionComboBox_SelectionChanged;
+
+            var windowModeComboBox = Forms.WindowModeComboBox;
+            windowModeComboBox.Items.Add("Windowed");
+            windowModeComboBox.Items.Add("Fullscreen");
+            windowModeComboBox.SelectedIndex = _windowModeLastSelected;
+            windowModeComboBox.SelectionChanged += WindowModeComboBox_SelectionChanged;
 
 
             Forms.BackButtonInstance.Click += BackButtonInstance_Click;
+        }
+
+        private void WindowModeComboBox_SelectionChanged(object arg1, SelectionChangedEventArgs arg2)
+        {
+            _windowModeLastSelected = Forms.WindowModeComboBox.SelectedIndex;
+        }
+
+        private void ResolutionComboBox_SelectionChanged(object arg1, SelectionChangedEventArgs arg2)
+        {
+            _resolutionLastSelected = Forms.ResolutionComboBox.SelectedIndex;
         }
 
         private void BackButtonInstance_Click(object sender, EventArgs e)

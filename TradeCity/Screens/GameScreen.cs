@@ -18,9 +18,11 @@ namespace JHP4SD.Screens
 {
     public partial class GameScreen
     {
-
+        static bool playState = false;
         void CustomInitialize()
         {
+            //TODO Persistent PlayButton;
+
             Forms.BackButtonInstance.Click += BackButtonInstance_Click;
 
             Forms.ScreenSelectorInstance.CityTab.Click += CityTab_Click;

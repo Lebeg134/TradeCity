@@ -61,7 +61,7 @@ namespace JHP4SD
             GlobalContent.Initialize();
 
             			CameraSetup.SetupCamera(SpriteManager.Camera, graphics);
-            Type startScreenType = typeof(JHP4SD.Screens.MarketScreen);
+            Type startScreenType = typeof(JHP4SD.Screens.MainMenuScreen);
 
             var commandLineArgs = Environment.GetCommandLineArgs();
             if (commandLineArgs.Length > 0)

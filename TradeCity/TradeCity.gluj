@@ -516,7 +516,7 @@
   ],
   "GlobalContentSettingsSave": {},
   "SyncedProjects": [],
-  "StartUpScreen": "Screens\\MarketScreen",
+  "StartUpScreen": "Screens\\MainMenuScreen",
   "ResolutionPresets": [],
   "PerformanceSettingsSave": {},
   "IgnoredDirectories": [],

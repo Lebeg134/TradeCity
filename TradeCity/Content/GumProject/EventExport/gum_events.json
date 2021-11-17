@@ -2305,6 +2305,104 @@
         "ElementType": "Screens",
         "EventType": 7,
         "TimestampUtc": "2021-11-17T10:32:40.3744892Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " GameScreenGum.DefaultForms/Button HelloButton in  GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-11-17T13:29:03.6095379Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/PlayButton",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-11-17T13:30:52.892382Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/PlayButton.ColoredFrameInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T13:31:00.593175Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/PlayButton.SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T13:32:03.6549507Z"
+      },
+      {
+        "NewName": " GameScreenGum.PlayButtonInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T14:19:36.8926689Z"
+      },
+      {
+        "NewName": " GameScreenGum.BackButtonInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T14:20:02.1946011Z"
+      },
+      {
+        "NewName": " CityGum.SpriteInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T14:25:13.3518191Z"
+      },
+      {
+        "NewName": " CityGum.PaceholderText",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T14:27:22.1435745Z"
+      },
+      {
+        "NewName": " CityGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-11-17T14:27:31.5939937Z"
+      },
+      {
+        "NewName": "PushedOff2",
+        "OldName": "PushedOnCopy",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2021-11-17T14:32:04.1833654Z"
+      },
+      {
+        "NewName": "PushedOn2",
+        "OldName": "PushedOffCopy",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2021-11-17T14:32:12.376757Z"
+      },
+      {
+        "NewName": "PushedOff",
+        "OldName": "PushedOff2",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2021-11-17T14:32:52.6330082Z"
+      },
+      {
+        "NewName": "PushedOff",
+        "OldName": "PushedOn",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2021-11-17T14:36:45.3581105Z"
+      },
+      {
+        "NewName": "PushedOn",
+        "OldName": "PushedOff",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2021-11-17T14:36:49.995034Z"
       }
     ]
   }

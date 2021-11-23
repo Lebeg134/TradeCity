@@ -56,18 +56,18 @@
                             TextInstance.FontSize = 128;
                             TextInstance.Green = 0;
                             TextInstance.Height = 179f;
-                            TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                            TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                             TextInstance.Red = 0;
                             TextInstance.Text = "City Screen";
-                            TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                            TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             TextInstance.Width = 0f;
                             TextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             TextInstance.X = 0f;
-                            TextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
-                            TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            TextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                            TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             TextInstance.Y = 0f;
-                            TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
-                            TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             break;
                     }
                 }
@@ -253,7 +253,7 @@
                         TextInstanceHeightFirstValue = 179f;
                         if (interpolationValue < 1)
                         {
-                            this.TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                            this.TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                         }
                         setTextInstanceRedFirstValue = true;
                         TextInstanceRedFirstValue = 0;
@@ -263,7 +263,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            this.TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                            this.TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
                         }
                         setTextInstanceWidthFirstValue = true;
                         TextInstanceWidthFirstValue = 0f;
@@ -275,21 +275,21 @@
                         TextInstanceXFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
-                            this.TextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                            this.TextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            this.TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         setTextInstanceYFirstValue = true;
                         TextInstanceYFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
-                            this.TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                            this.TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            this.TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         break;
                 }
@@ -396,7 +396,7 @@
                         TextInstanceHeightSecondValue = 179f;
                         if (interpolationValue >= 1)
                         {
-                            this.TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                            this.TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                         }
                         setTextInstanceRedSecondValue = true;
                         TextInstanceRedSecondValue = 0;
@@ -406,7 +406,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                            this.TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
                         }
                         setTextInstanceWidthSecondValue = true;
                         TextInstanceWidthSecondValue = 0f;
@@ -418,21 +418,21 @@
                         TextInstanceXSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
-                            this.TextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                            this.TextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            this.TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         setTextInstanceYSecondValue = true;
                         TextInstanceYSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
-                            this.TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                            this.TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            this.TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         break;
                 }

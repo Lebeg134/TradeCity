@@ -77,7 +77,9 @@
     <Compile Include="Factories\CameraMidpointFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
     <Compile Include="Forms\Components\LebegForms\ComplexComponents\ScreenSelectorForms.cs" />
-    <Compile Include="Forms\Components\LebegForms\ComplexComponents\ScreenSelectorForms.Generated.cs" />
+    <Compile Include="Forms\Components\LebegForms\ComplexComponents\ScreenSelectorForms.Generated.cs">
+      <DependentUpon>ScreenSelectorForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Screens\CityGumForms.cs" />
     <Compile Include="Forms\Screens\CityGumForms.Generated.cs">
       <DependentUpon>CityGumForms.cs</DependentUpon>
@@ -276,7 +278,9 @@
       <DependentUpon>PlayButtonRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\TabButtonRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\TabButtonRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\TabButtonRuntime.Generated.cs">
+      <DependentUpon>TabButtonRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\ScreenSelectorRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\ScreenSelectorRuntime.Generated.cs">
       <DependentUpon>ScreenSelectorRuntime.cs</DependentUpon>

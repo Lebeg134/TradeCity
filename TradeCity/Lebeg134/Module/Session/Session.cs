@@ -24,7 +24,7 @@ namespace JHP4SD.Lebeg134.Module.Session
                 if (_instance != null)
                     return _instance;
                 else
-                    throw new System.Exception("null");
+                    throw new System.Exception("No started Sessions");
             }
         }
         private static Session _instance;

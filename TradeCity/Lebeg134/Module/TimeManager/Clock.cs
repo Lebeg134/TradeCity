@@ -26,6 +26,10 @@ namespace JHP4SD.Lebeg134.Module.TimeManager
             timer.Interval = interval;
             timer.Elapsed += tick;
         }
+        public void initialize()
+        {
+
+        }
         public void start()
         {
             timer.Enabled = true;

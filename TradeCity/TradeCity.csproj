@@ -334,6 +334,7 @@
     <Compile Include="Lebeg134\Module\Session\Player.cs" />
     <Compile Include="Lebeg134\Module\Session\PlayerStrategyBase.cs" />
     <Compile Include="Lebeg134\Module\Session\Session.cs" />
+    <Compile Include="Lebeg134\Module\Session\SessionGenerator.cs" />
     <Compile Include="Lebeg134\Module\Session\StandardPlayerStrategy.cs" />
     <Compile Include="Lebeg134\Module\Structures\Building.cs" />
     <Compile Include="Lebeg134\Module\Structures\CommonBuilding.cs" />

@@ -71,6 +71,7 @@
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(FlatRedBall.Forms.Controls.TreeView)] = typeof(JHP4SD.GumRuntimes.DefaultForms.TreeViewRuntime);
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(FlatRedBall.Forms.Controls.TreeViewItem)] = typeof(JHP4SD.GumRuntimes.DefaultForms.TreeViewItemRuntime);
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(FlatRedBall.Forms.Controls.UserControl)] = typeof(JHP4SD.GumRuntimes.DefaultForms.UserControlRuntime);
+                FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms)] = typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime);
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(JHP4SD.FormsControls.Components.LebegForms.ComplexComponents.ScreenSelectorForms)] = typeof(JHP4SD.GumRuntimes.LebegForms.ComplexComponents.ScreenSelectorRuntime);
             }
         }

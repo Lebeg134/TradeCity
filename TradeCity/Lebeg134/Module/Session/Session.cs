@@ -6,24 +6,44 @@ using JHP4SD.Lebeg134.Module.MapNS;
 using JHP4SD.Lebeg134.Module.MarketNS;
 using System.Collections.Generic;
 using static JHP4SD.Lebeg134.Module.Session.Player;
+using System;
 
 namespace JHP4SD.Lebeg134.Module.Session
 {
+    [Serializable]
     public class Session : ITickable
     {
         Market _market;
         List<Player> _players;
         Map _map;
+        [NonSerialized]
         Clock clock = Clock.Instance;
+        public static Session Instance { 
+            get
+            {
+                if (_instance != null)
+                    return _instance;
+                else
+                    throw new System.Exception("null");
+            }
+        }
+        private static Session _instance;
 
         public Session()
         {
             register();
             _players = new List<Player>();
         }
-        public void load(string path)
+        public void start()
         {
-            //Menemto?
+            _instance = this;
+        }
+        /// <summary>
+        /// Loads saved instance
+        /// </summary>
+        public Session load()
+        {
+            return null;
         }
         public void save(string path)
         {

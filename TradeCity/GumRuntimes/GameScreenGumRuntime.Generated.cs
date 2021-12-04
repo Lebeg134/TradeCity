@@ -26,6 +26,12 @@
                     {
                         case  VariableState.Default:
                             DialogBoxInstance.Parent = this.GetGraphicalUiElementByName("InfoBar");
+                            ResourceDisplayInstance.Parent = this.GetGraphicalUiElementByName("Resources");
+                            ResourceDisplayInstance1.Parent = this.GetGraphicalUiElementByName("Resources");
+                            ResourceDisplayInstance2.Parent = this.GetGraphicalUiElementByName("Resources");
+                            ResourceDisplayInstance3.Parent = this.GetGraphicalUiElementByName("Resources");
+                            ResourceDisplayInstance4.Parent = this.GetGraphicalUiElementByName("Resources");
+                            ResourceDisplayInstance5.Parent = this.GetGraphicalUiElementByName("Resources");
                             ResourceBar.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                             InfoBar.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.TransparentBlack;
                             PlayButtonInstance.Height = 100f;
@@ -80,6 +86,12 @@
                             ListBoxInstance.X = 0f;
                             ListBoxInstance.Y = 72f;
                             ListBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            Resources.ChildrenLayout = Gum.Managers.ChildrenLayout.LeftToRightStack;
+                            Resources.Height = 40f;
+                            Resources.Width = 0f;
+                            Resources.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            Resources.X = 16f;
+                            Resources.Y = 16f;
                             break;
                     }
                 }
@@ -202,6 +214,22 @@
                 bool setResourceBarYSecondValue = false;
                 float ResourceBarYFirstValue= 0;
                 float ResourceBarYSecondValue= 0;
+                bool setResourcesHeightFirstValue = false;
+                bool setResourcesHeightSecondValue = false;
+                float ResourcesHeightFirstValue= 0;
+                float ResourcesHeightSecondValue= 0;
+                bool setResourcesWidthFirstValue = false;
+                bool setResourcesWidthSecondValue = false;
+                float ResourcesWidthFirstValue= 0;
+                float ResourcesWidthSecondValue= 0;
+                bool setResourcesXFirstValue = false;
+                bool setResourcesXSecondValue = false;
+                float ResourcesXFirstValue= 0;
+                float ResourcesXSecondValue= 0;
+                bool setResourcesYFirstValue = false;
+                bool setResourcesYSecondValue = false;
+                float ResourcesYFirstValue= 0;
+                float ResourcesYSecondValue= 0;
                 switch(firstState)
                 {
                     case  VariableState.Default:
@@ -371,6 +399,46 @@
                         {
                             this.ResourceBar.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceDisplayInstance.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceDisplayInstance1.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceDisplayInstance2.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceDisplayInstance3.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceDisplayInstance4.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceDisplayInstance5.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.Resources.ChildrenLayout = Gum.Managers.ChildrenLayout.LeftToRightStack;
+                        }
+                        setResourcesHeightFirstValue = true;
+                        ResourcesHeightFirstValue = 40f;
+                        setResourcesWidthFirstValue = true;
+                        ResourcesWidthFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.Resources.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        setResourcesXFirstValue = true;
+                        ResourcesXFirstValue = 16f;
+                        setResourcesYFirstValue = true;
+                        ResourcesYFirstValue = 16f;
                         break;
                 }
                 switch(secondState)
@@ -542,6 +610,46 @@
                         {
                             this.ResourceBar.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceDisplayInstance.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceDisplayInstance1.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceDisplayInstance2.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceDisplayInstance3.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceDisplayInstance4.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceDisplayInstance5.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.Resources.ChildrenLayout = Gum.Managers.ChildrenLayout.LeftToRightStack;
+                        }
+                        setResourcesHeightSecondValue = true;
+                        ResourcesHeightSecondValue = 40f;
+                        setResourcesWidthSecondValue = true;
+                        ResourcesWidthSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.Resources.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        setResourcesXSecondValue = true;
+                        ResourcesXSecondValue = 16f;
+                        setResourcesYSecondValue = true;
+                        ResourcesYSecondValue = 16f;
                         break;
                 }
                 var wasSuppressed = mIsLayoutSuspended;
@@ -657,6 +765,22 @@
                 {
                     ResourceBar.Y = ResourceBarYFirstValue * (1 - interpolationValue) + ResourceBarYSecondValue * interpolationValue;
                 }
+                if (setResourcesHeightFirstValue && setResourcesHeightSecondValue)
+                {
+                    Resources.Height = ResourcesHeightFirstValue * (1 - interpolationValue) + ResourcesHeightSecondValue * interpolationValue;
+                }
+                if (setResourcesWidthFirstValue && setResourcesWidthSecondValue)
+                {
+                    Resources.Width = ResourcesWidthFirstValue * (1 - interpolationValue) + ResourcesWidthSecondValue * interpolationValue;
+                }
+                if (setResourcesXFirstValue && setResourcesXSecondValue)
+                {
+                    Resources.X = ResourcesXFirstValue * (1 - interpolationValue) + ResourcesXSecondValue * interpolationValue;
+                }
+                if (setResourcesYFirstValue && setResourcesYSecondValue)
+                {
+                    Resources.Y = ResourcesYFirstValue * (1 - interpolationValue) + ResourcesYSecondValue * interpolationValue;
+                }
                 if (interpolationValue < 1)
                 {
                     mCurrentVariableState = firstState;
@@ -739,6 +863,12 @@
                 BackButtonInstance.StopAnimations();
                 DialogBoxInstance.StopAnimations();
                 ListBoxInstance.StopAnimations();
+                ResourceDisplayInstance.StopAnimations();
+                ResourceDisplayInstance1.StopAnimations();
+                ResourceDisplayInstance2.StopAnimations();
+                ResourceDisplayInstance3.StopAnimations();
+                ResourceDisplayInstance4.StopAnimations();
+                ResourceDisplayInstance5.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -1191,6 +1321,102 @@
                             Value = ListBoxInstance.YUnits
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = Resources.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Height",
+                            Type = "float",
+                            Value = Resources.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Width",
+                            Type = "float",
+                            Value = Resources.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = Resources.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.X",
+                            Type = "float",
+                            Value = Resources.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Y",
+                            Type = "float",
+                            Value = Resources.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance1.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance1.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance2.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance2.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance3.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance3.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance4.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance4.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance5.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance5.Parent
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -1641,6 +1867,102 @@
                             Value = ListBoxInstance.YUnits
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = Resources.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Height",
+                            Type = "float",
+                            Value = Resources.Height + 40f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Width",
+                            Type = "float",
+                            Value = Resources.Width + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = Resources.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.X",
+                            Type = "float",
+                            Value = Resources.X + 16f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Y",
+                            Type = "float",
+                            Value = Resources.Y + 16f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance1.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance1.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance2.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance2.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance3.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance3.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance4.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance4.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance5.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance5.Parent
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -1667,6 +1989,13 @@
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.BackButtonRuntime BackButtonInstance { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.DialogBoxRuntime DialogBoxInstance { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime ListBoxInstance { get; set; }
+            public JHP4SD.GumRuntimes.ContainerRuntime Resources { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance1 { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance2 { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance3 { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance4 { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance5 { get; set; }
             public GameScreenGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -1700,6 +2029,13 @@
                 BackButtonInstance = this.GetGraphicalUiElementByName("BackButtonInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.BackButtonRuntime;
                 DialogBoxInstance = this.GetGraphicalUiElementByName("DialogBoxInstance") as JHP4SD.GumRuntimes.DefaultForms.DialogBoxRuntime;
                 ListBoxInstance = this.GetGraphicalUiElementByName("ListBoxInstance") as JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime;
+                Resources = this.GetGraphicalUiElementByName("Resources") as JHP4SD.GumRuntimes.ContainerRuntime;
+                ResourceDisplayInstance = this.GetGraphicalUiElementByName("ResourceDisplayInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                ResourceDisplayInstance1 = this.GetGraphicalUiElementByName("ResourceDisplayInstance1") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                ResourceDisplayInstance2 = this.GetGraphicalUiElementByName("ResourceDisplayInstance2") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                ResourceDisplayInstance3 = this.GetGraphicalUiElementByName("ResourceDisplayInstance3") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                ResourceDisplayInstance4 = this.GetGraphicalUiElementByName("ResourceDisplayInstance4") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                ResourceDisplayInstance5 = this.GetGraphicalUiElementByName("ResourceDisplayInstance5") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Screens.GameScreenGumForms(this);

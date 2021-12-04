@@ -40,6 +40,7 @@
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/ExitButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.ExitButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/MainMenuButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.MainMenuButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/PlayButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.PlayButtonRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/ResourceDisplay", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/TabButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.TabButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/ComplexComponents/ScreenSelector", typeof(JHP4SD.GumRuntimes.LebegForms.ComplexComponents.ScreenSelectorRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/ComplexComponents/Topic", typeof(JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TopicRuntime));

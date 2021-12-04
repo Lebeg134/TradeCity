@@ -217,7 +217,7 @@
     <Variable>
       <Type>string</Type>
       <Name>TextInstance.Text</Name>
-      <Value xsi:type="xsd:string">Map Screen</Value>
+      <Value xsi:type="xsd:string">Market Screen</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

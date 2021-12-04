@@ -58,7 +58,7 @@
                             TextInstance.Height = 179f;
                             TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                             TextInstance.Red = 255;
-                            TextInstance.Text = "Map Screen";
+                            TextInstance.Text = "Market Screen";
                             TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             TextInstance.Width = 0f;
                             TextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
@@ -259,7 +259,7 @@
                         TextInstanceRedFirstValue = 255;
                         if (interpolationValue < 1)
                         {
-                            this.TextInstance.Text = "Map Screen";
+                            this.TextInstance.Text = "Market Screen";
                         }
                         if (interpolationValue < 1)
                         {
@@ -402,7 +402,7 @@
                         TextInstanceRedSecondValue = 255;
                         if (interpolationValue >= 1)
                         {
-                            this.TextInstance.Text = "Map Screen";
+                            this.TextInstance.Text = "Market Screen";
                         }
                         if (interpolationValue >= 1)
                         {

@@ -9,6 +9,7 @@ using System.Collections.Generic;
 
 namespace JHP4SD.Lebeg134.Module.MarketNS
 {
+    [Serializable]
     public class Listing : ITickable, IComparer<Listing>
     {
         private static readonly int defaultTime = 100;

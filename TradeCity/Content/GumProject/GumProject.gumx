@@ -183,6 +183,11 @@
     <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
+    <Name>LebegForms/BasicComponents/ResourceDisplay</Name>
+    <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
+  </ComponentReference>
+  <ComponentReference>
     <Name>LebegForms/BasicComponents/TabButton</Name>
     <ElementType>Component</ElementType>
     <LinkType>ReferenceOriginal</LinkType>

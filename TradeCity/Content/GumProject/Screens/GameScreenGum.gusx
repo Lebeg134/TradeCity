@@ -344,6 +344,78 @@
       <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
+    <Variable>
+      <Type>ChildrenLayout</Type>
+      <Name>Resources.Children Layout</Name>
+      <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>Resources.Height</Name>
+      <Value xsi:type="xsd:float">40</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>Resources.Width</Name>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>Resources.Width Units</Name>
+      <Value xsi:type="xsd:int">4</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>Resources.X</Name>
+      <Value xsi:type="xsd:float">16</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>Resources.Y</Name>
+      <Value xsi:type="xsd:float">16</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>ResourceDisplayInstance.Parent</Name>
+      <Value xsi:type="xsd:string">Resources</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>ResourceDisplayInstance1.Parent</Name>
+      <Value xsi:type="xsd:string">Resources</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>ResourceDisplayInstance2.Parent</Name>
+      <Value xsi:type="xsd:string">Resources</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>ResourceDisplayInstance3.Parent</Name>
+      <Value xsi:type="xsd:string">Resources</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>ResourceDisplayInstance4.Parent</Name>
+      <Value xsi:type="xsd:string">Resources</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>ResourceDisplayInstance5.Parent</Name>
+      <Value xsi:type="xsd:string">Resources</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
   </State>
   <Instance>
     <Name>PlayButtonInstance</Name>
@@ -378,6 +450,41 @@
   <Instance>
     <Name>ListBoxInstance</Name>
     <BaseType>DefaultForms/ListBox</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>Resources</Name>
+    <BaseType>Container</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>ResourceDisplayInstance</Name>
+    <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>ResourceDisplayInstance1</Name>
+    <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>ResourceDisplayInstance2</Name>
+    <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>ResourceDisplayInstance3</Name>
+    <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>ResourceDisplayInstance4</Name>
+    <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>ResourceDisplayInstance5</Name>
+    <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
 </ScreenSave>

@@ -10,6 +10,7 @@ using System.Runtime.Serialization;
 
 namespace JHP4SD.Lebeg134.Module.MapNS
 {
+    [Serializable]
     public class Auction : ITickable, IEqualityComparer<Auction>
     {
         Land _subject;

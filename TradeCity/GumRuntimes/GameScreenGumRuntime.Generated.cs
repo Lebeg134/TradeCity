@@ -25,6 +25,15 @@
                     switch(mCurrentVariableState)
                     {
                         case  VariableState.Default:
+                            DialogBoxInstance.Parent = this.GetGraphicalUiElementByName("InfoBar");
+                            ResourceDisplayInstance.Parent = this.GetGraphicalUiElementByName("Resources");
+                            ResourceDisplayInstance1.Parent = this.GetGraphicalUiElementByName("Resources");
+                            ResourceDisplayInstance2.Parent = this.GetGraphicalUiElementByName("Resources");
+                            ResourceDisplayInstance3.Parent = this.GetGraphicalUiElementByName("Resources");
+                            ResourceDisplayInstance4.Parent = this.GetGraphicalUiElementByName("Resources");
+                            ResourceDisplayInstance5.Parent = this.GetGraphicalUiElementByName("Resources");
+                            ResourceBar.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                            InfoBar.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.TransparentBlack;
                             PlayButtonInstance.Height = 100f;
                             PlayButtonInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.PercentageOfOtherDimension;
                             PlayButtonInstance.Width = 80f;
@@ -33,10 +42,56 @@
                             PlayButtonInstance.Y = -118f;
                             PlayButtonInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
                             PlayButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            ResourceBar.Blue = 170;
+                            ResourceBar.Green = 205;
+                            ResourceBar.Height = 72f;
+                            ResourceBar.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            ResourceBar.Red = 102;
+                            ResourceBar.Width = 0f;
+                            ResourceBar.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            ResourceBar.X = 0f;
+                            ResourceBar.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                            ResourceBar.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            ResourceBar.Y = 0f;
+                            ResourceBar.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                            ResourceBar.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            InfoBar.Blue = 255;
+                            InfoBar.Green = 255;
+                            InfoBar.Height = 72f;
+                            InfoBar.Red = 255;
+                            InfoBar.Width = 50f;
+                            InfoBar.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            InfoBar.X = 0f;
+                            InfoBar.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            InfoBar.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            InfoBar.Y = 0f;
+                            InfoBar.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                            InfoBar.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             BackButtonInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             BackButtonInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             BackButtonInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
                             BackButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            DialogBoxInstance.Height = -10f;
+                            DialogBoxInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            DialogBoxInstance.Width = 50f;
+                            DialogBoxInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            DialogBoxInstance.X = 5f;
+                            DialogBoxInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                            DialogBoxInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            DialogBoxInstance.Y = 0f;
+                            DialogBoxInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            DialogBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            ListBoxInstance.Height = -280f;
+                            ListBoxInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            ListBoxInstance.X = 0f;
+                            ListBoxInstance.Y = 72f;
+                            ListBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            Resources.ChildrenLayout = Gum.Managers.ChildrenLayout.LeftToRightStack;
+                            Resources.Height = 40f;
+                            Resources.Width = 0f;
+                            Resources.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            Resources.X = 16f;
+                            Resources.Y = 16f;
                             break;
                     }
                 }
@@ -51,6 +106,66 @@
                     throw new System.Exception("interpolationValue cannot be NaN");
                 }
                 #endif
+                bool setDialogBoxInstanceHeightFirstValue = false;
+                bool setDialogBoxInstanceHeightSecondValue = false;
+                float DialogBoxInstanceHeightFirstValue= 0;
+                float DialogBoxInstanceHeightSecondValue= 0;
+                bool setDialogBoxInstanceWidthFirstValue = false;
+                bool setDialogBoxInstanceWidthSecondValue = false;
+                float DialogBoxInstanceWidthFirstValue= 0;
+                float DialogBoxInstanceWidthSecondValue= 0;
+                bool setDialogBoxInstanceXFirstValue = false;
+                bool setDialogBoxInstanceXSecondValue = false;
+                float DialogBoxInstanceXFirstValue= 0;
+                float DialogBoxInstanceXSecondValue= 0;
+                bool setDialogBoxInstanceYFirstValue = false;
+                bool setDialogBoxInstanceYSecondValue = false;
+                float DialogBoxInstanceYFirstValue= 0;
+                float DialogBoxInstanceYSecondValue= 0;
+                bool setInfoBarBlueFirstValue = false;
+                bool setInfoBarBlueSecondValue = false;
+                int InfoBarBlueFirstValue= 0;
+                int InfoBarBlueSecondValue= 0;
+                bool setInfoBarCurrentColorCategoryStateFirstValue = false;
+                bool setInfoBarCurrentColorCategoryStateSecondValue = false;
+                JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory InfoBarCurrentColorCategoryStateFirstValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory InfoBarCurrentColorCategoryStateSecondValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                bool setInfoBarGreenFirstValue = false;
+                bool setInfoBarGreenSecondValue = false;
+                int InfoBarGreenFirstValue= 0;
+                int InfoBarGreenSecondValue= 0;
+                bool setInfoBarHeightFirstValue = false;
+                bool setInfoBarHeightSecondValue = false;
+                float InfoBarHeightFirstValue= 0;
+                float InfoBarHeightSecondValue= 0;
+                bool setInfoBarRedFirstValue = false;
+                bool setInfoBarRedSecondValue = false;
+                int InfoBarRedFirstValue= 0;
+                int InfoBarRedSecondValue= 0;
+                bool setInfoBarWidthFirstValue = false;
+                bool setInfoBarWidthSecondValue = false;
+                float InfoBarWidthFirstValue= 0;
+                float InfoBarWidthSecondValue= 0;
+                bool setInfoBarXFirstValue = false;
+                bool setInfoBarXSecondValue = false;
+                float InfoBarXFirstValue= 0;
+                float InfoBarXSecondValue= 0;
+                bool setInfoBarYFirstValue = false;
+                bool setInfoBarYSecondValue = false;
+                float InfoBarYFirstValue= 0;
+                float InfoBarYSecondValue= 0;
+                bool setListBoxInstanceHeightFirstValue = false;
+                bool setListBoxInstanceHeightSecondValue = false;
+                float ListBoxInstanceHeightFirstValue= 0;
+                float ListBoxInstanceHeightSecondValue= 0;
+                bool setListBoxInstanceXFirstValue = false;
+                bool setListBoxInstanceXSecondValue = false;
+                float ListBoxInstanceXFirstValue= 0;
+                float ListBoxInstanceXSecondValue= 0;
+                bool setListBoxInstanceYFirstValue = false;
+                bool setListBoxInstanceYSecondValue = false;
+                float ListBoxInstanceYFirstValue= 0;
+                float ListBoxInstanceYSecondValue= 0;
                 bool setPlayButtonInstanceHeightFirstValue = false;
                 bool setPlayButtonInstanceHeightSecondValue = false;
                 float PlayButtonInstanceHeightFirstValue= 0;
@@ -67,6 +182,54 @@
                 bool setPlayButtonInstanceYSecondValue = false;
                 float PlayButtonInstanceYFirstValue= 0;
                 float PlayButtonInstanceYSecondValue= 0;
+                bool setResourceBarBlueFirstValue = false;
+                bool setResourceBarBlueSecondValue = false;
+                int ResourceBarBlueFirstValue= 0;
+                int ResourceBarBlueSecondValue= 0;
+                bool setResourceBarCurrentColorCategoryStateFirstValue = false;
+                bool setResourceBarCurrentColorCategoryStateSecondValue = false;
+                JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory ResourceBarCurrentColorCategoryStateFirstValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory ResourceBarCurrentColorCategoryStateSecondValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                bool setResourceBarGreenFirstValue = false;
+                bool setResourceBarGreenSecondValue = false;
+                int ResourceBarGreenFirstValue= 0;
+                int ResourceBarGreenSecondValue= 0;
+                bool setResourceBarHeightFirstValue = false;
+                bool setResourceBarHeightSecondValue = false;
+                float ResourceBarHeightFirstValue= 0;
+                float ResourceBarHeightSecondValue= 0;
+                bool setResourceBarRedFirstValue = false;
+                bool setResourceBarRedSecondValue = false;
+                int ResourceBarRedFirstValue= 0;
+                int ResourceBarRedSecondValue= 0;
+                bool setResourceBarWidthFirstValue = false;
+                bool setResourceBarWidthSecondValue = false;
+                float ResourceBarWidthFirstValue= 0;
+                float ResourceBarWidthSecondValue= 0;
+                bool setResourceBarXFirstValue = false;
+                bool setResourceBarXSecondValue = false;
+                float ResourceBarXFirstValue= 0;
+                float ResourceBarXSecondValue= 0;
+                bool setResourceBarYFirstValue = false;
+                bool setResourceBarYSecondValue = false;
+                float ResourceBarYFirstValue= 0;
+                float ResourceBarYSecondValue= 0;
+                bool setResourcesHeightFirstValue = false;
+                bool setResourcesHeightSecondValue = false;
+                float ResourcesHeightFirstValue= 0;
+                float ResourcesHeightSecondValue= 0;
+                bool setResourcesWidthFirstValue = false;
+                bool setResourcesWidthSecondValue = false;
+                float ResourcesWidthFirstValue= 0;
+                float ResourcesWidthSecondValue= 0;
+                bool setResourcesXFirstValue = false;
+                bool setResourcesXSecondValue = false;
+                float ResourcesXFirstValue= 0;
+                float ResourcesXSecondValue= 0;
+                bool setResourcesYFirstValue = false;
+                bool setResourcesYSecondValue = false;
+                float ResourcesYFirstValue= 0;
+                float ResourcesYSecondValue= 0;
                 switch(firstState)
                 {
                     case  VariableState.Default:
@@ -85,6 +248,92 @@
                         if (interpolationValue < 1)
                         {
                             this.BackButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setDialogBoxInstanceHeightFirstValue = true;
+                        DialogBoxInstanceHeightFirstValue = -10f;
+                        if (interpolationValue < 1)
+                        {
+                            this.DialogBoxInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.DialogBoxInstance.Parent = this.GetGraphicalUiElementByName("InfoBar");
+                        }
+                        setDialogBoxInstanceWidthFirstValue = true;
+                        DialogBoxInstanceWidthFirstValue = 50f;
+                        if (interpolationValue < 1)
+                        {
+                            this.DialogBoxInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setDialogBoxInstanceXFirstValue = true;
+                        DialogBoxInstanceXFirstValue = 5f;
+                        if (interpolationValue < 1)
+                        {
+                            this.DialogBoxInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.DialogBoxInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        setDialogBoxInstanceYFirstValue = true;
+                        DialogBoxInstanceYFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.DialogBoxInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.DialogBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setInfoBarBlueFirstValue = true;
+                        InfoBarBlueFirstValue = 255;
+                        setInfoBarCurrentColorCategoryStateFirstValue = true;
+                        InfoBarCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.TransparentBlack;
+                        setInfoBarGreenFirstValue = true;
+                        InfoBarGreenFirstValue = 255;
+                        setInfoBarHeightFirstValue = true;
+                        InfoBarHeightFirstValue = 72f;
+                        setInfoBarRedFirstValue = true;
+                        InfoBarRedFirstValue = 255;
+                        setInfoBarWidthFirstValue = true;
+                        InfoBarWidthFirstValue = 50f;
+                        if (interpolationValue < 1)
+                        {
+                            this.InfoBar.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setInfoBarXFirstValue = true;
+                        InfoBarXFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.InfoBar.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.InfoBar.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setInfoBarYFirstValue = true;
+                        InfoBarYFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.InfoBar.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.InfoBar.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setListBoxInstanceHeightFirstValue = true;
+                        ListBoxInstanceHeightFirstValue = -280f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ListBoxInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setListBoxInstanceXFirstValue = true;
+                        ListBoxInstanceXFirstValue = 0f;
+                        setListBoxInstanceYFirstValue = true;
+                        ListBoxInstanceYFirstValue = 72f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ListBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
                         setPlayButtonInstanceHeightFirstValue = true;
                         PlayButtonInstanceHeightFirstValue = 100f;
@@ -110,6 +359,86 @@
                         {
                             this.PlayButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
+                        setResourceBarBlueFirstValue = true;
+                        ResourceBarBlueFirstValue = 170;
+                        setResourceBarCurrentColorCategoryStateFirstValue = true;
+                        ResourceBarCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                        setResourceBarGreenFirstValue = true;
+                        ResourceBarGreenFirstValue = 205;
+                        setResourceBarHeightFirstValue = true;
+                        ResourceBarHeightFirstValue = 72f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceBar.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                        }
+                        setResourceBarRedFirstValue = true;
+                        ResourceBarRedFirstValue = 102;
+                        setResourceBarWidthFirstValue = true;
+                        ResourceBarWidthFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceBar.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setResourceBarXFirstValue = true;
+                        ResourceBarXFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceBar.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceBar.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setResourceBarYFirstValue = true;
+                        ResourceBarYFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceBar.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceBar.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceDisplayInstance.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceDisplayInstance1.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceDisplayInstance2.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceDisplayInstance3.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceDisplayInstance4.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceDisplayInstance5.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.Resources.ChildrenLayout = Gum.Managers.ChildrenLayout.LeftToRightStack;
+                        }
+                        setResourcesHeightFirstValue = true;
+                        ResourcesHeightFirstValue = 40f;
+                        setResourcesWidthFirstValue = true;
+                        ResourcesWidthFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.Resources.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        setResourcesXFirstValue = true;
+                        ResourcesXFirstValue = 16f;
+                        setResourcesYFirstValue = true;
+                        ResourcesYFirstValue = 16f;
                         break;
                 }
                 switch(secondState)
@@ -130,6 +459,92 @@
                         if (interpolationValue >= 1)
                         {
                             this.BackButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setDialogBoxInstanceHeightSecondValue = true;
+                        DialogBoxInstanceHeightSecondValue = -10f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.DialogBoxInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.DialogBoxInstance.Parent = this.GetGraphicalUiElementByName("InfoBar");
+                        }
+                        setDialogBoxInstanceWidthSecondValue = true;
+                        DialogBoxInstanceWidthSecondValue = 50f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.DialogBoxInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setDialogBoxInstanceXSecondValue = true;
+                        DialogBoxInstanceXSecondValue = 5f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.DialogBoxInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.DialogBoxInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        setDialogBoxInstanceYSecondValue = true;
+                        DialogBoxInstanceYSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.DialogBoxInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.DialogBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setInfoBarBlueSecondValue = true;
+                        InfoBarBlueSecondValue = 255;
+                        setInfoBarCurrentColorCategoryStateSecondValue = true;
+                        InfoBarCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.TransparentBlack;
+                        setInfoBarGreenSecondValue = true;
+                        InfoBarGreenSecondValue = 255;
+                        setInfoBarHeightSecondValue = true;
+                        InfoBarHeightSecondValue = 72f;
+                        setInfoBarRedSecondValue = true;
+                        InfoBarRedSecondValue = 255;
+                        setInfoBarWidthSecondValue = true;
+                        InfoBarWidthSecondValue = 50f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.InfoBar.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                        }
+                        setInfoBarXSecondValue = true;
+                        InfoBarXSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.InfoBar.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.InfoBar.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setInfoBarYSecondValue = true;
+                        InfoBarYSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.InfoBar.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.InfoBar.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setListBoxInstanceHeightSecondValue = true;
+                        ListBoxInstanceHeightSecondValue = -280f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ListBoxInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setListBoxInstanceXSecondValue = true;
+                        ListBoxInstanceXSecondValue = 0f;
+                        setListBoxInstanceYSecondValue = true;
+                        ListBoxInstanceYSecondValue = 72f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ListBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
                         setPlayButtonInstanceHeightSecondValue = true;
                         PlayButtonInstanceHeightSecondValue = 100f;
@@ -155,12 +570,152 @@
                         {
                             this.PlayButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
+                        setResourceBarBlueSecondValue = true;
+                        ResourceBarBlueSecondValue = 170;
+                        setResourceBarCurrentColorCategoryStateSecondValue = true;
+                        ResourceBarCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                        setResourceBarGreenSecondValue = true;
+                        ResourceBarGreenSecondValue = 205;
+                        setResourceBarHeightSecondValue = true;
+                        ResourceBarHeightSecondValue = 72f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceBar.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                        }
+                        setResourceBarRedSecondValue = true;
+                        ResourceBarRedSecondValue = 102;
+                        setResourceBarWidthSecondValue = true;
+                        ResourceBarWidthSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceBar.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setResourceBarXSecondValue = true;
+                        ResourceBarXSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceBar.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceBar.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setResourceBarYSecondValue = true;
+                        ResourceBarYSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceBar.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceBar.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceDisplayInstance.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceDisplayInstance1.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceDisplayInstance2.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceDisplayInstance3.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceDisplayInstance4.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceDisplayInstance5.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.Resources.ChildrenLayout = Gum.Managers.ChildrenLayout.LeftToRightStack;
+                        }
+                        setResourcesHeightSecondValue = true;
+                        ResourcesHeightSecondValue = 40f;
+                        setResourcesWidthSecondValue = true;
+                        ResourcesWidthSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.Resources.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        setResourcesXSecondValue = true;
+                        ResourcesXSecondValue = 16f;
+                        setResourcesYSecondValue = true;
+                        ResourcesYSecondValue = 16f;
                         break;
                 }
                 var wasSuppressed = mIsLayoutSuspended;
                 if (wasSuppressed == false)
                 {
                     SuspendLayout(true);
+                }
+                if (setDialogBoxInstanceHeightFirstValue && setDialogBoxInstanceHeightSecondValue)
+                {
+                    DialogBoxInstance.Height = DialogBoxInstanceHeightFirstValue * (1 - interpolationValue) + DialogBoxInstanceHeightSecondValue * interpolationValue;
+                }
+                if (setDialogBoxInstanceWidthFirstValue && setDialogBoxInstanceWidthSecondValue)
+                {
+                    DialogBoxInstance.Width = DialogBoxInstanceWidthFirstValue * (1 - interpolationValue) + DialogBoxInstanceWidthSecondValue * interpolationValue;
+                }
+                if (setDialogBoxInstanceXFirstValue && setDialogBoxInstanceXSecondValue)
+                {
+                    DialogBoxInstance.X = DialogBoxInstanceXFirstValue * (1 - interpolationValue) + DialogBoxInstanceXSecondValue * interpolationValue;
+                }
+                if (setDialogBoxInstanceYFirstValue && setDialogBoxInstanceYSecondValue)
+                {
+                    DialogBoxInstance.Y = DialogBoxInstanceYFirstValue * (1 - interpolationValue) + DialogBoxInstanceYSecondValue * interpolationValue;
+                }
+                if (setInfoBarBlueFirstValue && setInfoBarBlueSecondValue)
+                {
+                    InfoBar.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(InfoBarBlueFirstValue* (1 - interpolationValue) + InfoBarBlueSecondValue * interpolationValue);
+                }
+                if (setInfoBarCurrentColorCategoryStateFirstValue && setInfoBarCurrentColorCategoryStateSecondValue)
+                {
+                    InfoBar.InterpolateBetween(InfoBarCurrentColorCategoryStateFirstValue, InfoBarCurrentColorCategoryStateSecondValue, interpolationValue);
+                }
+                if (setInfoBarGreenFirstValue && setInfoBarGreenSecondValue)
+                {
+                    InfoBar.Green = FlatRedBall.Math.MathFunctions.RoundToInt(InfoBarGreenFirstValue* (1 - interpolationValue) + InfoBarGreenSecondValue * interpolationValue);
+                }
+                if (setInfoBarHeightFirstValue && setInfoBarHeightSecondValue)
+                {
+                    InfoBar.Height = InfoBarHeightFirstValue * (1 - interpolationValue) + InfoBarHeightSecondValue * interpolationValue;
+                }
+                if (setInfoBarRedFirstValue && setInfoBarRedSecondValue)
+                {
+                    InfoBar.Red = FlatRedBall.Math.MathFunctions.RoundToInt(InfoBarRedFirstValue* (1 - interpolationValue) + InfoBarRedSecondValue * interpolationValue);
+                }
+                if (setInfoBarWidthFirstValue && setInfoBarWidthSecondValue)
+                {
+                    InfoBar.Width = InfoBarWidthFirstValue * (1 - interpolationValue) + InfoBarWidthSecondValue * interpolationValue;
+                }
+                if (setInfoBarXFirstValue && setInfoBarXSecondValue)
+                {
+                    InfoBar.X = InfoBarXFirstValue * (1 - interpolationValue) + InfoBarXSecondValue * interpolationValue;
+                }
+                if (setInfoBarYFirstValue && setInfoBarYSecondValue)
+                {
+                    InfoBar.Y = InfoBarYFirstValue * (1 - interpolationValue) + InfoBarYSecondValue * interpolationValue;
+                }
+                if (setListBoxInstanceHeightFirstValue && setListBoxInstanceHeightSecondValue)
+                {
+                    ListBoxInstance.Height = ListBoxInstanceHeightFirstValue * (1 - interpolationValue) + ListBoxInstanceHeightSecondValue * interpolationValue;
+                }
+                if (setListBoxInstanceXFirstValue && setListBoxInstanceXSecondValue)
+                {
+                    ListBoxInstance.X = ListBoxInstanceXFirstValue * (1 - interpolationValue) + ListBoxInstanceXSecondValue * interpolationValue;
+                }
+                if (setListBoxInstanceYFirstValue && setListBoxInstanceYSecondValue)
+                {
+                    ListBoxInstance.Y = ListBoxInstanceYFirstValue * (1 - interpolationValue) + ListBoxInstanceYSecondValue * interpolationValue;
                 }
                 if (setPlayButtonInstanceHeightFirstValue && setPlayButtonInstanceHeightSecondValue)
                 {
@@ -177,6 +732,54 @@
                 if (setPlayButtonInstanceYFirstValue && setPlayButtonInstanceYSecondValue)
                 {
                     PlayButtonInstance.Y = PlayButtonInstanceYFirstValue * (1 - interpolationValue) + PlayButtonInstanceYSecondValue * interpolationValue;
+                }
+                if (setResourceBarBlueFirstValue && setResourceBarBlueSecondValue)
+                {
+                    ResourceBar.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(ResourceBarBlueFirstValue* (1 - interpolationValue) + ResourceBarBlueSecondValue * interpolationValue);
+                }
+                if (setResourceBarCurrentColorCategoryStateFirstValue && setResourceBarCurrentColorCategoryStateSecondValue)
+                {
+                    ResourceBar.InterpolateBetween(ResourceBarCurrentColorCategoryStateFirstValue, ResourceBarCurrentColorCategoryStateSecondValue, interpolationValue);
+                }
+                if (setResourceBarGreenFirstValue && setResourceBarGreenSecondValue)
+                {
+                    ResourceBar.Green = FlatRedBall.Math.MathFunctions.RoundToInt(ResourceBarGreenFirstValue* (1 - interpolationValue) + ResourceBarGreenSecondValue * interpolationValue);
+                }
+                if (setResourceBarHeightFirstValue && setResourceBarHeightSecondValue)
+                {
+                    ResourceBar.Height = ResourceBarHeightFirstValue * (1 - interpolationValue) + ResourceBarHeightSecondValue * interpolationValue;
+                }
+                if (setResourceBarRedFirstValue && setResourceBarRedSecondValue)
+                {
+                    ResourceBar.Red = FlatRedBall.Math.MathFunctions.RoundToInt(ResourceBarRedFirstValue* (1 - interpolationValue) + ResourceBarRedSecondValue * interpolationValue);
+                }
+                if (setResourceBarWidthFirstValue && setResourceBarWidthSecondValue)
+                {
+                    ResourceBar.Width = ResourceBarWidthFirstValue * (1 - interpolationValue) + ResourceBarWidthSecondValue * interpolationValue;
+                }
+                if (setResourceBarXFirstValue && setResourceBarXSecondValue)
+                {
+                    ResourceBar.X = ResourceBarXFirstValue * (1 - interpolationValue) + ResourceBarXSecondValue * interpolationValue;
+                }
+                if (setResourceBarYFirstValue && setResourceBarYSecondValue)
+                {
+                    ResourceBar.Y = ResourceBarYFirstValue * (1 - interpolationValue) + ResourceBarYSecondValue * interpolationValue;
+                }
+                if (setResourcesHeightFirstValue && setResourcesHeightSecondValue)
+                {
+                    Resources.Height = ResourcesHeightFirstValue * (1 - interpolationValue) + ResourcesHeightSecondValue * interpolationValue;
+                }
+                if (setResourcesWidthFirstValue && setResourcesWidthSecondValue)
+                {
+                    Resources.Width = ResourcesWidthFirstValue * (1 - interpolationValue) + ResourcesWidthSecondValue * interpolationValue;
+                }
+                if (setResourcesXFirstValue && setResourcesXSecondValue)
+                {
+                    Resources.X = ResourcesXFirstValue * (1 - interpolationValue) + ResourcesXSecondValue * interpolationValue;
+                }
+                if (setResourcesYFirstValue && setResourcesYSecondValue)
+                {
+                    Resources.Y = ResourcesYFirstValue * (1 - interpolationValue) + ResourcesYSecondValue * interpolationValue;
                 }
                 if (interpolationValue < 1)
                 {
@@ -254,8 +857,18 @@
             {
                 base.StopAnimations();
                 PlayButtonInstance.StopAnimations();
-                BackButtonInstance.StopAnimations();
                 ScreenSelectorInstance.StopAnimations();
+                ResourceBar.StopAnimations();
+                InfoBar.StopAnimations();
+                BackButtonInstance.StopAnimations();
+                DialogBoxInstance.StopAnimations();
+                ListBoxInstance.StopAnimations();
+                ResourceDisplayInstance.StopAnimations();
+                ResourceDisplayInstance1.StopAnimations();
+                ResourceDisplayInstance2.StopAnimations();
+                ResourceDisplayInstance3.StopAnimations();
+                ResourceDisplayInstance4.StopAnimations();
+                ResourceDisplayInstance5.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -335,6 +948,222 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "ResourceBar.Blue",
+                            Type = "int",
+                            Value = ResourceBar.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = ResourceBar.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Green",
+                            Type = "int",
+                            Value = ResourceBar.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Height",
+                            Type = "float",
+                            Value = ResourceBar.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = ResourceBar.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Red",
+                            Type = "int",
+                            Value = ResourceBar.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Width",
+                            Type = "float",
+                            Value = ResourceBar.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = ResourceBar.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.X",
+                            Type = "float",
+                            Value = ResourceBar.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = ResourceBar.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.X Units",
+                            Type = "PositionUnitType",
+                            Value = ResourceBar.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Y",
+                            Type = "float",
+                            Value = ResourceBar.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = ResourceBar.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Y Units",
+                            Type = "PositionUnitType",
+                            Value = ResourceBar.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Blue",
+                            Type = "int",
+                            Value = InfoBar.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = InfoBar.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Green",
+                            Type = "int",
+                            Value = InfoBar.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Height",
+                            Type = "float",
+                            Value = InfoBar.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Red",
+                            Type = "int",
+                            Value = InfoBar.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Width",
+                            Type = "float",
+                            Value = InfoBar.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = InfoBar.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.X",
+                            Type = "float",
+                            Value = InfoBar.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = InfoBar.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.X Units",
+                            Type = "PositionUnitType",
+                            Value = InfoBar.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Y",
+                            Type = "float",
+                            Value = InfoBar.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = InfoBar.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Y Units",
+                            Type = "PositionUnitType",
+                            Value = InfoBar.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "BackButtonInstance.X Origin",
                             Type = "HorizontalAlignment",
                             Value = BackButtonInstance.XOrigin
@@ -362,6 +1191,230 @@
                             Name = "BackButtonInstance.Y Units",
                             Type = "PositionUnitType",
                             Value = BackButtonInstance.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Height",
+                            Type = "float",
+                            Value = DialogBoxInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = DialogBoxInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Parent",
+                            Type = "string",
+                            Value = DialogBoxInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Width",
+                            Type = "float",
+                            Value = DialogBoxInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = DialogBoxInstance.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.X",
+                            Type = "float",
+                            Value = DialogBoxInstance.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = DialogBoxInstance.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = DialogBoxInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Y",
+                            Type = "float",
+                            Value = DialogBoxInstance.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = DialogBoxInstance.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Y Units",
+                            Type = "PositionUnitType",
+                            Value = DialogBoxInstance.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ListBoxInstance.Height",
+                            Type = "float",
+                            Value = ListBoxInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ListBoxInstance.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = ListBoxInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ListBoxInstance.X",
+                            Type = "float",
+                            Value = ListBoxInstance.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ListBoxInstance.Y",
+                            Type = "float",
+                            Value = ListBoxInstance.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ListBoxInstance.Y Units",
+                            Type = "PositionUnitType",
+                            Value = ListBoxInstance.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = Resources.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Height",
+                            Type = "float",
+                            Value = Resources.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Width",
+                            Type = "float",
+                            Value = Resources.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = Resources.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.X",
+                            Type = "float",
+                            Value = Resources.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Y",
+                            Type = "float",
+                            Value = Resources.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance1.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance1.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance2.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance2.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance3.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance3.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance4.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance4.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance5.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance5.Parent
                         }
                         );
                         break;
@@ -441,6 +1494,222 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "ResourceBar.Blue",
+                            Type = "int",
+                            Value = ResourceBar.Blue + 170
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = ResourceBar.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Green",
+                            Type = "int",
+                            Value = ResourceBar.Green + 205
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Height",
+                            Type = "float",
+                            Value = ResourceBar.Height + 72f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = ResourceBar.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Red",
+                            Type = "int",
+                            Value = ResourceBar.Red + 102
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Width",
+                            Type = "float",
+                            Value = ResourceBar.Width + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = ResourceBar.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.X",
+                            Type = "float",
+                            Value = ResourceBar.X + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = ResourceBar.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.X Units",
+                            Type = "PositionUnitType",
+                            Value = ResourceBar.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Y",
+                            Type = "float",
+                            Value = ResourceBar.Y + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = ResourceBar.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceBar.Y Units",
+                            Type = "PositionUnitType",
+                            Value = ResourceBar.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Blue",
+                            Type = "int",
+                            Value = InfoBar.Blue + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = InfoBar.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Green",
+                            Type = "int",
+                            Value = InfoBar.Green + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Height",
+                            Type = "float",
+                            Value = InfoBar.Height + 72f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Red",
+                            Type = "int",
+                            Value = InfoBar.Red + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Width",
+                            Type = "float",
+                            Value = InfoBar.Width + 50f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = InfoBar.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.X",
+                            Type = "float",
+                            Value = InfoBar.X + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = InfoBar.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.X Units",
+                            Type = "PositionUnitType",
+                            Value = InfoBar.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Y",
+                            Type = "float",
+                            Value = InfoBar.Y + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = InfoBar.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "InfoBar.Y Units",
+                            Type = "PositionUnitType",
+                            Value = InfoBar.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "BackButtonInstance.X Origin",
                             Type = "HorizontalAlignment",
                             Value = BackButtonInstance.XOrigin
@@ -470,6 +1739,230 @@
                             Value = BackButtonInstance.YUnits
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Height",
+                            Type = "float",
+                            Value = DialogBoxInstance.Height + -10f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = DialogBoxInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Parent",
+                            Type = "string",
+                            Value = DialogBoxInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Width",
+                            Type = "float",
+                            Value = DialogBoxInstance.Width + 50f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = DialogBoxInstance.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.X",
+                            Type = "float",
+                            Value = DialogBoxInstance.X + 5f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = DialogBoxInstance.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = DialogBoxInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Y",
+                            Type = "float",
+                            Value = DialogBoxInstance.Y + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = DialogBoxInstance.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.Y Units",
+                            Type = "PositionUnitType",
+                            Value = DialogBoxInstance.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ListBoxInstance.Height",
+                            Type = "float",
+                            Value = ListBoxInstance.Height + -280f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ListBoxInstance.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = ListBoxInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ListBoxInstance.X",
+                            Type = "float",
+                            Value = ListBoxInstance.X + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ListBoxInstance.Y",
+                            Type = "float",
+                            Value = ListBoxInstance.Y + 72f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ListBoxInstance.Y Units",
+                            Type = "PositionUnitType",
+                            Value = ListBoxInstance.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = Resources.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Height",
+                            Type = "float",
+                            Value = Resources.Height + 40f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Width",
+                            Type = "float",
+                            Value = Resources.Width + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = Resources.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.X",
+                            Type = "float",
+                            Value = Resources.X + 16f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Resources.Y",
+                            Type = "float",
+                            Value = Resources.Y + 16f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance1.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance1.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance2.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance2.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance3.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance3.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance4.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance4.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceDisplayInstance5.Parent",
+                            Type = "string",
+                            Value = ResourceDisplayInstance5.Parent
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -490,8 +1983,19 @@
             }
             private bool tryCreateFormsObject;
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.PlayButtonRuntime PlayButtonInstance { get; set; }
-            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.BackButtonRuntime BackButtonInstance { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.ComplexComponents.ScreenSelectorRuntime ScreenSelectorInstance { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime ResourceBar { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime InfoBar { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.BackButtonRuntime BackButtonInstance { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.DialogBoxRuntime DialogBoxInstance { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime ListBoxInstance { get; set; }
+            public JHP4SD.GumRuntimes.ContainerRuntime Resources { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance1 { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance2 { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance3 { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance4 { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance5 { get; set; }
             public GameScreenGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -519,8 +2023,19 @@
             private void AssignReferences () 
             {
                 PlayButtonInstance = this.GetGraphicalUiElementByName("PlayButtonInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.PlayButtonRuntime;
-                BackButtonInstance = this.GetGraphicalUiElementByName("BackButtonInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.BackButtonRuntime;
                 ScreenSelectorInstance = this.GetGraphicalUiElementByName("ScreenSelectorInstance") as JHP4SD.GumRuntimes.LebegForms.ComplexComponents.ScreenSelectorRuntime;
+                ResourceBar = this.GetGraphicalUiElementByName("ResourceBar") as JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime;
+                InfoBar = this.GetGraphicalUiElementByName("InfoBar") as JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime;
+                BackButtonInstance = this.GetGraphicalUiElementByName("BackButtonInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.BackButtonRuntime;
+                DialogBoxInstance = this.GetGraphicalUiElementByName("DialogBoxInstance") as JHP4SD.GumRuntimes.DefaultForms.DialogBoxRuntime;
+                ListBoxInstance = this.GetGraphicalUiElementByName("ListBoxInstance") as JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime;
+                Resources = this.GetGraphicalUiElementByName("Resources") as JHP4SD.GumRuntimes.ContainerRuntime;
+                ResourceDisplayInstance = this.GetGraphicalUiElementByName("ResourceDisplayInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                ResourceDisplayInstance1 = this.GetGraphicalUiElementByName("ResourceDisplayInstance1") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                ResourceDisplayInstance2 = this.GetGraphicalUiElementByName("ResourceDisplayInstance2") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                ResourceDisplayInstance3 = this.GetGraphicalUiElementByName("ResourceDisplayInstance3") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                ResourceDisplayInstance4 = this.GetGraphicalUiElementByName("ResourceDisplayInstance4") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                ResourceDisplayInstance5 = this.GetGraphicalUiElementByName("ResourceDisplayInstance5") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Screens.GameScreenGumForms(this);

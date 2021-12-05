@@ -11,8 +11,7 @@ using FlatRedBall.Graphics.Animation;
 using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 using FlatRedBall.Localization;
-
-
+using JHP4SD.Lebeg134.Module.Session;
 
 namespace JHP4SD.Screens
 {
@@ -35,6 +34,8 @@ namespace JHP4SD.Screens
         private void NewGameButton_Click(object sender, EventArgs e)
         {
             MoveToScreen(typeof(CityScreen));
+            Session session = new Session();
+            session.start();
         }
 
         void CustomActivity(bool firstTimeCalled)

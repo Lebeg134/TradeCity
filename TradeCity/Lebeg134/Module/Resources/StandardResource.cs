@@ -7,6 +7,9 @@ namespace JHP4SD.Lebeg134.Module.Resources
 {
     public abstract class StandardResource : Resource, ISellable
     {
+        public StandardResource(int amount):base(amount)
+        {
+        }
         public double getValue()
         {
             throw new System.NotImplementedException();

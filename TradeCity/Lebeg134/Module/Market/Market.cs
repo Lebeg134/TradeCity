@@ -3,11 +3,13 @@
 */
 using JHP4SD.Lebeg134.Module.Session;
 using JHP4SD.Lebeg134.Module.TimeManager;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace JHP4SD.Lebeg134.Module.MarketNS
 {
+    [Serializable]
     public class Market : ITickable
     {
         private Dictionary<System.Type, ItemLog> _registeredItems;

@@ -53,11 +53,6 @@
     <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
-    <Name>LebegForms/BasicComponents/TabButton</Name>
-    <ElementType>Component</ElementType>
-    <LinkType>ReferenceOriginal</LinkType>
-  </ComponentReference>
-  <ComponentReference>
     <Name>DefaultForms/CheckBox</Name>
     <ElementType>Component</ElementType>
     <LinkType>ReferenceOriginal</LinkType>
@@ -188,6 +183,16 @@
     <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
+    <Name>LebegForms/BasicComponents/ResourceDisplay</Name>
+    <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
+  </ComponentReference>
+  <ComponentReference>
+    <Name>LebegForms/BasicComponents/TabButton</Name>
+    <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
+  </ComponentReference>
+  <ComponentReference>
     <Name>LebegForms/ComplexComponents/ScreenSelector</Name>
     <ElementType>Component</ElementType>
     <LinkType>ReferenceOriginal</LinkType>
@@ -274,6 +279,12 @@
     <Name>RadioButtonBehavior</Name>
   </BehaviorReference>
   <BehaviorReference>
+    <Name>ResourceChange</Name>
+  </BehaviorReference>
+  <BehaviorReference>
+    <Name>ResourceChange</Name>
+  </BehaviorReference>
+  <BehaviorReference>
     <Name>ScrollBarBehavior</Name>
   </BehaviorReference>
   <BehaviorReference>
@@ -299,11 +310,5 @@
   </BehaviorReference>
   <BehaviorReference>
     <Name>UserControlBehavior</Name>
-  </BehaviorReference>
-  <BehaviorReference>
-    <Name>ResourceChange</Name>
-  </BehaviorReference>
-  <BehaviorReference>
-    <Name>ResourceChange</Name>
   </BehaviorReference>
 </GumProjectSave>

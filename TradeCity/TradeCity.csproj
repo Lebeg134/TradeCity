@@ -76,6 +76,10 @@
     </Compile>
     <Compile Include="Factories\CameraMidpointFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
+    <Compile Include="Forms\Components\LebegForms\BasicComponents\ResourceDisplayForms.cs" />
+    <Compile Include="Forms\Components\LebegForms\BasicComponents\ResourceDisplayForms.Generated.cs">
+      <DependentUpon>ResourceDisplayForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Components\LebegForms\ComplexComponents\ScreenSelectorForms.cs" />
     <Compile Include="Forms\Components\LebegForms\ComplexComponents\ScreenSelectorForms.Generated.cs">
       <DependentUpon>ScreenSelectorForms.cs</DependentUpon>
@@ -277,6 +281,10 @@
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\PlayButtonRuntime.Generated.cs">
       <DependentUpon>PlayButtonRuntime.cs</DependentUpon>
     </Compile>
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceDisplayRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceDisplayRuntime.Generated.cs">
+      <DependentUpon>ResourceDisplayRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\TabButtonRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\TabButtonRuntime.Generated.cs">
       <DependentUpon>TabButtonRuntime.cs</DependentUpon>
@@ -330,6 +338,7 @@
     <Compile Include="Lebeg134\Module\Session\Player.cs" />
     <Compile Include="Lebeg134\Module\Session\PlayerStrategyBase.cs" />
     <Compile Include="Lebeg134\Module\Session\Session.cs" />
+    <Compile Include="Lebeg134\Module\Session\SessionGenerator.cs" />
     <Compile Include="Lebeg134\Module\Session\StandardPlayerStrategy.cs" />
     <Compile Include="Lebeg134\Module\Structures\Building.cs" />
     <Compile Include="Lebeg134\Module\Structures\CommonBuilding.cs" />
@@ -655,6 +664,10 @@
     <None Include="content\gumproject\components\lebegforms\basiccomponents\playbutton.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>playbutton</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\resourcedisplay.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>resourcedisplay</Name>
     </None>
     <None Include="content\gumproject\components\lebegforms\basiccomponents\tabbutton.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

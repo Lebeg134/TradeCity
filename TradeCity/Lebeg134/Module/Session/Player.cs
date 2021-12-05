@@ -4,19 +4,25 @@
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Structures;
 using JHP4SD.Lebeg134.Module.TimeManager;
+using System;
 using System.Collections.Generic;
 
 namespace JHP4SD.Lebeg134.Module.Session
 {
 
-
+    [Serializable]
     public partial class Player : ITickable
     {
-        Session session;
-        List<IOwnable> owned;
-        Dictionary<System.Type, Resource> ownedResources;
+        //Session session;
+        List<IOwnable> owned = new List<IOwnable>();
+        Dictionary<Type, Resource> ownedResources = new Dictionary<Type, Resource>();
         IPlayerStrategy playerStrategy;
+        public static Player CurrentPlayer { get; set; }
 
+        public Player()
+        {
+
+        }
         public bool hasStructure(IOwnable structure)
         {
             foreach (IOwnable ownable in owned)

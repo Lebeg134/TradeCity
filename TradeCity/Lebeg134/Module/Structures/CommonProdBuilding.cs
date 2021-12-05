@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace JHP4SD.Lebeg134.Module.Structures
 {
-    public class CommonProdBuilding : CommonBuilding, IProducer
+    public abstract class CommonProdBuilding : CommonBuilding, IProducer
     {
         protected static readonly List<Resource>[] productionLevels;
         public List<Resource> getProduce()

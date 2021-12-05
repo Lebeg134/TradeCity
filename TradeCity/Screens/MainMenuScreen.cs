@@ -34,7 +34,7 @@ namespace JHP4SD.Screens
         private void NewGameButton_Click(object sender, EventArgs e)
         {
             MoveToScreen(typeof(CityScreen));
-            Session session = new Session();
+            Session session = SessionGenerator.GenerateStandard();
             session.start();
         }
 

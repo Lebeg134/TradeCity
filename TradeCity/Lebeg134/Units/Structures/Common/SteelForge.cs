@@ -1,11 +1,14 @@
-/**
- * @(#) SteelForge.cs
- */
 
+
+using JHP4SD.Lebeg134.Module.Structures;
+/**
+* @(#) SteelForge.cs
+*/
 namespace Lebeg134.Structures.Common
 {
-	public class SteelForge
+	public class SteelForge: CommonProdBuilding
 	{
+
 	}
 	
 }

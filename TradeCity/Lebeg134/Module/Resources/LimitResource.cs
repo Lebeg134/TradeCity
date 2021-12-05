@@ -8,6 +8,7 @@ namespace JHP4SD.Lebeg134.Module.Resources
     {
         static int limit;
 
+        public LimitResource(int amount) : base(amount) { }
         public void incLimit(int by) //Static?
         {
             limit += by;

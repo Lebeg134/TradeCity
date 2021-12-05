@@ -6,7 +6,7 @@ using JHP4SD.Lebeg134.Module.TimeManager;
 using System.Collections.Generic;
 namespace JHP4SD.Lebeg134.Module.Structures
 {
-	public class SpecialProdBuilding : SpecialBuilding, IProducer
+	public abstract class SpecialProdBuilding : SpecialBuilding, IProducer
 	{
         protected static readonly List<Resource> production;
 

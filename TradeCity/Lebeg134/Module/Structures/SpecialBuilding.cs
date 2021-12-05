@@ -4,7 +4,7 @@
 
 namespace JHP4SD.Lebeg134.Module.Structures
 {
-	public class SpecialBuilding : Building
+	public abstract class SpecialBuilding : Building
 	{
 		// :P Futureproofing
 	}

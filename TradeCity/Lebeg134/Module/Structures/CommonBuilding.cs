@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace JHP4SD.Lebeg134.Module.Structures
 {
-    public class CommonBuilding : Building, IUpgradeable
+    public abstract class CommonBuilding : Building, IUpgradeable
     {
         protected static readonly List<Resource>[] upgradeLevelsCosts;
         protected static readonly List<Resource>[] upkeepLevels;

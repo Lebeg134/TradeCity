@@ -94,6 +94,24 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>string</Type>
+      <Name>ElectricityDisplay.Parent</Name>
+      <Value xsi:type="xsd:string">Resources</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>TextureAddress</Type>
+      <Name>ElectricityDisplay.ResourceIcon</Name>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>ElectricityDisplay.SpriteInstanceSourceFile</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/electric.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>int</Type>
       <Name>InfoBar.Blue</Name>
       <Value xsi:type="xsd:int">255</Value>
@@ -172,6 +190,19 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>string</Type>
+      <Name>IronDisplay.Parent</Name>
+      <Value xsi:type="xsd:string">Resources</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>IronDisplay.SpriteInstanceSourceFile</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/ore.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>bool</Type>
       <Name>IsXamarinFormsControl</Name>
       <Value xsi:type="xsd:boolean">false</Value>
@@ -205,6 +236,37 @@
       <Type>PositionUnitType</Type>
       <Name>ListBoxInstance.Y Units</Name>
       <Value xsi:type="xsd:int">1</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>MoneyDisplay.SpriteInstanceSourceFile</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/money-stack.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>MoneyDisplay.X</Name>
+      <Value xsi:type="xsd:float">-16</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>HorizontalAlignment</Type>
+      <Name>MoneyDisplay.X Origin</Name>
+      <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>PositionUnitType</Type>
+      <Name>MoneyDisplay.X Units</Name>
+      <Value xsi:type="xsd:int">4</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>MoneyDisplay.Y</Name>
+      <Value xsi:type="xsd:float">16</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -382,38 +444,59 @@
     </Variable>
     <Variable>
       <Type>string</Type>
-      <Name>ResourceDisplayInstance.Parent</Name>
+      <Name>SteelDisplay.Parent</Name>
       <Value xsi:type="xsd:string">Resources</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <IsFile>true</IsFile>
       <Type>string</Type>
-      <Name>ResourceDisplayInstance1.Parent</Name>
-      <Value xsi:type="xsd:string">Resources</Value>
+      <Name>SteelDisplay.SpriteInstanceSourceFile</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/i-beam.png</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>string</Type>
-      <Name>ResourceDisplayInstance2.Parent</Name>
+      <Name>WaterDisplay.Parent</Name>
       <Value xsi:type="xsd:string">Resources</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <IsFile>true</IsFile>
       <Type>string</Type>
-      <Name>ResourceDisplayInstance3.Parent</Name>
-      <Value xsi:type="xsd:string">Resources</Value>
+      <Name>WaterDisplay.SpriteInstanceSourceFile</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/water-drop.png</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>string</Type>
-      <Name>ResourceDisplayInstance4.Parent</Name>
+      <Name>WoodDisplay.Parent</Name>
       <Value xsi:type="xsd:string">Resources</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <IsFile>true</IsFile>
       <Type>string</Type>
-      <Name>ResourceDisplayInstance5.Parent</Name>
+      <Name>WoodDisplay.SpriteInstanceSourceFile</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/log.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>WorkforceDisplay.Parent</Name>
       <Value xsi:type="xsd:string">Resources</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>TextureAddress</Type>
+      <Name>WorkforceDisplay.ResourceIcon</Name>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>WorkforceDisplay.SpriteInstanceSourceFile</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/person.png</Value>
       <SetsValue>true</SetsValue>
     </Variable>
   </State>
@@ -458,32 +541,37 @@
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>ResourceDisplayInstance</Name>
+    <Name>WorkforceDisplay</Name>
     <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>ResourceDisplayInstance1</Name>
+    <Name>ElectricityDisplay</Name>
     <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>ResourceDisplayInstance2</Name>
+    <Name>WoodDisplay</Name>
     <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>ResourceDisplayInstance3</Name>
+    <Name>IronDisplay</Name>
     <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>ResourceDisplayInstance4</Name>
+    <Name>SteelDisplay</Name>
     <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>ResourceDisplayInstance5</Name>
+    <Name>WaterDisplay</Name>
+    <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>MoneyDisplay</Name>
     <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>

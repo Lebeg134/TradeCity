@@ -36,6 +36,7 @@
                             LabelInstance.Y = 0f;
                             SpriteInstance.Height = 40f;
                             SpriteInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            SpriteInstance.TextureAddress = Gum.Managers.TextureAddress.EntireTexture;
                             SpriteInstance.Width = 40f;
                             SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                             break;
@@ -107,6 +108,10 @@
                         {
                             this.SpriteInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
+                        if (interpolationValue < 1)
+                        {
+                            this.SpriteInstance.TextureAddress = Gum.Managers.TextureAddress.EntireTexture;
+                        }
                         setSpriteInstanceWidthFirstValue = true;
                         SpriteInstanceWidthFirstValue = 40f;
                         if (interpolationValue < 1)
@@ -149,6 +154,10 @@
                         if (interpolationValue >= 1)
                         {
                             this.SpriteInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.SpriteInstance.TextureAddress = Gum.Managers.TextureAddress.EntireTexture;
                         }
                         setSpriteInstanceWidthSecondValue = true;
                         SpriteInstanceWidthSecondValue = 40f;
@@ -378,6 +387,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "SpriteInstance.Texture Address",
+                            Type = "TextureAddress",
+                            Value = SpriteInstance.TextureAddress
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SpriteInstance.Width",
                             Type = "float",
                             Value = SpriteInstance.Width
@@ -492,6 +509,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "SpriteInstance.Texture Address",
+                            Type = "TextureAddress",
+                            Value = SpriteInstance.TextureAddress
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SpriteInstance.Width",
                             Type = "float",
                             Value = SpriteInstance.Width + 40f
@@ -526,6 +551,21 @@
             private bool tryCreateFormsObject;
             public JHP4SD.GumRuntimes.DefaultForms.LabelRuntime LabelInstance { get; set; }
             public JHP4SD.GumRuntimes.SpriteRuntime SpriteInstance { get; set; }
+            public Microsoft.Xna.Framework.Graphics.Texture2D SpriteInstanceSourceFile
+            {
+                get
+                {
+                    return SpriteInstance.SourceFile;
+                }
+                set
+                {
+                    if (SpriteInstance.SourceFile != value)
+                    {
+                        SpriteInstance.SourceFile = value;
+                        SpriteInstanceSourceFileChanged?.Invoke(this, null);
+                    }
+                }
+            }
             public Gum.Managers.TextureAddress ResourceIcon
             {
                 get
@@ -542,6 +582,7 @@
                 }
             }
             public event FlatRedBall.Gui.WindowEvent LabelInstanceClick;
+            public event System.EventHandler SpriteInstanceSourceFileChanged;
             public event System.EventHandler ResourceIconChanged;
             public ResourceDisplayRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             	: base(false, tryCreateFormsObject)

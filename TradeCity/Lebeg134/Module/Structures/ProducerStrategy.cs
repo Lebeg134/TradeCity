@@ -10,9 +10,12 @@ namespace JHP4SD.Lebeg134.Module.Structures
     {
         public static void Produce(Player owner, IProducer producer)
         {
-            //TODO determine production of resources and subtract needed resources
-            //if (owner.hasResource(...)) ...
-            owner.giveRes(producer.getProduce());
+            // Could implement more complex method later
+            if (owner.checkResources(producer.getUpkeep()))
+            {
+                owner.subRes(producer.getUpkeep());
+                owner.giveRes(producer.getProduce());
+            }
         }
     }
 }

@@ -26,12 +26,12 @@
                     {
                         case  VariableState.Default:
                             DialogBoxInstance.Parent = this.GetGraphicalUiElementByName("InfoBar");
-                            ResourceDisplayInstance.Parent = this.GetGraphicalUiElementByName("Resources");
-                            ResourceDisplayInstance1.Parent = this.GetGraphicalUiElementByName("Resources");
-                            ResourceDisplayInstance2.Parent = this.GetGraphicalUiElementByName("Resources");
-                            ResourceDisplayInstance3.Parent = this.GetGraphicalUiElementByName("Resources");
-                            ResourceDisplayInstance4.Parent = this.GetGraphicalUiElementByName("Resources");
-                            ResourceDisplayInstance5.Parent = this.GetGraphicalUiElementByName("Resources");
+                            WorkforceDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                            ElectricityDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                            WoodDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                            IronDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                            SteelDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                            WaterDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
                             ResourceBar.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                             InfoBar.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.TransparentBlack;
                             PlayButtonInstance.Height = 100f;
@@ -92,6 +92,17 @@
                             Resources.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                             Resources.X = 16f;
                             Resources.Y = 16f;
+                            SetProperty("WorkforceDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/person.png");
+                            SetProperty("ElectricityDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/electric.png");
+                            SetProperty("WoodDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/log.png");
+                            SetProperty("IronDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ore.png");
+                            SetProperty("SteelDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/i-beam.png");
+                            SetProperty("WaterDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/water-drop.png");
+                            SetProperty("MoneyDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/money-stack.png");
+                            MoneyDisplay.X = -16f;
+                            MoneyDisplay.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            MoneyDisplay.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            MoneyDisplay.Y = 16f;
                             break;
                     }
                 }
@@ -166,6 +177,14 @@
                 bool setListBoxInstanceYSecondValue = false;
                 float ListBoxInstanceYFirstValue= 0;
                 float ListBoxInstanceYSecondValue= 0;
+                bool setMoneyDisplayXFirstValue = false;
+                bool setMoneyDisplayXSecondValue = false;
+                float MoneyDisplayXFirstValue= 0;
+                float MoneyDisplayXSecondValue= 0;
+                bool setMoneyDisplayYFirstValue = false;
+                bool setMoneyDisplayYSecondValue = false;
+                float MoneyDisplayYFirstValue= 0;
+                float MoneyDisplayYSecondValue= 0;
                 bool setPlayButtonInstanceHeightFirstValue = false;
                 bool setPlayButtonInstanceHeightSecondValue = false;
                 float PlayButtonInstanceHeightFirstValue= 0;
@@ -285,6 +304,14 @@
                         {
                             this.DialogBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
+                        if (interpolationValue < 1)
+                        {
+                            this.ElectricityDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            SetProperty("ElectricityDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/electric.png");
+                        }
                         setInfoBarBlueFirstValue = true;
                         InfoBarBlueFirstValue = 255;
                         setInfoBarCurrentColorCategoryStateFirstValue = true;
@@ -321,6 +348,14 @@
                         {
                             this.InfoBar.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
+                        if (interpolationValue < 1)
+                        {
+                            this.IronDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            SetProperty("IronDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ore.png");
+                        }
                         setListBoxInstanceHeightFirstValue = true;
                         ListBoxInstanceHeightFirstValue = -280f;
                         if (interpolationValue < 1)
@@ -335,6 +370,22 @@
                         {
                             this.ListBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
+                        if (interpolationValue < 1)
+                        {
+                            SetProperty("MoneyDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/money-stack.png");
+                        }
+                        setMoneyDisplayXFirstValue = true;
+                        MoneyDisplayXFirstValue = -16f;
+                        if (interpolationValue < 1)
+                        {
+                            this.MoneyDisplay.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.MoneyDisplay.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setMoneyDisplayYFirstValue = true;
+                        MoneyDisplayYFirstValue = 16f;
                         setPlayButtonInstanceHeightFirstValue = true;
                         PlayButtonInstanceHeightFirstValue = 100f;
                         if (interpolationValue < 1)
@@ -401,30 +452,6 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            this.ResourceDisplayInstance.Parent = this.GetGraphicalUiElementByName("Resources");
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.ResourceDisplayInstance1.Parent = this.GetGraphicalUiElementByName("Resources");
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.ResourceDisplayInstance2.Parent = this.GetGraphicalUiElementByName("Resources");
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.ResourceDisplayInstance3.Parent = this.GetGraphicalUiElementByName("Resources");
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.ResourceDisplayInstance4.Parent = this.GetGraphicalUiElementByName("Resources");
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.ResourceDisplayInstance5.Parent = this.GetGraphicalUiElementByName("Resources");
-                        }
-                        if (interpolationValue < 1)
-                        {
                             this.Resources.ChildrenLayout = Gum.Managers.ChildrenLayout.LeftToRightStack;
                         }
                         setResourcesHeightFirstValue = true;
@@ -439,6 +466,38 @@
                         ResourcesXFirstValue = 16f;
                         setResourcesYFirstValue = true;
                         ResourcesYFirstValue = 16f;
+                        if (interpolationValue < 1)
+                        {
+                            this.SteelDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            SetProperty("SteelDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/i-beam.png");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.WaterDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            SetProperty("WaterDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/water-drop.png");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.WoodDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            SetProperty("WoodDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/log.png");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.WorkforceDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            SetProperty("WorkforceDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/person.png");
+                        }
                         break;
                 }
                 switch(secondState)
@@ -496,6 +555,14 @@
                         {
                             this.DialogBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ElectricityDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            SetProperty("ElectricityDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/electric.png");
+                        }
                         setInfoBarBlueSecondValue = true;
                         InfoBarBlueSecondValue = 255;
                         setInfoBarCurrentColorCategoryStateSecondValue = true;
@@ -532,6 +599,14 @@
                         {
                             this.InfoBar.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
+                        if (interpolationValue >= 1)
+                        {
+                            this.IronDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            SetProperty("IronDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ore.png");
+                        }
                         setListBoxInstanceHeightSecondValue = true;
                         ListBoxInstanceHeightSecondValue = -280f;
                         if (interpolationValue >= 1)
@@ -546,6 +621,22 @@
                         {
                             this.ListBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
+                        if (interpolationValue >= 1)
+                        {
+                            SetProperty("MoneyDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/money-stack.png");
+                        }
+                        setMoneyDisplayXSecondValue = true;
+                        MoneyDisplayXSecondValue = -16f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.MoneyDisplay.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.MoneyDisplay.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setMoneyDisplayYSecondValue = true;
+                        MoneyDisplayYSecondValue = 16f;
                         setPlayButtonInstanceHeightSecondValue = true;
                         PlayButtonInstanceHeightSecondValue = 100f;
                         if (interpolationValue >= 1)
@@ -612,30 +703,6 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.ResourceDisplayInstance.Parent = this.GetGraphicalUiElementByName("Resources");
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.ResourceDisplayInstance1.Parent = this.GetGraphicalUiElementByName("Resources");
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.ResourceDisplayInstance2.Parent = this.GetGraphicalUiElementByName("Resources");
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.ResourceDisplayInstance3.Parent = this.GetGraphicalUiElementByName("Resources");
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.ResourceDisplayInstance4.Parent = this.GetGraphicalUiElementByName("Resources");
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.ResourceDisplayInstance5.Parent = this.GetGraphicalUiElementByName("Resources");
-                        }
-                        if (interpolationValue >= 1)
-                        {
                             this.Resources.ChildrenLayout = Gum.Managers.ChildrenLayout.LeftToRightStack;
                         }
                         setResourcesHeightSecondValue = true;
@@ -650,6 +717,38 @@
                         ResourcesXSecondValue = 16f;
                         setResourcesYSecondValue = true;
                         ResourcesYSecondValue = 16f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.SteelDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            SetProperty("SteelDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/i-beam.png");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.WaterDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            SetProperty("WaterDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/water-drop.png");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.WoodDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            SetProperty("WoodDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/log.png");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.WorkforceDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            SetProperty("WorkforceDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/person.png");
+                        }
                         break;
                 }
                 var wasSuppressed = mIsLayoutSuspended;
@@ -716,6 +815,14 @@
                 if (setListBoxInstanceYFirstValue && setListBoxInstanceYSecondValue)
                 {
                     ListBoxInstance.Y = ListBoxInstanceYFirstValue * (1 - interpolationValue) + ListBoxInstanceYSecondValue * interpolationValue;
+                }
+                if (setMoneyDisplayXFirstValue && setMoneyDisplayXSecondValue)
+                {
+                    MoneyDisplay.X = MoneyDisplayXFirstValue * (1 - interpolationValue) + MoneyDisplayXSecondValue * interpolationValue;
+                }
+                if (setMoneyDisplayYFirstValue && setMoneyDisplayYSecondValue)
+                {
+                    MoneyDisplay.Y = MoneyDisplayYFirstValue * (1 - interpolationValue) + MoneyDisplayYSecondValue * interpolationValue;
                 }
                 if (setPlayButtonInstanceHeightFirstValue && setPlayButtonInstanceHeightSecondValue)
                 {
@@ -863,12 +970,13 @@
                 BackButtonInstance.StopAnimations();
                 DialogBoxInstance.StopAnimations();
                 ListBoxInstance.StopAnimations();
-                ResourceDisplayInstance.StopAnimations();
-                ResourceDisplayInstance1.StopAnimations();
-                ResourceDisplayInstance2.StopAnimations();
-                ResourceDisplayInstance3.StopAnimations();
-                ResourceDisplayInstance4.StopAnimations();
-                ResourceDisplayInstance5.StopAnimations();
+                WorkforceDisplay.StopAnimations();
+                ElectricityDisplay.StopAnimations();
+                WoodDisplay.StopAnimations();
+                IronDisplay.StopAnimations();
+                SteelDisplay.StopAnimations();
+                WaterDisplay.StopAnimations();
+                MoneyDisplay.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -1372,49 +1480,137 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResourceDisplayInstance.Parent",
+                            Name = "WorkforceDisplay.Parent",
                             Type = "string",
-                            Value = ResourceDisplayInstance.Parent
+                            Value = WorkforceDisplay.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResourceDisplayInstance1.Parent",
+                            Name = "WorkforceDisplay.SpriteInstanceSourceFile",
                             Type = "string",
-                            Value = ResourceDisplayInstance1.Parent
+                            Value = WorkforceDisplay.SpriteInstanceSourceFile
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResourceDisplayInstance2.Parent",
+                            Name = "ElectricityDisplay.Parent",
                             Type = "string",
-                            Value = ResourceDisplayInstance2.Parent
+                            Value = ElectricityDisplay.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResourceDisplayInstance3.Parent",
+                            Name = "ElectricityDisplay.SpriteInstanceSourceFile",
                             Type = "string",
-                            Value = ResourceDisplayInstance3.Parent
+                            Value = ElectricityDisplay.SpriteInstanceSourceFile
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResourceDisplayInstance4.Parent",
+                            Name = "WoodDisplay.Parent",
                             Type = "string",
-                            Value = ResourceDisplayInstance4.Parent
+                            Value = WoodDisplay.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResourceDisplayInstance5.Parent",
+                            Name = "WoodDisplay.SpriteInstanceSourceFile",
                             Type = "string",
-                            Value = ResourceDisplayInstance5.Parent
+                            Value = WoodDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "IronDisplay.Parent",
+                            Type = "string",
+                            Value = IronDisplay.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "IronDisplay.SpriteInstanceSourceFile",
+                            Type = "string",
+                            Value = IronDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SteelDisplay.Parent",
+                            Type = "string",
+                            Value = SteelDisplay.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SteelDisplay.SpriteInstanceSourceFile",
+                            Type = "string",
+                            Value = SteelDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WaterDisplay.Parent",
+                            Type = "string",
+                            Value = WaterDisplay.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WaterDisplay.SpriteInstanceSourceFile",
+                            Type = "string",
+                            Value = WaterDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MoneyDisplay.SpriteInstanceSourceFile",
+                            Type = "string",
+                            Value = MoneyDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MoneyDisplay.X",
+                            Type = "float",
+                            Value = MoneyDisplay.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MoneyDisplay.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = MoneyDisplay.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MoneyDisplay.X Units",
+                            Type = "PositionUnitType",
+                            Value = MoneyDisplay.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MoneyDisplay.Y",
+                            Type = "float",
+                            Value = MoneyDisplay.Y
                         }
                         );
                         break;
@@ -1918,49 +2114,137 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResourceDisplayInstance.Parent",
+                            Name = "WorkforceDisplay.Parent",
                             Type = "string",
-                            Value = ResourceDisplayInstance.Parent
+                            Value = WorkforceDisplay.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResourceDisplayInstance1.Parent",
+                            Name = "WorkforceDisplay.SpriteInstanceSourceFile",
                             Type = "string",
-                            Value = ResourceDisplayInstance1.Parent
+                            Value = WorkforceDisplay.SpriteInstanceSourceFile
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResourceDisplayInstance2.Parent",
+                            Name = "ElectricityDisplay.Parent",
                             Type = "string",
-                            Value = ResourceDisplayInstance2.Parent
+                            Value = ElectricityDisplay.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResourceDisplayInstance3.Parent",
+                            Name = "ElectricityDisplay.SpriteInstanceSourceFile",
                             Type = "string",
-                            Value = ResourceDisplayInstance3.Parent
+                            Value = ElectricityDisplay.SpriteInstanceSourceFile
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResourceDisplayInstance4.Parent",
+                            Name = "WoodDisplay.Parent",
                             Type = "string",
-                            Value = ResourceDisplayInstance4.Parent
+                            Value = WoodDisplay.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ResourceDisplayInstance5.Parent",
+                            Name = "WoodDisplay.SpriteInstanceSourceFile",
                             Type = "string",
-                            Value = ResourceDisplayInstance5.Parent
+                            Value = WoodDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "IronDisplay.Parent",
+                            Type = "string",
+                            Value = IronDisplay.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "IronDisplay.SpriteInstanceSourceFile",
+                            Type = "string",
+                            Value = IronDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SteelDisplay.Parent",
+                            Type = "string",
+                            Value = SteelDisplay.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SteelDisplay.SpriteInstanceSourceFile",
+                            Type = "string",
+                            Value = SteelDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WaterDisplay.Parent",
+                            Type = "string",
+                            Value = WaterDisplay.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WaterDisplay.SpriteInstanceSourceFile",
+                            Type = "string",
+                            Value = WaterDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MoneyDisplay.SpriteInstanceSourceFile",
+                            Type = "string",
+                            Value = MoneyDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MoneyDisplay.X",
+                            Type = "float",
+                            Value = MoneyDisplay.X + -16f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MoneyDisplay.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = MoneyDisplay.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MoneyDisplay.X Units",
+                            Type = "PositionUnitType",
+                            Value = MoneyDisplay.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MoneyDisplay.Y",
+                            Type = "float",
+                            Value = MoneyDisplay.Y + 16f
                         }
                         );
                         break;
@@ -1990,12 +2274,13 @@
             public JHP4SD.GumRuntimes.DefaultForms.DialogBoxRuntime DialogBoxInstance { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime ListBoxInstance { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime Resources { get; set; }
-            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance { get; set; }
-            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance1 { get; set; }
-            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance2 { get; set; }
-            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance3 { get; set; }
-            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance4 { get; set; }
-            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ResourceDisplayInstance5 { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime WorkforceDisplay { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ElectricityDisplay { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime WoodDisplay { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime IronDisplay { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime SteelDisplay { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime WaterDisplay { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime MoneyDisplay { get; set; }
             public GameScreenGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -2030,12 +2315,13 @@
                 DialogBoxInstance = this.GetGraphicalUiElementByName("DialogBoxInstance") as JHP4SD.GumRuntimes.DefaultForms.DialogBoxRuntime;
                 ListBoxInstance = this.GetGraphicalUiElementByName("ListBoxInstance") as JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime;
                 Resources = this.GetGraphicalUiElementByName("Resources") as JHP4SD.GumRuntimes.ContainerRuntime;
-                ResourceDisplayInstance = this.GetGraphicalUiElementByName("ResourceDisplayInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
-                ResourceDisplayInstance1 = this.GetGraphicalUiElementByName("ResourceDisplayInstance1") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
-                ResourceDisplayInstance2 = this.GetGraphicalUiElementByName("ResourceDisplayInstance2") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
-                ResourceDisplayInstance3 = this.GetGraphicalUiElementByName("ResourceDisplayInstance3") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
-                ResourceDisplayInstance4 = this.GetGraphicalUiElementByName("ResourceDisplayInstance4") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
-                ResourceDisplayInstance5 = this.GetGraphicalUiElementByName("ResourceDisplayInstance5") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                WorkforceDisplay = this.GetGraphicalUiElementByName("WorkforceDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                ElectricityDisplay = this.GetGraphicalUiElementByName("ElectricityDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                WoodDisplay = this.GetGraphicalUiElementByName("WoodDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                IronDisplay = this.GetGraphicalUiElementByName("IronDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                SteelDisplay = this.GetGraphicalUiElementByName("SteelDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                WaterDisplay = this.GetGraphicalUiElementByName("WaterDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                MoneyDisplay = this.GetGraphicalUiElementByName("MoneyDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Screens.GameScreenGumForms(this);

@@ -4,6 +4,7 @@ using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Structures;
 using Lebeg134.Resources.Common;
 using Lebeg134.Resources.EnergySector;
+using Lebeg134.Resources.Workforce;
 using System.Collections.Generic;
 /**
 * @(#) SteelForge.cs
@@ -14,7 +15,7 @@ namespace Lebeg134.Structures.Common
 	{
 		protected static readonly new List<Resource>[] upgradeLevelsCosts =
 		{
-			new List<Resource>{new Wood(100)},
+			new List<Resource>{new Wood(100), new Workforce(50)},
 			new List<Resource>{new Wood(100), new Steel(100)}
 		};
 		protected static readonly new List<Resource>[] upkeepLevels =

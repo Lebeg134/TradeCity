@@ -65,10 +65,18 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>SpriteInstance.SourceFile</Name>
+      <ExposedAsName>SpriteInstanceSourceFile</ExposedAsName>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
       <Type>TextureAddress</Type>
       <Name>SpriteInstance.Texture Address</Name>
+      <Value xsi:type="xsd:int">0</Value>
       <ExposedAsName>ResourceIcon</ExposedAsName>
-      <SetsValue>false</SetsValue>
+      <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>

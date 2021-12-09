@@ -8,12 +8,13 @@
             public FlatRedBall.Forms.Controls.Button BackButtonInstance { get; set; }
             public FlatRedBall.Forms.Controls.Games.DialogBox DialogBoxInstance { get; set; }
             public FlatRedBall.Forms.Controls.ListBox ListBoxInstance { get; set; }
-            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms ResourceDisplayInstance { get; set; }
-            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms ResourceDisplayInstance1 { get; set; }
-            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms ResourceDisplayInstance2 { get; set; }
-            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms ResourceDisplayInstance3 { get; set; }
-            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms ResourceDisplayInstance4 { get; set; }
-            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms ResourceDisplayInstance5 { get; set; }
+            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms WorkforceDisplay { get; set; }
+            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms ElectricityDisplay { get; set; }
+            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms WoodDisplay { get; set; }
+            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms IronDisplay { get; set; }
+            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms SteelDisplay { get; set; }
+            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms WaterDisplay { get; set; }
+            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms MoneyDisplay { get; set; }
             public GameScreenGumForms () 
             {
                 CustomInitialize();
@@ -31,12 +32,13 @@
                 BackButtonInstance = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("BackButtonInstance").FormsControlAsObject;
                 DialogBoxInstance = (FlatRedBall.Forms.Controls.Games.DialogBox)Visual.GetGraphicalUiElementByName("DialogBoxInstance").FormsControlAsObject;
                 ListBoxInstance = (FlatRedBall.Forms.Controls.ListBox)Visual.GetGraphicalUiElementByName("ListBoxInstance").FormsControlAsObject;
-                ResourceDisplayInstance = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("ResourceDisplayInstance"));
-                ResourceDisplayInstance1 = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("ResourceDisplayInstance1"));
-                ResourceDisplayInstance2 = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("ResourceDisplayInstance2"));
-                ResourceDisplayInstance3 = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("ResourceDisplayInstance3"));
-                ResourceDisplayInstance4 = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("ResourceDisplayInstance4"));
-                ResourceDisplayInstance5 = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("ResourceDisplayInstance5"));
+                WorkforceDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("WorkforceDisplay"));
+                ElectricityDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("ElectricityDisplay"));
+                WoodDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("WoodDisplay"));
+                IronDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("IronDisplay"));
+                SteelDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("SteelDisplay"));
+                WaterDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("WaterDisplay"));
+                MoneyDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("MoneyDisplay"));
             }
             partial void CustomInitialize();
         }

@@ -93,5 +93,10 @@ namespace JHP4SD.Lebeg134.Module.Structures
         {
             return GetHashCode((Land)obj);
         }
+
+        public List<Resource> getUpkeep()
+        {
+            return new List<Resource>(); // No upkeep for lands
+        }
     }
 }

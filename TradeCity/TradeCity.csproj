@@ -541,6 +541,34 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>pause</Name>
     </None>
+    <None Include="content\globalcontent\resources\electric.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>electric</Name>
+    </None>
+    <None Include="content\globalcontent\resources\i-beam.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>i-beam</Name>
+    </None>
+    <None Include="content\globalcontent\resources\log.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>log</Name>
+    </None>
+    <None Include="content\globalcontent\resources\money-stack.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>money-stack</Name>
+    </None>
+    <None Include="content\globalcontent\resources\ore.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ore</Name>
+    </None>
+    <None Include="content\globalcontent\resources\person.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>person</Name>
+    </None>
+    <None Include="content\globalcontent\resources\water-drop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>water-drop</Name>
+    </None>
     <None Include="content\globalcontent\screen\cityinternal.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>cityinternal</Name>

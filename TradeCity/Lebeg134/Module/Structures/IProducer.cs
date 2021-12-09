@@ -9,7 +9,8 @@ namespace JHP4SD.Lebeg134.Module.Structures
 	public interface IProducer : ITickable
 	{
 		List<Resource> getProduce();
+        List<Resource> getUpkeep();
 		void Produce();
-	}
+    }
 
 }

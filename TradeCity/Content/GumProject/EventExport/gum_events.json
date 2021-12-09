@@ -77,6 +77,69 @@
         "ElementType": "Screens",
         "EventType": 5,
         "TimestampUtc": "2021-12-04T14:39:47.4777913Z"
+      },
+      {
+        "NewName": " GameScreenGum.ElectricityDisplayInstance",
+        "OldName": " GameScreenGum.ResourceDisplayInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-09T13:34:42.6634894Z"
+      },
+      {
+        "NewName": " GameScreenGum.WorkforceDisplay",
+        "OldName": " GameScreenGum.ElectricityDisplayInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-09T13:34:56.8707725Z"
+      },
+      {
+        "NewName": " GameScreenGum.ElectricityDisplay",
+        "OldName": " GameScreenGum.ResourceDisplayInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-09T13:35:04.6034932Z"
+      },
+      {
+        "NewName": " GameScreenGum.ResourceDisplayInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-09T13:35:27.7257952Z"
+      },
+      {
+        "NewName": " GameScreenGum.MoneyDisplay",
+        "OldName": " GameScreenGum.ResourceDisplayInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-09T13:36:23.1692039Z"
+      },
+      {
+        "NewName": " GameScreenGum.WoodDisplay",
+        "OldName": " GameScreenGum.ResourceDisplayInstance2",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-09T13:38:41.3065782Z"
+      },
+      {
+        "NewName": " GameScreenGum.IronDisplay",
+        "OldName": " GameScreenGum.ResourceDisplayInstance3",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-09T13:38:54.5931733Z"
+      },
+      {
+        "NewName": " GameScreenGum.SteelDisplay",
+        "OldName": " GameScreenGum.ResourceDisplayInstance4",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-09T13:39:00.9634663Z"
+      },
+      {
+        "NewName": " GameScreenGum.WaterDisplay",
+        "OldName": " GameScreenGum.ResourceDisplayInstance5",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-09T13:39:05.8487751Z"
       }
     ],
     "torok": []

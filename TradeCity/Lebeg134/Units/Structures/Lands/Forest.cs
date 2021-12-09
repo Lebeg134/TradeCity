@@ -2,6 +2,7 @@
 
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Structures;
+using JHP4SD.Lebeg134.Module.Utilities;
 using Lebeg134.Resources.Common;
 using System.Collections.Generic;
 /**
@@ -12,7 +13,7 @@ namespace Lebeg134.Structures.Lands
     public class Forest : Land
     {
 
-        override protected static List<Resource>[] upgradeLevelsCosts
+        protected static List<Resource>[] upgradeLevelsCostStats
         {
             get
             {
@@ -31,7 +32,7 @@ namespace Lebeg134.Structures.Lands
             }
         }
 
-        override protected static List<Resource>[] productionLevels
+        protected static List<Resource>[] productionLevelStats
         {
             get
             {
@@ -49,6 +50,16 @@ namespace Lebeg134.Structures.Lands
                     new List<Resource> {new Wood(100)}
                 };
             }
+        }
+
+        protected override List<Resource> productionLevels(int level)
+        {
+            return productionLevelStats[LebegUtil.indexInRange(productionLevelStats, level - 1)];
+        }
+
+        protected override List<Resource> upgradeLevelsCosts(int level)
+        {
+            throw new System.NotImplementedException();
         }
     }
 

@@ -1,4 +1,8 @@
-﻿using Lebeg134.Resources.Common;
+﻿using JHP4SD.Lebeg134.Module.Resources;
+using JHP4SD.Lebeg134.Units.Resources.Common;
+using Lebeg134.Resources.Common;
+using Lebeg134.Resources.EnergySector;
+using Lebeg134.Resources.Workforce;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +26,13 @@ namespace JHP4SD.Lebeg134.Module.Session
         }
         static void FillPlayerWithStandard(Player player)
         {
-            player.giveRes(new Wood(0));
+            List<Resource> template = new List<Resource>
+            {
+                new Money(0), new Workforce(0), new Electricity(0), new Wood(0), new Iron(0), new Steel(0), new Water(0)
+            };
+            player.registerResources(template);
+            player.giveRes(new Money(1500));
+            player.giveRes(new Workforce(500));
         }
     }
 }

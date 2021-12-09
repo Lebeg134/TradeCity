@@ -110,6 +110,13 @@ namespace JHP4SD.Lebeg134.Module.Session
                 giveRes(res);
             }
         }
+        public void registerResources(List<Resource> newResList)
+        {
+            foreach (Resource res in newResList)
+            {
+                ownedResources.Add(res.GetType(), res.getNewResource(0));
+            }
+        }
         public void freeze()
         {
             playerStrategy.freeze();

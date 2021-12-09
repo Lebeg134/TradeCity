@@ -11,8 +11,11 @@ using FlatRedBall.Graphics.Animation;
 using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 using FlatRedBall.Localization;
-
-
+using JHP4SD.Lebeg134.Module.Session;
+using Lebeg134.Resources.Workforce;
+using JHP4SD.Lebeg134.Units.Resources.Common;
+using Lebeg134.Resources.EnergySector;
+using Lebeg134.Resources.Common;
 
 namespace JHP4SD.Screens
 {
@@ -28,6 +31,8 @@ namespace JHP4SD.Screens
             Forms.ScreenSelectorInstance.CityTab.Click += CityTab_Click;
             Forms.ScreenSelectorInstance.MapTab.Click += MapTab_Click;
             Forms.ScreenSelectorInstance.MarketTab.Click += MarketTab_Click;
+
+            updateResourceDisplays();
         }
 
         private void CityTab_Click(object sender, EventArgs e)
@@ -66,6 +71,18 @@ namespace JHP4SD.Screens
         {
 
 
+        }
+
+        void updateResourceDisplays()
+        {
+            Player player = Player.CurrentPlayer;
+            Forms.MoneyDisplay.LabelInstance.Text = "" + player.getRes(new Money(0));
+            Forms.WorkforceDisplay.LabelInstance.Text = "" + player.getRes(new Workforce(0));
+            Forms.ElectricityDisplay.LabelInstance.Text = "" + player.getRes(new Electricity(0));
+            Forms.WoodDisplay.LabelInstance.Text = "" + player.getRes(new Wood(0));
+            Forms.IronDisplay.LabelInstance.Text = "" + player.getRes(new Iron(0));
+            Forms.SteelDisplay.LabelInstance.Text = "" + player.getRes(new Steel(0));
+            Forms.WaterDisplay.LabelInstance.Text = "" + player.getRes(new Water(0));
         }
 
     }

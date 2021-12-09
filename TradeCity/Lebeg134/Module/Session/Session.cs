@@ -37,6 +37,7 @@ namespace JHP4SD.Lebeg134.Module.Session
         public void start()
         {
             _instance = this;
+            Clock.Instance.start();
         }
         /// <summary>
         /// Loads saved instance
@@ -69,8 +70,9 @@ namespace JHP4SD.Lebeg134.Module.Session
         }
         public void tick()
         {
-            //TODO
-            throw new System.NotImplementedException();
+            //TODO tick market and generate event stuff in the future
+
+            // Do nothing yet
         }
         public void register()
         {

@@ -18,11 +18,17 @@ namespace JHP4SD.Lebeg134.Module.Session
             }
             private void Produce()
             {
+                List<Resource> previousState = new List<Resource>();
+                foreach (ContinousResource cntRes in player.ownedResources.Values)
+                {
+                    previousState.Add(cntRes); // Is that just a reference? (I hope not)
+                }
                 List<Resource> resources = new List<Resource>();
                 foreach (IProducer producer in player.owned)
                 {
                     producer.Produce();
                 }
+                player.subRes(previousState);
             }
         }
     }

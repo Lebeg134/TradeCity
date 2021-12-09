@@ -51,6 +51,14 @@ namespace JHP4SD.Lebeg134.Module.TimeManager
         {
             tickables.Add(tickable);
         }
+        public void unRegister(ITickable tickable)
+        {
+            tickables.Remove(tickable);
+        }
+        public bool isEnabled()
+        {
+            return timer.Enabled;
+        }
     }
     public enum Speed : int
     {

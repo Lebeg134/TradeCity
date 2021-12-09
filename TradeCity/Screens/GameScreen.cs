@@ -16,15 +16,21 @@ using Lebeg134.Resources.Workforce;
 using JHP4SD.Lebeg134.Units.Resources.Common;
 using Lebeg134.Resources.EnergySector;
 using Lebeg134.Resources.Common;
+using JHP4SD.Lebeg134.Module.TimeManager;
+using Lebeg134.Structures.Lands;
 
 namespace JHP4SD.Screens
 {
-    public partial class GameScreen
+    public partial class GameScreen : ITickable
     {
         static bool playState = false;
         void CustomInitialize()
         {
-            //TODO Persistent PlayButton;
+            register();
+
+
+            Forms.PlayButtonInstance.IsChecked = Clock.Instance.isEnabled();
+            Forms.PlayButtonInstance.Click += PlayButtonInstance_Click;
 
             Forms.BackButtonInstance.Click += BackButtonInstance_Click;
 
@@ -33,6 +39,18 @@ namespace JHP4SD.Screens
             Forms.ScreenSelectorInstance.MarketTab.Click += MarketTab_Click;
 
             updateResourceDisplays();
+        }
+
+        private void PlayButtonInstance_Click(object sender, EventArgs e)
+        {
+            if (Forms.PlayButtonInstance.IsChecked?? false)
+            {
+                Clock.Instance.start();
+            }
+            else
+            {
+                Clock.Instance.pause();
+            }
         }
 
         private void CityTab_Click(object sender, EventArgs e)
@@ -47,6 +65,7 @@ namespace JHP4SD.Screens
 
         private void MarketTab_Click(object sender, EventArgs e)
         {
+            Player.CurrentPlayer.giveStructure(new Forest());
             MoveToScreen(typeof(MarketScreen));
         }
 
@@ -63,7 +82,7 @@ namespace JHP4SD.Screens
 
         void CustomDestroy()
         {
-
+            Clock.Instance.unRegister(this);
 
         }
 
@@ -85,5 +104,14 @@ namespace JHP4SD.Screens
             Forms.WaterDisplay.LabelInstance.Text = "" + player.getRes(new Water(0));
         }
 
+        public void tick()
+        {
+            updateResourceDisplays();
+        }
+
+        public void register()
+        {
+            Clock.Instance.Register(this);
+        }
     }
 }

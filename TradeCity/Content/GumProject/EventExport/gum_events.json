@@ -140,6 +140,62 @@
         "ElementType": "Screens",
         "EventType": 7,
         "TimestampUtc": "2021-12-09T13:39:05.8487751Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.SpriteInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-09T20:19:30.8241565Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.ChangeIndicator",
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.SpriteInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-09T20:20:37.3242399Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.ChangeIndicatorUp",
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.ChangeIndicator",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-09T20:22:50.9328491Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.SpriteInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-09T20:22:51.9401614Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.ChangeIndicatorDown",
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.SpriteInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-09T20:22:59.9608583Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.ChangeIndicatorUp1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-09T20:23:05.8213996Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.Sprite ChangeIndicatorDown in LebegForms/BasicComponents/ResourceDisplay",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-09T20:23:07.9586009Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.ChangeIndicatorDown",
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.ChangeIndicatorUp1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-09T20:23:11.5726743Z"
       }
     ],
     "torok": []

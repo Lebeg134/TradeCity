@@ -5,6 +5,140 @@
   <State>
     <Name>Default</Name>
     <Variable>
+      <Type>int</Type>
+      <Name>ChangeIndicatorDown.Blue</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>int</Type>
+      <Name>ChangeIndicatorDown.Green</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ChangeIndicatorDown.Height</Name>
+      <Value xsi:type="xsd:float">40</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>ChangeIndicatorDown.Height Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>int</Type>
+      <Name>ChangeIndicatorDown.Red</Name>
+      <Value xsi:type="xsd:int">255</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>ChangeIndicatorDown.SourceFile</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Gameicons/PNG/White/1x/down.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>bool</Type>
+      <Name>ChangeIndicatorDown.Visible</Name>
+      <Value xsi:type="xsd:boolean">false</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ChangeIndicatorDown.Width</Name>
+      <Value xsi:type="xsd:float">40</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>ChangeIndicatorDown.Width Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ChangeIndicatorDown.X</Name>
+      <Value xsi:type="xsd:float">40</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ChangeIndicatorDown.Y</Name>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>int</Type>
+      <Name>ChangeIndicatorUp.Blue</Name>
+      <Value xsi:type="xsd:int">34</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>int</Type>
+      <Name>ChangeIndicatorUp.Green</Name>
+      <Value xsi:type="xsd:int">139</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ChangeIndicatorUp.Height</Name>
+      <Value xsi:type="xsd:float">40</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>ChangeIndicatorUp.Height Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>int</Type>
+      <Name>ChangeIndicatorUp.Red</Name>
+      <Value xsi:type="xsd:int">34</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>ChangeIndicatorUp.SourceFile</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Gameicons/PNG/White/1x/up.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>bool</Type>
+      <Name>ChangeIndicatorUp.Visible</Name>
+      <Value xsi:type="xsd:boolean">false</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ChangeIndicatorUp.Width</Name>
+      <Value xsi:type="xsd:float">40</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>ChangeIndicatorUp.Width Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ChangeIndicatorUp.X</Name>
+      <Value xsi:type="xsd:float">40</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ChangeIndicatorUp.Y</Name>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>Height</Name>
       <Value xsi:type="xsd:float">40</Value>
@@ -96,6 +230,12 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>float</Type>
+      <Name>Width</Name>
+      <Value xsi:type="xsd:float">180</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>HorizontalAlignment</Type>
       <Name>X Origin</Name>
       <Value xsi:type="xsd:int">0</Value>
@@ -107,6 +247,20 @@
       <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
+    <VariableList xsi:type="VariableListSaveOfString">
+      <Type>string</Type>
+      <Name>ChangeIndicatorUp.AnimationFrames</Name>
+      <IsFile>false</IsFile>
+      <IsHiddenInPropertyGrid>false</IsHiddenInPropertyGrid>
+      <Value />
+    </VariableList>
+    <VariableList xsi:type="VariableListSaveOfString">
+      <Type>string</Type>
+      <Name>ChangeIndicatorDown.AnimationFrames</Name>
+      <IsFile>false</IsFile>
+      <IsHiddenInPropertyGrid>false</IsHiddenInPropertyGrid>
+      <Value />
+    </VariableList>
   </State>
   <Instance>
     <Name>LabelInstance</Name>
@@ -115,6 +269,16 @@
   </Instance>
   <Instance>
     <Name>SpriteInstance</Name>
+    <BaseType>Sprite</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>ChangeIndicatorUp</Name>
+    <BaseType>Sprite</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>ChangeIndicatorDown</Name>
     <BaseType>Sprite</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>

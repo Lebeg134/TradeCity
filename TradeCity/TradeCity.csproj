@@ -523,6 +523,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>TopDownValuesStatic</Name>
     </None>
+    <None Include="content\globalcontent\gameicons\png\black\1x\down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>down</Name>
+    </None>
+    <None Include="content\globalcontent\gameicons\png\black\1x\minus.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>minus</Name>
+    </None>
+    <None Include="content\globalcontent\gameicons\png\black\1x\up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>up</Name>
+    </None>
     <None Include="content\globalcontent\gameicons\png\black\2x\right.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>right</Name>
@@ -535,6 +547,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>cross</Name>
     </None>
+    <None Include="content\globalcontent\gameicons\png\white\1x\down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>down</Name>
+    </None>
     <None Include="content\globalcontent\gameicons\png\white\1x\forward.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>forward</Name>
@@ -542,6 +558,10 @@
     <None Include="content\globalcontent\gameicons\png\white\1x\pause.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>pause</Name>
+    </None>
+    <None Include="content\globalcontent\gameicons\png\white\1x\up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>up</Name>
     </None>
     <None Include="content\globalcontent\resources\electric.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

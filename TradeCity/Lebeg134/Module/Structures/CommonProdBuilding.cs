@@ -10,7 +10,7 @@ namespace JHP4SD.Lebeg134.Module.Structures
 {
     public abstract class CommonProdBuilding : CommonBuilding, IProducer
     {
-        protected static readonly List<Resource>[] productionLevels;
+        protected static List<Resource>[] productionLevels { get; }
         public List<Resource> getProduce()
         {
             return productionLevels[level - 1]; //Level is 1 higher than index used for level stats

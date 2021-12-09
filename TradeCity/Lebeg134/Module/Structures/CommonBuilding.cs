@@ -9,8 +9,8 @@ namespace JHP4SD.Lebeg134.Module.Structures
 {
     public abstract class CommonBuilding : Building, IUpgradeable
     {
-        protected static readonly List<Resource>[] upgradeLevelsCosts;
-        protected static readonly List<Resource>[] upkeepLevels;
+        protected static List<Resource>[] upgradeLevelsCosts { get; }
+        protected static List<Resource>[] upkeepLevels { get; }
         protected int level = 1; //Leveling starts from 1
 
         public void levelUp()

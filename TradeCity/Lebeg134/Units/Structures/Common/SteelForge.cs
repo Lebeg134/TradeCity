@@ -11,23 +11,41 @@ using System.Collections.Generic;
 */
 namespace Lebeg134.Structures.Common
 {
-	public class SteelForge: CommonProdBuilding
-	{
-		protected static readonly new List<Resource>[] upgradeLevelsCosts =
-		{
-			new List<Resource>{new Wood(100), new Workforce(50)},
-			new List<Resource>{new Wood(100), new Steel(100)}
-		};
-		protected static readonly new List<Resource>[] upkeepLevels =
-		{
-			new List<Resource>{new Iron(10), new Electricity(1)},
-			new List<Resource>{new Iron(20), new Electricity(2)}
-		};
-		protected static readonly new List<Resource>[] productionLevels =
-		{
-			new List<Resource>{new Steel(5)},
-			new List<Resource>{new Steel(10)}
-		};
-	}
-	
+    public class SteelForge : CommonProdBuilding
+    {
+        protected static List<Resource>[] upgradeLevelsCosts
+        {
+            get
+            {
+                return new[]{
+                    new List<Resource> { new Wood(100), new Workforce(50) },
+                    new List<Resource> { new Wood(100), new Steel(100) }
+                };
+            }
+        }
+
+        protected static List<Resource>[] upkeepLevels
+        {
+            get
+            {
+                return new[]{
+                    new List<Resource>{new Iron(10), new Electricity(1)},
+                    new List<Resource>{new Iron(20), new Electricity(2)}
+                };
+            }
+        }
+
+        protected static List<Resource>[] productionLevels
+        {
+            get
+            {
+                return new[]{
+                    new List<Resource> { new Steel(5) },
+                    new List<Resource> { new Steel(10) }
+                };
+            }
+        }
+
+    }
+
 }

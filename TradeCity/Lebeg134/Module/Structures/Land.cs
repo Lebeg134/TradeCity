@@ -11,8 +11,6 @@ namespace JHP4SD.Lebeg134.Module.Structures
 {
     public abstract class Land : Structure, IUpgradeable, IProducer, IOwnable, IMapStructure
     {
-        protected static readonly List<Resource>[] upgradeLevelsCosts;
-        protected static readonly List<Resource>[] productionLevels;
         public static int StartingPrice { get; set; }
         protected Player owner;
         protected int level = 1; //Leveling starts from 1
@@ -36,13 +34,15 @@ namespace JHP4SD.Lebeg134.Module.Structures
         }
         public void levelUp()
         {
-            if (owner.checkResources(upgradeLevelsCosts[level])) //Level is 1 higher than index used for level stats
+            if (owner.checkResources(upgradeLevelsCosts(level))) //Level is 1 higher than index used for level stats
                 level++;
         }
+        protected abstract List<Resource> upgradeLevelsCosts(int level);
         public List<Resource> getProduce()
         {
-            return productionLevels[level - 1];
+            return productionLevels(level - 1);
         }
+        protected abstract List<Resource> productionLevels(int level);
         public void Produce()
         {
             ProducerStrategy.Produce(owner, this);

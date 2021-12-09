@@ -8,12 +8,7 @@ namespace JHP4SD.Lebeg134.Module.Structures
 {
 	public abstract class SpecialProdBuilding : SpecialBuilding, IProducer
 	{
-        protected static readonly List<Resource> production;
-
-        public List<Resource> getProduce()
-        {
-            return production;
-        }
+        abstract public List<Resource> getProduce();
         public void Produce()
         {
             ProducerStrategy.Produce(owner, this);

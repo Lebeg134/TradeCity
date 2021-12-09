@@ -2,62 +2,6 @@
   "UserEvents": {
     "user": [
       {
-        "NewName": " GameScreenGum.ColoredFrameInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2021-11-23T13:41:55.1177361Z"
-      },
-      {
-        "NewName": " GameScreenGum.ResourceBar",
-        "OldName": " GameScreenGum.ColoredFrameInstance",
-        "ElementType": "Screens",
-        "EventType": 7,
-        "TimestampUtc": "2021-11-23T13:43:32.3780538Z"
-      },
-      {
-        "NewName": " GameScreenGum.ColoredFrameInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2021-11-23T13:44:01.493911Z"
-      },
-      {
-        "NewName": null,
-        "OldName": " GameScreenGum.LebegForms/BasicComponents/BackButton BackButtonInstance in  GameScreenGum",
-        "ElementType": "Screens",
-        "EventType": 6,
-        "TimestampUtc": "2021-11-23T13:44:56.0608604Z"
-      },
-      {
-        "NewName": " GameScreenGum.BackButtonInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2021-11-23T13:44:57.0606647Z"
-      },
-      {
-        "NewName": " GameScreenGum.DialogBoxInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2021-11-23T13:46:15.5252012Z"
-      },
-      {
-        "NewName": " GameScreenGum.InfoBar",
-        "OldName": " GameScreenGum.ColoredFrameInstance",
-        "ElementType": "Screens",
-        "EventType": 7,
-        "TimestampUtc": "2021-11-23T13:46:22.6101168Z"
-      },
-      {
-        "NewName": " GameScreenGum.ListBoxInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2021-11-23T13:51:23.8088291Z"
-      },
-      {
         "NewName": "LebegForms/BasicComponents/ResourceDisplay",
         "OldName": null,
         "ElementType": "Components",

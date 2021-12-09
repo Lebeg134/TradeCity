@@ -7,7 +7,7 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
     public partial class ResourceDisplayRuntime
     {
         public int Amount
-        { 
+        {
             set
             {
                 LabelInstance.TextInstance.Text = "" + value;
@@ -16,7 +16,7 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
                     ChangeIndicatorDown.Visible = false;
                     ChangeIndicatorUp.Visible = true;
                 }
-                else if(value < _amount)
+                else if (value < _amount)
                 {
                     ChangeIndicatorDown.Visible = true;
                     ChangeIndicatorUp.Visible = false;
@@ -27,7 +27,7 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
                     ChangeIndicatorUp.Visible = false;
                 }
                 _amount = value;
-            } 
+            }
         }
         int _amount = 0;
         partial void CustomInitialize () 

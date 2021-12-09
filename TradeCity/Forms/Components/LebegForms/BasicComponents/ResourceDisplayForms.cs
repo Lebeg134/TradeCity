@@ -6,6 +6,7 @@ namespace JHP4SD.FormsControls.Components.LebegForms.BasicComponents
 {
     public partial class ResourceDisplayForms
     {
+        
         partial void CustomInitialize () 
         {
         }

@@ -196,6 +196,34 @@
         "ElementType": "Components",
         "EventType": 7,
         "TimestampUtc": "2021-12-09T20:23:11.5726743Z"
+      },
+      {
+        "NewName": " GameScreenGum.ButtonInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-09T21:00:42.9342343Z"
+      },
+      {
+        "NewName": " GameScreenGum.InfiniteMoneyButton",
+        "OldName": " GameScreenGum.ButtonInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-09T21:00:56.3948732Z"
+      },
+      {
+        "NewName": " GameScreenGum.ButtonInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-09T21:01:50.8615555Z"
+      },
+      {
+        "NewName": " GameScreenGum.GibMunney",
+        "OldName": " GameScreenGum.ButtonInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-09T21:06:54.8018189Z"
       }
     ],
     "torok": []

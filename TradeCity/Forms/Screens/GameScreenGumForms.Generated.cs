@@ -15,6 +15,8 @@
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms SteelDisplay { get; set; }
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms WaterDisplay { get; set; }
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms MoneyDisplay { get; set; }
+            public FlatRedBall.Forms.Controls.Button InfiniteMoneyButton { get; set; }
+            public FlatRedBall.Forms.Controls.Button GibMunney { get; set; }
             public GameScreenGumForms () 
             {
                 CustomInitialize();
@@ -39,6 +41,8 @@
                 SteelDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("SteelDisplay"));
                 WaterDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("WaterDisplay"));
                 MoneyDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("MoneyDisplay"));
+                InfiniteMoneyButton = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("InfiniteMoneyButton").FormsControlAsObject;
+                GibMunney = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("GibMunney").FormsControlAsObject;
             }
             partial void CustomInitialize();
         }

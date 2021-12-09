@@ -21,12 +21,12 @@ using Lebeg134.Structures.Lands;
 
 namespace JHP4SD.Screens
 {
-    public partial class GameScreen : ITickable
+    public partial class GameScreen
     {
         static bool playState = false;
         void CustomInitialize()
         {
-            register();
+            
 
 
             Forms.PlayButtonInstance.IsChecked = Clock.Instance.isEnabled();
@@ -38,7 +38,19 @@ namespace JHP4SD.Screens
             Forms.ScreenSelectorInstance.MapTab.Click += MapTab_Click;
             Forms.ScreenSelectorInstance.MarketTab.Click += MarketTab_Click;
 
-            updateResourceDisplays();
+            Forms.InfiniteMoneyButton.Click += InfiniteMoneyButton_Click;
+            Forms.GibMunney.Click += GibMunney_Click;
+
+        }
+
+        private void GibMunney_Click(object sender, EventArgs e)
+        {
+            Player.CurrentPlayer.subRes(new Money(30));
+        }
+
+        private void InfiniteMoneyButton_Click(object sender, EventArgs e)
+        {
+            Player.CurrentPlayer.giveRes(new Money(100));
         }
 
         private void PlayButtonInstance_Click(object sender, EventArgs e)
@@ -82,7 +94,7 @@ namespace JHP4SD.Screens
 
         void CustomDestroy()
         {
-            Clock.Instance.unRegister(this);
+            
 
         }
 
@@ -92,26 +104,8 @@ namespace JHP4SD.Screens
 
         }
 
-        void updateResourceDisplays()
-        {
-            Player player = Player.CurrentPlayer;
-            Forms.MoneyDisplay.LabelInstance.Text = "" + player.getRes(new Money(0));
-            Forms.WorkforceDisplay.LabelInstance.Text = "" + player.getRes(new Workforce(0));
-            Forms.ElectricityDisplay.LabelInstance.Text = "" + player.getRes(new Electricity(0));
-            Forms.WoodDisplay.LabelInstance.Text = "" + player.getRes(new Wood(0));
-            Forms.IronDisplay.LabelInstance.Text = "" + player.getRes(new Iron(0));
-            Forms.SteelDisplay.LabelInstance.Text = "" + player.getRes(new Steel(0));
-            Forms.WaterDisplay.LabelInstance.Text = "" + player.getRes(new Water(0));
-        }
+        
 
-        public void tick()
-        {
-            updateResourceDisplays();
-        }
-
-        public void register()
-        {
-            Clock.Instance.Register(this);
-        }
+        
     }
 }

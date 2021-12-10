@@ -3,7 +3,7 @@
         public partial class CityGumForms
         {
             private Gum.Wireframe.GraphicalUiElement Visual;
-            public JHP4SD.FormsControls.Components.LebegForms.ComplexComponents.TabMenuForms TabMenuInstance { get; set; }
+            public JHP4SD.FormsControls.Components.LebegForms.ComplexComponents.TabMenuForms BuildingTabs { get; set; }
             public CityGumForms () 
             {
                 CustomInitialize();
@@ -16,7 +16,7 @@
             }
             private void ReactToVisualChanged () 
             {
-                TabMenuInstance = new JHP4SD.FormsControls.Components.LebegForms.ComplexComponents.TabMenuForms(Visual.GetGraphicalUiElementByName("TabMenuInstance"));
+                BuildingTabs = new JHP4SD.FormsControls.Components.LebegForms.ComplexComponents.TabMenuForms(Visual.GetGraphicalUiElementByName("BuildingTabs"));
             }
             partial void CustomInitialize();
         }

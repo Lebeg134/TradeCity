@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace JHP4SD.GumRuntimes.DefaultForms
 {
-    public partial class CityMenuTabRuntime
+    public partial class ListBoxItem1Runtime
     {
         partial void CustomInitialize () 
         {

@@ -81,20 +81,26 @@
                                 NineSliceInstance.Height = 0f;
                                 NineSliceInstance.Red = 102;
                                 NineSliceInstance.Width = 0f;
+                                SpriteInstance.Blue = 255;
+                                SpriteInstance.Green = 255;
                                 SpriteInstance.Height = 48f;
+                                SpriteInstance.Red = 255;
                                 SpriteInstance.X = 4f;
                                 SpriteInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
                                 SpriteInstance.Y = 4f;
                                 SpriteInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
                                 break;
                             case  ButtonCategory.Disabled:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                                 NineSliceInstance.Blue = 255;
                                 NineSliceInstance.Green = 255;
                                 NineSliceInstance.Height = 0f;
                                 NineSliceInstance.Red = 255;
                                 NineSliceInstance.Width = 0f;
+                                SpriteInstance.Blue = 128;
+                                SpriteInstance.Green = 128;
                                 SpriteInstance.Height = 48f;
+                                SpriteInstance.Red = 128;
                                 SpriteInstance.X = 4f;
                                 SpriteInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
                                 SpriteInstance.Y = 4f;
@@ -107,20 +113,26 @@
                                 NineSliceInstance.Height = 0f;
                                 NineSliceInstance.Red = 138;
                                 NineSliceInstance.Width = 0f;
+                                SpriteInstance.Blue = 255;
+                                SpriteInstance.Green = 255;
                                 SpriteInstance.Height = 48f;
+                                SpriteInstance.Red = 255;
                                 SpriteInstance.X = 4f;
                                 SpriteInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
                                 SpriteInstance.Y = 4f;
                                 SpriteInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
                                 break;
                             case  ButtonCategory.Pushed:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
-                                NineSliceInstance.Blue = 170;
-                                NineSliceInstance.Green = 205;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                                NineSliceInstance.Blue = 255;
+                                NineSliceInstance.Green = 255;
                                 NineSliceInstance.Height = -4f;
-                                NineSliceInstance.Red = 102;
+                                NineSliceInstance.Red = 255;
                                 NineSliceInstance.Width = 0f;
+                                SpriteInstance.Blue = 255;
+                                SpriteInstance.Green = 255;
                                 SpriteInstance.Height = 44f;
+                                SpriteInstance.Red = 255;
                                 SpriteInstance.X = 28f;
                                 SpriteInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                                 SpriteInstance.Y = 28f;
@@ -133,7 +145,10 @@
                                 NineSliceInstance.Height = 0f;
                                 NineSliceInstance.Red = 240;
                                 NineSliceInstance.Width = 0f;
+                                SpriteInstance.Blue = 255;
+                                SpriteInstance.Green = 255;
                                 SpriteInstance.Height = 48f;
+                                SpriteInstance.Red = 255;
                                 SpriteInstance.X = 4f;
                                 SpriteInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
                                 SpriteInstance.Y = 4f;
@@ -146,7 +161,10 @@
                                 NineSliceInstance.Height = 0f;
                                 NineSliceInstance.Red = 255;
                                 NineSliceInstance.Width = 0f;
+                                SpriteInstance.Blue = 255;
+                                SpriteInstance.Green = 255;
                                 SpriteInstance.Height = 48f;
+                                SpriteInstance.Red = 255;
                                 SpriteInstance.X = 4f;
                                 SpriteInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
                                 SpriteInstance.Y = 4f;
@@ -458,10 +476,22 @@
                 bool setNineSliceInstanceWidthSecondValue = false;
                 float NineSliceInstanceWidthFirstValue= 0;
                 float NineSliceInstanceWidthSecondValue= 0;
+                bool setSpriteInstanceBlueFirstValue = false;
+                bool setSpriteInstanceBlueSecondValue = false;
+                int SpriteInstanceBlueFirstValue= 0;
+                int SpriteInstanceBlueSecondValue= 0;
+                bool setSpriteInstanceGreenFirstValue = false;
+                bool setSpriteInstanceGreenSecondValue = false;
+                int SpriteInstanceGreenFirstValue= 0;
+                int SpriteInstanceGreenSecondValue= 0;
                 bool setSpriteInstanceHeightFirstValue = false;
                 bool setSpriteInstanceHeightSecondValue = false;
                 float SpriteInstanceHeightFirstValue= 0;
                 float SpriteInstanceHeightSecondValue= 0;
+                bool setSpriteInstanceRedFirstValue = false;
+                bool setSpriteInstanceRedSecondValue = false;
+                int SpriteInstanceRedFirstValue= 0;
+                int SpriteInstanceRedSecondValue= 0;
                 bool setSpriteInstanceXFirstValue = false;
                 bool setSpriteInstanceXSecondValue = false;
                 float SpriteInstanceXFirstValue= 0;
@@ -485,8 +515,14 @@
                         NineSliceInstanceRedFirstValue = 102;
                         setNineSliceInstanceWidthFirstValue = true;
                         NineSliceInstanceWidthFirstValue = 0f;
+                        setSpriteInstanceBlueFirstValue = true;
+                        SpriteInstanceBlueFirstValue = 255;
+                        setSpriteInstanceGreenFirstValue = true;
+                        SpriteInstanceGreenFirstValue = 255;
                         setSpriteInstanceHeightFirstValue = true;
                         SpriteInstanceHeightFirstValue = 48f;
+                        setSpriteInstanceRedFirstValue = true;
+                        SpriteInstanceRedFirstValue = 255;
                         setSpriteInstanceXFirstValue = true;
                         SpriteInstanceXFirstValue = 4f;
                         if (interpolationValue < 1)
@@ -504,7 +540,7 @@
                         setNineSliceInstanceBlueFirstValue = true;
                         NineSliceInstanceBlueFirstValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setNineSliceInstanceGreenFirstValue = true;
                         NineSliceInstanceGreenFirstValue = 255;
                         setNineSliceInstanceHeightFirstValue = true;
@@ -513,8 +549,14 @@
                         NineSliceInstanceRedFirstValue = 255;
                         setNineSliceInstanceWidthFirstValue = true;
                         NineSliceInstanceWidthFirstValue = 0f;
+                        setSpriteInstanceBlueFirstValue = true;
+                        SpriteInstanceBlueFirstValue = 128;
+                        setSpriteInstanceGreenFirstValue = true;
+                        SpriteInstanceGreenFirstValue = 128;
                         setSpriteInstanceHeightFirstValue = true;
                         SpriteInstanceHeightFirstValue = 48f;
+                        setSpriteInstanceRedFirstValue = true;
+                        SpriteInstanceRedFirstValue = 128;
                         setSpriteInstanceXFirstValue = true;
                         SpriteInstanceXFirstValue = 4f;
                         if (interpolationValue < 1)
@@ -541,8 +583,14 @@
                         NineSliceInstanceRedFirstValue = 138;
                         setNineSliceInstanceWidthFirstValue = true;
                         NineSliceInstanceWidthFirstValue = 0f;
+                        setSpriteInstanceBlueFirstValue = true;
+                        SpriteInstanceBlueFirstValue = 255;
+                        setSpriteInstanceGreenFirstValue = true;
+                        SpriteInstanceGreenFirstValue = 255;
                         setSpriteInstanceHeightFirstValue = true;
                         SpriteInstanceHeightFirstValue = 48f;
+                        setSpriteInstanceRedFirstValue = true;
+                        SpriteInstanceRedFirstValue = 255;
                         setSpriteInstanceXFirstValue = true;
                         SpriteInstanceXFirstValue = 4f;
                         if (interpolationValue < 1)
@@ -558,19 +606,25 @@
                         break;
                     case  ButtonCategory.Pushed:
                         setNineSliceInstanceBlueFirstValue = true;
-                        NineSliceInstanceBlueFirstValue = 170;
+                        NineSliceInstanceBlueFirstValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenFirstValue = true;
-                        NineSliceInstanceGreenFirstValue = 205;
+                        NineSliceInstanceGreenFirstValue = 255;
                         setNineSliceInstanceHeightFirstValue = true;
                         NineSliceInstanceHeightFirstValue = -4f;
                         setNineSliceInstanceRedFirstValue = true;
-                        NineSliceInstanceRedFirstValue = 102;
+                        NineSliceInstanceRedFirstValue = 255;
                         setNineSliceInstanceWidthFirstValue = true;
                         NineSliceInstanceWidthFirstValue = 0f;
+                        setSpriteInstanceBlueFirstValue = true;
+                        SpriteInstanceBlueFirstValue = 255;
+                        setSpriteInstanceGreenFirstValue = true;
+                        SpriteInstanceGreenFirstValue = 255;
                         setSpriteInstanceHeightFirstValue = true;
                         SpriteInstanceHeightFirstValue = 44f;
+                        setSpriteInstanceRedFirstValue = true;
+                        SpriteInstanceRedFirstValue = 255;
                         setSpriteInstanceXFirstValue = true;
                         SpriteInstanceXFirstValue = 28f;
                         if (interpolationValue < 1)
@@ -597,8 +651,14 @@
                         NineSliceInstanceRedFirstValue = 240;
                         setNineSliceInstanceWidthFirstValue = true;
                         NineSliceInstanceWidthFirstValue = 0f;
+                        setSpriteInstanceBlueFirstValue = true;
+                        SpriteInstanceBlueFirstValue = 255;
+                        setSpriteInstanceGreenFirstValue = true;
+                        SpriteInstanceGreenFirstValue = 255;
                         setSpriteInstanceHeightFirstValue = true;
                         SpriteInstanceHeightFirstValue = 48f;
+                        setSpriteInstanceRedFirstValue = true;
+                        SpriteInstanceRedFirstValue = 255;
                         setSpriteInstanceXFirstValue = true;
                         SpriteInstanceXFirstValue = 4f;
                         if (interpolationValue < 1)
@@ -625,8 +685,14 @@
                         NineSliceInstanceRedFirstValue = 255;
                         setNineSliceInstanceWidthFirstValue = true;
                         NineSliceInstanceWidthFirstValue = 0f;
+                        setSpriteInstanceBlueFirstValue = true;
+                        SpriteInstanceBlueFirstValue = 255;
+                        setSpriteInstanceGreenFirstValue = true;
+                        SpriteInstanceGreenFirstValue = 255;
                         setSpriteInstanceHeightFirstValue = true;
                         SpriteInstanceHeightFirstValue = 48f;
+                        setSpriteInstanceRedFirstValue = true;
+                        SpriteInstanceRedFirstValue = 255;
                         setSpriteInstanceXFirstValue = true;
                         SpriteInstanceXFirstValue = 4f;
                         if (interpolationValue < 1)
@@ -656,8 +722,14 @@
                         NineSliceInstanceRedSecondValue = 102;
                         setNineSliceInstanceWidthSecondValue = true;
                         NineSliceInstanceWidthSecondValue = 0f;
+                        setSpriteInstanceBlueSecondValue = true;
+                        SpriteInstanceBlueSecondValue = 255;
+                        setSpriteInstanceGreenSecondValue = true;
+                        SpriteInstanceGreenSecondValue = 255;
                         setSpriteInstanceHeightSecondValue = true;
                         SpriteInstanceHeightSecondValue = 48f;
+                        setSpriteInstanceRedSecondValue = true;
+                        SpriteInstanceRedSecondValue = 255;
                         setSpriteInstanceXSecondValue = true;
                         SpriteInstanceXSecondValue = 4f;
                         if (interpolationValue >= 1)
@@ -675,7 +747,7 @@
                         setNineSliceInstanceBlueSecondValue = true;
                         NineSliceInstanceBlueSecondValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setNineSliceInstanceGreenSecondValue = true;
                         NineSliceInstanceGreenSecondValue = 255;
                         setNineSliceInstanceHeightSecondValue = true;
@@ -684,8 +756,14 @@
                         NineSliceInstanceRedSecondValue = 255;
                         setNineSliceInstanceWidthSecondValue = true;
                         NineSliceInstanceWidthSecondValue = 0f;
+                        setSpriteInstanceBlueSecondValue = true;
+                        SpriteInstanceBlueSecondValue = 128;
+                        setSpriteInstanceGreenSecondValue = true;
+                        SpriteInstanceGreenSecondValue = 128;
                         setSpriteInstanceHeightSecondValue = true;
                         SpriteInstanceHeightSecondValue = 48f;
+                        setSpriteInstanceRedSecondValue = true;
+                        SpriteInstanceRedSecondValue = 128;
                         setSpriteInstanceXSecondValue = true;
                         SpriteInstanceXSecondValue = 4f;
                         if (interpolationValue >= 1)
@@ -712,8 +790,14 @@
                         NineSliceInstanceRedSecondValue = 138;
                         setNineSliceInstanceWidthSecondValue = true;
                         NineSliceInstanceWidthSecondValue = 0f;
+                        setSpriteInstanceBlueSecondValue = true;
+                        SpriteInstanceBlueSecondValue = 255;
+                        setSpriteInstanceGreenSecondValue = true;
+                        SpriteInstanceGreenSecondValue = 255;
                         setSpriteInstanceHeightSecondValue = true;
                         SpriteInstanceHeightSecondValue = 48f;
+                        setSpriteInstanceRedSecondValue = true;
+                        SpriteInstanceRedSecondValue = 255;
                         setSpriteInstanceXSecondValue = true;
                         SpriteInstanceXSecondValue = 4f;
                         if (interpolationValue >= 1)
@@ -729,19 +813,25 @@
                         break;
                     case  ButtonCategory.Pushed:
                         setNineSliceInstanceBlueSecondValue = true;
-                        NineSliceInstanceBlueSecondValue = 170;
+                        NineSliceInstanceBlueSecondValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenSecondValue = true;
-                        NineSliceInstanceGreenSecondValue = 205;
+                        NineSliceInstanceGreenSecondValue = 255;
                         setNineSliceInstanceHeightSecondValue = true;
                         NineSliceInstanceHeightSecondValue = -4f;
                         setNineSliceInstanceRedSecondValue = true;
-                        NineSliceInstanceRedSecondValue = 102;
+                        NineSliceInstanceRedSecondValue = 255;
                         setNineSliceInstanceWidthSecondValue = true;
                         NineSliceInstanceWidthSecondValue = 0f;
+                        setSpriteInstanceBlueSecondValue = true;
+                        SpriteInstanceBlueSecondValue = 255;
+                        setSpriteInstanceGreenSecondValue = true;
+                        SpriteInstanceGreenSecondValue = 255;
                         setSpriteInstanceHeightSecondValue = true;
                         SpriteInstanceHeightSecondValue = 44f;
+                        setSpriteInstanceRedSecondValue = true;
+                        SpriteInstanceRedSecondValue = 255;
                         setSpriteInstanceXSecondValue = true;
                         SpriteInstanceXSecondValue = 28f;
                         if (interpolationValue >= 1)
@@ -768,8 +858,14 @@
                         NineSliceInstanceRedSecondValue = 240;
                         setNineSliceInstanceWidthSecondValue = true;
                         NineSliceInstanceWidthSecondValue = 0f;
+                        setSpriteInstanceBlueSecondValue = true;
+                        SpriteInstanceBlueSecondValue = 255;
+                        setSpriteInstanceGreenSecondValue = true;
+                        SpriteInstanceGreenSecondValue = 255;
                         setSpriteInstanceHeightSecondValue = true;
                         SpriteInstanceHeightSecondValue = 48f;
+                        setSpriteInstanceRedSecondValue = true;
+                        SpriteInstanceRedSecondValue = 255;
                         setSpriteInstanceXSecondValue = true;
                         SpriteInstanceXSecondValue = 4f;
                         if (interpolationValue >= 1)
@@ -796,8 +892,14 @@
                         NineSliceInstanceRedSecondValue = 255;
                         setNineSliceInstanceWidthSecondValue = true;
                         NineSliceInstanceWidthSecondValue = 0f;
+                        setSpriteInstanceBlueSecondValue = true;
+                        SpriteInstanceBlueSecondValue = 255;
+                        setSpriteInstanceGreenSecondValue = true;
+                        SpriteInstanceGreenSecondValue = 255;
                         setSpriteInstanceHeightSecondValue = true;
                         SpriteInstanceHeightSecondValue = 48f;
+                        setSpriteInstanceRedSecondValue = true;
+                        SpriteInstanceRedSecondValue = 255;
                         setSpriteInstanceXSecondValue = true;
                         SpriteInstanceXSecondValue = 4f;
                         if (interpolationValue >= 1)
@@ -841,9 +943,21 @@
                 {
                     NineSliceInstance.Width = NineSliceInstanceWidthFirstValue * (1 - interpolationValue) + NineSliceInstanceWidthSecondValue * interpolationValue;
                 }
+                if (setSpriteInstanceBlueFirstValue && setSpriteInstanceBlueSecondValue)
+                {
+                    SpriteInstance.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(SpriteInstanceBlueFirstValue* (1 - interpolationValue) + SpriteInstanceBlueSecondValue * interpolationValue);
+                }
+                if (setSpriteInstanceGreenFirstValue && setSpriteInstanceGreenSecondValue)
+                {
+                    SpriteInstance.Green = FlatRedBall.Math.MathFunctions.RoundToInt(SpriteInstanceGreenFirstValue* (1 - interpolationValue) + SpriteInstanceGreenSecondValue * interpolationValue);
+                }
                 if (setSpriteInstanceHeightFirstValue && setSpriteInstanceHeightSecondValue)
                 {
                     SpriteInstance.Height = SpriteInstanceHeightFirstValue * (1 - interpolationValue) + SpriteInstanceHeightSecondValue * interpolationValue;
+                }
+                if (setSpriteInstanceRedFirstValue && setSpriteInstanceRedSecondValue)
+                {
+                    SpriteInstance.Red = FlatRedBall.Math.MathFunctions.RoundToInt(SpriteInstanceRedFirstValue* (1 - interpolationValue) + SpriteInstanceRedSecondValue * interpolationValue);
                 }
                 if (setSpriteInstanceXFirstValue && setSpriteInstanceXSecondValue)
                 {
@@ -1418,9 +1532,33 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "SpriteInstance.Blue",
+                            Type = "int",
+                            Value = SpriteInstance.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Green",
+                            Type = "int",
+                            Value = SpriteInstance.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SpriteInstance.Height",
                             Type = "float",
                             Value = SpriteInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Red",
+                            Type = "int",
+                            Value = SpriteInstance.Red
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1508,9 +1646,33 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "SpriteInstance.Blue",
+                            Type = "int",
+                            Value = SpriteInstance.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Green",
+                            Type = "int",
+                            Value = SpriteInstance.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SpriteInstance.Height",
                             Type = "float",
                             Value = SpriteInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Red",
+                            Type = "int",
+                            Value = SpriteInstance.Red
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1598,9 +1760,33 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "SpriteInstance.Blue",
+                            Type = "int",
+                            Value = SpriteInstance.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Green",
+                            Type = "int",
+                            Value = SpriteInstance.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SpriteInstance.Height",
                             Type = "float",
                             Value = SpriteInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Red",
+                            Type = "int",
+                            Value = SpriteInstance.Red
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1688,9 +1874,33 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "SpriteInstance.Blue",
+                            Type = "int",
+                            Value = SpriteInstance.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Green",
+                            Type = "int",
+                            Value = SpriteInstance.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SpriteInstance.Height",
                             Type = "float",
                             Value = SpriteInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Red",
+                            Type = "int",
+                            Value = SpriteInstance.Red
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1778,9 +1988,33 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "SpriteInstance.Blue",
+                            Type = "int",
+                            Value = SpriteInstance.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Green",
+                            Type = "int",
+                            Value = SpriteInstance.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SpriteInstance.Height",
                             Type = "float",
                             Value = SpriteInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Red",
+                            Type = "int",
+                            Value = SpriteInstance.Red
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1868,9 +2102,33 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "SpriteInstance.Blue",
+                            Type = "int",
+                            Value = SpriteInstance.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Green",
+                            Type = "int",
+                            Value = SpriteInstance.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SpriteInstance.Height",
                             Type = "float",
                             Value = SpriteInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Red",
+                            Type = "int",
+                            Value = SpriteInstance.Red
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1966,9 +2224,33 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "SpriteInstance.Blue",
+                            Type = "int",
+                            Value = SpriteInstance.Blue + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Green",
+                            Type = "int",
+                            Value = SpriteInstance.Green + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SpriteInstance.Height",
                             Type = "float",
                             Value = SpriteInstance.Height + 48f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Red",
+                            Type = "int",
+                            Value = SpriteInstance.Red + 255
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2056,9 +2338,33 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "SpriteInstance.Blue",
+                            Type = "int",
+                            Value = SpriteInstance.Blue + 128
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Green",
+                            Type = "int",
+                            Value = SpriteInstance.Green + 128
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SpriteInstance.Height",
                             Type = "float",
                             Value = SpriteInstance.Height + 48f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Red",
+                            Type = "int",
+                            Value = SpriteInstance.Red + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2146,9 +2452,33 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "SpriteInstance.Blue",
+                            Type = "int",
+                            Value = SpriteInstance.Blue + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Green",
+                            Type = "int",
+                            Value = SpriteInstance.Green + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SpriteInstance.Height",
                             Type = "float",
                             Value = SpriteInstance.Height + 48f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Red",
+                            Type = "int",
+                            Value = SpriteInstance.Red + 255
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2190,7 +2520,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Blue",
                             Type = "int",
-                            Value = NineSliceInstance.Blue + 170
+                            Value = NineSliceInstance.Blue + 255
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2206,7 +2536,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Green",
                             Type = "int",
-                            Value = NineSliceInstance.Green + 205
+                            Value = NineSliceInstance.Green + 255
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2222,7 +2552,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Red",
                             Type = "int",
-                            Value = NineSliceInstance.Red + 102
+                            Value = NineSliceInstance.Red + 255
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2236,9 +2566,33 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "SpriteInstance.Blue",
+                            Type = "int",
+                            Value = SpriteInstance.Blue + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Green",
+                            Type = "int",
+                            Value = SpriteInstance.Green + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SpriteInstance.Height",
                             Type = "float",
                             Value = SpriteInstance.Height + 44f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Red",
+                            Type = "int",
+                            Value = SpriteInstance.Red + 255
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2326,9 +2680,33 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "SpriteInstance.Blue",
+                            Type = "int",
+                            Value = SpriteInstance.Blue + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Green",
+                            Type = "int",
+                            Value = SpriteInstance.Green + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SpriteInstance.Height",
                             Type = "float",
                             Value = SpriteInstance.Height + 48f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Red",
+                            Type = "int",
+                            Value = SpriteInstance.Red + 255
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2416,9 +2794,33 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "SpriteInstance.Blue",
+                            Type = "int",
+                            Value = SpriteInstance.Blue + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Green",
+                            Type = "int",
+                            Value = SpriteInstance.Green + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "SpriteInstance.Height",
                             Type = "float",
                             Value = SpriteInstance.Height + 48f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Red",
+                            Type = "int",
+                            Value = SpriteInstance.Red + 255
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

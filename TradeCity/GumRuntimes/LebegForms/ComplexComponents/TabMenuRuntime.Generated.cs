@@ -25,9 +25,15 @@
                     switch(mCurrentVariableState)
                     {
                         case  VariableState.Default:
-                            CityMenuTabInstance.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
-                            CityMenuTabInstance1.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                            CommonTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                            ConstructionTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                            EnergyTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                            OilTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                            WorkforceTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
                             HeaderPanel.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                            ConstructionTab.CurrentButtonCategoryState = JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Disabled;
+                            OilTab.CurrentButtonCategoryState = JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Disabled;
+                            WorkforceTab.CurrentButtonCategoryState = JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Disabled;
                             Height = -144f;
                             HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             Width = 500f;
@@ -50,6 +56,11 @@
                             ContainerInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             ContainerInstance.X = 8f;
                             ContainerInstance.Y = 8f;
+                            SetProperty("CommonTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/factory.png");
+                            SetProperty("ConstructionTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/crane.png");
+                            SetProperty("EnergyTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/pylon.png");
+                            SetProperty("OilTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/oil-pump.png");
+                            SetProperty("WorkforceTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/modern-city.png");
                             break;
                     }
                 }
@@ -76,6 +87,10 @@
                 bool setCommonListYSecondValue = false;
                 float CommonListYFirstValue= 0;
                 float CommonListYSecondValue= 0;
+                bool setConstructionTabCurrentButtonCategoryStateFirstValue = false;
+                bool setConstructionTabCurrentButtonCategoryStateSecondValue = false;
+                JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory ConstructionTabCurrentButtonCategoryStateFirstValue= JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Enabled;
+                JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory ConstructionTabCurrentButtonCategoryStateSecondValue= JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Enabled;
                 bool setContainerInstanceHeightFirstValue = false;
                 bool setContainerInstanceHeightSecondValue = false;
                 float ContainerInstanceHeightFirstValue= 0;
@@ -108,10 +123,18 @@
                 bool setHeightSecondValue = false;
                 float HeightFirstValue= 0;
                 float HeightSecondValue= 0;
+                bool setOilTabCurrentButtonCategoryStateFirstValue = false;
+                bool setOilTabCurrentButtonCategoryStateSecondValue = false;
+                JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory OilTabCurrentButtonCategoryStateFirstValue= JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Enabled;
+                JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory OilTabCurrentButtonCategoryStateSecondValue= JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Enabled;
                 bool setWidthFirstValue = false;
                 bool setWidthSecondValue = false;
                 float WidthFirstValue= 0;
                 float WidthSecondValue= 0;
+                bool setWorkforceTabCurrentButtonCategoryStateFirstValue = false;
+                bool setWorkforceTabCurrentButtonCategoryStateSecondValue = false;
+                JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory WorkforceTabCurrentButtonCategoryStateFirstValue= JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Enabled;
+                JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory WorkforceTabCurrentButtonCategoryStateSecondValue= JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Enabled;
                 bool setYFirstValue = false;
                 bool setYSecondValue = false;
                 float YFirstValue= 0;
@@ -119,14 +142,6 @@
                 switch(firstState)
                 {
                     case  VariableState.Default:
-                        if (interpolationValue < 1)
-                        {
-                            this.CityMenuTabInstance.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.CityMenuTabInstance1.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
-                        }
                         setCommonListHeightFirstValue = true;
                         CommonListHeightFirstValue = -72f;
                         if (interpolationValue < 1)
@@ -143,6 +158,24 @@
                         CommonListYFirstValue = 72f;
                         if (interpolationValue < 1)
                         {
+                            SetProperty("CommonTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/factory.png");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.CommonTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                        }
+                        setConstructionTabCurrentButtonCategoryStateFirstValue = true;
+                        ConstructionTabCurrentButtonCategoryStateFirstValue = JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Disabled;
+                        if (interpolationValue < 1)
+                        {
+                            SetProperty("ConstructionTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/crane.png");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ConstructionTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                        }
+                        if (interpolationValue < 1)
+                        {
                             this.ContainerInstance.ChildrenLayout = Gum.Managers.ChildrenLayout.LeftToRightStack;
                         }
                         setContainerInstanceHeightFirstValue = true;
@@ -157,6 +190,14 @@
                         ContainerInstanceXFirstValue = 8f;
                         setContainerInstanceYFirstValue = true;
                         ContainerInstanceYFirstValue = 8f;
+                        if (interpolationValue < 1)
+                        {
+                            SetProperty("EnergyTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/pylon.png");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.EnergyTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                        }
                         setHeaderPanelCurrentColorCategoryStateFirstValue = true;
                         HeaderPanelCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setHeaderPanelHeightFirstValue = true;
@@ -173,8 +214,28 @@
                         {
                             this.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
+                        setOilTabCurrentButtonCategoryStateFirstValue = true;
+                        OilTabCurrentButtonCategoryStateFirstValue = JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Disabled;
+                        if (interpolationValue < 1)
+                        {
+                            SetProperty("OilTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/oil-pump.png");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.OilTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                        }
                         setWidthFirstValue = true;
                         WidthFirstValue = 500f;
+                        setWorkforceTabCurrentButtonCategoryStateFirstValue = true;
+                        WorkforceTabCurrentButtonCategoryStateFirstValue = JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Disabled;
+                        if (interpolationValue < 1)
+                        {
+                            SetProperty("WorkforceTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/modern-city.png");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.WorkforceTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                        }
                         if (interpolationValue < 1)
                         {
                             this.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
@@ -198,14 +259,6 @@
                 switch(secondState)
                 {
                     case  VariableState.Default:
-                        if (interpolationValue >= 1)
-                        {
-                            this.CityMenuTabInstance.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.CityMenuTabInstance1.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
-                        }
                         setCommonListHeightSecondValue = true;
                         CommonListHeightSecondValue = -72f;
                         if (interpolationValue >= 1)
@@ -222,6 +275,24 @@
                         CommonListYSecondValue = 72f;
                         if (interpolationValue >= 1)
                         {
+                            SetProperty("CommonTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/factory.png");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.CommonTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                        }
+                        setConstructionTabCurrentButtonCategoryStateSecondValue = true;
+                        ConstructionTabCurrentButtonCategoryStateSecondValue = JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Disabled;
+                        if (interpolationValue >= 1)
+                        {
+                            SetProperty("ConstructionTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/crane.png");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ConstructionTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                        }
+                        if (interpolationValue >= 1)
+                        {
                             this.ContainerInstance.ChildrenLayout = Gum.Managers.ChildrenLayout.LeftToRightStack;
                         }
                         setContainerInstanceHeightSecondValue = true;
@@ -236,6 +307,14 @@
                         ContainerInstanceXSecondValue = 8f;
                         setContainerInstanceYSecondValue = true;
                         ContainerInstanceYSecondValue = 8f;
+                        if (interpolationValue >= 1)
+                        {
+                            SetProperty("EnergyTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/pylon.png");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.EnergyTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                        }
                         setHeaderPanelCurrentColorCategoryStateSecondValue = true;
                         HeaderPanelCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setHeaderPanelHeightSecondValue = true;
@@ -252,8 +331,28 @@
                         {
                             this.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
+                        setOilTabCurrentButtonCategoryStateSecondValue = true;
+                        OilTabCurrentButtonCategoryStateSecondValue = JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Disabled;
+                        if (interpolationValue >= 1)
+                        {
+                            SetProperty("OilTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/oil-pump.png");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.OilTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                        }
                         setWidthSecondValue = true;
                         WidthSecondValue = 500f;
+                        setWorkforceTabCurrentButtonCategoryStateSecondValue = true;
+                        WorkforceTabCurrentButtonCategoryStateSecondValue = JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime.ButtonCategory.Disabled;
+                        if (interpolationValue >= 1)
+                        {
+                            SetProperty("WorkforceTab.MenuIcon", "../GlobalContent/Resources/CategoryIcons/modern-city.png");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.WorkforceTab.Parent = this.GetGraphicalUiElementByName("ContainerInstance") ?? this;
+                        }
                         if (interpolationValue >= 1)
                         {
                             this.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
@@ -291,6 +390,10 @@
                 {
                     CommonList.Y = CommonListYFirstValue * (1 - interpolationValue) + CommonListYSecondValue * interpolationValue;
                 }
+                if (setConstructionTabCurrentButtonCategoryStateFirstValue && setConstructionTabCurrentButtonCategoryStateSecondValue)
+                {
+                    ConstructionTab.InterpolateBetween(ConstructionTabCurrentButtonCategoryStateFirstValue, ConstructionTabCurrentButtonCategoryStateSecondValue, interpolationValue);
+                }
                 if (setContainerInstanceHeightFirstValue && setContainerInstanceHeightSecondValue)
                 {
                     ContainerInstance.Height = ContainerInstanceHeightFirstValue * (1 - interpolationValue) + ContainerInstanceHeightSecondValue * interpolationValue;
@@ -323,9 +426,17 @@
                 {
                     Height = HeightFirstValue * (1 - interpolationValue) + HeightSecondValue * interpolationValue;
                 }
+                if (setOilTabCurrentButtonCategoryStateFirstValue && setOilTabCurrentButtonCategoryStateSecondValue)
+                {
+                    OilTab.InterpolateBetween(OilTabCurrentButtonCategoryStateFirstValue, OilTabCurrentButtonCategoryStateSecondValue, interpolationValue);
+                }
                 if (setWidthFirstValue && setWidthSecondValue)
                 {
                     Width = WidthFirstValue * (1 - interpolationValue) + WidthSecondValue * interpolationValue;
+                }
+                if (setWorkforceTabCurrentButtonCategoryStateFirstValue && setWorkforceTabCurrentButtonCategoryStateSecondValue)
+                {
+                    WorkforceTab.InterpolateBetween(WorkforceTabCurrentButtonCategoryStateFirstValue, WorkforceTabCurrentButtonCategoryStateSecondValue, interpolationValue);
                 }
                 if (setYFirstValue && setYSecondValue)
                 {
@@ -408,8 +519,11 @@
                 base.StopAnimations();
                 HeaderPanel.StopAnimations();
                 CommonList.StopAnimations();
-                CityMenuTabInstance.StopAnimations();
-                CityMenuTabInstance1.StopAnimations();
+                CommonTab.StopAnimations();
+                ConstructionTab.StopAnimations();
+                EnergyTab.StopAnimations();
+                OilTab.StopAnimations();
+                WorkforceTab.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -609,17 +723,105 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "CityMenuTabInstance.Parent",
+                            Name = "CommonTab.MenuIcon",
                             Type = "string",
-                            Value = CityMenuTabInstance.Parent
+                            Value = CommonTab.MenuIcon
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "CityMenuTabInstance1.Parent",
+                            Name = "CommonTab.Parent",
                             Type = "string",
-                            Value = CityMenuTabInstance1.Parent
+                            Value = CommonTab.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ConstructionTab.ButtonCategoryState",
+                            Type = "ButtonCategory",
+                            Value = ConstructionTab.CurrentButtonCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ConstructionTab.MenuIcon",
+                            Type = "string",
+                            Value = ConstructionTab.MenuIcon
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ConstructionTab.Parent",
+                            Type = "string",
+                            Value = ConstructionTab.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EnergyTab.MenuIcon",
+                            Type = "string",
+                            Value = EnergyTab.MenuIcon
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EnergyTab.Parent",
+                            Type = "string",
+                            Value = EnergyTab.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "OilTab.ButtonCategoryState",
+                            Type = "ButtonCategory",
+                            Value = OilTab.CurrentButtonCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "OilTab.MenuIcon",
+                            Type = "string",
+                            Value = OilTab.MenuIcon
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "OilTab.Parent",
+                            Type = "string",
+                            Value = OilTab.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WorkforceTab.ButtonCategoryState",
+                            Type = "ButtonCategory",
+                            Value = WorkforceTab.CurrentButtonCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WorkforceTab.MenuIcon",
+                            Type = "string",
+                            Value = WorkforceTab.MenuIcon
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WorkforceTab.Parent",
+                            Type = "string",
+                            Value = WorkforceTab.Parent
                         }
                         );
                         break;
@@ -819,17 +1021,105 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "CityMenuTabInstance.Parent",
+                            Name = "CommonTab.MenuIcon",
                             Type = "string",
-                            Value = CityMenuTabInstance.Parent
+                            Value = CommonTab.MenuIcon
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "CityMenuTabInstance1.Parent",
+                            Name = "CommonTab.Parent",
                             Type = "string",
-                            Value = CityMenuTabInstance1.Parent
+                            Value = CommonTab.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ConstructionTab.ButtonCategoryState",
+                            Type = "ButtonCategory",
+                            Value = ConstructionTab.CurrentButtonCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ConstructionTab.MenuIcon",
+                            Type = "string",
+                            Value = ConstructionTab.MenuIcon
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ConstructionTab.Parent",
+                            Type = "string",
+                            Value = ConstructionTab.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EnergyTab.MenuIcon",
+                            Type = "string",
+                            Value = EnergyTab.MenuIcon
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "EnergyTab.Parent",
+                            Type = "string",
+                            Value = EnergyTab.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "OilTab.ButtonCategoryState",
+                            Type = "ButtonCategory",
+                            Value = OilTab.CurrentButtonCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "OilTab.MenuIcon",
+                            Type = "string",
+                            Value = OilTab.MenuIcon
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "OilTab.Parent",
+                            Type = "string",
+                            Value = OilTab.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WorkforceTab.ButtonCategoryState",
+                            Type = "ButtonCategory",
+                            Value = WorkforceTab.CurrentButtonCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WorkforceTab.MenuIcon",
+                            Type = "string",
+                            Value = WorkforceTab.MenuIcon
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WorkforceTab.Parent",
+                            Type = "string",
+                            Value = WorkforceTab.Parent
                         }
                         );
                         break;
@@ -854,11 +1144,17 @@
             public JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime HeaderPanel { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime CommonList { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime ContainerInstance { get; set; }
-            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime CityMenuTabInstance { get; set; }
-            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime CityMenuTabInstance1 { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime CommonTab { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime ConstructionTab { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime EnergyTab { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime OilTab { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime WorkforceTab { get; set; }
             public event FlatRedBall.Gui.WindowEvent CommonListClick;
-            public event FlatRedBall.Gui.WindowEvent CityMenuTabInstanceClick;
-            public event FlatRedBall.Gui.WindowEvent CityMenuTabInstance1Click;
+            public event FlatRedBall.Gui.WindowEvent CommonTabClick;
+            public event FlatRedBall.Gui.WindowEvent ConstructionTabClick;
+            public event FlatRedBall.Gui.WindowEvent EnergyTabClick;
+            public event FlatRedBall.Gui.WindowEvent OilTabClick;
+            public event FlatRedBall.Gui.WindowEvent WorkforceTabClick;
             public TabMenuRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             	: base(false, tryCreateFormsObject)
             {
@@ -889,11 +1185,17 @@
                 HeaderPanel = this.GetGraphicalUiElementByName("HeaderPanel") as JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime;
                 CommonList = this.GetGraphicalUiElementByName("CommonList") as JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime;
                 ContainerInstance = this.GetGraphicalUiElementByName("ContainerInstance") as JHP4SD.GumRuntimes.ContainerRuntime;
-                CityMenuTabInstance = this.GetGraphicalUiElementByName("CityMenuTabInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime;
-                CityMenuTabInstance1 = this.GetGraphicalUiElementByName("CityMenuTabInstance1") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime;
+                CommonTab = this.GetGraphicalUiElementByName("CommonTab") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime;
+                ConstructionTab = this.GetGraphicalUiElementByName("ConstructionTab") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime;
+                EnergyTab = this.GetGraphicalUiElementByName("EnergyTab") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime;
+                OilTab = this.GetGraphicalUiElementByName("OilTab") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime;
+                WorkforceTab = this.GetGraphicalUiElementByName("WorkforceTab") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime;
                 CommonList.Click += (unused) => CommonListClick?.Invoke(this);
-                CityMenuTabInstance.Click += (unused) => CityMenuTabInstanceClick?.Invoke(this);
-                CityMenuTabInstance1.Click += (unused) => CityMenuTabInstance1Click?.Invoke(this);
+                CommonTab.Click += (unused) => CommonTabClick?.Invoke(this);
+                ConstructionTab.Click += (unused) => ConstructionTabClick?.Invoke(this);
+                EnergyTab.Click += (unused) => EnergyTabClick?.Invoke(this);
+                OilTab.Click += (unused) => OilTabClick?.Invoke(this);
+                WorkforceTab.Click += (unused) => WorkforceTabClick?.Invoke(this);
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Components.LebegForms.ComplexComponents.TabMenuForms(this);

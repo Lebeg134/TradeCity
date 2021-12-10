@@ -23,6 +23,7 @@
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/Label", typeof(JHP4SD.GumRuntimes.DefaultForms.LabelRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/ListBox", typeof(JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/ListBoxItem", typeof(JHP4SD.GumRuntimes.DefaultForms.ListBoxItemRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/BuildingListItem", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.BuildingListItemRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/PasswordBox", typeof(JHP4SD.GumRuntimes.DefaultForms.PasswordBoxRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/RadioButton", typeof(JHP4SD.GumRuntimes.DefaultForms.RadioButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/ScrollBar", typeof(JHP4SD.GumRuntimes.DefaultForms.ScrollBarRuntime));

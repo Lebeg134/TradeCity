@@ -5,12 +5,6 @@
   <State>
     <Name>Default</Name>
     <Variable>
-      <Type>string</Type>
-      <Name>CityMenuTabInstance.Parent</Name>
-      <Value xsi:type="xsd:string">ContainerInstance</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>float</Type>
       <Name>CommonList.Height</Name>
       <Value xsi:type="xsd:float">-72</Value>
@@ -38,6 +32,38 @@
       <Type>float</Type>
       <Name>CommonList.Y</Name>
       <Value xsi:type="xsd:float">72</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>CommonTab.MenuIcon</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/CategoryIcons/factory.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>CommonTab.Parent</Name>
+      <Value xsi:type="xsd:string">ContainerInstance</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>ButtonCategory</Type>
+      <Name>ConstructionTab.ButtonCategoryState</Name>
+      <Value xsi:type="xsd:string">Disabled</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>ConstructionTab.MenuIcon</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/CategoryIcons/crane.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>ConstructionTab.Parent</Name>
+      <Value xsi:type="xsd:string">ContainerInstance</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -74,6 +100,19 @@
       <Type>float</Type>
       <Name>ContainerInstance.Y</Name>
       <Value xsi:type="xsd:float">8</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>EnergyTab.MenuIcon</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/CategoryIcons/pylon.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>EnergyTab.Parent</Name>
+      <Value xsi:type="xsd:string">ContainerInstance</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -124,6 +163,25 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>ButtonCategory</Type>
+      <Name>OilTab.ButtonCategoryState</Name>
+      <Value xsi:type="xsd:string">Disabled</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>OilTab.MenuIcon</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/CategoryIcons/oil-pump.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>OilTab.Parent</Name>
+      <Value xsi:type="xsd:string">ContainerInstance</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>State</Type>
       <Name>State</Name>
       <SetsValue>true</SetsValue>
@@ -132,6 +190,25 @@
       <Type>float</Type>
       <Name>Width</Name>
       <Value xsi:type="xsd:float">500</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>ButtonCategory</Type>
+      <Name>WorkforceTab.ButtonCategoryState</Name>
+      <Value xsi:type="xsd:string">Disabled</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>WorkforceTab.MenuIcon</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/CategoryIcons/modern-city.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>WorkforceTab.Parent</Name>
+      <Value xsi:type="xsd:string">ContainerInstance</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -164,12 +241,6 @@
       <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>CityMenuTabInstance1.Parent</Name>
-      <Value xsi:type="xsd:string">ContainerInstance</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
   </State>
   <Instance>
     <Name>HeaderPanel</Name>
@@ -187,12 +258,27 @@
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>CityMenuTabInstance</Name>
+    <Name>CommonTab</Name>
     <BaseType>LebegForms/BasicComponents/CityMenuTab</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>CityMenuTabInstance1</Name>
+    <Name>ConstructionTab</Name>
+    <BaseType>LebegForms/BasicComponents/CityMenuTab</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>EnergyTab</Name>
+    <BaseType>LebegForms/BasicComponents/CityMenuTab</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>OilTab</Name>
+    <BaseType>LebegForms/BasicComponents/CityMenuTab</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>WorkforceTab</Name>
     <BaseType>LebegForms/BasicComponents/CityMenuTab</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>

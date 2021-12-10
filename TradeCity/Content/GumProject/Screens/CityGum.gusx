@@ -180,19 +180,19 @@
     </Variable>
     <Variable>
       <Type>HorizontalAlignment</Type>
-      <Name>TabMenuInstance.X Origin</Name>
+      <Name>BuildingTabs.X Origin</Name>
       <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>PositionUnitType</Type>
-      <Name>TabMenuInstance.X Units</Name>
+      <Name>BuildingTabs.X Units</Name>
       <Value xsi:type="xsd:int">4</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>TabMenuInstance.Y</Name>
+      <Name>BuildingTabs.Y</Name>
       <Value xsi:type="xsd:float">72</Value>
       <SetsValue>true</SetsValue>
     </Variable>
@@ -316,7 +316,7 @@
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>TabMenuInstance</Name>
+    <Name>BuildingTabs</Name>
     <BaseType>LebegForms/ComplexComponents/TabMenu</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>

@@ -85,7 +85,9 @@
       <DependentUpon>ScreenSelectorForms.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Components\LebegForms\ComplexComponents\TabMenuForms.cs" />
-    <Compile Include="Forms\Components\LebegForms\ComplexComponents\TabMenuForms.Generated.cs" />
+    <Compile Include="Forms\Components\LebegForms\ComplexComponents\TabMenuForms.Generated.cs">
+      <DependentUpon>TabMenuForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Screens\CityGumForms.cs" />
     <Compile Include="Forms\Screens\CityGumForms.Generated.cs">
       <DependentUpon>CityGumForms.cs</DependentUpon>
@@ -271,8 +273,12 @@
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\BackButtonRuntime.Generated.cs">
       <DependentUpon>BackButtonRuntime.cs</DependentUpon>
     </Compile>
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\BuildingListItemRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\BuildingListItemRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\CityMenuTabRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\CityMenuTabRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\CityMenuTabRuntime.Generated.cs">
+      <DependentUpon>CityMenuTabRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\ExitButtonRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\ExitButtonRuntime.Generated.cs">
       <DependentUpon>ExitButtonRuntime.cs</DependentUpon>
@@ -298,7 +304,9 @@
       <DependentUpon>ScreenSelectorRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TabMenuRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TabMenuRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TabMenuRuntime.Generated.cs">
+      <DependentUpon>TabMenuRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.Generated.cs">
       <DependentUpon>TopicRuntime.cs</DependentUpon>
@@ -569,29 +577,25 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>up</Name>
     </None>
-    <None Include="content\globalcontent\resources\electric.png">
+    <None Include="content\globalcontent\resources\categoryicons\crane.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>electric</Name>
+      <Name>crane</Name>
     </None>
-    <None Include="content\globalcontent\resources\i-beam.png">
+    <None Include="content\globalcontent\resources\categoryicons\factory.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>i-beam</Name>
+      <Name>factory</Name>
     </None>
-    <None Include="content\globalcontent\resources\log.png">
+    <None Include="content\globalcontent\resources\categoryicons\modern-city.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>log</Name>
+      <Name>modern-city</Name>
     </None>
-    <None Include="content\globalcontent\resources\money-stack.png">
+    <None Include="content\globalcontent\resources\categoryicons\oil-pump.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>money-stack</Name>
+      <Name>oil-pump</Name>
     </None>
-    <None Include="content\globalcontent\resources\ore.png">
+    <None Include="content\globalcontent\resources\categoryicons\pylon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>ore</Name>
-    </None>
-    <None Include="content\globalcontent\resources\person.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>person</Name>
+      <Name>pylon</Name>
     </None>
     <None Include="content\globalcontent\resources\resourceicons\electric.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -618,10 +622,6 @@
       <Name>person</Name>
     </None>
     <None Include="content\globalcontent\resources\resourceicons\water-drop.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>water-drop</Name>
-    </None>
-    <None Include="content\globalcontent\resources\water-drop.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>water-drop</Name>
     </None>
@@ -736,6 +736,10 @@
     <None Include="content\gumproject\components\lebegforms\basiccomponents\backbutton.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>backbutton</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\buildinglistitem.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>buildinglistitem</Name>
     </None>
     <None Include="content\gumproject\components\lebegforms\basiccomponents\citymenutab.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

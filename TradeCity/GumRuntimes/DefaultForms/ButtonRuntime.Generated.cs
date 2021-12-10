@@ -93,7 +93,7 @@
                         switch(mCurrentButtonCategoryState)
                         {
                             case  ButtonCategory.Enabled:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                                 TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                                 NineSliceInstance.Blue = 255;
                                 NineSliceInstance.Green = 255;
@@ -101,39 +101,39 @@
                                 HighlightRectangle.Visible = false;
                                 break;
                             case  ButtonCategory.Disabled:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                                 TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
-                                NineSliceInstance.Blue = 255;
-                                NineSliceInstance.Green = 255;
-                                NineSliceInstance.Red = 255;
+                                NineSliceInstance.Blue = 128;
+                                NineSliceInstance.Green = 128;
+                                NineSliceInstance.Red = 128;
                                 HighlightRectangle.Visible = false;
                                 break;
                             case  ButtonCategory.Highlighted:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                                 TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
-                                NineSliceInstance.Blue = 255;
-                                NineSliceInstance.Green = 255;
-                                NineSliceInstance.Red = 255;
+                                NineSliceInstance.Blue = 170;
+                                NineSliceInstance.Green = 205;
+                                NineSliceInstance.Red = 102;
                                 HighlightRectangle.Visible = false;
                                 break;
                             case  ButtonCategory.Pushed:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                                 TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
-                                NineSliceInstance.Blue = 200;
-                                NineSliceInstance.Green = 200;
-                                NineSliceInstance.Red = 200;
+                                NineSliceInstance.Blue = 128;
+                                NineSliceInstance.Green = 128;
+                                NineSliceInstance.Red = 128;
                                 HighlightRectangle.Visible = false;
                                 break;
                             case  ButtonCategory.HighlightedFocused:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                                 TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
-                                NineSliceInstance.Blue = 255;
-                                NineSliceInstance.Green = 255;
-                                NineSliceInstance.Red = 255;
+                                NineSliceInstance.Blue = 170;
+                                NineSliceInstance.Green = 205;
+                                NineSliceInstance.Red = 102;
                                 HighlightRectangle.Visible = true;
                                 break;
                             case  ButtonCategory.Focused:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                                 TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                                 NineSliceInstance.Blue = 255;
                                 NineSliceInstance.Green = 255;
@@ -141,11 +141,11 @@
                                 HighlightRectangle.Visible = true;
                                 break;
                             case  ButtonCategory.DisabledFocused:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                                 TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
-                                NineSliceInstance.Blue = 255;
-                                NineSliceInstance.Green = 255;
-                                NineSliceInstance.Red = 255;
+                                NineSliceInstance.Blue = 128;
+                                NineSliceInstance.Green = 128;
+                                NineSliceInstance.Red = 128;
                                 HighlightRectangle.Visible = true;
                                 break;
                         }
@@ -612,7 +612,7 @@
                         setNineSliceInstanceBlueFirstValue = true;
                         NineSliceInstanceBlueFirstValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setNineSliceInstanceGreenFirstValue = true;
                         NineSliceInstanceGreenFirstValue = 255;
                         setNineSliceInstanceRedFirstValue = true;
@@ -626,13 +626,13 @@
                             this.HighlightRectangle.Visible = false;
                         }
                         setNineSliceInstanceBlueFirstValue = true;
-                        NineSliceInstanceBlueFirstValue = 255;
+                        NineSliceInstanceBlueFirstValue = 128;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenFirstValue = true;
-                        NineSliceInstanceGreenFirstValue = 255;
+                        NineSliceInstanceGreenFirstValue = 128;
                         setNineSliceInstanceRedFirstValue = true;
-                        NineSliceInstanceRedFirstValue = 255;
+                        NineSliceInstanceRedFirstValue = 128;
                         setTextInstanceCurrentColorCategoryStateFirstValue = true;
                         TextInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                         break;
@@ -642,13 +642,13 @@
                             this.HighlightRectangle.Visible = false;
                         }
                         setNineSliceInstanceBlueFirstValue = true;
-                        NineSliceInstanceBlueFirstValue = 255;
+                        NineSliceInstanceBlueFirstValue = 170;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenFirstValue = true;
-                        NineSliceInstanceGreenFirstValue = 255;
+                        NineSliceInstanceGreenFirstValue = 205;
                         setNineSliceInstanceRedFirstValue = true;
-                        NineSliceInstanceRedFirstValue = 255;
+                        NineSliceInstanceRedFirstValue = 102;
                         setTextInstanceCurrentColorCategoryStateFirstValue = true;
                         TextInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
                         break;
@@ -658,13 +658,13 @@
                             this.HighlightRectangle.Visible = false;
                         }
                         setNineSliceInstanceBlueFirstValue = true;
-                        NineSliceInstanceBlueFirstValue = 200;
+                        NineSliceInstanceBlueFirstValue = 128;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenFirstValue = true;
-                        NineSliceInstanceGreenFirstValue = 200;
+                        NineSliceInstanceGreenFirstValue = 128;
                         setNineSliceInstanceRedFirstValue = true;
-                        NineSliceInstanceRedFirstValue = 200;
+                        NineSliceInstanceRedFirstValue = 128;
                         setTextInstanceCurrentColorCategoryStateFirstValue = true;
                         TextInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
                         break;
@@ -674,13 +674,13 @@
                             this.HighlightRectangle.Visible = true;
                         }
                         setNineSliceInstanceBlueFirstValue = true;
-                        NineSliceInstanceBlueFirstValue = 255;
+                        NineSliceInstanceBlueFirstValue = 170;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenFirstValue = true;
-                        NineSliceInstanceGreenFirstValue = 255;
+                        NineSliceInstanceGreenFirstValue = 205;
                         setNineSliceInstanceRedFirstValue = true;
-                        NineSliceInstanceRedFirstValue = 255;
+                        NineSliceInstanceRedFirstValue = 102;
                         setTextInstanceCurrentColorCategoryStateFirstValue = true;
                         TextInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
                         break;
@@ -692,7 +692,7 @@
                         setNineSliceInstanceBlueFirstValue = true;
                         NineSliceInstanceBlueFirstValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setNineSliceInstanceGreenFirstValue = true;
                         NineSliceInstanceGreenFirstValue = 255;
                         setNineSliceInstanceRedFirstValue = true;
@@ -706,13 +706,13 @@
                             this.HighlightRectangle.Visible = true;
                         }
                         setNineSliceInstanceBlueFirstValue = true;
-                        NineSliceInstanceBlueFirstValue = 255;
+                        NineSliceInstanceBlueFirstValue = 128;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenFirstValue = true;
-                        NineSliceInstanceGreenFirstValue = 255;
+                        NineSliceInstanceGreenFirstValue = 128;
                         setNineSliceInstanceRedFirstValue = true;
-                        NineSliceInstanceRedFirstValue = 255;
+                        NineSliceInstanceRedFirstValue = 128;
                         setTextInstanceCurrentColorCategoryStateFirstValue = true;
                         TextInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                         break;
@@ -727,7 +727,7 @@
                         setNineSliceInstanceBlueSecondValue = true;
                         NineSliceInstanceBlueSecondValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setNineSliceInstanceGreenSecondValue = true;
                         NineSliceInstanceGreenSecondValue = 255;
                         setNineSliceInstanceRedSecondValue = true;
@@ -741,13 +741,13 @@
                             this.HighlightRectangle.Visible = false;
                         }
                         setNineSliceInstanceBlueSecondValue = true;
-                        NineSliceInstanceBlueSecondValue = 255;
+                        NineSliceInstanceBlueSecondValue = 128;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenSecondValue = true;
-                        NineSliceInstanceGreenSecondValue = 255;
+                        NineSliceInstanceGreenSecondValue = 128;
                         setNineSliceInstanceRedSecondValue = true;
-                        NineSliceInstanceRedSecondValue = 255;
+                        NineSliceInstanceRedSecondValue = 128;
                         setTextInstanceCurrentColorCategoryStateSecondValue = true;
                         TextInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                         break;
@@ -757,13 +757,13 @@
                             this.HighlightRectangle.Visible = false;
                         }
                         setNineSliceInstanceBlueSecondValue = true;
-                        NineSliceInstanceBlueSecondValue = 255;
+                        NineSliceInstanceBlueSecondValue = 170;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenSecondValue = true;
-                        NineSliceInstanceGreenSecondValue = 255;
+                        NineSliceInstanceGreenSecondValue = 205;
                         setNineSliceInstanceRedSecondValue = true;
-                        NineSliceInstanceRedSecondValue = 255;
+                        NineSliceInstanceRedSecondValue = 102;
                         setTextInstanceCurrentColorCategoryStateSecondValue = true;
                         TextInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
                         break;
@@ -773,13 +773,13 @@
                             this.HighlightRectangle.Visible = false;
                         }
                         setNineSliceInstanceBlueSecondValue = true;
-                        NineSliceInstanceBlueSecondValue = 200;
+                        NineSliceInstanceBlueSecondValue = 128;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenSecondValue = true;
-                        NineSliceInstanceGreenSecondValue = 200;
+                        NineSliceInstanceGreenSecondValue = 128;
                         setNineSliceInstanceRedSecondValue = true;
-                        NineSliceInstanceRedSecondValue = 200;
+                        NineSliceInstanceRedSecondValue = 128;
                         setTextInstanceCurrentColorCategoryStateSecondValue = true;
                         TextInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
                         break;
@@ -789,13 +789,13 @@
                             this.HighlightRectangle.Visible = true;
                         }
                         setNineSliceInstanceBlueSecondValue = true;
-                        NineSliceInstanceBlueSecondValue = 255;
+                        NineSliceInstanceBlueSecondValue = 170;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Yellow;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenSecondValue = true;
-                        NineSliceInstanceGreenSecondValue = 255;
+                        NineSliceInstanceGreenSecondValue = 205;
                         setNineSliceInstanceRedSecondValue = true;
-                        NineSliceInstanceRedSecondValue = 255;
+                        NineSliceInstanceRedSecondValue = 102;
                         setTextInstanceCurrentColorCategoryStateSecondValue = true;
                         TextInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
                         break;
@@ -807,7 +807,7 @@
                         setNineSliceInstanceBlueSecondValue = true;
                         NineSliceInstanceBlueSecondValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Blue;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setNineSliceInstanceGreenSecondValue = true;
                         NineSliceInstanceGreenSecondValue = 255;
                         setNineSliceInstanceRedSecondValue = true;
@@ -821,13 +821,13 @@
                             this.HighlightRectangle.Visible = true;
                         }
                         setNineSliceInstanceBlueSecondValue = true;
-                        NineSliceInstanceBlueSecondValue = 255;
+                        NineSliceInstanceBlueSecondValue = 128;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenSecondValue = true;
-                        NineSliceInstanceGreenSecondValue = 255;
+                        NineSliceInstanceGreenSecondValue = 128;
                         setNineSliceInstanceRedSecondValue = true;
-                        NineSliceInstanceRedSecondValue = 255;
+                        NineSliceInstanceRedSecondValue = 128;
                         setTextInstanceCurrentColorCategoryStateSecondValue = true;
                         TextInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                         break;
@@ -2056,7 +2056,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Blue",
                             Type = "int",
-                            Value = NineSliceInstance.Blue + 255
+                            Value = NineSliceInstance.Blue + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2072,7 +2072,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Green",
                             Type = "int",
-                            Value = NineSliceInstance.Green + 255
+                            Value = NineSliceInstance.Green + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2080,7 +2080,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Red",
                             Type = "int",
-                            Value = NineSliceInstance.Red + 255
+                            Value = NineSliceInstance.Red + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2106,7 +2106,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Blue",
                             Type = "int",
-                            Value = NineSliceInstance.Blue + 255
+                            Value = NineSliceInstance.Blue + 170
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2122,7 +2122,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Green",
                             Type = "int",
-                            Value = NineSliceInstance.Green + 255
+                            Value = NineSliceInstance.Green + 205
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2130,7 +2130,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Red",
                             Type = "int",
-                            Value = NineSliceInstance.Red + 255
+                            Value = NineSliceInstance.Red + 102
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2156,7 +2156,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Blue",
                             Type = "int",
-                            Value = NineSliceInstance.Blue + 200
+                            Value = NineSliceInstance.Blue + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2172,7 +2172,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Green",
                             Type = "int",
-                            Value = NineSliceInstance.Green + 200
+                            Value = NineSliceInstance.Green + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2180,7 +2180,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Red",
                             Type = "int",
-                            Value = NineSliceInstance.Red + 200
+                            Value = NineSliceInstance.Red + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2206,7 +2206,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Blue",
                             Type = "int",
-                            Value = NineSliceInstance.Blue + 255
+                            Value = NineSliceInstance.Blue + 170
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2222,7 +2222,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Green",
                             Type = "int",
-                            Value = NineSliceInstance.Green + 255
+                            Value = NineSliceInstance.Green + 205
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2230,7 +2230,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Red",
                             Type = "int",
-                            Value = NineSliceInstance.Red + 255
+                            Value = NineSliceInstance.Red + 102
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2306,7 +2306,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Blue",
                             Type = "int",
-                            Value = NineSliceInstance.Blue + 255
+                            Value = NineSliceInstance.Blue + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2322,7 +2322,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Green",
                             Type = "int",
-                            Value = NineSliceInstance.Green + 255
+                            Value = NineSliceInstance.Green + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2330,7 +2330,7 @@
                             SetsValue = true,
                             Name = "NineSliceInstance.Red",
                             Type = "int",
-                            Value = NineSliceInstance.Red + 255
+                            Value = NineSliceInstance.Red + 128
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

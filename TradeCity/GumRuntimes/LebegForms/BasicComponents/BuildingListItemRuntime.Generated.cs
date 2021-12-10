@@ -34,6 +34,8 @@
                     {
                         case  VariableState.Default:
                             TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
+                            BuildButton.CurrentButtonCategoryState = JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime.ButtonCategory.Enabled;
+                            BuildButton.CurrentVariableState = JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime.VariableState.Default;
                             Height = 72f;
                             Width = 0f;
                             WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
@@ -82,10 +84,16 @@
                             ResourceList.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                             ResourceList.Width = 4f;
                             ResourceList.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
-                            ResourceList.X = -4f;
+                            ResourceList.X = -136f;
                             ResourceList.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             ResourceList.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             ResourceList.Y = 4f;
+                            BuildButton.Text = "Build";
+                            BuildButton.Width = 128f;
+                            BuildButton.X = -4f;
+                            BuildButton.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            BuildButton.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            BuildButton.Y = 12f;
                             break;
                     }
                 }
@@ -155,6 +163,26 @@
                 bool setBackgroundInstanceYSecondValue = false;
                 float BackgroundInstanceYFirstValue= 0;
                 float BackgroundInstanceYSecondValue= 0;
+                bool setBuildButtonCurrentButtonCategoryStateFirstValue = false;
+                bool setBuildButtonCurrentButtonCategoryStateSecondValue = false;
+                JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime.ButtonCategory BuildButtonCurrentButtonCategoryStateFirstValue= JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime.ButtonCategory.Enabled;
+                JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime.ButtonCategory BuildButtonCurrentButtonCategoryStateSecondValue= JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime.ButtonCategory.Enabled;
+                bool setBuildButtonCurrentVariableStateFirstValue = false;
+                bool setBuildButtonCurrentVariableStateSecondValue = false;
+                JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime.VariableState BuildButtonCurrentVariableStateFirstValue= JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime.VariableState.Default;
+                JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime.VariableState BuildButtonCurrentVariableStateSecondValue= JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime.VariableState.Default;
+                bool setBuildButtonWidthFirstValue = false;
+                bool setBuildButtonWidthSecondValue = false;
+                float BuildButtonWidthFirstValue= 0;
+                float BuildButtonWidthSecondValue= 0;
+                bool setBuildButtonXFirstValue = false;
+                bool setBuildButtonXSecondValue = false;
+                float BuildButtonXFirstValue= 0;
+                float BuildButtonXSecondValue= 0;
+                bool setBuildButtonYFirstValue = false;
+                bool setBuildButtonYSecondValue = false;
+                float BuildButtonYFirstValue= 0;
+                float BuildButtonYSecondValue= 0;
                 bool setBuildingSpriteHeightFirstValue = false;
                 bool setBuildingSpriteHeightSecondValue = false;
                 float BuildingSpriteHeightFirstValue= 0;
@@ -266,6 +294,28 @@
                         {
                             this.BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
+                        setBuildButtonCurrentButtonCategoryStateFirstValue = true;
+                        BuildButtonCurrentButtonCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime.ButtonCategory.Enabled;
+                        setBuildButtonCurrentVariableStateFirstValue = true;
+                        BuildButtonCurrentVariableStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime.VariableState.Default;
+                        if (interpolationValue < 1)
+                        {
+                            this.BuildButton.Text = "Build";
+                        }
+                        setBuildButtonWidthFirstValue = true;
+                        BuildButtonWidthFirstValue = 128f;
+                        setBuildButtonXFirstValue = true;
+                        BuildButtonXFirstValue = -4f;
+                        if (interpolationValue < 1)
+                        {
+                            this.BuildButton.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.BuildButton.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setBuildButtonYFirstValue = true;
+                        BuildButtonYFirstValue = 12f;
                         setBuildingSpriteHeightFirstValue = true;
                         BuildingSpriteHeightFirstValue = 64f;
                         if (interpolationValue < 1)
@@ -341,7 +391,7 @@
                             this.ResourceList.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                         }
                         setResourceListXFirstValue = true;
-                        ResourceListXFirstValue = -4f;
+                        ResourceListXFirstValue = -136f;
                         if (interpolationValue < 1)
                         {
                             this.ResourceList.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
@@ -437,6 +487,28 @@
                         {
                             this.BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
+                        setBuildButtonCurrentButtonCategoryStateSecondValue = true;
+                        BuildButtonCurrentButtonCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime.ButtonCategory.Enabled;
+                        setBuildButtonCurrentVariableStateSecondValue = true;
+                        BuildButtonCurrentVariableStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime.VariableState.Default;
+                        if (interpolationValue >= 1)
+                        {
+                            this.BuildButton.Text = "Build";
+                        }
+                        setBuildButtonWidthSecondValue = true;
+                        BuildButtonWidthSecondValue = 128f;
+                        setBuildButtonXSecondValue = true;
+                        BuildButtonXSecondValue = -4f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.BuildButton.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.BuildButton.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setBuildButtonYSecondValue = true;
+                        BuildButtonYSecondValue = 12f;
                         setBuildingSpriteHeightSecondValue = true;
                         BuildingSpriteHeightSecondValue = 64f;
                         if (interpolationValue >= 1)
@@ -512,7 +584,7 @@
                             this.ResourceList.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                         }
                         setResourceListXSecondValue = true;
-                        ResourceListXSecondValue = -4f;
+                        ResourceListXSecondValue = -136f;
                         if (interpolationValue >= 1)
                         {
                             this.ResourceList.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
@@ -593,6 +665,26 @@
                 if (setBackgroundInstanceYFirstValue && setBackgroundInstanceYSecondValue)
                 {
                     BackgroundInstance.Y = BackgroundInstanceYFirstValue * (1 - interpolationValue) + BackgroundInstanceYSecondValue * interpolationValue;
+                }
+                if (setBuildButtonCurrentButtonCategoryStateFirstValue && setBuildButtonCurrentButtonCategoryStateSecondValue)
+                {
+                    BuildButton.InterpolateBetween(BuildButtonCurrentButtonCategoryStateFirstValue, BuildButtonCurrentButtonCategoryStateSecondValue, interpolationValue);
+                }
+                if (setBuildButtonCurrentVariableStateFirstValue && setBuildButtonCurrentVariableStateSecondValue)
+                {
+                    BuildButton.InterpolateBetween(BuildButtonCurrentVariableStateFirstValue, BuildButtonCurrentVariableStateSecondValue, interpolationValue);
+                }
+                if (setBuildButtonWidthFirstValue && setBuildButtonWidthSecondValue)
+                {
+                    BuildButton.Width = BuildButtonWidthFirstValue * (1 - interpolationValue) + BuildButtonWidthSecondValue * interpolationValue;
+                }
+                if (setBuildButtonXFirstValue && setBuildButtonXSecondValue)
+                {
+                    BuildButton.X = BuildButtonXFirstValue * (1 - interpolationValue) + BuildButtonXSecondValue * interpolationValue;
+                }
+                if (setBuildButtonYFirstValue && setBuildButtonYSecondValue)
+                {
+                    BuildButton.Y = BuildButtonYFirstValue * (1 - interpolationValue) + BuildButtonYSecondValue * interpolationValue;
                 }
                 if (setBuildingSpriteHeightFirstValue && setBuildingSpriteHeightSecondValue)
                 {
@@ -960,6 +1052,7 @@
             {
                 base.StopAnimations();
                 BackgroundInstance.StopAnimations();
+                BuildButton.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -1396,6 +1489,70 @@
                             Value = ResourceList.Y
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.ButtonCategoryState",
+                            Type = "ButtonCategory",
+                            Value = BuildButton.CurrentButtonCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.State",
+                            Type = "State",
+                            Value = BuildButton.CurrentVariableState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Text",
+                            Type = "string",
+                            Value = BuildButton.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Width",
+                            Type = "float",
+                            Value = BuildButton.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.X",
+                            Type = "float",
+                            Value = BuildButton.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = BuildButton.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.X Units",
+                            Type = "PositionUnitType",
+                            Value = BuildButton.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Y",
+                            Type = "float",
+                            Value = BuildButton.Y
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -1803,7 +1960,7 @@
                             SetsValue = true,
                             Name = "ResourceList.X",
                             Type = "float",
-                            Value = ResourceList.X + -4f
+                            Value = ResourceList.X + -136f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1828,6 +1985,70 @@
                             Name = "ResourceList.Y",
                             Type = "float",
                             Value = ResourceList.Y + 4f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.ButtonCategoryState",
+                            Type = "ButtonCategory",
+                            Value = BuildButton.CurrentButtonCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.State",
+                            Type = "State",
+                            Value = BuildButton.CurrentVariableState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Text",
+                            Type = "string",
+                            Value = BuildButton.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Width",
+                            Type = "float",
+                            Value = BuildButton.Width + 128f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.X",
+                            Type = "float",
+                            Value = BuildButton.X + -4f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = BuildButton.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.X Units",
+                            Type = "PositionUnitType",
+                            Value = BuildButton.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Y",
+                            Type = "float",
+                            Value = BuildButton.Y + 12f
                         }
                         );
                         break;
@@ -2117,6 +2338,7 @@
             public JHP4SD.GumRuntimes.RectangleRuntime RectangleInstance { get; set; }
             public JHP4SD.GumRuntimes.SpriteRuntime BuildingSprite { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime<JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime> ResourceList { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime BuildButton { get; set; }
             public Microsoft.Xna.Framework.Graphics.Texture2D BuildingSpriteSourceFile
             {
                 get
@@ -2147,6 +2369,7 @@
                     }
                 }
             }
+            public event FlatRedBall.Gui.WindowEvent BuildButtonClick;
             public event System.EventHandler BuildingSpriteSourceFileChanged;
             public event System.EventHandler BuildingNameChanged;
             public BuildingListItemRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
@@ -2181,6 +2404,8 @@
                 RectangleInstance = this.GetGraphicalUiElementByName("RectangleInstance") as JHP4SD.GumRuntimes.RectangleRuntime;
                 BuildingSprite = this.GetGraphicalUiElementByName("BuildingSprite") as JHP4SD.GumRuntimes.SpriteRuntime;
                 ResourceList = this.GetGraphicalUiElementByName("ResourceList") as JHP4SD.GumRuntimes.ContainerRuntime<JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime>;
+                BuildButton = this.GetGraphicalUiElementByName("BuildButton") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
+                BuildButton.Click += (unused) => BuildButtonClick?.Invoke(this);
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new FlatRedBall.Forms.Controls.ListBoxItem(this);

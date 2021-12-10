@@ -693,6 +693,83 @@
         "ElementType": "Components",
         "EventType": 6,
         "TimestampUtc": "2021-12-10T18:53:35.364733Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.ButtonInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-10T18:54:19.6438172Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.Build",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.ButtonInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-10T18:54:25.3700616Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.Build",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.ButtonInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-10T18:54:25.3710593Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.Build",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.ButtonInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-10T18:54:25.3720568Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.Build",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.ButtonInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-10T18:54:25.3740532Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.Build",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.ButtonInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-10T18:54:25.3750491Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.BuildButton",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.Build",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-10T18:54:28.2258568Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.BuildButton",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.Build",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-10T18:54:28.226854Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.BuildButton",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.Build",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-10T18:54:28.2278513Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.BuildButton",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.Build",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-10T18:54:28.2288486Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.BuildButton",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.Build",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-10T18:54:28.2298458Z"
       }
     ],
     "torok": []

@@ -6,7 +6,7 @@ namespace JHP4SD.GumRuntimes.DefaultForms
 {
     public partial class CityMenuTabRuntime
     {
-        partial void CustomInitialize () 
+        void CustomInitialize () 
         {
         }
     }

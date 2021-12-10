@@ -8,7 +8,7 @@ namespace JHP4SD.GumRuntimes
     {
         partial void CustomInitialize () 
         {
-           
+
         }
     }
 }

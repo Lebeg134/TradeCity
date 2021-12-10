@@ -68,6 +68,9 @@
                             TextInstance.Y = 0f;
                             TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            TabMenuInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            TabMenuInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            TabMenuInstance.Y = 72f;
                             break;
                     }
                 }
@@ -118,6 +121,10 @@
                 bool setSpriteInstanceYSecondValue = false;
                 float SpriteInstanceYFirstValue= 0;
                 float SpriteInstanceYSecondValue= 0;
+                bool setTabMenuInstanceYFirstValue = false;
+                bool setTabMenuInstanceYSecondValue = false;
+                float TabMenuInstanceYFirstValue= 0;
+                float TabMenuInstanceYSecondValue= 0;
                 bool setTextInstanceBlueFirstValue = false;
                 bool setTextInstanceBlueSecondValue = false;
                 int TextInstanceBlueFirstValue= 0;
@@ -243,6 +250,16 @@
                         {
                             this.SpriteInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
+                        if (interpolationValue < 1)
+                        {
+                            this.TabMenuInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.TabMenuInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setTabMenuInstanceYFirstValue = true;
+                        TabMenuInstanceYFirstValue = 72f;
                         setTextInstanceBlueFirstValue = true;
                         TextInstanceBlueFirstValue = 0;
                         setTextInstanceFontSizeFirstValue = true;
@@ -386,6 +403,16 @@
                         {
                             this.SpriteInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
+                        if (interpolationValue >= 1)
+                        {
+                            this.TabMenuInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.TabMenuInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setTabMenuInstanceYSecondValue = true;
+                        TabMenuInstanceYSecondValue = 72f;
                         setTextInstanceBlueSecondValue = true;
                         TextInstanceBlueSecondValue = 0;
                         setTextInstanceFontSizeSecondValue = true;
@@ -476,6 +503,10 @@
                 if (setSpriteInstanceYFirstValue && setSpriteInstanceYSecondValue)
                 {
                     SpriteInstance.Y = SpriteInstanceYFirstValue * (1 - interpolationValue) + SpriteInstanceYSecondValue * interpolationValue;
+                }
+                if (setTabMenuInstanceYFirstValue && setTabMenuInstanceYSecondValue)
+                {
+                    TabMenuInstance.Y = TabMenuInstanceYFirstValue * (1 - interpolationValue) + TabMenuInstanceYSecondValue * interpolationValue;
                 }
                 if (setTextInstanceBlueFirstValue && setTextInstanceBlueSecondValue)
                 {
@@ -584,6 +615,7 @@
             public override void StopAnimations () 
             {
                 base.StopAnimations();
+                TabMenuInstance.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -940,6 +972,30 @@
                             Value = TextInstance.YUnits
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TabMenuInstance.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = TabMenuInstance.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TabMenuInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = TabMenuInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TabMenuInstance.Y",
+                            Type = "float",
+                            Value = TabMenuInstance.Y
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -1294,6 +1350,30 @@
                             Value = TextInstance.YUnits
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TabMenuInstance.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = TabMenuInstance.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TabMenuInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = TabMenuInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TabMenuInstance.Y",
+                            Type = "float",
+                            Value = TabMenuInstance.Y + 72f
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -1316,6 +1396,7 @@
             public JHP4SD.GumRuntimes.SpriteRuntime SpriteInstance { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime PaceholderText { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime TextInstance { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TabMenuRuntime TabMenuInstance { get; set; }
             public CityGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -1345,6 +1426,7 @@
                 SpriteInstance = this.GetGraphicalUiElementByName("SpriteInstance") as JHP4SD.GumRuntimes.SpriteRuntime;
                 PaceholderText = this.GetGraphicalUiElementByName("PaceholderText") as JHP4SD.GumRuntimes.TextRuntime;
                 TextInstance = this.GetGraphicalUiElementByName("TextInstance") as JHP4SD.GumRuntimes.TextRuntime;
+                TabMenuInstance = this.GetGraphicalUiElementByName("TabMenuInstance") as JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TabMenuRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Screens.CityGumForms(this);

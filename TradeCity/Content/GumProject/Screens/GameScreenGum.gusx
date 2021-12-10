@@ -28,24 +28,6 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>string</Type>
-      <Name>GibMunney.Text</Name>
-      <Value xsi:type="xsd:string">Give Munney</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>GibMunney.X</Name>
-      <Value xsi:type="xsd:float">1618</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>GibMunney.Y</Name>
-      <Value xsi:type="xsd:float">151</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>float</Type>
       <Name>DialogBoxInstance.Height</Name>
       <Value xsi:type="xsd:float">-10</Value>
@@ -126,7 +108,25 @@
       <IsFile>true</IsFile>
       <Type>string</Type>
       <Name>ElectricityDisplay.SpriteInstanceSourceFile</Name>
-      <Value xsi:type="xsd:string">../GlobalContent/Resources/electric.png</Value>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/ResourceIcons/electric.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>GibMunney.Text</Name>
+      <Value xsi:type="xsd:string">Give Munney</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>GibMunney.X</Name>
+      <Value xsi:type="xsd:float">1086</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>GibMunney.Y</Name>
+      <Value xsi:type="xsd:float">158</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -144,13 +144,13 @@
     <Variable>
       <Type>float</Type>
       <Name>InfiniteMoneyButton.X</Name>
-      <Value xsi:type="xsd:float">1643</Value>
+      <Value xsi:type="xsd:float">1085</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
       <Name>InfiniteMoneyButton.Y</Name>
-      <Value xsi:type="xsd:float">86</Value>
+      <Value xsi:type="xsd:float">94</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -241,7 +241,7 @@
       <IsFile>true</IsFile>
       <Type>string</Type>
       <Name>IronDisplay.SpriteInstanceSourceFile</Name>
-      <Value xsi:type="xsd:string">../GlobalContent/Resources/ore.png</Value>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/ResourceIcons/ore.png</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -284,7 +284,7 @@
       <IsFile>true</IsFile>
       <Type>string</Type>
       <Name>MoneyDisplay.SpriteInstanceSourceFile</Name>
-      <Value xsi:type="xsd:string">../GlobalContent/Resources/money-stack.png</Value>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/ResourceIcons/money-stack.png</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -494,7 +494,7 @@
       <IsFile>true</IsFile>
       <Type>string</Type>
       <Name>SteelDisplay.SpriteInstanceSourceFile</Name>
-      <Value xsi:type="xsd:string">../GlobalContent/Resources/i-beam.png</Value>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/ResourceIcons/i-beam.png</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -507,7 +507,7 @@
       <IsFile>true</IsFile>
       <Type>string</Type>
       <Name>WaterDisplay.SpriteInstanceSourceFile</Name>
-      <Value xsi:type="xsd:string">../GlobalContent/Resources/water-drop.png</Value>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/ResourceIcons/water-drop.png</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -520,7 +520,7 @@
       <IsFile>true</IsFile>
       <Type>string</Type>
       <Name>WoodDisplay.SpriteInstanceSourceFile</Name>
-      <Value xsi:type="xsd:string">../GlobalContent/Resources/log.png</Value>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/ResourceIcons/log.png</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -538,7 +538,7 @@
       <IsFile>true</IsFile>
       <Type>string</Type>
       <Name>WorkforceDisplay.SpriteInstanceSourceFile</Name>
-      <Value xsi:type="xsd:string">../GlobalContent/Resources/person.png</Value>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/ResourceIcons/person.png</Value>
       <SetsValue>true</SetsValue>
     </Variable>
   </State>

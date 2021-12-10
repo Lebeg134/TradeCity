@@ -92,24 +92,24 @@
                             Resources.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                             Resources.X = 16f;
                             Resources.Y = 16f;
-                            SetProperty("WorkforceDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/person.png");
-                            SetProperty("ElectricityDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/electric.png");
-                            SetProperty("WoodDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/log.png");
-                            SetProperty("IronDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ore.png");
-                            SetProperty("SteelDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/i-beam.png");
-                            SetProperty("WaterDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/water-drop.png");
-                            SetProperty("MoneyDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/money-stack.png");
+                            SetProperty("WorkforceDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/person.png");
+                            SetProperty("ElectricityDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/electric.png");
+                            SetProperty("WoodDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/log.png");
+                            SetProperty("IronDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/ore.png");
+                            SetProperty("SteelDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/i-beam.png");
+                            SetProperty("WaterDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/water-drop.png");
+                            SetProperty("MoneyDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/money-stack.png");
                             MoneyDisplay.X = -16f;
                             MoneyDisplay.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             MoneyDisplay.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             MoneyDisplay.Y = 16f;
                             InfiniteMoneyButton.FlipHorizontal = true;
                             InfiniteMoneyButton.Text = "Gimmie Money";
-                            InfiniteMoneyButton.X = 1643f;
-                            InfiniteMoneyButton.Y = 86f;
+                            InfiniteMoneyButton.X = 1085f;
+                            InfiniteMoneyButton.Y = 94f;
                             GibMunney.Text = "Give Munney";
-                            GibMunney.X = 1618f;
-                            GibMunney.Y = 151f;
+                            GibMunney.X = 1086f;
+                            GibMunney.Y = 158f;
                             break;
                     }
                 }
@@ -333,16 +333,16 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            SetProperty("ElectricityDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/electric.png");
+                            SetProperty("ElectricityDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/electric.png");
                         }
                         if (interpolationValue < 1)
                         {
                             this.GibMunney.Text = "Give Munney";
                         }
                         setGibMunneyXFirstValue = true;
-                        GibMunneyXFirstValue = 1618f;
+                        GibMunneyXFirstValue = 1086f;
                         setGibMunneyYFirstValue = true;
-                        GibMunneyYFirstValue = 151f;
+                        GibMunneyYFirstValue = 158f;
                         if (interpolationValue < 1)
                         {
                             this.InfiniteMoneyButton.FlipHorizontal = true;
@@ -352,9 +352,9 @@
                             this.InfiniteMoneyButton.Text = "Gimmie Money";
                         }
                         setInfiniteMoneyButtonXFirstValue = true;
-                        InfiniteMoneyButtonXFirstValue = 1643f;
+                        InfiniteMoneyButtonXFirstValue = 1085f;
                         setInfiniteMoneyButtonYFirstValue = true;
-                        InfiniteMoneyButtonYFirstValue = 86f;
+                        InfiniteMoneyButtonYFirstValue = 94f;
                         setInfoBarBlueFirstValue = true;
                         InfoBarBlueFirstValue = 255;
                         setInfoBarCurrentColorCategoryStateFirstValue = true;
@@ -397,7 +397,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            SetProperty("IronDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ore.png");
+                            SetProperty("IronDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/ore.png");
                         }
                         setListBoxInstanceHeightFirstValue = true;
                         ListBoxInstanceHeightFirstValue = -280f;
@@ -415,7 +415,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            SetProperty("MoneyDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/money-stack.png");
+                            SetProperty("MoneyDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/money-stack.png");
                         }
                         setMoneyDisplayXFirstValue = true;
                         MoneyDisplayXFirstValue = -16f;
@@ -515,7 +515,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            SetProperty("SteelDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/i-beam.png");
+                            SetProperty("SteelDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/i-beam.png");
                         }
                         if (interpolationValue < 1)
                         {
@@ -523,7 +523,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            SetProperty("WaterDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/water-drop.png");
+                            SetProperty("WaterDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/water-drop.png");
                         }
                         if (interpolationValue < 1)
                         {
@@ -531,7 +531,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            SetProperty("WoodDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/log.png");
+                            SetProperty("WoodDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/log.png");
                         }
                         if (interpolationValue < 1)
                         {
@@ -539,7 +539,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            SetProperty("WorkforceDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/person.png");
+                            SetProperty("WorkforceDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/person.png");
                         }
                         break;
                 }
@@ -604,16 +604,16 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            SetProperty("ElectricityDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/electric.png");
+                            SetProperty("ElectricityDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/electric.png");
                         }
                         if (interpolationValue >= 1)
                         {
                             this.GibMunney.Text = "Give Munney";
                         }
                         setGibMunneyXSecondValue = true;
-                        GibMunneyXSecondValue = 1618f;
+                        GibMunneyXSecondValue = 1086f;
                         setGibMunneyYSecondValue = true;
-                        GibMunneyYSecondValue = 151f;
+                        GibMunneyYSecondValue = 158f;
                         if (interpolationValue >= 1)
                         {
                             this.InfiniteMoneyButton.FlipHorizontal = true;
@@ -623,9 +623,9 @@
                             this.InfiniteMoneyButton.Text = "Gimmie Money";
                         }
                         setInfiniteMoneyButtonXSecondValue = true;
-                        InfiniteMoneyButtonXSecondValue = 1643f;
+                        InfiniteMoneyButtonXSecondValue = 1085f;
                         setInfiniteMoneyButtonYSecondValue = true;
-                        InfiniteMoneyButtonYSecondValue = 86f;
+                        InfiniteMoneyButtonYSecondValue = 94f;
                         setInfoBarBlueSecondValue = true;
                         InfoBarBlueSecondValue = 255;
                         setInfoBarCurrentColorCategoryStateSecondValue = true;
@@ -668,7 +668,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            SetProperty("IronDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ore.png");
+                            SetProperty("IronDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/ore.png");
                         }
                         setListBoxInstanceHeightSecondValue = true;
                         ListBoxInstanceHeightSecondValue = -280f;
@@ -686,7 +686,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            SetProperty("MoneyDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/money-stack.png");
+                            SetProperty("MoneyDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/money-stack.png");
                         }
                         setMoneyDisplayXSecondValue = true;
                         MoneyDisplayXSecondValue = -16f;
@@ -786,7 +786,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            SetProperty("SteelDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/i-beam.png");
+                            SetProperty("SteelDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/i-beam.png");
                         }
                         if (interpolationValue >= 1)
                         {
@@ -794,7 +794,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            SetProperty("WaterDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/water-drop.png");
+                            SetProperty("WaterDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/water-drop.png");
                         }
                         if (interpolationValue >= 1)
                         {
@@ -802,7 +802,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            SetProperty("WoodDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/log.png");
+                            SetProperty("WoodDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/log.png");
                         }
                         if (interpolationValue >= 1)
                         {
@@ -810,7 +810,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            SetProperty("WorkforceDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/person.png");
+                            SetProperty("WorkforceDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/person.png");
                         }
                         break;
                 }
@@ -2405,7 +2405,7 @@
                             SetsValue = true,
                             Name = "InfiniteMoneyButton.X",
                             Type = "float",
-                            Value = InfiniteMoneyButton.X + 1643f
+                            Value = InfiniteMoneyButton.X + 1085f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2413,7 +2413,7 @@
                             SetsValue = true,
                             Name = "InfiniteMoneyButton.Y",
                             Type = "float",
-                            Value = InfiniteMoneyButton.Y + 86f
+                            Value = InfiniteMoneyButton.Y + 94f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2429,7 +2429,7 @@
                             SetsValue = true,
                             Name = "GibMunney.X",
                             Type = "float",
-                            Value = GibMunney.X + 1618f
+                            Value = GibMunney.X + 1086f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2437,7 +2437,7 @@
                             SetsValue = true,
                             Name = "GibMunney.Y",
                             Type = "float",
-                            Value = GibMunney.Y + 151f
+                            Value = GibMunney.Y + 158f
                         }
                         );
                         break;

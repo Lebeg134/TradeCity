@@ -37,12 +37,14 @@
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/TreeViewToggleButton", typeof(JHP4SD.GumRuntimes.DefaultForms.TreeViewToggleButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/UserControl", typeof(JHP4SD.GumRuntimes.DefaultForms.UserControlRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/BackButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.BackButtonRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/CityMenuTab", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.CityMenuTabRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/ExitButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.ExitButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/MainMenuButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.MainMenuButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/PlayButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.PlayButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/ResourceDisplay", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/TabButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.TabButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/ComplexComponents/ScreenSelector", typeof(JHP4SD.GumRuntimes.LebegForms.ComplexComponents.ScreenSelectorRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/ComplexComponents/TabMenu", typeof(JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TabMenuRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/ComplexComponents/Topic", typeof(JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TopicRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("CityGum", typeof(JHP4SD.GumRuntimes.CityGumRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("GameScreenGum", typeof(JHP4SD.GumRuntimes.GameScreenGumRuntime));
@@ -73,6 +75,7 @@
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(FlatRedBall.Forms.Controls.UserControl)] = typeof(JHP4SD.GumRuntimes.DefaultForms.UserControlRuntime);
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms)] = typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime);
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(JHP4SD.FormsControls.Components.LebegForms.ComplexComponents.ScreenSelectorForms)] = typeof(JHP4SD.GumRuntimes.LebegForms.ComplexComponents.ScreenSelectorRuntime);
+                FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(JHP4SD.FormsControls.Components.LebegForms.ComplexComponents.TabMenuForms)] = typeof(JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TabMenuRuntime);
             }
         }
     }

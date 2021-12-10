@@ -62,7 +62,7 @@
     <Variable>
       <Type>float</Type>
       <Name>ChangeIndicatorDown.X</Name>
-      <Value xsi:type="xsd:float">40</Value>
+      <Value xsi:type="xsd:float">140</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -129,7 +129,7 @@
     <Variable>
       <Type>float</Type>
       <Name>ChangeIndicatorUp.X</Name>
-      <Value xsi:type="xsd:float">40</Value>
+      <Value xsi:type="xsd:float">140</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -159,25 +159,25 @@
     <Variable>
       <Type>float</Type>
       <Name>LabelInstance.Width</Name>
-      <Value xsi:type="xsd:float">100</Value>
+      <Value xsi:type="xsd:float">92</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
       <Name>LabelInstance.X</Name>
-      <Value xsi:type="xsd:float">0</Value>
+      <Value xsi:type="xsd:float">48</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>HorizontalAlignment</Type>
       <Name>LabelInstance.X Origin</Name>
-      <Value xsi:type="xsd:int">2</Value>
+      <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>PositionUnitType</Type>
       <Name>LabelInstance.X Units</Name>
-      <Value xsi:type="xsd:int">4</Value>
+      <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

@@ -30,10 +30,10 @@
                             XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
                             XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                             LabelInstance.Height = 40f;
-                            LabelInstance.Width = 100f;
-                            LabelInstance.X = 0f;
-                            LabelInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
-                            LabelInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            LabelInstance.Width = 92f;
+                            LabelInstance.X = 48f;
+                            LabelInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                            LabelInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                             LabelInstance.Y = 0f;
                             SpriteInstance.Height = 40f;
                             SpriteInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
@@ -49,7 +49,7 @@
                             ChangeIndicatorUp.Visible = false;
                             ChangeIndicatorUp.Width = 40f;
                             ChangeIndicatorUp.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
-                            ChangeIndicatorUp.X = 40f;
+                            ChangeIndicatorUp.X = 140f;
                             ChangeIndicatorUp.Y = 0f;
                             ChangeIndicatorDown.Blue = 0;
                             ChangeIndicatorDown.Green = 0;
@@ -60,7 +60,7 @@
                             ChangeIndicatorDown.Visible = false;
                             ChangeIndicatorDown.Width = 40f;
                             ChangeIndicatorDown.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
-                            ChangeIndicatorDown.X = 40f;
+                            ChangeIndicatorDown.X = 140f;
                             ChangeIndicatorDown.Y = 0f;
                             break;
                     }
@@ -194,7 +194,7 @@
                             this.ChangeIndicatorDown.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
                         setChangeIndicatorDownXFirstValue = true;
-                        ChangeIndicatorDownXFirstValue = 40f;
+                        ChangeIndicatorDownXFirstValue = 140f;
                         setChangeIndicatorDownYFirstValue = true;
                         ChangeIndicatorDownYFirstValue = 0f;
                         setChangeIndicatorUpBlueFirstValue = true;
@@ -224,7 +224,7 @@
                             this.ChangeIndicatorUp.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
                         setChangeIndicatorUpXFirstValue = true;
-                        ChangeIndicatorUpXFirstValue = 40f;
+                        ChangeIndicatorUpXFirstValue = 140f;
                         setChangeIndicatorUpYFirstValue = true;
                         ChangeIndicatorUpYFirstValue = 0f;
                         setHeightFirstValue = true;
@@ -232,16 +232,16 @@
                         setLabelInstanceHeightFirstValue = true;
                         LabelInstanceHeightFirstValue = 40f;
                         setLabelInstanceWidthFirstValue = true;
-                        LabelInstanceWidthFirstValue = 100f;
+                        LabelInstanceWidthFirstValue = 92f;
                         setLabelInstanceXFirstValue = true;
-                        LabelInstanceXFirstValue = 0f;
+                        LabelInstanceXFirstValue = 48f;
                         if (interpolationValue < 1)
                         {
-                            this.LabelInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            this.LabelInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.LabelInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            this.LabelInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
                         setLabelInstanceYFirstValue = true;
                         LabelInstanceYFirstValue = 0f;
@@ -303,7 +303,7 @@
                             this.ChangeIndicatorDown.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
                         setChangeIndicatorDownXSecondValue = true;
-                        ChangeIndicatorDownXSecondValue = 40f;
+                        ChangeIndicatorDownXSecondValue = 140f;
                         setChangeIndicatorDownYSecondValue = true;
                         ChangeIndicatorDownYSecondValue = 0f;
                         setChangeIndicatorUpBlueSecondValue = true;
@@ -333,7 +333,7 @@
                             this.ChangeIndicatorUp.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
                         setChangeIndicatorUpXSecondValue = true;
-                        ChangeIndicatorUpXSecondValue = 40f;
+                        ChangeIndicatorUpXSecondValue = 140f;
                         setChangeIndicatorUpYSecondValue = true;
                         ChangeIndicatorUpYSecondValue = 0f;
                         setHeightSecondValue = true;
@@ -341,16 +341,16 @@
                         setLabelInstanceHeightSecondValue = true;
                         LabelInstanceHeightSecondValue = 40f;
                         setLabelInstanceWidthSecondValue = true;
-                        LabelInstanceWidthSecondValue = 100f;
+                        LabelInstanceWidthSecondValue = 92f;
                         setLabelInstanceXSecondValue = true;
-                        LabelInstanceXSecondValue = 0f;
+                        LabelInstanceXSecondValue = 48f;
                         if (interpolationValue >= 1)
                         {
-                            this.LabelInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            this.LabelInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.LabelInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            this.LabelInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
                         setLabelInstanceYSecondValue = true;
                         LabelInstanceYSecondValue = 0f;
@@ -914,7 +914,7 @@
                             SetsValue = true,
                             Name = "LabelInstance.Width",
                             Type = "float",
-                            Value = LabelInstance.Width + 100f
+                            Value = LabelInstance.Width + 92f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -922,7 +922,7 @@
                             SetsValue = true,
                             Name = "LabelInstance.X",
                             Type = "float",
-                            Value = LabelInstance.X + 0f
+                            Value = LabelInstance.X + 48f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1066,7 +1066,7 @@
                             SetsValue = true,
                             Name = "ChangeIndicatorUp.X",
                             Type = "float",
-                            Value = ChangeIndicatorUp.X + 40f
+                            Value = ChangeIndicatorUp.X + 140f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1154,7 +1154,7 @@
                             SetsValue = true,
                             Name = "ChangeIndicatorDown.X",
                             Type = "float",
-                            Value = ChangeIndicatorDown.X + 40f
+                            Value = ChangeIndicatorDown.X + 140f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

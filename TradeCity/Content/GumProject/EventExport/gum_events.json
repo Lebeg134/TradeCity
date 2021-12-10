@@ -224,6 +224,237 @@
         "ElementType": "Screens",
         "EventType": 7,
         "TimestampUtc": "2021-12-09T21:06:54.8018189Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-12-10T16:58:38.7287663Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.ColoredFrameInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-10T16:58:51.5260439Z"
+      },
+      {
+        "NewName": " CityGum.TabMenuInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-10T17:00:47.3044092Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.BackgroundPanel",
+        "OldName": "LebegForms/ComplexComponents/TabMenu.ColoredFrameInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-10T17:04:35.5462448Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.ColoredFrameInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-10T17:04:38.9222366Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.ListBoxInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-10T17:05:10.6312982Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/TabMenu.DefaultForms/ColoredFrame BackgroundPanel in LebegForms/ComplexComponents/TabMenu",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-10T17:05:42.9355623Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.HeaderPanel",
+        "OldName": "LebegForms/ComplexComponents/TabMenu.ColoredFrameInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-10T17:05:53.1028504Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.CommonList",
+        "OldName": "LebegForms/ComplexComponents/TabMenu.ListBoxInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-10T17:06:11.303553Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.ButtonInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-10T17:06:18.3491272Z"
+      },
+      {
+        "NewName": "DefaultForms/Button1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-12-10T17:07:49.094707Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/Button1",
+        "OldName": "DefaultForms/Button1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2021-12-10T17:08:07.2858184Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ImageButton",
+        "OldName": "LebegForms/BasicComponents/Button1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2021-12-10T17:08:34.4194273Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ImageButton.Text TextInstance in LebegForms/BasicComponents/ImageButton",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-10T17:10:54.0565169Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ImageButton.SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-10T17:10:59.3176361Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ImageButton",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2021-12-10T17:11:42.912829Z"
+      },
+      {
+        "NewName": "DefaultForms/ToggleButton1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-12-10T17:11:52.5908888Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ToggleButton1",
+        "OldName": "DefaultForms/ToggleButton1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2021-12-10T17:11:57.3214143Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/CityMenuTwostate",
+        "OldName": "LebegForms/BasicComponents/ToggleButton1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2021-12-10T17:12:39.5734266Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/CityMenuTwostate.Text TextInstance in LebegForms/BasicComponents/CityMenuTwostate",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-10T17:12:58.4462808Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/CityMenuTwostate.NineSlice NineSliceInstance1 in LebegForms/BasicComponents/CityMenuTwostate",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-10T17:13:01.5051292Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/CityMenuTwostate.NineSlice NineSliceInstance1 in LebegForms/BasicComponents/CityMenuTwostate",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-10T17:13:39.9559783Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/CityMenuTwostate.ColoredRectangle ColoredRectangleInstance in LebegForms/BasicComponents/CityMenuTwostate",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-10T17:13:41.0291923Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/CityMenuTwostate.SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-10T17:13:57.3917304Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/TabMenu.DefaultForms/Button ButtonInstance in LebegForms/ComplexComponents/TabMenu",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-10T17:23:03.2044245Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/CityMenuTab",
+        "OldName": "LebegForms/BasicComponents/CityMenuTwostate",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2021-12-10T17:23:15.5459733Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.CityMenuTabInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-10T17:23:18.1337847Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/TabMenu.LebegForms/BasicComponents/CityMenuTab CityMenuTabInstance in LebegForms/ComplexComponents/TabMenu",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-10T17:23:24.4736472Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-10T17:23:28.7587468Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.TabButtonInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-10T17:23:55.6502668Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/TabMenu.LebegForms/BasicComponents/TabButton TabButtonInstance in LebegForms/ComplexComponents/TabMenu",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-10T17:24:00.8544619Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.CityMenuTabInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-10T17:24:08.8983362Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.CityMenuTabInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-10T17:24:23.3207124Z"
       }
     ],
     "torok": []

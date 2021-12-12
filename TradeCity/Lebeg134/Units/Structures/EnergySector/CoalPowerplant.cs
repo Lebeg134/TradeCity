@@ -2,6 +2,7 @@
 
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Structures;
+using JHP4SD.Lebeg134.Units;
 using Lebeg134.Resources.Common;
 using Lebeg134.Resources.EnergySector;
 using Lebeg134.Resources.Workforce;
@@ -28,6 +29,9 @@ namespace Lebeg134.Structures.EnergySector
 			new List<Resource>{new Electricity(5)},
 			new List<Resource>{new Electricity(10)}
 		};
+		public override Branches getBranch()
+		{
+			return Branches.ENERGY;
+		}
 	}
-	
 }

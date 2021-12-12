@@ -1,6 +1,7 @@
 /**
 * @(#) Structure.cs
 */
+using JHP4SD.Lebeg134.Units;
 using System.Collections.Generic;
 namespace JHP4SD.Lebeg134.Module.Structures
 {
@@ -22,6 +23,10 @@ namespace JHP4SD.Lebeg134.Module.Structures
         public virtual bool Equals(Structure x, Structure y)
         {
             return x.GetType() == y.GetType();
+        }
+        public virtual Branches getBranch()
+        {
+            return Branches.COMMON;
         }
 
         public virtual int GetHashCode(Structure obj)

@@ -29,6 +29,7 @@ namespace JHP4SD.Lebeg134.Module.Session
             {
                 if (ownable.GetType() == structure.GetType())
                     return true;
+                Console.WriteLine(structure.ToString()); //DEBUG
             }
             return false;
         }

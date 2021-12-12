@@ -23,8 +23,10 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
 
         private void BuildButton_Click(FlatRedBall.Gui.IWindow window)
         {
+            Console.WriteLine("Button pressed"); //DEBUG
             if (Player.CurrentPlayer.hasStructure(FocusBuilding))
             {
+                Console.WriteLine("Had it"); //DEBUG
                 if (FocusBuilding is CommonBuilding)
                 {
                     ((CommonBuilding)FocusBuilding).levelUp();
@@ -32,6 +34,7 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
             }
             else
             {
+                Console.WriteLine("Didn't have it"); //DEBUG
                 try
                 {
                     FocusBuilding.Build(Player.CurrentPlayer);

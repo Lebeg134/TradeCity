@@ -51,6 +51,7 @@ namespace JHP4SD.Screens
         private void InfiniteMoneyButton_Click(object sender, EventArgs e)
         {
             Player.CurrentPlayer.giveRes(new Money(100));
+            
         }
 
         private void PlayButtonInstance_Click(object sender, EventArgs e)

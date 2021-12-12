@@ -15,7 +15,8 @@
                 Highlighted,
                 Pushed,
                 HighlightedFocused,
-                Focused
+                Focused,
+                Active
             }
             #endregion
             #region State Fields
@@ -91,7 +92,7 @@
                                 SpriteInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
                                 break;
                             case  ButtonCategory.Disabled:
-                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                                 NineSliceInstance.Blue = 255;
                                 NineSliceInstance.Green = 255;
                                 NineSliceInstance.Height = 0f;
@@ -158,6 +159,22 @@
                                 NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                                 NineSliceInstance.Blue = 0;
                                 NineSliceInstance.Green = 215;
+                                NineSliceInstance.Height = 0f;
+                                NineSliceInstance.Red = 255;
+                                NineSliceInstance.Width = 0f;
+                                SpriteInstance.Blue = 255;
+                                SpriteInstance.Green = 255;
+                                SpriteInstance.Height = 48f;
+                                SpriteInstance.Red = 255;
+                                SpriteInstance.X = 4f;
+                                SpriteInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                                SpriteInstance.Y = 4f;
+                                SpriteInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                                break;
+                            case  ButtonCategory.Active:
+                                NineSliceInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                                NineSliceInstance.Blue = 255;
+                                NineSliceInstance.Green = 255;
                                 NineSliceInstance.Height = 0f;
                                 NineSliceInstance.Red = 255;
                                 NineSliceInstance.Width = 0f;
@@ -540,7 +557,7 @@
                         setNineSliceInstanceBlueFirstValue = true;
                         NineSliceInstanceBlueFirstValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenFirstValue = true;
                         NineSliceInstanceGreenFirstValue = 255;
                         setNineSliceInstanceHeightFirstValue = true;
@@ -706,6 +723,40 @@
                             this.SpriteInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
                         }
                         break;
+                    case  ButtonCategory.Active:
+                        setNineSliceInstanceBlueFirstValue = true;
+                        NineSliceInstanceBlueFirstValue = 255;
+                        setNineSliceInstanceCurrentColorCategoryStateFirstValue = true;
+                        NineSliceInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                        setNineSliceInstanceGreenFirstValue = true;
+                        NineSliceInstanceGreenFirstValue = 255;
+                        setNineSliceInstanceHeightFirstValue = true;
+                        NineSliceInstanceHeightFirstValue = 0f;
+                        setNineSliceInstanceRedFirstValue = true;
+                        NineSliceInstanceRedFirstValue = 255;
+                        setNineSliceInstanceWidthFirstValue = true;
+                        NineSliceInstanceWidthFirstValue = 0f;
+                        setSpriteInstanceBlueFirstValue = true;
+                        SpriteInstanceBlueFirstValue = 255;
+                        setSpriteInstanceGreenFirstValue = true;
+                        SpriteInstanceGreenFirstValue = 255;
+                        setSpriteInstanceHeightFirstValue = true;
+                        SpriteInstanceHeightFirstValue = 48f;
+                        setSpriteInstanceRedFirstValue = true;
+                        SpriteInstanceRedFirstValue = 255;
+                        setSpriteInstanceXFirstValue = true;
+                        SpriteInstanceXFirstValue = 4f;
+                        if (interpolationValue < 1)
+                        {
+                            this.SpriteInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                        }
+                        setSpriteInstanceYFirstValue = true;
+                        SpriteInstanceYFirstValue = 4f;
+                        if (interpolationValue < 1)
+                        {
+                            this.SpriteInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                        }
+                        break;
                 }
                 switch(secondState)
                 {
@@ -747,7 +798,7 @@
                         setNineSliceInstanceBlueSecondValue = true;
                         NineSliceInstanceBlueSecondValue = 255;
                         setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
-                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenSecondValue = true;
                         NineSliceInstanceGreenSecondValue = 255;
                         setNineSliceInstanceHeightSecondValue = true;
@@ -886,6 +937,40 @@
                         NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                         setNineSliceInstanceGreenSecondValue = true;
                         NineSliceInstanceGreenSecondValue = 215;
+                        setNineSliceInstanceHeightSecondValue = true;
+                        NineSliceInstanceHeightSecondValue = 0f;
+                        setNineSliceInstanceRedSecondValue = true;
+                        NineSliceInstanceRedSecondValue = 255;
+                        setNineSliceInstanceWidthSecondValue = true;
+                        NineSliceInstanceWidthSecondValue = 0f;
+                        setSpriteInstanceBlueSecondValue = true;
+                        SpriteInstanceBlueSecondValue = 255;
+                        setSpriteInstanceGreenSecondValue = true;
+                        SpriteInstanceGreenSecondValue = 255;
+                        setSpriteInstanceHeightSecondValue = true;
+                        SpriteInstanceHeightSecondValue = 48f;
+                        setSpriteInstanceRedSecondValue = true;
+                        SpriteInstanceRedSecondValue = 255;
+                        setSpriteInstanceXSecondValue = true;
+                        SpriteInstanceXSecondValue = 4f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.SpriteInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                        }
+                        setSpriteInstanceYSecondValue = true;
+                        SpriteInstanceYSecondValue = 4f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.SpriteInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                        }
+                        break;
+                    case  ButtonCategory.Active:
+                        setNineSliceInstanceBlueSecondValue = true;
+                        NineSliceInstanceBlueSecondValue = 255;
+                        setNineSliceInstanceCurrentColorCategoryStateSecondValue = true;
+                        NineSliceInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                        setNineSliceInstanceGreenSecondValue = true;
+                        NineSliceInstanceGreenSecondValue = 255;
                         setNineSliceInstanceHeightSecondValue = true;
                         NineSliceInstanceHeightSecondValue = 0f;
                         setNineSliceInstanceRedSecondValue = true;
@@ -2164,6 +2249,120 @@
                         }
                         );
                         break;
+                    case  ButtonCategory.Active:
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Blue",
+                            Type = "int",
+                            Value = NineSliceInstance.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = NineSliceInstance.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Green",
+                            Type = "int",
+                            Value = NineSliceInstance.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Height",
+                            Type = "float",
+                            Value = NineSliceInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Red",
+                            Type = "int",
+                            Value = NineSliceInstance.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Width",
+                            Type = "float",
+                            Value = NineSliceInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Blue",
+                            Type = "int",
+                            Value = SpriteInstance.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Green",
+                            Type = "int",
+                            Value = SpriteInstance.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Height",
+                            Type = "float",
+                            Value = SpriteInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Red",
+                            Type = "int",
+                            Value = SpriteInstance.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.X",
+                            Type = "float",
+                            Value = SpriteInstance.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = SpriteInstance.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Y",
+                            Type = "float",
+                            Value = SpriteInstance.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = SpriteInstance.YOrigin
+                        }
+                        );
+                        break;
                 }
                 return newState;
             }
@@ -2856,6 +3055,120 @@
                         }
                         );
                         break;
+                    case  ButtonCategory.Active:
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Blue",
+                            Type = "int",
+                            Value = NineSliceInstance.Blue + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = NineSliceInstance.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Green",
+                            Type = "int",
+                            Value = NineSliceInstance.Green + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Height",
+                            Type = "float",
+                            Value = NineSliceInstance.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Red",
+                            Type = "int",
+                            Value = NineSliceInstance.Red + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "NineSliceInstance.Width",
+                            Type = "float",
+                            Value = NineSliceInstance.Width + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Blue",
+                            Type = "int",
+                            Value = SpriteInstance.Blue + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Green",
+                            Type = "int",
+                            Value = SpriteInstance.Green + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Height",
+                            Type = "float",
+                            Value = SpriteInstance.Height + 48f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Red",
+                            Type = "int",
+                            Value = SpriteInstance.Red + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.X",
+                            Type = "float",
+                            Value = SpriteInstance.X + 4f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = SpriteInstance.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Y",
+                            Type = "float",
+                            Value = SpriteInstance.Y + 4f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SpriteInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = SpriteInstance.YOrigin
+                        }
+                        );
+                        break;
                 }
                 return newState;
             }
@@ -2878,6 +3191,7 @@
                         if(state.Name == "Pushed") this.mCurrentButtonCategoryState = ButtonCategory.Pushed;
                         if(state.Name == "HighlightedFocused") this.mCurrentButtonCategoryState = ButtonCategory.HighlightedFocused;
                         if(state.Name == "Focused") this.mCurrentButtonCategoryState = ButtonCategory.Focused;
+                        if(state.Name == "Active") this.mCurrentButtonCategoryState = ButtonCategory.Active;
                     }
                 }
                 base.ApplyState(state);

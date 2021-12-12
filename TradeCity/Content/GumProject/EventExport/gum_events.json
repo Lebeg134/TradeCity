@@ -770,6 +770,90 @@
         "ElementType": "Components",
         "EventType": 7,
         "TimestampUtc": "2021-12-10T18:54:28.2298458Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.ContainerInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T14:39:16.0744902Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.ScrollContainer",
+        "OldName": "LebegForms/ComplexComponents/TabMenu.ContainerInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-12T14:39:38.0080203Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.CommonList1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T14:40:11.8749216Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.ConstructionList",
+        "OldName": "LebegForms/ComplexComponents/TabMenu.CommonList1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-12T14:41:58.858884Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.CommonList1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T14:42:01.1623529Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.EnergyList",
+        "OldName": "LebegForms/ComplexComponents/TabMenu.CommonList1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-12T14:42:06.2179223Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/TabMenu.DefaultForms/ListBox EnergyList in LebegForms/ComplexComponents/TabMenu",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-12T14:42:10.4077816Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.EnergyList",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T14:42:11.4199588Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.EnergyList1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T14:42:14.5869431Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.OilList",
+        "OldName": "LebegForms/ComplexComponents/TabMenu.EnergyList1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-12T14:42:19.2087056Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.OilList1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T14:42:22.3407961Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.WorkforceList",
+        "OldName": "LebegForms/ComplexComponents/TabMenu.OilList1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-12T14:42:27.3247715Z"
       }
     ],
     "torok": []

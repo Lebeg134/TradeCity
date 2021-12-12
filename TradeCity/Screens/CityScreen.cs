@@ -11,8 +11,7 @@ using FlatRedBall.Graphics.Animation;
 using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 using FlatRedBall.Localization;
-
-
+using Lebeg134.Structures.Common;
 
 namespace JHP4SD.Screens
 {
@@ -21,7 +20,7 @@ namespace JHP4SD.Screens
 
         void CustomInitialize()
         {
-
+            Forms.BuildingTabs.RegisterBuilding(new SteelForge());
         }
 
         void CustomActivity(bool firstTimeCalled)

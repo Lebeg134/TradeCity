@@ -994,6 +994,13 @@
         "ElementType": "Components",
         "EventType": 7,
         "TimestampUtc": "2021-12-12T16:32:37.7265448Z"
+      },
+      {
+        "NewName": "LebegForms/ComplexComponents/TabMenu.ToastInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T20:24:30.3869349Z"
       }
     ],
     "torok": []

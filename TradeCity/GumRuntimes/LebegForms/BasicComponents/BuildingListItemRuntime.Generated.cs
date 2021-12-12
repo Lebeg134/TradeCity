@@ -1,4 +1,5 @@
-    using System.Linq;
+using JHP4SD.Lebeg134.Module.Structures;
+using System.Linq;
     namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
     {
         public partial class BuildingListItemRuntime : JHP4SD.GumRuntimes.ContainerRuntime
@@ -148,7 +149,7 @@
                                 BackgroundInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                                 BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                                 RectangleInstance.Visible = false;
-                                BuildButton.Text = "Upgrade";
+                                BuildButton.Text = "Build";
                                 break;
                             case  ListBoxItemCategory.Selected:
                                 BackgroundInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
@@ -1015,7 +1016,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            this.BuildButton.Text = "Upgrade";
+                            this.BuildButton.Text = "Build";
                         }
                         if (interpolationValue < 1)
                         {
@@ -1170,7 +1171,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.BuildButton.Text = "Upgrade";
+                            this.BuildButton.Text = "Build";
                         }
                         if (interpolationValue >= 1)
                         {
@@ -3414,7 +3415,9 @@
                 base.ApplyState(state);
             }
             private bool tryCreateFormsObject;
-            public JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime BackgroundInstance { get; set; }
+        
+
+        public JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime BackgroundInstance { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime TextInstance { get; set; }
             public JHP4SD.GumRuntimes.RectangleRuntime RectangleInstance { get; set; }
             public JHP4SD.GumRuntimes.SpriteRuntime BuildingSprite { get; set; }
@@ -3469,7 +3472,10 @@
                     FlatRedBall.IO.FileManager.RelativeDirectory = oldDirectory;
                 }
             }
-            public override void SetInitialState () 
+
+        
+
+        public override void SetInitialState () 
             {
                 base.SetInitialState();
                 this.CurrentVariableState = VariableState.Default;

@@ -8,33 +8,30 @@ using System.Collections.Generic;
 
 namespace JHP4SD.Lebeg134.Module.Structures
 {
-    public class Building : Structure, IOwnable
+    public abstract class Building : Structure, IOwnable
     {
-        protected static readonly IOwnable[] Criteria;
-        protected static readonly Resource[] Cost;
-        protected static Resource[] Upkeep;
+        protected abstract List<IOwnable> Criteria();
+        protected abstract List<Resource> Cost();
         protected Player owner;
 
         public Building(Player owner = null)
         {
             this.owner = owner;
         }
-        public virtual List<Resource> getUpkeep()
-        {
-            return new List<Resource>(Upkeep);
-        }
+        public abstract List<Resource> getUpkeep();
         public void Build(Player by)
         {
-            if (by.checkResources(new List<Resource>(Cost)) &&
-                by.checkStructures(new List<IOwnable>(Criteria)))
+            if (by.checkResources(Cost()) &&
+                by.checkStructures(Criteria()))
             {
-                by.subRes(new List<Resource>(Cost));
+                by.subRes(Cost());
                 by.giveStructure(this);
             }
         }
         public virtual void acquire(Player by)
         {
-            Build(by); //Possibility to transfer ownership, can implement later if needed
+            //Possibility to transfer ownership?, can implement later if needed
+            owner = by;
         }
     }
 

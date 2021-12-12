@@ -36,6 +36,8 @@ namespace JHP4SD.Lebeg134.Module.Session
             player.registerResources(template);
             player.giveRes(new Money(1500));
             player.giveRes(new Workforce(500));
+            player.giveRes(new Wood(500));
+            player.giveRes(new Iron(100));
         }
 
         internal static List<Building> GetAllBuildings()

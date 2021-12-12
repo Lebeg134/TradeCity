@@ -52,6 +52,11 @@ namespace Lebeg134.Structures.Lands
             }
         }
 
+        public override string getName()
+        {
+            return "Forest";
+        }
+
         protected override List<Resource> productionLevels(int level)
         {
             return productionLevelStats[LebegUtil.indexInRange(productionLevelStats, level - 1)];

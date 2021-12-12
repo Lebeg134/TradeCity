@@ -20,7 +20,7 @@ namespace JHP4SD.Screens
 
         void CustomInitialize()
         {
-            
+            Forms.BuildingTabs.RegisterAllBuildings();
         }
 
         void CustomActivity(bool firstTimeCalled)

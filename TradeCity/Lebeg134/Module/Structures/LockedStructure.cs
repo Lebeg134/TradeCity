@@ -30,6 +30,11 @@ namespace JHP4SD.Lebeg134.Module.Structures
         {
             //Do nothing
         }
+
+        public override string getName()
+        {
+			return "Locked";
+        }
     }
 	
 }

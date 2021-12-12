@@ -9,18 +9,17 @@ namespace JHP4SD.Lebeg134.Module.Structures
 {
     public abstract class CommonBuilding : Building, IUpgradeable
     {
-        protected static List<Resource>[] upgradeLevelsCosts { get; }
-        protected static List<Resource>[] upkeepLevels { get; }
-        protected int level = 1; //Leveling starts from 1
+        protected abstract List<Resource> upgradeLevelsCosts(int level);
+        protected int level = 0; //Level 0 means unbuilt building
 
         public void levelUp()
         {
-            if (owner.checkResources(upgradeLevelsCosts[level])) //Level is 1 higher than index used for level stats
+            if (owner.checkResources(upgradeLevelsCosts(level))) //Level is 1 higher than index used for level stats
                 level++;
         }
-        public override List<Resource> getUpkeep()
+        protected override List<Resource> Cost()
         {
-            return upkeepLevels[level - 1];
+            return upgradeLevelsCosts(0);
         }
     }
 

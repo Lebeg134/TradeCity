@@ -12,6 +12,7 @@
             public FlatRedBall.Forms.Controls.ListBox EnergyList { get; set; }
             public FlatRedBall.Forms.Controls.ListBox OilList { get; set; }
             public FlatRedBall.Forms.Controls.ListBox WorkforceList { get; set; }
+            public FlatRedBall.Forms.Controls.Popups.Toast ToastInstance { get; set; }
             public TabMenuForms () 
             	: base()
             {
@@ -34,6 +35,7 @@
                 EnergyList = (FlatRedBall.Forms.Controls.ListBox)Visual.GetGraphicalUiElementByName("EnergyList").FormsControlAsObject;
                 OilList = (FlatRedBall.Forms.Controls.ListBox)Visual.GetGraphicalUiElementByName("OilList").FormsControlAsObject;
                 WorkforceList = (FlatRedBall.Forms.Controls.ListBox)Visual.GetGraphicalUiElementByName("WorkforceList").FormsControlAsObject;
+                ToastInstance = (FlatRedBall.Forms.Controls.Popups.Toast)Visual.GetGraphicalUiElementByName("ToastInstance").FormsControlAsObject;
                 base.ReactToVisualChanged();
             }
             partial void CustomInitialize();

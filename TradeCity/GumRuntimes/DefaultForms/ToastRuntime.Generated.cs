@@ -25,7 +25,8 @@
                     switch(mCurrentVariableState)
                     {
                         case  VariableState.Default:
-                            TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
+                            ColoredFrameInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                            TextInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                             Height = 47f;
                             Width = 50f;
                             WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
@@ -48,7 +49,7 @@
                             TextInstance.Height = 0f;
                             TextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                             TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                            TextInstance.Text = "This is the project";
+                            TextInstance.Text = "Error";
                             TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             TextInstance.Width = 20f;
                             TextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
@@ -72,6 +73,10 @@
                     throw new System.Exception("interpolationValue cannot be NaN");
                 }
                 #endif
+                bool setColoredFrameInstanceCurrentColorCategoryStateFirstValue = false;
+                bool setColoredFrameInstanceCurrentColorCategoryStateSecondValue = false;
+                JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory ColoredFrameInstanceCurrentColorCategoryStateFirstValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory ColoredFrameInstanceCurrentColorCategoryStateSecondValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                 bool setColoredFrameInstanceHeightFirstValue = false;
                 bool setColoredFrameInstanceHeightSecondValue = false;
                 float ColoredFrameInstanceHeightFirstValue= 0;
@@ -127,6 +132,8 @@
                 switch(firstState)
                 {
                     case  VariableState.Default:
+                        setColoredFrameInstanceCurrentColorCategoryStateFirstValue = true;
+                        ColoredFrameInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setColoredFrameInstanceHeightFirstValue = true;
                         ColoredFrameInstanceHeightFirstValue = 0f;
                         if (interpolationValue < 1)
@@ -162,7 +169,7 @@
                         setHeightFirstValue = true;
                         HeightFirstValue = 47f;
                         setTextInstanceCurrentColorCategoryStateFirstValue = true;
-                        TextInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
+                        TextInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                         setTextInstanceHeightFirstValue = true;
                         TextInstanceHeightFirstValue = 0f;
                         if (interpolationValue < 1)
@@ -175,7 +182,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            this.TextInstance.Text = "This is the project";
+                            this.TextInstance.Text = "Error";
                         }
                         if (interpolationValue < 1)
                         {
@@ -238,6 +245,8 @@
                 switch(secondState)
                 {
                     case  VariableState.Default:
+                        setColoredFrameInstanceCurrentColorCategoryStateSecondValue = true;
+                        ColoredFrameInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                         setColoredFrameInstanceHeightSecondValue = true;
                         ColoredFrameInstanceHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
@@ -273,7 +282,7 @@
                         setHeightSecondValue = true;
                         HeightSecondValue = 47f;
                         setTextInstanceCurrentColorCategoryStateSecondValue = true;
-                        TextInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
+                        TextInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                         setTextInstanceHeightSecondValue = true;
                         TextInstanceHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
@@ -286,7 +295,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.TextInstance.Text = "This is the project";
+                            this.TextInstance.Text = "Error";
                         }
                         if (interpolationValue >= 1)
                         {
@@ -350,6 +359,10 @@
                 if (wasSuppressed == false)
                 {
                     SuspendLayout(true);
+                }
+                if (setColoredFrameInstanceCurrentColorCategoryStateFirstValue && setColoredFrameInstanceCurrentColorCategoryStateSecondValue)
+                {
+                    ColoredFrameInstance.InterpolateBetween(ColoredFrameInstanceCurrentColorCategoryStateFirstValue, ColoredFrameInstanceCurrentColorCategoryStateSecondValue, interpolationValue);
                 }
                 if (setColoredFrameInstanceHeightFirstValue && setColoredFrameInstanceHeightSecondValue)
                 {
@@ -561,6 +574,14 @@
                             Name = "Y Units",
                             Type = "PositionUnitType",
                             Value = YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ColoredFrameInstance.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = ColoredFrameInstance.CurrentColorCategoryState
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -835,6 +856,14 @@
                             Name = "Y Units",
                             Type = "PositionUnitType",
                             Value = YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ColoredFrameInstance.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = ColoredFrameInstance.CurrentColorCategoryState
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

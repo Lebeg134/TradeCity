@@ -28,10 +28,12 @@ namespace JHP4SD.Lebeg134.Module.Structures
         {
             return Branches.COMMON;
         }
+        public abstract string getName();
 
         public virtual int GetHashCode(Structure obj)
         {
             return obj.GetType().GetHashCode();
         }
+       
     }
 }

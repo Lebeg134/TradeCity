@@ -21,7 +21,7 @@ namespace JHP4SD.Lebeg134.Module.Session
 
         public Player()
         {
-
+            Console.WriteLine("New Player created"); //DEBUG
         }
         public bool hasStructure(IOwnable structure)
         {

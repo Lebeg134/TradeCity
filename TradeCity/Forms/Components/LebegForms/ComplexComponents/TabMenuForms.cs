@@ -22,7 +22,7 @@ namespace JHP4SD.FormsControls.Components.LebegForms.ComplexComponents
             OilTab.Click += OilTab_Click;
             WorkforceTab.Click += WorkforceTab_Click;
 
-            RegisterAllBuildings();
+            
             RefreshActiveTab();
         }
         private void CommonTab_Click(object sender, EventArgs e)
@@ -62,18 +62,21 @@ namespace JHP4SD.FormsControls.Components.LebegForms.ComplexComponents
             }
         }
 
-        public void RegisterBuilding(Building building)
+        public void RegisteStructure(Building building)
         {
-            var visual1 = new GumRuntimes.LebegForms.BasicComponents.BuildingListItemRuntime();
-            var listBoxItem1 = visual1.FormsControl;
-            listBoxItem1.UpdateToObject(building.ToString());
-            tabLists[(int)building.getBranch()].Items.Add(listBoxItem1);
+            var visualItem = new GumRuntimes.LebegForms.BasicComponents.BuildingListItemRuntime();
+            visualItem.FocusBuilding = building;
+            var listBoxItem = visualItem.FormsControl;
+            listBoxItem.UpdateToObject(building.getName());
+            tabLists[(int)building.getBranch()].Items.Add(listBoxItem);
         }
+
+
         public void RegisterAllBuildings()
         {
             foreach (Building building in SessionGenerator.GetAllBuildings())
             {
-                RegisterBuilding(building);
+                RegisteStructure(building);
             }
         }
     }

@@ -7,6 +7,7 @@
     <Variable>
       <Type>ColorCategoryState</Type>
       <Name>ColoredFrameInstance.ColorCategoryState</Name>
+      <Value xsi:type="xsd:string">Black</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -89,7 +90,7 @@
     <Variable>
       <Type>ColorCategoryState</Type>
       <Name>TextInstance.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">Black</Value>
+      <Value xsi:type="xsd:string">Gray</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -113,7 +114,7 @@
     <Variable>
       <Type>string</Type>
       <Name>TextInstance.Text</Name>
-      <Value xsi:type="xsd:string">This is the project</Value>
+      <Value xsi:type="xsd:string">Error</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

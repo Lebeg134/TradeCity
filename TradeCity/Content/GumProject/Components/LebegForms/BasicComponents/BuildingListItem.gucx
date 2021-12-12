@@ -587,15 +587,15 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>bool</Type>
-        <Name>RectangleInstance.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>string</Type>
         <Name>BuildButton.Text</Name>
         <Value xsi:type="xsd:string">Build</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>RectangleInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -664,7 +664,7 @@
       <Variable>
         <Type>string</Type>
         <Name>BuildButton.Text</Name>
-        <Value xsi:type="xsd:string">Upgrade</Value>
+        <Value xsi:type="xsd:string">Build</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -740,15 +740,15 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>bool</Type>
-        <Name>RectangleInstance.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>string</Type>
         <Name>BuildButton.Text</Name>
         <Value xsi:type="xsd:string">Build</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>RectangleInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -818,15 +818,15 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>bool</Type>
-        <Name>RectangleInstance.Visible</Name>
-        <Value xsi:type="xsd:boolean">true</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>string</Type>
         <Name>BuildButton.Text</Name>
         <Value xsi:type="xsd:string">Build</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>RectangleInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>

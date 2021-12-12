@@ -481,6 +481,12 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>PositionUnitType</Type>
+      <Name>ToastInstance.X Units</Name>
+      <Value xsi:type="xsd:int">6</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>Width</Name>
       <Value xsi:type="xsd:float">500</Value>
@@ -677,6 +683,11 @@
   <Instance>
     <Name>WorkforceList</Name>
     <BaseType>DefaultForms/ListBox</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>ToastInstance</Name>
+    <BaseType>DefaultForms/Toast</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Behaviors />

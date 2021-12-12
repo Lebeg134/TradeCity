@@ -4,7 +4,7 @@
 
 namespace JHP4SD.Lebeg134.Module.Structures
 {
-    public class CosmeticStructures : Structure
+    public abstract class CosmeticStructures : Structure
     {
         //TODO when doing graphics stuff
     }

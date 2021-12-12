@@ -14,7 +14,7 @@ namespace Lebeg134.Structures.Common
 {
     public class SteelForge : CommonProdBuilding
     {
-        protected static List<Resource>[] upgradeLevelsCosts
+        protected static List<Resource>[] upgradeLevelsCostsArray
         {
             get
             {
@@ -25,7 +25,7 @@ namespace Lebeg134.Structures.Common
             }
         }
 
-        protected static List<Resource>[] upkeepLevels
+        protected static List<Resource>[] upkeepLevelsArray
         {
             get
             {
@@ -46,11 +46,29 @@ namespace Lebeg134.Structures.Common
                 };
             }
         }
+        public override string getName()
+        {
+            return "Steel Forge";
+        }
         public override Branches getBranch()
         {
             return Branches.COMMON;
         }
 
+        protected override List<IOwnable> Criteria()
+        {
+            return new List<IOwnable>();
+        }
+
+        protected override List<Resource> upgradeLevelsCosts(int level)
+        {
+            return upgradeLevelsCostsArray[level];
+        }
+
+        public override List<Resource> getUpkeep()
+        {
+            return upkeepLevelsArray[level - 1];
+        }
     }
 
 }

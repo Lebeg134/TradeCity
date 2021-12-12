@@ -14,17 +14,17 @@ namespace Lebeg134.Structures.EnergySector
 {
 	public class CoalPowerplant: CommonProdBuilding
 	{
-		protected static new readonly List<Resource>[] upgradeLevelsCosts=
+		protected static new readonly List<Resource>[] upgradeLevelsCostsArray =
 		{
 			new List<Resource>{new Wood(100), new Workforce(50)},
 			new List<Resource>{new Wood(100), new Steel(100)}
 		};
-		protected static new readonly List<Resource>[] upkeepLevels =
+		protected static new readonly List<Resource>[] upkeepLevelsArray =
 		{
 			new List<Resource>{new Coal(50)},
 			new List<Resource>{new Coal(75)}
 		};
-		protected static readonly new List<Resource>[] productionLevels =
+		protected static readonly new List<Resource>[] productionLevelsArray =
 		{
 			new List<Resource>{new Electricity(5)},
 			new List<Resource>{new Electricity(10)}
@@ -33,5 +33,25 @@ namespace Lebeg134.Structures.EnergySector
 		{
 			return Branches.ENERGY;
 		}
-	}
+
+        public override string getName()
+        {
+			return "Coal Powerplant";
+        }
+
+        public override List<Resource> getUpkeep()
+        {
+			return upkeepLevelsArray[level - 1];
+        }
+
+        protected override List<IOwnable> Criteria()
+        {
+			return new List<IOwnable>();
+        }
+
+        protected override List<Resource> upgradeLevelsCosts(int level)
+        {
+			return upgradeLevelsCostsArray[level];
+        }
+    }
 }

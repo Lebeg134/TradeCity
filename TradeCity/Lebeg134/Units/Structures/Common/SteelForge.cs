@@ -67,6 +67,12 @@ namespace Lebeg134.Structures.Common
 
         public override List<Resource> getUpkeep()
         {
+            
+            return upkeepLevelsArray[level - 1];
+        }
+
+        public override List<Resource> getProduce()
+        {
             return upkeepLevelsArray[level - 1];
         }
     }

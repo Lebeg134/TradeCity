@@ -600,6 +600,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>pylon</Name>
     </None>
+    <None Include="content\globalcontent\resources\resourceicons\coal-pile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>coal-pile</Name>
+    </None>
     <None Include="content\globalcontent\resources\resourceicons\electric.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>electric</Name>

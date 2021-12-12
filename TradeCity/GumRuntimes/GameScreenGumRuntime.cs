@@ -27,6 +27,7 @@ namespace JHP4SD.GumRuntimes
             IronDisplay.Amount = player.getRes(new Iron(0));
             SteelDisplay.Amount = player.getRes(new Steel(0));
             WaterDisplay.Amount = player.getRes(new Water(0));
+            CoalDisplay.Amount = player.getRes(new Coal(0));
         }
         public void tick()
         {

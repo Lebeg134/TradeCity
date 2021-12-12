@@ -28,6 +28,25 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>string</Type>
+      <Name>CoalDisplay.Parent</Name>
+      <Value xsi:type="xsd:string">Resources</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>CoalDisplay.SpriteInstanceSourceFile</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/ResourceIcons/coal-pile.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>CoalDisplay.X</Name>
+      <Value xsi:type="xsd:float">10</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>DialogBoxInstance.Height</Name>
       <Value xsi:type="xsd:float">-10</Value>
@@ -645,6 +664,11 @@
   </Instance>
   <Instance>
     <Name>WaterDisplay</Name>
+    <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>CoalDisplay</Name>
     <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>

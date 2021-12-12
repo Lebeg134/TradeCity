@@ -39,6 +39,11 @@ namespace Lebeg134.Structures.EnergySector
 			return "Coal Powerplant";
         }
 
+        public override List<Resource> getProduce()
+        {
+			return productionLevelsArray[level - 1];
+        }
+
         public override List<Resource> getUpkeep()
         {
 			return upkeepLevelsArray[level - 1];

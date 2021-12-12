@@ -32,6 +32,7 @@
                             IronDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
                             SteelDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
                             WaterDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                            CoalDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
                             ResourceBar.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                             InfoBar.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.TransparentBlack;
                             PlayButtonInstance.Height = 100f;
@@ -104,6 +105,8 @@
                             SteelDisplay.X = 10f;
                             SetProperty("WaterDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/water-drop.png");
                             WaterDisplay.X = 10f;
+                            SetProperty("CoalDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/coal-pile.png");
+                            CoalDisplay.X = 10f;
                             SetProperty("MoneyDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/money-stack.png");
                             MoneyDisplay.X = -16f;
                             MoneyDisplay.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
@@ -130,6 +133,10 @@
                     throw new System.Exception("interpolationValue cannot be NaN");
                 }
                 #endif
+                bool setCoalDisplayXFirstValue = false;
+                bool setCoalDisplayXSecondValue = false;
+                float CoalDisplayXFirstValue= 0;
+                float CoalDisplayXSecondValue= 0;
                 bool setDialogBoxInstanceHeightFirstValue = false;
                 bool setDialogBoxInstanceHeightSecondValue = false;
                 float DialogBoxInstanceHeightFirstValue= 0;
@@ -321,6 +328,16 @@
                         {
                             this.BackButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
+                        if (interpolationValue < 1)
+                        {
+                            this.CoalDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            SetProperty("CoalDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/coal-pile.png");
+                        }
+                        setCoalDisplayXFirstValue = true;
+                        CoalDisplayXFirstValue = 10f;
                         setDialogBoxInstanceHeightFirstValue = true;
                         DialogBoxInstanceHeightFirstValue = -10f;
                         if (interpolationValue < 1)
@@ -604,6 +621,16 @@
                         {
                             this.BackButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
+                        if (interpolationValue >= 1)
+                        {
+                            this.CoalDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            SetProperty("CoalDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/coal-pile.png");
+                        }
+                        setCoalDisplayXSecondValue = true;
+                        CoalDisplayXSecondValue = 10f;
                         setDialogBoxInstanceHeightSecondValue = true;
                         DialogBoxInstanceHeightSecondValue = -10f;
                         if (interpolationValue >= 1)
@@ -873,6 +900,10 @@
                 {
                     SuspendLayout(true);
                 }
+                if (setCoalDisplayXFirstValue && setCoalDisplayXSecondValue)
+                {
+                    CoalDisplay.X = CoalDisplayXFirstValue * (1 - interpolationValue) + CoalDisplayXSecondValue * interpolationValue;
+                }
                 if (setDialogBoxInstanceHeightFirstValue && setDialogBoxInstanceHeightSecondValue)
                 {
                     DialogBoxInstance.Height = DialogBoxInstanceHeightFirstValue * (1 - interpolationValue) + DialogBoxInstanceHeightSecondValue * interpolationValue;
@@ -1133,6 +1164,7 @@
                 IronDisplay.StopAnimations();
                 SteelDisplay.StopAnimations();
                 WaterDisplay.StopAnimations();
+                CoalDisplay.StopAnimations();
                 MoneyDisplay.StopAnimations();
                 InfiniteMoneyButton.StopAnimations();
                 GibMunney.StopAnimations();
@@ -1778,6 +1810,30 @@
                             Name = "WaterDisplay.X",
                             Type = "float",
                             Value = WaterDisplay.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CoalDisplay.Parent",
+                            Type = "string",
+                            Value = CoalDisplay.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CoalDisplay.SpriteInstanceSourceFile",
+                            Type = "string",
+                            Value = CoalDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CoalDisplay.X",
+                            Type = "float",
+                            Value = CoalDisplay.X
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2521,6 +2577,30 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "CoalDisplay.Parent",
+                            Type = "string",
+                            Value = CoalDisplay.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CoalDisplay.SpriteInstanceSourceFile",
+                            Type = "string",
+                            Value = CoalDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "CoalDisplay.X",
+                            Type = "float",
+                            Value = CoalDisplay.X + 10f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "MoneyDisplay.SpriteInstanceSourceFile",
                             Type = "string",
                             Value = MoneyDisplay.SpriteInstanceSourceFile
@@ -2647,6 +2727,7 @@
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime IronDisplay { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime SteelDisplay { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime WaterDisplay { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime CoalDisplay { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime MoneyDisplay { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime InfiniteMoneyButton { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime GibMunney { get; set; }
@@ -2690,6 +2771,7 @@
                 IronDisplay = this.GetGraphicalUiElementByName("IronDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 SteelDisplay = this.GetGraphicalUiElementByName("SteelDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 WaterDisplay = this.GetGraphicalUiElementByName("WaterDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                CoalDisplay = this.GetGraphicalUiElementByName("CoalDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 MoneyDisplay = this.GetGraphicalUiElementByName("MoneyDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 InfiniteMoneyButton = this.GetGraphicalUiElementByName("InfiniteMoneyButton") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
                 GibMunney = this.GetGraphicalUiElementByName("GibMunney") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;

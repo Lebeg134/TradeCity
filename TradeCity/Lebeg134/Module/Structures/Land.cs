@@ -18,7 +18,7 @@ namespace JHP4SD.Lebeg134.Module.Structures
 
         public Land()
         {
-            register();
+            
         }
         public bool Equals(Land A, Land B)
         {

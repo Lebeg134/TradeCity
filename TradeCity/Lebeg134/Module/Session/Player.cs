@@ -22,6 +22,7 @@ namespace JHP4SD.Lebeg134.Module.Session
         public Player()
         {
             Console.WriteLine("New Player created"); //DEBUG
+            playerStrategy = new StandardPlayerStrategy(this);
         }
         public bool hasStructure(IOwnable structure)
         {
@@ -51,6 +52,7 @@ namespace JHP4SD.Lebeg134.Module.Session
         }
         public void giveStructure(IOwnable structure)
         {
+            owned.Add(structure);
             structure.acquire(this);
         }
         public bool hasResource(Resource res)

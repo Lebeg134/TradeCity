@@ -1001,6 +1001,27 @@
         "ElementType": "Components",
         "EventType": 5,
         "TimestampUtc": "2021-12-12T20:24:30.3869349Z"
+      },
+      {
+        "NewName": " GameScreenGum.WaterDisplay1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T23:40:43.4999198Z"
+      },
+      {
+        "NewName": " GameScreenGum.CoalDisplay",
+        "OldName": " GameScreenGum.WaterDisplay1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-12T23:40:53.2824923Z"
+      },
+      {
+        "NewName": " MapGum.ButtonInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T23:52:42.4233518Z"
       }
     ],
     "torok": []

@@ -19,7 +19,7 @@ namespace JHP4SD.Lebeg134.Module.Structures
             this.owner = owner;
         }
         public abstract List<Resource> getUpkeep();
-        public void Build(Player by)
+        public virtual void Build(Player by)
         {
             if (by.checkResources(Cost()) &&
                 by.checkStructures(Criteria()))

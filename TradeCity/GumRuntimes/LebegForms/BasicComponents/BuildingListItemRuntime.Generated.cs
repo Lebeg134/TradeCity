@@ -1,5 +1,4 @@
-using JHP4SD.Lebeg134.Module.Structures;
-using System.Linq;
+    using System.Linq;
     namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
     {
         public partial class BuildingListItemRuntime : JHP4SD.GumRuntimes.ContainerRuntime
@@ -3415,9 +3414,7 @@ using System.Linq;
                 base.ApplyState(state);
             }
             private bool tryCreateFormsObject;
-        
-
-        public JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime BackgroundInstance { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime BackgroundInstance { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime TextInstance { get; set; }
             public JHP4SD.GumRuntimes.RectangleRuntime RectangleInstance { get; set; }
             public JHP4SD.GumRuntimes.SpriteRuntime BuildingSprite { get; set; }
@@ -3472,10 +3469,7 @@ using System.Linq;
                     FlatRedBall.IO.FileManager.RelativeDirectory = oldDirectory;
                 }
             }
-
-        
-
-        public override void SetInitialState () 
+            public override void SetInitialState () 
             {
                 base.SetInitialState();
                 this.CurrentVariableState = VariableState.Default;

@@ -1,7 +1,10 @@
-/**
- * @(#) PlayerStrategyBase.cs
- */
 
+
+using JHP4SD.Lebeg134.Module.Structures;
+using JHP4SD.Lebeg134.Module.TimeManager;
+/**
+* @(#) PlayerStrategyBase.cs
+*/
 namespace JHP4SD.Lebeg134.Module.Session
 {
     public partial class Player
@@ -29,7 +32,10 @@ namespace JHP4SD.Lebeg134.Module.Session
 
             public void tick()
             {
-                throw new System.NotImplementedException();
+                foreach (ITickable tickable in player.owned)
+                {
+                    tickable.tick();
+                }
             }
 
             public virtual void unFreeze(IPlayerStrategy newStrategy)

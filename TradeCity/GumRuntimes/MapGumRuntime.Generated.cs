@@ -68,6 +68,9 @@
                             TextInstance.Y = 0f;
                             TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            ButtonInstance.Text = "Gib CoalMine";
+                            ButtonInstance.X = 885.99786f;
+                            ButtonInstance.Y = 328.074f;
                             break;
                     }
                 }
@@ -82,6 +85,14 @@
                     throw new System.Exception("interpolationValue cannot be NaN");
                 }
                 #endif
+                bool setButtonInstanceXFirstValue = false;
+                bool setButtonInstanceXSecondValue = false;
+                float ButtonInstanceXFirstValue= 0;
+                float ButtonInstanceXSecondValue= 0;
+                bool setButtonInstanceYFirstValue = false;
+                bool setButtonInstanceYSecondValue = false;
+                float ButtonInstanceYFirstValue= 0;
+                float ButtonInstanceYSecondValue= 0;
                 bool setPaceholderTextAlphaFirstValue = false;
                 bool setPaceholderTextAlphaSecondValue = false;
                 int PaceholderTextAlphaFirstValue= 0;
@@ -153,6 +164,14 @@
                 switch(firstState)
                 {
                     case  VariableState.Default:
+                        if (interpolationValue < 1)
+                        {
+                            this.ButtonInstance.Text = "Gib CoalMine";
+                        }
+                        setButtonInstanceXFirstValue = true;
+                        ButtonInstanceXFirstValue = 885.99786f;
+                        setButtonInstanceYFirstValue = true;
+                        ButtonInstanceYFirstValue = 328.074f;
                         setPaceholderTextAlphaFirstValue = true;
                         PaceholderTextAlphaFirstValue = 150;
                         setPaceholderTextBlueFirstValue = true;
@@ -296,6 +315,14 @@
                 switch(secondState)
                 {
                     case  VariableState.Default:
+                        if (interpolationValue >= 1)
+                        {
+                            this.ButtonInstance.Text = "Gib CoalMine";
+                        }
+                        setButtonInstanceXSecondValue = true;
+                        ButtonInstanceXSecondValue = 885.99786f;
+                        setButtonInstanceYSecondValue = true;
+                        ButtonInstanceYSecondValue = 328.074f;
                         setPaceholderTextAlphaSecondValue = true;
                         PaceholderTextAlphaSecondValue = 150;
                         setPaceholderTextBlueSecondValue = true;
@@ -441,6 +468,14 @@
                 {
                     SuspendLayout(true);
                 }
+                if (setButtonInstanceXFirstValue && setButtonInstanceXSecondValue)
+                {
+                    ButtonInstance.X = ButtonInstanceXFirstValue * (1 - interpolationValue) + ButtonInstanceXSecondValue * interpolationValue;
+                }
+                if (setButtonInstanceYFirstValue && setButtonInstanceYSecondValue)
+                {
+                    ButtonInstance.Y = ButtonInstanceYFirstValue * (1 - interpolationValue) + ButtonInstanceYSecondValue * interpolationValue;
+                }
                 if (setPaceholderTextAlphaFirstValue && setPaceholderTextAlphaSecondValue)
                 {
                     PaceholderText.Alpha = FlatRedBall.Math.MathFunctions.RoundToInt(PaceholderTextAlphaFirstValue* (1 - interpolationValue) + PaceholderTextAlphaSecondValue * interpolationValue);
@@ -584,6 +619,7 @@
             public override void StopAnimations () 
             {
                 base.StopAnimations();
+                ButtonInstance.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -940,6 +976,30 @@
                             Value = TextInstance.YUnits
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.Text",
+                            Type = "string",
+                            Value = ButtonInstance.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.X",
+                            Type = "float",
+                            Value = ButtonInstance.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.Y",
+                            Type = "float",
+                            Value = ButtonInstance.Y
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -1294,6 +1354,30 @@
                             Value = TextInstance.YUnits
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.Text",
+                            Type = "string",
+                            Value = ButtonInstance.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.X",
+                            Type = "float",
+                            Value = ButtonInstance.X + 885.99786f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ButtonInstance.Y",
+                            Type = "float",
+                            Value = ButtonInstance.Y + 328.074f
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -1316,6 +1400,7 @@
             public JHP4SD.GumRuntimes.SpriteRuntime SpriteInstance { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime PaceholderText { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime TextInstance { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime ButtonInstance { get; set; }
             public MapGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -1345,6 +1430,7 @@
                 SpriteInstance = this.GetGraphicalUiElementByName("SpriteInstance") as JHP4SD.GumRuntimes.SpriteRuntime;
                 PaceholderText = this.GetGraphicalUiElementByName("PaceholderText") as JHP4SD.GumRuntimes.TextRuntime;
                 TextInstance = this.GetGraphicalUiElementByName("TextInstance") as JHP4SD.GumRuntimes.TextRuntime;
+                ButtonInstance = this.GetGraphicalUiElementByName("ButtonInstance") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Screens.MapGumForms(this);

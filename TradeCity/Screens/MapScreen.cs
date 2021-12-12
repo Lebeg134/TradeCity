@@ -12,8 +12,8 @@ using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 using FlatRedBall.Localization;
 using Microsoft.Xna.Framework.Input;
-
-
+using JHP4SD.Lebeg134.Module.Session;
+using Lebeg134.Structures.Lands;
 
 namespace JHP4SD.Screens
 {
@@ -22,7 +22,12 @@ namespace JHP4SD.Screens
         Camera mainCamera = FlatRedBall.Camera.Main;
         void CustomInitialize()
         {
-            
+            Forms.ButtonInstance.Click += ButtonInstance_Click;
+        }
+
+        private void ButtonInstance_Click(object sender, EventArgs e)
+        {
+            Player.CurrentPlayer.giveStructure(new CoalMine());
         }
 
         void CustomActivity(bool firstTimeCalled)

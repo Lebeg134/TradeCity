@@ -14,6 +14,7 @@
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms IronDisplay { get; set; }
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms SteelDisplay { get; set; }
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms WaterDisplay { get; set; }
+            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms CoalDisplay { get; set; }
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms MoneyDisplay { get; set; }
             public FlatRedBall.Forms.Controls.Button InfiniteMoneyButton { get; set; }
             public FlatRedBall.Forms.Controls.Button GibMunney { get; set; }
@@ -40,6 +41,7 @@
                 IronDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("IronDisplay"));
                 SteelDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("SteelDisplay"));
                 WaterDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("WaterDisplay"));
+                CoalDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("CoalDisplay"));
                 MoneyDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("MoneyDisplay"));
                 InfiniteMoneyButton = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("InfiniteMoneyButton").FormsControlAsObject;
                 GibMunney = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("GibMunney").FormsControlAsObject;

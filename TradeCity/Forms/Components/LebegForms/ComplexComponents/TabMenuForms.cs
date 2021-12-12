@@ -1,4 +1,5 @@
 using FlatRedBall.Forms.Controls;
+using JHP4SD.Lebeg134.Module.Session;
 using JHP4SD.Lebeg134.Module.Structures;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace JHP4SD.FormsControls.Components.LebegForms.ComplexComponents
             OilTab.Click += OilTab_Click;
             WorkforceTab.Click += WorkforceTab_Click;
 
+            RegisterAllBuildings();
             RefreshActiveTab();
         }
         private void CommonTab_Click(object sender, EventArgs e)
@@ -62,13 +64,17 @@ namespace JHP4SD.FormsControls.Components.LebegForms.ComplexComponents
 
         public void RegisterBuilding(Building building)
         {
-            // TODO building category enum and register to specific List
-
             var visual1 = new GumRuntimes.LebegForms.BasicComponents.BuildingListItemRuntime();
             var listBoxItem1 = visual1.FormsControl;
             listBoxItem1.UpdateToObject(building.ToString());
-            CommonList.Items.Add(listBoxItem1);
-
+            tabLists[(int)building.getBranch()].Items.Add(listBoxItem1);
+        }
+        public void RegisterAllBuildings()
+        {
+            foreach (Building building in SessionGenerator.GetAllBuildings())
+            {
+                RegisterBuilding(building);
+            }
         }
     }
 }

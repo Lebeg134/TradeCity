@@ -20,7 +20,7 @@ namespace JHP4SD.Screens
 
         void CustomInitialize()
         {
-            Forms.BuildingTabs.RegisterBuilding(new SteelForge());
+            
         }
 
         void CustomActivity(bool firstTimeCalled)

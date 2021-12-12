@@ -524,15 +524,30 @@
     <State>
       <Name>Enabled</Name>
       <Variable>
+        <Type>int</Type>
+        <Name>BackgroundInstance.Blue</Name>
+        <Value xsi:type="xsd:int">255</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategoryState</Type>
         <Name>BackgroundInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>bool</Type>
-        <Name>RectangleInstance.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
+        <Type>int</Type>
+        <Name>BackgroundInstance.Green</Name>
+        <Value xsi:type="xsd:int">255</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>BackgroundInstance.Red</Name>
+        <Value xsi:type="xsd:int">255</Value>
+        <Category>Rendering</Category>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -572,33 +587,42 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>int</Type>
-        <Name>BackgroundInstance.Red</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
+        <Type>bool</Type>
+        <Name>RectangleInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>int</Type>
-        <Name>BackgroundInstance.Green</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>BackgroundInstance.Blue</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
+        <Type>string</Type>
+        <Name>BuildButton.Text</Name>
+        <Value xsi:type="xsd:string">Build</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
     <State>
       <Name>Highlighted</Name>
       <Variable>
+        <Type>int</Type>
+        <Name>BackgroundInstance.Blue</Name>
+        <Value xsi:type="xsd:int">128</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategoryState</Type>
         <Name>BackgroundInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Gray</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>BackgroundInstance.Green</Name>
+        <Value xsi:type="xsd:int">128</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>BackgroundInstance.Red</Name>
+        <Value xsi:type="xsd:int">128</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -638,27 +662,15 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>string</Type>
+        <Name>BuildButton.Text</Name>
+        <Value xsi:type="xsd:string">Upgrade</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>bool</Type>
         <Name>RectangleInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>BackgroundInstance.Red</Name>
-        <Value xsi:type="xsd:int">102</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>BackgroundInstance.Green</Name>
-        <Value xsi:type="xsd:int">205</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>BackgroundInstance.Blue</Name>
-        <Value xsi:type="xsd:int">170</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -667,7 +679,7 @@
       <Variable>
         <Type>int</Type>
         <Name>BackgroundInstance.Blue</Name>
-        <Value xsi:type="xsd:int">128</Value>
+        <Value xsi:type="xsd:int">170</Value>
         <Category>Rendering</Category>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -680,14 +692,14 @@
       <Variable>
         <Type>int</Type>
         <Name>BackgroundInstance.Green</Name>
-        <Value xsi:type="xsd:int">128</Value>
+        <Value xsi:type="xsd:int">205</Value>
         <Category>Rendering</Category>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>int</Type>
         <Name>BackgroundInstance.Red</Name>
-        <Value xsi:type="xsd:int">128</Value>
+        <Value xsi:type="xsd:int">102</Value>
         <Category>Rendering</Category>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -733,13 +745,76 @@
         <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+      <Variable>
+        <Type>string</Type>
+        <Name>BuildButton.Text</Name>
+        <Value xsi:type="xsd:string">Build</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>Focused</Name>
       <Variable>
+        <Type>int</Type>
+        <Name>BackgroundInstance.Blue</Name>
+        <Value xsi:type="xsd:int">255</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategoryState</Type>
         <Name>BackgroundInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Gray</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>BackgroundInstance.Green</Name>
+        <Value xsi:type="xsd:int">255</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>BackgroundInstance.Red</Name>
+        <Value xsi:type="xsd:int">255</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>float</Type>
+        <Name>BackgroundInstance.X</Name>
+        <Value xsi:type="xsd:float">0</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>HorizontalAlignment</Type>
+        <Name>BackgroundInstance.X Origin</Name>
+        <Value xsi:type="xsd:int">1</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>PositionUnitType</Type>
+        <Name>BackgroundInstance.X Units</Name>
+        <Value xsi:type="xsd:int">6</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>float</Type>
+        <Name>BackgroundInstance.Y</Name>
+        <Value xsi:type="xsd:float">0</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>VerticalAlignment</Type>
+        <Name>BackgroundInstance.Y Origin</Name>
+        <Value xsi:type="xsd:int">1</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>PositionUnitType</Type>
+        <Name>BackgroundInstance.Y Units</Name>
+        <Value xsi:type="xsd:int">7</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -749,60 +824,9 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>float</Type>
-        <Name>BackgroundInstance.X</Name>
-        <Value xsi:type="xsd:float">0</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>HorizontalAlignment</Type>
-        <Name>BackgroundInstance.X Origin</Name>
-        <Value xsi:type="xsd:int">1</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>PositionUnitType</Type>
-        <Name>BackgroundInstance.X Units</Name>
-        <Value xsi:type="xsd:int">6</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>float</Type>
-        <Name>BackgroundInstance.Y</Name>
-        <Value xsi:type="xsd:float">0</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>VerticalAlignment</Type>
-        <Name>BackgroundInstance.Y Origin</Name>
-        <Value xsi:type="xsd:int">1</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>PositionUnitType</Type>
-        <Name>BackgroundInstance.Y Units</Name>
-        <Value xsi:type="xsd:int">7</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>BackgroundInstance.Red</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>BackgroundInstance.Green</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>BackgroundInstance.Blue</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
+        <Type>string</Type>
+        <Name>BuildButton.Text</Name>
+        <Value xsi:type="xsd:string">Build</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>

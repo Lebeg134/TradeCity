@@ -1,8 +1,11 @@
 ﻿using JHP4SD.Lebeg134.Module.Resources;
+using JHP4SD.Lebeg134.Module.Structures;
 using JHP4SD.Lebeg134.Units.Resources.Common;
 using Lebeg134.Resources.Common;
 using Lebeg134.Resources.EnergySector;
 using Lebeg134.Resources.Workforce;
+using Lebeg134.Structures.Common;
+using Lebeg134.Structures.EnergySector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +36,11 @@ namespace JHP4SD.Lebeg134.Module.Session
             player.registerResources(template);
             player.giveRes(new Money(1500));
             player.giveRes(new Workforce(500));
+        }
+
+        internal static List<Building> GetAllBuildings()
+        {
+            return new List<Building> { new SteelForge(), new CoalPowerplant()};
         }
     }
 }

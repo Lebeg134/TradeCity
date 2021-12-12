@@ -854,6 +854,146 @@
         "ElementType": "Components",
         "EventType": 7,
         "TimestampUtc": "2021-12-12T14:42:27.3247715Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.NineSliceInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T16:31:41.6850535Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.DefaultForms/Label LabelInstance in LebegForms/BasicComponents/ResourceDisplay",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-12T16:31:53.2226242Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.Sprite SpriteInstance in LebegForms/BasicComponents/ResourceDisplay",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-12T16:31:53.2246194Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.Sprite ChangeIndicatorUp in LebegForms/BasicComponents/ResourceDisplay",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-12T16:31:53.2266142Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.Sprite ChangeIndicatorDown in LebegForms/BasicComponents/ResourceDisplay",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-12T16:31:53.227611Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.LabelInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T16:31:54.6137325Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T16:31:54.6147295Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.ChangeIndicatorUp",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T16:31:54.6167249Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.ChangeIndicatorDown",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T16:31:54.6177217Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.NineSlice NineSliceInstance in LebegForms/BasicComponents/ResourceDisplay",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-12T16:32:16.3562567Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.ColoredFrameInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T16:32:22.8194725Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.DefaultForms/Label LabelInstance in LebegForms/BasicComponents/ResourceDisplay",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-12T16:32:26.7704387Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.Sprite SpriteInstance in LebegForms/BasicComponents/ResourceDisplay",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-12T16:32:26.7714135Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.Sprite ChangeIndicatorUp in LebegForms/BasicComponents/ResourceDisplay",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-12T16:32:26.7734072Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.Sprite ChangeIndicatorDown in LebegForms/BasicComponents/ResourceDisplay",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-12T16:32:26.7754022Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.LabelInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T16:32:27.956086Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T16:32:27.9580803Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.ChangeIndicatorUp",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T16:32:27.9590776Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.ChangeIndicatorDown",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-12T16:32:27.9610721Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ResourceDisplay.Background",
+        "OldName": "LebegForms/BasicComponents/ResourceDisplay.ColoredFrameInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-12T16:32:37.7265448Z"
       }
     ],
     "torok": []

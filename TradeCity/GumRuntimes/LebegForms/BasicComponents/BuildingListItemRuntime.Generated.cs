@@ -134,21 +134,9 @@
                                 BackgroundInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                                 BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                                 RectangleInstance.Visible = false;
+                                BuildButton.Text = "Build";
                                 break;
                             case  ListBoxItemCategory.Highlighted:
-                                BackgroundInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
-                                BackgroundInstance.Blue = 170;
-                                BackgroundInstance.Green = 205;
-                                BackgroundInstance.Red = 102;
-                                BackgroundInstance.X = 0f;
-                                BackgroundInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                                BackgroundInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                                BackgroundInstance.Y = 0f;
-                                BackgroundInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                                BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                                RectangleInstance.Visible = false;
-                                break;
-                            case  ListBoxItemCategory.Selected:
                                 BackgroundInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                                 BackgroundInstance.Blue = 128;
                                 BackgroundInstance.Green = 128;
@@ -160,6 +148,21 @@
                                 BackgroundInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                                 BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                                 RectangleInstance.Visible = false;
+                                BuildButton.Text = "Upgrade";
+                                break;
+                            case  ListBoxItemCategory.Selected:
+                                BackgroundInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                                BackgroundInstance.Blue = 170;
+                                BackgroundInstance.Green = 205;
+                                BackgroundInstance.Red = 102;
+                                BackgroundInstance.X = 0f;
+                                BackgroundInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                                BackgroundInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                                BackgroundInstance.Y = 0f;
+                                BackgroundInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                                BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                                RectangleInstance.Visible = false;
+                                BuildButton.Text = "Build";
                                 break;
                             case  ListBoxItemCategory.Focused:
                                 BackgroundInstance.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
@@ -173,6 +176,7 @@
                                 BackgroundInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                                 BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                                 RectangleInstance.Visible = true;
+                                BuildButton.Text = "Build";
                                 break;
                         }
                     }
@@ -973,10 +977,52 @@
                         }
                         if (interpolationValue < 1)
                         {
+                            this.BuildButton.Text = "Build";
+                        }
+                        if (interpolationValue < 1)
+                        {
                             this.RectangleInstance.Visible = false;
                         }
                         break;
                     case  ListBoxItemCategory.Highlighted:
+                        setBackgroundInstanceBlueFirstValue = true;
+                        BackgroundInstanceBlueFirstValue = 128;
+                        setBackgroundInstanceCurrentColorCategoryStateFirstValue = true;
+                        BackgroundInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                        setBackgroundInstanceGreenFirstValue = true;
+                        BackgroundInstanceGreenFirstValue = 128;
+                        setBackgroundInstanceRedFirstValue = true;
+                        BackgroundInstanceRedFirstValue = 128;
+                        setBackgroundInstanceXFirstValue = true;
+                        BackgroundInstanceXFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.BackgroundInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.BackgroundInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setBackgroundInstanceYFirstValue = true;
+                        BackgroundInstanceYFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.BackgroundInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.BuildButton.Text = "Upgrade";
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.RectangleInstance.Visible = false;
+                        }
+                        break;
+                    case  ListBoxItemCategory.Selected:
                         setBackgroundInstanceBlueFirstValue = true;
                         BackgroundInstanceBlueFirstValue = 170;
                         setBackgroundInstanceCurrentColorCategoryStateFirstValue = true;
@@ -1007,37 +1053,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            this.RectangleInstance.Visible = false;
-                        }
-                        break;
-                    case  ListBoxItemCategory.Selected:
-                        setBackgroundInstanceBlueFirstValue = true;
-                        BackgroundInstanceBlueFirstValue = 128;
-                        setBackgroundInstanceCurrentColorCategoryStateFirstValue = true;
-                        BackgroundInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
-                        setBackgroundInstanceGreenFirstValue = true;
-                        BackgroundInstanceGreenFirstValue = 128;
-                        setBackgroundInstanceRedFirstValue = true;
-                        BackgroundInstanceRedFirstValue = 128;
-                        setBackgroundInstanceXFirstValue = true;
-                        BackgroundInstanceXFirstValue = 0f;
-                        if (interpolationValue < 1)
-                        {
-                            this.BackgroundInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.BackgroundInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
-                        setBackgroundInstanceYFirstValue = true;
-                        BackgroundInstanceYFirstValue = 0f;
-                        if (interpolationValue < 1)
-                        {
-                            this.BackgroundInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            this.BuildButton.Text = "Build";
                         }
                         if (interpolationValue < 1)
                         {
@@ -1072,6 +1088,10 @@
                         if (interpolationValue < 1)
                         {
                             this.BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.BuildButton.Text = "Build";
                         }
                         if (interpolationValue < 1)
                         {
@@ -1112,10 +1132,52 @@
                         }
                         if (interpolationValue >= 1)
                         {
+                            this.BuildButton.Text = "Build";
+                        }
+                        if (interpolationValue >= 1)
+                        {
                             this.RectangleInstance.Visible = false;
                         }
                         break;
                     case  ListBoxItemCategory.Highlighted:
+                        setBackgroundInstanceBlueSecondValue = true;
+                        BackgroundInstanceBlueSecondValue = 128;
+                        setBackgroundInstanceCurrentColorCategoryStateSecondValue = true;
+                        BackgroundInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                        setBackgroundInstanceGreenSecondValue = true;
+                        BackgroundInstanceGreenSecondValue = 128;
+                        setBackgroundInstanceRedSecondValue = true;
+                        BackgroundInstanceRedSecondValue = 128;
+                        setBackgroundInstanceXSecondValue = true;
+                        BackgroundInstanceXSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.BackgroundInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.BackgroundInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setBackgroundInstanceYSecondValue = true;
+                        BackgroundInstanceYSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.BackgroundInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.BuildButton.Text = "Upgrade";
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.RectangleInstance.Visible = false;
+                        }
+                        break;
+                    case  ListBoxItemCategory.Selected:
                         setBackgroundInstanceBlueSecondValue = true;
                         BackgroundInstanceBlueSecondValue = 170;
                         setBackgroundInstanceCurrentColorCategoryStateSecondValue = true;
@@ -1146,37 +1208,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.RectangleInstance.Visible = false;
-                        }
-                        break;
-                    case  ListBoxItemCategory.Selected:
-                        setBackgroundInstanceBlueSecondValue = true;
-                        BackgroundInstanceBlueSecondValue = 128;
-                        setBackgroundInstanceCurrentColorCategoryStateSecondValue = true;
-                        BackgroundInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
-                        setBackgroundInstanceGreenSecondValue = true;
-                        BackgroundInstanceGreenSecondValue = 128;
-                        setBackgroundInstanceRedSecondValue = true;
-                        BackgroundInstanceRedSecondValue = 128;
-                        setBackgroundInstanceXSecondValue = true;
-                        BackgroundInstanceXSecondValue = 0f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.BackgroundInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.BackgroundInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
-                        setBackgroundInstanceYSecondValue = true;
-                        BackgroundInstanceYSecondValue = 0f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.BackgroundInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            this.BuildButton.Text = "Build";
                         }
                         if (interpolationValue >= 1)
                         {
@@ -1211,6 +1243,10 @@
                         if (interpolationValue >= 1)
                         {
                             this.BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.BuildButton.Text = "Build";
                         }
                         if (interpolationValue >= 1)
                         {
@@ -2650,6 +2686,14 @@
                             Value = RectangleInstance.Visible
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Text",
+                            Type = "string",
+                            Value = BuildButton.Text
+                        }
+                        );
                         break;
                     case  ListBoxItemCategory.Highlighted:
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2738,6 +2782,14 @@
                             Name = "RectangleInstance.Visible",
                             Type = "bool",
                             Value = RectangleInstance.Visible
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Text",
+                            Type = "string",
+                            Value = BuildButton.Text
                         }
                         );
                         break;
@@ -2830,6 +2882,14 @@
                             Value = RectangleInstance.Visible
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Text",
+                            Type = "string",
+                            Value = BuildButton.Text
+                        }
+                        );
                         break;
                     case  ListBoxItemCategory.Focused:
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2918,6 +2978,14 @@
                             Name = "RectangleInstance.Visible",
                             Type = "bool",
                             Value = RectangleInstance.Visible
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Text",
+                            Type = "string",
+                            Value = BuildButton.Text
                         }
                         );
                         break;
@@ -3018,8 +3086,114 @@
                             Value = RectangleInstance.Visible
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Text",
+                            Type = "string",
+                            Value = BuildButton.Text
+                        }
+                        );
                         break;
                     case  ListBoxItemCategory.Highlighted:
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundInstance.Blue",
+                            Type = "int",
+                            Value = BackgroundInstance.Blue + 128
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundInstance.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = BackgroundInstance.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundInstance.Green",
+                            Type = "int",
+                            Value = BackgroundInstance.Green + 128
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundInstance.Red",
+                            Type = "int",
+                            Value = BackgroundInstance.Red + 128
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundInstance.X",
+                            Type = "float",
+                            Value = BackgroundInstance.X + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundInstance.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = BackgroundInstance.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = BackgroundInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundInstance.Y",
+                            Type = "float",
+                            Value = BackgroundInstance.Y + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = BackgroundInstance.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BackgroundInstance.Y Units",
+                            Type = "PositionUnitType",
+                            Value = BackgroundInstance.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "RectangleInstance.Visible",
+                            Type = "bool",
+                            Value = RectangleInstance.Visible
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Text",
+                            Type = "string",
+                            Value = BuildButton.Text
+                        }
+                        );
+                        break;
+                    case  ListBoxItemCategory.Selected:
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
@@ -3108,94 +3282,12 @@
                             Value = RectangleInstance.Visible
                         }
                         );
-                        break;
-                    case  ListBoxItemCategory.Selected:
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "BackgroundInstance.Blue",
-                            Type = "int",
-                            Value = BackgroundInstance.Blue + 128
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "BackgroundInstance.ColorCategoryState",
-                            Type = "ColorCategoryState",
-                            Value = BackgroundInstance.CurrentColorCategoryState
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "BackgroundInstance.Green",
-                            Type = "int",
-                            Value = BackgroundInstance.Green + 128
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "BackgroundInstance.Red",
-                            Type = "int",
-                            Value = BackgroundInstance.Red + 128
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "BackgroundInstance.X",
-                            Type = "float",
-                            Value = BackgroundInstance.X + 0f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "BackgroundInstance.X Origin",
-                            Type = "HorizontalAlignment",
-                            Value = BackgroundInstance.XOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "BackgroundInstance.X Units",
-                            Type = "PositionUnitType",
-                            Value = BackgroundInstance.XUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "BackgroundInstance.Y",
-                            Type = "float",
-                            Value = BackgroundInstance.Y + 0f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "BackgroundInstance.Y Origin",
-                            Type = "VerticalAlignment",
-                            Value = BackgroundInstance.YOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "BackgroundInstance.Y Units",
-                            Type = "PositionUnitType",
-                            Value = BackgroundInstance.YUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "RectangleInstance.Visible",
-                            Type = "bool",
-                            Value = RectangleInstance.Visible
+                            Name = "BuildButton.Text",
+                            Type = "string",
+                            Value = BuildButton.Text
                         }
                         );
                         break;
@@ -3286,6 +3378,14 @@
                             Name = "RectangleInstance.Visible",
                             Type = "bool",
                             Value = RectangleInstance.Visible
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Text",
+                            Type = "string",
+                            Value = BuildButton.Text
                         }
                         );
                         break;

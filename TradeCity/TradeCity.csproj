@@ -274,7 +274,9 @@
       <DependentUpon>BackButtonRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\BuildingListItemRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\BuildingListItemRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\BuildingListItemRuntime.Generated.cs">
+      <DependentUpon>BuildingListItemRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\CityMenuTabRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\CityMenuTabRuntime.Generated.cs">
       <DependentUpon>CityMenuTabRuntime.cs</DependentUpon>

@@ -24,6 +24,10 @@ namespace JHP4SD.Lebeg134.Module.Session
             Console.WriteLine("New Player created"); //DEBUG
             playerStrategy = new StandardPlayerStrategy(this);
         }
+        internal IEnumerable<Resource> getAllRes()
+        {
+            return ownedResources.Values;
+        }
         public bool hasStructure(IOwnable structure)
         {
             foreach (IOwnable ownable in owned)

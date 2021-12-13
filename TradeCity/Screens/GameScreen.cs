@@ -18,17 +18,15 @@ using Lebeg134.Resources.EnergySector;
 using Lebeg134.Resources.Common;
 using JHP4SD.Lebeg134.Module.TimeManager;
 using Lebeg134.Structures.Lands;
+using JHP4SD.Lebeg134.Module.Resources;
+using JHP4SD.GumRuntimes.LebegForms.BasicComponents;
 
 namespace JHP4SD.Screens
 {
     public partial class GameScreen
     {
-        static bool playState = false;
         void CustomInitialize()
         {
-            
-
-
             Forms.PlayButtonInstance.IsChecked = Clock.Instance.isEnabled();
             Forms.PlayButtonInstance.Click += PlayButtonInstance_Click;
 
@@ -41,6 +39,20 @@ namespace JHP4SD.Screens
             Forms.InfiniteMoneyButton.Click += InfiniteMoneyButton_Click;
             Forms.GibMunney.Click += GibMunney_Click;
 
+            foreach (Resource resource in Player.CurrentPlayer.getAllRes())
+            {
+                AddToList(resource);
+            }
+            UpdateResourceList();
+        }
+
+        private void UpdateResourceList()
+        {
+            foreach (ResourceListItemRuntime item in Forms.ResourceList.Items)
+            {
+                item.Update();
+            }
+            
         }
 
         private void GibMunney_Click(object sender, EventArgs e)
@@ -105,8 +117,13 @@ namespace JHP4SD.Screens
 
         }
 
-        
-
-        
+        void AddToList(Resource resource)
+        {
+            var visualItem = new GumRuntimes.LebegForms.BasicComponents.ResourceListItemRuntime();
+            visualItem.Focus = resource;
+            var listBoxItem = visualItem.FormsControl;
+            listBoxItem.UpdateToObject(resource.getName());
+            Forms.ResourceList.Items.Add(listBoxItem);
+        }
     }
 }

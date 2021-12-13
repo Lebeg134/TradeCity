@@ -7,7 +7,7 @@
             public JHP4SD.FormsControls.Components.LebegForms.ComplexComponents.ScreenSelectorForms ScreenSelectorInstance { get; set; }
             public FlatRedBall.Forms.Controls.Button BackButtonInstance { get; set; }
             public FlatRedBall.Forms.Controls.Games.DialogBox DialogBoxInstance { get; set; }
-            public FlatRedBall.Forms.Controls.ListBox ListBoxInstance { get; set; }
+            public FlatRedBall.Forms.Controls.ListBox ResourceList { get; set; }
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms WorkforceDisplay { get; set; }
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms ElectricityDisplay { get; set; }
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms WoodDisplay { get; set; }
@@ -34,7 +34,7 @@
                 ScreenSelectorInstance = new JHP4SD.FormsControls.Components.LebegForms.ComplexComponents.ScreenSelectorForms(Visual.GetGraphicalUiElementByName("ScreenSelectorInstance"));
                 BackButtonInstance = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("BackButtonInstance").FormsControlAsObject;
                 DialogBoxInstance = (FlatRedBall.Forms.Controls.Games.DialogBox)Visual.GetGraphicalUiElementByName("DialogBoxInstance").FormsControlAsObject;
-                ListBoxInstance = (FlatRedBall.Forms.Controls.ListBox)Visual.GetGraphicalUiElementByName("ListBoxInstance").FormsControlAsObject;
+                ResourceList = (FlatRedBall.Forms.Controls.ListBox)Visual.GetGraphicalUiElementByName("ResourceList").FormsControlAsObject;
                 WorkforceDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("WorkforceDisplay"));
                 ElectricityDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("ElectricityDisplay"));
                 WoodDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("WoodDisplay"));

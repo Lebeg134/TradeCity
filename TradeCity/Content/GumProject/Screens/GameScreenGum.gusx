@@ -283,31 +283,31 @@
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ListBoxInstance.Height</Name>
+      <Name>ResourceList.Height</Name>
       <Value xsi:type="xsd:float">-280</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
-      <Name>ListBoxInstance.Height Units</Name>
+      <Name>ResourceList.Height Units</Name>
       <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ListBoxInstance.X</Name>
+      <Name>ResourceList.X</Name>
       <Value xsi:type="xsd:float">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ListBoxInstance.Y</Name>
+      <Name>ResourceList.Y</Name>
       <Value xsi:type="xsd:float">72</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>PositionUnitType</Type>
-      <Name>ListBoxInstance.Y Units</Name>
+      <Name>ResourceList.Y Units</Name>
       <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
@@ -628,7 +628,7 @@
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>ListBoxInstance</Name>
+    <Name>ResourceList</Name>
     <BaseType>DefaultForms/ListBox</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>

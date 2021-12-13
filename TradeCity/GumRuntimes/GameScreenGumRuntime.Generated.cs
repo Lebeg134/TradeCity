@@ -82,11 +82,11 @@
                             DialogBoxInstance.Y = 0f;
                             DialogBoxInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             DialogBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            ListBoxInstance.Height = -280f;
-                            ListBoxInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
-                            ListBoxInstance.X = 0f;
-                            ListBoxInstance.Y = 72f;
-                            ListBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            ResourceList.Height = -280f;
+                            ResourceList.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            ResourceList.X = 0f;
+                            ResourceList.Y = 72f;
+                            ResourceList.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                             Resources.ChildrenLayout = Gum.Managers.ChildrenLayout.LeftToRightStack;
                             Resources.Height = 40f;
                             Resources.Width = 0f;
@@ -209,18 +209,6 @@
                 bool setIronDisplayXSecondValue = false;
                 float IronDisplayXFirstValue= 0;
                 float IronDisplayXSecondValue= 0;
-                bool setListBoxInstanceHeightFirstValue = false;
-                bool setListBoxInstanceHeightSecondValue = false;
-                float ListBoxInstanceHeightFirstValue= 0;
-                float ListBoxInstanceHeightSecondValue= 0;
-                bool setListBoxInstanceXFirstValue = false;
-                bool setListBoxInstanceXSecondValue = false;
-                float ListBoxInstanceXFirstValue= 0;
-                float ListBoxInstanceXSecondValue= 0;
-                bool setListBoxInstanceYFirstValue = false;
-                bool setListBoxInstanceYSecondValue = false;
-                float ListBoxInstanceYFirstValue= 0;
-                float ListBoxInstanceYSecondValue= 0;
                 bool setMoneyDisplayXFirstValue = false;
                 bool setMoneyDisplayXSecondValue = false;
                 float MoneyDisplayXFirstValue= 0;
@@ -277,6 +265,18 @@
                 bool setResourceBarYSecondValue = false;
                 float ResourceBarYFirstValue= 0;
                 float ResourceBarYSecondValue= 0;
+                bool setResourceListHeightFirstValue = false;
+                bool setResourceListHeightSecondValue = false;
+                float ResourceListHeightFirstValue= 0;
+                float ResourceListHeightSecondValue= 0;
+                bool setResourceListXFirstValue = false;
+                bool setResourceListXSecondValue = false;
+                float ResourceListXFirstValue= 0;
+                float ResourceListXSecondValue= 0;
+                bool setResourceListYFirstValue = false;
+                bool setResourceListYSecondValue = false;
+                float ResourceListYFirstValue= 0;
+                float ResourceListYSecondValue= 0;
                 bool setResourcesHeightFirstValue = false;
                 bool setResourcesHeightSecondValue = false;
                 float ResourcesHeightFirstValue= 0;
@@ -450,20 +450,6 @@
                         }
                         setIronDisplayXFirstValue = true;
                         IronDisplayXFirstValue = 10f;
-                        setListBoxInstanceHeightFirstValue = true;
-                        ListBoxInstanceHeightFirstValue = -280f;
-                        if (interpolationValue < 1)
-                        {
-                            this.ListBoxInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
-                        }
-                        setListBoxInstanceXFirstValue = true;
-                        ListBoxInstanceXFirstValue = 0f;
-                        setListBoxInstanceYFirstValue = true;
-                        ListBoxInstanceYFirstValue = 72f;
-                        if (interpolationValue < 1)
-                        {
-                            this.ListBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
-                        }
                         if (interpolationValue < 1)
                         {
                             SetProperty("MoneyDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/money-stack.png");
@@ -543,6 +529,20 @@
                         if (interpolationValue < 1)
                         {
                             this.ResourceBar.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        setResourceListHeightFirstValue = true;
+                        ResourceListHeightFirstValue = -280f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceList.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setResourceListXFirstValue = true;
+                        ResourceListXFirstValue = 0f;
+                        setResourceListYFirstValue = true;
+                        ResourceListYFirstValue = 72f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceList.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
                         if (interpolationValue < 1)
                         {
@@ -743,20 +743,6 @@
                         }
                         setIronDisplayXSecondValue = true;
                         IronDisplayXSecondValue = 10f;
-                        setListBoxInstanceHeightSecondValue = true;
-                        ListBoxInstanceHeightSecondValue = -280f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.ListBoxInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
-                        }
-                        setListBoxInstanceXSecondValue = true;
-                        ListBoxInstanceXSecondValue = 0f;
-                        setListBoxInstanceYSecondValue = true;
-                        ListBoxInstanceYSecondValue = 72f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.ListBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
-                        }
                         if (interpolationValue >= 1)
                         {
                             SetProperty("MoneyDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/money-stack.png");
@@ -836,6 +822,20 @@
                         if (interpolationValue >= 1)
                         {
                             this.ResourceBar.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        setResourceListHeightSecondValue = true;
+                        ResourceListHeightSecondValue = -280f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceList.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setResourceListXSecondValue = true;
+                        ResourceListXSecondValue = 0f;
+                        setResourceListYSecondValue = true;
+                        ResourceListYSecondValue = 72f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceList.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
                         if (interpolationValue >= 1)
                         {
@@ -976,18 +976,6 @@
                 {
                     IronDisplay.X = IronDisplayXFirstValue * (1 - interpolationValue) + IronDisplayXSecondValue * interpolationValue;
                 }
-                if (setListBoxInstanceHeightFirstValue && setListBoxInstanceHeightSecondValue)
-                {
-                    ListBoxInstance.Height = ListBoxInstanceHeightFirstValue * (1 - interpolationValue) + ListBoxInstanceHeightSecondValue * interpolationValue;
-                }
-                if (setListBoxInstanceXFirstValue && setListBoxInstanceXSecondValue)
-                {
-                    ListBoxInstance.X = ListBoxInstanceXFirstValue * (1 - interpolationValue) + ListBoxInstanceXSecondValue * interpolationValue;
-                }
-                if (setListBoxInstanceYFirstValue && setListBoxInstanceYSecondValue)
-                {
-                    ListBoxInstance.Y = ListBoxInstanceYFirstValue * (1 - interpolationValue) + ListBoxInstanceYSecondValue * interpolationValue;
-                }
                 if (setMoneyDisplayXFirstValue && setMoneyDisplayXSecondValue)
                 {
                     MoneyDisplay.X = MoneyDisplayXFirstValue * (1 - interpolationValue) + MoneyDisplayXSecondValue * interpolationValue;
@@ -1043,6 +1031,18 @@
                 if (setResourceBarYFirstValue && setResourceBarYSecondValue)
                 {
                     ResourceBar.Y = ResourceBarYFirstValue * (1 - interpolationValue) + ResourceBarYSecondValue * interpolationValue;
+                }
+                if (setResourceListHeightFirstValue && setResourceListHeightSecondValue)
+                {
+                    ResourceList.Height = ResourceListHeightFirstValue * (1 - interpolationValue) + ResourceListHeightSecondValue * interpolationValue;
+                }
+                if (setResourceListXFirstValue && setResourceListXSecondValue)
+                {
+                    ResourceList.X = ResourceListXFirstValue * (1 - interpolationValue) + ResourceListXSecondValue * interpolationValue;
+                }
+                if (setResourceListYFirstValue && setResourceListYSecondValue)
+                {
+                    ResourceList.Y = ResourceListYFirstValue * (1 - interpolationValue) + ResourceListYSecondValue * interpolationValue;
                 }
                 if (setResourcesHeightFirstValue && setResourcesHeightSecondValue)
                 {
@@ -1157,7 +1157,7 @@
                 InfoBar.StopAnimations();
                 BackButtonInstance.StopAnimations();
                 DialogBoxInstance.StopAnimations();
-                ListBoxInstance.StopAnimations();
+                ResourceList.StopAnimations();
                 WorkforceDisplay.StopAnimations();
                 ElectricityDisplay.StopAnimations();
                 WoodDisplay.StopAnimations();
@@ -1583,41 +1583,41 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ListBoxInstance.Height",
+                            Name = "ResourceList.Height",
                             Type = "float",
-                            Value = ListBoxInstance.Height
+                            Value = ResourceList.Height
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ListBoxInstance.Height Units",
+                            Name = "ResourceList.Height Units",
                             Type = "DimensionUnitType",
-                            Value = ListBoxInstance.HeightUnits
+                            Value = ResourceList.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ListBoxInstance.X",
+                            Name = "ResourceList.X",
                             Type = "float",
-                            Value = ListBoxInstance.X
+                            Value = ResourceList.X
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ListBoxInstance.Y",
+                            Name = "ResourceList.Y",
                             Type = "float",
-                            Value = ListBoxInstance.Y
+                            Value = ResourceList.Y
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ListBoxInstance.Y Units",
+                            Name = "ResourceList.Y Units",
                             Type = "PositionUnitType",
-                            Value = ListBoxInstance.YUnits
+                            Value = ResourceList.YUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2345,41 +2345,41 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ListBoxInstance.Height",
+                            Name = "ResourceList.Height",
                             Type = "float",
-                            Value = ListBoxInstance.Height + -280f
+                            Value = ResourceList.Height + -280f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ListBoxInstance.Height Units",
+                            Name = "ResourceList.Height Units",
                             Type = "DimensionUnitType",
-                            Value = ListBoxInstance.HeightUnits
+                            Value = ResourceList.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ListBoxInstance.X",
+                            Name = "ResourceList.X",
                             Type = "float",
-                            Value = ListBoxInstance.X + 0f
+                            Value = ResourceList.X + 0f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ListBoxInstance.Y",
+                            Name = "ResourceList.Y",
                             Type = "float",
-                            Value = ListBoxInstance.Y + 72f
+                            Value = ResourceList.Y + 72f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ListBoxInstance.Y Units",
+                            Name = "ResourceList.Y Units",
                             Type = "PositionUnitType",
-                            Value = ListBoxInstance.YUnits
+                            Value = ResourceList.YUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2719,7 +2719,7 @@
             public JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime InfoBar { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.BackButtonRuntime BackButtonInstance { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.DialogBoxRuntime DialogBoxInstance { get; set; }
-            public JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime ListBoxInstance { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime ResourceList { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime Resources { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime WorkforceDisplay { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ElectricityDisplay { get; set; }
@@ -2763,7 +2763,7 @@
                 InfoBar = this.GetGraphicalUiElementByName("InfoBar") as JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime;
                 BackButtonInstance = this.GetGraphicalUiElementByName("BackButtonInstance") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.BackButtonRuntime;
                 DialogBoxInstance = this.GetGraphicalUiElementByName("DialogBoxInstance") as JHP4SD.GumRuntimes.DefaultForms.DialogBoxRuntime;
-                ListBoxInstance = this.GetGraphicalUiElementByName("ListBoxInstance") as JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime;
+                ResourceList = this.GetGraphicalUiElementByName("ResourceList") as JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime;
                 Resources = this.GetGraphicalUiElementByName("Resources") as JHP4SD.GumRuntimes.ContainerRuntime;
                 WorkforceDisplay = this.GetGraphicalUiElementByName("WorkforceDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 ElectricityDisplay = this.GetGraphicalUiElementByName("ElectricityDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;

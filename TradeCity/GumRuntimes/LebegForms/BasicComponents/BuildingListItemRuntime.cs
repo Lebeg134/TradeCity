@@ -15,10 +15,6 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
         partial void CustomInitialize () 
         {
             BuildButton.Click += BuildButton_Click;
-            if (Player.CurrentPlayer.hasStructure(FocusBuilding))
-            {
-                BuildButton.Text = "Upgrade";
-            }
         }
 
         private void BuildButton_Click(FlatRedBall.Gui.IWindow window)
@@ -38,6 +34,7 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
                 try
                 {
                     FocusBuilding.Build(Player.CurrentPlayer);
+                    BuildButton.Text = "Upgrade";
                 }
                 catch (NotEnoughResourceException e)
                 {

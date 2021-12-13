@@ -12,18 +12,22 @@ namespace JHP4SD.Lebeg134.Module.Session
         public class StandardPlayerStrategy : PlayerStrategyBase
         {
             public StandardPlayerStrategy(Player subject) : base(subject) { }
-            public void tick()
+            public override void tick()
             {
+                System.Console.WriteLine("Ticked"); //DEBUG
                 Produce();
             }
             private void Produce()
             {
                 List<Resource> previousState = new List<Resource>();
-                foreach (ContinousResource cntRes in player.ownedResources.Values)
+                foreach (Resource cntRes in player.ownedResources.Values)
                 {
-                    previousState.Add(cntRes); // Is that just a reference? (I hope not)
+                    if (cntRes is ContinousResource)
+                    {
+                        previousState.Add(cntRes.getNewResource(cntRes.amount()));
+                        System.Console.WriteLine("cntRes: " + cntRes); //DEBUG
+                    }
                 }
-                List<Resource> resources = new List<Resource>();
                 foreach (IProducer producer in player.owned)
                 {
                     producer.Produce();

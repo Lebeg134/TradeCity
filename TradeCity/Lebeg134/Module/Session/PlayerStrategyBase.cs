@@ -30,7 +30,7 @@ namespace JHP4SD.Lebeg134.Module.Session
                 return false;
             }
 
-            public void tick()
+            public virtual void tick()
             {
                 foreach (ITickable tickable in player.owned)
                 {

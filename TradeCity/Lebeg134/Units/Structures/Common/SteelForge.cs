@@ -73,7 +73,7 @@ namespace Lebeg134.Structures.Common
 
         public override List<Resource> getProduce()
         {
-            return upkeepLevelsArray[level - 1];
+            return productionLevels[level - 1];
         }
     }
 

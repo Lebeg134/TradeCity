@@ -14,7 +14,6 @@ namespace JHP4SD.Lebeg134.Module.Session
             public StandardPlayerStrategy(Player subject) : base(subject) { }
             public override void tick()
             {
-                System.Console.WriteLine("Ticked"); //DEBUG
                 Produce();
             }
             private void Produce()
@@ -25,7 +24,6 @@ namespace JHP4SD.Lebeg134.Module.Session
                     if (cntRes is ContinousResource)
                     {
                         previousState.Add(cntRes.getNewResource(cntRes.amount()));
-                        System.Console.WriteLine("cntRes: " + cntRes); //DEBUG
                     }
                 }
                 foreach (IProducer producer in player.owned)

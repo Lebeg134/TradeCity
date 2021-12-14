@@ -71,6 +71,18 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>int</Type>
+      <Name>ColoredFrameInstance.Alpha</Name>
+      <ExposedAsName>ColoredFrameInstanceAlpha</ExposedAsName>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>ColorCategoryState</Type>
+      <Name>ColoredFrameInstance.ColorCategoryState</Name>
+      <ExposedAsName>ListBoxBackgroundColorCategoryState</ExposedAsName>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>ColoredFrameInstance.Height</Name>
       <Value xsi:type="xsd:float">0</Value>

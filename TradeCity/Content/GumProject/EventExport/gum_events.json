@@ -1372,6 +1372,118 @@
         "ElementType": "Components",
         "EventType": 6,
         "TimestampUtc": "2021-12-14T20:37:52.5428047Z"
+      },
+      {
+        "NewName": " MapGum.ListBoxInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T22:06:14.0934756Z"
+      },
+      {
+        "NewName": " MapGum.OwnedLands",
+        "OldName": " MapGum.ListBoxInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T22:06:35.8101626Z"
+      },
+      {
+        "NewName": " MapGum.ListBoxInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T22:18:39.6493659Z"
+      },
+      {
+        "NewName": " MapGum.BuyableLands",
+        "OldName": " MapGum.ListBoxInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T22:18:46.9085985Z"
+      },
+      {
+        "NewName": " MapGum.ColoredFrameInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T22:27:19.2067792Z"
+      },
+      {
+        "NewName": " MapGum.TextInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T22:27:54.5386149Z"
+      },
+      {
+        "NewName": " MapGum.MyLandsLabelBackground",
+        "OldName": " MapGum.ColoredFrameInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T22:28:06.3216935Z"
+      },
+      {
+        "NewName": " MapGum.MyLandsTextInstance",
+        "OldName": " MapGum.TextInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T22:29:02.7354685Z"
+      },
+      {
+        "NewName": " MapGum.MyLandsLabelBackground1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T22:29:36.6210805Z"
+      },
+      {
+        "NewName": " MapGum.MyLandsTextInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T22:29:36.6240723Z"
+      },
+      {
+        "NewName": " MapGum.LandsShopLabelBackground1",
+        "OldName": " MapGum.MyLandsLabelBackground1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T22:29:53.6722535Z"
+      },
+      {
+        "NewName": " MapGum.LandsShopLabelBackground",
+        "OldName": " MapGum.LandsShopLabelBackground1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T22:29:56.5479562Z"
+      },
+      {
+        "NewName": " MapGum.LandsShopTextInstance",
+        "OldName": " MapGum.MyLandsTextInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T22:30:39.3881379Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " MapGum.DefaultForms/Button ButtonInstance in  MapGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-14T22:31:13.9835835Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " MapGum.Text PaceholderText in  MapGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-14T22:37:02.6606236Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " MapGum.Text TextInstance in  MapGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-14T22:37:05.5332581Z"
       }
     ],
     "torok": []

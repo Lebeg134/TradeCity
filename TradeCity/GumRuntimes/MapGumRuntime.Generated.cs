@@ -25,10 +25,15 @@
                     switch(mCurrentVariableState)
                     {
                         case  VariableState.Default:
-                            PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance");
+                            MyLandsTextInstance.Parent = this.GetGraphicalUiElementByName("MyLandsLabelBackground");
+                            LandsShopTextInstance.Parent = this.GetGraphicalUiElementByName("LandsShopLabelBackground");
+                            BuyableLands.ListBoxBackgroundColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.TransparentBlack;
+                            BuyableLands.CurrentListBoxCategoryState = JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime.ListBoxCategory.Enabled;
+                            MyLandsLabelBackground.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                            LandsShopLabelBackground.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                             SpriteInstance.Height = 0f;
                             SpriteInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
-                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/Screen/MapPlaceholder.jpg");
+                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/Screen/Europe-Map-Poster.jpg");
                             SpriteInstance.Width = 0f;
                             SpriteInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             SpriteInstance.X = 0f;
@@ -37,40 +42,55 @@
                             SpriteInstance.Y = 0f;
                             SpriteInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             SpriteInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            PaceholderText.Alpha = 150;
-                            PaceholderText.Blue = 0;
-                            PaceholderText.FontSize = 128;
-                            PaceholderText.Height = 100f;
-                            PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                            PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                            PaceholderText.IsItalic = false;
-                            PaceholderText.Rotation = -20f;
-                            PaceholderText.Text = "PLACEHOLDER";
-                            PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                            PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                            PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                            PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                            PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            TextInstance.Blue = 255;
-                            TextInstance.FontSize = 128;
-                            TextInstance.Green = 255;
-                            TextInstance.Height = 179f;
-                            TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                            TextInstance.Red = 255;
-                            TextInstance.Text = "Map Screen";
-                            TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                            TextInstance.Width = 0f;
-                            TextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
-                            TextInstance.X = 0f;
-                            TextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                            TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            TextInstance.Y = 0f;
-                            TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                            TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            ButtonInstance.Text = "Gib CoalMine";
-                            ButtonInstance.X = 885.99786f;
-                            ButtonInstance.Y = 328.074f;
+                            OwnedLands.Height = -216f;
+                            OwnedLands.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            OwnedLands.Width = 500f;
+                            OwnedLands.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            OwnedLands.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            OwnedLands.Y = 144f;
+                            BuyableLands.ColoredFrameInstanceAlpha = 128;
+                            BuyableLands.Height = -272f;
+                            BuyableLands.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            BuyableLands.Width = -760f;
+                            BuyableLands.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            BuyableLands.X = -520f;
+                            BuyableLands.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            BuyableLands.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            BuyableLands.Y = 144f;
+                            MyLandsLabelBackground.Height = 72f;
+                            MyLandsLabelBackground.Width = 500f;
+                            MyLandsLabelBackground.X = 0f;
+                            MyLandsLabelBackground.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            MyLandsLabelBackground.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            MyLandsLabelBackground.Y = 72f;
+                            LandsShopLabelBackground.Height = 72f;
+                            LandsShopLabelBackground.Width = -760f;
+                            LandsShopLabelBackground.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            LandsShopLabelBackground.X = -520f;
+                            LandsShopLabelBackground.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            LandsShopLabelBackground.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            LandsShopLabelBackground.Y = 72f;
+                            MyLandsTextInstance.FontSize = 48;
+                            MyLandsTextInstance.Height = 0f;
+                            MyLandsTextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            MyLandsTextInstance.Text = "My Lands";
+                            MyLandsTextInstance.Width = 0f;
+                            MyLandsTextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            MyLandsTextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                            MyLandsTextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            MyLandsTextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            MyLandsTextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            LandsShopTextInstance.FontSize = 48;
+                            LandsShopTextInstance.Height = 0f;
+                            LandsShopTextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            LandsShopTextInstance.Text = "Lands Shop";
+                            LandsShopTextInstance.Width = 0f;
+                            LandsShopTextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            LandsShopTextInstance.X = 20f;
+                            LandsShopTextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                            LandsShopTextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                            LandsShopTextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            LandsShopTextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             break;
                     }
                 }
@@ -85,34 +105,110 @@
                     throw new System.Exception("interpolationValue cannot be NaN");
                 }
                 #endif
-                bool setButtonInstanceXFirstValue = false;
-                bool setButtonInstanceXSecondValue = false;
-                float ButtonInstanceXFirstValue= 0;
-                float ButtonInstanceXSecondValue= 0;
-                bool setButtonInstanceYFirstValue = false;
-                bool setButtonInstanceYSecondValue = false;
-                float ButtonInstanceYFirstValue= 0;
-                float ButtonInstanceYSecondValue= 0;
-                bool setPaceholderTextAlphaFirstValue = false;
-                bool setPaceholderTextAlphaSecondValue = false;
-                int PaceholderTextAlphaFirstValue= 0;
-                int PaceholderTextAlphaSecondValue= 0;
-                bool setPaceholderTextBlueFirstValue = false;
-                bool setPaceholderTextBlueSecondValue = false;
-                int PaceholderTextBlueFirstValue= 0;
-                int PaceholderTextBlueSecondValue= 0;
-                bool setPaceholderTextFontSizeFirstValue = false;
-                bool setPaceholderTextFontSizeSecondValue = false;
-                int PaceholderTextFontSizeFirstValue= 0;
-                int PaceholderTextFontSizeSecondValue= 0;
-                bool setPaceholderTextHeightFirstValue = false;
-                bool setPaceholderTextHeightSecondValue = false;
-                float PaceholderTextHeightFirstValue= 0;
-                float PaceholderTextHeightSecondValue= 0;
-                bool setPaceholderTextRotationFirstValue = false;
-                bool setPaceholderTextRotationSecondValue = false;
-                float PaceholderTextRotationFirstValue= 0;
-                float PaceholderTextRotationSecondValue= 0;
+                bool setBuyableLandsColoredFrameInstanceAlphaFirstValue = false;
+                bool setBuyableLandsColoredFrameInstanceAlphaSecondValue = false;
+                int BuyableLandsColoredFrameInstanceAlphaFirstValue= 0;
+                int BuyableLandsColoredFrameInstanceAlphaSecondValue= 0;
+                bool setBuyableLandsHeightFirstValue = false;
+                bool setBuyableLandsHeightSecondValue = false;
+                float BuyableLandsHeightFirstValue= 0;
+                float BuyableLandsHeightSecondValue= 0;
+                bool setBuyableLandsCurrentListBoxCategoryStateFirstValue = false;
+                bool setBuyableLandsCurrentListBoxCategoryStateSecondValue = false;
+                JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime.ListBoxCategory BuyableLandsCurrentListBoxCategoryStateFirstValue= JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime.ListBoxCategory.Enabled;
+                JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime.ListBoxCategory BuyableLandsCurrentListBoxCategoryStateSecondValue= JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime.ListBoxCategory.Enabled;
+                bool setBuyableLandsWidthFirstValue = false;
+                bool setBuyableLandsWidthSecondValue = false;
+                float BuyableLandsWidthFirstValue= 0;
+                float BuyableLandsWidthSecondValue= 0;
+                bool setBuyableLandsXFirstValue = false;
+                bool setBuyableLandsXSecondValue = false;
+                float BuyableLandsXFirstValue= 0;
+                float BuyableLandsXSecondValue= 0;
+                bool setBuyableLandsYFirstValue = false;
+                bool setBuyableLandsYSecondValue = false;
+                float BuyableLandsYFirstValue= 0;
+                float BuyableLandsYSecondValue= 0;
+                bool setLandsShopLabelBackgroundCurrentColorCategoryStateFirstValue = false;
+                bool setLandsShopLabelBackgroundCurrentColorCategoryStateSecondValue = false;
+                JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory LandsShopLabelBackgroundCurrentColorCategoryStateFirstValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory LandsShopLabelBackgroundCurrentColorCategoryStateSecondValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                bool setLandsShopLabelBackgroundHeightFirstValue = false;
+                bool setLandsShopLabelBackgroundHeightSecondValue = false;
+                float LandsShopLabelBackgroundHeightFirstValue= 0;
+                float LandsShopLabelBackgroundHeightSecondValue= 0;
+                bool setLandsShopLabelBackgroundWidthFirstValue = false;
+                bool setLandsShopLabelBackgroundWidthSecondValue = false;
+                float LandsShopLabelBackgroundWidthFirstValue= 0;
+                float LandsShopLabelBackgroundWidthSecondValue= 0;
+                bool setLandsShopLabelBackgroundXFirstValue = false;
+                bool setLandsShopLabelBackgroundXSecondValue = false;
+                float LandsShopLabelBackgroundXFirstValue= 0;
+                float LandsShopLabelBackgroundXSecondValue= 0;
+                bool setLandsShopLabelBackgroundYFirstValue = false;
+                bool setLandsShopLabelBackgroundYSecondValue = false;
+                float LandsShopLabelBackgroundYFirstValue= 0;
+                float LandsShopLabelBackgroundYSecondValue= 0;
+                bool setLandsShopTextInstanceFontSizeFirstValue = false;
+                bool setLandsShopTextInstanceFontSizeSecondValue = false;
+                int LandsShopTextInstanceFontSizeFirstValue= 0;
+                int LandsShopTextInstanceFontSizeSecondValue= 0;
+                bool setLandsShopTextInstanceHeightFirstValue = false;
+                bool setLandsShopTextInstanceHeightSecondValue = false;
+                float LandsShopTextInstanceHeightFirstValue= 0;
+                float LandsShopTextInstanceHeightSecondValue= 0;
+                bool setLandsShopTextInstanceWidthFirstValue = false;
+                bool setLandsShopTextInstanceWidthSecondValue = false;
+                float LandsShopTextInstanceWidthFirstValue= 0;
+                float LandsShopTextInstanceWidthSecondValue= 0;
+                bool setLandsShopTextInstanceXFirstValue = false;
+                bool setLandsShopTextInstanceXSecondValue = false;
+                float LandsShopTextInstanceXFirstValue= 0;
+                float LandsShopTextInstanceXSecondValue= 0;
+                bool setMyLandsLabelBackgroundCurrentColorCategoryStateFirstValue = false;
+                bool setMyLandsLabelBackgroundCurrentColorCategoryStateSecondValue = false;
+                JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory MyLandsLabelBackgroundCurrentColorCategoryStateFirstValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory MyLandsLabelBackgroundCurrentColorCategoryStateSecondValue= JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
+                bool setMyLandsLabelBackgroundHeightFirstValue = false;
+                bool setMyLandsLabelBackgroundHeightSecondValue = false;
+                float MyLandsLabelBackgroundHeightFirstValue= 0;
+                float MyLandsLabelBackgroundHeightSecondValue= 0;
+                bool setMyLandsLabelBackgroundWidthFirstValue = false;
+                bool setMyLandsLabelBackgroundWidthSecondValue = false;
+                float MyLandsLabelBackgroundWidthFirstValue= 0;
+                float MyLandsLabelBackgroundWidthSecondValue= 0;
+                bool setMyLandsLabelBackgroundXFirstValue = false;
+                bool setMyLandsLabelBackgroundXSecondValue = false;
+                float MyLandsLabelBackgroundXFirstValue= 0;
+                float MyLandsLabelBackgroundXSecondValue= 0;
+                bool setMyLandsLabelBackgroundYFirstValue = false;
+                bool setMyLandsLabelBackgroundYSecondValue = false;
+                float MyLandsLabelBackgroundYFirstValue= 0;
+                float MyLandsLabelBackgroundYSecondValue= 0;
+                bool setMyLandsTextInstanceFontSizeFirstValue = false;
+                bool setMyLandsTextInstanceFontSizeSecondValue = false;
+                int MyLandsTextInstanceFontSizeFirstValue= 0;
+                int MyLandsTextInstanceFontSizeSecondValue= 0;
+                bool setMyLandsTextInstanceHeightFirstValue = false;
+                bool setMyLandsTextInstanceHeightSecondValue = false;
+                float MyLandsTextInstanceHeightFirstValue= 0;
+                float MyLandsTextInstanceHeightSecondValue= 0;
+                bool setMyLandsTextInstanceWidthFirstValue = false;
+                bool setMyLandsTextInstanceWidthSecondValue = false;
+                float MyLandsTextInstanceWidthFirstValue= 0;
+                float MyLandsTextInstanceWidthSecondValue= 0;
+                bool setOwnedLandsHeightFirstValue = false;
+                bool setOwnedLandsHeightSecondValue = false;
+                float OwnedLandsHeightFirstValue= 0;
+                float OwnedLandsHeightSecondValue= 0;
+                bool setOwnedLandsWidthFirstValue = false;
+                bool setOwnedLandsWidthSecondValue = false;
+                float OwnedLandsWidthFirstValue= 0;
+                float OwnedLandsWidthSecondValue= 0;
+                bool setOwnedLandsYFirstValue = false;
+                bool setOwnedLandsYSecondValue = false;
+                float OwnedLandsYFirstValue= 0;
+                float OwnedLandsYSecondValue= 0;
                 bool setSpriteInstanceHeightFirstValue = false;
                 bool setSpriteInstanceHeightSecondValue = false;
                 float SpriteInstanceHeightFirstValue= 0;
@@ -129,103 +225,177 @@
                 bool setSpriteInstanceYSecondValue = false;
                 float SpriteInstanceYFirstValue= 0;
                 float SpriteInstanceYSecondValue= 0;
-                bool setTextInstanceBlueFirstValue = false;
-                bool setTextInstanceBlueSecondValue = false;
-                int TextInstanceBlueFirstValue= 0;
-                int TextInstanceBlueSecondValue= 0;
-                bool setTextInstanceFontSizeFirstValue = false;
-                bool setTextInstanceFontSizeSecondValue = false;
-                int TextInstanceFontSizeFirstValue= 0;
-                int TextInstanceFontSizeSecondValue= 0;
-                bool setTextInstanceGreenFirstValue = false;
-                bool setTextInstanceGreenSecondValue = false;
-                int TextInstanceGreenFirstValue= 0;
-                int TextInstanceGreenSecondValue= 0;
-                bool setTextInstanceHeightFirstValue = false;
-                bool setTextInstanceHeightSecondValue = false;
-                float TextInstanceHeightFirstValue= 0;
-                float TextInstanceHeightSecondValue= 0;
-                bool setTextInstanceRedFirstValue = false;
-                bool setTextInstanceRedSecondValue = false;
-                int TextInstanceRedFirstValue= 0;
-                int TextInstanceRedSecondValue= 0;
-                bool setTextInstanceWidthFirstValue = false;
-                bool setTextInstanceWidthSecondValue = false;
-                float TextInstanceWidthFirstValue= 0;
-                float TextInstanceWidthSecondValue= 0;
-                bool setTextInstanceXFirstValue = false;
-                bool setTextInstanceXSecondValue = false;
-                float TextInstanceXFirstValue= 0;
-                float TextInstanceXSecondValue= 0;
-                bool setTextInstanceYFirstValue = false;
-                bool setTextInstanceYSecondValue = false;
-                float TextInstanceYFirstValue= 0;
-                float TextInstanceYSecondValue= 0;
                 switch(firstState)
                 {
                     case  VariableState.Default:
+                        setBuyableLandsColoredFrameInstanceAlphaFirstValue = true;
+                        BuyableLandsColoredFrameInstanceAlphaFirstValue = 128;
+                        setBuyableLandsHeightFirstValue = true;
+                        BuyableLandsHeightFirstValue = -272f;
                         if (interpolationValue < 1)
                         {
-                            this.ButtonInstance.Text = "Gib CoalMine";
-                        }
-                        setButtonInstanceXFirstValue = true;
-                        ButtonInstanceXFirstValue = 885.99786f;
-                        setButtonInstanceYFirstValue = true;
-                        ButtonInstanceYFirstValue = 328.074f;
-                        setPaceholderTextAlphaFirstValue = true;
-                        PaceholderTextAlphaFirstValue = 150;
-                        setPaceholderTextBlueFirstValue = true;
-                        PaceholderTextBlueFirstValue = 0;
-                        setPaceholderTextFontSizeFirstValue = true;
-                        PaceholderTextFontSizeFirstValue = 128;
-                        setPaceholderTextHeightFirstValue = true;
-                        PaceholderTextHeightFirstValue = 100f;
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            this.BuyableLands.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                            this.BuyableLands.ListBoxBackgroundColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.TransparentBlack;
+                        }
+                        setBuyableLandsCurrentListBoxCategoryStateFirstValue = true;
+                        BuyableLandsCurrentListBoxCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime.ListBoxCategory.Enabled;
+                        setBuyableLandsWidthFirstValue = true;
+                        BuyableLandsWidthFirstValue = -760f;
+                        if (interpolationValue < 1)
+                        {
+                            this.BuyableLands.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setBuyableLandsXFirstValue = true;
+                        BuyableLandsXFirstValue = -520f;
+                        if (interpolationValue < 1)
+                        {
+                            this.BuyableLands.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.PaceholderText.IsItalic = false;
+                            this.BuyableLands.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setBuyableLandsYFirstValue = true;
+                        BuyableLandsYFirstValue = 144f;
+                        setLandsShopLabelBackgroundCurrentColorCategoryStateFirstValue = true;
+                        LandsShopLabelBackgroundCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        setLandsShopLabelBackgroundHeightFirstValue = true;
+                        LandsShopLabelBackgroundHeightFirstValue = 72f;
+                        setLandsShopLabelBackgroundWidthFirstValue = true;
+                        LandsShopLabelBackgroundWidthFirstValue = -760f;
+                        if (interpolationValue < 1)
+                        {
+                            this.LandsShopLabelBackground.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setLandsShopLabelBackgroundXFirstValue = true;
+                        LandsShopLabelBackgroundXFirstValue = -520f;
+                        if (interpolationValue < 1)
+                        {
+                            this.LandsShopLabelBackground.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance");
+                            this.LandsShopLabelBackground.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
-                        setPaceholderTextRotationFirstValue = true;
-                        PaceholderTextRotationFirstValue = -20f;
+                        setLandsShopLabelBackgroundYFirstValue = true;
+                        LandsShopLabelBackgroundYFirstValue = 72f;
+                        setLandsShopTextInstanceFontSizeFirstValue = true;
+                        LandsShopTextInstanceFontSizeFirstValue = 48;
+                        setLandsShopTextInstanceHeightFirstValue = true;
+                        LandsShopTextInstanceHeightFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
-                            this.PaceholderText.Text = "PLACEHOLDER";
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            this.LandsShopTextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                            this.LandsShopTextInstance.Parent = this.GetGraphicalUiElementByName("LandsShopLabelBackground");
                         }
                         if (interpolationValue < 1)
                         {
-                            this.PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            this.LandsShopTextInstance.Text = "Lands Shop";
+                        }
+                        setLandsShopTextInstanceWidthFirstValue = true;
+                        LandsShopTextInstanceWidthFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.LandsShopTextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        setLandsShopTextInstanceXFirstValue = true;
+                        LandsShopTextInstanceXFirstValue = 20f;
+                        if (interpolationValue < 1)
+                        {
+                            this.LandsShopTextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            this.LandsShopTextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            this.LandsShopTextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                         }
+                        if (interpolationValue < 1)
+                        {
+                            this.LandsShopTextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setMyLandsLabelBackgroundCurrentColorCategoryStateFirstValue = true;
+                        MyLandsLabelBackgroundCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        setMyLandsLabelBackgroundHeightFirstValue = true;
+                        MyLandsLabelBackgroundHeightFirstValue = 72f;
+                        setMyLandsLabelBackgroundWidthFirstValue = true;
+                        MyLandsLabelBackgroundWidthFirstValue = 500f;
+                        setMyLandsLabelBackgroundXFirstValue = true;
+                        MyLandsLabelBackgroundXFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.MyLandsLabelBackground.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.MyLandsLabelBackground.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setMyLandsLabelBackgroundYFirstValue = true;
+                        MyLandsLabelBackgroundYFirstValue = 72f;
+                        setMyLandsTextInstanceFontSizeFirstValue = true;
+                        MyLandsTextInstanceFontSizeFirstValue = 48;
+                        setMyLandsTextInstanceHeightFirstValue = true;
+                        MyLandsTextInstanceHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.MyLandsTextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.MyLandsTextInstance.Parent = this.GetGraphicalUiElementByName("MyLandsLabelBackground");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.MyLandsTextInstance.Text = "My Lands";
+                        }
+                        setMyLandsTextInstanceWidthFirstValue = true;
+                        MyLandsTextInstanceWidthFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.MyLandsTextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.MyLandsTextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.MyLandsTextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.MyLandsTextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.MyLandsTextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setOwnedLandsHeightFirstValue = true;
+                        OwnedLandsHeightFirstValue = -216f;
+                        if (interpolationValue < 1)
+                        {
+                            this.OwnedLands.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setOwnedLandsWidthFirstValue = true;
+                        OwnedLandsWidthFirstValue = 500f;
+                        if (interpolationValue < 1)
+                        {
+                            this.OwnedLands.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.OwnedLands.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setOwnedLandsYFirstValue = true;
+                        OwnedLandsYFirstValue = 144f;
                         setSpriteInstanceHeightFirstValue = true;
                         SpriteInstanceHeightFirstValue = 0f;
                         if (interpolationValue < 1)
@@ -234,7 +404,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/Screen/MapPlaceholder.jpg");
+                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/Screen/Europe-Map-Poster.jpg");
                         }
                         setSpriteInstanceWidthFirstValue = true;
                         SpriteInstanceWidthFirstValue = 0f;
@@ -262,121 +432,179 @@
                         {
                             this.SpriteInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
-                        setTextInstanceBlueFirstValue = true;
-                        TextInstanceBlueFirstValue = 255;
-                        setTextInstanceFontSizeFirstValue = true;
-                        TextInstanceFontSizeFirstValue = 128;
-                        setTextInstanceGreenFirstValue = true;
-                        TextInstanceGreenFirstValue = 255;
-                        setTextInstanceHeightFirstValue = true;
-                        TextInstanceHeightFirstValue = 179f;
-                        if (interpolationValue < 1)
-                        {
-                            this.TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        setTextInstanceRedFirstValue = true;
-                        TextInstanceRedFirstValue = 255;
-                        if (interpolationValue < 1)
-                        {
-                            this.TextInstance.Text = "Map Screen";
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        setTextInstanceWidthFirstValue = true;
-                        TextInstanceWidthFirstValue = 0f;
-                        if (interpolationValue < 1)
-                        {
-                            this.TextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
-                        }
-                        setTextInstanceXFirstValue = true;
-                        TextInstanceXFirstValue = 0f;
-                        if (interpolationValue < 1)
-                        {
-                            this.TextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
-                        setTextInstanceYFirstValue = true;
-                        TextInstanceYFirstValue = 0f;
-                        if (interpolationValue < 1)
-                        {
-                            this.TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
                         break;
                 }
                 switch(secondState)
                 {
                     case  VariableState.Default:
+                        setBuyableLandsColoredFrameInstanceAlphaSecondValue = true;
+                        BuyableLandsColoredFrameInstanceAlphaSecondValue = 128;
+                        setBuyableLandsHeightSecondValue = true;
+                        BuyableLandsHeightSecondValue = -272f;
                         if (interpolationValue >= 1)
                         {
-                            this.ButtonInstance.Text = "Gib CoalMine";
-                        }
-                        setButtonInstanceXSecondValue = true;
-                        ButtonInstanceXSecondValue = 885.99786f;
-                        setButtonInstanceYSecondValue = true;
-                        ButtonInstanceYSecondValue = 328.074f;
-                        setPaceholderTextAlphaSecondValue = true;
-                        PaceholderTextAlphaSecondValue = 150;
-                        setPaceholderTextBlueSecondValue = true;
-                        PaceholderTextBlueSecondValue = 0;
-                        setPaceholderTextFontSizeSecondValue = true;
-                        PaceholderTextFontSizeSecondValue = 128;
-                        setPaceholderTextHeightSecondValue = true;
-                        PaceholderTextHeightSecondValue = 100f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            this.BuyableLands.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                            this.BuyableLands.ListBoxBackgroundColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.TransparentBlack;
+                        }
+                        setBuyableLandsCurrentListBoxCategoryStateSecondValue = true;
+                        BuyableLandsCurrentListBoxCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime.ListBoxCategory.Enabled;
+                        setBuyableLandsWidthSecondValue = true;
+                        BuyableLandsWidthSecondValue = -760f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.BuyableLands.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setBuyableLandsXSecondValue = true;
+                        BuyableLandsXSecondValue = -520f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.BuyableLands.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.PaceholderText.IsItalic = false;
+                            this.BuyableLands.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setBuyableLandsYSecondValue = true;
+                        BuyableLandsYSecondValue = 144f;
+                        setLandsShopLabelBackgroundCurrentColorCategoryStateSecondValue = true;
+                        LandsShopLabelBackgroundCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        setLandsShopLabelBackgroundHeightSecondValue = true;
+                        LandsShopLabelBackgroundHeightSecondValue = 72f;
+                        setLandsShopLabelBackgroundWidthSecondValue = true;
+                        LandsShopLabelBackgroundWidthSecondValue = -760f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.LandsShopLabelBackground.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setLandsShopLabelBackgroundXSecondValue = true;
+                        LandsShopLabelBackgroundXSecondValue = -520f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.LandsShopLabelBackground.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance");
+                            this.LandsShopLabelBackground.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
-                        setPaceholderTextRotationSecondValue = true;
-                        PaceholderTextRotationSecondValue = -20f;
+                        setLandsShopLabelBackgroundYSecondValue = true;
+                        LandsShopLabelBackgroundYSecondValue = 72f;
+                        setLandsShopTextInstanceFontSizeSecondValue = true;
+                        LandsShopTextInstanceFontSizeSecondValue = 48;
+                        setLandsShopTextInstanceHeightSecondValue = true;
+                        LandsShopTextInstanceHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
-                            this.PaceholderText.Text = "PLACEHOLDER";
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
+                            this.LandsShopTextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                            this.LandsShopTextInstance.Parent = this.GetGraphicalUiElementByName("LandsShopLabelBackground");
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            this.LandsShopTextInstance.Text = "Lands Shop";
+                        }
+                        setLandsShopTextInstanceWidthSecondValue = true;
+                        LandsShopTextInstanceWidthSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.LandsShopTextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        setLandsShopTextInstanceXSecondValue = true;
+                        LandsShopTextInstanceXSecondValue = 20f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.LandsShopTextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            this.LandsShopTextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            this.LandsShopTextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                         }
+                        if (interpolationValue >= 1)
+                        {
+                            this.LandsShopTextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setMyLandsLabelBackgroundCurrentColorCategoryStateSecondValue = true;
+                        MyLandsLabelBackgroundCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
+                        setMyLandsLabelBackgroundHeightSecondValue = true;
+                        MyLandsLabelBackgroundHeightSecondValue = 72f;
+                        setMyLandsLabelBackgroundWidthSecondValue = true;
+                        MyLandsLabelBackgroundWidthSecondValue = 500f;
+                        setMyLandsLabelBackgroundXSecondValue = true;
+                        MyLandsLabelBackgroundXSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.MyLandsLabelBackground.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.MyLandsLabelBackground.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setMyLandsLabelBackgroundYSecondValue = true;
+                        MyLandsLabelBackgroundYSecondValue = 72f;
+                        setMyLandsTextInstanceFontSizeSecondValue = true;
+                        MyLandsTextInstanceFontSizeSecondValue = 48;
+                        setMyLandsTextInstanceHeightSecondValue = true;
+                        MyLandsTextInstanceHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.MyLandsTextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.MyLandsTextInstance.Parent = this.GetGraphicalUiElementByName("MyLandsLabelBackground");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.MyLandsTextInstance.Text = "My Lands";
+                        }
+                        setMyLandsTextInstanceWidthSecondValue = true;
+                        MyLandsTextInstanceWidthSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.MyLandsTextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.MyLandsTextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.MyLandsTextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.MyLandsTextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.MyLandsTextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        setOwnedLandsHeightSecondValue = true;
+                        OwnedLandsHeightSecondValue = -216f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.OwnedLands.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        setOwnedLandsWidthSecondValue = true;
+                        OwnedLandsWidthSecondValue = 500f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.OwnedLands.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.OwnedLands.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setOwnedLandsYSecondValue = true;
+                        OwnedLandsYSecondValue = 144f;
                         setSpriteInstanceHeightSecondValue = true;
                         SpriteInstanceHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
@@ -385,7 +613,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/Screen/MapPlaceholder.jpg");
+                            SetProperty("SpriteInstance.SourceFile", "../GlobalContent/Screen/Europe-Map-Poster.jpg");
                         }
                         setSpriteInstanceWidthSecondValue = true;
                         SpriteInstanceWidthSecondValue = 0f;
@@ -413,54 +641,6 @@
                         {
                             this.SpriteInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
-                        setTextInstanceBlueSecondValue = true;
-                        TextInstanceBlueSecondValue = 255;
-                        setTextInstanceFontSizeSecondValue = true;
-                        TextInstanceFontSizeSecondValue = 128;
-                        setTextInstanceGreenSecondValue = true;
-                        TextInstanceGreenSecondValue = 255;
-                        setTextInstanceHeightSecondValue = true;
-                        TextInstanceHeightSecondValue = 179f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        setTextInstanceRedSecondValue = true;
-                        TextInstanceRedSecondValue = 255;
-                        if (interpolationValue >= 1)
-                        {
-                            this.TextInstance.Text = "Map Screen";
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        setTextInstanceWidthSecondValue = true;
-                        TextInstanceWidthSecondValue = 0f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.TextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
-                        }
-                        setTextInstanceXSecondValue = true;
-                        TextInstanceXSecondValue = 0f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.TextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
-                        setTextInstanceYSecondValue = true;
-                        TextInstanceYSecondValue = 0f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
                         break;
                 }
                 var wasSuppressed = mIsLayoutSuspended;
@@ -468,33 +648,109 @@
                 {
                     SuspendLayout(true);
                 }
-                if (setButtonInstanceXFirstValue && setButtonInstanceXSecondValue)
+                if (setBuyableLandsColoredFrameInstanceAlphaFirstValue && setBuyableLandsColoredFrameInstanceAlphaSecondValue)
                 {
-                    ButtonInstance.X = ButtonInstanceXFirstValue * (1 - interpolationValue) + ButtonInstanceXSecondValue * interpolationValue;
+                    BuyableLands.ColoredFrameInstanceAlpha = FlatRedBall.Math.MathFunctions.RoundToInt(BuyableLandsColoredFrameInstanceAlphaFirstValue* (1 - interpolationValue) + BuyableLandsColoredFrameInstanceAlphaSecondValue * interpolationValue);
                 }
-                if (setButtonInstanceYFirstValue && setButtonInstanceYSecondValue)
+                if (setBuyableLandsHeightFirstValue && setBuyableLandsHeightSecondValue)
                 {
-                    ButtonInstance.Y = ButtonInstanceYFirstValue * (1 - interpolationValue) + ButtonInstanceYSecondValue * interpolationValue;
+                    BuyableLands.Height = BuyableLandsHeightFirstValue * (1 - interpolationValue) + BuyableLandsHeightSecondValue * interpolationValue;
                 }
-                if (setPaceholderTextAlphaFirstValue && setPaceholderTextAlphaSecondValue)
+                if (setBuyableLandsCurrentListBoxCategoryStateFirstValue && setBuyableLandsCurrentListBoxCategoryStateSecondValue)
                 {
-                    PaceholderText.Alpha = FlatRedBall.Math.MathFunctions.RoundToInt(PaceholderTextAlphaFirstValue* (1 - interpolationValue) + PaceholderTextAlphaSecondValue * interpolationValue);
+                    BuyableLands.InterpolateBetween(BuyableLandsCurrentListBoxCategoryStateFirstValue, BuyableLandsCurrentListBoxCategoryStateSecondValue, interpolationValue);
                 }
-                if (setPaceholderTextBlueFirstValue && setPaceholderTextBlueSecondValue)
+                if (setBuyableLandsWidthFirstValue && setBuyableLandsWidthSecondValue)
                 {
-                    PaceholderText.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(PaceholderTextBlueFirstValue* (1 - interpolationValue) + PaceholderTextBlueSecondValue * interpolationValue);
+                    BuyableLands.Width = BuyableLandsWidthFirstValue * (1 - interpolationValue) + BuyableLandsWidthSecondValue * interpolationValue;
                 }
-                if (setPaceholderTextFontSizeFirstValue && setPaceholderTextFontSizeSecondValue)
+                if (setBuyableLandsXFirstValue && setBuyableLandsXSecondValue)
                 {
-                    PaceholderText.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(PaceholderTextFontSizeFirstValue* (1 - interpolationValue) + PaceholderTextFontSizeSecondValue * interpolationValue);
+                    BuyableLands.X = BuyableLandsXFirstValue * (1 - interpolationValue) + BuyableLandsXSecondValue * interpolationValue;
                 }
-                if (setPaceholderTextHeightFirstValue && setPaceholderTextHeightSecondValue)
+                if (setBuyableLandsYFirstValue && setBuyableLandsYSecondValue)
                 {
-                    PaceholderText.Height = PaceholderTextHeightFirstValue * (1 - interpolationValue) + PaceholderTextHeightSecondValue * interpolationValue;
+                    BuyableLands.Y = BuyableLandsYFirstValue * (1 - interpolationValue) + BuyableLandsYSecondValue * interpolationValue;
                 }
-                if (setPaceholderTextRotationFirstValue && setPaceholderTextRotationSecondValue)
+                if (setLandsShopLabelBackgroundCurrentColorCategoryStateFirstValue && setLandsShopLabelBackgroundCurrentColorCategoryStateSecondValue)
                 {
-                    PaceholderText.Rotation = PaceholderTextRotationFirstValue * (1 - interpolationValue) + PaceholderTextRotationSecondValue * interpolationValue;
+                    LandsShopLabelBackground.InterpolateBetween(LandsShopLabelBackgroundCurrentColorCategoryStateFirstValue, LandsShopLabelBackgroundCurrentColorCategoryStateSecondValue, interpolationValue);
+                }
+                if (setLandsShopLabelBackgroundHeightFirstValue && setLandsShopLabelBackgroundHeightSecondValue)
+                {
+                    LandsShopLabelBackground.Height = LandsShopLabelBackgroundHeightFirstValue * (1 - interpolationValue) + LandsShopLabelBackgroundHeightSecondValue * interpolationValue;
+                }
+                if (setLandsShopLabelBackgroundWidthFirstValue && setLandsShopLabelBackgroundWidthSecondValue)
+                {
+                    LandsShopLabelBackground.Width = LandsShopLabelBackgroundWidthFirstValue * (1 - interpolationValue) + LandsShopLabelBackgroundWidthSecondValue * interpolationValue;
+                }
+                if (setLandsShopLabelBackgroundXFirstValue && setLandsShopLabelBackgroundXSecondValue)
+                {
+                    LandsShopLabelBackground.X = LandsShopLabelBackgroundXFirstValue * (1 - interpolationValue) + LandsShopLabelBackgroundXSecondValue * interpolationValue;
+                }
+                if (setLandsShopLabelBackgroundYFirstValue && setLandsShopLabelBackgroundYSecondValue)
+                {
+                    LandsShopLabelBackground.Y = LandsShopLabelBackgroundYFirstValue * (1 - interpolationValue) + LandsShopLabelBackgroundYSecondValue * interpolationValue;
+                }
+                if (setLandsShopTextInstanceFontSizeFirstValue && setLandsShopTextInstanceFontSizeSecondValue)
+                {
+                    LandsShopTextInstance.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(LandsShopTextInstanceFontSizeFirstValue* (1 - interpolationValue) + LandsShopTextInstanceFontSizeSecondValue * interpolationValue);
+                }
+                if (setLandsShopTextInstanceHeightFirstValue && setLandsShopTextInstanceHeightSecondValue)
+                {
+                    LandsShopTextInstance.Height = LandsShopTextInstanceHeightFirstValue * (1 - interpolationValue) + LandsShopTextInstanceHeightSecondValue * interpolationValue;
+                }
+                if (setLandsShopTextInstanceWidthFirstValue && setLandsShopTextInstanceWidthSecondValue)
+                {
+                    LandsShopTextInstance.Width = LandsShopTextInstanceWidthFirstValue * (1 - interpolationValue) + LandsShopTextInstanceWidthSecondValue * interpolationValue;
+                }
+                if (setLandsShopTextInstanceXFirstValue && setLandsShopTextInstanceXSecondValue)
+                {
+                    LandsShopTextInstance.X = LandsShopTextInstanceXFirstValue * (1 - interpolationValue) + LandsShopTextInstanceXSecondValue * interpolationValue;
+                }
+                if (setMyLandsLabelBackgroundCurrentColorCategoryStateFirstValue && setMyLandsLabelBackgroundCurrentColorCategoryStateSecondValue)
+                {
+                    MyLandsLabelBackground.InterpolateBetween(MyLandsLabelBackgroundCurrentColorCategoryStateFirstValue, MyLandsLabelBackgroundCurrentColorCategoryStateSecondValue, interpolationValue);
+                }
+                if (setMyLandsLabelBackgroundHeightFirstValue && setMyLandsLabelBackgroundHeightSecondValue)
+                {
+                    MyLandsLabelBackground.Height = MyLandsLabelBackgroundHeightFirstValue * (1 - interpolationValue) + MyLandsLabelBackgroundHeightSecondValue * interpolationValue;
+                }
+                if (setMyLandsLabelBackgroundWidthFirstValue && setMyLandsLabelBackgroundWidthSecondValue)
+                {
+                    MyLandsLabelBackground.Width = MyLandsLabelBackgroundWidthFirstValue * (1 - interpolationValue) + MyLandsLabelBackgroundWidthSecondValue * interpolationValue;
+                }
+                if (setMyLandsLabelBackgroundXFirstValue && setMyLandsLabelBackgroundXSecondValue)
+                {
+                    MyLandsLabelBackground.X = MyLandsLabelBackgroundXFirstValue * (1 - interpolationValue) + MyLandsLabelBackgroundXSecondValue * interpolationValue;
+                }
+                if (setMyLandsLabelBackgroundYFirstValue && setMyLandsLabelBackgroundYSecondValue)
+                {
+                    MyLandsLabelBackground.Y = MyLandsLabelBackgroundYFirstValue * (1 - interpolationValue) + MyLandsLabelBackgroundYSecondValue * interpolationValue;
+                }
+                if (setMyLandsTextInstanceFontSizeFirstValue && setMyLandsTextInstanceFontSizeSecondValue)
+                {
+                    MyLandsTextInstance.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(MyLandsTextInstanceFontSizeFirstValue* (1 - interpolationValue) + MyLandsTextInstanceFontSizeSecondValue * interpolationValue);
+                }
+                if (setMyLandsTextInstanceHeightFirstValue && setMyLandsTextInstanceHeightSecondValue)
+                {
+                    MyLandsTextInstance.Height = MyLandsTextInstanceHeightFirstValue * (1 - interpolationValue) + MyLandsTextInstanceHeightSecondValue * interpolationValue;
+                }
+                if (setMyLandsTextInstanceWidthFirstValue && setMyLandsTextInstanceWidthSecondValue)
+                {
+                    MyLandsTextInstance.Width = MyLandsTextInstanceWidthFirstValue * (1 - interpolationValue) + MyLandsTextInstanceWidthSecondValue * interpolationValue;
+                }
+                if (setOwnedLandsHeightFirstValue && setOwnedLandsHeightSecondValue)
+                {
+                    OwnedLands.Height = OwnedLandsHeightFirstValue * (1 - interpolationValue) + OwnedLandsHeightSecondValue * interpolationValue;
+                }
+                if (setOwnedLandsWidthFirstValue && setOwnedLandsWidthSecondValue)
+                {
+                    OwnedLands.Width = OwnedLandsWidthFirstValue * (1 - interpolationValue) + OwnedLandsWidthSecondValue * interpolationValue;
+                }
+                if (setOwnedLandsYFirstValue && setOwnedLandsYSecondValue)
+                {
+                    OwnedLands.Y = OwnedLandsYFirstValue * (1 - interpolationValue) + OwnedLandsYSecondValue * interpolationValue;
                 }
                 if (setSpriteInstanceHeightFirstValue && setSpriteInstanceHeightSecondValue)
                 {
@@ -511,38 +767,6 @@
                 if (setSpriteInstanceYFirstValue && setSpriteInstanceYSecondValue)
                 {
                     SpriteInstance.Y = SpriteInstanceYFirstValue * (1 - interpolationValue) + SpriteInstanceYSecondValue * interpolationValue;
-                }
-                if (setTextInstanceBlueFirstValue && setTextInstanceBlueSecondValue)
-                {
-                    TextInstance.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(TextInstanceBlueFirstValue* (1 - interpolationValue) + TextInstanceBlueSecondValue * interpolationValue);
-                }
-                if (setTextInstanceFontSizeFirstValue && setTextInstanceFontSizeSecondValue)
-                {
-                    TextInstance.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(TextInstanceFontSizeFirstValue* (1 - interpolationValue) + TextInstanceFontSizeSecondValue * interpolationValue);
-                }
-                if (setTextInstanceGreenFirstValue && setTextInstanceGreenSecondValue)
-                {
-                    TextInstance.Green = FlatRedBall.Math.MathFunctions.RoundToInt(TextInstanceGreenFirstValue* (1 - interpolationValue) + TextInstanceGreenSecondValue * interpolationValue);
-                }
-                if (setTextInstanceHeightFirstValue && setTextInstanceHeightSecondValue)
-                {
-                    TextInstance.Height = TextInstanceHeightFirstValue * (1 - interpolationValue) + TextInstanceHeightSecondValue * interpolationValue;
-                }
-                if (setTextInstanceRedFirstValue && setTextInstanceRedSecondValue)
-                {
-                    TextInstance.Red = FlatRedBall.Math.MathFunctions.RoundToInt(TextInstanceRedFirstValue* (1 - interpolationValue) + TextInstanceRedSecondValue * interpolationValue);
-                }
-                if (setTextInstanceWidthFirstValue && setTextInstanceWidthSecondValue)
-                {
-                    TextInstance.Width = TextInstanceWidthFirstValue * (1 - interpolationValue) + TextInstanceWidthSecondValue * interpolationValue;
-                }
-                if (setTextInstanceXFirstValue && setTextInstanceXSecondValue)
-                {
-                    TextInstance.X = TextInstanceXFirstValue * (1 - interpolationValue) + TextInstanceXSecondValue * interpolationValue;
-                }
-                if (setTextInstanceYFirstValue && setTextInstanceYSecondValue)
-                {
-                    TextInstance.Y = TextInstanceYFirstValue * (1 - interpolationValue) + TextInstanceYSecondValue * interpolationValue;
                 }
                 if (interpolationValue < 1)
                 {
@@ -619,7 +843,10 @@
             public override void StopAnimations () 
             {
                 base.StopAnimations();
-                ButtonInstance.StopAnimations();
+                OwnedLands.StopAnimations();
+                BuyableLands.StopAnimations();
+                MyLandsLabelBackground.StopAnimations();
+                LandsShopLabelBackground.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -723,281 +950,441 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Alpha",
-                            Type = "int",
-                            Value = PaceholderText.Alpha
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Blue",
-                            Type = "int",
-                            Value = PaceholderText.Blue
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.FontSize",
-                            Type = "int",
-                            Value = PaceholderText.FontSize
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Height",
+                            Name = "OwnedLands.Height",
                             Type = "float",
-                            Value = PaceholderText.Height
+                            Value = OwnedLands.Height
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Height Units",
+                            Name = "OwnedLands.Height Units",
                             Type = "DimensionUnitType",
-                            Value = PaceholderText.HeightUnits
+                            Value = OwnedLands.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.HorizontalAlignment",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.HorizontalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.IsItalic",
-                            Type = "bool",
-                            Value = PaceholderText.IsItalic
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Rotation",
+                            Name = "OwnedLands.Width",
                             Type = "float",
-                            Value = PaceholderText.Rotation
+                            Value = OwnedLands.Width
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Text",
-                            Type = "string",
-                            Value = PaceholderText.Text
+                            Name = "OwnedLands.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = OwnedLands.XOrigin
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.VerticalAlignment",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.VerticalAlignment
+                            Name = "OwnedLands.X Units",
+                            Type = "PositionUnitType",
+                            Value = OwnedLands.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Width Units",
+                            Name = "OwnedLands.Y",
+                            Type = "float",
+                            Value = OwnedLands.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuyableLands.ColoredFrameInstanceAlpha",
+                            Type = "int",
+                            Value = BuyableLands.ColoredFrameInstanceAlpha
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuyableLands.Height",
+                            Type = "float",
+                            Value = BuyableLands.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuyableLands.Height Units",
                             Type = "DimensionUnitType",
-                            Value = PaceholderText.WidthUnits
+                            Value = BuyableLands.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.X Origin",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.XOrigin
+                            Name = "BuyableLands.ListBoxBackgroundColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = BuyableLands.ListBoxBackgroundColorCategoryState
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.X Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.XUnits
+                            Name = "BuyableLands.ListBoxCategoryState",
+                            Type = "ListBoxCategory",
+                            Value = BuyableLands.CurrentListBoxCategoryState
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Y Origin",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.YOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Y Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.YUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.Blue",
-                            Type = "int",
-                            Value = TextInstance.Blue
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.FontSize",
-                            Type = "int",
-                            Value = TextInstance.FontSize
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.Green",
-                            Type = "int",
-                            Value = TextInstance.Green
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.Height",
+                            Name = "BuyableLands.Width",
                             Type = "float",
-                            Value = TextInstance.Height
+                            Value = BuyableLands.Width
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "TextInstance.HorizontalAlignment",
-                            Type = "HorizontalAlignment",
-                            Value = TextInstance.HorizontalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.Red",
-                            Type = "int",
-                            Value = TextInstance.Red
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.Text",
-                            Type = "string",
-                            Value = TextInstance.Text
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.VerticalAlignment",
-                            Type = "VerticalAlignment",
-                            Value = TextInstance.VerticalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.Width",
-                            Type = "float",
-                            Value = TextInstance.Width
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.Width Units",
+                            Name = "BuyableLands.Width Units",
                             Type = "DimensionUnitType",
-                            Value = TextInstance.WidthUnits
+                            Value = BuyableLands.WidthUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "TextInstance.X",
+                            Name = "BuyableLands.X",
                             Type = "float",
-                            Value = TextInstance.X
+                            Value = BuyableLands.X
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "TextInstance.X Origin",
+                            Name = "BuyableLands.X Origin",
                             Type = "HorizontalAlignment",
-                            Value = TextInstance.XOrigin
+                            Value = BuyableLands.XOrigin
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "TextInstance.X Units",
+                            Name = "BuyableLands.X Units",
                             Type = "PositionUnitType",
-                            Value = TextInstance.XUnits
+                            Value = BuyableLands.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "TextInstance.Y",
+                            Name = "BuyableLands.Y",
                             Type = "float",
-                            Value = TextInstance.Y
+                            Value = BuyableLands.Y
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "TextInstance.Y Origin",
-                            Type = "VerticalAlignment",
-                            Value = TextInstance.YOrigin
+                            Name = "MyLandsLabelBackground.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = MyLandsLabelBackground.CurrentColorCategoryState
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "TextInstance.Y Units",
+                            Name = "MyLandsLabelBackground.Height",
+                            Type = "float",
+                            Value = MyLandsLabelBackground.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsLabelBackground.Width",
+                            Type = "float",
+                            Value = MyLandsLabelBackground.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsLabelBackground.X",
+                            Type = "float",
+                            Value = MyLandsLabelBackground.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsLabelBackground.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = MyLandsLabelBackground.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsLabelBackground.X Units",
                             Type = "PositionUnitType",
-                            Value = TextInstance.YUnits
+                            Value = MyLandsLabelBackground.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance.Text",
+                            Name = "MyLandsLabelBackground.Y",
+                            Type = "float",
+                            Value = MyLandsLabelBackground.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = LandsShopLabelBackground.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.Height",
+                            Type = "float",
+                            Value = LandsShopLabelBackground.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.Width",
+                            Type = "float",
+                            Value = LandsShopLabelBackground.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = LandsShopLabelBackground.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.X",
+                            Type = "float",
+                            Value = LandsShopLabelBackground.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = LandsShopLabelBackground.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.X Units",
+                            Type = "PositionUnitType",
+                            Value = LandsShopLabelBackground.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.Y",
+                            Type = "float",
+                            Value = LandsShopLabelBackground.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.FontSize",
+                            Type = "int",
+                            Value = MyLandsTextInstance.FontSize
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.Height",
+                            Type = "float",
+                            Value = MyLandsTextInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = MyLandsTextInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.Parent",
                             Type = "string",
-                            Value = ButtonInstance.Text
+                            Value = MyLandsTextInstance.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance.X",
-                            Type = "float",
-                            Value = ButtonInstance.X
+                            Name = "MyLandsTextInstance.Text",
+                            Type = "string",
+                            Value = MyLandsTextInstance.Text
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance.Y",
+                            Name = "MyLandsTextInstance.Width",
                             Type = "float",
-                            Value = ButtonInstance.Y
+                            Value = MyLandsTextInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = MyLandsTextInstance.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = MyLandsTextInstance.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = MyLandsTextInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = MyLandsTextInstance.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.Y Units",
+                            Type = "PositionUnitType",
+                            Value = MyLandsTextInstance.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.FontSize",
+                            Type = "int",
+                            Value = LandsShopTextInstance.FontSize
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Height",
+                            Type = "float",
+                            Value = LandsShopTextInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = LandsShopTextInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Parent",
+                            Type = "string",
+                            Value = LandsShopTextInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Text",
+                            Type = "string",
+                            Value = LandsShopTextInstance.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Width",
+                            Type = "float",
+                            Value = LandsShopTextInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = LandsShopTextInstance.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.X",
+                            Type = "float",
+                            Value = LandsShopTextInstance.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = LandsShopTextInstance.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = LandsShopTextInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = LandsShopTextInstance.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Y Units",
+                            Type = "PositionUnitType",
+                            Value = LandsShopTextInstance.YUnits
                         }
                         );
                         break;
@@ -1101,281 +1488,441 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Alpha",
-                            Type = "int",
-                            Value = PaceholderText.Alpha + 150
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Blue",
-                            Type = "int",
-                            Value = PaceholderText.Blue + 0
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.FontSize",
-                            Type = "int",
-                            Value = PaceholderText.FontSize + 128
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Height",
+                            Name = "OwnedLands.Height",
                             Type = "float",
-                            Value = PaceholderText.Height + 100f
+                            Value = OwnedLands.Height + -216f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Height Units",
+                            Name = "OwnedLands.Height Units",
                             Type = "DimensionUnitType",
-                            Value = PaceholderText.HeightUnits
+                            Value = OwnedLands.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.HorizontalAlignment",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.HorizontalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.IsItalic",
-                            Type = "bool",
-                            Value = PaceholderText.IsItalic
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Rotation",
+                            Name = "OwnedLands.Width",
                             Type = "float",
-                            Value = PaceholderText.Rotation + -20f
+                            Value = OwnedLands.Width + 500f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Text",
-                            Type = "string",
-                            Value = PaceholderText.Text
+                            Name = "OwnedLands.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = OwnedLands.XOrigin
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.VerticalAlignment",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.VerticalAlignment
+                            Name = "OwnedLands.X Units",
+                            Type = "PositionUnitType",
+                            Value = OwnedLands.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Width Units",
+                            Name = "OwnedLands.Y",
+                            Type = "float",
+                            Value = OwnedLands.Y + 144f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuyableLands.ColoredFrameInstanceAlpha",
+                            Type = "int",
+                            Value = BuyableLands.ColoredFrameInstanceAlpha + 128
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuyableLands.Height",
+                            Type = "float",
+                            Value = BuyableLands.Height + -272f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuyableLands.Height Units",
                             Type = "DimensionUnitType",
-                            Value = PaceholderText.WidthUnits
+                            Value = BuyableLands.HeightUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.X Origin",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.XOrigin
+                            Name = "BuyableLands.ListBoxBackgroundColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = BuyableLands.ListBoxBackgroundColorCategoryState
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.X Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.XUnits
+                            Name = "BuyableLands.ListBoxCategoryState",
+                            Type = "ListBoxCategory",
+                            Value = BuyableLands.CurrentListBoxCategoryState
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Y Origin",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.YOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Y Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.YUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.Blue",
-                            Type = "int",
-                            Value = TextInstance.Blue + 255
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.FontSize",
-                            Type = "int",
-                            Value = TextInstance.FontSize + 128
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.Green",
-                            Type = "int",
-                            Value = TextInstance.Green + 255
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.Height",
+                            Name = "BuyableLands.Width",
                             Type = "float",
-                            Value = TextInstance.Height + 179f
+                            Value = BuyableLands.Width + -760f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "TextInstance.HorizontalAlignment",
-                            Type = "HorizontalAlignment",
-                            Value = TextInstance.HorizontalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.Red",
-                            Type = "int",
-                            Value = TextInstance.Red + 255
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.Text",
-                            Type = "string",
-                            Value = TextInstance.Text
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.VerticalAlignment",
-                            Type = "VerticalAlignment",
-                            Value = TextInstance.VerticalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.Width",
-                            Type = "float",
-                            Value = TextInstance.Width + 0f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "TextInstance.Width Units",
+                            Name = "BuyableLands.Width Units",
                             Type = "DimensionUnitType",
-                            Value = TextInstance.WidthUnits
+                            Value = BuyableLands.WidthUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "TextInstance.X",
+                            Name = "BuyableLands.X",
                             Type = "float",
-                            Value = TextInstance.X + 0f
+                            Value = BuyableLands.X + -520f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "TextInstance.X Origin",
+                            Name = "BuyableLands.X Origin",
                             Type = "HorizontalAlignment",
-                            Value = TextInstance.XOrigin
+                            Value = BuyableLands.XOrigin
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "TextInstance.X Units",
+                            Name = "BuyableLands.X Units",
                             Type = "PositionUnitType",
-                            Value = TextInstance.XUnits
+                            Value = BuyableLands.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "TextInstance.Y",
+                            Name = "BuyableLands.Y",
                             Type = "float",
-                            Value = TextInstance.Y + 0f
+                            Value = BuyableLands.Y + 144f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "TextInstance.Y Origin",
-                            Type = "VerticalAlignment",
-                            Value = TextInstance.YOrigin
+                            Name = "MyLandsLabelBackground.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = MyLandsLabelBackground.CurrentColorCategoryState
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "TextInstance.Y Units",
+                            Name = "MyLandsLabelBackground.Height",
+                            Type = "float",
+                            Value = MyLandsLabelBackground.Height + 72f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsLabelBackground.Width",
+                            Type = "float",
+                            Value = MyLandsLabelBackground.Width + 500f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsLabelBackground.X",
+                            Type = "float",
+                            Value = MyLandsLabelBackground.X + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsLabelBackground.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = MyLandsLabelBackground.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsLabelBackground.X Units",
                             Type = "PositionUnitType",
-                            Value = TextInstance.YUnits
+                            Value = MyLandsLabelBackground.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance.Text",
+                            Name = "MyLandsLabelBackground.Y",
+                            Type = "float",
+                            Value = MyLandsLabelBackground.Y + 72f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.ColorCategoryState",
+                            Type = "ColorCategoryState",
+                            Value = LandsShopLabelBackground.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.Height",
+                            Type = "float",
+                            Value = LandsShopLabelBackground.Height + 72f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.Width",
+                            Type = "float",
+                            Value = LandsShopLabelBackground.Width + -760f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = LandsShopLabelBackground.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.X",
+                            Type = "float",
+                            Value = LandsShopLabelBackground.X + -520f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = LandsShopLabelBackground.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.X Units",
+                            Type = "PositionUnitType",
+                            Value = LandsShopLabelBackground.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopLabelBackground.Y",
+                            Type = "float",
+                            Value = LandsShopLabelBackground.Y + 72f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.FontSize",
+                            Type = "int",
+                            Value = MyLandsTextInstance.FontSize + 48
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.Height",
+                            Type = "float",
+                            Value = MyLandsTextInstance.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = MyLandsTextInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.Parent",
                             Type = "string",
-                            Value = ButtonInstance.Text
+                            Value = MyLandsTextInstance.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance.X",
-                            Type = "float",
-                            Value = ButtonInstance.X + 885.99786f
+                            Name = "MyLandsTextInstance.Text",
+                            Type = "string",
+                            Value = MyLandsTextInstance.Text
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "ButtonInstance.Y",
+                            Name = "MyLandsTextInstance.Width",
                             Type = "float",
-                            Value = ButtonInstance.Y + 328.074f
+                            Value = MyLandsTextInstance.Width + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = MyLandsTextInstance.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = MyLandsTextInstance.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = MyLandsTextInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = MyLandsTextInstance.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "MyLandsTextInstance.Y Units",
+                            Type = "PositionUnitType",
+                            Value = MyLandsTextInstance.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.FontSize",
+                            Type = "int",
+                            Value = LandsShopTextInstance.FontSize + 48
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Height",
+                            Type = "float",
+                            Value = LandsShopTextInstance.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = LandsShopTextInstance.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Parent",
+                            Type = "string",
+                            Value = LandsShopTextInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Text",
+                            Type = "string",
+                            Value = LandsShopTextInstance.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Width",
+                            Type = "float",
+                            Value = LandsShopTextInstance.Width + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = LandsShopTextInstance.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.X",
+                            Type = "float",
+                            Value = LandsShopTextInstance.X + 20f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = LandsShopTextInstance.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.X Units",
+                            Type = "PositionUnitType",
+                            Value = LandsShopTextInstance.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = LandsShopTextInstance.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LandsShopTextInstance.Y Units",
+                            Type = "PositionUnitType",
+                            Value = LandsShopTextInstance.YUnits
                         }
                         );
                         break;
@@ -1398,9 +1945,12 @@
             }
             private bool tryCreateFormsObject;
             public JHP4SD.GumRuntimes.SpriteRuntime SpriteInstance { get; set; }
-            public JHP4SD.GumRuntimes.TextRuntime PaceholderText { get; set; }
-            public JHP4SD.GumRuntimes.TextRuntime TextInstance { get; set; }
-            public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime ButtonInstance { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime OwnedLands { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime BuyableLands { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime MyLandsLabelBackground { get; set; }
+            public JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime LandsShopLabelBackground { get; set; }
+            public JHP4SD.GumRuntimes.TextRuntime MyLandsTextInstance { get; set; }
+            public JHP4SD.GumRuntimes.TextRuntime LandsShopTextInstance { get; set; }
             public MapGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -1428,9 +1978,12 @@
             private void AssignReferences () 
             {
                 SpriteInstance = this.GetGraphicalUiElementByName("SpriteInstance") as JHP4SD.GumRuntimes.SpriteRuntime;
-                PaceholderText = this.GetGraphicalUiElementByName("PaceholderText") as JHP4SD.GumRuntimes.TextRuntime;
-                TextInstance = this.GetGraphicalUiElementByName("TextInstance") as JHP4SD.GumRuntimes.TextRuntime;
-                ButtonInstance = this.GetGraphicalUiElementByName("ButtonInstance") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
+                OwnedLands = this.GetGraphicalUiElementByName("OwnedLands") as JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime;
+                BuyableLands = this.GetGraphicalUiElementByName("BuyableLands") as JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime;
+                MyLandsLabelBackground = this.GetGraphicalUiElementByName("MyLandsLabelBackground") as JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime;
+                LandsShopLabelBackground = this.GetGraphicalUiElementByName("LandsShopLabelBackground") as JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime;
+                MyLandsTextInstance = this.GetGraphicalUiElementByName("MyLandsTextInstance") as JHP4SD.GumRuntimes.TextRuntime;
+                LandsShopTextInstance = this.GetGraphicalUiElementByName("LandsShopTextInstance") as JHP4SD.GumRuntimes.TextRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Screens.MapGumForms(this);

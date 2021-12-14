@@ -650,6 +650,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>citynight</Name>
     </None>
+    <None Include="content\globalcontent\screen\europe-map-poster.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>europe-map-poster</Name>
+    </None>
     <None Include="content\globalcontent\screen\mapplaceholder.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>mapplaceholder</Name>
@@ -881,6 +885,18 @@
     <None Include="content\gumproject\fontcache\font32arial_0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>font32arial_0</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font48arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font48arial</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font48arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font48arial_0</Name>
+    </None>
+    <None Include="content\gumproject\fontcache\font48arial_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>font48arial_1</Name>
     </None>
     <None Include="content\gumproject\fontcache\font72arial.fnt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

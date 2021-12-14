@@ -3,7 +3,8 @@
         public partial class MapGumForms
         {
             private Gum.Wireframe.GraphicalUiElement Visual;
-            public FlatRedBall.Forms.Controls.Button ButtonInstance { get; set; }
+            public FlatRedBall.Forms.Controls.ListBox OwnedLands { get; set; }
+            public FlatRedBall.Forms.Controls.ListBox BuyableLands { get; set; }
             public MapGumForms () 
             {
                 CustomInitialize();
@@ -16,7 +17,8 @@
             }
             private void ReactToVisualChanged () 
             {
-                ButtonInstance = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("ButtonInstance").FormsControlAsObject;
+                OwnedLands = (FlatRedBall.Forms.Controls.ListBox)Visual.GetGraphicalUiElementByName("OwnedLands").FormsControlAsObject;
+                BuyableLands = (FlatRedBall.Forms.Controls.ListBox)Visual.GetGraphicalUiElementByName("BuyableLands").FormsControlAsObject;
             }
             partial void CustomInitialize();
         }

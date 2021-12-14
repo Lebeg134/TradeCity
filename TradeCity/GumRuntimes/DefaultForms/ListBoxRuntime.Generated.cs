@@ -2256,7 +2256,39 @@
             public JHP4SD.GumRuntimes.ContainerRuntime ClipContainerInstance { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime InnerPanelInstance { get; set; }
             public JHP4SD.GumRuntimes.RectangleRuntime HighlightRectangle { get; set; }
+            public int ColoredFrameInstanceAlpha
+            {
+                get
+                {
+                    return ColoredFrameInstance.Alpha;
+                }
+                set
+                {
+                    if (ColoredFrameInstance.Alpha != value)
+                    {
+                        ColoredFrameInstance.Alpha = value;
+                        ColoredFrameInstanceAlphaChanged?.Invoke(this, null);
+                    }
+                }
+            }
+            public DefaultForms.ColoredFrameRuntime.ColorCategory? ListBoxBackgroundColorCategoryState
+            {
+                get
+                {
+                    return ColoredFrameInstance.CurrentColorCategoryState;
+                }
+                set
+                {
+                    if (ColoredFrameInstance.CurrentColorCategoryState != value)
+                    {
+                        ColoredFrameInstance.CurrentColorCategoryState = value;
+                        ListBoxBackgroundColorCategoryStateChanged?.Invoke(this, null);
+                    }
+                }
+            }
             public event FlatRedBall.Gui.WindowEvent VerticalScrollBarInstanceClick;
+            public event System.EventHandler ColoredFrameInstanceAlphaChanged;
+            public event System.EventHandler ListBoxBackgroundColorCategoryStateChanged;
             public ListBoxRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             	: base(false, tryCreateFormsObject)
             {

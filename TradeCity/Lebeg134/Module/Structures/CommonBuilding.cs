@@ -14,15 +14,23 @@ namespace JHP4SD.Lebeg134.Module.Structures
         public abstract List<Resource> upgradeLevelsCosts(int level);
         public void levelUp()
         {
-            if (checkLevelUp()) //Level is 1 higher than index used for level stats
+            if (checkLevelUp())
+            {
+                owner.subRes(upgradeLevelsCosts(level));
                 level++;
+            }
+                
         }
         public bool checkLevelUp()
         {
-            return level<getMaxLevel() && owner.checkResources(upgradeLevelsCosts(level));
+            return level < getMaxLevel() && owner.checkResources(upgradeLevelsCosts(level));
         }
 
         public abstract int getMaxLevel();
+        public bool IsMaxLevel()
+        {
+            return level == getMaxLevel();
+        }
 
         public override void Build(Player by)
         {
@@ -31,7 +39,10 @@ namespace JHP4SD.Lebeg134.Module.Structures
         }
         public override List<Resource> Cost()
         {
-            return upgradeLevelsCosts(level);
+            if (getMaxLevel() > level)
+                return upgradeLevelsCosts(level);
+            else
+                return new List<Resource>();
         }
     }
 

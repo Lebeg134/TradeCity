@@ -2,6 +2,7 @@ using JHP4SD.Lebeg134.Module.Graphics;
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Session;
 using JHP4SD.Lebeg134.Module.Structures;
+using JHP4SD.Lebeg134.Module.TimeManager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
         UPGRADEOFF,
         MAXLEVEL
     }
-    public partial class BuildingListItemRuntime : IUpdateable
+    public partial class BuildingListItemRuntime : IUpdateable, ITickable
     {
         public Building FocusBuilding
         {
@@ -124,12 +125,16 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
                 if (_focus is CommonBuilding)
                 {
                     CommonBuilding focus = (CommonBuilding)_focus;
-                    if (focus.checkLevelUp())
+                    if (focus.IsMaxLevel())
+                    {
+                        state = BuildingListItemButtonState.MAXLEVEL;
+                    }
+                    else if (focus.checkLevelUp())
                     {
                         state = BuildingListItemButtonState.UPGRADE;
                     }
                     else
-                        state = BuildingListItemButtonState.OFF;
+                        state = BuildingListItemButtonState.UPGRADEOFF;
                 }
                 else
                 {
@@ -141,8 +146,18 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
                 state = BuildingListItemButtonState.BUILD;
             }
             else
-                state = BuildingListItemButtonState.OFF;
+                state = BuildingListItemButtonState.BUILDOFF;
 
+        }
+
+        public void tick()
+        {
+            Update();
+        }
+
+        public void register()
+        {
+            Clock.Instance.Register(this);
         }
     }
 }

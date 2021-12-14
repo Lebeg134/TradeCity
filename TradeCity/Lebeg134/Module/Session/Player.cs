@@ -59,6 +59,19 @@ namespace JHP4SD.Lebeg134.Module.Session
             owned.Add(structure);
             structure.acquire(this);
         }
+        public List<Building> getAllBuildings()
+        {
+            List<Building> ret = new List<Building>();
+            foreach (IOwnable item in owned)
+            {
+                if (item is Building)
+                {
+                    ret.Add((Building)item);
+                }
+            }
+
+            return ret;
+        }
         public bool hasResource(Resource res)
         {
             return ownedResources.ContainsKey(res.GetType());

@@ -19,8 +19,8 @@ namespace Lebeg134.Structures.Common
             get
             {
                 return new[]{
-                    new List<Resource> { new Wood(100), new Workforce(50) },
-                    new List<Resource> { new Wood(100), new Steel(100) }
+                    new List<Resource> { new Wood(100), new Workforce(50) }, //Build cost
+                    new List<Resource> { new Steel(100), new Workforce(25) }
                 };
             }
         }

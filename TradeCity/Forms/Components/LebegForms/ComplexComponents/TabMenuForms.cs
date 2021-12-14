@@ -62,12 +62,13 @@ namespace JHP4SD.FormsControls.Components.LebegForms.ComplexComponents
             }
         }
 
-        public void RegisteStructure(Building building)
+        public void RegisterBuilding(Building building)
         {
             if (building == null)
                 return;
             var visualItem = new GumRuntimes.LebegForms.BasicComponents.BuildingListItemRuntime();
             visualItem.FocusBuilding = building;
+            visualItem.register();
             var listBoxItem = visualItem.FormsControl;
             listBoxItem.UpdateToObject(building.getName());
             tabLists[(int)building.getBranch()].Items.Add(listBoxItem);
@@ -76,9 +77,14 @@ namespace JHP4SD.FormsControls.Components.LebegForms.ComplexComponents
 
         public void RegisterAllBuildings()
         {
+            foreach (Building building in Player.CurrentPlayer.getAllBuildings())
+            {
+                RegisterBuilding(building);
+            }
             foreach (Building building in SessionGenerator.GetAllBuildings())
             {
-                RegisteStructure(building);
+                if(!Player.CurrentPlayer.hasStructure(building))
+                    RegisterBuilding(building);
             }
         }
     }

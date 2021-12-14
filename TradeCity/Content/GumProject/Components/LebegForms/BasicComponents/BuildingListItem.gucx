@@ -79,7 +79,7 @@
     <Variable>
       <Type>string</Type>
       <Name>BuildButton.Text</Name>
-      <Value xsi:type="xsd:string">Build</Value>
+      <Value xsi:type="xsd:string"></Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -617,12 +617,6 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>string</Type>
-        <Name>BuildButton.Text</Name>
-        <Value xsi:type="xsd:string">Build</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>bool</Type>
         <Name>RectangleInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
@@ -689,12 +683,6 @@
         <Type>PositionUnitType</Type>
         <Name>BackgroundInstance.Y Units</Name>
         <Value xsi:type="xsd:int">7</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>string</Type>
-        <Name>BuildButton.Text</Name>
-        <Value xsi:type="xsd:string">Build</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -770,12 +758,6 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>string</Type>
-        <Name>BuildButton.Text</Name>
-        <Value xsi:type="xsd:string">Build</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>bool</Type>
         <Name>RectangleInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
@@ -845,12 +827,6 @@
         <Type>PositionUnitType</Type>
         <Name>BackgroundInstance.Y Units</Name>
         <Value xsi:type="xsd:int">7</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>string</Type>
-        <Name>BuildButton.Text</Name>
-        <Value xsi:type="xsd:string">Build</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>

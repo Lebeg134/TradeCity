@@ -26,6 +26,7 @@ namespace JHP4SD.Lebeg134.Module.Graphics
 
         public void Register(IUpdateable subscriber)
         {
+            if (!subscribers.Contains(subscriber))
             subscribers.Add(subscriber);
         }
         public void UnRegister(IUpdateable subscriber)

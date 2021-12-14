@@ -1358,6 +1358,20 @@
         "ElementType": "Screens",
         "EventType": 6,
         "TimestampUtc": "2021-12-14T13:44:56.6537338Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.ResourceDisplayInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T20:36:48.7323207Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.LebegForms/BasicComponents/ResourceDisplay ResourceDisplayInstance in LebegForms/BasicComponents/BuildingListItem",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-14T20:37:52.5428047Z"
       }
     ],
     "torok": []

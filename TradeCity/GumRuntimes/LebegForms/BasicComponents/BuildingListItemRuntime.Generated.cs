@@ -39,7 +39,7 @@
                             ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
                             ClipsChildren = false;
                             FlipHorizontal = false;
-                            Height = 72f;
+                            Height = 96f;
                             HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                             Visible = true;
                             Width = 0f;
@@ -61,6 +61,7 @@
                             BackgroundInstance.Y = 0f;
                             BackgroundInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             BackgroundInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            TextInstance.Height = 24f;
                             TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
                             TextInstance.Text = "BuildingA";
                             TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
@@ -70,8 +71,8 @@
                             TextInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
                             TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                             TextInstance.Y = 0f;
-                            TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                            TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
+                            TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                             RectangleInstance.Height = 0f;
                             RectangleInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             RectangleInstance.Visible = false;
@@ -83,28 +84,32 @@
                             RectangleInstance.Y = 0f;
                             RectangleInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             RectangleInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            BuildingSprite.Height = 64f;
-                            BuildingSprite.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            BuildingSprite.Height = -9f;
+                            BuildingSprite.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             BuildingSprite.Width = 128f;
                             BuildingSprite.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                             BuildingSprite.X = 4f;
                             BuildingSprite.Y = 4f;
                             ResourceList.ChildrenLayout = Gum.Managers.ChildrenLayout.LeftToRightStack;
                             ResourceList.ClipsChildren = true;
-                            ResourceList.Height = 64f;
+                            ResourceList.Height = 42f;
                             ResourceList.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
-                            ResourceList.Width = 4f;
+                            ResourceList.Width = 10f;
                             ResourceList.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                             ResourceList.X = -136f;
                             ResourceList.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             ResourceList.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
-                            ResourceList.Y = 4f;
+                            ResourceList.Y = -4f;
+                            ResourceList.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                            ResourceList.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             BuildButton.Text = "Build";
                             BuildButton.Width = 128f;
                             BuildButton.X = -4f;
                             BuildButton.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             BuildButton.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
-                            BuildButton.Y = 12f;
+                            BuildButton.Y = -4f;
+                            BuildButton.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                            BuildButton.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             break;
                     }
                 }
@@ -284,6 +289,10 @@
                 bool setTextInstanceCurrentColorCategoryStateSecondValue = false;
                 JHP4SD.GumRuntimes.TextRuntime.ColorCategory TextInstanceCurrentColorCategoryStateFirstValue= JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
                 JHP4SD.GumRuntimes.TextRuntime.ColorCategory TextInstanceCurrentColorCategoryStateSecondValue= JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Gray;
+                bool setTextInstanceHeightFirstValue = false;
+                bool setTextInstanceHeightSecondValue = false;
+                float TextInstanceHeightFirstValue= 0;
+                float TextInstanceHeightSecondValue= 0;
                 bool setTextInstanceWidthFirstValue = false;
                 bool setTextInstanceWidthSecondValue = false;
                 float TextInstanceWidthFirstValue= 0;
@@ -364,12 +373,20 @@
                             this.BuildButton.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
                         setBuildButtonYFirstValue = true;
-                        BuildButtonYFirstValue = 12f;
-                        setBuildingSpriteHeightFirstValue = true;
-                        BuildingSpriteHeightFirstValue = 64f;
+                        BuildButtonYFirstValue = -4f;
                         if (interpolationValue < 1)
                         {
-                            this.BuildingSprite.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            this.BuildButton.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.BuildButton.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setBuildingSpriteHeightFirstValue = true;
+                        BuildingSpriteHeightFirstValue = -9f;
+                        if (interpolationValue < 1)
+                        {
+                            this.BuildingSprite.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
                         setBuildingSpriteWidthFirstValue = true;
                         BuildingSpriteWidthFirstValue = 128f;
@@ -394,7 +411,7 @@
                             this.FlipHorizontal = false;
                         }
                         setHeightFirstValue = true;
-                        HeightFirstValue = 72f;
+                        HeightFirstValue = 96f;
                         if (interpolationValue < 1)
                         {
                             this.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
@@ -444,13 +461,13 @@
                             this.ResourceList.ClipsChildren = true;
                         }
                         setResourceListHeightFirstValue = true;
-                        ResourceListHeightFirstValue = 64f;
+                        ResourceListHeightFirstValue = 42f;
                         if (interpolationValue < 1)
                         {
                             this.ResourceList.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
                         setResourceListWidthFirstValue = true;
-                        ResourceListWidthFirstValue = 4f;
+                        ResourceListWidthFirstValue = 10f;
                         if (interpolationValue < 1)
                         {
                             this.ResourceList.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
@@ -466,9 +483,19 @@
                             this.ResourceList.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
                         setResourceListYFirstValue = true;
-                        ResourceListYFirstValue = 4f;
+                        ResourceListYFirstValue = -4f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceList.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ResourceList.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
                         setTextInstanceCurrentColorCategoryStateFirstValue = true;
                         TextInstanceCurrentColorCategoryStateFirstValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
+                        setTextInstanceHeightFirstValue = true;
+                        TextInstanceHeightFirstValue = 24f;
                         if (interpolationValue < 1)
                         {
                             this.TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
@@ -501,11 +528,11 @@
                         TextInstanceYFirstValue = 0f;
                         if (interpolationValue < 1)
                         {
-                            this.TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            this.TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
                         }
                         if (interpolationValue < 1)
                         {
-                            this.TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            this.TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
                         if (interpolationValue < 1)
                         {
@@ -599,12 +626,20 @@
                             this.BuildButton.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
                         setBuildButtonYSecondValue = true;
-                        BuildButtonYSecondValue = 12f;
-                        setBuildingSpriteHeightSecondValue = true;
-                        BuildingSpriteHeightSecondValue = 64f;
+                        BuildButtonYSecondValue = -4f;
                         if (interpolationValue >= 1)
                         {
-                            this.BuildingSprite.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            this.BuildButton.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.BuildButton.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setBuildingSpriteHeightSecondValue = true;
+                        BuildingSpriteHeightSecondValue = -9f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.BuildingSprite.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
                         setBuildingSpriteWidthSecondValue = true;
                         BuildingSpriteWidthSecondValue = 128f;
@@ -629,7 +664,7 @@
                             this.FlipHorizontal = false;
                         }
                         setHeightSecondValue = true;
-                        HeightSecondValue = 72f;
+                        HeightSecondValue = 96f;
                         if (interpolationValue >= 1)
                         {
                             this.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
@@ -679,13 +714,13 @@
                             this.ResourceList.ClipsChildren = true;
                         }
                         setResourceListHeightSecondValue = true;
-                        ResourceListHeightSecondValue = 64f;
+                        ResourceListHeightSecondValue = 42f;
                         if (interpolationValue >= 1)
                         {
                             this.ResourceList.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
                         setResourceListWidthSecondValue = true;
-                        ResourceListWidthSecondValue = 4f;
+                        ResourceListWidthSecondValue = 10f;
                         if (interpolationValue >= 1)
                         {
                             this.ResourceList.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
@@ -701,9 +736,19 @@
                             this.ResourceList.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
                         setResourceListYSecondValue = true;
-                        ResourceListYSecondValue = 4f;
+                        ResourceListYSecondValue = -4f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceList.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ResourceList.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
                         setTextInstanceCurrentColorCategoryStateSecondValue = true;
                         TextInstanceCurrentColorCategoryStateSecondValue = JHP4SD.GumRuntimes.TextRuntime.ColorCategory.Black;
+                        setTextInstanceHeightSecondValue = true;
+                        TextInstanceHeightSecondValue = 24f;
                         if (interpolationValue >= 1)
                         {
                             this.TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Left;
@@ -736,11 +781,11 @@
                         TextInstanceYSecondValue = 0f;
                         if (interpolationValue >= 1)
                         {
-                            this.TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            this.TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Top;
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            this.TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
                         if (interpolationValue >= 1)
                         {
@@ -874,6 +919,10 @@
                 if (setTextInstanceCurrentColorCategoryStateFirstValue && setTextInstanceCurrentColorCategoryStateSecondValue)
                 {
                     TextInstance.InterpolateBetween(TextInstanceCurrentColorCategoryStateFirstValue, TextInstanceCurrentColorCategoryStateSecondValue, interpolationValue);
+                }
+                if (setTextInstanceHeightFirstValue && setTextInstanceHeightSecondValue)
+                {
+                    TextInstance.Height = TextInstanceHeightFirstValue * (1 - interpolationValue) + TextInstanceHeightSecondValue * interpolationValue;
                 }
                 if (setTextInstanceWidthFirstValue && setTextInstanceWidthSecondValue)
                 {
@@ -1637,6 +1686,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "TextInstance.Height",
+                            Type = "float",
+                            Value = TextInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "TextInstance.HorizontalAlignment",
                             Type = "HorizontalAlignment",
                             Value = TextInstance.HorizontalAlignment
@@ -1941,6 +1998,22 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "ResourceList.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = ResourceList.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceList.Y Units",
+                            Type = "PositionUnitType",
+                            Value = ResourceList.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "BuildButton.ButtonCategoryState",
                             Type = "ButtonCategory",
                             Value = BuildButton.CurrentButtonCategoryState
@@ -2002,6 +2075,22 @@
                             Value = BuildButton.Y
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = BuildButton.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Y Units",
+                            Type = "PositionUnitType",
+                            Value = BuildButton.YUnits
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -2041,7 +2130,7 @@
                             SetsValue = true,
                             Name = "Height",
                             Type = "float",
-                            Value = Height + 72f
+                            Value = Height + 96f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2218,6 +2307,14 @@
                             Name = "TextInstance.ColorCategoryState",
                             Type = "ColorCategoryState",
                             Value = TextInstance.CurrentColorCategoryState
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Height",
+                            Type = "float",
+                            Value = TextInstance.Height + 24f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2401,7 +2498,7 @@
                             SetsValue = true,
                             Name = "BuildingSprite.Height",
                             Type = "float",
-                            Value = BuildingSprite.Height + 64f
+                            Value = BuildingSprite.Height + -9f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2465,7 +2562,7 @@
                             SetsValue = true,
                             Name = "ResourceList.Height",
                             Type = "float",
-                            Value = ResourceList.Height + 64f
+                            Value = ResourceList.Height + 42f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2481,7 +2578,7 @@
                             SetsValue = true,
                             Name = "ResourceList.Width",
                             Type = "float",
-                            Value = ResourceList.Width + 4f
+                            Value = ResourceList.Width + 10f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2521,7 +2618,23 @@
                             SetsValue = true,
                             Name = "ResourceList.Y",
                             Type = "float",
-                            Value = ResourceList.Y + 4f
+                            Value = ResourceList.Y + -4f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceList.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = ResourceList.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceList.Y Units",
+                            Type = "PositionUnitType",
+                            Value = ResourceList.YUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2585,7 +2698,23 @@
                             SetsValue = true,
                             Name = "BuildButton.Y",
                             Type = "float",
-                            Value = BuildButton.Y + 12f
+                            Value = BuildButton.Y + -4f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = BuildButton.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuildButton.Y Units",
+                            Type = "PositionUnitType",
+                            Value = BuildButton.YUnits
                         }
                         );
                         break;

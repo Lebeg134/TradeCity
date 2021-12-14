@@ -28,12 +28,13 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
         {
             ResourceText.Text = _focus.getName();
             ResourceDisplayInstance.Focus = _focus;
-            register();
             Update();
+            register();
+            ResourceDisplayInstance.Update();
         }
         public void Update()
         {
-            ResourceDisplayInstance.Amount = Player.CurrentPlayer.getRes(_focus);
+            ResourceDisplayInstance.Update();
         }
 
         public void tick()

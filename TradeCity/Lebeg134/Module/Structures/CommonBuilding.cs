@@ -31,7 +31,7 @@ namespace JHP4SD.Lebeg134.Module.Structures
         }
         public override List<Resource> Cost()
         {
-            return upgradeLevelsCosts(0);
+            return upgradeLevelsCosts(level);
         }
     }
 

@@ -39,7 +39,6 @@ namespace JHP4SD.Lebeg134.Module.Resources
                 throw new ArgumentException("Can not gain negative amount");
             }
             stock += amount;
-            updater.Update();
         }
         public virtual void spend(int amount)
         {
@@ -50,7 +49,6 @@ namespace JHP4SD.Lebeg134.Module.Resources
             if (stock >= amount)
             {
                 stock -= amount;
-                updater.Update();
             }
             else throw new NotEnoughResourceException();
         }

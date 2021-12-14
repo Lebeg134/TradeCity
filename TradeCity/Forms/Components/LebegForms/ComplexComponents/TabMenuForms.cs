@@ -64,6 +64,8 @@ namespace JHP4SD.FormsControls.Components.LebegForms.ComplexComponents
 
         public void RegisteStructure(Building building)
         {
+            if (building == null)
+                return;
             var visualItem = new GumRuntimes.LebegForms.BasicComponents.BuildingListItemRuntime();
             visualItem.FocusBuilding = building;
             var listBoxItem = visualItem.FormsControl;

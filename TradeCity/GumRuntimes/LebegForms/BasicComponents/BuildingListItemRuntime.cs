@@ -5,6 +5,7 @@ using JHP4SD.Lebeg134.Module.Structures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
 {
@@ -17,50 +18,47 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
         UPGRADEOFF,
         MAXLEVEL
     }
-    public partial class BuildingListItemRuntime: IUpdateable
+    public partial class BuildingListItemRuntime : IUpdateable
     {
-        public Building FocusBuilding { get; set; }
+        public Building FocusBuilding
+        {
+            set
+            {
+                _focus = value;
+                Update();
+            }
+        }
+        private Building _focus;
 
         BuildingListItemButtonState state = BuildingListItemButtonState.OFF;
-        partial void CustomInitialize () 
+        partial void CustomInitialize()
         {
             BuildButton.Click += BuildButton_Click;
+            Update();
         }
 
         private void BuildButton_Click(FlatRedBall.Gui.IWindow window)
         {
-            Console.WriteLine("Button pressed"); //DEBUG
-            if (Player.CurrentPlayer.hasStructure(FocusBuilding))
+            if (Player.CurrentPlayer.hasStructure(_focus))
             {
-                Console.WriteLine("Had it"); //DEBUG
-                if (FocusBuilding is CommonBuilding)
+                if (_focus is CommonBuilding)
                 {
-                    ((CommonBuilding)FocusBuilding).levelUp();
+                    ((CommonBuilding)_focus).levelUp();
                 }
             }
             else
             {
-                Console.WriteLine("Didn't have it"); //DEBUG
-                try
-                {
-                    FocusBuilding.Build(Player.CurrentPlayer);
-                    BuildButton.Text = "Upgrade";
-                }
-                catch (NotEnoughResourceException e)
-                {
-
-                }
-               
-               
-                
+                _focus.Build(Player.CurrentPlayer);
             }
+            Update();
+            Resource.updater.Update();
         }
 
         public void Update()
         {
             SetState();
-            ResourceList.Children.ToList().Clear();
             UpdateButtonVisual();
+            UpdateResourceVisual();
         }
         void UpdateButtonVisual()
         {
@@ -90,13 +88,42 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
                     break;
             }
         }
+        void UpdateResourceVisual()
+        {
+            if (_focus == null)
+                return;
+            while(ResourceList.Children.Count() > 0)
+            {
+                ResourceList.RemoveChild(ResourceList.Children.First());
+            }
+            foreach (Resource resource in _focus.Cost())
+            {
+                ResourceDisplayRuntime resDisp = new ResourceDisplayRuntime();
+                resDisp.Focus = resource;
+                resDisp.Width = 100;
+                if (!Player.CurrentPlayer.checkResource(resource))
+                {
+                    resDisp.SpriteInstance.Blue = 0;
+                    resDisp.SpriteInstance.Green = 0;
+                }
+                resDisp.Update();
+                ResourceList.AddChild(resDisp);
+            }
+            
+        }
         void SetState()
         {
-            if (Player.CurrentPlayer.hasStructure(FocusBuilding))
+            if (_focus == null)
             {
-                if (FocusBuilding is CommonBuilding)
+                state = BuildingListItemButtonState.OFF;
+                return;
+            }
+
+            if (Player.CurrentPlayer.hasStructure(_focus))
+            {
+                if (_focus is CommonBuilding)
                 {
-                    CommonBuilding focus = (CommonBuilding)FocusBuilding;
+                    CommonBuilding focus = (CommonBuilding)_focus;
                     if (focus.checkLevelUp())
                     {
                         state = BuildingListItemButtonState.UPGRADE;
@@ -109,7 +136,7 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
                     state = BuildingListItemButtonState.OFF;
                 }
             }
-            else if(FocusBuilding.CanBeBuilt(Player.CurrentPlayer))
+            else if (_focus.CanBeBuilt(Player.CurrentPlayer))
             {
                 state = BuildingListItemButtonState.BUILD;
             }

@@ -112,7 +112,7 @@ namespace JHP4SD.Screens
         {
             var visualItem = new ResourceListItemRuntime();
             visualItem.Focus = resource;
-            Resource.updater.Register(visualItem);
+            Resource.updater.Register(visualItem.ResourceDisplayInstance);
             var listBoxItem = visualItem.FormsControl;
             listBoxItem.UpdateToObject(resource.getName());
             Forms.ResourceList.Items.Add(listBoxItem);

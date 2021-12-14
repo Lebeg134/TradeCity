@@ -344,6 +344,8 @@
     </Compile>
     <Compile Include="GumRuntimes\SpriteRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\TextRuntime.Generated.cs" />
+    <Compile Include="Lebeg134\Module\Graphics\IUpdateable.cs" />
+    <Compile Include="Lebeg134\Module\Graphics\VisualUpdater.cs" />
     <Compile Include="Lebeg134\Module\Map\Auction.cs" />
     <Compile Include="Lebeg134\Module\Map\Map.cs" />
     <Compile Include="Lebeg134\Module\Market\ISellable.cs" />

@@ -28,7 +28,8 @@ namespace JHP4SD.Screens
         void CustomInitialize()
         {
             Resource.spriteLibrary = new GumRuntimes.LebegForms.Resources.ResourceIconsRuntime();
-
+            if (Session.Instance.Running)
+                Clock.Instance.start();
             Forms.PlayButtonInstance.IsChecked = Clock.Instance.isEnabled();
             Forms.PlayButtonInstance.Click += PlayButtonInstance_Click;
 
@@ -62,27 +63,32 @@ namespace JHP4SD.Screens
             if (Forms.PlayButtonInstance.IsChecked?? false)
             {
                 Clock.Instance.start();
+                Session.Instance.Running = true;
             }
             else
             {
                 Clock.Instance.pause();
+                Session.Instance.Running = false;
             }
         }
 
         private void CityTab_Click(object sender, EventArgs e)
         {
             MoveToScreen(typeof(CityScreen));
+            Clock.Instance.pause();
         }
 
         private void MapTab_Click(object sender, EventArgs e)
         {
             MoveToScreen(typeof(MapScreen));
+            Clock.Instance.pause();
         }
 
         private void MarketTab_Click(object sender, EventArgs e)
         {
             Player.CurrentPlayer.giveStructure(new Forest());
             MoveToScreen(typeof(MarketScreen));
+            Clock.Instance.pause();
         }
 
         private void BackButtonInstance_Click(object sender, EventArgs e)

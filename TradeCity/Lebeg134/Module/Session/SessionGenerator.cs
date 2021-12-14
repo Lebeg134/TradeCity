@@ -6,6 +6,7 @@ using Lebeg134.Resources.EnergySector;
 using Lebeg134.Resources.Workforce;
 using Lebeg134.Structures.Common;
 using Lebeg134.Structures.EnergySector;
+using Lebeg134.Structures.Lands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +40,9 @@ namespace JHP4SD.Lebeg134.Module.Session
             player.giveRes(new Wood(500));
             player.giveRes(new Iron(200));
             player.giveRes(new Coal(1000));
+
+
+            player.giveStructure(new CoalMine());
         }
 
         internal static List<Building> GetAllBuildings()

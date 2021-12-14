@@ -18,6 +18,7 @@ namespace JHP4SD.Lebeg134.Module.Session
             }
             private void Produce()
             {
+                // TODO FIX
                 List<Resource> previousState = new List<Resource>();
                 foreach (Resource cntRes in player.ownedResources.Values)
                 {

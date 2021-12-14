@@ -22,12 +22,7 @@ namespace JHP4SD.Screens
         Camera mainCamera = FlatRedBall.Camera.Main;
         void CustomInitialize()
         {
-            Forms.ButtonInstance.Click += ButtonInstance_Click;
-        }
 
-        private void ButtonInstance_Click(object sender, EventArgs e)
-        {
-            Player.CurrentPlayer.giveStructure(new CoalMine());
         }
 
         void CustomActivity(bool firstTimeCalled)

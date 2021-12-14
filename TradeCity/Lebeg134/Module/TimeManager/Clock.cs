@@ -45,7 +45,12 @@ namespace JHP4SD.Lebeg134.Module.TimeManager
         void tick(object source, ElapsedEventArgs e)
         {
             foreach (ITickable tickable in tickables)
+            {
                 tickable.tick();
+                if (!timer.Enabled) // Had a lot of crashes because this isn't thread safe
+                    break;
+            }
+                
         }
         public void Register(ITickable tickable)
         {

@@ -87,5 +87,6 @@ namespace JHP4SD.FormsControls.Components.LebegForms.ComplexComponents
                     RegisterBuilding(building);
             }
         }
+
     }
 }

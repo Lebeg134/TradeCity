@@ -16,7 +16,9 @@ namespace JHP4SD.Lebeg134.Module.Session
         Market _market;
         List<Player> _players;
         Map _map;
-        public static Session Instance { 
+        public bool Running = false;
+        public static Session Instance
+        {
             get
             {
                 if (_instance != null)
@@ -36,6 +38,7 @@ namespace JHP4SD.Lebeg134.Module.Session
         {
             _instance = this;
             Clock.Instance.start();
+            Running = true;
         }
         /// <summary>
         /// Loads saved instance
@@ -73,7 +76,7 @@ namespace JHP4SD.Lebeg134.Module.Session
             foreach (Player player in _players)
             {
                 player.tick();
-                Console.WriteLine("Ticking player: "+player.ToString()); //DEBUG
+                Console.WriteLine("Ticking player: " + player.ToString()); //DEBUG
             }
         }
         public void register()

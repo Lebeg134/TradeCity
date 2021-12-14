@@ -10,8 +10,8 @@ namespace JHP4SD.Lebeg134.Module.Structures
 {
     public abstract class Building : Structure, IOwnable
     {
-        protected abstract List<IOwnable> Criteria();
-        protected abstract List<Resource> Cost();
+        public abstract List<IOwnable> Criteria();
+        public abstract List<Resource> Cost();
         protected Player owner;
 
         public Building(Player owner = null)
@@ -21,12 +21,15 @@ namespace JHP4SD.Lebeg134.Module.Structures
         public abstract List<Resource> getUpkeep();
         public virtual void Build(Player by)
         {
-            if (by.checkResources(Cost()) &&
-                by.checkStructures(Criteria()))
+            if (CanBeBuilt(by))
             {
                 by.subRes(Cost());
                 by.giveStructure(this);
             }
+        }
+        public bool CanBeBuilt(Player by)
+        {
+            return by.checkResources(Cost()) && by.checkStructures(Criteria());
         }
         public virtual void acquire(Player by)
         {

@@ -8,11 +8,17 @@ using System.Linq;
 
 namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
 {
+    public enum BuildingListItemButtonState
+    {
+        OFF,
+        BUILD,
+        UPGRADE
+    }
     public partial class BuildingListItemRuntime: IUpdateable
     {
         public Building FocusBuilding { get; set; }
 
-
+        BuildingListItemButtonState state = BuildingListItemButtonState.OFF;
         partial void CustomInitialize () 
         {
             BuildButton.Click += BuildButton_Click;
@@ -50,7 +56,32 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
         public void Update()
         {
             ResourceList.Children.ToList().Clear();
-            //foreach(Resource resource in )
+        }
+        void UpdateButtonVisual()
+        {
+
+        }
+        void SetState()
+        {
+            if (Player.CurrentPlayer.hasStructure(FocusBuilding))
+            {
+                if (FocusBuilding is CommonBuilding)
+                {
+                    CommonBuilding focus = (CommonBuilding)FocusBuilding;
+
+                }
+                else
+                {
+                    state = BuildingListItemButtonState.OFF;
+                }
+            }
+            else if(FocusBuilding.CanBeBuilt(Player.CurrentPlayer))
+            {
+                state = BuildingListItemButtonState.BUILD;
+            }
+            else
+                state = BuildingListItemButtonState.OFF;
+
         }
     }
 }

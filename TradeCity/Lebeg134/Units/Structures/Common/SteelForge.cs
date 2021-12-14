@@ -55,12 +55,12 @@ namespace Lebeg134.Structures.Common
             return Branches.COMMON;
         }
 
-        protected override List<IOwnable> Criteria()
+        public override List<IOwnable> Criteria()
         {
             return new List<IOwnable>();
         }
 
-        protected override List<Resource> upgradeLevelsCosts(int level)
+        public override List<Resource> upgradeLevelsCosts(int level)
         {
             return upgradeLevelsCostsArray[level];
         }

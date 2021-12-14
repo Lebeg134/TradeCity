@@ -1,13 +1,15 @@
 /**
 * @(#) Structure.cs
 */
+using JHP4SD.Lebeg134.Module.Graphics;
 using JHP4SD.Lebeg134.Units;
 using System.Collections.Generic;
 namespace JHP4SD.Lebeg134.Module.Structures
 {
 	public abstract class Structure : IEqualityComparer<Structure>
 	{
-		protected bool state; //true = on, false = off
+        public static VisualUpdater updater = new VisualUpdater();
+        protected bool state; //true = on, false = off
 		public virtual void On()
         {
 			state = true;

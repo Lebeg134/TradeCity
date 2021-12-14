@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JHP4SD.Lebeg134.Module.Graphics
 {
-    class VisualUpdater: IUpdateable
+    public class VisualUpdater: IUpdateable
     {
         public static VisualUpdater Instance
         {

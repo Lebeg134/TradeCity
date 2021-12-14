@@ -318,7 +318,9 @@
       <DependentUpon>TopicRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\LebegForms\Resources\ResourceIconsRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\Resources\ResourceIconsRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\Resources\ResourceIconsRuntime.Generated.cs">
+      <DependentUpon>ResourceIconsRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\MainMenuGumRuntime.cs" />
     <Compile Include="GumRuntimes\MainMenuGumRuntime.Generated.cs">
       <DependentUpon>MainMenuGumRuntime.cs</DependentUpon>

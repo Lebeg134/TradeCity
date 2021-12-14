@@ -1,3 +1,4 @@
+using JHP4SD.Lebeg134.Module.Graphics;
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Session;
 using JHP4SD.Lebeg134.Module.Structures;
@@ -7,7 +8,7 @@ using System.Linq;
 
 namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
 {
-    public partial class BuildingListItemRuntime
+    public partial class BuildingListItemRuntime: IUpdateable
     {
         public Building FocusBuilding { get; set; }
 
@@ -44,6 +45,12 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
                
                 
             }
+        }
+
+        public void Update()
+        {
+            ResourceList.Children.ToList().Clear();
+            //foreach(Resource resource in )
         }
     }
 }

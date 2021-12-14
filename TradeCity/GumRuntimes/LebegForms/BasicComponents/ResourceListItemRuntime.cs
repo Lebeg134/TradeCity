@@ -1,3 +1,4 @@
+using JHP4SD.Lebeg134.Module.Graphics;
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Session;
 using JHP4SD.Lebeg134.Module.TimeManager;
@@ -7,7 +8,7 @@ using System.Linq;
 
 namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
 {
-    public partial class ResourceListItemRuntime: ITickable
+    public partial class ResourceListItemRuntime: ITickable, IUpdateable
     {
         public Resource Focus
         {
@@ -26,7 +27,7 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
         public void Init()
         {
             ResourceText.Text = _focus.getName();
-            ResourceDisplayInstance.SpriteInstance.Texture = _focus.getSprite().Texture;
+            ResourceDisplayInstance.Focus = _focus;
             register();
             Update();
         }

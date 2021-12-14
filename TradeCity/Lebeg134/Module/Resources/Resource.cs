@@ -4,6 +4,7 @@
 using Gum.Managers;
 using JHP4SD.GumRuntimes;
 using JHP4SD.GumRuntimes.LebegForms.Resources;
+using JHP4SD.Lebeg134.Module.Graphics;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,8 @@ namespace JHP4SD.Lebeg134.Module.Resources
     public abstract class Resource
     {
         public static ResourceIconsRuntime spriteLibrary = new ResourceIconsRuntime();
-        private const string basePath = "Content/GlobalContent/Resources/ResourceIcons";
+        public static VisualUpdater updater = new VisualUpdater();
 
-        //ID used to identify resource
-        //static readonly int id = 0; Might not even be needed
         //Amount of resource stored
         protected int stock;
         public Resource(int amount = 0)
@@ -40,6 +39,7 @@ namespace JHP4SD.Lebeg134.Module.Resources
                 throw new ArgumentException("Can not gain negative amount");
             }
             stock += amount;
+            updater.Update();
         }
         public virtual void spend(int amount)
         {
@@ -48,7 +48,10 @@ namespace JHP4SD.Lebeg134.Module.Resources
                 throw new ArgumentException("Can not spend negative amount");
             }
             if (stock >= amount)
+            {
                 stock -= amount;
+                updater.Update();
+            }
             else throw new NotEnoughResourceException();
         }
         public abstract Resource getNewResource(int amount);

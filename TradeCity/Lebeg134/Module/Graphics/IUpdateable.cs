@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JHP4SD.Lebeg134.Module.Graphics
 {
-    interface IUpdateable
+    public interface IUpdateable
     {
         void Update();
     }

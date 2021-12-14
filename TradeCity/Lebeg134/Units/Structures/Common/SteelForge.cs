@@ -75,6 +75,11 @@ namespace Lebeg134.Structures.Common
         {
             return productionLevels[level - 1];
         }
+
+        public override int getMaxLevel()
+        {
+            return 2;
+        }
     }
 
 }

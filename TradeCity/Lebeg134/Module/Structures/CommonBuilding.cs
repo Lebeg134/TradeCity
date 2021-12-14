@@ -14,12 +14,12 @@ namespace JHP4SD.Lebeg134.Module.Structures
         public abstract List<Resource> upgradeLevelsCosts(int level);
         public void levelUp()
         {
-            if (owner.checkResources(upgradeLevelsCosts(level))) //Level is 1 higher than index used for level stats
+            if (checkLevelUp()) //Level is 1 higher than index used for level stats
                 level++;
         }
         public bool checkLevelUp()
         {
-            return level<=getMaxLevel() && owner.checkResources(upgradeLevelsCosts(level));
+            return level<getMaxLevel() && owner.checkResources(upgradeLevelsCosts(level));
         }
 
         public abstract int getMaxLevel();

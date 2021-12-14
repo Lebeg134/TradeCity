@@ -98,5 +98,10 @@ namespace JHP4SD.Lebeg134.Module.Structures
         {
             return new List<Resource>(); // No upkeep for lands
         }
+
+        public int getMaxLevel()
+        {
+            return 10;
+        }
     }
 }

@@ -58,5 +58,10 @@ namespace Lebeg134.Structures.EnergySector
         {
 			return upgradeLevelsCostsArray[level];
         }
+
+        public override int getMaxLevel()
+        {
+			return 2;
+        }
     }
 }

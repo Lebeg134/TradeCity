@@ -12,7 +12,10 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
     {
         OFF,
         BUILD,
-        UPGRADE
+        BUILDOFF,
+        UPGRADE,
+        UPGRADEOFF,
+        MAXLEVEL
     }
     public partial class BuildingListItemRuntime: IUpdateable
     {
@@ -55,11 +58,37 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
 
         public void Update()
         {
+            SetState();
             ResourceList.Children.ToList().Clear();
+            UpdateButtonVisual();
         }
         void UpdateButtonVisual()
         {
-
+            BuildButton.Enabled = true;
+            switch (state)
+            {
+                case BuildingListItemButtonState.BUILDOFF:
+                    BuildButton.Text = "Build";
+                    BuildButton.Enabled = false;
+                    break;
+                case BuildingListItemButtonState.BUILD:
+                    BuildButton.Text = "Build";
+                    break;
+                case BuildingListItemButtonState.UPGRADEOFF:
+                    BuildButton.Text = "Upgrade";
+                    BuildButton.Enabled = false;
+                    break;
+                case BuildingListItemButtonState.UPGRADE:
+                    BuildButton.Text = "Upgrade";
+                    break;
+                case BuildingListItemButtonState.MAXLEVEL:
+                    BuildButton.Text = "Max level";
+                    BuildButton.Enabled = false;
+                    break;
+                default:
+                    BuildButton.Enabled = false;
+                    break;
+            }
         }
         void SetState()
         {
@@ -68,7 +97,12 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
                 if (FocusBuilding is CommonBuilding)
                 {
                     CommonBuilding focus = (CommonBuilding)FocusBuilding;
-
+                    if (focus.checkLevelUp())
+                    {
+                        state = BuildingListItemButtonState.UPGRADE;
+                    }
+                    else
+                        state = BuildingListItemButtonState.OFF;
                 }
                 else
                 {

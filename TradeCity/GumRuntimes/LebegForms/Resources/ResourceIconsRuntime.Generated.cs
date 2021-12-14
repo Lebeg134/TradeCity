@@ -75,7 +75,7 @@
                             WoodSprite.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             MoneySprite.Height = 40f;
                             MoneySprite.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
-                            SetProperty("MoneySprite.SourceFile", "../GlobalContent/Resources/ResourceIcons/log.png");
+                            SetProperty("MoneySprite.SourceFile", "../GlobalContent/Resources/ResourceIcons/money-stack.png");
                             MoneySprite.TextureAddress = Gum.Managers.TextureAddress.EntireTexture;
                             MoneySprite.Width = 40f;
                             MoneySprite.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
@@ -378,7 +378,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            SetProperty("MoneySprite.SourceFile", "../GlobalContent/Resources/ResourceIcons/log.png");
+                            SetProperty("MoneySprite.SourceFile", "../GlobalContent/Resources/ResourceIcons/money-stack.png");
                         }
                         if (interpolationValue < 1)
                         {
@@ -671,7 +671,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            SetProperty("MoneySprite.SourceFile", "../GlobalContent/Resources/ResourceIcons/log.png");
+                            SetProperty("MoneySprite.SourceFile", "../GlobalContent/Resources/ResourceIcons/money-stack.png");
                         }
                         if (interpolationValue >= 1)
                         {

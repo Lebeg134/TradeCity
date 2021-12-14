@@ -1344,6 +1344,20 @@
         "ElementType": "Components",
         "EventType": 7,
         "TimestampUtc": "2021-12-14T12:32:40.4516282Z"
+      },
+      {
+        "NewName": " GameScreenGum.ResourceIconsInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T13:21:23.4834384Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " GameScreenGum.LebegForms/Resources/ResourceIcons ResourceIconsInstance in  GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-14T13:44:56.6537338Z"
       }
     ],
     "torok": []

@@ -27,6 +27,8 @@ namespace JHP4SD.Screens
     {
         void CustomInitialize()
         {
+            Resource.spriteLibrary = new GumRuntimes.LebegForms.Resources.ResourceIconsRuntime();
+
             Forms.PlayButtonInstance.IsChecked = Clock.Instance.isEnabled();
             Forms.PlayButtonInstance.Click += PlayButtonInstance_Click;
 

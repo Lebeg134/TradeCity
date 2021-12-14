@@ -66,7 +66,9 @@
                             ChangeIndicatorUp.Visible = false;
                             ChangeIndicatorUp.Width = 40f;
                             ChangeIndicatorUp.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
-                            ChangeIndicatorUp.X = 140f;
+                            ChangeIndicatorUp.X = 0f;
+                            ChangeIndicatorUp.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            ChangeIndicatorUp.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             ChangeIndicatorUp.Y = 0f;
                             ChangeIndicatorDown.Blue = 0;
                             ChangeIndicatorDown.Green = 0;
@@ -77,7 +79,9 @@
                             ChangeIndicatorDown.Visible = false;
                             ChangeIndicatorDown.Width = 40f;
                             ChangeIndicatorDown.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
-                            ChangeIndicatorDown.X = 140f;
+                            ChangeIndicatorDown.X = 0f;
+                            ChangeIndicatorDown.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                            ChangeIndicatorDown.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             ChangeIndicatorDown.Y = 0f;
                             break;
                     }
@@ -279,7 +283,15 @@
                             this.ChangeIndicatorDown.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
                         setChangeIndicatorDownXFirstValue = true;
-                        ChangeIndicatorDownXFirstValue = 140f;
+                        ChangeIndicatorDownXFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ChangeIndicatorDown.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ChangeIndicatorDown.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
                         setChangeIndicatorDownYFirstValue = true;
                         ChangeIndicatorDownYFirstValue = 0f;
                         setChangeIndicatorUpBlueFirstValue = true;
@@ -309,7 +321,15 @@
                             this.ChangeIndicatorUp.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
                         setChangeIndicatorUpXFirstValue = true;
-                        ChangeIndicatorUpXFirstValue = 140f;
+                        ChangeIndicatorUpXFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.ChangeIndicatorUp.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.ChangeIndicatorUp.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
                         setChangeIndicatorUpYFirstValue = true;
                         ChangeIndicatorUpYFirstValue = 0f;
                         setHeightFirstValue = true;
@@ -438,7 +458,15 @@
                             this.ChangeIndicatorDown.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
                         setChangeIndicatorDownXSecondValue = true;
-                        ChangeIndicatorDownXSecondValue = 140f;
+                        ChangeIndicatorDownXSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ChangeIndicatorDown.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ChangeIndicatorDown.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
                         setChangeIndicatorDownYSecondValue = true;
                         ChangeIndicatorDownYSecondValue = 0f;
                         setChangeIndicatorUpBlueSecondValue = true;
@@ -468,7 +496,15 @@
                             this.ChangeIndicatorUp.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
                         setChangeIndicatorUpXSecondValue = true;
-                        ChangeIndicatorUpXSecondValue = 140f;
+                        ChangeIndicatorUpXSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.ChangeIndicatorUp.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.ChangeIndicatorUp.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
                         setChangeIndicatorUpYSecondValue = true;
                         ChangeIndicatorUpYSecondValue = 0f;
                         setHeightSecondValue = true;
@@ -1092,6 +1128,22 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "ChangeIndicatorUp.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = ChangeIndicatorUp.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ChangeIndicatorUp.X Units",
+                            Type = "PositionUnitType",
+                            Value = ChangeIndicatorUp.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "ChangeIndicatorUp.Y",
                             Type = "float",
                             Value = ChangeIndicatorUp.Y
@@ -1175,6 +1227,22 @@
                             Name = "ChangeIndicatorDown.X",
                             Type = "float",
                             Value = ChangeIndicatorDown.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ChangeIndicatorDown.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = ChangeIndicatorDown.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ChangeIndicatorDown.X Units",
+                            Type = "PositionUnitType",
+                            Value = ChangeIndicatorDown.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1528,7 +1596,23 @@
                             SetsValue = true,
                             Name = "ChangeIndicatorUp.X",
                             Type = "float",
-                            Value = ChangeIndicatorUp.X + 140f
+                            Value = ChangeIndicatorUp.X + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ChangeIndicatorUp.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = ChangeIndicatorUp.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ChangeIndicatorUp.X Units",
+                            Type = "PositionUnitType",
+                            Value = ChangeIndicatorUp.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1616,7 +1700,23 @@
                             SetsValue = true,
                             Name = "ChangeIndicatorDown.X",
                             Type = "float",
-                            Value = ChangeIndicatorDown.X + 140f
+                            Value = ChangeIndicatorDown.X + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ChangeIndicatorDown.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = ChangeIndicatorDown.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ChangeIndicatorDown.X Units",
+                            Type = "PositionUnitType",
+                            Value = ChangeIndicatorDown.XUnits
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

@@ -84,6 +84,7 @@
                             DialogBoxInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             ResourceList.Height = -280f;
                             ResourceList.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            ResourceList.Width = 220f;
                             ResourceList.X = 0f;
                             ResourceList.Y = 72f;
                             ResourceList.YUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
@@ -269,6 +270,10 @@
                 bool setResourceListHeightSecondValue = false;
                 float ResourceListHeightFirstValue= 0;
                 float ResourceListHeightSecondValue= 0;
+                bool setResourceListWidthFirstValue = false;
+                bool setResourceListWidthSecondValue = false;
+                float ResourceListWidthFirstValue= 0;
+                float ResourceListWidthSecondValue= 0;
                 bool setResourceListXFirstValue = false;
                 bool setResourceListXSecondValue = false;
                 float ResourceListXFirstValue= 0;
@@ -536,6 +541,8 @@
                         {
                             this.ResourceList.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
+                        setResourceListWidthFirstValue = true;
+                        ResourceListWidthFirstValue = 220f;
                         setResourceListXFirstValue = true;
                         ResourceListXFirstValue = 0f;
                         setResourceListYFirstValue = true;
@@ -829,6 +836,8 @@
                         {
                             this.ResourceList.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                         }
+                        setResourceListWidthSecondValue = true;
+                        ResourceListWidthSecondValue = 220f;
                         setResourceListXSecondValue = true;
                         ResourceListXSecondValue = 0f;
                         setResourceListYSecondValue = true;
@@ -1035,6 +1044,10 @@
                 if (setResourceListHeightFirstValue && setResourceListHeightSecondValue)
                 {
                     ResourceList.Height = ResourceListHeightFirstValue * (1 - interpolationValue) + ResourceListHeightSecondValue * interpolationValue;
+                }
+                if (setResourceListWidthFirstValue && setResourceListWidthSecondValue)
+                {
+                    ResourceList.Width = ResourceListWidthFirstValue * (1 - interpolationValue) + ResourceListWidthSecondValue * interpolationValue;
                 }
                 if (setResourceListXFirstValue && setResourceListXSecondValue)
                 {
@@ -1594,6 +1607,14 @@
                             Name = "ResourceList.Height Units",
                             Type = "DimensionUnitType",
                             Value = ResourceList.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceList.Width",
+                            Type = "float",
+                            Value = ResourceList.Width
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2356,6 +2377,14 @@
                             Name = "ResourceList.Height Units",
                             Type = "DimensionUnitType",
                             Value = ResourceList.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "ResourceList.Width",
+                            Type = "float",
+                            Value = ResourceList.Width + 220f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

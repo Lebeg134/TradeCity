@@ -1,6 +1,8 @@
 
 
 using Gum.Managers;
+using JHP4SD.GumRuntimes;
+using JHP4SD.GumRuntimes.LebegForms.Resources;
 using JHP4SD.Lebeg134.Module.Resources;
 /**
 * @(#) Iron.cs
@@ -11,11 +13,10 @@ namespace Lebeg134.Resources.Common
     {
         public Iron(int amount) : base(amount) { }
 
-        public override TextureAddress getIcon()
+        public override SpriteRuntime getSprite()
         {
-            throw new System.NotImplementedException();
+            return spriteLibrary.IronSprite;
         }
-
         public override string getName()
         {
             return "Iron";

@@ -1141,6 +1141,209 @@
         "ElementType": "Screens",
         "EventType": 7,
         "TimestampUtc": "2021-12-13T17:36:35.6280558Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-12-14T12:11:32.0790776Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T12:11:37.8842993Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.SpriteInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T12:12:08.1188054Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/Resources/ResourceIcons.Sprite SpriteInstance in LebegForms/Resources/ResourceIcons",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-14T12:12:10.7024469Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T12:13:23.009717Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.Common",
+        "OldName": "LebegForms/Resources/ResourceIcons.ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T12:13:26.7346939Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.IronSprite",
+        "OldName": "LebegForms/Resources/ResourceIcons.SpriteInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T12:13:34.7726411Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.IronSprite1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T12:13:46.9457975Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.IronSprite2",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T12:13:48.9813361Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.IronSprite3",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T12:13:49.6110035Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.SteelSprite",
+        "OldName": "LebegForms/Resources/ResourceIcons.IronSprite3",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T12:13:56.5896131Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.WaterSprite",
+        "OldName": "LebegForms/Resources/ResourceIcons.IronSprite2",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T12:14:05.9359682Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.WoodSprite",
+        "OldName": "LebegForms/Resources/ResourceIcons.IronSprite1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T12:14:12.2787396Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T12:14:51.1622209Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.Construction",
+        "OldName": "LebegForms/Resources/ResourceIcons.ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T12:14:58.7757729Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T12:15:01.4734565Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.Energy",
+        "OldName": "LebegForms/Resources/ResourceIcons.ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T12:15:06.9065135Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T12:15:09.6431518Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.Oil",
+        "OldName": "LebegForms/Resources/ResourceIcons.ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T12:15:44.1066286Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T12:15:47.1951107Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.Workforce",
+        "OldName": "LebegForms/Resources/ResourceIcons.ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T12:15:54.5637864Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T12:16:01.2422364Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.SpriteInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T12:16:05.9581385Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.CoalSprite",
+        "OldName": "LebegForms/Resources/ResourceIcons.SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T12:16:20.3991356Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.ElectricitySprite",
+        "OldName": "LebegForms/Resources/ResourceIcons.SpriteInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T12:16:31.8634665Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.CoalSprite1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T12:17:04.1571843Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.WorkforceSprite",
+        "OldName": "LebegForms/Resources/ResourceIcons.CoalSprite1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T12:17:36.2655345Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.WoodSprite1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-14T12:32:27.5810618Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/ResourceIcons.MoneySprite",
+        "OldName": "LebegForms/Resources/ResourceIcons.WoodSprite1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-14T12:32:40.4516282Z"
       }
     ],
     "torok": []

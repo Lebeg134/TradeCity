@@ -43,16 +43,6 @@ namespace JHP4SD.Screens
             {
                 AddToList(resource);
             }
-            UpdateResourceList();
-        }
-
-        private void UpdateResourceList()
-        {
-            foreach (ResourceListItemRuntime item in Forms.ResourceList.Items)
-            {
-                item.Update();
-            }
-            
         }
 
         private void GibMunney_Click(object sender, EventArgs e)
@@ -63,7 +53,6 @@ namespace JHP4SD.Screens
         private void InfiniteMoneyButton_Click(object sender, EventArgs e)
         {
             Player.CurrentPlayer.giveRes(new Money(100));
-            
         }
 
         private void PlayButtonInstance_Click(object sender, EventArgs e)
@@ -119,7 +108,7 @@ namespace JHP4SD.Screens
 
         void AddToList(Resource resource)
         {
-            var visualItem = new GumRuntimes.LebegForms.BasicComponents.ResourceListItemRuntime();
+            var visualItem = new ResourceListItemRuntime();
             visualItem.Focus = resource;
             var listBoxItem = visualItem.FormsControl;
             listBoxItem.UpdateToObject(resource.getName());

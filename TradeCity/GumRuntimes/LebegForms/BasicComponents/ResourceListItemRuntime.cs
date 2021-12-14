@@ -8,22 +8,31 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
 {
     public partial class ResourceListItemRuntime
     {
-        public Resource Focus { get; set; }
-        partial void CustomInitialize () 
+        public Resource Focus
         {
-            if (Focus != null)
+            set
+            {
+                _focus = value;
+                Init();
+            }
+        }
+        Resource _focus;
+        partial void CustomInitialize()
+        {
+            if (_focus != null)
                 Init();
         }
         public void Init()
         {
-            ResourceText.Text = Focus.getName();
-            ResourceDisplayInstance.SpriteInstance.Texture = Focus.getIcon();
+            ResourceText.Text = _focus.getName();
+
+            ResourceDisplayInstance.SpriteInstance = _focus.getSprite();
             Update();
         }
         public void Update()
         {
-            ResourceDisplayInstance.Amount = Player.CurrentPlayer.getRes(Focus);
+            ResourceDisplayInstance.Amount = Player.CurrentPlayer.getRes(_focus);
         }
-        
+
     }
 }

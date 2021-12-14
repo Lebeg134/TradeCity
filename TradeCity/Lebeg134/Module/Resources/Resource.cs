@@ -2,6 +2,8 @@
 * @(#) Resource.cs
 */
 using Gum.Managers;
+using JHP4SD.GumRuntimes;
+using JHP4SD.GumRuntimes.LebegForms.Resources;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -10,6 +12,7 @@ namespace JHP4SD.Lebeg134.Module.Resources
 {
     public abstract class Resource
     {
+        public static ResourceIconsRuntime spriteLibrary = new ResourceIconsRuntime();
         private const string basePath = "Content/GlobalContent/Resources/ResourceIcons";
 
         //ID used to identify resource
@@ -28,14 +31,7 @@ namespace JHP4SD.Lebeg134.Module.Resources
             return stock;
         }
         public abstract String getName();
-        public abstract Texture getIcon();
-        protected Texture fromIconName(String name)
-        {
-
-
-
-            return new Texture2D(null,0,0); //TODO
-        }
+        public abstract SpriteRuntime getSprite();
 
         public virtual void gain(int amount)
         {

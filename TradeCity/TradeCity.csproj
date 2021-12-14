@@ -298,7 +298,9 @@
       <DependentUpon>ResourceDisplayRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceListItemRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceListItemRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceListItemRuntime.Generated.cs">
+      <DependentUpon>ResourceListItemRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\TabButtonRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\TabButtonRuntime.Generated.cs">
       <DependentUpon>TabButtonRuntime.cs</DependentUpon>
@@ -315,6 +317,8 @@
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.Generated.cs">
       <DependentUpon>TopicRuntime.cs</DependentUpon>
     </Compile>
+    <Compile Include="GumRuntimes\LebegForms\Resources\ResourceIconsRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\Resources\ResourceIconsRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\MainMenuGumRuntime.cs" />
     <Compile Include="GumRuntimes\MainMenuGumRuntime.Generated.cs">
       <DependentUpon>MainMenuGumRuntime.cs</DependentUpon>
@@ -793,6 +797,10 @@
     <None Include="content\gumproject\components\lebegforms\resources\placeholdergradient.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>placeholdergradient</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\resources\resourceicons.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>resourceicons</Name>
     </None>
     <None Include="content\gumproject\fontcache\font128arial.fnt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -22,7 +22,6 @@ namespace JHP4SD.Lebeg134.Module.Session
 
         public Player()
         {
-            Console.WriteLine("New Player created"); //DEBUG
             playerStrategy = new StandardPlayerStrategy(this);
         }
         internal IEnumerable<Resource> getAllRes()
@@ -35,7 +34,6 @@ namespace JHP4SD.Lebeg134.Module.Session
             {
                 if (ownable.GetType() == structure.GetType())
                     return true;
-                Console.WriteLine(structure.ToString()); //DEBUG
             }
             return false;
         }

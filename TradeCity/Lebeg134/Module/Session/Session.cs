@@ -80,7 +80,6 @@ namespace JHP4SD.Lebeg134.Module.Session
             foreach (Player player in _players)
             {
                 player.tick();
-                Console.WriteLine("Ticking player: " + player.ToString()); //DEBUG
             }
         }
         public void register()

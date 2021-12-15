@@ -19,6 +19,7 @@ using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.MarketNS;
 using JHP4SD.Lebeg134.Units.Resources.Common;
 using JHP4SD.GumRuntimes.DefaultForms;
+using JHP4SD.Lebeg134.Module.TimeManager;
 
 namespace JHP4SD.Screens
 {
@@ -124,6 +125,7 @@ namespace JHP4SD.Screens
                 visualItem.ButtonInstance.Click += (FlatRedBall.Gui.IWindow window) =>
                 {
                     listings.Remove(listing);
+                    Clock.Instance.unRegister(listing);
                     RefreshListingsList();
                 };
                 var listBoxItem = visualItem.FormsControl;

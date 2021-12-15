@@ -16,6 +16,7 @@ namespace JHP4SD.Lebeg134.Module.Session
         //Session session;
         List<IOwnable> owned = new List<IOwnable>();
         Dictionary<Type, Resource> ownedResources = new Dictionary<Type, Resource>();
+        Dictionary<Type, Resource> cntResourcesBuffer = new Dictionary<Type, Resource>();
         IPlayerStrategy playerStrategy;
         public static Player CurrentPlayer { get; set; }
 
@@ -136,7 +137,15 @@ namespace JHP4SD.Lebeg134.Module.Session
         }
         public void giveRes(Resource resource)
         {
-            ownedResources[resource.GetType()] += resource;
+            if (resource is ContinousResource)
+            {
+                cntResourcesBuffer[resource.GetType()] += resource;
+            }
+            else
+            {
+                ownedResources[resource.GetType()] += resource;
+            }
+            
         }
         public void giveRes(List<Resource> resources)
         {
@@ -150,6 +159,10 @@ namespace JHP4SD.Lebeg134.Module.Session
             foreach (Resource res in newResList)
             {
                 ownedResources.Add(res.GetType(), res.getNewResource(0));
+                if(res is ContinousResource)
+                {
+                    cntResourcesBuffer.Add(res.GetType(), res.getNewResource(0));
+                }
             }
         }
         public void freeze()

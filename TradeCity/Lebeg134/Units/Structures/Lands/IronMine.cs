@@ -18,6 +18,11 @@ namespace Lebeg134.Structures.Lands
             return "Iron Mine";
         }
 
+        public override Land GetNew()
+        {
+            return new IronMine();
+        }
+
         public override SpriteRuntime GetSprite()
         {
             return spriteLibrary.IronMineSprite;

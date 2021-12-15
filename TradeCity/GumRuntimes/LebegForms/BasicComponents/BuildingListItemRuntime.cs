@@ -58,7 +58,17 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
         public void Update()
         {
             if(_focus != null)
+            {
                 BuildingSprite.Texture = _focus.GetSprite().Texture;
+                if (_focus is CommonBuilding && ((CommonBuilding)_focus).getLevel() > 0)
+                {
+                    LevelText.Visible = true;
+                    LevelText.Text = "Lvl:" + ((CommonBuilding)_focus).getLevel();
+                }
+                else
+                    LevelText.Visible = false;
+            }
+               
             SetState();
             UpdateButtonVisual();
             UpdateResourceVisual();

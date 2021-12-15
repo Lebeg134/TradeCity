@@ -58,6 +58,11 @@ namespace Lebeg134.Structures.Lands
             return "Forest";
         }
 
+        public override Land GetNew()
+        {
+            return new Forest();
+        }
+
         public override SpriteRuntime GetSprite()
         {
             return spriteLibrary.ForestSprite;

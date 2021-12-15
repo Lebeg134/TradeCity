@@ -110,6 +110,19 @@
                             BuildButton.Y = -4f;
                             BuildButton.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
                             BuildButton.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            LevelText.Blue = 0;
+                            LevelText.Green = 0;
+                            LevelText.Height = 0f;
+                            LevelText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            LevelText.Red = 0;
+                            LevelText.Text = "Lvl:";
+                            LevelText.Visible = false;
+                            LevelText.Width = 40f;
+                            LevelText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            LevelText.X = -80f;
+                            LevelText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                            LevelText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                            LevelText.Y = 8f;
                             break;
                     }
                 }
@@ -249,6 +262,34 @@
                 bool setHeightSecondValue = false;
                 float HeightFirstValue= 0;
                 float HeightSecondValue= 0;
+                bool setLevelTextBlueFirstValue = false;
+                bool setLevelTextBlueSecondValue = false;
+                int LevelTextBlueFirstValue= 0;
+                int LevelTextBlueSecondValue= 0;
+                bool setLevelTextGreenFirstValue = false;
+                bool setLevelTextGreenSecondValue = false;
+                int LevelTextGreenFirstValue= 0;
+                int LevelTextGreenSecondValue= 0;
+                bool setLevelTextHeightFirstValue = false;
+                bool setLevelTextHeightSecondValue = false;
+                float LevelTextHeightFirstValue= 0;
+                float LevelTextHeightSecondValue= 0;
+                bool setLevelTextRedFirstValue = false;
+                bool setLevelTextRedSecondValue = false;
+                int LevelTextRedFirstValue= 0;
+                int LevelTextRedSecondValue= 0;
+                bool setLevelTextWidthFirstValue = false;
+                bool setLevelTextWidthSecondValue = false;
+                float LevelTextWidthFirstValue= 0;
+                float LevelTextWidthSecondValue= 0;
+                bool setLevelTextXFirstValue = false;
+                bool setLevelTextXSecondValue = false;
+                float LevelTextXFirstValue= 0;
+                float LevelTextXSecondValue= 0;
+                bool setLevelTextYFirstValue = false;
+                bool setLevelTextYSecondValue = false;
+                float LevelTextYFirstValue= 0;
+                float LevelTextYSecondValue= 0;
                 bool setRectangleInstanceHeightFirstValue = false;
                 bool setRectangleInstanceHeightSecondValue = false;
                 float RectangleInstanceHeightFirstValue= 0;
@@ -412,6 +453,44 @@
                         {
                             this.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
+                        setLevelTextBlueFirstValue = true;
+                        LevelTextBlueFirstValue = 0;
+                        setLevelTextGreenFirstValue = true;
+                        LevelTextGreenFirstValue = 0;
+                        setLevelTextHeightFirstValue = true;
+                        LevelTextHeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.LevelText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        setLevelTextRedFirstValue = true;
+                        LevelTextRedFirstValue = 0;
+                        if (interpolationValue < 1)
+                        {
+                            this.LevelText.Text = "Lvl:";
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.LevelText.Visible = false;
+                        }
+                        setLevelTextWidthFirstValue = true;
+                        LevelTextWidthFirstValue = 40f;
+                        if (interpolationValue < 1)
+                        {
+                            this.LevelText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        setLevelTextXFirstValue = true;
+                        LevelTextXFirstValue = -80f;
+                        if (interpolationValue < 1)
+                        {
+                            this.LevelText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.LevelText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setLevelTextYFirstValue = true;
+                        LevelTextYFirstValue = 8f;
                         setRectangleInstanceHeightFirstValue = true;
                         RectangleInstanceHeightFirstValue = 0f;
                         if (interpolationValue < 1)
@@ -665,6 +744,44 @@
                         {
                             this.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
+                        setLevelTextBlueSecondValue = true;
+                        LevelTextBlueSecondValue = 0;
+                        setLevelTextGreenSecondValue = true;
+                        LevelTextGreenSecondValue = 0;
+                        setLevelTextHeightSecondValue = true;
+                        LevelTextHeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.LevelText.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        setLevelTextRedSecondValue = true;
+                        LevelTextRedSecondValue = 0;
+                        if (interpolationValue >= 1)
+                        {
+                            this.LevelText.Text = "Lvl:";
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.LevelText.Visible = false;
+                        }
+                        setLevelTextWidthSecondValue = true;
+                        LevelTextWidthSecondValue = 40f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.LevelText.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        setLevelTextXSecondValue = true;
+                        LevelTextXSecondValue = -80f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.LevelText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.LevelText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
+                        }
+                        setLevelTextYSecondValue = true;
+                        LevelTextYSecondValue = 8f;
                         setRectangleInstanceHeightSecondValue = true;
                         RectangleInstanceHeightSecondValue = 0f;
                         if (interpolationValue >= 1)
@@ -879,6 +996,34 @@
                 if (setHeightFirstValue && setHeightSecondValue)
                 {
                     Height = HeightFirstValue * (1 - interpolationValue) + HeightSecondValue * interpolationValue;
+                }
+                if (setLevelTextBlueFirstValue && setLevelTextBlueSecondValue)
+                {
+                    LevelText.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(LevelTextBlueFirstValue* (1 - interpolationValue) + LevelTextBlueSecondValue * interpolationValue);
+                }
+                if (setLevelTextGreenFirstValue && setLevelTextGreenSecondValue)
+                {
+                    LevelText.Green = FlatRedBall.Math.MathFunctions.RoundToInt(LevelTextGreenFirstValue* (1 - interpolationValue) + LevelTextGreenSecondValue * interpolationValue);
+                }
+                if (setLevelTextHeightFirstValue && setLevelTextHeightSecondValue)
+                {
+                    LevelText.Height = LevelTextHeightFirstValue * (1 - interpolationValue) + LevelTextHeightSecondValue * interpolationValue;
+                }
+                if (setLevelTextRedFirstValue && setLevelTextRedSecondValue)
+                {
+                    LevelText.Red = FlatRedBall.Math.MathFunctions.RoundToInt(LevelTextRedFirstValue* (1 - interpolationValue) + LevelTextRedSecondValue * interpolationValue);
+                }
+                if (setLevelTextWidthFirstValue && setLevelTextWidthSecondValue)
+                {
+                    LevelText.Width = LevelTextWidthFirstValue * (1 - interpolationValue) + LevelTextWidthSecondValue * interpolationValue;
+                }
+                if (setLevelTextXFirstValue && setLevelTextXSecondValue)
+                {
+                    LevelText.X = LevelTextXFirstValue * (1 - interpolationValue) + LevelTextXSecondValue * interpolationValue;
+                }
+                if (setLevelTextYFirstValue && setLevelTextYSecondValue)
+                {
+                    LevelText.Y = LevelTextYFirstValue * (1 - interpolationValue) + LevelTextYSecondValue * interpolationValue;
                 }
                 if (setRectangleInstanceHeightFirstValue && setRectangleInstanceHeightSecondValue)
                 {
@@ -2055,6 +2200,110 @@
                             Value = BuildButton.YUnits
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Blue",
+                            Type = "int",
+                            Value = LevelText.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Green",
+                            Type = "int",
+                            Value = LevelText.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Height",
+                            Type = "float",
+                            Value = LevelText.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = LevelText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Red",
+                            Type = "int",
+                            Value = LevelText.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Text",
+                            Type = "string",
+                            Value = LevelText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Visible",
+                            Type = "bool",
+                            Value = LevelText.Visible
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Width",
+                            Type = "float",
+                            Value = LevelText.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = LevelText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.X",
+                            Type = "float",
+                            Value = LevelText.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = LevelText.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.X Units",
+                            Type = "PositionUnitType",
+                            Value = LevelText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Y",
+                            Type = "float",
+                            Value = LevelText.Y
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -2679,6 +2928,110 @@
                             Name = "BuildButton.Y Units",
                             Type = "PositionUnitType",
                             Value = BuildButton.YUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Blue",
+                            Type = "int",
+                            Value = LevelText.Blue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Green",
+                            Type = "int",
+                            Value = LevelText.Green + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Height",
+                            Type = "float",
+                            Value = LevelText.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = LevelText.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Red",
+                            Type = "int",
+                            Value = LevelText.Red + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Text",
+                            Type = "string",
+                            Value = LevelText.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Visible",
+                            Type = "bool",
+                            Value = LevelText.Visible
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Width",
+                            Type = "float",
+                            Value = LevelText.Width + 40f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = LevelText.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.X",
+                            Type = "float",
+                            Value = LevelText.X + -80f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = LevelText.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.X Units",
+                            Type = "PositionUnitType",
+                            Value = LevelText.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "LevelText.Y",
+                            Type = "float",
+                            Value = LevelText.Y + 8f
                         }
                         );
                         break;
@@ -3449,6 +3802,7 @@
             public JHP4SD.GumRuntimes.SpriteRuntime BuildingSprite { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime<JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime> ResourceList { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime BuildButton { get; set; }
+            public JHP4SD.GumRuntimes.TextRuntime LevelText { get; set; }
             public Microsoft.Xna.Framework.Graphics.Texture2D BuildingSpriteSourceFile
             {
                 get
@@ -3517,6 +3871,7 @@
                 BuildingSprite = this.GetGraphicalUiElementByName("BuildingSprite") as JHP4SD.GumRuntimes.SpriteRuntime;
                 ResourceList = this.GetGraphicalUiElementByName("ResourceList") as JHP4SD.GumRuntimes.ContainerRuntime<JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime>;
                 BuildButton = this.GetGraphicalUiElementByName("BuildButton") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
+                LevelText = this.GetGraphicalUiElementByName("LevelText") as JHP4SD.GumRuntimes.TextRuntime;
                 BuildButton.Click += (unused) => BuildButtonClick?.Invoke(this);
                 if (tryCreateFormsObject)
                 {

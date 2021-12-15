@@ -8,5 +8,6 @@ namespace JHP4SD.Lebeg134.Module.Structures
     {
         void levelUp();
         int getMaxLevel();
+        int getLevel();
     }
 }

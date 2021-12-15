@@ -2086,6 +2086,48 @@
         "ElementType": "Components",
         "EventType": 2,
         "TimestampUtc": "2021-12-15T14:05:29.8112862Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.TextInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T14:24:09.7901116Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.LevelText",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T14:24:14.9185591Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.LevelText",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T14:24:14.9205545Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.LevelText",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T14:24:14.9235463Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.LevelText",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T14:24:14.9255409Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/BuildingListItem.LevelText",
+        "OldName": "LebegForms/BasicComponents/BuildingListItem.TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T14:24:14.927536Z"
       }
     ],
     "torok": []

@@ -22,15 +22,11 @@ namespace JHP4SD.Lebeg134.Module.Structures
         protected int level = 1; //Leveling starts from 1
         private int _x = -1, _y = -1;
 
-        public Land()
-        {
-            
-        }
+        public abstract Land GetNew();
         public bool Equals(Land A, Land B)
         {
             return A.GetType() == B.GetType() && A._x == B._x && A._y == B._y && A.owner == B.owner;
         }
-
 
         public int GetStartingPrice()
         {
@@ -114,6 +110,11 @@ namespace JHP4SD.Lebeg134.Module.Structures
         public int getMaxLevel()
         {
             return 10;
+        }
+
+        public int getLevel()
+        {
+            return level;
         }
     }
 }

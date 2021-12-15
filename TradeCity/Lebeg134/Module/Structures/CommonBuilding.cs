@@ -44,6 +44,11 @@ namespace JHP4SD.Lebeg134.Module.Structures
             else
                 return new List<Resource>();
         }
+
+        public int getLevel()
+        {
+            return level;
+        }
     }
 
 }

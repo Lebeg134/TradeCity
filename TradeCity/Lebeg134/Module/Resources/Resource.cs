@@ -52,6 +52,14 @@ namespace JHP4SD.Lebeg134.Module.Resources
             }
             else throw new NotEnoughResourceException();
         }
+        public virtual void setAmount(int amount)
+        {
+            if (amount < 0)
+            {
+                throw new ArgumentException("Can not set negative amount");
+            }
+            stock = amount;
+        }
         public abstract Resource getNewResource(int amount);
         protected Resource Add(Resource B)
         {

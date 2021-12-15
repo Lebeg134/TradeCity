@@ -18,6 +18,11 @@ namespace Lebeg134.Structures.Lands
             return "Coal Mine";
         }
 
+        public override Land GetNew()
+        {
+            return new CoalMine();
+        }
+
         public override SpriteRuntime GetSprite()
         {
             return spriteLibrary.CoalMineSprite;
@@ -25,7 +30,7 @@ namespace Lebeg134.Structures.Lands
 
         protected override List<Resource> productionLevels(int level)
         {
-            return new List<Resource> { new Coal(50 * level+100) };
+            return new List<Resource> { new Coal(25 * level+50) };
         }
 
         protected override List<Resource> upgradeLevelsCosts(int level)

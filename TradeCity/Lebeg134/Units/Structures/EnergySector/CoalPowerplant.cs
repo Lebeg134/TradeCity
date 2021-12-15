@@ -22,8 +22,8 @@ namespace Lebeg134.Structures.EnergySector
 		};
 		protected static new readonly List<Resource>[] upkeepLevelsArray =
 		{
-			new List<Resource>{new Coal(50)},
-			new List<Resource>{new Coal(75)}
+			new List<Resource>{new Coal(45)},
+			new List<Resource>{new Coal(65)}
 		};
 		protected static readonly new List<Resource>[] productionLevelsArray =
 		{

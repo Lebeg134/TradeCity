@@ -74,7 +74,6 @@ namespace JHP4SD.FormsControls.Components.LebegForms.ComplexComponents
             tabLists[(int)building.getBranch()].Items.Add(listBoxItem);
         }
 
-
         public void RegisterAllBuildings()
         {
             foreach (Building building in Player.CurrentPlayer.getAllBuildings())

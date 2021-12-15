@@ -17,6 +17,7 @@ namespace JHP4SD.Lebeg134.Module.Session
 {
     static class SessionGenerator
     {
+        static List<Building> allBuildings;
         public static Session GenerateStandard()
         {
             Session newSession = new Session();
@@ -47,7 +48,11 @@ namespace JHP4SD.Lebeg134.Module.Session
 
         internal static List<Building> GetAllBuildings()
         {
-            return new List<Building> { new SteelForge(), new CoalPowerplant()};
+            if (allBuildings == null)
+            {
+                allBuildings = new List<Building> { new SteelForge(), new CoalPowerplant() };
+            }
+            return allBuildings;
         }
     }
 }

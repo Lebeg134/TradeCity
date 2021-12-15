@@ -31,7 +31,6 @@ namespace JHP4SD.Lebeg134.Module.Structures
             return A.GetType() == B.GetType() && A._x == B._x && A._y == B._y && A.owner == B.owner;
         }
 
-        public abstract SpriteRuntime getSprite();
 
         public int GetStartingPrice()
         {

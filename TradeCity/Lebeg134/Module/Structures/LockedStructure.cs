@@ -1,7 +1,9 @@
-/**
- * @(#) LockedStructure.cs
- */
 
+
+using JHP4SD.GumRuntimes;
+/**
+* @(#) LockedStructure.cs
+*/
 namespace JHP4SD.Lebeg134.Module.Structures
 {
 	public class LockedStructure : Structure
@@ -34,6 +36,12 @@ namespace JHP4SD.Lebeg134.Module.Structures
         public override string getName()
         {
 			return "Locked";
+        }
+
+        public override SpriteRuntime GetSprite()
+        {
+            // TODO
+            throw new System.NotImplementedException();
         }
     }
 	

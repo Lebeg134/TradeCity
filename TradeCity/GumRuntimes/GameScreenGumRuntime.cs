@@ -23,7 +23,6 @@ namespace JHP4SD.GumRuntimes
             WorkforceDisplay.Focus = player.getResRef(new Workforce(0));
             ElectricityDisplay.Focus = player.getResRef(new Electricity(0));
             WoodDisplay.Focus = player.getResRef(new Wood(0));
-            IronDisplay.Focus = player.getResRef(new Iron(0));
             SteelDisplay.Focus = player.getResRef(new Steel(0));
             WaterDisplay.Focus = player.getResRef(new Water(0));
             CoalDisplay.Focus = player.getResRef(new Coal(0));
@@ -47,7 +46,6 @@ namespace JHP4SD.GumRuntimes
             WorkforceDisplay.Update();
             ElectricityDisplay.Update();
             WoodDisplay.Update();
-            IronDisplay.Update();
             SteelDisplay.Update();
             WaterDisplay.Update();
             CoalDisplay.Update();

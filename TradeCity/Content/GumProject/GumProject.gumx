@@ -233,6 +233,11 @@
     <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
+    <Name>LebegForms/Resources/BuildingImagesSmall</Name>
+    <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
+  </ComponentReference>
+  <ComponentReference>
     <Name>LebegForms/Resources/LandImages</Name>
     <ElementType>Component</ElementType>
     <LinkType>ReferenceOriginal</LinkType>

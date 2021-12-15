@@ -18,9 +18,9 @@ namespace Lebeg134.Structures.Lands
             return "Coal Mine";
         }
 
-        public override SpriteRuntime getSprite()
+        public override SpriteRuntime GetSprite()
         {
-            return spriteLibrary.IronMineSprite;
+            return spriteLibrary.CoalMineSprite;
         }
 
         protected override List<Resource> productionLevels(int level)

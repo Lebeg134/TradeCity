@@ -1939,6 +1939,153 @@
         "ElementType": "Components",
         "EventType": 6,
         "TimestampUtc": "2021-12-15T13:26:17.4228316Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " GameScreenGum.LebegForms/BasicComponents/ResourceDisplay IronDisplay in  GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T13:41:18.8851215Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " GameScreenGum.LebegForms/BasicComponents/ResourceDisplay WoodDisplay in  GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T13:41:50.1257428Z"
+      },
+      {
+        "NewName": " GameScreenGum.WoodDisplay",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T13:41:51.1452297Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " GameScreenGum.LebegForms/BasicComponents/ResourceDisplay SteelDisplay in  GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T13:42:03.3888285Z"
+      },
+      {
+        "NewName": " GameScreenGum.SteelDisplay",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T13:42:04.3129545Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-12-15T13:50:45.4091165Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages.BuildingSprite",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T13:51:28.9672038Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T13:51:53.8623634Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages.Common",
+        "OldName": "LebegForms/Resources/BuildingImages.ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T13:51:57.8969738Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages.Common1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T13:52:13.0296931Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages.Common2",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T13:52:21.6291818Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages.Common3",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T13:52:22.9042197Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages.Common4",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T13:52:23.2054137Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages.Construction",
+        "OldName": "LebegForms/Resources/BuildingImages.Common4",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T13:52:28.9339205Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages.Energy",
+        "OldName": "LebegForms/Resources/BuildingImages.Common3",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T13:52:34.9862701Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages.Oil",
+        "OldName": "LebegForms/Resources/BuildingImages.Common2",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T13:52:46.8939145Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages.Workforce",
+        "OldName": "LebegForms/Resources/BuildingImages.Common1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T13:52:51.1466571Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages.SteelForgeSprite",
+        "OldName": "LebegForms/Resources/BuildingImages.BuildingSprite",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T13:53:14.0853548Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages.SteelForgeSprite1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T13:53:21.5512118Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImages.CoalPowerplantSprite",
+        "OldName": "LebegForms/Resources/BuildingImages.SteelForgeSprite1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T13:53:29.4655984Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImagesSmall",
+        "OldName": "LebegForms/Resources/BuildingImages",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2021-12-15T14:05:29.8112862Z"
       }
     ],
     "torok": []

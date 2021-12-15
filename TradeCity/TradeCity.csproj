@@ -330,6 +330,8 @@
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.Generated.cs">
       <DependentUpon>TopicRuntime.cs</DependentUpon>
     </Compile>
+    <Compile Include="GumRuntimes\LebegForms\Resources\BuildingImagesSmallRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\Resources\BuildingImagesSmallRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\LebegForms\Resources\LandImagesRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\Resources\LandImagesRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\LebegForms\Resources\ResourceIconsRuntime.cs" />
@@ -564,6 +566,14 @@
     <None Include="content\entities\cameramidpoint\topdownvaluesstatic.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>TopDownValuesStatic</Name>
+    </None>
+    <None Include="content\globalcontent\buildingssmall\coalpowerplant.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>coalpowerplant</Name>
+    </None>
+    <None Include="content\globalcontent\buildingssmall\steelforge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>steelforge</Name>
     </None>
     <None Include="content\globalcontent\gameicons\png\black\1x\down.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -844,6 +854,10 @@
     <None Include="content\gumproject\components\lebegforms\complexcomponents\topic.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>topic</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\resources\buildingimagessmall.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>buildingimagessmall</Name>
     </None>
     <None Include="content\gumproject\components\lebegforms\resources\landimages.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

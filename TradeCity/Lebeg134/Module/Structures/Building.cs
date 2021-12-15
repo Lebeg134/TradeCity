@@ -1,6 +1,7 @@
 /**
  * @(#) Building.cs
  */
+using JHP4SD.GumRuntimes.LebegForms.Resources;
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Session;
 using System;
@@ -10,6 +11,7 @@ namespace JHP4SD.Lebeg134.Module.Structures
 {
     public abstract class Building : Structure, IOwnable
     {
+        public static BuildingImagesSmallRuntime spriteLibrarySmall = new BuildingImagesSmallRuntime();
         public abstract List<IOwnable> Criteria();
         public abstract List<Resource> Cost();
         protected Player owner;

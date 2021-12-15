@@ -10,12 +10,11 @@
             public FlatRedBall.Forms.Controls.ListBox ResourceList { get; set; }
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms WorkforceDisplay { get; set; }
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms ElectricityDisplay { get; set; }
-            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms WoodDisplay { get; set; }
-            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms IronDisplay { get; set; }
-            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms SteelDisplay { get; set; }
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms WaterDisplay { get; set; }
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms CoalDisplay { get; set; }
             public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms MoneyDisplay { get; set; }
+            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms WoodDisplay { get; set; }
+            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms SteelDisplay { get; set; }
             public GameScreenGumForms () 
             {
                 CustomInitialize();
@@ -35,12 +34,11 @@
                 ResourceList = (FlatRedBall.Forms.Controls.ListBox)Visual.GetGraphicalUiElementByName("ResourceList").FormsControlAsObject;
                 WorkforceDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("WorkforceDisplay"));
                 ElectricityDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("ElectricityDisplay"));
-                WoodDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("WoodDisplay"));
-                IronDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("IronDisplay"));
-                SteelDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("SteelDisplay"));
                 WaterDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("WaterDisplay"));
                 CoalDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("CoalDisplay"));
                 MoneyDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("MoneyDisplay"));
+                WoodDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("WoodDisplay"));
+                SteelDisplay = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.ResourceDisplayForms(Visual.GetGraphicalUiElementByName("SteelDisplay"));
             }
             partial void CustomInitialize();
         }

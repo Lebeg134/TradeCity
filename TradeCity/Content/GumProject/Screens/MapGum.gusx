@@ -180,7 +180,7 @@
     <Variable>
       <Type>string</Type>
       <Name>LandsShopTextInstance.Text</Name>
-      <Value xsi:type="xsd:string">Lands Shop</Value>
+      <Value xsi:type="xsd:string">Available Lands</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

@@ -28,11 +28,10 @@
                             DialogBoxInstance.Parent = this.GetGraphicalUiElementByName("InfoBar");
                             WorkforceDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
                             ElectricityDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
-                            WoodDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
-                            IronDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
-                            SteelDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
                             WaterDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
                             CoalDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                            WoodDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
+                            SteelDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
                             ResourceBar.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                             InfoBar.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.TransparentBlack;
                             PlayButtonInstance.Height = 100f;
@@ -99,12 +98,6 @@
                             WorkforceDisplay.X = 0f;
                             SetProperty("ElectricityDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/electric.png");
                             ElectricityDisplay.X = 10f;
-                            SetProperty("WoodDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/log.png");
-                            WoodDisplay.X = 10f;
-                            SetProperty("IronDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/ore.png");
-                            IronDisplay.X = 10f;
-                            SetProperty("SteelDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/i-beam.png");
-                            SteelDisplay.X = 10f;
                             SetProperty("WaterDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/water-drop.png");
                             WaterDisplay.X = 10f;
                             SetProperty("CoalDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/coal-pile.png");
@@ -114,6 +107,10 @@
                             MoneyDisplay.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             MoneyDisplay.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             MoneyDisplay.Y = 16f;
+                            SetProperty("WoodDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/log.png");
+                            WoodDisplay.X = 10f;
+                            SetProperty("SteelDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/i-beam.png");
+                            SteelDisplay.X = 10f;
                             break;
                     }
                 }
@@ -184,10 +181,6 @@
                 bool setInfoBarYSecondValue = false;
                 float InfoBarYFirstValue= 0;
                 float InfoBarYSecondValue= 0;
-                bool setIronDisplayXFirstValue = false;
-                bool setIronDisplayXSecondValue = false;
-                float IronDisplayXFirstValue= 0;
-                float IronDisplayXSecondValue= 0;
                 bool setMoneyDisplayXFirstValue = false;
                 bool setMoneyDisplayXSecondValue = false;
                 float MoneyDisplayXFirstValue= 0;
@@ -407,16 +400,6 @@
                         {
                             this.InfoBar.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                         }
-                        if (interpolationValue < 1)
-                        {
-                            this.IronDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            SetProperty("IronDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/ore.png");
-                        }
-                        setIronDisplayXFirstValue = true;
-                        IronDisplayXFirstValue = 10f;
                         if (interpolationValue < 1)
                         {
                             SetProperty("MoneyDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/money-stack.png");
@@ -688,16 +671,6 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.IronDisplay.Parent = this.GetGraphicalUiElementByName("Resources");
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            SetProperty("IronDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/ore.png");
-                        }
-                        setIronDisplayXSecondValue = true;
-                        IronDisplayXSecondValue = 10f;
-                        if (interpolationValue >= 1)
-                        {
                             SetProperty("MoneyDisplay.SpriteInstanceSourceFile", "../GlobalContent/Resources/ResourceIcons/money-stack.png");
                         }
                         setMoneyDisplayXSecondValue = true;
@@ -911,10 +884,6 @@
                 {
                     InfoBar.Y = InfoBarYFirstValue * (1 - interpolationValue) + InfoBarYSecondValue * interpolationValue;
                 }
-                if (setIronDisplayXFirstValue && setIronDisplayXSecondValue)
-                {
-                    IronDisplay.X = IronDisplayXFirstValue * (1 - interpolationValue) + IronDisplayXSecondValue * interpolationValue;
-                }
                 if (setMoneyDisplayXFirstValue && setMoneyDisplayXSecondValue)
                 {
                     MoneyDisplay.X = MoneyDisplayXFirstValue * (1 - interpolationValue) + MoneyDisplayXSecondValue * interpolationValue;
@@ -1103,12 +1072,11 @@
                 ResourceList.StopAnimations();
                 WorkforceDisplay.StopAnimations();
                 ElectricityDisplay.StopAnimations();
-                WoodDisplay.StopAnimations();
-                IronDisplay.StopAnimations();
-                SteelDisplay.StopAnimations();
                 WaterDisplay.StopAnimations();
                 CoalDisplay.StopAnimations();
                 MoneyDisplay.StopAnimations();
+                WoodDisplay.StopAnimations();
+                SteelDisplay.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -1676,78 +1644,6 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "WoodDisplay.Parent",
-                            Type = "string",
-                            Value = WoodDisplay.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "WoodDisplay.SpriteInstanceSourceFile",
-                            Type = "string",
-                            Value = WoodDisplay.SpriteInstanceSourceFile
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "WoodDisplay.X",
-                            Type = "float",
-                            Value = WoodDisplay.X
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "IronDisplay.Parent",
-                            Type = "string",
-                            Value = IronDisplay.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "IronDisplay.SpriteInstanceSourceFile",
-                            Type = "string",
-                            Value = IronDisplay.SpriteInstanceSourceFile
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "IronDisplay.X",
-                            Type = "float",
-                            Value = IronDisplay.X
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "SteelDisplay.Parent",
-                            Type = "string",
-                            Value = SteelDisplay.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "SteelDisplay.SpriteInstanceSourceFile",
-                            Type = "string",
-                            Value = SteelDisplay.SpriteInstanceSourceFile
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "SteelDisplay.X",
-                            Type = "float",
-                            Value = SteelDisplay.X
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "WaterDisplay.Parent",
                             Type = "string",
                             Value = WaterDisplay.Parent
@@ -1831,6 +1727,54 @@
                             Name = "MoneyDisplay.Y",
                             Type = "float",
                             Value = MoneyDisplay.Y
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WoodDisplay.Parent",
+                            Type = "string",
+                            Value = WoodDisplay.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WoodDisplay.SpriteInstanceSourceFile",
+                            Type = "string",
+                            Value = WoodDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WoodDisplay.X",
+                            Type = "float",
+                            Value = WoodDisplay.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SteelDisplay.Parent",
+                            Type = "string",
+                            Value = SteelDisplay.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SteelDisplay.SpriteInstanceSourceFile",
+                            Type = "string",
+                            Value = SteelDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SteelDisplay.X",
+                            Type = "float",
+                            Value = SteelDisplay.X
                         }
                         );
                         break;
@@ -2398,78 +2342,6 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "WoodDisplay.Parent",
-                            Type = "string",
-                            Value = WoodDisplay.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "WoodDisplay.SpriteInstanceSourceFile",
-                            Type = "string",
-                            Value = WoodDisplay.SpriteInstanceSourceFile
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "WoodDisplay.X",
-                            Type = "float",
-                            Value = WoodDisplay.X + 10f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "IronDisplay.Parent",
-                            Type = "string",
-                            Value = IronDisplay.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "IronDisplay.SpriteInstanceSourceFile",
-                            Type = "string",
-                            Value = IronDisplay.SpriteInstanceSourceFile
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "IronDisplay.X",
-                            Type = "float",
-                            Value = IronDisplay.X + 10f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "SteelDisplay.Parent",
-                            Type = "string",
-                            Value = SteelDisplay.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "SteelDisplay.SpriteInstanceSourceFile",
-                            Type = "string",
-                            Value = SteelDisplay.SpriteInstanceSourceFile
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "SteelDisplay.X",
-                            Type = "float",
-                            Value = SteelDisplay.X + 10f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "WaterDisplay.Parent",
                             Type = "string",
                             Value = WaterDisplay.Parent
@@ -2555,6 +2427,54 @@
                             Value = MoneyDisplay.Y + 16f
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WoodDisplay.Parent",
+                            Type = "string",
+                            Value = WoodDisplay.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WoodDisplay.SpriteInstanceSourceFile",
+                            Type = "string",
+                            Value = WoodDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "WoodDisplay.X",
+                            Type = "float",
+                            Value = WoodDisplay.X + 10f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SteelDisplay.Parent",
+                            Type = "string",
+                            Value = SteelDisplay.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SteelDisplay.SpriteInstanceSourceFile",
+                            Type = "string",
+                            Value = SteelDisplay.SpriteInstanceSourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "SteelDisplay.X",
+                            Type = "float",
+                            Value = SteelDisplay.X + 10f
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -2584,12 +2504,11 @@
             public JHP4SD.GumRuntimes.ContainerRuntime Resources { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime WorkforceDisplay { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime ElectricityDisplay { get; set; }
-            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime WoodDisplay { get; set; }
-            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime IronDisplay { get; set; }
-            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime SteelDisplay { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime WaterDisplay { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime CoalDisplay { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime MoneyDisplay { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime WoodDisplay { get; set; }
+            public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime SteelDisplay { get; set; }
             public GameScreenGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -2626,12 +2545,11 @@
                 Resources = this.GetGraphicalUiElementByName("Resources") as JHP4SD.GumRuntimes.ContainerRuntime;
                 WorkforceDisplay = this.GetGraphicalUiElementByName("WorkforceDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 ElectricityDisplay = this.GetGraphicalUiElementByName("ElectricityDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
-                WoodDisplay = this.GetGraphicalUiElementByName("WoodDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
-                IronDisplay = this.GetGraphicalUiElementByName("IronDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
-                SteelDisplay = this.GetGraphicalUiElementByName("SteelDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 WaterDisplay = this.GetGraphicalUiElementByName("WaterDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 CoalDisplay = this.GetGraphicalUiElementByName("CoalDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 MoneyDisplay = this.GetGraphicalUiElementByName("MoneyDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                WoodDisplay = this.GetGraphicalUiElementByName("WoodDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
+                SteelDisplay = this.GetGraphicalUiElementByName("SteelDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Screens.GameScreenGumForms(this);

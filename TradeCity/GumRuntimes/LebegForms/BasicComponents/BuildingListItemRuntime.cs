@@ -57,6 +57,8 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
 
         public void Update()
         {
+            if(_focus != null)
+                BuildingSprite.Texture = _focus.GetSprite().Texture;
             SetState();
             UpdateButtonVisual();
             UpdateResourceVisual();

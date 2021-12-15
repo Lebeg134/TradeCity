@@ -39,11 +39,6 @@ namespace JHP4SD.Lebeg134.Module.Session
             player.giveRes(new Money(1500));
             player.giveRes(new Workforce(500));
             player.giveRes(new Wood(500));
-            player.giveRes(new Iron(200));
-            player.giveRes(new Coal(1000));
-
-
-            player.giveStructure(new CoalMine());
         }
         static void GenerateStartingOffers(Session session)
         {

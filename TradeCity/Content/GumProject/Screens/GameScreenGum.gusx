@@ -221,25 +221,6 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>string</Type>
-      <Name>IronDisplay.Parent</Name>
-      <Value xsi:type="xsd:string">Resources</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <IsFile>true</IsFile>
-      <Type>string</Type>
-      <Name>IronDisplay.SpriteInstanceSourceFile</Name>
-      <Value xsi:type="xsd:string">../GlobalContent/Resources/ResourceIcons/ore.png</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>IronDisplay.X</Name>
-      <Value xsi:type="xsd:float">10</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>bool</Type>
       <Name>IsXamarinFormsControl</Name>
       <Value xsi:type="xsd:boolean">false</Value>
@@ -493,25 +474,6 @@
     </Variable>
     <Variable>
       <Type>string</Type>
-      <Name>SteelDisplay.Parent</Name>
-      <Value xsi:type="xsd:string">Resources</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <IsFile>true</IsFile>
-      <Type>string</Type>
-      <Name>SteelDisplay.SpriteInstanceSourceFile</Name>
-      <Value xsi:type="xsd:string">../GlobalContent/Resources/ResourceIcons/i-beam.png</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>SteelDisplay.X</Name>
-      <Value xsi:type="xsd:float">10</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
       <Name>WaterDisplay.Parent</Name>
       <Value xsi:type="xsd:string">Resources</Value>
       <SetsValue>true</SetsValue>
@@ -526,25 +488,6 @@
     <Variable>
       <Type>float</Type>
       <Name>WaterDisplay.X</Name>
-      <Value xsi:type="xsd:float">10</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>WoodDisplay.Parent</Name>
-      <Value xsi:type="xsd:string">Resources</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <IsFile>true</IsFile>
-      <Type>string</Type>
-      <Name>WoodDisplay.SpriteInstanceSourceFile</Name>
-      <Value xsi:type="xsd:string">../GlobalContent/Resources/ResourceIcons/log.png</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>WoodDisplay.X</Name>
       <Value xsi:type="xsd:float">10</Value>
       <SetsValue>true</SetsValue>
     </Variable>
@@ -570,6 +513,44 @@
       <Type>float</Type>
       <Name>WorkforceDisplay.X</Name>
       <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>WoodDisplay.X</Name>
+      <Value xsi:type="xsd:float">10</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>WoodDisplay.SpriteInstanceSourceFile</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/ResourceIcons/log.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>WoodDisplay.Parent</Name>
+      <Value xsi:type="xsd:string">Resources</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>SteelDisplay.X</Name>
+      <Value xsi:type="xsd:float">10</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>SteelDisplay.SpriteInstanceSourceFile</Name>
+      <Value xsi:type="xsd:string">../GlobalContent/Resources/ResourceIcons/i-beam.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>SteelDisplay.Parent</Name>
+      <Value xsi:type="xsd:string">Resources</Value>
       <SetsValue>true</SetsValue>
     </Variable>
   </State>
@@ -624,21 +605,6 @@
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>WoodDisplay</Name>
-    <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
-    <Name>IronDisplay</Name>
-    <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
-    <Name>SteelDisplay</Name>
-    <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
     <Name>WaterDisplay</Name>
     <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
     <DefinedByBase>false</DefinedByBase>
@@ -650,6 +616,16 @@
   </Instance>
   <Instance>
     <Name>MoneyDisplay</Name>
+    <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>WoodDisplay</Name>
+    <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>SteelDisplay</Name>
     <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>

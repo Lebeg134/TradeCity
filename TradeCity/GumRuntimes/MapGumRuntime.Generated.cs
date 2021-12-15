@@ -87,7 +87,7 @@
                             LandsShopTextInstance.FontSize = 48;
                             LandsShopTextInstance.Height = 0f;
                             LandsShopTextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
-                            LandsShopTextInstance.Text = "Lands Shop";
+                            LandsShopTextInstance.Text = "Available Lands";
                             LandsShopTextInstance.Width = 0f;
                             LandsShopTextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
                             LandsShopTextInstance.X = 20f;
@@ -316,7 +316,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            this.LandsShopTextInstance.Text = "Lands Shop";
+                            this.LandsShopTextInstance.Text = "Available Lands";
                         }
                         setLandsShopTextInstanceWidthFirstValue = true;
                         LandsShopTextInstanceWidthFirstValue = 0f;
@@ -541,7 +541,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.LandsShopTextInstance.Text = "Lands Shop";
+                            this.LandsShopTextInstance.Text = "Available Lands";
                         }
                         setLandsShopTextInstanceWidthSecondValue = true;
                         LandsShopTextInstanceWidthSecondValue = 0f;

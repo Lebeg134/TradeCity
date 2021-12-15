@@ -50,6 +50,7 @@
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/ComplexComponents/ScreenSelector", typeof(JHP4SD.GumRuntimes.LebegForms.ComplexComponents.ScreenSelectorRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/ComplexComponents/TabMenu", typeof(JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TabMenuRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/ComplexComponents/Topic", typeof(JHP4SD.GumRuntimes.LebegForms.ComplexComponents.TopicRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/Resources/BuildingImagesSmall", typeof(JHP4SD.GumRuntimes.LebegForms.Resources.BuildingImagesSmallRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/Resources/LandImages", typeof(JHP4SD.GumRuntimes.LebegForms.Resources.LandImagesRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/Resources/ResourceIcons", typeof(JHP4SD.GumRuntimes.LebegForms.Resources.ResourceIconsRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("CityGum", typeof(JHP4SD.GumRuntimes.CityGumRuntime));

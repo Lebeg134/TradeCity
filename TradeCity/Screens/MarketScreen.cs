@@ -22,13 +22,14 @@ using JHP4SD.GumRuntimes.DefaultForms;
 
 namespace JHP4SD.Screens
 {
-    public partial class MarketScreen: IUpdateable
+    public partial class MarketScreen : IUpdateable
     {
         static List<SPListing> listings = new List<SPListing>();
         void CustomInitialize()
         {
             RefreshListingsList();
             InitCombobox();
+            Update();
         }
 
         void CustomActivity(bool firstTimeCalled)
@@ -53,21 +54,21 @@ namespace JHP4SD.Screens
         {
             foreach (Resource resource in Player.CurrentPlayer.getAllRes())
             {
-                
+
                 if (resource is ISellable)
                 {
                     if (resource is Money) continue;
                     ListBoxItemRuntime visualItem = new ListBoxItemRuntime();
-                    visualItem.TextInstance.Text = resource.getName();
                     var listBoxItem = visualItem.FormsControl;
                     listBoxItem.UpdateToObject(resource);
+                    visualItem.TextInstance.Text = resource.getName();
                     Forms.ComboBoxInstance.Items.Add(listBoxItem);
                 }
             }
         }
         void RefreshListingsList()
         {
-            foreach(SPListing listing in listings)
+            foreach (SPListing listing in listings)
             {
                 var visualItem = new ListingListBoxItemRuntime();
                 visualItem.Focus = listing;
@@ -84,22 +85,36 @@ namespace JHP4SD.Screens
         }
         bool AreSellFieldsValid()
         {
-            bool valid = true;
-            valid = valid && Forms.ComboBoxInstance.SelectedObject != null;
-
-
-            return valid;
+            return Forms.ComboBoxInstance.SelectedObject != null
+                && int.TryParse(Forms.ToSellAmountTextBoxInstance.Text, out int i);
         }
         bool AreListingFieldsValid()
         {
-            bool valid = true;
-
-
-            return valid && AreSellFieldsValid();
+            return int.TryParse(Forms.AutoSellAmountTextBoxInstance.Text, out int i) && AreSellFieldsValid();
         }
         public void Update()
         {
-            
+            UpdateButtons();
+        }
+        void UpdateButtons()
+        {
+            int amount = 0;
+            Resource resource = (Resource)Forms.ComboBoxInstance.SelectedObject;
+            if (int.TryParse(Forms.ToSellAmountTextBoxInstance.Text, out amount)&& amount > 0 &&resource!=null)
+            {
+                Forms.SellAllButtonInstance.IsEnabled = true;
+                Forms.SellAllButtonInstance.IsEnabled = true;
+                if(int.TryParse(Forms.AutoSellAmountTextBoxInstance.Text, out int i))
+                    Forms.AutoSellButtonInstance.IsEnabled = true;
+                else
+                    Forms.AutoSellButtonInstance.IsEnabled = false;
+            }
+            else
+            {
+                Forms.SellAllButtonInstance.IsEnabled = false;
+                Forms.SellAllButtonInstance.IsEnabled = false;
+                Forms.AutoSellButtonInstance.IsEnabled = false;
+            }
         }
     }
 }

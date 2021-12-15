@@ -115,7 +115,7 @@
                             TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                             ComboBoxInstance.Width = 100f;
                             ComboBoxInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                            ToSellAmountTextBoxInstance.Text = "Amount";
+                            ToSellAmountTextBoxInstance.Text = "10";
                             ToSellAmountTextBoxInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             ToSellAmountTextBoxInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             AmountContainerInstance.Height = 0f;
@@ -184,7 +184,7 @@
                             AmountText1.Red = 0;
                             AmountText1.Text = "Amount:";
                             AmountText1.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                            AutoSellAmountTextBoxInstance.Text = "Amount";
+                            AutoSellAmountTextBoxInstance.Text = "1000";
                             AutoSellAmountTextBoxInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             AutoSellAmountTextBoxInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             AutoSellButtonInstance.Text = "Create Listing";
@@ -579,7 +579,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            this.AutoSellAmountTextBoxInstance.Text = "Amount";
+                            this.AutoSellAmountTextBoxInstance.Text = "1000";
                         }
                         if (interpolationValue < 1)
                         {
@@ -969,7 +969,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            this.ToSellAmountTextBoxInstance.Text = "Amount";
+                            this.ToSellAmountTextBoxInstance.Text = "10";
                         }
                         if (interpolationValue < 1)
                         {
@@ -1110,7 +1110,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.AutoSellAmountTextBoxInstance.Text = "Amount";
+                            this.AutoSellAmountTextBoxInstance.Text = "1000";
                         }
                         if (interpolationValue >= 1)
                         {
@@ -1500,7 +1500,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.ToSellAmountTextBoxInstance.Text = "Amount";
+                            this.ToSellAmountTextBoxInstance.Text = "10";
                         }
                         if (interpolationValue >= 1)
                         {

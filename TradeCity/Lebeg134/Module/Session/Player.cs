@@ -119,6 +119,10 @@ namespace JHP4SD.Lebeg134.Module.Session
         {
             return ownedResources[resource.GetType()].amount();
         }
+        public Resource getResRef(Resource resource)
+        {
+            return ownedResources[resource.GetType()];
+        }
         public void giveRes(Resource resource)
         {
             ownedResources[resource.GetType()] += resource;

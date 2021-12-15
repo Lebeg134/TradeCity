@@ -44,7 +44,7 @@ namespace JHP4SD.Lebeg134.Module.TimeManager
         }
         void tick(object source, ElapsedEventArgs e)
         {
-            for (int i = 0; i<tickables.Count; i++)
+            for (int i = 0; i<tickables.Count; i++) // foreach is immuteable! ->crash
             {
                 tickables[i].tick();
                 if (!timer.Enabled) // Had a lot of crashes because this isn't thread safe

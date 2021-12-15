@@ -1,3 +1,5 @@
+using JHP4SD.Lebeg134.Module.Graphics;
+using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Session;
 using JHP4SD.Lebeg134.Module.TimeManager;
 using JHP4SD.Lebeg134.Units.Resources.Common;
@@ -10,37 +12,50 @@ using System.Linq;
 
 namespace JHP4SD.GumRuntimes
 {
-    public partial class GameScreenGumRuntime : ITickable
+    public partial class GameScreenGumRuntime : ITickable, IUpdateable
     {
         partial void CustomInitialize () 
         {
+            Resource.spriteLibrary = new LebegForms.Resources.ResourceIconsRuntime();
             register();
-            updateResourceDisplays();
-        }
-        void updateResourceDisplays()
-        {
             Player player = Player.CurrentPlayer;
-            MoneyDisplay.Amount = player.getRes(new Money(0));
-            WorkforceDisplay.Amount = player.getRes(new Workforce(0));
-            ElectricityDisplay.Amount = player.getRes(new Electricity(0));
-            WoodDisplay.Amount = player.getRes(new Wood(0));
-            IronDisplay.Amount = player.getRes(new Iron(0));
-            SteelDisplay.Amount = player.getRes(new Steel(0));
-            WaterDisplay.Amount = player.getRes(new Water(0));
-            CoalDisplay.Amount = player.getRes(new Coal(0));
+            MoneyDisplay.Focus = player.getResRef(new Money(0));
+            WorkforceDisplay.Focus = player.getResRef(new Workforce(0));
+            ElectricityDisplay.Focus = player.getResRef(new Electricity(0));
+            WoodDisplay.Focus = player.getResRef(new Wood(0));
+            IronDisplay.Focus = player.getResRef(new Iron(0));
+            SteelDisplay.Focus = player.getResRef(new Steel(0));
+            WaterDisplay.Focus = player.getResRef(new Water(0));
+            CoalDisplay.Focus = player.getResRef(new Coal(0));
+            Resource.updater.Register(this);
+            Update();
         }
+
         public void tick()
         {
-            updateResourceDisplays();
+            Update();
         }
 
         public void register()
         {
             Clock.Instance.Register(this);
         }
+
+        public void Update()
+        {
+            MoneyDisplay.Update();
+            WorkforceDisplay.Update();
+            ElectricityDisplay.Update();
+            WoodDisplay.Update();
+            IronDisplay.Update();
+            SteelDisplay.Update();
+            WaterDisplay.Update();
+            CoalDisplay.Update();
+        }
         public new void Destroy() //Does this even get called? (nope)
         {
             Clock.Instance.unRegister(this);
+            Resource.updater.UnRegister(this);
         }
-       }
+    }
 }

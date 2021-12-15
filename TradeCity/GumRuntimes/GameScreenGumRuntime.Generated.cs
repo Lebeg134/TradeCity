@@ -74,6 +74,7 @@
                             BackButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             DialogBoxInstance.Height = -10f;
                             DialogBoxInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            DialogBoxInstance.TextInstanceText = "Hint: You can buy lands in the map, build your factories and buildings in the City tab and sell resources on the Market!";
                             DialogBoxInstance.Width = 75f;
                             DialogBoxInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             DialogBoxInstance.X = 5f;
@@ -329,6 +330,10 @@
                         if (interpolationValue < 1)
                         {
                             this.DialogBoxInstance.Parent = this.GetGraphicalUiElementByName("InfoBar");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.DialogBoxInstance.TextInstanceText = "Hint: You can buy lands in the map, build your factories and buildings in the City tab and sell resources on the Market!";
                         }
                         setDialogBoxInstanceWidthFirstValue = true;
                         DialogBoxInstanceWidthFirstValue = 75f;
@@ -604,6 +609,10 @@
                         if (interpolationValue >= 1)
                         {
                             this.DialogBoxInstance.Parent = this.GetGraphicalUiElementByName("InfoBar");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.DialogBoxInstance.TextInstanceText = "Hint: You can buy lands in the map, build your factories and buildings in the City tab and sell resources on the Market!";
                         }
                         setDialogBoxInstanceWidthSecondValue = true;
                         DialogBoxInstanceWidthSecondValue = 75f;
@@ -1451,6 +1460,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "DialogBoxInstance.TextInstanceText",
+                            Type = "string",
+                            Value = DialogBoxInstance.TextInstanceText
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "DialogBoxInstance.Width",
                             Type = "float",
                             Value = DialogBoxInstance.Width
@@ -2160,6 +2177,14 @@
                             Name = "DialogBoxInstance.Parent",
                             Type = "string",
                             Value = DialogBoxInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DialogBoxInstance.TextInstanceText",
+                            Type = "string",
+                            Value = DialogBoxInstance.TextInstanceText
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

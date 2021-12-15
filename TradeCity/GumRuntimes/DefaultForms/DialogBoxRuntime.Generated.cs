@@ -1317,6 +1317,22 @@
             public JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime ColoredFrameInstance { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime TextInstance { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime ContinueIndicatorInstance { get; set; }
+            public string TextInstanceText
+            {
+                get
+                {
+                    return TextInstance.Text;
+                }
+                set
+                {
+                    if (TextInstance.Text != value)
+                    {
+                        TextInstance.Text = value;
+                        TextInstanceTextChanged?.Invoke(this, null);
+                    }
+                }
+            }
+            public event System.EventHandler TextInstanceTextChanged;
             public DialogBoxRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             	: base(false, tryCreateFormsObject)
             {

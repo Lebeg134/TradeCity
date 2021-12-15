@@ -65,6 +65,12 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>string</Type>
+      <Name>DialogBoxInstance.TextInstanceText</Name>
+      <Value xsi:type="xsd:string">Hint: You can buy lands in the map, build your factories and buildings in the City tab and sell resources on the Market!</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>DialogBoxInstance.Width</Name>
       <Value xsi:type="xsd:float">75</Value>

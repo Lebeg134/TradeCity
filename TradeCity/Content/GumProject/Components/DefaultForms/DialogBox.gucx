@@ -175,6 +175,7 @@
       <Type>string</Type>
       <Name>TextInstance.Text</Name>
       <Value xsi:type="xsd:string">Hello, this is a dialog box. Use this to display dialog between characters in your game. It can line wrap!</Value>
+      <ExposedAsName>TextInstanceText</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

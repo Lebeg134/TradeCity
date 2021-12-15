@@ -76,6 +76,8 @@
     </Compile>
     <Compile Include="Factories\CameraMidpointFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
+    <Compile Include="Forms\Components\LebegForms\BasicComponents\LandListItemForms.cs" />
+    <Compile Include="Forms\Components\LebegForms\BasicComponents\LandListItemForms.Generated.cs" />
     <Compile Include="Forms\Components\LebegForms\BasicComponents\ResourceDisplayForms.cs" />
     <Compile Include="Forms\Components\LebegForms\BasicComponents\ResourceDisplayForms.Generated.cs">
       <DependentUpon>ResourceDisplayForms.cs</DependentUpon>
@@ -285,10 +287,14 @@
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\ExitButtonRuntime.Generated.cs">
       <DependentUpon>ExitButtonRuntime.cs</DependentUpon>
     </Compile>
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\LandListItemRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\LandListItemRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\MainMenuButtonRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\MainMenuButtonRuntime.Generated.cs">
       <DependentUpon>MainMenuButtonRuntime.cs</DependentUpon>
     </Compile>
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\OwnedLandListItemRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\OwnedLandListItemRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\PlayButtonRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\PlayButtonRuntime.Generated.cs">
       <DependentUpon>PlayButtonRuntime.cs</DependentUpon>
@@ -666,6 +672,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>marketplaceholder</Name>
     </None>
+    <None Include="content\globalcontent\screen\stockmarket.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>stockmarket</Name>
+    </None>
     <None Include="content\gumproject\components\defaultforms\button.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>button</Name>
@@ -774,9 +784,17 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>exitbutton</Name>
     </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\landlistitem.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>landlistitem</Name>
+    </None>
     <None Include="content\gumproject\components\lebegforms\basiccomponents\mainmenubutton.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>mainmenubutton</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\ownedlandlistitem.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ownedlandlistitem</Name>
     </None>
     <None Include="content\gumproject\components\lebegforms\basiccomponents\playbutton.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

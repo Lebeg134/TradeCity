@@ -1547,6 +1547,188 @@
         "ElementType": "Components",
         "EventType": 6,
         "TimestampUtc": "2021-12-15T09:28:28.2132083Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " MarketGum.Text PaceholderText in  MarketGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T09:36:31.7910275Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " MarketGum.Text TextInstance in  MarketGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T09:36:33.1835322Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/LandListItem",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-12-15T09:45:26.3634456Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/LandListItem.ColoredFrameInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T09:45:33.1497056Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/LandListItem.SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T09:46:22.567324Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/LandListItem.Background",
+        "OldName": "LebegForms/BasicComponents/LandListItem.ColoredFrameInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T09:46:28.7682514Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/LandListItem.TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T09:47:43.4895316Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/LandListItem.ResourceDisplayInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T09:48:40.9732629Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/LandListItem.ButtonInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T09:49:16.2848357Z"
+      },
+      {
+        "NewName": "DefaultForms/ListBoxItem1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-12-15T09:53:06.5001188Z"
+      },
+      {
+        "NewName": "DefaultForms/ListBoxItem2",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-12-15T09:53:09.8332116Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DefaultForms/ListBoxItem2",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2021-12-15T09:53:15.1267212Z"
+      },
+      {
+        "NewName": "DefaultForms/ListBoxItem2",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-12-15T09:53:18.4604788Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DefaultForms/ListBoxItem2",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2021-12-15T09:53:22.1463607Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListBoxItem1",
+        "OldName": "DefaultForms/ListBoxItem1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2021-12-15T09:53:24.6869562Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/OwnedLandListItem",
+        "OldName": "LebegForms/BasicComponents/ListBoxItem1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2021-12-15T09:53:40.3706132Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/OwnedLandListItem.SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T09:54:38.1274705Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/OwnedLandListItem.Text TextInstance in LebegForms/BasicComponents/OwnedLandListItem",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T09:55:09.5458447Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/OwnedLandListItem.TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T09:56:18.4215653Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/OwnedLandListItem.ResourceDisplayInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T09:57:59.6627987Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/OwnedLandListItem.TextInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T09:59:09.5584729Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/OwnedLandListItem.ProduceTextInstance",
+        "OldName": "LebegForms/BasicComponents/OwnedLandListItem.TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T09:59:18.7044049Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/OwnedLandListItem.ProduceTextInstance",
+        "OldName": "LebegForms/BasicComponents/OwnedLandListItem.TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T09:59:18.7064001Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/OwnedLandListItem.ProduceTextInstance",
+        "OldName": "LebegForms/BasicComponents/OwnedLandListItem.TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T09:59:18.7073969Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/OwnedLandListItem.ProduceTextInstance",
+        "OldName": "LebegForms/BasicComponents/OwnedLandListItem.TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T09:59:18.7123847Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/OwnedLandListItem.ProduceTextInstance",
+        "OldName": "LebegForms/BasicComponents/OwnedLandListItem.TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T09:59:18.7143775Z"
       }
     ],
     "torok": []

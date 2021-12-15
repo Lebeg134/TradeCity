@@ -10,6 +10,12 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>string</Type>
+      <Name>BuyableLands.Contained Type</Name>
+      <Value xsi:type="xsd:string">LebegForms/BasicComponents/LandListItem</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>BuyableLands.Height</Name>
       <Value xsi:type="xsd:float">-272</Value>

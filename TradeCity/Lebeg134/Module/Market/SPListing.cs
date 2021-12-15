@@ -34,11 +34,23 @@ namespace JHP4SD.Lebeg134.Module.Market
         }
         public void tick()
         {
+            Complete();
+        }
+        public void Complete()
+        {
             Player player = Player.CurrentPlayer;
             if (player.getRes(Sell) > above && player.hasResource(Sell))
             {
                 player.subRes(Sell);
                 player.giveRes(new Money(getValue()));
+            }
+        }
+        public void completeAll()
+        {
+            Player player = Player.CurrentPlayer;
+            while (player.getRes(Sell) > above && player.hasResource(Sell))
+            {
+                Complete();
             }
         }
         public int getValue()

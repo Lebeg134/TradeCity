@@ -30,6 +30,43 @@ namespace JHP4SD.Screens
             RefreshListingsList();
             InitCombobox();
             Update();
+            Forms.SellOneButtonInstance.Click += SellOneButtonInstance_Click;
+            Forms.SellAllButtonInstance.Click += SellAllButtonInstance_Click;
+            Forms.AutoSellButtonInstance.Click += AutoSellButtonInstance_Click;
+            Forms.ComboBoxInstance.SelectionChanged += ComboBoxInstance_SelectionChanged;
+            Forms.ToSellAmountTextBoxInstance.TextChanged += TextChanged;
+            Forms.AutoSellAmountTextBoxInstance.TextChanged += TextChanged;
+        }
+
+        private void TextChanged(object sender, EventArgs e)
+        {
+            UpdateButtons();
+        }
+
+        private void ComboBoxInstance_SelectionChanged(object arg1, FlatRedBall.Forms.Controls.SelectionChangedEventArgs arg2)
+        {
+            UpdateButtons();
+        }
+
+        private void SellOneButtonInstance_Click(object sender, EventArgs e)
+        {
+            GetListing(true)?.Complete();
+            Resource.updater.Update();
+        }
+
+        private void SellAllButtonInstance_Click(object sender, EventArgs e)
+        {
+            GetListing(true)?.completeAll();
+            Resource.updater.Update();
+        }
+
+        private void AutoSellButtonInstance_Click(object sender, EventArgs e)
+        {
+            if (AreListingFieldsValid())
+            {
+                listings.Add(GetListing());
+                RefreshListingsList();
+            }
         }
 
         void CustomActivity(bool firstTimeCalled)
@@ -100,21 +137,32 @@ namespace JHP4SD.Screens
         {
             int amount = 0;
             Resource resource = (Resource)Forms.ComboBoxInstance.SelectedObject;
-            if (int.TryParse(Forms.ToSellAmountTextBoxInstance.Text, out amount)&& amount > 0 &&resource!=null)
+            if (int.TryParse(Forms.ToSellAmountTextBoxInstance.Text, out amount) && amount > 0 && resource != null)
             {
+                Forms.SellOneButtonInstance.IsEnabled = true;
                 Forms.SellAllButtonInstance.IsEnabled = true;
-                Forms.SellAllButtonInstance.IsEnabled = true;
-                if(int.TryParse(Forms.AutoSellAmountTextBoxInstance.Text, out int i))
+                if (int.TryParse(Forms.AutoSellAmountTextBoxInstance.Text, out int i))
                     Forms.AutoSellButtonInstance.IsEnabled = true;
                 else
                     Forms.AutoSellButtonInstance.IsEnabled = false;
             }
             else
             {
-                Forms.SellAllButtonInstance.IsEnabled = false;
+                Forms.SellOneButtonInstance.IsEnabled = false;
                 Forms.SellAllButtonInstance.IsEnabled = false;
                 Forms.AutoSellButtonInstance.IsEnabled = false;
             }
+        }
+        SPListing GetListing(bool all = false)
+        {
+            if (!AreSellFieldsValid()) return null;
+            int amount = 1;
+            int.TryParse(Forms.ToSellAmountTextBoxInstance.Text, out amount);
+            Resource resource = ((Resource)Forms.ComboBoxInstance.SelectedObject).getNewResource(amount);
+            if (!AreListingFieldsValid() || all) return new SPListing(resource, 0);
+            int above = 1000;
+            int.TryParse(Forms.AutoSellAmountTextBoxInstance.Text, out above);
+            return new SPListing(resource, above);
         }
     }
 }

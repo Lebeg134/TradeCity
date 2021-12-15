@@ -25,6 +25,11 @@ namespace Lebeg134.Resources.EnergySector
         {
             return spriteLibrary.CoalSprite;
         }
+
+        public override double getValue()
+        {
+            return 1.5;
+        }
     }
 
 }

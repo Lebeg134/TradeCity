@@ -26,6 +26,9 @@ namespace JHP4SD.Lebeg134.Units.Resources.Common
             return new Money(amount);
         }
 
-        
+        public override double getValue()
+        {
+            return 1;
+        }
     }
 }

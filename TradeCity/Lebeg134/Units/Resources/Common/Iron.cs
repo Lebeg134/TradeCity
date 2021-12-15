@@ -26,6 +26,11 @@ namespace Lebeg134.Resources.Common
         {
             return new Iron(amount);
         }
+
+        public override double getValue()
+        {
+            return 5;
+        }
     }
 
 }

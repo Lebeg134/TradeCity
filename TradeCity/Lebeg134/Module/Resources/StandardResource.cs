@@ -10,10 +10,7 @@ namespace JHP4SD.Lebeg134.Module.Resources
         public StandardResource(int amount):base(amount)
         {
         }
-        public double getValue()
-        {
-            return 10; // TODO MAKE SOMETHING!!
-        }
+        public abstract double getValue();
         public void reportListing(Listing listing)
         {
             throw new System.NotImplementedException();

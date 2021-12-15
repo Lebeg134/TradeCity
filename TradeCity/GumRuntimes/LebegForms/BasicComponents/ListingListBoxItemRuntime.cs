@@ -15,13 +15,15 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
             set
             {
                 _focus = value;
+                Init();
             }
         }
         private SPListing _focus;
 
         partial void CustomInitialize()
         {
-            Init();
+            if (_focus != null)
+                Init();
         }
         public void Init()
         {

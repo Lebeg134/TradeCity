@@ -373,27 +373,27 @@
       <Variable>
         <Type>int</Type>
         <Name>NineSliceInstance.Blue</Name>
-        <Value xsi:type="xsd:int">255</Value>
+        <Value xsi:type="xsd:int">170</Value>
         <Category>Rendering</Category>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>ColorCategoryState</Type>
         <Name>NineSliceInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Green</Value>
+        <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>int</Type>
         <Name>NineSliceInstance.Green</Name>
-        <Value xsi:type="xsd:int">255</Value>
+        <Value xsi:type="xsd:int">205</Value>
         <Category>Rendering</Category>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>int</Type>
         <Name>NineSliceInstance.Red</Name>
-        <Value xsi:type="xsd:int">255</Value>
+        <Value xsi:type="xsd:int">102</Value>
         <Category>Rendering</Category>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -409,25 +409,25 @@
       <Variable>
         <Type>int</Type>
         <Name>NineSliceInstance.Blue</Name>
-        <Value xsi:type="xsd:int">200</Value>
+        <Value xsi:type="xsd:int">170</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>ColorCategoryState</Type>
         <Name>NineSliceInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Green</Value>
+        <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>int</Type>
         <Name>NineSliceInstance.Green</Name>
-        <Value xsi:type="xsd:int">200</Value>
+        <Value xsi:type="xsd:int">205</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>int</Type>
         <Name>NineSliceInstance.Red</Name>
-        <Value xsi:type="xsd:int">200</Value>
+        <Value xsi:type="xsd:int">102</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>

@@ -26,6 +26,7 @@ namespace JHP4SD.Screens
             Forms.SettingsButton.Click += SettingsButton_Click;
         }
 
+
         private void SettingsButton_Click(object sender, EventArgs e)
         {
             MoveToScreen(typeof(SettingsScreen));

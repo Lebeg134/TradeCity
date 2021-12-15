@@ -74,7 +74,7 @@
                             BackButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             DialogBoxInstance.Height = -10f;
                             DialogBoxInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
-                            DialogBoxInstance.Width = 50f;
+                            DialogBoxInstance.Width = 75f;
                             DialogBoxInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             DialogBoxInstance.X = 5f;
                             DialogBoxInstance.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
@@ -113,13 +113,6 @@
                             MoneyDisplay.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             MoneyDisplay.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             MoneyDisplay.Y = 16f;
-                            InfiniteMoneyButton.FlipHorizontal = true;
-                            InfiniteMoneyButton.Text = "Gimmie Money";
-                            InfiniteMoneyButton.X = 1085f;
-                            InfiniteMoneyButton.Y = 94f;
-                            GibMunney.Text = "Give Munney";
-                            GibMunney.X = 1086f;
-                            GibMunney.Y = 158f;
                             break;
                     }
                 }
@@ -158,22 +151,6 @@
                 bool setElectricityDisplayXSecondValue = false;
                 float ElectricityDisplayXFirstValue= 0;
                 float ElectricityDisplayXSecondValue= 0;
-                bool setGibMunneyXFirstValue = false;
-                bool setGibMunneyXSecondValue = false;
-                float GibMunneyXFirstValue= 0;
-                float GibMunneyXSecondValue= 0;
-                bool setGibMunneyYFirstValue = false;
-                bool setGibMunneyYSecondValue = false;
-                float GibMunneyYFirstValue= 0;
-                float GibMunneyYSecondValue= 0;
-                bool setInfiniteMoneyButtonXFirstValue = false;
-                bool setInfiniteMoneyButtonXSecondValue = false;
-                float InfiniteMoneyButtonXFirstValue= 0;
-                float InfiniteMoneyButtonXSecondValue= 0;
-                bool setInfiniteMoneyButtonYFirstValue = false;
-                bool setInfiniteMoneyButtonYSecondValue = false;
-                float InfiniteMoneyButtonYFirstValue= 0;
-                float InfiniteMoneyButtonYSecondValue= 0;
                 bool setInfoBarBlueFirstValue = false;
                 bool setInfoBarBlueSecondValue = false;
                 int InfoBarBlueFirstValue= 0;
@@ -354,7 +331,7 @@
                             this.DialogBoxInstance.Parent = this.GetGraphicalUiElementByName("InfoBar");
                         }
                         setDialogBoxInstanceWidthFirstValue = true;
-                        DialogBoxInstanceWidthFirstValue = 50f;
+                        DialogBoxInstanceWidthFirstValue = 75f;
                         if (interpolationValue < 1)
                         {
                             this.DialogBoxInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
@@ -389,26 +366,6 @@
                         }
                         setElectricityDisplayXFirstValue = true;
                         ElectricityDisplayXFirstValue = 10f;
-                        if (interpolationValue < 1)
-                        {
-                            this.GibMunney.Text = "Give Munney";
-                        }
-                        setGibMunneyXFirstValue = true;
-                        GibMunneyXFirstValue = 1086f;
-                        setGibMunneyYFirstValue = true;
-                        GibMunneyYFirstValue = 158f;
-                        if (interpolationValue < 1)
-                        {
-                            this.InfiniteMoneyButton.FlipHorizontal = true;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.InfiniteMoneyButton.Text = "Gimmie Money";
-                        }
-                        setInfiniteMoneyButtonXFirstValue = true;
-                        InfiniteMoneyButtonXFirstValue = 1085f;
-                        setInfiniteMoneyButtonYFirstValue = true;
-                        InfiniteMoneyButtonYFirstValue = 94f;
                         setInfoBarBlueFirstValue = true;
                         InfoBarBlueFirstValue = 255;
                         setInfoBarCurrentColorCategoryStateFirstValue = true;
@@ -649,7 +606,7 @@
                             this.DialogBoxInstance.Parent = this.GetGraphicalUiElementByName("InfoBar");
                         }
                         setDialogBoxInstanceWidthSecondValue = true;
-                        DialogBoxInstanceWidthSecondValue = 50f;
+                        DialogBoxInstanceWidthSecondValue = 75f;
                         if (interpolationValue >= 1)
                         {
                             this.DialogBoxInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
@@ -684,26 +641,6 @@
                         }
                         setElectricityDisplayXSecondValue = true;
                         ElectricityDisplayXSecondValue = 10f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.GibMunney.Text = "Give Munney";
-                        }
-                        setGibMunneyXSecondValue = true;
-                        GibMunneyXSecondValue = 1086f;
-                        setGibMunneyYSecondValue = true;
-                        GibMunneyYSecondValue = 158f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.InfiniteMoneyButton.FlipHorizontal = true;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.InfiniteMoneyButton.Text = "Gimmie Money";
-                        }
-                        setInfiniteMoneyButtonXSecondValue = true;
-                        InfiniteMoneyButtonXSecondValue = 1085f;
-                        setInfiniteMoneyButtonYSecondValue = true;
-                        InfiniteMoneyButtonYSecondValue = 94f;
                         setInfoBarBlueSecondValue = true;
                         InfoBarBlueSecondValue = 255;
                         setInfoBarCurrentColorCategoryStateSecondValue = true;
@@ -932,22 +869,6 @@
                 if (setElectricityDisplayXFirstValue && setElectricityDisplayXSecondValue)
                 {
                     ElectricityDisplay.X = ElectricityDisplayXFirstValue * (1 - interpolationValue) + ElectricityDisplayXSecondValue * interpolationValue;
-                }
-                if (setGibMunneyXFirstValue && setGibMunneyXSecondValue)
-                {
-                    GibMunney.X = GibMunneyXFirstValue * (1 - interpolationValue) + GibMunneyXSecondValue * interpolationValue;
-                }
-                if (setGibMunneyYFirstValue && setGibMunneyYSecondValue)
-                {
-                    GibMunney.Y = GibMunneyYFirstValue * (1 - interpolationValue) + GibMunneyYSecondValue * interpolationValue;
-                }
-                if (setInfiniteMoneyButtonXFirstValue && setInfiniteMoneyButtonXSecondValue)
-                {
-                    InfiniteMoneyButton.X = InfiniteMoneyButtonXFirstValue * (1 - interpolationValue) + InfiniteMoneyButtonXSecondValue * interpolationValue;
-                }
-                if (setInfiniteMoneyButtonYFirstValue && setInfiniteMoneyButtonYSecondValue)
-                {
-                    InfiniteMoneyButton.Y = InfiniteMoneyButtonYFirstValue * (1 - interpolationValue) + InfiniteMoneyButtonYSecondValue * interpolationValue;
                 }
                 if (setInfoBarBlueFirstValue && setInfoBarBlueSecondValue)
                 {
@@ -1179,8 +1100,6 @@
                 WaterDisplay.StopAnimations();
                 CoalDisplay.StopAnimations();
                 MoneyDisplay.StopAnimations();
-                InfiniteMoneyButton.StopAnimations();
-                GibMunney.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -1897,62 +1816,6 @@
                             Value = MoneyDisplay.Y
                         }
                         );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "InfiniteMoneyButton.FlipHorizontal",
-                            Type = "bool",
-                            Value = InfiniteMoneyButton.FlipHorizontal
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "InfiniteMoneyButton.Text",
-                            Type = "string",
-                            Value = InfiniteMoneyButton.Text
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "InfiniteMoneyButton.X",
-                            Type = "float",
-                            Value = InfiniteMoneyButton.X
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "InfiniteMoneyButton.Y",
-                            Type = "float",
-                            Value = InfiniteMoneyButton.Y
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "GibMunney.Text",
-                            Type = "string",
-                            Value = GibMunney.Text
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "GibMunney.X",
-                            Type = "float",
-                            Value = GibMunney.X
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "GibMunney.Y",
-                            Type = "float",
-                            Value = GibMunney.Y
-                        }
-                        );
                         break;
                 }
                 return newState;
@@ -2304,7 +2167,7 @@
                             SetsValue = true,
                             Name = "DialogBoxInstance.Width",
                             Type = "float",
-                            Value = DialogBoxInstance.Width + 50f
+                            Value = DialogBoxInstance.Width + 75f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2667,62 +2530,6 @@
                             Value = MoneyDisplay.Y + 16f
                         }
                         );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "InfiniteMoneyButton.FlipHorizontal",
-                            Type = "bool",
-                            Value = InfiniteMoneyButton.FlipHorizontal
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "InfiniteMoneyButton.Text",
-                            Type = "string",
-                            Value = InfiniteMoneyButton.Text
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "InfiniteMoneyButton.X",
-                            Type = "float",
-                            Value = InfiniteMoneyButton.X + 1085f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "InfiniteMoneyButton.Y",
-                            Type = "float",
-                            Value = InfiniteMoneyButton.Y + 94f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "GibMunney.Text",
-                            Type = "string",
-                            Value = GibMunney.Text
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "GibMunney.X",
-                            Type = "float",
-                            Value = GibMunney.X + 1086f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "GibMunney.Y",
-                            Type = "float",
-                            Value = GibMunney.Y + 158f
-                        }
-                        );
                         break;
                 }
                 return newState;
@@ -2758,8 +2565,6 @@
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime WaterDisplay { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime CoalDisplay { get; set; }
             public JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime MoneyDisplay { get; set; }
-            public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime InfiniteMoneyButton { get; set; }
-            public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime GibMunney { get; set; }
             public GameScreenGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -2802,8 +2607,6 @@
                 WaterDisplay = this.GetGraphicalUiElementByName("WaterDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 CoalDisplay = this.GetGraphicalUiElementByName("CoalDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
                 MoneyDisplay = this.GetGraphicalUiElementByName("MoneyDisplay") as JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime;
-                InfiniteMoneyButton = this.GetGraphicalUiElementByName("InfiniteMoneyButton") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
-                GibMunney = this.GetGraphicalUiElementByName("GibMunney") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Screens.GameScreenGumForms(this);

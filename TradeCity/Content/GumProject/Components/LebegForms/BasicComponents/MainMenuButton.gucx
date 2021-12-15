@@ -106,102 +106,6 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>int</Type>
-      <Name>PaceholderText.Alpha</Name>
-      <Value xsi:type="xsd:int">150</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>PaceholderText.Blue</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>PaceholderText.FontSize</Name>
-      <Value xsi:type="xsd:int">32</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>DimensionUnitType</Type>
-      <Name>PaceholderText.Height Units</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>HorizontalAlignment</Type>
-      <Name>PaceholderText.HorizontalAlignment</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>bool</Type>
-      <Name>PaceholderText.IsBold</Name>
-      <Value xsi:type="xsd:boolean">false</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>bool</Type>
-      <Name>PaceholderText.IsItalic</Name>
-      <Value xsi:type="xsd:boolean">false</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>PaceholderText.Parent</Name>
-      <Value xsi:type="xsd:string">SpriteInstance</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>PaceholderText.Rotation</Name>
-      <Value xsi:type="xsd:float">-20</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>PaceholderText.Text</Name>
-      <Value xsi:type="xsd:string">PLACEHOLDER</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>VerticalAlignment</Type>
-      <Name>PaceholderText.VerticalAlignment</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>DimensionUnitType</Type>
-      <Name>PaceholderText.Width Units</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>HorizontalAlignment</Type>
-      <Name>PaceholderText.X Origin</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>PaceholderText.X Units</Name>
-      <Value xsi:type="xsd:int">6</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>VerticalAlignment</Type>
-      <Name>PaceholderText.Y Origin</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>PaceholderText.Y Units</Name>
-      <Value xsi:type="xsd:int">7</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <IsFile>true</IsFile>
       <Type>string</Type>
       <Name>SpriteInstance.SourceFile</Name>
@@ -323,12 +227,6 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>string</Type>
-        <Name>PaceholderText.Parent</Name>
-        <Value xsi:type="xsd:string">SpriteInstance</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>int</Type>
         <Name>SpriteInstance.Alpha</Name>
         <Value xsi:type="xsd:int">255</Value>
@@ -432,12 +330,6 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>string</Type>
-        <Name>PaceholderText.Parent</Name>
-        <Value xsi:type="xsd:string">SpriteInstance</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>int</Type>
         <Name>SpriteInstance.Alpha</Name>
         <Value xsi:type="xsd:int">150</Value>
@@ -537,12 +429,6 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>string</Type>
-        <Name>PaceholderText.Parent</Name>
-        <Value xsi:type="xsd:string">SpriteInstance</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>int</Type>
         <Name>SpriteInstance.Alpha</Name>
         <Value xsi:type="xsd:int">255</Value>
@@ -638,12 +524,6 @@
         <Type>bool</Type>
         <Name>HighlightRectangle.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>string</Type>
-        <Name>PaceholderText.Parent</Name>
-        <Value xsi:type="xsd:string">SpriteInstance</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -746,12 +626,6 @@
         <Type>bool</Type>
         <Name>HighlightRectangle.Visible</Name>
         <Value xsi:type="xsd:boolean">true</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>string</Type>
-        <Name>PaceholderText.Parent</Name>
-        <Value xsi:type="xsd:string">SpriteInstance</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -858,12 +732,6 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>string</Type>
-        <Name>PaceholderText.Parent</Name>
-        <Value xsi:type="xsd:string">SpriteInstance</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>int</Type>
         <Name>SpriteInstance.Alpha</Name>
         <Value xsi:type="xsd:int">255</Value>
@@ -948,11 +816,6 @@
   </Instance>
   <Instance>
     <Name>TextInstance</Name>
-    <BaseType>Text</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
-    <Name>PaceholderText</Name>
     <BaseType>Text</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>

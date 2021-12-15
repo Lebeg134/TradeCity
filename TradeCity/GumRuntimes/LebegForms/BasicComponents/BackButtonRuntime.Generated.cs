@@ -36,7 +36,6 @@
                     {
                         case  VariableState.Default:
                             TextInstance.Parent = this.GetGraphicalUiElementByName("NineSliceInstance") ?? this;
-                            PaceholderText.Parent = this.GetGraphicalUiElementByName("NineSliceInstance") ?? this;
                             Height = 75f;
                             Width = 200f;
                             NineSliceInstance.Height = 0f;
@@ -63,20 +62,6 @@
                             TextInstance.Y = 0f;
                             TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            PaceholderText.Alpha = 150;
-                            PaceholderText.Blue = 0;
-                            PaceholderText.FontSize = 16;
-                            PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                            PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                            PaceholderText.IsItalic = false;
-                            PaceholderText.Rotation = -20f;
-                            PaceholderText.Text = "PLACEHOLDER";
-                            PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                            PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                            PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                            PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                            PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             break;
                     }
                 }
@@ -182,22 +167,6 @@
                 bool setNineSliceInstanceYSecondValue = false;
                 float NineSliceInstanceYFirstValue= 0;
                 float NineSliceInstanceYSecondValue= 0;
-                bool setPaceholderTextAlphaFirstValue = false;
-                bool setPaceholderTextAlphaSecondValue = false;
-                int PaceholderTextAlphaFirstValue= 0;
-                int PaceholderTextAlphaSecondValue= 0;
-                bool setPaceholderTextBlueFirstValue = false;
-                bool setPaceholderTextBlueSecondValue = false;
-                int PaceholderTextBlueFirstValue= 0;
-                int PaceholderTextBlueSecondValue= 0;
-                bool setPaceholderTextFontSizeFirstValue = false;
-                bool setPaceholderTextFontSizeSecondValue = false;
-                int PaceholderTextFontSizeFirstValue= 0;
-                int PaceholderTextFontSizeSecondValue= 0;
-                bool setPaceholderTextRotationFirstValue = false;
-                bool setPaceholderTextRotationSecondValue = false;
-                float PaceholderTextRotationFirstValue= 0;
-                float PaceholderTextRotationSecondValue= 0;
                 bool setTextInstanceHeightFirstValue = false;
                 bool setTextInstanceHeightSecondValue = false;
                 float TextInstanceHeightFirstValue= 0;
@@ -254,58 +223,6 @@
                         if (interpolationValue < 1)
                         {
                             this.NineSliceInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
-                        setPaceholderTextAlphaFirstValue = true;
-                        PaceholderTextAlphaFirstValue = 150;
-                        setPaceholderTextBlueFirstValue = true;
-                        PaceholderTextBlueFirstValue = 0;
-                        setPaceholderTextFontSizeFirstValue = true;
-                        PaceholderTextFontSizeFirstValue = 16;
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.IsItalic = false;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("NineSliceInstance") ?? this;
-                        }
-                        setPaceholderTextRotationFirstValue = true;
-                        PaceholderTextRotationFirstValue = -20f;
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.Text = "PLACEHOLDER";
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         if (interpolationValue < 1)
                         {
@@ -400,58 +317,6 @@
                         {
                             this.NineSliceInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
-                        setPaceholderTextAlphaSecondValue = true;
-                        PaceholderTextAlphaSecondValue = 150;
-                        setPaceholderTextBlueSecondValue = true;
-                        PaceholderTextBlueSecondValue = 0;
-                        setPaceholderTextFontSizeSecondValue = true;
-                        PaceholderTextFontSizeSecondValue = 16;
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.IsItalic = false;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("NineSliceInstance") ?? this;
-                        }
-                        setPaceholderTextRotationSecondValue = true;
-                        PaceholderTextRotationSecondValue = -20f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.Text = "PLACEHOLDER";
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
                         if (interpolationValue >= 1)
                         {
                             this.TextInstance.Font = "Arial";
@@ -532,22 +397,6 @@
                 if (setNineSliceInstanceYFirstValue && setNineSliceInstanceYSecondValue)
                 {
                     NineSliceInstance.Y = NineSliceInstanceYFirstValue * (1 - interpolationValue) + NineSliceInstanceYSecondValue * interpolationValue;
-                }
-                if (setPaceholderTextAlphaFirstValue && setPaceholderTextAlphaSecondValue)
-                {
-                    PaceholderText.Alpha = FlatRedBall.Math.MathFunctions.RoundToInt(PaceholderTextAlphaFirstValue* (1 - interpolationValue) + PaceholderTextAlphaSecondValue * interpolationValue);
-                }
-                if (setPaceholderTextBlueFirstValue && setPaceholderTextBlueSecondValue)
-                {
-                    PaceholderText.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(PaceholderTextBlueFirstValue* (1 - interpolationValue) + PaceholderTextBlueSecondValue * interpolationValue);
-                }
-                if (setPaceholderTextFontSizeFirstValue && setPaceholderTextFontSizeSecondValue)
-                {
-                    PaceholderText.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(PaceholderTextFontSizeFirstValue* (1 - interpolationValue) + PaceholderTextFontSizeSecondValue * interpolationValue);
-                }
-                if (setPaceholderTextRotationFirstValue && setPaceholderTextRotationSecondValue)
-                {
-                    PaceholderText.Rotation = PaceholderTextRotationFirstValue * (1 - interpolationValue) + PaceholderTextRotationSecondValue * interpolationValue;
                 }
                 if (setTextInstanceHeightFirstValue && setTextInstanceHeightSecondValue)
                 {
@@ -1206,126 +1055,6 @@
                             Value = TextInstance.YUnits
                         }
                         );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Alpha",
-                            Type = "int",
-                            Value = PaceholderText.Alpha
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Blue",
-                            Type = "int",
-                            Value = PaceholderText.Blue
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.FontSize",
-                            Type = "int",
-                            Value = PaceholderText.FontSize
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Height Units",
-                            Type = "DimensionUnitType",
-                            Value = PaceholderText.HeightUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.HorizontalAlignment",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.HorizontalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.IsItalic",
-                            Type = "bool",
-                            Value = PaceholderText.IsItalic
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Rotation",
-                            Type = "float",
-                            Value = PaceholderText.Rotation
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Text",
-                            Type = "string",
-                            Value = PaceholderText.Text
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.VerticalAlignment",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.VerticalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Width Units",
-                            Type = "DimensionUnitType",
-                            Value = PaceholderText.WidthUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.X Origin",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.XOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.X Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.XUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Y Origin",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.YOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Y Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.YUnits
-                        }
-                        );
                         break;
                 }
                 return newState;
@@ -1550,126 +1279,6 @@
                             Name = "TextInstance.Y Units",
                             Type = "PositionUnitType",
                             Value = TextInstance.YUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Alpha",
-                            Type = "int",
-                            Value = PaceholderText.Alpha + 150
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Blue",
-                            Type = "int",
-                            Value = PaceholderText.Blue + 0
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.FontSize",
-                            Type = "int",
-                            Value = PaceholderText.FontSize + 16
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Height Units",
-                            Type = "DimensionUnitType",
-                            Value = PaceholderText.HeightUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.HorizontalAlignment",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.HorizontalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.IsItalic",
-                            Type = "bool",
-                            Value = PaceholderText.IsItalic
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Rotation",
-                            Type = "float",
-                            Value = PaceholderText.Rotation + -20f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Text",
-                            Type = "string",
-                            Value = PaceholderText.Text
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.VerticalAlignment",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.VerticalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Width Units",
-                            Type = "DimensionUnitType",
-                            Value = PaceholderText.WidthUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.X Origin",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.XOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.X Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.XUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Y Origin",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.YOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Y Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.YUnits
                         }
                         );
                         break;
@@ -2414,7 +2023,6 @@
             private bool tryCreateFormsObject;
             public JHP4SD.GumRuntimes.NineSliceRuntime NineSliceInstance { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime TextInstance { get; set; }
-            public JHP4SD.GumRuntimes.TextRuntime PaceholderText { get; set; }
             public BackButtonRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             	: base(false, tryCreateFormsObject)
             {
@@ -2444,7 +2052,6 @@
             {
                 NineSliceInstance = this.GetGraphicalUiElementByName("NineSliceInstance") as JHP4SD.GumRuntimes.NineSliceRuntime;
                 TextInstance = this.GetGraphicalUiElementByName("TextInstance") as JHP4SD.GumRuntimes.TextRuntime;
-                PaceholderText = this.GetGraphicalUiElementByName("PaceholderText") as JHP4SD.GumRuntimes.TextRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new FlatRedBall.Forms.Controls.Button(this);

@@ -8,6 +8,12 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
     {
         partial void CustomInitialize () 
         {
+            Click += ExitButtonRuntime_Click;
+        }
+
+        private void ExitButtonRuntime_Click(FlatRedBall.Gui.IWindow window)
+        {
+            this.CloseWindow();
         }
     }
 }

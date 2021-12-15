@@ -123,7 +123,6 @@
                             WorkforceList.Y = 0f;
                             WorkforceList.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             WorkforceList.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            ToastInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             break;
                     }
                 }
@@ -539,10 +538,6 @@
                         }
                         setScrollContainerYFirstValue = true;
                         ScrollContainerYFirstValue = 72f;
-                        if (interpolationValue < 1)
-                        {
-                            this.ToastInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
                         setWidthFirstValue = true;
                         WidthFirstValue = 500f;
                         setWorkforceListHeightFirstValue = true;
@@ -862,10 +857,6 @@
                         }
                         setScrollContainerYSecondValue = true;
                         ScrollContainerYSecondValue = 72f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.ToastInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
                         setWidthSecondValue = true;
                         WidthSecondValue = 500f;
                         setWorkforceListHeightSecondValue = true;
@@ -1187,7 +1178,6 @@
                 EnergyList.StopAnimations();
                 OilList.StopAnimations();
                 WorkforceList.StopAnimations();
-                ToastInstance.StopAnimations();
             }
             public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
             {
@@ -1984,14 +1974,6 @@
                             Value = WorkforceList.YUnits
                         }
                         );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ToastInstance.X Units",
-                            Type = "PositionUnitType",
-                            Value = ToastInstance.XUnits
-                        }
-                        );
                         break;
                 }
                 return newState;
@@ -2786,14 +2768,6 @@
                             Value = WorkforceList.YUnits
                         }
                         );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "ToastInstance.X Units",
-                            Type = "PositionUnitType",
-                            Value = ToastInstance.XUnits
-                        }
-                        );
                         break;
                 }
                 return newState;
@@ -2826,7 +2800,6 @@
             public JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime EnergyList { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime OilList { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime WorkforceList { get; set; }
-            public JHP4SD.GumRuntimes.DefaultForms.ToastRuntime ToastInstance { get; set; }
             public event FlatRedBall.Gui.WindowEvent CommonListClick;
             public event FlatRedBall.Gui.WindowEvent ConstructionListClick;
             public event FlatRedBall.Gui.WindowEvent CommonTabClick;
@@ -2837,7 +2810,6 @@
             public event FlatRedBall.Gui.WindowEvent EnergyListClick;
             public event FlatRedBall.Gui.WindowEvent OilListClick;
             public event FlatRedBall.Gui.WindowEvent WorkforceListClick;
-            public event FlatRedBall.Gui.WindowEvent ToastInstanceClick;
             public TabMenuRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             	: base(false, tryCreateFormsObject)
             {
@@ -2878,7 +2850,6 @@
                 EnergyList = this.GetGraphicalUiElementByName("EnergyList") as JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime;
                 OilList = this.GetGraphicalUiElementByName("OilList") as JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime;
                 WorkforceList = this.GetGraphicalUiElementByName("WorkforceList") as JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime;
-                ToastInstance = this.GetGraphicalUiElementByName("ToastInstance") as JHP4SD.GumRuntimes.DefaultForms.ToastRuntime;
                 CommonList.Click += (unused) => CommonListClick?.Invoke(this);
                 ConstructionList.Click += (unused) => ConstructionListClick?.Invoke(this);
                 CommonTab.Click += (unused) => CommonTabClick?.Invoke(this);
@@ -2889,7 +2860,6 @@
                 EnergyList.Click += (unused) => EnergyListClick?.Invoke(this);
                 OilList.Click += (unused) => OilListClick?.Invoke(this);
                 WorkforceList.Click += (unused) => WorkforceListClick?.Invoke(this);
-                ToastInstance.Click += (unused) => ToastInstanceClick?.Invoke(this);
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Components.LebegForms.ComplexComponents.TabMenuForms(this);

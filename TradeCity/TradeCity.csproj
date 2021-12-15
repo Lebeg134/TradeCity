@@ -642,6 +642,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>water-drop</Name>
     </None>
+    <None Include="content\globalcontent\screen\citybackground.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>citybackground</Name>
+    </None>
     <None Include="content\globalcontent\screen\cityinternal.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>cityinternal</Name>
@@ -854,14 +858,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>font128arial_9</Name>
     </None>
-    <None Include="content\gumproject\fontcache\font16arial.fnt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>font16arial</Name>
-    </None>
-    <None Include="content\gumproject\fontcache\font16arial_0.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>font16arial_0</Name>
-    </None>
     <None Include="content\gumproject\fontcache\font18arial.fnt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>font18arial</Name>
@@ -877,14 +873,6 @@
     <None Include="content\gumproject\fontcache\font24arial_0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>font24arial_0</Name>
-    </None>
-    <None Include="content\gumproject\fontcache\font32arial.fnt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>font32arial</Name>
-    </None>
-    <None Include="content\gumproject\fontcache\font32arial_0.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>font32arial_0</Name>
     </None>
     <None Include="content\gumproject\fontcache\font48arial.fnt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

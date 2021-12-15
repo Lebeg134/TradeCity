@@ -1484,6 +1484,69 @@
         "ElementType": "Screens",
         "EventType": 6,
         "TimestampUtc": "2021-12-14T22:37:05.5332581Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " GameScreenGum.DefaultForms/Button InfiniteMoneyButton in  GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T09:19:31.6650738Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " GameScreenGum.DefaultForms/Button GibMunney in  GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T09:19:32.793467Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/ComplexComponents/TabMenu.DefaultForms/Toast ToastInstance in LebegForms/ComplexComponents/TabMenu",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T09:20:02.8839742Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " CityGum.Text PaceholderText in  CityGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T09:26:30.9989207Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " CityGum.Text TextInstance in  CityGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T09:26:33.4224557Z"
+      },
+      {
+        "NewName": null,
+        "OldName": " MainMenuGum.Text PaceholderText in  MainMenuGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T09:26:52.4448966Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/BackButton.Text PaceholderText in LebegForms/BasicComponents/BackButton",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T09:27:01.15505Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/MainMenuButton.Text PaceholderText in LebegForms/BasicComponents/MainMenuButton",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T09:27:08.0399911Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ExitButton.Text PaceholderText in LebegForms/BasicComponents/ExitButton",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T09:28:28.2132083Z"
       }
     ],
     "torok": []

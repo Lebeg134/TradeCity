@@ -39,23 +39,11 @@ namespace JHP4SD.Screens
             Forms.ScreenSelectorInstance.MapTab.Click += MapTab_Click;
             Forms.ScreenSelectorInstance.MarketTab.Click += MarketTab_Click;
 
-            Forms.InfiniteMoneyButton.Click += InfiniteMoneyButton_Click;
-            Forms.GibMunney.Click += GibMunney_Click;
 
             foreach (Resource resource in Player.CurrentPlayer.getAllRes())
             {
                 AddToList(resource);
             }
-        }
-
-        private void GibMunney_Click(object sender, EventArgs e)
-        {
-            Player.CurrentPlayer.subRes(new Money(30));
-        }
-
-        private void InfiniteMoneyButton_Click(object sender, EventArgs e)
-        {
-            Player.CurrentPlayer.giveRes(new Money(100));
         }
 
         private void PlayButtonInstance_Click(object sender, EventArgs e)
@@ -70,6 +58,7 @@ namespace JHP4SD.Screens
                 Clock.Instance.pause();
                 Session.Instance.Running = false;
             }
+            Resource.updater.Update();
         }
 
         private void CityTab_Click(object sender, EventArgs e)

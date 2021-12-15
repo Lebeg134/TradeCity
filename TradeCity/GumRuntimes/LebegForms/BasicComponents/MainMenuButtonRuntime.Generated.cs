@@ -36,7 +36,6 @@
                     {
                         case  VariableState.Default:
                             TextInstance.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                            PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
                             HighlightRectangle.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
                             Width = 400f;
                             SetProperty("SpriteInstance.SourceFile", "Components/LebegForms/Resources/PlaceholderGradient.png");
@@ -50,20 +49,6 @@
                             TextInstance.XUnits = Gum.Converters.GeneralUnitType.Percentage;
                             TextInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             TextInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            PaceholderText.Alpha = 150;
-                            PaceholderText.Blue = 0;
-                            PaceholderText.FontSize = 32;
-                            PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                            PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                            PaceholderText.IsItalic = false;
-                            PaceholderText.Rotation = -20f;
-                            PaceholderText.Text = "PLACEHOLDER";
-                            PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                            PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                            PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                            PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                            PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                            PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             HighlightRectangle.Blue = 0;
                             HighlightRectangle.Green = 255;
                             HighlightRectangle.Height = 0f;
@@ -97,7 +82,6 @@
                         {
                             case  ButtonCategory.Enabled:
                                 TextInstance.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                                PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
                                 SpriteInstance.Alpha = 255;
                                 SpriteInstance.Animate = false;
                                 SpriteInstance.Blue = 255;
@@ -115,7 +99,6 @@
                                 break;
                             case  ButtonCategory.Disabled:
                                 TextInstance.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                                PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
                                 SpriteInstance.Alpha = 150;
                                 SpriteInstance.Animate = false;
                                 SpriteInstance.Blue = 128;
@@ -133,7 +116,6 @@
                                 break;
                             case  ButtonCategory.Highlighted:
                                 TextInstance.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                                PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
                                 SpriteInstance.Alpha = 255;
                                 SpriteInstance.Animate = false;
                                 SpriteInstance.Blue = 0;
@@ -151,7 +133,6 @@
                                 break;
                             case  ButtonCategory.Pushed:
                                 TextInstance.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                                PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
                                 SpriteInstance.Alpha = 255;
                                 SpriteInstance.Animate = false;
                                 SpriteInstance.Blue = 128;
@@ -169,7 +150,6 @@
                                 break;
                             case  ButtonCategory.HighlightedFocused:
                                 TextInstance.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                                PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
                                 SpriteInstance.Alpha = 255;
                                 SpriteInstance.Animate = false;
                                 SpriteInstance.Blue = 0;
@@ -187,7 +167,6 @@
                                 break;
                             case  ButtonCategory.Focused:
                                 TextInstance.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                                PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
                                 SpriteInstance.Alpha = 255;
                                 SpriteInstance.Animate = false;
                                 SpriteInstance.Blue = 255;
@@ -245,22 +224,6 @@
                 bool setHighlightRectangleYSecondValue = false;
                 float HighlightRectangleYFirstValue= 0;
                 float HighlightRectangleYSecondValue= 0;
-                bool setPaceholderTextAlphaFirstValue = false;
-                bool setPaceholderTextAlphaSecondValue = false;
-                int PaceholderTextAlphaFirstValue= 0;
-                int PaceholderTextAlphaSecondValue= 0;
-                bool setPaceholderTextBlueFirstValue = false;
-                bool setPaceholderTextBlueSecondValue = false;
-                int PaceholderTextBlueFirstValue= 0;
-                int PaceholderTextBlueSecondValue= 0;
-                bool setPaceholderTextFontSizeFirstValue = false;
-                bool setPaceholderTextFontSizeSecondValue = false;
-                int PaceholderTextFontSizeFirstValue= 0;
-                int PaceholderTextFontSizeSecondValue= 0;
-                bool setPaceholderTextRotationFirstValue = false;
-                bool setPaceholderTextRotationSecondValue = false;
-                float PaceholderTextRotationFirstValue= 0;
-                float PaceholderTextRotationSecondValue= 0;
                 bool setTextInstanceXFirstValue = false;
                 bool setTextInstanceXSecondValue = false;
                 float TextInstanceXFirstValue= 0;
@@ -317,58 +280,6 @@
                         if (interpolationValue < 1)
                         {
                             this.HighlightRectangle.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
-                        setPaceholderTextAlphaFirstValue = true;
-                        PaceholderTextAlphaFirstValue = 150;
-                        setPaceholderTextBlueFirstValue = true;
-                        PaceholderTextBlueFirstValue = 0;
-                        setPaceholderTextFontSizeFirstValue = true;
-                        PaceholderTextFontSizeFirstValue = 32;
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.IsItalic = false;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                        }
-                        setPaceholderTextRotationFirstValue = true;
-                        PaceholderTextRotationFirstValue = -20f;
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.Text = "PLACEHOLDER";
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         if (interpolationValue < 1)
                         {
@@ -469,58 +380,6 @@
                         {
                             this.HighlightRectangle.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
-                        setPaceholderTextAlphaSecondValue = true;
-                        PaceholderTextAlphaSecondValue = 150;
-                        setPaceholderTextBlueSecondValue = true;
-                        PaceholderTextBlueSecondValue = 0;
-                        setPaceholderTextFontSizeSecondValue = true;
-                        PaceholderTextFontSizeSecondValue = 32;
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.IsItalic = false;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                        }
-                        setPaceholderTextRotationSecondValue = true;
-                        PaceholderTextRotationSecondValue = -20f;
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.Text = "PLACEHOLDER";
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
-                        }
                         if (interpolationValue >= 1)
                         {
                             SetProperty("SpriteInstance.SourceFile", "Components/LebegForms/Resources/PlaceholderGradient.png");
@@ -603,22 +462,6 @@
                 if (setHighlightRectangleYFirstValue && setHighlightRectangleYSecondValue)
                 {
                     HighlightRectangle.Y = HighlightRectangleYFirstValue * (1 - interpolationValue) + HighlightRectangleYSecondValue * interpolationValue;
-                }
-                if (setPaceholderTextAlphaFirstValue && setPaceholderTextAlphaSecondValue)
-                {
-                    PaceholderText.Alpha = FlatRedBall.Math.MathFunctions.RoundToInt(PaceholderTextAlphaFirstValue* (1 - interpolationValue) + PaceholderTextAlphaSecondValue * interpolationValue);
-                }
-                if (setPaceholderTextBlueFirstValue && setPaceholderTextBlueSecondValue)
-                {
-                    PaceholderText.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(PaceholderTextBlueFirstValue* (1 - interpolationValue) + PaceholderTextBlueSecondValue * interpolationValue);
-                }
-                if (setPaceholderTextFontSizeFirstValue && setPaceholderTextFontSizeSecondValue)
-                {
-                    PaceholderText.FontSize = FlatRedBall.Math.MathFunctions.RoundToInt(PaceholderTextFontSizeFirstValue* (1 - interpolationValue) + PaceholderTextFontSizeSecondValue * interpolationValue);
-                }
-                if (setPaceholderTextRotationFirstValue && setPaceholderTextRotationSecondValue)
-                {
-                    PaceholderText.Rotation = PaceholderTextRotationFirstValue * (1 - interpolationValue) + PaceholderTextRotationSecondValue * interpolationValue;
                 }
                 if (setTextInstanceXFirstValue && setTextInstanceXSecondValue)
                 {
@@ -710,10 +553,6 @@
                         {
                             this.HighlightRectangle.Visible = false;
                         }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                        }
                         setSpriteInstanceAlphaFirstValue = true;
                         SpriteInstanceAlphaFirstValue = 255;
                         if (interpolationValue < 1)
@@ -751,10 +590,6 @@
                         if (interpolationValue < 1)
                         {
                             this.HighlightRectangle.Visible = false;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
                         }
                         setSpriteInstanceAlphaFirstValue = true;
                         SpriteInstanceAlphaFirstValue = 150;
@@ -794,10 +629,6 @@
                         {
                             this.HighlightRectangle.Visible = true;
                         }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                        }
                         setSpriteInstanceAlphaFirstValue = true;
                         SpriteInstanceAlphaFirstValue = 255;
                         if (interpolationValue < 1)
@@ -835,10 +666,6 @@
                         if (interpolationValue < 1)
                         {
                             this.HighlightRectangle.Visible = false;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
                         }
                         setSpriteInstanceAlphaFirstValue = true;
                         SpriteInstanceAlphaFirstValue = 255;
@@ -878,10 +705,6 @@
                         {
                             this.HighlightRectangle.Visible = true;
                         }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                        }
                         setSpriteInstanceAlphaFirstValue = true;
                         SpriteInstanceAlphaFirstValue = 255;
                         if (interpolationValue < 1)
@@ -919,10 +742,6 @@
                         if (interpolationValue < 1)
                         {
                             this.HighlightRectangle.Visible = true;
-                        }
-                        if (interpolationValue < 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
                         }
                         setSpriteInstanceAlphaFirstValue = true;
                         SpriteInstanceAlphaFirstValue = 255;
@@ -965,10 +784,6 @@
                         {
                             this.HighlightRectangle.Visible = false;
                         }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                        }
                         setSpriteInstanceAlphaSecondValue = true;
                         SpriteInstanceAlphaSecondValue = 255;
                         if (interpolationValue >= 1)
@@ -1006,10 +821,6 @@
                         if (interpolationValue >= 1)
                         {
                             this.HighlightRectangle.Visible = false;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
                         }
                         setSpriteInstanceAlphaSecondValue = true;
                         SpriteInstanceAlphaSecondValue = 150;
@@ -1049,10 +860,6 @@
                         {
                             this.HighlightRectangle.Visible = true;
                         }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                        }
                         setSpriteInstanceAlphaSecondValue = true;
                         SpriteInstanceAlphaSecondValue = 255;
                         if (interpolationValue >= 1)
@@ -1090,10 +897,6 @@
                         if (interpolationValue >= 1)
                         {
                             this.HighlightRectangle.Visible = false;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
                         }
                         setSpriteInstanceAlphaSecondValue = true;
                         SpriteInstanceAlphaSecondValue = 255;
@@ -1133,10 +936,6 @@
                         {
                             this.HighlightRectangle.Visible = true;
                         }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
-                        }
                         setSpriteInstanceAlphaSecondValue = true;
                         SpriteInstanceAlphaSecondValue = 255;
                         if (interpolationValue >= 1)
@@ -1174,10 +973,6 @@
                         if (interpolationValue >= 1)
                         {
                             this.HighlightRectangle.Visible = true;
-                        }
-                        if (interpolationValue >= 1)
-                        {
-                            this.PaceholderText.Parent = this.GetGraphicalUiElementByName("SpriteInstance") ?? this;
                         }
                         setSpriteInstanceAlphaSecondValue = true;
                         SpriteInstanceAlphaSecondValue = 255;
@@ -1508,126 +1303,6 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Alpha",
-                            Type = "int",
-                            Value = PaceholderText.Alpha
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Blue",
-                            Type = "int",
-                            Value = PaceholderText.Blue
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.FontSize",
-                            Type = "int",
-                            Value = PaceholderText.FontSize
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Height Units",
-                            Type = "DimensionUnitType",
-                            Value = PaceholderText.HeightUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.HorizontalAlignment",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.HorizontalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.IsItalic",
-                            Type = "bool",
-                            Value = PaceholderText.IsItalic
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Rotation",
-                            Type = "float",
-                            Value = PaceholderText.Rotation
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Text",
-                            Type = "string",
-                            Value = PaceholderText.Text
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.VerticalAlignment",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.VerticalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Width Units",
-                            Type = "DimensionUnitType",
-                            Value = PaceholderText.WidthUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.X Origin",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.XOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.X Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.XUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Y Origin",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.YOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Y Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.YUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "HighlightRectangle.Blue",
                             Type = "int",
                             Value = HighlightRectangle.Blue
@@ -1862,126 +1537,6 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Alpha",
-                            Type = "int",
-                            Value = PaceholderText.Alpha + 150
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Blue",
-                            Type = "int",
-                            Value = PaceholderText.Blue + 0
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.FontSize",
-                            Type = "int",
-                            Value = PaceholderText.FontSize + 32
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Height Units",
-                            Type = "DimensionUnitType",
-                            Value = PaceholderText.HeightUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.HorizontalAlignment",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.HorizontalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.IsItalic",
-                            Type = "bool",
-                            Value = PaceholderText.IsItalic
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Rotation",
-                            Type = "float",
-                            Value = PaceholderText.Rotation + -20f
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Text",
-                            Type = "string",
-                            Value = PaceholderText.Text
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.VerticalAlignment",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.VerticalAlignment
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Width Units",
-                            Type = "DimensionUnitType",
-                            Value = PaceholderText.WidthUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.X Origin",
-                            Type = "HorizontalAlignment",
-                            Value = PaceholderText.XOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.X Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.XUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Y Origin",
-                            Type = "VerticalAlignment",
-                            Value = PaceholderText.YOrigin
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Y Units",
-                            Type = "PositionUnitType",
-                            Value = PaceholderText.YUnits
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "HighlightRectangle.Blue",
                             Type = "int",
                             Value = HighlightRectangle.Blue + 0
@@ -2200,14 +1755,6 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "HighlightRectangle.Blue",
                             Type = "int",
                             Value = HighlightRectangle.Blue
@@ -2325,14 +1872,6 @@
                             Name = "TextInstance.Red",
                             Type = "int",
                             Value = TextInstance.Red
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2460,14 +1999,6 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "HighlightRectangle.Blue",
                             Type = "int",
                             Value = HighlightRectangle.Blue
@@ -2585,14 +2116,6 @@
                             Name = "TextInstance.Red",
                             Type = "int",
                             Value = TextInstance.Red
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2720,14 +2243,6 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "HighlightRectangle.Blue",
                             Type = "int",
                             Value = HighlightRectangle.Blue
@@ -2845,14 +2360,6 @@
                             Name = "TextInstance.Red",
                             Type = "int",
                             Value = TextInstance.Red
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -2988,14 +2495,6 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "HighlightRectangle.Blue",
                             Type = "int",
                             Value = HighlightRectangle.Blue + 0
@@ -3113,14 +2612,6 @@
                             Name = "TextInstance.Red",
                             Type = "int",
                             Value = TextInstance.Red + 255
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -3248,14 +2739,6 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "HighlightRectangle.Blue",
                             Type = "int",
                             Value = HighlightRectangle.Blue + 255
@@ -3373,14 +2856,6 @@
                             Name = "TextInstance.Red",
                             Type = "int",
                             Value = TextInstance.Red + 0
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -3508,14 +2983,6 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "HighlightRectangle.Blue",
                             Type = "int",
                             Value = HighlightRectangle.Blue + 0
@@ -3638,14 +3105,6 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
-                            Name = "PaceholderText.Parent",
-                            Type = "string",
-                            Value = PaceholderText.Parent
-                        }
-                        );
-                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
-                        {
-                            SetsValue = true,
                             Name = "HighlightRectangle.Blue",
                             Type = "int",
                             Value = HighlightRectangle.Blue + 0
@@ -3705,7 +3164,6 @@
             private bool tryCreateFormsObject;
             public JHP4SD.GumRuntimes.SpriteRuntime SpriteInstance { get; set; }
             public JHP4SD.GumRuntimes.TextRuntime TextInstance { get; set; }
-            public JHP4SD.GumRuntimes.TextRuntime PaceholderText { get; set; }
             public JHP4SD.GumRuntimes.RectangleRuntime HighlightRectangle { get; set; }
             public string MainButtonText
             {
@@ -3752,7 +3210,6 @@
             {
                 SpriteInstance = this.GetGraphicalUiElementByName("SpriteInstance") as JHP4SD.GumRuntimes.SpriteRuntime;
                 TextInstance = this.GetGraphicalUiElementByName("TextInstance") as JHP4SD.GumRuntimes.TextRuntime;
-                PaceholderText = this.GetGraphicalUiElementByName("PaceholderText") as JHP4SD.GumRuntimes.TextRuntime;
                 HighlightRectangle = this.GetGraphicalUiElementByName("HighlightRectangle") as JHP4SD.GumRuntimes.RectangleRuntime;
                 if (tryCreateFormsObject)
                 {

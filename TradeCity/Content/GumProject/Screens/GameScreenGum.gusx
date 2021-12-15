@@ -67,7 +67,7 @@
     <Variable>
       <Type>float</Type>
       <Name>DialogBoxInstance.Width</Name>
-      <Value xsi:type="xsd:float">50</Value>
+      <Value xsi:type="xsd:float">75</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -134,48 +134,6 @@
       <Type>float</Type>
       <Name>ElectricityDisplay.X</Name>
       <Value xsi:type="xsd:float">10</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>GibMunney.Text</Name>
-      <Value xsi:type="xsd:string">Give Munney</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>GibMunney.X</Name>
-      <Value xsi:type="xsd:float">1086</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>GibMunney.Y</Name>
-      <Value xsi:type="xsd:float">158</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>bool</Type>
-      <Name>InfiniteMoneyButton.FlipHorizontal</Name>
-      <Value xsi:type="xsd:boolean">true</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>InfiniteMoneyButton.Text</Name>
-      <Value xsi:type="xsd:string">Gimmie Money</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>InfiniteMoneyButton.X</Name>
-      <Value xsi:type="xsd:float">1085</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>InfiniteMoneyButton.Y</Name>
-      <Value xsi:type="xsd:float">94</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -687,16 +645,6 @@
   <Instance>
     <Name>MoneyDisplay</Name>
     <BaseType>LebegForms/BasicComponents/ResourceDisplay</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
-    <Name>InfiniteMoneyButton</Name>
-    <BaseType>DefaultForms/Button</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
-    <Name>GibMunney</Name>
-    <BaseType>DefaultForms/Button</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
 </ScreenSave>

@@ -294,6 +294,10 @@
       <DependentUpon>LandListItemRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\LandListItemVisual.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ListingListBoxItemRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ListingListBoxItemRuntime.Generated.cs">
+      <DependentUpon>ListingListBoxItemRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\MainMenuButtonRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\MainMenuButtonRuntime.Generated.cs">
       <DependentUpon>MainMenuButtonRuntime.cs</DependentUpon>
@@ -331,9 +335,13 @@
       <DependentUpon>TopicRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\LebegForms\Resources\BuildingImagesSmallRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\Resources\BuildingImagesSmallRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\Resources\BuildingImagesSmallRuntime.Generated.cs">
+      <DependentUpon>BuildingImagesSmallRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\Resources\LandImagesRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\Resources\LandImagesRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\Resources\LandImagesRuntime.Generated.cs">
+      <DependentUpon>LandImagesRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\Resources\ResourceIconsRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\Resources\ResourceIconsRuntime.Generated.cs">
       <DependentUpon>ResourceIconsRuntime.cs</DependentUpon>
@@ -371,6 +379,7 @@
     <Compile Include="Lebeg134\Module\Market\ItemLog.cs" />
     <Compile Include="Lebeg134\Module\Market\Listing.cs" />
     <Compile Include="Lebeg134\Module\Market\Market.cs" />
+    <Compile Include="Lebeg134\Module\Market\SPListing.cs" />
     <Compile Include="Lebeg134\Module\Resources\ContinousResource.cs" />
     <Compile Include="Lebeg134\Module\Resources\LimitResource.cs" />
     <Compile Include="Lebeg134\Module\Resources\Resource.cs" />
@@ -818,6 +827,10 @@
     <None Include="content\gumproject\components\lebegforms\basiccomponents\landlistitem.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>landlistitem</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\listinglistboxitem.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>listinglistboxitem</Name>
     </None>
     <None Include="content\gumproject\components\lebegforms\basiccomponents\mainmenubutton.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

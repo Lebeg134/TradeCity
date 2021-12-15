@@ -14,7 +14,7 @@ namespace JHP4SD.Lebeg134.Module.Session
     [Serializable]
     public class Session : ITickable
     {
-        Market _market;
+        //Market _market;
         List<Player> _players;
         //Map _map; not implemented
         public Dictionary<Land, int> offers = new Dictionary<Land, int>();

@@ -2555,6 +2555,272 @@
         "ElementType": "Screens",
         "EventType": 7,
         "TimestampUtc": "2021-12-15T17:44:48.5350845Z"
+      },
+      {
+        "NewName": "DefaultForms/ListBoxItem1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2021-12-15T17:55:02.2834839Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListBoxItem1",
+        "OldName": "DefaultForms/ListBoxItem1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2021-12-15T17:55:06.2889087Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem",
+        "OldName": "LebegForms/BasicComponents/ListBoxItem1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2021-12-15T17:55:25.6755251Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T17:55:57.3497713Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.ResourceDisplayInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T17:57:08.3928597Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.TextInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T17:57:25.8691887Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.Text TextInstance1 in LebegForms/BasicComponents/ListingListBoxItem",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T17:57:29.1425426Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.TextInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T17:57:29.9876896Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.SellResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.ResourceDisplayInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T17:58:51.4297726Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.SellResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.ResourceDisplayInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T17:58:51.4307705Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.SellResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.ResourceDisplayInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T17:58:51.4327655Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.SellResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.ResourceDisplayInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T17:58:51.4347606Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.SellResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.ResourceDisplayInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T17:58:51.4367557Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.SellResourceDisplayInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T17:58:53.9218902Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.LebegForms/BasicComponents/ResourceDisplay SellResourceDisplayInstance1 in LebegForms/BasicComponents/ListingListBoxItem",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T17:58:55.6303537Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.SellResourceDisplayInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T17:58:56.6900671Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.ForResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.SellResourceDisplayInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T17:59:05.4412174Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.ForResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.SellResourceDisplayInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T17:59:05.4432336Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.ForResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.SellResourceDisplayInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T17:59:05.4452064Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.ForResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.SellResourceDisplayInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T17:59:05.4472009Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.ForResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.SellResourceDisplayInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T17:59:05.4491942Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.ButtonInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T17:59:18.8855059Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.TextInstance2",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T18:00:54.3999843Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.Text TextInstance2 in LebegForms/BasicComponents/ListingListBoxItem",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T18:00:56.7788096Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.TextInstance2",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T18:00:58.0886216Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/LandListItem.LebegForms/BasicComponents/ResourceDisplay ResourceDisplayInstance in LebegForms/BasicComponents/LandListItem",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T18:01:10.0921227Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.DefaultForms/Button ButtonInstance in LebegForms/BasicComponents/ListingListBoxItem",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T18:01:24.0403908Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.ButtonInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T18:01:25.3006282Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.ForResourceDisplayInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T18:01:43.1562653Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.LebegForms/BasicComponents/ResourceDisplay ForResourceDisplayInstance1 in LebegForms/BasicComponents/ListingListBoxItem",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T18:01:49.5351463Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.ForResourceDisplayInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T18:01:50.4929431Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.DefaultForms/Button ButtonInstance in LebegForms/BasicComponents/ListingListBoxItem",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2021-12-15T18:01:51.7052332Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.ButtonInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T18:01:52.6057228Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.AboveResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.ForResourceDisplayInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T18:01:59.603346Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.AboveResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.ForResourceDisplayInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T18:01:59.6053399Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.AboveResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.ForResourceDisplayInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T18:01:59.6073344Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.AboveResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.ForResourceDisplayInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T18:01:59.6093292Z"
+      },
+      {
+        "NewName": "LebegForms/BasicComponents/ListingListBoxItem.AboveResourceDisplayInstance",
+        "OldName": "LebegForms/BasicComponents/ListingListBoxItem.ForResourceDisplayInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-15T18:01:59.6113236Z"
       }
     ],
     "torok": []

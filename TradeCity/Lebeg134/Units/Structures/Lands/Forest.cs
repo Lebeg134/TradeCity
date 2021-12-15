@@ -1,5 +1,6 @@
 
 
+using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Structures;
 using JHP4SD.Lebeg134.Module.Utilities;
@@ -55,6 +56,11 @@ namespace Lebeg134.Structures.Lands
         public override string getName()
         {
             return "Forest";
+        }
+
+        public override SpriteRuntime getSprite()
+        {
+            return spriteLibrary.ForestSprite;
         }
 
         protected override List<Resource> productionLevels(int level)

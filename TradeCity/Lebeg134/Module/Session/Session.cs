@@ -7,6 +7,7 @@ using JHP4SD.Lebeg134.Module.MarketNS;
 using System.Collections.Generic;
 using static JHP4SD.Lebeg134.Module.Session.Player;
 using System;
+using JHP4SD.Lebeg134.Module.Structures;
 
 namespace JHP4SD.Lebeg134.Module.Session
 {
@@ -15,7 +16,8 @@ namespace JHP4SD.Lebeg134.Module.Session
     {
         Market _market;
         List<Player> _players;
-        Map _map;
+        //Map _map; not implemented
+        public Dictionary<Land, int> offers = new Dictionary<Land, int>();
         public bool Running = false;
         public static Session Instance
         {
@@ -72,6 +74,8 @@ namespace JHP4SD.Lebeg134.Module.Session
         public void tick()
         {
             //TODO tick market and generate event stuff in the future
+
+            //TODO add land offers randomly
 
             foreach (Player player in _players)
             {

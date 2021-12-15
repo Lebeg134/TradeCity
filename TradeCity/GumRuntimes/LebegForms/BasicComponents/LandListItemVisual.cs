@@ -28,7 +28,7 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
         {
             if (_focus == null) return;
             landNameDisplay.Text = _focus.getName();
-            //LandImage.Texture = _focus.getSprite().Texture;
+            LandImage.Texture = _focus.getSprite().Texture;
             resourceDisplayer.Focus = resource;
             resourceDisplayer.Update(); //make change arrow dissapear
             Update();

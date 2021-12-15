@@ -236,6 +236,7 @@
       <Type>ChildrenLayout</Type>
       <Name>InnerPanelInstance.Children Layout</Name>
       <Value xsi:type="xsd:int">1</Value>
+      <ExposedAsName>InnerPanelInstanceChildren Layout</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -267,6 +268,12 @@
       <Name>InnerPanelInstance.Width Units</Name>
       <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>bool</Type>
+      <Name>InnerPanelInstance.Wraps Children</Name>
+      <ExposedAsName>InnerPanelInstanceWraps Children</ExposedAsName>
+      <SetsValue>false</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>

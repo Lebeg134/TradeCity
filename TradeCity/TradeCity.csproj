@@ -330,6 +330,8 @@
     <Compile Include="GumRuntimes\LebegForms\ComplexComponents\TopicRuntime.Generated.cs">
       <DependentUpon>TopicRuntime.cs</DependentUpon>
     </Compile>
+    <Compile Include="GumRuntimes\LebegForms\Resources\LandImagesRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\Resources\LandImagesRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\LebegForms\Resources\ResourceIconsRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\Resources\ResourceIconsRuntime.Generated.cs">
       <DependentUpon>ResourceIconsRuntime.cs</DependentUpon>
@@ -603,6 +605,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>up</Name>
     </None>
+    <None Include="content\globalcontent\lands\coalmine.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>coalmine</Name>
+    </None>
+    <None Include="content\globalcontent\lands\forest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>forest</Name>
+    </None>
+    <None Include="content\globalcontent\lands\ironmine.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ironmine</Name>
+    </None>
     <None Include="content\globalcontent\resources\categoryicons\crane.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>crane</Name>
@@ -830,6 +844,10 @@
     <None Include="content\gumproject\components\lebegforms\complexcomponents\topic.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>topic</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\resources\landimages.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>landimages</Name>
     </None>
     <None Include="content\gumproject\components\lebegforms\resources\placeholdergradient.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -2286,9 +2286,41 @@
                     }
                 }
             }
+            public Gum.Managers.ChildrenLayout InnerPanelInstanceChildren_Layout
+            {
+                get
+                {
+                    return InnerPanelInstance.ChildrenLayout;
+                }
+                set
+                {
+                    if (InnerPanelInstance.ChildrenLayout != value)
+                    {
+                        InnerPanelInstance.ChildrenLayout = value;
+                        InnerPanelInstanceChildrenLayoutChanged?.Invoke(this, null);
+                    }
+                }
+            }
+            public bool InnerPanelInstanceWraps_Children
+            {
+                get
+                {
+                    return InnerPanelInstance.WrapsChildren;
+                }
+                set
+                {
+                    if (InnerPanelInstance.WrapsChildren != value)
+                    {
+                        InnerPanelInstance.WrapsChildren = value;
+                        InnerPanelInstanceWrapsChildrenChanged?.Invoke(this, null);
+                    }
+                }
+            }
             public event FlatRedBall.Gui.WindowEvent VerticalScrollBarInstanceClick;
             public event System.EventHandler ColoredFrameInstanceAlphaChanged;
             public event System.EventHandler ListBoxBackgroundColorCategoryStateChanged;
+            public event System.EventHandler InnerPanelInstanceChildrenLayoutChanged;
+            public event System.EventHandler InnerPanelInstanceWrapsChildrenChanged;
             public ListBoxRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             	: base(false, tryCreateFormsObject)
             {

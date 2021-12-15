@@ -36,6 +36,8 @@
                             HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                             Width = 300f;
                             WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            X = 10f;
+                            Y = 10f;
                             Background.Height = 0f;
                             Background.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
                             Background.Width = 0f;
@@ -213,6 +215,14 @@
                 bool setWidthSecondValue = false;
                 float WidthFirstValue= 0;
                 float WidthSecondValue= 0;
+                bool setXFirstValue = false;
+                bool setXSecondValue = false;
+                float XFirstValue= 0;
+                float XSecondValue= 0;
+                bool setYFirstValue = false;
+                bool setYSecondValue = false;
+                float YFirstValue= 0;
+                float YSecondValue= 0;
                 switch(firstState)
                 {
                     case  VariableState.Default:
@@ -378,6 +388,10 @@
                         {
                             this.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
+                        setXFirstValue = true;
+                        XFirstValue = 10f;
+                        setYFirstValue = true;
+                        YFirstValue = 10f;
                         break;
                 }
                 switch(secondState)
@@ -545,6 +559,10 @@
                         {
                             this.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                         }
+                        setXSecondValue = true;
+                        XSecondValue = 10f;
+                        setYSecondValue = true;
+                        YSecondValue = 10f;
                         break;
                 }
                 var wasSuppressed = mIsLayoutSuspended;
@@ -643,6 +661,14 @@
                 if (setWidthFirstValue && setWidthSecondValue)
                 {
                     Width = WidthFirstValue * (1 - interpolationValue) + WidthSecondValue * interpolationValue;
+                }
+                if (setXFirstValue && setXSecondValue)
+                {
+                    X = XFirstValue * (1 - interpolationValue) + XSecondValue * interpolationValue;
+                }
+                if (setYFirstValue && setYSecondValue)
+                {
+                    Y = YFirstValue * (1 - interpolationValue) + YSecondValue * interpolationValue;
                 }
                 if (interpolationValue < 1)
                 {
@@ -862,6 +888,22 @@
                             Name = "Width Units",
                             Type = "DimensionUnitType",
                             Value = WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "X",
+                            Type = "float",
+                            Value = X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Y",
+                            Type = "float",
+                            Value = Y
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1288,6 +1330,22 @@
                             Name = "Width Units",
                             Type = "DimensionUnitType",
                             Value = WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "X",
+                            Type = "float",
+                            Value = X + 10f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "Y",
+                            Type = "float",
+                            Value = Y + 10f
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

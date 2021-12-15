@@ -48,11 +48,15 @@
                             OwnedLands.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             OwnedLands.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             OwnedLands.Y = 144f;
+                            BuyableLands.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
                             BuyableLands.ColoredFrameInstanceAlpha = 128;
                             BuyableLands.Height = -272f;
                             BuyableLands.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            BuyableLands.InnerPanelInstanceChildren_Layout = Gum.Managers.ChildrenLayout.LeftToRightStack;
+                            BuyableLands.InnerPanelInstanceWraps_Children = true;
                             BuyableLands.Width = -760f;
                             BuyableLands.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                            BuyableLands.WrapsChildren = false;
                             BuyableLands.X = -520f;
                             BuyableLands.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Right;
                             BuyableLands.XUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
@@ -228,6 +232,10 @@
                 switch(firstState)
                 {
                     case  VariableState.Default:
+                        if (interpolationValue < 1)
+                        {
+                            this.BuyableLands.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
+                        }
                         setBuyableLandsColoredFrameInstanceAlphaFirstValue = true;
                         BuyableLandsColoredFrameInstanceAlphaFirstValue = 128;
                         setBuyableLandsHeightFirstValue = true;
@@ -235,6 +243,14 @@
                         if (interpolationValue < 1)
                         {
                             this.BuyableLands.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.BuyableLands.InnerPanelInstanceChildren_Layout = Gum.Managers.ChildrenLayout.LeftToRightStack;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.BuyableLands.InnerPanelInstanceWraps_Children = true;
                         }
                         if (interpolationValue < 1)
                         {
@@ -247,6 +263,10 @@
                         if (interpolationValue < 1)
                         {
                             this.BuyableLands.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.BuyableLands.WrapsChildren = false;
                         }
                         setBuyableLandsXFirstValue = true;
                         BuyableLandsXFirstValue = -520f;
@@ -437,6 +457,10 @@
                 switch(secondState)
                 {
                     case  VariableState.Default:
+                        if (interpolationValue >= 1)
+                        {
+                            this.BuyableLands.ChildrenLayout = Gum.Managers.ChildrenLayout.Regular;
+                        }
                         setBuyableLandsColoredFrameInstanceAlphaSecondValue = true;
                         BuyableLandsColoredFrameInstanceAlphaSecondValue = 128;
                         setBuyableLandsHeightSecondValue = true;
@@ -444,6 +468,14 @@
                         if (interpolationValue >= 1)
                         {
                             this.BuyableLands.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.BuyableLands.InnerPanelInstanceChildren_Layout = Gum.Managers.ChildrenLayout.LeftToRightStack;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.BuyableLands.InnerPanelInstanceWraps_Children = true;
                         }
                         if (interpolationValue >= 1)
                         {
@@ -456,6 +488,10 @@
                         if (interpolationValue >= 1)
                         {
                             this.BuyableLands.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToContainer;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.BuyableLands.WrapsChildren = false;
                         }
                         setBuyableLandsXSecondValue = true;
                         BuyableLandsXSecondValue = -520f;
@@ -998,6 +1034,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "BuyableLands.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = BuyableLands.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "BuyableLands.ColoredFrameInstanceAlpha",
                             Type = "int",
                             Value = BuyableLands.ColoredFrameInstanceAlpha
@@ -1017,6 +1061,22 @@
                             Name = "BuyableLands.Height Units",
                             Type = "DimensionUnitType",
                             Value = BuyableLands.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuyableLands.InnerPanelInstanceChildren Layout",
+                            Type = "ChildrenLayout",
+                            Value = BuyableLands.InnerPanelInstanceChildren_Layout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuyableLands.InnerPanelInstanceWraps Children",
+                            Type = "bool",
+                            Value = BuyableLands.InnerPanelInstanceWraps_Children
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1049,6 +1109,14 @@
                             Name = "BuyableLands.Width Units",
                             Type = "DimensionUnitType",
                             Value = BuyableLands.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuyableLands.Wraps Children",
+                            Type = "bool",
+                            Value = BuyableLands.WrapsChildren
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1536,6 +1604,14 @@
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                         {
                             SetsValue = true,
+                            Name = "BuyableLands.Children Layout",
+                            Type = "ChildrenLayout",
+                            Value = BuyableLands.ChildrenLayout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
                             Name = "BuyableLands.ColoredFrameInstanceAlpha",
                             Type = "int",
                             Value = BuyableLands.ColoredFrameInstanceAlpha + 128
@@ -1555,6 +1631,22 @@
                             Name = "BuyableLands.Height Units",
                             Type = "DimensionUnitType",
                             Value = BuyableLands.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuyableLands.InnerPanelInstanceChildren Layout",
+                            Type = "ChildrenLayout",
+                            Value = BuyableLands.InnerPanelInstanceChildren_Layout
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuyableLands.InnerPanelInstanceWraps Children",
+                            Type = "bool",
+                            Value = BuyableLands.InnerPanelInstanceWraps_Children
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
@@ -1587,6 +1679,14 @@
                             Name = "BuyableLands.Width Units",
                             Type = "DimensionUnitType",
                             Value = BuyableLands.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "BuyableLands.Wraps Children",
+                            Type = "bool",
+                            Value = BuyableLands.WrapsChildren
                         }
                         );
                         newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()

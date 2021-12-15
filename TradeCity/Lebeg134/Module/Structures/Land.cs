@@ -1,10 +1,14 @@
 /**
 * @(#) Land.cs
 */
+using JHP4SD.GumRuntimes;
+using JHP4SD.GumRuntimes.LebegForms.Resources;
+using JHP4SD.Lebeg134.Module.Graphics;
 using JHP4SD.Lebeg134.Module.MapNS;
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Session;
 using JHP4SD.Lebeg134.Module.TimeManager;
+using System;
 using System.Collections.Generic;
 
 namespace JHP4SD.Lebeg134.Module.Structures
@@ -12,6 +16,8 @@ namespace JHP4SD.Lebeg134.Module.Structures
     public abstract class Land : Structure, IUpgradeable, IProducer, IOwnable, IMapStructure
     {
         public static int StartingPrice { get; set; }
+        public static VisualUpdater landUpdater = new VisualUpdater();
+        public static LandImagesRuntime spriteLibrary = new LandImagesRuntime();
         protected Player owner;
         protected int level = 1; //Leveling starts from 1
         private int _x = -1, _y = -1;
@@ -24,6 +30,9 @@ namespace JHP4SD.Lebeg134.Module.Structures
         {
             return A.GetType() == B.GetType() && A._x == B._x && A._y == B._y && A.owner == B.owner;
         }
+
+        public abstract SpriteRuntime getSprite();
+
         public int GetStartingPrice()
         {
             return StartingPrice;
@@ -31,6 +40,10 @@ namespace JHP4SD.Lebeg134.Module.Structures
         public void acquire(Player by)
         {
             owner = by;
+        }
+        public bool hasOwner()
+        {
+            return owner != null;
         }
         public void levelUp()
         {

@@ -25,7 +25,7 @@ namespace JHP4SD.Lebeg134.Module.Session
             Player.CurrentPlayer = thisPlayer;
             FillPlayerWithStandard(thisPlayer);
             newSession.login(thisPlayer);
-
+            GenerateStartingOffers(newSession);
 
             return newSession;
         }
@@ -44,6 +44,12 @@ namespace JHP4SD.Lebeg134.Module.Session
 
 
             player.giveStructure(new CoalMine());
+        }
+        static void GenerateStartingOffers(Session session)
+        {
+            session.offers.Add(new CoalMine(), 200);
+            session.offers.Add(new Forest(), 100);
+            session.offers.Add(new IronMine(), 200);
         }
 
         internal static List<Building> GetAllBuildings()

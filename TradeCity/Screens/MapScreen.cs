@@ -17,21 +17,25 @@ using Lebeg134.Structures.Lands;
 using JHP4SD.Lebeg134.Module.Structures;
 using JHP4SD.GumRuntimes.LebegForms.BasicComponents;
 using JHP4SD.Lebeg134.Module.Resources;
+using JHP4SD.Lebeg134.Module.Graphics;
+using JHP4SD.GumRuntimes.LebegForms.Resources;
 
 namespace JHP4SD.Screens
 {
-    public partial class MapScreen
+    public partial class MapScreen : IUpdateable
     {
         Camera mainCamera = FlatRedBall.Camera.Main;
-        static Dictionary<Land, int> offers = new Dictionary<Land, int>();
         void CustomInitialize()
         {
-            LoadPlayerLands();
+            Land.spriteLibrary = new LandImagesRuntime();
+            Land.landUpdater.Register(this);
+            Resource.updater.Register(this);
+            Update();
         }
 
         void CustomActivity(bool firstTimeCalled)
         {
-            
+
 
         }
 
@@ -49,7 +53,7 @@ namespace JHP4SD.Screens
 
         void LoadPlayerLands()
         {
-            int i = 0;
+            Forms.OwnedLands.Items.Clear();
             foreach (Land land in Player.CurrentPlayer.GetLands())
             {
                 var visualItem = new OwnedLandListItemRuntime();
@@ -62,8 +66,24 @@ namespace JHP4SD.Screens
         }
         void LoadOffers()
         {
-
+            Dictionary<Land, int> offers = Session.Instance.offers;
+            Forms.BuyableLands.Items.Clear();
+            foreach (Land land in offers.Keys)
+            {
+                var visualItem = new LandListItemRuntime();
+                visualItem.Focus = land;
+                visualItem.Price = offers[land];
+                visualItem.Init();
+                var listBoxItem = visualItem.FormsControl;
+                listBoxItem.UpdateToObject(land.getName());
+                Forms.BuyableLands.Items.Add(listBoxItem);
+            }
         }
 
+        public void Update()
+        {
+            LoadPlayerLands();
+            LoadOffers();
+        }
     }
 }

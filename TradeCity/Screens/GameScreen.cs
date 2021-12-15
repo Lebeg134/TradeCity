@@ -75,7 +75,6 @@ namespace JHP4SD.Screens
 
         private void MarketTab_Click(object sender, EventArgs e)
         {
-            Player.CurrentPlayer.giveStructure(new Forest());
             MoveToScreen(typeof(MarketScreen));
             Clock.Instance.pause();
         }

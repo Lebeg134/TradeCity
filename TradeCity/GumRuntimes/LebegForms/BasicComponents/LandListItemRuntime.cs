@@ -51,8 +51,12 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
 
         partial void CustomInitialize()
         {
-            visual.Init(TextInstance, SpriteInstance, ResourceDisplayInstance, new Money(price));
             ButtonInstance.Click += ButtonInstance_Click;
+            Init();
+        }
+        public void Init()
+        {
+            visual.Init(TextInstance, SpriteInstance, ResourceDisplayInstance, new Money(price));
             UpdateButtonVisual();
         }
 
@@ -61,7 +65,8 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
             if (Player.CurrentPlayer.checkResource(new Money(price)))
             {
                 Player.CurrentPlayer.subRes(new Money(price));
-                visual.Focus.acquire(Player.CurrentPlayer);
+                Player.CurrentPlayer.giveStructure(visual.Focus);
+                Session.Instance.offers.Remove(visual.Focus);
                 Resource.updater.Update();
             }
         }

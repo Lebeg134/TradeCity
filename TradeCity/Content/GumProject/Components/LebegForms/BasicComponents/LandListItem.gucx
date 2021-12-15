@@ -143,6 +143,11 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>ListBoxItemCategory</Type>
+      <Name>ListBoxItemCategoryState</Name>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>ResourceDisplayInstance.Width</Name>
       <Value xsi:type="xsd:float">40</Value>
@@ -333,6 +338,18 @@
       <SetsValue>true</SetsValue>
     </Variable>
   </State>
+  <Category>
+    <Name>ListBoxItemCategory</Name>
+    <State>
+      <Name>Enabled</Name>
+    </State>
+    <State>
+      <Name>Highlighted</Name>
+    </State>
+    <State>
+      <Name>Selected</Name>
+    </State>
+  </Category>
   <Instance>
     <Name>Background</Name>
     <BaseType>DefaultForms/ColoredFrame</BaseType>
@@ -358,5 +375,9 @@
     <BaseType>DefaultForms/Button</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
-  <Behaviors />
+  <Behaviors>
+    <ElementBehaviorReference>
+      <BehaviorName>ListBoxItemBehavior</BehaviorName>
+    </ElementBehaviorReference>
+  </Behaviors>
 </ComponentSave>

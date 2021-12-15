@@ -77,7 +77,9 @@
     <Compile Include="Factories\CameraMidpointFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
     <Compile Include="Forms\Components\LebegForms\BasicComponents\LandListItemForms.cs" />
-    <Compile Include="Forms\Components\LebegForms\BasicComponents\LandListItemForms.Generated.cs" />
+    <Compile Include="Forms\Components\LebegForms\BasicComponents\LandListItemForms.Generated.cs">
+      <DependentUpon>LandListItemForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Components\LebegForms\BasicComponents\ResourceDisplayForms.cs" />
     <Compile Include="Forms\Components\LebegForms\BasicComponents\ResourceDisplayForms.Generated.cs">
       <DependentUpon>ResourceDisplayForms.cs</DependentUpon>
@@ -288,13 +290,18 @@
       <DependentUpon>ExitButtonRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\LandListItemRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\LandListItemRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\LandListItemRuntime.Generated.cs">
+      <DependentUpon>LandListItemRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\LandListItemVisual.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\MainMenuButtonRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\MainMenuButtonRuntime.Generated.cs">
       <DependentUpon>MainMenuButtonRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\OwnedLandListItemRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\OwnedLandListItemRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\OwnedLandListItemRuntime.Generated.cs">
+      <DependentUpon>OwnedLandListItemRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\PlayButtonRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\PlayButtonRuntime.Generated.cs">
       <DependentUpon>PlayButtonRuntime.cs</DependentUpon>

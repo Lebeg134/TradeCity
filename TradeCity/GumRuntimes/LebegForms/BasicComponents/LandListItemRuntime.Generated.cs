@@ -8,9 +8,16 @@
             {
                 Default
             }
+            public enum ListBoxItemCategory
+            {
+                Enabled,
+                Highlighted,
+                Selected
+            }
             #endregion
             #region State Fields
             VariableState mCurrentVariableState;
+            ListBoxItemCategory? mCurrentListBoxItemCategoryState;
             #endregion
             #region State Properties
             public VariableState CurrentVariableState
@@ -78,6 +85,29 @@
                             ButtonInstance.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Bottom;
                             ButtonInstance.YUnits = Gum.Converters.GeneralUnitType.PixelsFromLarge;
                             break;
+                    }
+                }
+            }
+            public ListBoxItemCategory? CurrentListBoxItemCategoryState
+            {
+                get
+                {
+                    return mCurrentListBoxItemCategoryState;
+                }
+                set
+                {
+                    if (value != null)
+                    {
+                        mCurrentListBoxItemCategoryState = value;
+                        switch(mCurrentListBoxItemCategoryState)
+                        {
+                            case  ListBoxItemCategory.Enabled:
+                                break;
+                            case  ListBoxItemCategory.Highlighted:
+                                break;
+                            case  ListBoxItemCategory.Selected:
+                                break;
+                        }
                     }
                 }
             }
@@ -627,6 +657,50 @@
                     ResumeLayout(true);
                 }
             }
+            public void InterpolateBetween (ListBoxItemCategory firstState, ListBoxItemCategory secondState, float interpolationValue) 
+            {
+                #if DEBUG
+                if (float.IsNaN(interpolationValue))
+                {
+                    throw new System.Exception("interpolationValue cannot be NaN");
+                }
+                #endif
+                switch(firstState)
+                {
+                    case  ListBoxItemCategory.Enabled:
+                        break;
+                    case  ListBoxItemCategory.Highlighted:
+                        break;
+                    case  ListBoxItemCategory.Selected:
+                        break;
+                }
+                switch(secondState)
+                {
+                    case  ListBoxItemCategory.Enabled:
+                        break;
+                    case  ListBoxItemCategory.Highlighted:
+                        break;
+                    case  ListBoxItemCategory.Selected:
+                        break;
+                }
+                var wasSuppressed = mIsLayoutSuspended;
+                if (wasSuppressed == false)
+                {
+                    SuspendLayout(true);
+                }
+                if (interpolationValue < 1)
+                {
+                    mCurrentListBoxItemCategoryState = firstState;
+                }
+                else
+                {
+                    mCurrentListBoxItemCategoryState = secondState;
+                }
+                if (!wasSuppressed)
+                {
+                    ResumeLayout(true);
+                }
+            }
             #endregion
             #region State Interpolate To
             public FlatRedBall.Glue.StateInterpolation.Tweener InterpolateTo (JHP4SD.GumRuntimes.LebegForms.BasicComponents.LandListItemRuntime.VariableState fromState,JHP4SD.GumRuntimes.LebegForms.BasicComponents.LandListItemRuntime.VariableState toState, double secondsToTake, FlatRedBall.Glue.StateInterpolation.InterpolationType interpolationType, FlatRedBall.Glue.StateInterpolation.Easing easing, object owner = null) 
@@ -679,6 +753,60 @@
                 }
                 tweener.PositionChanged = newPosition => this.InterpolateBetween(current, toAsStateSave, newPosition);
                 tweener.Ended += ()=> this.CurrentVariableState = toState;
+                tweener.Start();
+                StateInterpolationPlugin.TweenerManager.Self.Add(tweener);
+                return tweener;
+            }
+            public FlatRedBall.Glue.StateInterpolation.Tweener InterpolateTo (JHP4SD.GumRuntimes.LebegForms.BasicComponents.LandListItemRuntime.ListBoxItemCategory fromState,JHP4SD.GumRuntimes.LebegForms.BasicComponents.LandListItemRuntime.ListBoxItemCategory toState, double secondsToTake, FlatRedBall.Glue.StateInterpolation.InterpolationType interpolationType, FlatRedBall.Glue.StateInterpolation.Easing easing, object owner = null) 
+            {
+                FlatRedBall.Glue.StateInterpolation.Tweener tweener = new FlatRedBall.Glue.StateInterpolation.Tweener(from:0, to:1, duration:(float)secondsToTake, type:interpolationType, easing:easing );
+                if (owner == null)
+                {
+                    tweener.Owner = this;
+                }
+                else
+                {
+                    tweener.Owner = owner;
+                }
+                tweener.PositionChanged = newPosition => this.InterpolateBetween(fromState, toState, newPosition);
+                tweener.Start();
+                StateInterpolationPlugin.TweenerManager.Self.Add(tweener);
+                return tweener;
+            }
+            public FlatRedBall.Glue.StateInterpolation.Tweener InterpolateTo (ListBoxItemCategory toState, double secondsToTake, FlatRedBall.Glue.StateInterpolation.InterpolationType interpolationType, FlatRedBall.Glue.StateInterpolation.Easing easing, object owner = null ) 
+            {
+                Gum.DataTypes.Variables.StateSave current = GetCurrentValuesOnState(toState);
+                Gum.DataTypes.Variables.StateSave toAsStateSave = this.ElementSave.Categories.First(item => item.Name == "ListBoxItemCategory").States.First(item => item.Name == toState.ToString());
+                FlatRedBall.Glue.StateInterpolation.Tweener tweener = new FlatRedBall.Glue.StateInterpolation.Tweener(from: 0, to: 1, duration: (float)secondsToTake, type: interpolationType, easing: easing);
+                if (owner == null)
+                {
+                    tweener.Owner = this;
+                }
+                else
+                {
+                    tweener.Owner = owner;
+                }
+                tweener.PositionChanged = newPosition => this.InterpolateBetween(current, toAsStateSave, newPosition);
+                tweener.Ended += ()=> this.CurrentListBoxItemCategoryState = toState;
+                tweener.Start();
+                StateInterpolationPlugin.TweenerManager.Self.Add(tweener);
+                return tweener;
+            }
+            public FlatRedBall.Glue.StateInterpolation.Tweener InterpolateToRelative (ListBoxItemCategory toState, double secondsToTake, FlatRedBall.Glue.StateInterpolation.InterpolationType interpolationType, FlatRedBall.Glue.StateInterpolation.Easing easing, object owner = null ) 
+            {
+                Gum.DataTypes.Variables.StateSave current = GetCurrentValuesOnState(toState);
+                Gum.DataTypes.Variables.StateSave toAsStateSave = AddToCurrentValuesWithState(toState);
+                FlatRedBall.Glue.StateInterpolation.Tweener tweener = new FlatRedBall.Glue.StateInterpolation.Tweener(from: 0, to: 1, duration: (float)secondsToTake, type: interpolationType, easing: easing);
+                if (owner == null)
+                {
+                    tweener.Owner = this;
+                }
+                else
+                {
+                    tweener.Owner = owner;
+                }
+                tweener.PositionChanged = newPosition => this.InterpolateBetween(current, toAsStateSave, newPosition);
+                tweener.Ended += ()=> this.CurrentListBoxItemCategoryState = toState;
                 tweener.Start();
                 StateInterpolationPlugin.TweenerManager.Self.Add(tweener);
                 return tweener;
@@ -1550,6 +1678,34 @@
                 }
                 return newState;
             }
+            private Gum.DataTypes.Variables.StateSave GetCurrentValuesOnState (ListBoxItemCategory state) 
+            {
+                Gum.DataTypes.Variables.StateSave newState = new Gum.DataTypes.Variables.StateSave();
+                switch(state)
+                {
+                    case  ListBoxItemCategory.Enabled:
+                        break;
+                    case  ListBoxItemCategory.Highlighted:
+                        break;
+                    case  ListBoxItemCategory.Selected:
+                        break;
+                }
+                return newState;
+            }
+            private Gum.DataTypes.Variables.StateSave AddToCurrentValuesWithState (ListBoxItemCategory state) 
+            {
+                Gum.DataTypes.Variables.StateSave newState = new Gum.DataTypes.Variables.StateSave();
+                switch(state)
+                {
+                    case  ListBoxItemCategory.Enabled:
+                        break;
+                    case  ListBoxItemCategory.Highlighted:
+                        break;
+                    case  ListBoxItemCategory.Selected:
+                        break;
+                }
+                return newState;
+            }
             #endregion
             public override void ApplyState (Gum.DataTypes.Variables.StateSave state) 
             {
@@ -1560,6 +1716,12 @@
                     if (category == null)
                     {
                         if (state.Name == "Default") this.mCurrentVariableState = VariableState.Default;
+                    }
+                    else if (category.Name == "ListBoxItemCategory")
+                    {
+                        if(state.Name == "Enabled") this.mCurrentListBoxItemCategoryState = ListBoxItemCategory.Enabled;
+                        if(state.Name == "Highlighted") this.mCurrentListBoxItemCategoryState = ListBoxItemCategory.Highlighted;
+                        if(state.Name == "Selected") this.mCurrentListBoxItemCategoryState = ListBoxItemCategory.Selected;
                     }
                 }
                 base.ApplyState(state);
@@ -1608,7 +1770,7 @@
                 ButtonInstance.Click += (unused) => ButtonInstanceClick?.Invoke(this);
                 if (tryCreateFormsObject)
                 {
-                    FormsControlAsObject = new JHP4SD.FormsControls.Components.LebegForms.BasicComponents.LandListItemForms(this);
+                    FormsControlAsObject = new FlatRedBall.Forms.Controls.ListBoxItem(this);
                 }
             }
             public override void AddToManagers (RenderingLibrary.SystemManagers managers, RenderingLibrary.Graphics.Layer layer) 
@@ -1620,6 +1782,6 @@
                 CustomInitialize();
             }
             partial void CustomInitialize();
-            public JHP4SD.FormsControls.Components.LebegForms.BasicComponents.LandListItemForms FormsControl {get => (JHP4SD.FormsControls.Components.LebegForms.BasicComponents.LandListItemForms) FormsControlAsObject;}
+            public FlatRedBall.Forms.Controls.ListBoxItem FormsControl {get => (FlatRedBall.Forms.Controls.ListBoxItem) FormsControlAsObject;}
         }
     }

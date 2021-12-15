@@ -69,7 +69,18 @@ namespace JHP4SD.Lebeg134.Module.Session
                     ret.Add((Building)item);
                 }
             }
-
+            return ret;
+        }
+        public List<Land> GetLands()
+        {
+            List<Land> ret = new List<Land>();
+            foreach (IOwnable item in owned)
+            {
+                if (item is Land)
+                {
+                    ret.Add((Land)item);
+                }
+            }
             return ret;
         }
         public bool hasResource(Resource res)

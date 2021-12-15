@@ -32,6 +32,7 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
             AboveResourceDisplayInstance.Focus = _focus.Sell.getNewResource(_focus.above);
             AboveResourceDisplayInstance.Update();
             Update();
+            ForResourceDisplayInstance.Amount = _focus.getValue();
         }
         public void register()
         {

@@ -2856,6 +2856,13 @@
         "ElementType": "Components",
         "EventType": 2,
         "TimestampUtc": "2021-12-15T19:47:52.6037906Z"
+      },
+      {
+        "NewName": " MarketGum.TextInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-15T22:02:09.6775732Z"
       }
     ],
     "torok": []

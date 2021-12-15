@@ -43,6 +43,7 @@
                             AmountText1.Parent = this.GetGraphicalUiElementByName("AutoAmountContainerInstance");
                             AutoSellAmountTextBoxInstance.Parent = this.GetGraphicalUiElementByName("AutoAmountContainerInstance");
                             AutoSellButtonInstance.Parent = this.GetGraphicalUiElementByName("NewLsitingUIContainer");
+                            TextInstance1.Parent = this.GetGraphicalUiElementByName("ResourceDisplayInstance");
                             MyListingsLabelBackground.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Black;
                             MyListingsList.ListBoxBackgroundColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
                             NewListingBackground.CurrentColorCategoryState = JHP4SD.GumRuntimes.DefaultForms.ColoredFrameRuntime.ColorCategory.Gray;
@@ -192,6 +193,21 @@
                             AutoSellButtonInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             AutoSellButtonInstance.X = 0f;
                             AutoSellButtonInstance.Y = 0f;
+                            TextInstance1.Blue = 0;
+                            TextInstance1.Font = "Arial";
+                            TextInstance1.Green = 0;
+                            TextInstance1.Height = 0f;
+                            TextInstance1.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            TextInstance1.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                            TextInstance1.Red = 255;
+                            TextInstance1.Text = "Coming soon";
+                            TextInstance1.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            TextInstance1.Width = 0f;
+                            TextInstance1.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                            TextInstance1.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                            TextInstance1.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                            TextInstance1.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                            TextInstance1.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                             break;
                     }
                 }
@@ -466,6 +482,26 @@
                 bool setTextInstanceWidthSecondValue = false;
                 float TextInstanceWidthFirstValue= 0;
                 float TextInstanceWidthSecondValue= 0;
+                bool setTextInstance1BlueFirstValue = false;
+                bool setTextInstance1BlueSecondValue = false;
+                int TextInstance1BlueFirstValue= 0;
+                int TextInstance1BlueSecondValue= 0;
+                bool setTextInstance1GreenFirstValue = false;
+                bool setTextInstance1GreenSecondValue = false;
+                int TextInstance1GreenFirstValue= 0;
+                int TextInstance1GreenSecondValue= 0;
+                bool setTextInstance1HeightFirstValue = false;
+                bool setTextInstance1HeightSecondValue = false;
+                float TextInstance1HeightFirstValue= 0;
+                float TextInstance1HeightSecondValue= 0;
+                bool setTextInstance1RedFirstValue = false;
+                bool setTextInstance1RedSecondValue = false;
+                int TextInstance1RedFirstValue= 0;
+                int TextInstance1RedSecondValue= 0;
+                bool setTextInstance1WidthFirstValue = false;
+                bool setTextInstance1WidthSecondValue = false;
+                float TextInstance1WidthFirstValue= 0;
+                float TextInstance1WidthSecondValue= 0;
                 bool setValueTextBlueFirstValue = false;
                 bool setValueTextBlueSecondValue = false;
                 int ValueTextBlueFirstValue= 0;
@@ -962,6 +998,60 @@
                         if (interpolationValue < 1)
                         {
                             this.TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
+                        }
+                        setTextInstance1BlueFirstValue = true;
+                        TextInstance1BlueFirstValue = 0;
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance1.Font = "Arial";
+                        }
+                        setTextInstance1GreenFirstValue = true;
+                        TextInstance1GreenFirstValue = 0;
+                        setTextInstance1HeightFirstValue = true;
+                        TextInstance1HeightFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance1.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance1.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance1.Parent = this.GetGraphicalUiElementByName("ResourceDisplayInstance");
+                        }
+                        setTextInstance1RedFirstValue = true;
+                        TextInstance1RedFirstValue = 255;
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance1.Text = "Coming soon";
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance1.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        setTextInstance1WidthFirstValue = true;
+                        TextInstance1WidthFirstValue = 0f;
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance1.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance1.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance1.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance1.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance1.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
                         }
                         if (interpolationValue < 1)
                         {
@@ -1494,6 +1584,60 @@
                         {
                             this.TextInstance.XUnits = Gum.Converters.GeneralUnitType.PixelsFromSmall;
                         }
+                        setTextInstance1BlueSecondValue = true;
+                        TextInstance1BlueSecondValue = 0;
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance1.Font = "Arial";
+                        }
+                        setTextInstance1GreenSecondValue = true;
+                        TextInstance1GreenSecondValue = 0;
+                        setTextInstance1HeightSecondValue = true;
+                        TextInstance1HeightSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance1.HeightUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance1.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance1.Parent = this.GetGraphicalUiElementByName("ResourceDisplayInstance");
+                        }
+                        setTextInstance1RedSecondValue = true;
+                        TextInstance1RedSecondValue = 255;
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance1.Text = "Coming soon";
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance1.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        setTextInstance1WidthSecondValue = true;
+                        TextInstance1WidthSecondValue = 0f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance1.WidthUnits = Gum.DataTypes.DimensionUnitType.RelativeToChildren;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance1.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance1.XUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance1.YOrigin = RenderingLibrary.Graphics.VerticalAlignment.Center;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance1.YUnits = Gum.Converters.GeneralUnitType.PixelsFromMiddle;
+                        }
                         if (interpolationValue >= 1)
                         {
                             this.ToSellAmountTextBoxInstance.Parent = this.GetGraphicalUiElementByName("AmountContainerInstance");
@@ -1816,6 +1960,26 @@
                 if (setTextInstanceWidthFirstValue && setTextInstanceWidthSecondValue)
                 {
                     TextInstance.Width = TextInstanceWidthFirstValue * (1 - interpolationValue) + TextInstanceWidthSecondValue * interpolationValue;
+                }
+                if (setTextInstance1BlueFirstValue && setTextInstance1BlueSecondValue)
+                {
+                    TextInstance1.Blue = FlatRedBall.Math.MathFunctions.RoundToInt(TextInstance1BlueFirstValue* (1 - interpolationValue) + TextInstance1BlueSecondValue * interpolationValue);
+                }
+                if (setTextInstance1GreenFirstValue && setTextInstance1GreenSecondValue)
+                {
+                    TextInstance1.Green = FlatRedBall.Math.MathFunctions.RoundToInt(TextInstance1GreenFirstValue* (1 - interpolationValue) + TextInstance1GreenSecondValue * interpolationValue);
+                }
+                if (setTextInstance1HeightFirstValue && setTextInstance1HeightSecondValue)
+                {
+                    TextInstance1.Height = TextInstance1HeightFirstValue * (1 - interpolationValue) + TextInstance1HeightSecondValue * interpolationValue;
+                }
+                if (setTextInstance1RedFirstValue && setTextInstance1RedSecondValue)
+                {
+                    TextInstance1.Red = FlatRedBall.Math.MathFunctions.RoundToInt(TextInstance1RedFirstValue* (1 - interpolationValue) + TextInstance1RedSecondValue * interpolationValue);
+                }
+                if (setTextInstance1WidthFirstValue && setTextInstance1WidthSecondValue)
+                {
+                    TextInstance1.Width = TextInstance1WidthFirstValue * (1 - interpolationValue) + TextInstance1WidthSecondValue * interpolationValue;
                 }
                 if (setValueTextBlueFirstValue && setValueTextBlueSecondValue)
                 {
@@ -3274,6 +3438,134 @@
                             Value = AutoSellButtonInstance.Y
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Blue",
+                            Type = "int",
+                            Value = TextInstance1.Blue
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Font",
+                            Type = "string",
+                            Value = TextInstance1.Font
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Green",
+                            Type = "int",
+                            Value = TextInstance1.Green
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Height",
+                            Type = "float",
+                            Value = TextInstance1.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = TextInstance1.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = TextInstance1.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Parent",
+                            Type = "string",
+                            Value = TextInstance1.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Red",
+                            Type = "int",
+                            Value = TextInstance1.Red
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Text",
+                            Type = "string",
+                            Value = TextInstance1.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.VerticalAlignment",
+                            Type = "VerticalAlignment",
+                            Value = TextInstance1.VerticalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Width",
+                            Type = "float",
+                            Value = TextInstance1.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = TextInstance1.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = TextInstance1.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.X Units",
+                            Type = "PositionUnitType",
+                            Value = TextInstance1.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = TextInstance1.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Y Units",
+                            Type = "PositionUnitType",
+                            Value = TextInstance1.YUnits
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -4620,6 +4912,134 @@
                             Value = AutoSellButtonInstance.Y + 0f
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Blue",
+                            Type = "int",
+                            Value = TextInstance1.Blue + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Font",
+                            Type = "string",
+                            Value = TextInstance1.Font
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Green",
+                            Type = "int",
+                            Value = TextInstance1.Green + 0
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Height",
+                            Type = "float",
+                            Value = TextInstance1.Height + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = TextInstance1.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.HorizontalAlignment",
+                            Type = "HorizontalAlignment",
+                            Value = TextInstance1.HorizontalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Parent",
+                            Type = "string",
+                            Value = TextInstance1.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Red",
+                            Type = "int",
+                            Value = TextInstance1.Red + 255
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Text",
+                            Type = "string",
+                            Value = TextInstance1.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.VerticalAlignment",
+                            Type = "VerticalAlignment",
+                            Value = TextInstance1.VerticalAlignment
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Width",
+                            Type = "float",
+                            Value = TextInstance1.Width + 0f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = TextInstance1.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.X Origin",
+                            Type = "HorizontalAlignment",
+                            Value = TextInstance1.XOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.X Units",
+                            Type = "PositionUnitType",
+                            Value = TextInstance1.XUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Y Origin",
+                            Type = "VerticalAlignment",
+                            Value = TextInstance1.YOrigin
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance1.Y Units",
+                            Type = "PositionUnitType",
+                            Value = TextInstance1.YUnits
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -4661,6 +5081,7 @@
             public JHP4SD.GumRuntimes.TextRuntime AmountText1 { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.TextBoxRuntime AutoSellAmountTextBoxInstance { get; set; }
             public JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime AutoSellButtonInstance { get; set; }
+            public JHP4SD.GumRuntimes.TextRuntime TextInstance1 { get; set; }
             public MarketGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -4709,6 +5130,7 @@
                 AmountText1 = this.GetGraphicalUiElementByName("AmountText1") as JHP4SD.GumRuntimes.TextRuntime;
                 AutoSellAmountTextBoxInstance = this.GetGraphicalUiElementByName("AutoSellAmountTextBoxInstance") as JHP4SD.GumRuntimes.DefaultForms.TextBoxRuntime;
                 AutoSellButtonInstance = this.GetGraphicalUiElementByName("AutoSellButtonInstance") as JHP4SD.GumRuntimes.DefaultForms.ButtonRuntime;
+                TextInstance1 = this.GetGraphicalUiElementByName("TextInstance1") as JHP4SD.GumRuntimes.TextRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new JHP4SD.FormsControls.Screens.MarketGumForms(this);

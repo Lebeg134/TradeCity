@@ -38,6 +38,7 @@ namespace JHP4SD.Screens
             Forms.ComboBoxInstance.SelectionChanged += ComboBoxInstance_SelectionChanged;
             Forms.ToSellAmountTextBoxInstance.TextChanged += TextChanged;
             Forms.AutoSellAmountTextBoxInstance.TextChanged += TextChanged;
+            
         }
 
         private void TextChanged(object sender, EventArgs e)
@@ -126,7 +127,6 @@ namespace JHP4SD.Screens
                     RefreshListingsList();
                 };
                 var listBoxItem = visualItem.FormsControl;
-                listBoxItem.UpdateToObject(listing.Sell.getName());
                 Forms.MyListingsList.Items.Add(listBoxItem);
             }
         }
@@ -142,7 +142,6 @@ namespace JHP4SD.Screens
         public void Update()
         {
             UpdateButtons();
-            Console.WriteLine(Forms.ComboBoxInstance.SelectedObject?.ToString());
         }
         void UpdateButtons()
         {
@@ -164,7 +163,7 @@ namespace JHP4SD.Screens
                 Forms.AutoSellButtonInstance.IsEnabled = false;
             }
         }
-        SPListing GetListing(bool all = false)
+        public SPListing GetListing(bool all = false)
         {
             if (!AreSellFieldsValid()) return null;
             int amount = 1;

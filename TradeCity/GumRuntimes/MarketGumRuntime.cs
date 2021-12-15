@@ -1,3 +1,4 @@
+using JHP4SD.Lebeg134.Module.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ namespace JHP4SD.GumRuntimes
     {
         partial void CustomInitialize () 
         {
+
         }
     }
 }

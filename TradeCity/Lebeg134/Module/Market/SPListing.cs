@@ -36,21 +36,35 @@ namespace JHP4SD.Lebeg134.Module.Market
         {
             Complete();
         }
-        public void Complete()
+        public void Complete(bool throws = false)
         {
-            Player player = Player.CurrentPlayer;
-            if (player.getRes(Sell) > above && player.hasResource(Sell))
+            if (Player.CurrentPlayer.getRes(Sell) > above && Player.CurrentPlayer.hasResource(Sell))
             {
-                player.subRes(Sell);
-                player.giveRes(new Money(getValue()));
+                try
+                {
+                    Player.CurrentPlayer.subRes(Sell);
+                    Player.CurrentPlayer.giveRes(new Money(getValue()));
+                }
+                catch (Exception)
+                {
+                    if (throws) throw;
+                }
+                
             }
         }
         public void completeAll()
         {
-            Player player = Player.CurrentPlayer;
-            while (player.getRes(Sell) > above && player.hasResource(Sell))
+            while (Player.CurrentPlayer.getRes(Sell) > above && Player.CurrentPlayer.hasResource(Sell))
             {
-                Complete();
+                try
+                {
+                    Complete();
+                }
+                catch (Exception)
+                {
+
+                    break;
+                }
             }
         }
         public int getValue()

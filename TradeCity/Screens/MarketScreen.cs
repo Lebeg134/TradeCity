@@ -25,6 +25,8 @@ namespace JHP4SD.Screens
     public partial class MarketScreen : IUpdateable
     {
         static List<SPListing> listings = new List<SPListing>();
+        List<Resource> selections;
+        Resource selection;
         void CustomInitialize()
         {
             RefreshListingsList();
@@ -45,6 +47,8 @@ namespace JHP4SD.Screens
 
         private void ComboBoxInstance_SelectionChanged(object arg1, FlatRedBall.Forms.Controls.SelectionChangedEventArgs arg2)
         {
+            Console.WriteLine(Forms.ComboBoxInstance.SelectedIndex);
+            selection = selections[Forms.ComboBoxInstance.SelectedIndex];
             UpdateButtons();
         }
 
@@ -64,7 +68,9 @@ namespace JHP4SD.Screens
         {
             if (AreListingFieldsValid())
             {
-                listings.Add(GetListing());
+                SPListing newListing = GetListing();
+                listings.Add(newListing);
+                newListing.register();
                 RefreshListingsList();
             }
         }
@@ -89,22 +95,26 @@ namespace JHP4SD.Screens
 
         void InitCombobox()
         {
+            selections = new List<Resource>();
             foreach (Resource resource in Player.CurrentPlayer.getAllRes())
             {
-
                 if (resource is ISellable)
                 {
                     if (resource is Money) continue;
+                    selections.Add(resource);
                     var visualItem = new ResourceListItemSmallRuntime();
                     visualItem.Focus = resource;
                     var listBoxItem = visualItem.FormsControl;
-                    listBoxItem.UpdateToObject(resource.getName());
+                    listBoxItem.UpdateToObject(resource.ToString());
                     Forms.ComboBoxInstance.Items.Add(listBoxItem);
+                    visualItem.TextInstance.Text = resource.getName();
+                    
                 }
             }
         }
         void RefreshListingsList()
         {
+            Forms.MyListingsList.Items.Clear();
             foreach (SPListing listing in listings)
             {
                 var visualItem = new ListingListBoxItemRuntime();
@@ -132,11 +142,12 @@ namespace JHP4SD.Screens
         public void Update()
         {
             UpdateButtons();
+            Console.WriteLine(Forms.ComboBoxInstance.SelectedObject?.ToString());
         }
         void UpdateButtons()
         {
             int amount = 0;
-            Resource resource = (Resource)Forms.ComboBoxInstance.SelectedObject;
+            var resource = Forms.ComboBoxInstance.SelectedObject;
             if (int.TryParse(Forms.ToSellAmountTextBoxInstance.Text, out amount) && amount > 0 && resource != null)
             {
                 Forms.SellOneButtonInstance.IsEnabled = true;
@@ -158,7 +169,7 @@ namespace JHP4SD.Screens
             if (!AreSellFieldsValid()) return null;
             int amount = 1;
             int.TryParse(Forms.ToSellAmountTextBoxInstance.Text, out amount);
-            Resource resource = ((ResourceListItemSmallRuntime)Forms.ComboBoxInstance.SelectedObject).Focus.getNewResource(amount);
+            Resource resource = selection.getNewResource(amount);
             if (!AreListingFieldsValid() || all) return new SPListing(resource, 0);
             int above = 1000;
             int.TryParse(Forms.AutoSellAmountTextBoxInstance.Text, out above);

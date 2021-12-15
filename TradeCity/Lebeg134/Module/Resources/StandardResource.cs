@@ -12,7 +12,7 @@ namespace JHP4SD.Lebeg134.Module.Resources
         }
         public double getValue()
         {
-            throw new System.NotImplementedException();
+            return 10; // TODO MAKE SOMETHING!!
         }
         public void reportListing(Listing listing)
         {

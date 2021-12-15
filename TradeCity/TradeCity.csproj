@@ -315,7 +315,9 @@
       <DependentUpon>ResourceDisplayRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceListItemSmallRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceListItemSmallRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceListItemSmallRuntime.Generated.cs">
+      <DependentUpon>ResourceListItemSmallRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\TabButtonRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\TabButtonRuntime.Generated.cs">
       <DependentUpon>TabButtonRuntime.cs</DependentUpon>

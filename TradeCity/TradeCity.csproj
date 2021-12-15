@@ -314,10 +314,8 @@
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceDisplayRuntime.Generated.cs">
       <DependentUpon>ResourceDisplayRuntime.cs</DependentUpon>
     </Compile>
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceListItemRuntime.cs" />
-    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceListItemRuntime.Generated.cs">
-      <DependentUpon>ResourceListItemRuntime.cs</DependentUpon>
-    </Compile>
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceListItemSmallRuntime.cs" />
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceListItemSmallRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\TabButtonRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\TabButtonRuntime.Generated.cs">
       <DependentUpon>TabButtonRuntime.cs</DependentUpon>
@@ -848,9 +846,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>resourcedisplay</Name>
     </None>
-    <None Include="content\gumproject\components\lebegforms\basiccomponents\resourcelistitem.gucx">
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\resourcelistitemsmall.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>resourcelistitem</Name>
+      <Name>resourcelistitemsmall</Name>
     </None>
     <None Include="content\gumproject\components\lebegforms\basiccomponents\tabbutton.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

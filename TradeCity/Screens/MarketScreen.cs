@@ -95,10 +95,10 @@ namespace JHP4SD.Screens
                 if (resource is ISellable)
                 {
                     if (resource is Money) continue;
-                    ListBoxItemRuntime visualItem = new ListBoxItemRuntime();
+                    var visualItem = new ResourceListItemSmallRuntime();
+                    visualItem.Focus = resource;
                     var listBoxItem = visualItem.FormsControl;
-                    listBoxItem.UpdateToObject(resource);
-                    visualItem.TextInstance.Text = resource.getName();
+                    listBoxItem.UpdateToObject(resource.getName());
                     Forms.ComboBoxInstance.Items.Add(listBoxItem);
                 }
             }
@@ -158,7 +158,7 @@ namespace JHP4SD.Screens
             if (!AreSellFieldsValid()) return null;
             int amount = 1;
             int.TryParse(Forms.ToSellAmountTextBoxInstance.Text, out amount);
-            Resource resource = ((Resource)Forms.ComboBoxInstance.SelectedObject).getNewResource(amount);
+            Resource resource = ((ResourceListItemSmallRuntime)Forms.ComboBoxInstance.SelectedObject).Focus.getNewResource(amount);
             if (!AreListingFieldsValid() || all) return new SPListing(resource, 0);
             int above = 1000;
             int.TryParse(Forms.AutoSellAmountTextBoxInstance.Text, out above);

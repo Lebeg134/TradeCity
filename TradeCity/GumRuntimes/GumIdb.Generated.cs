@@ -23,7 +23,6 @@
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/Label", typeof(JHP4SD.GumRuntimes.DefaultForms.LabelRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/ListBox", typeof(JHP4SD.GumRuntimes.DefaultForms.ListBoxRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/ListBoxItem", typeof(JHP4SD.GumRuntimes.DefaultForms.ListBoxItemRuntime));
-                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/ResourceListItemSmall", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceListItemSmallRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/PasswordBox", typeof(JHP4SD.GumRuntimes.DefaultForms.PasswordBoxRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/RadioButton", typeof(JHP4SD.GumRuntimes.DefaultForms.RadioButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/ScrollBar", typeof(JHP4SD.GumRuntimes.DefaultForms.ScrollBarRuntime));
@@ -47,6 +46,7 @@
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/OwnedLandListItem", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.OwnedLandListItemRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/PlayButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.PlayButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/ResourceDisplay", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceDisplayRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/ResourceListItem", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceListItemRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/ResourceListItemSmall", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.ResourceListItemSmallRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/BasicComponents/TabButton", typeof(JHP4SD.GumRuntimes.LebegForms.BasicComponents.TabButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("LebegForms/ComplexComponents/ScreenSelector", typeof(JHP4SD.GumRuntimes.LebegForms.ComplexComponents.ScreenSelectorRuntime));

@@ -98,11 +98,6 @@
     <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
-    <Name>LebegForms/BasicComponents/ResourceListItemSmall</Name>
-    <ElementType>Component</ElementType>
-    <LinkType>ReferenceOriginal</LinkType>
-  </ComponentReference>
-  <ComponentReference>
     <Name>DefaultForms/PasswordBox</Name>
     <ElementType>Component</ElementType>
     <LinkType>ReferenceOriginal</LinkType>
@@ -214,6 +209,11 @@
   </ComponentReference>
   <ComponentReference>
     <Name>LebegForms/BasicComponents/ResourceDisplay</Name>
+    <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
+  </ComponentReference>
+  <ComponentReference>
+    <Name>LebegForms/BasicComponents/ResourceListItem</Name>
     <ElementType>Component</ElementType>
     <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>

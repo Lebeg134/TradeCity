@@ -314,6 +314,7 @@
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceDisplayRuntime.Generated.cs">
       <DependentUpon>ResourceDisplayRuntime.cs</DependentUpon>
     </Compile>
+    <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceListItemRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceListItemSmallRuntime.cs" />
     <Compile Include="GumRuntimes\LebegForms\BasicComponents\ResourceListItemSmallRuntime.Generated.cs">
       <DependentUpon>ResourceListItemSmallRuntime.cs</DependentUpon>
@@ -847,6 +848,10 @@
     <None Include="content\gumproject\components\lebegforms\basiccomponents\resourcedisplay.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>resourcedisplay</Name>
+    </None>
+    <None Include="content\gumproject\components\lebegforms\basiccomponents\resourcelistitem.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>resourcelistitem</Name>
     </None>
     <None Include="content\gumproject\components\lebegforms\basiccomponents\resourcelistitemsmall.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

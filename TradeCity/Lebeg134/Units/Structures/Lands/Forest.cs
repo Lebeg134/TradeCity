@@ -5,15 +5,16 @@ using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Structures;
 using JHP4SD.Lebeg134.Module.Utilities;
 using Lebeg134.Resources.Common;
+using System;
 using System.Collections.Generic;
 /**
 * @(#) Forest.cs
 */
 namespace Lebeg134.Structures.Lands
 {
+    [Serializable]
     public class Forest : Land
     {
-
         protected static List<Resource>[] upgradeLevelsCostStats
         {
             get

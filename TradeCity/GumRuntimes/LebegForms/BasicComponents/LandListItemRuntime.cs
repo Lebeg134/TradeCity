@@ -67,7 +67,7 @@ namespace JHP4SD.GumRuntimes.LebegForms.BasicComponents
                 Player.CurrentPlayer.subRes(new Money(price));
                 Player.CurrentPlayer.giveStructure(visual.Focus);
                 Session.Instance.offers.Remove(visual.Focus);
-                int newPrice = price * 2 < price + 500 ? price * 2 : price + 500;
+                int newPrice = price * 2;
                 Session.Instance.offers.Add(visual.Focus.GetNew(),newPrice);
                 Resource.updater.Update();
             }

@@ -2,9 +2,11 @@
 * @(#) ContinousResource.cs
 */
 using JHP4SD.Lebeg134.Module.TimeManager;
+using System;
 
 namespace JHP4SD.Lebeg134.Module.Resources
 {
+    [Serializable]
     public abstract class ContinousResource : Resource, ITickable
     {
         static int baseLine = 0;

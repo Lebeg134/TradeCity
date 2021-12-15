@@ -4,10 +4,12 @@
 using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Graphics;
 using JHP4SD.Lebeg134.Units;
+using System;
 using System.Collections.Generic;
 namespace JHP4SD.Lebeg134.Module.Structures
 {
-	public abstract class Structure : IEqualityComparer<Structure>
+    [Serializable]
+    public abstract class Structure : IEqualityComparer<Structure>
 	{
         public static VisualUpdater updater = new VisualUpdater();
         protected bool state; //true = on, false = off

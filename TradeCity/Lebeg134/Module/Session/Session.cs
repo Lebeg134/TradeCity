@@ -7,6 +7,9 @@ using JHP4SD.Lebeg134.Module.MarketNS;
 using System.Collections.Generic;
 using static JHP4SD.Lebeg134.Module.Session.Player;
 using System;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using JHP4SD.Lebeg134.Module.Structures;
 
 namespace JHP4SD.Lebeg134.Module.Session
@@ -14,6 +17,7 @@ namespace JHP4SD.Lebeg134.Module.Session
     [Serializable]
     public class Session : ITickable
     {
+        public static readonly string Filename = "save.dat";
         //Market _market;
         List<Player> _players;
         //Map _map; not implemented
@@ -42,16 +46,32 @@ namespace JHP4SD.Lebeg134.Module.Session
             Clock.Instance.start();
             Running = true;
         }
-        /// <summary>
-        /// Loads saved instance
-        /// </summary>
-        public Session load()
+        ///// <summary>
+        ///// Loads saved instance
+        ///// </summary>
+        //public Session load()
+        //{
+        //    return null;
+        //}
+        //public void save(string path)
+        //{
+        //    //Memento?	
+        //}
+
+        public static void save()
         {
-            return null;
+            Stream stream = File.OpenWrite(Filename);
+            BinaryFormatter b = new BinaryFormatter();
+            b.Serialize(stream, Instance);
+            stream.Close();
         }
-        public void save(string path)
+        public static void load()
         {
-            //Memento?	
+            Stream stream = File.OpenRead(Filename);
+            BinaryFormatter b = new BinaryFormatter();
+            _instance = (Session)b.Deserialize(stream);
+            stream.Close();
+            CurrentPlayer = Instance._players[0]; // TODO need to change when multiple players
         }
         public void login(Player player)
         {

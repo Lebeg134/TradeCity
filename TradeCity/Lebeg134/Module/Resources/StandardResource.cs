@@ -2,9 +2,11 @@
 * @(#) StandardResource.cs
 */
 using JHP4SD.Lebeg134.Module.MarketNS;
+using System;
 
 namespace JHP4SD.Lebeg134.Module.Resources
 {
+    [Serializable]
     public abstract class StandardResource : Resource, ISellable
     {
         public StandardResource(int amount):base(amount)

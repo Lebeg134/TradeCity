@@ -74,6 +74,7 @@ namespace JHP4SD.Screens
                 visualItem.Focus = land;
                 visualItem.Price = offers[land];
                 visualItem.Init();
+                visualItem.register();
                 var listBoxItem = visualItem.FormsControl;
                 listBoxItem.UpdateToObject(land.getName());
                 Forms.BuyableLands.Items.Add(listBoxItem);

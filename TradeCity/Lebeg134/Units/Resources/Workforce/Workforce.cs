@@ -1,10 +1,12 @@
 using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
+using System;
 /**
 * @(#) Workforce.cs
 */
 namespace Lebeg134.Resources.Workforce
 {
+    [Serializable]
     public class Workforce : LimitResource
     {
         public Workforce(int amount) : base(amount) { }

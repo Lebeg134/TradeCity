@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace JHP4SD.Lebeg134.Units.Resources.Common
 {
+    [Serializable]
     class Money : StandardResource
     {
         public Money(int amount) : base(amount) { }

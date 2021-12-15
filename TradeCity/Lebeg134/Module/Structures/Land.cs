@@ -13,6 +13,7 @@ using System.Collections.Generic;
 
 namespace JHP4SD.Lebeg134.Module.Structures
 {
+    [Serializable]
     public abstract class Land : Structure, IUpgradeable, IProducer, IOwnable, IMapStructure
     {
         public static int StartingPrice { get; set; }

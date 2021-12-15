@@ -1,9 +1,12 @@
-/**
- * @(#) LimitResource.cs
- */
 
+
+using System;
+/**
+* @(#) LimitResource.cs
+*/
 namespace JHP4SD.Lebeg134.Module.Resources
 {
+    [Serializable]
     public abstract class LimitResource : Resource
     {
         static int limit;

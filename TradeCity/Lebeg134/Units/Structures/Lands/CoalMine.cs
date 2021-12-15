@@ -5,13 +5,15 @@ using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Structures;
 using JHP4SD.Lebeg134.Units.Resources.Common;
 using Lebeg134.Resources.EnergySector;
+using System;
 using System.Collections.Generic;
 /**
 * @(#) CoalMine.cs
 */
 namespace Lebeg134.Structures.Lands
 {
-	public class CoalMine: Land
+    [Serializable]
+    public class CoalMine: Land
 	{
         public override string getName()
         {

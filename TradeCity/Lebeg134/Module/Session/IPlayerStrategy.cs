@@ -1,7 +1,9 @@
-/**
- * @(#) IPlayerStrategy.cs
- */
 
+
+using System;
+/**
+* @(#) IPlayerStrategy.cs
+*/
 namespace JHP4SD.Lebeg134.Module.Session
 {
     public interface IPlayerStrategy

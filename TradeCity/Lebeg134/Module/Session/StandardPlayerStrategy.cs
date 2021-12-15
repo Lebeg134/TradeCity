@@ -1,6 +1,7 @@
 ﻿/**
  * @(#) StandardPlayerStrategy.cs
  */
+using System;
 using System.Collections.Generic;
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Structures;
@@ -9,6 +10,7 @@ namespace JHP4SD.Lebeg134.Module.Session
 {
     public partial class Player
     {
+        [Serializable]
         public class StandardPlayerStrategy : PlayerStrategyBase
         {
             public StandardPlayerStrategy(Player subject) : base(subject) { }

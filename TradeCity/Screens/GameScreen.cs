@@ -81,6 +81,8 @@ namespace JHP4SD.Screens
 
         private void BackButtonInstance_Click(object sender, EventArgs e)
         {
+            Clock.Instance.pause();
+            Session.save();
             MoveToScreen(typeof(MainMenuScreen));
         }
 

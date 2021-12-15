@@ -7,12 +7,14 @@ using JHP4SD.Lebeg134.Units;
 using Lebeg134.Resources.Common;
 using Lebeg134.Resources.EnergySector;
 using Lebeg134.Resources.Workforce;
+using System;
 using System.Collections.Generic;
 /**
 * @(#) CoalPowerplant.cs
 */
 namespace Lebeg134.Structures.EnergySector
 {
+	[Serializable]
 	public class CoalPowerplant: CommonProdBuilding
 	{
 		protected static new readonly List<Resource>[] upgradeLevelsCostsArray =

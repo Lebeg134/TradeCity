@@ -2,11 +2,13 @@
 
 using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
+using System;
 /**
 * @(#) Coal.cs
 */
 namespace Lebeg134.Resources.EnergySector
 {
+    [Serializable]
     public class Coal : StandardResource
     {
         public Coal(int amount):base(amount) { }

@@ -7,12 +7,14 @@ using JHP4SD.Lebeg134.Units;
 using Lebeg134.Resources.Common;
 using Lebeg134.Resources.EnergySector;
 using Lebeg134.Resources.Workforce;
+using System;
 using System.Collections.Generic;
 /**
 * @(#) SteelForge.cs
 */
 namespace Lebeg134.Structures.Common
 {
+    [Serializable]
     public class SteelForge : CommonProdBuilding
     {
         protected static List<Resource>[] upgradeLevelsCostsArray

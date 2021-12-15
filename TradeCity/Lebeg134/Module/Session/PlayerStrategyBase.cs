@@ -2,13 +2,16 @@
 
 using JHP4SD.Lebeg134.Module.Structures;
 using JHP4SD.Lebeg134.Module.TimeManager;
+using System;
 /**
 * @(#) PlayerStrategyBase.cs
 */
 namespace JHP4SD.Lebeg134.Module.Session
 {
+    
     public partial class Player
     {
+        [Serializable]
         public abstract class PlayerStrategyBase : IPlayerStrategy
         {
             protected Player player;

@@ -11,6 +11,7 @@ using System.Collections.Generic;
 
 namespace JHP4SD.Lebeg134.Module.Resources
 {
+    [Serializable]
     public abstract class Resource
     {
         public static ResourceIconsRuntime spriteLibrary = new ResourceIconsRuntime();

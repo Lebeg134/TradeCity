@@ -18,23 +18,16 @@ namespace JHP4SD.Lebeg134.Module.Session
             }
             private void Produce()
             {
-                List<Resource> previousState = new List<Resource>();
-                foreach (Resource cntRes in player.ownedResources.Values)
+                foreach (Resource cntRes in player.cntResourcesBuffer.Values)
                 {
-                    if (cntRes is ContinousResource)
-                    {
-                        previousState.Add(cntRes.getNewResource(cntRes.amount()));
-                    }
+                    player.ownedResources[cntRes.GetType()].setAmount(cntRes.amount());
+                    cntRes.setAmount(0);
                 }
                 foreach (IProducer producer in player.owned)
                 {
                     producer.Produce();
                 }
-                foreach(Resource cntRes in player.cntResourcesBuffer.Values)
-                {
-                    player.ownedResources[cntRes.GetType()].setAmount(cntRes.amount());
-                    cntRes.setAmount(0);
-                }
+                
             }
         }
     }

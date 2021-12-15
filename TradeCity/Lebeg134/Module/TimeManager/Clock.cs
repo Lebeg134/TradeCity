@@ -44,13 +44,12 @@ namespace JHP4SD.Lebeg134.Module.TimeManager
         }
         void tick(object source, ElapsedEventArgs e)
         {
-            foreach (ITickable tickable in tickables)
+            for (int i = 0; i<tickables.Count; i++)
             {
-                tickable.tick();
+                tickables[i].tick();
                 if (!timer.Enabled) // Had a lot of crashes because this isn't thread safe
                     break;
             }
-                
         }
         public void Register(ITickable tickable)
         {

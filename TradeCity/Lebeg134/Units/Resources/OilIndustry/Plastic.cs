@@ -24,7 +24,7 @@ namespace Lebeg134.Resources.OilIndustry
 
         public override SpriteRuntime getSprite()
         {
-            throw new NotImplementedException();
+            return spriteLibrary.PlasticSprite;
         }
 
         public override double getValue()

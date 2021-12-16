@@ -664,13 +664,45 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>pylon</Name>
     </None>
+    <None Include="content\globalcontent\resources\resourceicons\brick-pile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>brick-pile</Name>
+    </None>
+    <None Include="content\globalcontent\resources\resourceicons\broken-bottle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>broken-bottle</Name>
+    </None>
+    <None Include="content\globalcontent\resources\resourceicons\bunker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>bunker</Name>
+    </None>
+    <None Include="content\globalcontent\resources\resourceicons\chemical-drop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>chemical-drop</Name>
+    </None>
     <None Include="content\globalcontent\resources\resourceicons\coal-pile.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>coal-pile</Name>
     </None>
+    <None Include="content\globalcontent\resources\resourceicons\commercial-airplane.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>commercial-airplane</Name>
+    </None>
+    <None Include="content\globalcontent\resources\resourceicons\concrete-bag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>concrete-bag</Name>
+    </None>
+    <None Include="content\globalcontent\resources\resourceicons\cubes.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>cubes</Name>
+    </None>
     <None Include="content\globalcontent\resources\resourceicons\electric.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>electric</Name>
+    </None>
+    <None Include="content\globalcontent\resources\resourceicons\gas-pump.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>gas-pump</Name>
     </None>
     <None Include="content\globalcontent\resources\resourceicons\i-beam.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -684,17 +716,45 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>money-stack</Name>
     </None>
+    <None Include="content\globalcontent\resources\resourceicons\oil-drum.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>oil-drum</Name>
+    </None>
     <None Include="content\globalcontent\resources\resourceicons\ore.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>ore</Name>
+    </None>
+    <None Include="content\globalcontent\resources\resourceicons\paint-bucket.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>paint-bucket</Name>
     </None>
     <None Include="content\globalcontent\resources\resourceicons\person.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>person</Name>
     </None>
+    <None Include="content\globalcontent\resources\resourceicons\powder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>powder</Name>
+    </None>
+    <None Include="content\globalcontent\resources\resourceicons\quill-ink.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>quill-ink</Name>
+    </None>
+    <None Include="content\globalcontent\resources\resourceicons\rolled-cloth.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>rolled-cloth</Name>
+    </None>
+    <None Include="content\globalcontent\resources\resourceicons\stone-block.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>stone-block</Name>
+    </None>
     <None Include="content\globalcontent\resources\resourceicons\water-drop.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>water-drop</Name>
+    </None>
+    <None Include="content\globalcontent\resources\resourceicons\wood-beam.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>wood-beam</Name>
     </None>
     <None Include="content\globalcontent\screen\citybackground.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

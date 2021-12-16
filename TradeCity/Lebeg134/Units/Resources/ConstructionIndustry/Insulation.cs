@@ -24,7 +24,7 @@ namespace Lebeg134.Resources.ConstructionIndustry
 
         public override SpriteRuntime getSprite()
         {
-            throw new NotImplementedException();
+            return spriteLibrary.InsulationSprite;
         }
 
         public override double getValue()

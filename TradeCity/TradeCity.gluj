@@ -506,6 +506,14 @@
       "DestroyOnUnload": false,
       "HasPublicProperty": true,
       "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "GlobalContent/Icon.ico",
+      "IsSharedStatic": true,
+      "DestroyOnUnload": false,
+      "HasPublicProperty": true,
+      "LoadedAtRuntime": false,
+      "ProjectsToExcludeFrom": []
     }
   ],
   "Properties": [

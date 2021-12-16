@@ -2,7 +2,9 @@
 using JHP4SD.Lebeg134.Module.Structures;
 using JHP4SD.Lebeg134.Units.Resources.Common;
 using Lebeg134.Resources.Common;
+using Lebeg134.Resources.ConstructionIndustry;
 using Lebeg134.Resources.EnergySector;
+using Lebeg134.Resources.OilIndustry;
 using Lebeg134.Resources.Workforce;
 using Lebeg134.Structures.Common;
 using Lebeg134.Structures.EnergySector;
@@ -33,12 +35,17 @@ namespace JHP4SD.Lebeg134.Module.Session
         {
             List<Resource> template = new List<Resource>
             {
-                new Money(0), new Workforce(0), new Electricity(0), new Wood(0), new Iron(0), new Steel(0), new Water(0), new Coal(0)
+                new Money(0),
+                new Iron(0), new Steel(0), new Water(0), new Wood(0),
+                new Bricks(0), new Concrete(0), new Glass(0), new Insulation(0), new Lumber(0), new ReinforcedConcrete(0), new Sand(0), new Stone(0),
+                new Electricity(0), new Coal(0),
+                new Chemicals(0), new Fuel(0), new Ink(0), new Kerosine(0), new Oil(0), new Paint(0), new Plastic(0),
+                new Workforce(0)
+               
             };
             player.registerResources(template);
-            player.giveRes(new Money(1500));
-            player.giveRes(new Workforce(500));
-            player.giveRes(new Wood(500));
+            player.giveRes(new Money(1000));
+            player.giveRes(new Workforce(2000));
         }
         static void GenerateStartingOffers(Session session)
         {

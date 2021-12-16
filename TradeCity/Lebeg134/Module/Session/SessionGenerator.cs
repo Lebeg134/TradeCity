@@ -44,14 +44,20 @@ namespace JHP4SD.Lebeg134.Module.Session
                
             };
             player.registerResources(template);
-            player.giveRes(new Money(1000));
+            player.giveRes(new Money(50000));
             player.giveRes(new Workforce(2000));
         }
         static void GenerateStartingOffers(Session session)
         {
-            session.offers.Add(new CoalMine(), 200);
-            session.offers.Add(new Forest(), 100);
-            session.offers.Add(new IronMine(), 200);
+            session.offers.Add(new ClearwaterLake(), 1000);
+            session.offers.Add(new Well(), 2000);
+            session.offers.Add(new Forest(), 5000);
+            session.offers.Add(new CoalMine(), 5000);
+            session.offers.Add(new IronMine(), 10000);
+            session.offers.Add(new SandQuarry(), 10000);
+            session.offers.Add(new StoneQuarry(), 10000);
+            session.offers.Add(new OilField(), 40000);
+            session.offers.Add(new OilRig(), 80000);
         }
 
         internal static List<Building> GetAllBuildings()

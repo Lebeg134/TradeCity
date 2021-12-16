@@ -3136,6 +3136,90 @@
         "ElementType": "Components",
         "EventType": 7,
         "TimestampUtc": "2021-12-16T13:07:41.8499638Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/LandImages.ForestSprite1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-16T13:21:07.5144761Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/LandImages.ForestSprite2",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-16T13:21:08.1030798Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/LandImages.ForestSprite3",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-16T13:21:08.4089903Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/LandImages.ForestSprite4",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-16T13:21:08.7760089Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/LandImages.ForestSprite5",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-16T13:21:09.1001415Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/LandImages.ForestSprite6",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-16T13:21:09.4303504Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/LandImages.ClearwaterLakeSprite",
+        "OldName": "LebegForms/Resources/LandImages.ForestSprite6",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-16T13:21:23.0172923Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/LandImages.OilFieldSprite",
+        "OldName": "LebegForms/Resources/LandImages.ForestSprite5",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-16T13:21:34.0986279Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/LandImages.OilRigSprite",
+        "OldName": "LebegForms/Resources/LandImages.ForestSprite4",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-16T13:21:38.0361503Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/LandImages.SandQuarrySprite",
+        "OldName": "LebegForms/Resources/LandImages.ForestSprite3",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-16T13:21:47.0607151Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/LandImages.StoneQuarrySprite",
+        "OldName": "LebegForms/Resources/LandImages.ForestSprite2",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-16T13:21:52.5028821Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/LandImages.WellSprite",
+        "OldName": "LebegForms/Resources/LandImages.ForestSprite1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-16T13:22:00.693747Z"
       }
     ],
     "torok": []

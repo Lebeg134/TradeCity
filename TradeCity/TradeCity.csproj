@@ -632,6 +632,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>Icon</Name>
     </None>
+    <None Include="content\globalcontent\lands\clearwaterlake.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clearwaterlake</Name>
+    </None>
     <None Include="content\globalcontent\lands\coalmine.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>coalmine</Name>
@@ -643,6 +647,26 @@
     <None Include="content\globalcontent\lands\ironmine.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>ironmine</Name>
+    </None>
+    <None Include="content\globalcontent\lands\oilfield.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>oilfield</Name>
+    </None>
+    <None Include="content\globalcontent\lands\oilrig.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>oilrig</Name>
+    </None>
+    <None Include="content\globalcontent\lands\sandquarry.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>sandquarry</Name>
+    </None>
+    <None Include="content\globalcontent\lands\stonequarry.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>stonequarry</Name>
+    </None>
+    <None Include="content\globalcontent\lands\well.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>well</Name>
     </None>
     <None Include="content\globalcontent\resources\categoryicons\crane.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

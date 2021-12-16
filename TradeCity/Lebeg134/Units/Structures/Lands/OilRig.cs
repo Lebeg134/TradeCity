@@ -32,7 +32,7 @@ namespace Lebeg134.Structures.Lands
 
         protected override List<Resource> productionLevels(int level)
         {
-            return new List<Resource>() { new Oil(20 * level) };
+            return new List<Resource>() { new Oil(20) };
         }
 
         protected override List<Resource> upgradeLevelsCosts(int level)

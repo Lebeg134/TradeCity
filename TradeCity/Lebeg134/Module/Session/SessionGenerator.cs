@@ -10,6 +10,7 @@ using Lebeg134.Structures.Common;
 using Lebeg134.Structures.ConstructionIndustry;
 using Lebeg134.Structures.EnergySector;
 using Lebeg134.Structures.Lands;
+using Lebeg134.Structures.OilIndustry;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,10 +66,12 @@ namespace JHP4SD.Lebeg134.Module.Session
         {
             if (allBuildings == null)
             {
-                allBuildings = new List<Building> { 
+                allBuildings = new List<Building> {
                     new SteelForge(),
-                    new ConcreteMixingPlant(),
-                    new CoalPowerplant() };
+                    new ConcreteMixingPlant(), new CraftsmanHQ(), new GlassKiln(),new Lumberyard(),
+                    new CoalPowerplant(),
+                    new ChemicalResearchFacility(), new ChemicalSafetyBureau(), new OilDistillery()
+                };
             }
             return allBuildings;
         }

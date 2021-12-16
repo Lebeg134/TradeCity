@@ -119,7 +119,7 @@
     <Variable>
       <Type>string</Type>
       <Name>TextInstance.Text</Name>
-      <Value xsi:type="xsd:string">&lt;-- Back</Value>
+      <Value xsi:type="xsd:string">Save and Quit to Menu</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

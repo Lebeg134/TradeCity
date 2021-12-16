@@ -3,10 +3,12 @@
 */
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.TimeManager;
+using System;
 using System.Collections.Generic;
 namespace JHP4SD.Lebeg134.Module.Structures
 {
-	public abstract class SpecialProdBuilding : SpecialBuilding, IProducer
+    [Serializable]
+    public abstract class SpecialProdBuilding : SpecialBuilding, IProducer
 	{
         abstract public List<Resource> getProduce();
         public void Produce()

@@ -1,6 +1,7 @@
 /**
 * @(#) Clock.cs
 */
+using System;
 using System.Collections.Generic;
 using System.Timers;
 
@@ -8,13 +9,22 @@ namespace JHP4SD.Lebeg134.Module.TimeManager
 {
     public class Clock
     {
-        private static readonly Clock _instance = new Clock();
+        private static Clock _instance = new Clock();
         public static Clock Instance 
         { 
             get
             {
                 return _instance;
-            } 
+            }
+            set
+            {
+                _instance = new Clock();
+                foreach(ITickable tickable in value.tickables)
+                {
+                    if (tickable != null)
+                        _instance.Register(tickable);
+                }
+            }
         }
         Timer timer;
         List<ITickable> tickables = new List<ITickable>();
@@ -62,6 +72,10 @@ namespace JHP4SD.Lebeg134.Module.TimeManager
         public bool isEnabled()
         {
             return timer.Enabled;
+        }
+        public void Clear()
+        {
+            tickables.Clear();
         }
     }
     public enum Speed : int

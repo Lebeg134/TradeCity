@@ -52,7 +52,7 @@
                             TextInstance.Height = 80f;
                             TextInstance.HeightUnits = Gum.DataTypes.DimensionUnitType.Percentage;
                             TextInstance.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
-                            TextInstance.Text = "<-- Back";
+                            TextInstance.Text = "Save and Quit to Menu";
                             TextInstance.VerticalAlignment = RenderingLibrary.Graphics.VerticalAlignment.Center;
                             TextInstance.Width = 85f;
                             TextInstance.WidthUnits = Gum.DataTypes.DimensionUnitType.Percentage;
@@ -244,7 +244,7 @@
                         }
                         if (interpolationValue < 1)
                         {
-                            this.TextInstance.Text = "<-- Back";
+                            this.TextInstance.Text = "Save and Quit to Menu";
                         }
                         if (interpolationValue < 1)
                         {
@@ -337,7 +337,7 @@
                         }
                         if (interpolationValue >= 1)
                         {
-                            this.TextInstance.Text = "<-- Back";
+                            this.TextInstance.Text = "Save and Quit to Menu";
                         }
                         if (interpolationValue >= 1)
                         {

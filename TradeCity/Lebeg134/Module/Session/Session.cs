@@ -72,6 +72,8 @@ namespace JHP4SD.Lebeg134.Module.Session
             _instance = (Session)b.Deserialize(stream);
             stream.Close();
             CurrentPlayer = Instance._players[0]; // TODO need to change when multiple players
+            Clock.Instance.Clear();
+            Clock.Instance.Register(Instance);
         }
         public void login(Player player)
         {

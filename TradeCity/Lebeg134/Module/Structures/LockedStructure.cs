@@ -1,12 +1,14 @@
 
 
 using JHP4SD.GumRuntimes;
+using System;
 /**
 * @(#) LockedStructure.cs
 */
 namespace JHP4SD.Lebeg134.Module.Structures
 {
-	public class LockedStructure : Structure
+    [Serializable]
+    public class LockedStructure : Structure
 	{
 		Structure _subject;
 		

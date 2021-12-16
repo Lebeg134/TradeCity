@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace JHP4SD.Lebeg134.Module.Market
 {
+    [Serializable]
     public class SPListing: ITickable
     {
         public Resource Sell

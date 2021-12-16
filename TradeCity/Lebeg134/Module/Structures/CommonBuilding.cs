@@ -8,6 +8,7 @@ using System.Collections.Generic;
 
 namespace JHP4SD.Lebeg134.Module.Structures
 {
+    [Serializable]
     public abstract class CommonBuilding : Building, IUpgradeable
     {
         protected int level = 0; //Level 0 means unbuilt building

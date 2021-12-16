@@ -9,6 +9,7 @@ using System.Collections.Generic;
 
 namespace JHP4SD.Lebeg134.Module.Structures
 {
+    [Serializable]
     public abstract class Building : Structure, IOwnable
     {
         public static BuildingImagesSmallRuntime spriteLibrarySmall = new BuildingImagesSmallRuntime();

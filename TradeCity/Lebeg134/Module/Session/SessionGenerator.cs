@@ -7,6 +7,7 @@ using Lebeg134.Resources.EnergySector;
 using Lebeg134.Resources.OilIndustry;
 using Lebeg134.Resources.Workforce;
 using Lebeg134.Structures.Common;
+using Lebeg134.Structures.ConstructionIndustry;
 using Lebeg134.Structures.EnergySector;
 using Lebeg134.Structures.Lands;
 using System;
@@ -64,7 +65,10 @@ namespace JHP4SD.Lebeg134.Module.Session
         {
             if (allBuildings == null)
             {
-                allBuildings = new List<Building> { new SteelForge(), new CoalPowerplant() };
+                allBuildings = new List<Building> { 
+                    new SteelForge(),
+                    new ConcreteMixingPlant(),
+                    new CoalPowerplant() };
             }
             return allBuildings;
         }

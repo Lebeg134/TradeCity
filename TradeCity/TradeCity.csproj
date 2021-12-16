@@ -584,6 +584,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>coalpowerplant</Name>
     </None>
+    <None Include="content\globalcontent\buildingssmall\default.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>default</Name>
+    </None>
     <None Include="content\globalcontent\buildingssmall\steelforge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>steelforge</Name>

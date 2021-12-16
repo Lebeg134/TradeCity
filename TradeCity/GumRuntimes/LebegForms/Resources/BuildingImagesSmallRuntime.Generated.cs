@@ -42,6 +42,13 @@
                             CoalPowerplantSprite.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
                             CoalPowerplantSprite.X = 4f;
                             CoalPowerplantSprite.Y = 4f;
+                            DefaultSprite.Height = 87f;
+                            DefaultSprite.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            SetProperty("DefaultSprite.SourceFile", "../GlobalContent/BuildingsSmall/Default.png");
+                            DefaultSprite.Width = 128f;
+                            DefaultSprite.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                            DefaultSprite.X = 4f;
+                            DefaultSprite.Y = 4f;
                             break;
                     }
                 }
@@ -72,6 +79,22 @@
                 bool setCoalPowerplantSpriteYSecondValue = false;
                 float CoalPowerplantSpriteYFirstValue= 0;
                 float CoalPowerplantSpriteYSecondValue= 0;
+                bool setDefaultSpriteHeightFirstValue = false;
+                bool setDefaultSpriteHeightSecondValue = false;
+                float DefaultSpriteHeightFirstValue= 0;
+                float DefaultSpriteHeightSecondValue= 0;
+                bool setDefaultSpriteWidthFirstValue = false;
+                bool setDefaultSpriteWidthSecondValue = false;
+                float DefaultSpriteWidthFirstValue= 0;
+                float DefaultSpriteWidthSecondValue= 0;
+                bool setDefaultSpriteXFirstValue = false;
+                bool setDefaultSpriteXSecondValue = false;
+                float DefaultSpriteXFirstValue= 0;
+                float DefaultSpriteXSecondValue= 0;
+                bool setDefaultSpriteYFirstValue = false;
+                bool setDefaultSpriteYSecondValue = false;
+                float DefaultSpriteYFirstValue= 0;
+                float DefaultSpriteYSecondValue= 0;
                 bool setHeightFirstValue = false;
                 bool setHeightSecondValue = false;
                 float HeightFirstValue= 0;
@@ -119,6 +142,26 @@
                         CoalPowerplantSpriteXFirstValue = 4f;
                         setCoalPowerplantSpriteYFirstValue = true;
                         CoalPowerplantSpriteYFirstValue = 4f;
+                        setDefaultSpriteHeightFirstValue = true;
+                        DefaultSpriteHeightFirstValue = 87f;
+                        if (interpolationValue < 1)
+                        {
+                            this.DefaultSprite.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            SetProperty("DefaultSprite.SourceFile", "../GlobalContent/BuildingsSmall/Default.png");
+                        }
+                        setDefaultSpriteWidthFirstValue = true;
+                        DefaultSpriteWidthFirstValue = 128f;
+                        if (interpolationValue < 1)
+                        {
+                            this.DefaultSprite.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                        }
+                        setDefaultSpriteXFirstValue = true;
+                        DefaultSpriteXFirstValue = 4f;
+                        setDefaultSpriteYFirstValue = true;
+                        DefaultSpriteYFirstValue = 4f;
                         setHeightFirstValue = true;
                         HeightFirstValue = 96f;
                         setSteelForgeSpriteHeightFirstValue = true;
@@ -174,6 +217,26 @@
                         CoalPowerplantSpriteXSecondValue = 4f;
                         setCoalPowerplantSpriteYSecondValue = true;
                         CoalPowerplantSpriteYSecondValue = 4f;
+                        setDefaultSpriteHeightSecondValue = true;
+                        DefaultSpriteHeightSecondValue = 87f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.DefaultSprite.HeightUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            SetProperty("DefaultSprite.SourceFile", "../GlobalContent/BuildingsSmall/Default.png");
+                        }
+                        setDefaultSpriteWidthSecondValue = true;
+                        DefaultSpriteWidthSecondValue = 128f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.DefaultSprite.WidthUnits = Gum.DataTypes.DimensionUnitType.Absolute;
+                        }
+                        setDefaultSpriteXSecondValue = true;
+                        DefaultSpriteXSecondValue = 4f;
+                        setDefaultSpriteYSecondValue = true;
+                        DefaultSpriteYSecondValue = 4f;
                         setHeightSecondValue = true;
                         HeightSecondValue = 96f;
                         setSteelForgeSpriteHeightSecondValue = true;
@@ -222,6 +285,22 @@
                 if (setCoalPowerplantSpriteYFirstValue && setCoalPowerplantSpriteYSecondValue)
                 {
                     CoalPowerplantSprite.Y = CoalPowerplantSpriteYFirstValue * (1 - interpolationValue) + CoalPowerplantSpriteYSecondValue * interpolationValue;
+                }
+                if (setDefaultSpriteHeightFirstValue && setDefaultSpriteHeightSecondValue)
+                {
+                    DefaultSprite.Height = DefaultSpriteHeightFirstValue * (1 - interpolationValue) + DefaultSpriteHeightSecondValue * interpolationValue;
+                }
+                if (setDefaultSpriteWidthFirstValue && setDefaultSpriteWidthSecondValue)
+                {
+                    DefaultSprite.Width = DefaultSpriteWidthFirstValue * (1 - interpolationValue) + DefaultSpriteWidthSecondValue * interpolationValue;
+                }
+                if (setDefaultSpriteXFirstValue && setDefaultSpriteXSecondValue)
+                {
+                    DefaultSprite.X = DefaultSpriteXFirstValue * (1 - interpolationValue) + DefaultSpriteXSecondValue * interpolationValue;
+                }
+                if (setDefaultSpriteYFirstValue && setDefaultSpriteYSecondValue)
+                {
+                    DefaultSprite.Y = DefaultSpriteYFirstValue * (1 - interpolationValue) + DefaultSpriteYSecondValue * interpolationValue;
                 }
                 if (setHeightFirstValue && setHeightSecondValue)
                 {
@@ -466,6 +545,62 @@
                             Value = CoalPowerplantSprite.Y
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DefaultSprite.Height",
+                            Type = "float",
+                            Value = DefaultSprite.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DefaultSprite.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = DefaultSprite.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DefaultSprite.SourceFile",
+                            Type = "string",
+                            Value = DefaultSprite.SourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DefaultSprite.Width",
+                            Type = "float",
+                            Value = DefaultSprite.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DefaultSprite.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = DefaultSprite.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DefaultSprite.X",
+                            Type = "float",
+                            Value = DefaultSprite.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DefaultSprite.Y",
+                            Type = "float",
+                            Value = DefaultSprite.Y
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -612,6 +747,62 @@
                             Value = CoalPowerplantSprite.Y + 4f
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DefaultSprite.Height",
+                            Type = "float",
+                            Value = DefaultSprite.Height + 87f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DefaultSprite.Height Units",
+                            Type = "DimensionUnitType",
+                            Value = DefaultSprite.HeightUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DefaultSprite.SourceFile",
+                            Type = "string",
+                            Value = DefaultSprite.SourceFile
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DefaultSprite.Width",
+                            Type = "float",
+                            Value = DefaultSprite.Width + 128f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DefaultSprite.Width Units",
+                            Type = "DimensionUnitType",
+                            Value = DefaultSprite.WidthUnits
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DefaultSprite.X",
+                            Type = "float",
+                            Value = DefaultSprite.X + 4f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "DefaultSprite.Y",
+                            Type = "float",
+                            Value = DefaultSprite.Y + 4f
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -632,6 +823,7 @@
             }
             public JHP4SD.GumRuntimes.SpriteRuntime SteelForgeSprite { get; set; }
             public JHP4SD.GumRuntimes.SpriteRuntime CoalPowerplantSprite { get; set; }
+            public JHP4SD.GumRuntimes.SpriteRuntime DefaultSprite { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime Common { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime Construction { get; set; }
             public JHP4SD.GumRuntimes.ContainerRuntime Energy { get; set; }
@@ -665,6 +857,7 @@
             {
                 SteelForgeSprite = this.GetGraphicalUiElementByName("SteelForgeSprite") as JHP4SD.GumRuntimes.SpriteRuntime;
                 CoalPowerplantSprite = this.GetGraphicalUiElementByName("CoalPowerplantSprite") as JHP4SD.GumRuntimes.SpriteRuntime;
+                DefaultSprite = this.GetGraphicalUiElementByName("DefaultSprite") as JHP4SD.GumRuntimes.SpriteRuntime;
                 Common = this.GetGraphicalUiElementByName("Common") as JHP4SD.GumRuntimes.ContainerRuntime;
                 Construction = this.GetGraphicalUiElementByName("Construction") as JHP4SD.GumRuntimes.ContainerRuntime;
                 Energy = this.GetGraphicalUiElementByName("Energy") as JHP4SD.GumRuntimes.ContainerRuntime;

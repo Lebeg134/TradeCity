@@ -3220,6 +3220,20 @@
         "ElementType": "Components",
         "EventType": 7,
         "TimestampUtc": "2021-12-16T13:22:00.693747Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImagesSmall.CoalPowerplantSprite1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2021-12-16T13:59:43.5581023Z"
+      },
+      {
+        "NewName": "LebegForms/Resources/BuildingImagesSmall.DefaultSprite",
+        "OldName": "LebegForms/Resources/BuildingImagesSmall.CoalPowerplantSprite1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2021-12-16T13:59:59.6347515Z"
       }
     ],
     "torok": []

@@ -30,7 +30,7 @@ namespace Lebeg134.Resources.Common
 
         public override double getValue()
         {
-            return 10;
+            return 45;
         }
     }
 

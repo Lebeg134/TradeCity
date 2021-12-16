@@ -28,7 +28,7 @@ namespace Lebeg134.Resources.Common
         }
         public override double getValue()
         {
-            return 5;
+            return 10;
         }
     }
 

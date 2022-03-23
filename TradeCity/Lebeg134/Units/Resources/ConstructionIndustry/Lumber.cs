@@ -1,0 +1,36 @@
+
+
+using JHP4SD.GumRuntimes;
+using JHP4SD.Lebeg134.Module.Resources;
+using System;
+/**
+* @(#) Lumber.cs
+*/
+namespace Lebeg134.Resources.ConstructionIndustry
+{
+    [Serializable]
+    public class Lumber : StandardResource
+    {
+        public Lumber(int amount) : base(amount) { }
+        public override string getName()
+        {
+            return "Lunber";
+        }
+
+        public override Resource getNewResource(int amount)
+        {
+            return new Lumber(amount);
+        }
+
+        public override SpriteRuntime getSprite()
+        {
+            return spriteLibrary.LumberSprite;
+        }
+
+        public override double getValue()
+        {
+            return 12.5;
+        }
+    }
+
+}

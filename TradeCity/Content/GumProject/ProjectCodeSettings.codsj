@@ -1,0 +1,1 @@
+{"CommonUsingStatements":"using Gum.Converters;\nusing Gum.DataTypes;\nusing Gum.Managers;\nusing Gum.Wireframe;\n\nusing RenderingLibrary.Graphics;\n\nusing SkiaGum;\nusing SkiaGum.GueDeriving;\nusing SkiaGum.Renderables;\n","CodeProjectRoot":null,"RootNamespace":null,"DefaultScreenBase":"SkiaGum.GueDeriving.ContainerRuntime","OutputLibrary":0}

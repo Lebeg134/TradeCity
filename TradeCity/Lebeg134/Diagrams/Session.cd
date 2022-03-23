@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JHP4SD.Lebeg134.Module.Session.Session">
+    <Position X="7.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABEAAAAAICAAAAgEAAAAAAAABACAABIQQAAAAAAEAA=</HashCode>
+      <FileName>Lebeg134\Module\Session\Session.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JHP4SD.Lebeg134.Module.Session.Player">
+    <Position X="4.25" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="JHP4SD.Lebeg134.Module.Session.Player.BankruptPlayerStrategy" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Lebeg134\Module\Session\BankruptPlayerStrategy.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="JHP4SD.Lebeg134.Module.Session.Player.FrozenPlayerStrategy" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Lebeg134\Module\Session\FrozenPlayerStrategy.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="JHP4SD.Lebeg134.Module.Session.Player.PlayerStrategyBase" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Lebeg134\Module\Session\PlayerStrategyBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="JHP4SD.Lebeg134.Module.Session.Player.StandardPlayerStrategy" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Lebeg134\Module\Session\StandardPlayerStrategy.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgBAAERAAiAEIAgCIAIAABBBAAAEAAAAAQAIggAQQCA=</HashCode>
+      <FileName>Lebeg134\Module\Session\BankruptPlayerStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="JHP4SD.Lebeg134.Module.Session.IPlayerStrategy" Collapsed="true">
+    <Position X="12.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAEAAAgAAAAAAAAAAAABAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Lebeg134\Module\Session\IPlayerStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,701 @@
+{
+  "In2D": true,
+  "ResolutionWidth": 800,
+  "ResolutionHeight": 600,
+  "OrthogonalWidth": 800,
+  "OrthogonalHeight": 600,
+  "Screens": [
+    {
+      "Tags": [
+        "GLUE"
+      ],
+      "Source": "GLUE",
+      "BaseScreen": "Screens\\GameScreen",
+      "BaseElement": "Screens\\GameScreen",
+      "ReferencedFiles": [
+        {
+          "Name": "GumProject/Screens/CityGum.gusx",
+          "IsSharedStatic": true,
+          "RuntimeType": "JHP4SD.GumRuntimes.CityGumRuntime",
+          "ProjectsToExcludeFrom": []
+        }
+      ],
+      "NamedObjects": [
+        {
+          "InstanceName": "Map",
+          "SourceClassType": "FlatRedBall.TileGraphics.LayeredTileMap",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "bool",
+              "Member": "CreateEntitiesFromTiles",
+              "Value": true,
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 2,
+          "SourceFile": "FlatRedBall.TileGraphics.LayeredTileMap",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true,
+          "DefinedByBase": true
+        }
+      ],
+      "Name": "Screens\\City",
+      "CustomClassesForExport": []
+    },
+    {
+      "Tags": [
+        "GLUE"
+      ],
+      "Source": "GLUE",
+      "ReferencedFiles": [
+        {
+          "Name": "gumproject/Screens/GameScreenGum.gusx",
+          "IsSharedStatic": true,
+          "RuntimeType": "JHP4SD.GumRuntimes.GameScreenGumRuntime",
+          "ProjectsToExcludeFrom": []
+        }
+      ],
+      "NamedObjects": [
+        {
+          "InstanceName": "Map",
+          "SourceClassType": "FlatRedBall.TileGraphics.LayeredTileMap",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "bool",
+              "Member": "CreateEntitiesFromTiles",
+              "Value": true,
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 2,
+          "SourceFile": "FlatRedBall.TileGraphics.LayeredTileMap",
+          "SetByDerived": true,
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        }
+      ],
+      "Name": "Screens\\GameScreen",
+      "CustomClassesForExport": []
+    },
+    {
+      "Tags": [
+        "GLUE"
+      ],
+      "Source": "GLUE",
+      "BaseScreen": "Screens\\GameScreen",
+      "BaseElement": "Screens\\GameScreen",
+      "ReferencedFiles": [
+        {
+          "Name": "gumproject/Screens/Level1Gum.gusx",
+          "IsSharedStatic": true,
+          "RuntimeType": "JHP4SD.GumRuntimes.Level1GumRuntime",
+          "ProjectsToExcludeFrom": []
+        },
+        {
+          "Name": "Screens/Level1/Level1Map.tmx",
+          "IsSharedStatic": true,
+          "RuntimeType": "FlatRedBall.TileGraphics.LayeredTileMap",
+          "ProjectsToExcludeFrom": []
+        }
+      ],
+      "NamedObjects": [
+        {
+          "InstanceName": "Map",
+          "SourceClassType": "FlatRedBall.TileGraphics.LayeredTileMap",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 0,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "bool",
+              "Member": "CreateEntitiesFromTiles",
+              "Value": true,
+              "Time": 0.0
+            }
+          ],
+          "SourceFile": "Screens/Level1/Level1Map.tmx",
+          "SourceName": "Entire File (LayeredTileMap)",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true,
+          "DefinedByBase": true
+        }
+      ],
+      "Name": "Screens\\Level1",
+      "CustomClassesForExport": []
+    },
+    {
+      "Tags": [
+        "GLUE"
+      ],
+      "Source": "GLUE",
+      "BaseScreen": "Screens\\GameScreen",
+      "BaseElement": "Screens\\GameScreen",
+      "ReferencedFiles": [
+        {
+          "Name": "gumproject/Screens/Level2Gum.gusx",
+          "IsSharedStatic": true,
+          "RuntimeType": "JHP4SD.GumRuntimes.Level2GumRuntime",
+          "ProjectsToExcludeFrom": []
+        },
+        {
+          "Name": "Screens/Level2/Level2Map.tmx",
+          "IsSharedStatic": true,
+          "RuntimeType": "FlatRedBall.TileGraphics.LayeredTileMap",
+          "ProjectsToExcludeFrom": []
+        }
+      ],
+      "NamedObjects": [
+        {
+          "InstanceName": "Map",
+          "SourceClassType": "FlatRedBall.TileGraphics.LayeredTileMap",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 0,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "bool",
+              "Member": "CreateEntitiesFromTiles",
+              "Value": true,
+              "Time": 0.0
+            }
+          ],
+          "SourceFile": "Screens/Level2/Level2Map.tmx",
+          "SourceName": "Entire File (LayeredTileMap)",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true,
+          "DefinedByBase": true
+        }
+      ],
+      "Name": "Screens\\Level2",
+      "CustomClassesForExport": []
+    },
+    {
+      "Tags": [
+        "GLUE"
+      ],
+      "Source": "GLUE",
+      "BaseScreen": "Screens\\GameScreen",
+      "BaseElement": "Screens\\GameScreen",
+      "ReferencedFiles": [
+        {
+          "Name": "gumproject/Screens/Level3Gum.gusx",
+          "IsSharedStatic": true,
+          "RuntimeType": "JHP4SD.GumRuntimes.Level3GumRuntime",
+          "ProjectsToExcludeFrom": []
+        },
+        {
+          "Properties": [
+            {
+              "Name": "CreationOptions",
+              "Value": "{\"IncludeDefaultTileset\":false,\"IncludeGameplayLayer\":false,\"SolidCollisionCheckBoxVisibility\":2,\"IsSolidCollisionBorderChecked\":false,\"ShouldAddCollisionBorder\":false}"
+            }
+          ],
+          "Name": "Screens/Level3/Level3Map.tmx",
+          "IsSharedStatic": true,
+          "RuntimeType": "FlatRedBall.TileGraphics.LayeredTileMap",
+          "ProjectsToExcludeFrom": []
+        }
+      ],
+      "NamedObjects": [
+        {
+          "InstanceName": "CameraMidpointInstance",
+          "SourceClassType": "Entities\\CameraMidpoint",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 1,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "float",
+              "Member": "X",
+              "Value": 200.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "Y",
+              "Value": -200.0,
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 1,
+          "SourceFile": "Entities/CameraMidpoint",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        },
+        {
+          "InstanceName": "CameraControllingEntityInstance",
+          "SourceClassType": "FlatRedBall.Entities.CameraControllingEntity",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "bool",
+              "Member": "LerpSmooth",
+              "Value": false,
+              "Time": 0.0
+            },
+            {
+              "Type": "string",
+              "Member": "Map",
+              "Value": "Map",
+              "Time": 0.0
+            },
+            {
+              "Type": "string",
+              "Member": "Targets",
+              "Value": "CameraMidpointInstance",
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 2,
+          "SourceFile": "Camera Controlling Entity",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        },
+        {
+          "InstanceName": "Map",
+          "SourceClassType": "FlatRedBall.TileGraphics.LayeredTileMap",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 0,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "bool",
+              "Member": "CreateEntitiesFromTiles",
+              "Value": true,
+              "Time": 0.0
+            }
+          ],
+          "SourceFile": "Screens/Level3/Level3Map.tmx",
+          "SourceName": "Entire File (LayeredTileMap)",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true,
+          "DefinedByBase": true
+        },
+        {
+          "InstanceName": "SolidCollision",
+          "SourceClassType": "FlatRedBall.TileCollisions.TileShapeCollection",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            },
+            {
+              "Name": "CollisionCreationOptions",
+              "Value": 4
+            },
+            {
+              "Name": "CollisionTileSize",
+              "Value": 16.0
+            },
+            {
+              "Name": "CollisionFillWidth",
+              "Value": 32
+            },
+            {
+              "Name": "CollisionFillHeight",
+              "Value": 1
+            },
+            {
+              "Name": "InnerSizeWidth",
+              "Value": 800.0
+            },
+            {
+              "Name": "InnerSizeHeight",
+              "Value": 600.0
+            },
+            {
+              "Name": "CollisionTileTypeName",
+              "Value": "SolidCollision"
+            },
+            {
+              "Name": "SourceTmxName",
+              "Value": "Map"
+            }
+          ],
+          "InstructionSaves": [],
+          "SourceType": 2,
+          "SourceFile": "TileShapeCollection",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        },
+        {
+          "InstanceName": "CameraMidpointInstanceVsSolidCollision",
+          "SourceClassType": "FlatRedBall.Math.Collision.CollidableVsTileShapeCollectionRelationship<JHP4SD.Entities.CameraMidpoint>",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            },
+            {
+              "Name": "IsAutoNameEnabled",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "FirstCollisionName",
+              "Value": "CameraMidpointInstance",
+              "Type": "String"
+            },
+            {
+              "Name": "SecondCollisionName",
+              "Value": "SolidCollision",
+              "Type": "String"
+            },
+            {
+              "Name": "CollisionType",
+              "Value": 1,
+              "Type": "int"
+            },
+            {
+              "Name": "FirstCollisionMass",
+              "Value": 0.0
+            },
+            {
+              "Name": "SecondCollisionMass",
+              "Value": 1.0
+            },
+            {
+              "Name": "CollisionElasticity",
+              "Value": 1.0
+            },
+            {
+              "Name": "IsCollisionActive",
+              "Value": true
+            }
+          ],
+          "InstructionSaves": [],
+          "SourceType": 2,
+          "SourceFile": "FlatRedBall.Math.Collision.CollidableVsTileShapeCollectionRelationship<JHP4SD.Entities.CameraMidpoint>",
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        }
+      ],
+      "Name": "Screens\\Level3",
+      "CustomClassesForExport": []
+    },
+    {
+      "Tags": [
+        "GLUE"
+      ],
+      "Source": "GLUE",
+      "ReferencedFiles": [
+        {
+          "Name": "GumProject/Screens/MainMenuGum.gusx",
+          "IsSharedStatic": true,
+          "RuntimeType": "JHP4SD.GumRuntimes.MainMenuGumRuntime",
+          "ProjectsToExcludeFrom": []
+        }
+      ],
+      "Name": "Screens\\MainMenu",
+      "CustomClassesForExport": []
+    }
+  ],
+  "Entities": [
+    {
+      "Tags": [
+        "GLUE"
+      ],
+      "Source": "GLUE",
+      "CreatedByOtherEntities": true,
+      "Is2D": true,
+      "ReferencedFiles": [
+        {
+          "Name": "Entities/CameraMidpoint/TopDownValuesStatic.csv",
+          "IsSharedStatic": true,
+          "HasPublicProperty": true,
+          "CreatesDictionary": true,
+          "ProjectsToExcludeFrom": []
+        }
+      ],
+      "CustomVariables": [
+        {
+          "Properties": [
+            {
+              "Name": "Type",
+              "Value": "float",
+              "Type": "String"
+            }
+          ],
+          "Name": "X"
+        },
+        {
+          "Properties": [
+            {
+              "Name": "Type",
+              "Value": "float",
+              "Type": "String"
+            }
+          ],
+          "Name": "Y"
+        },
+        {
+          "Properties": [
+            {
+              "Name": "Type",
+              "Value": "float",
+              "Type": "String"
+            }
+          ],
+          "Name": "Z"
+        }
+      ],
+      "Properties": [
+        {
+          "Name": "InputDevice",
+          "Value": 0
+        },
+        {
+          "Name": "ImplementsICollidable",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "IsTopDown",
+          "Value": true,
+          "Type": "Boolean"
+        }
+      ],
+      "NamedObjects": [
+        {
+          "InstanceName": "AxisAlignedRectangleInstance",
+          "SourceClassType": "FlatRedBall.Math.Geometry.AxisAlignedRectangle",
+          "Properties": [
+            {
+              "Name": "AssociateWithFactory",
+              "Value": true,
+              "Type": "Boolean"
+            },
+            {
+              "Name": "SourceType",
+              "Value": 2,
+              "Type": "SourceType"
+            }
+          ],
+          "InstructionSaves": [
+            {
+              "Type": "float",
+              "Member": "Height",
+              "Value": 8.0,
+              "Time": 0.0
+            },
+            {
+              "Type": "float",
+              "Member": "Width",
+              "Value": 8.0,
+              "Time": 0.0
+            }
+          ],
+          "SourceType": 2,
+          "SourceFile": "AxisAlignedRectangle",
+          "HasPublicProperty": true,
+          "AttachToContainer": true,
+          "GenerateTimedEmit": true
+        }
+      ],
+      "Name": "Entities\\CameraMidpoint",
+      "CustomClassesForExport": []
+    }
+  ],
+  "GlobalFiles": [
+    {
+      "Properties": [
+        {
+          "Name": "FileAdditionBehavior",
+          "Value": 1,
+          "Type": "int"
+        },
+        {
+          "Name": "AutoCreateGumScreens",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "ShowMouse",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "MakeGumInstancesPublic",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "IsMatchGameResolutionInGumChecked",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "IncludeFormsInComponents",
+          "Value": true
+        },
+        {
+          "Name": "IncludeComponentToFormsAssociation",
+          "Value": true
+        }
+      ],
+      "Name": "GumProject/GumProject.gumx",
+      "IsSharedStatic": true,
+      "DestroyOnUnload": false,
+      "HasPublicProperty": true,
+      "ProjectsToExcludeFrom": []
+    }
+  ],
+  "Properties": [
+    {
+      "Name": "IsOpenVisualStudioAutomaticallyChecked",
+      "Value": false
+    }
+  ],
+  "GlobalContentSettingsSave": {},
+  "SyncedProjects": [],
+  "StartUpScreen": "Screens\\Level3",
+  "ResolutionPresets": [],
+  "PerformanceSettingsSave": {},
+  "IgnoredDirectories": [],
+  "CustomClasses": [
+    {
+      "CsvFilesUsingThis": [],
+      "RequiredProperties": [
+        {
+          "Type": "string",
+          "Member": "Name",
+          "Time": 0.0
+        },
+        {
+          "Type": "System.Collections.Generic.List<FlatRedBall.Content.AnimationChain.AnimationFrameSave>",
+          "Member": "EmbeddedAnimation",
+          "Time": 0.0
+        }
+      ],
+      "Name": "TileMapInfo",
+      "GenerateCode": true
+    },
+    {
+      "CsvFilesUsingThis": [
+        "Entities/CameraMidpoint/TopDownValuesStatic.csv"
+      ],
+      "RequiredProperties": [],
+      "Name": "TopDownValues",
+      "GenerateCode": true
+    },
+    {
+      "CsvFilesUsingThis": [],
+      "RequiredProperties": [],
+      "Name": "PlatformerValues",
+      "GenerateCode": true
+    }
+  ],
+  "ApplyToFixedResolutionPlatforms": true,
+  "ExternallyBuiltFileDirectory": "../../",
+  "FileVersion": 9,
+  "PluginData": {
+    "RequiredPlugins": [
+      {
+        "Name": "Tiled Plugin",
+        "Version": "2.16.0.0",
+        "VersionRequirement": 2
+      }
+    ]
+  },
+  "DisplaySettings": {
+    "Name": "Custom",
+    "Is2D": true,
+    "GenerateDisplayCode": true,
+    "ResolutionWidth": 320,
+    "ResolutionHeight": 180,
+    "FixedAspectRatio": true,
+    "AspectRatioWidth": 16.0,
+    "AspectRatioHeight": 9.0,
+    "SupportLandscape": true,
+    "AllowWindowResizing": true,
+    "Scale": 400,
+    "ScaleGum": 25,
+    "ResizeBehavior": 1,
+    "DominantInternalCoordinates": 1,
+    "TextureFilter": 1
+  },
+  "AllDisplaySettings": []
+}

@@ -1,0 +1,32 @@
+{
+  "EntityManagementValueList": [
+    {
+      "Name": "Entities\\PlatformerGuy",
+      "SelectedProperties": [],
+      "InstanceManagementValuesList": [
+        {
+          "SelectedProperties": [],
+          "Name": "SpriteInstance"
+        },
+        {
+          "SelectedProperties": [],
+          "Name": "AxisAlignedRectangleInstance"
+        }
+      ]
+    },
+    {
+      "Name": "Entities\\CameraEntity",
+      "SelectedProperties": [],
+      "InstanceManagementValuesList": [
+        {
+          "SelectedProperties": [],
+          "Name": "TextInstance"
+        },
+        {
+          "SelectedProperties": [],
+          "Name": "CircleInstance"
+        }
+      ]
+    }
+  ]
+}

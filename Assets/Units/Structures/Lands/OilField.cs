@@ -25,11 +25,6 @@ namespace Lebeg134.Structures.Lands
             return new OilField();
         }
 
-        public override SpriteRuntime GetSprite()
-        {
-            return spriteLibrary.OilFieldSprite;
-        }
-
         protected override List<Resource> productionLevels(int level)
         {
             return new List<Resource>() { new Oil(10) };

@@ -23,11 +23,6 @@ namespace Lebeg134.Resources.Common
             return new Steel(amount);
         }
 
-        public override SpriteRuntime getSprite()
-        {
-            return spriteLibrary.SteelSprite;
-        }
-
         public override double getValue()
         {
             return 45;

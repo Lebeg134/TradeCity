@@ -1,6 +1,3 @@
-
-
-using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
 using System;
 /**
@@ -21,12 +18,6 @@ namespace Lebeg134.Resources.ConstructionIndustry
         {
             return new Insulation(amount);
         }
-
-        public override SpriteRuntime getSprite()
-        {
-            return spriteLibrary.InsulationSprite;
-        }
-
         public override double getValue()
         {
             return 22.625;

@@ -1,6 +1,3 @@
-
-
-using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Structures;
 using JHP4SD.Lebeg134.Units.Resources.Common;
@@ -24,11 +21,6 @@ namespace Lebeg134.Structures.Lands
         {
             return new IronMine();
         }
-
-        public override SpriteRuntime GetSprite()
-        {
-            return spriteLibrary.IronMineSprite;
-    }
 
         protected override List<Resource> productionLevels(int level)
         {

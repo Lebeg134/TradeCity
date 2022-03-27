@@ -1,8 +1,3 @@
-
-
-using Gum.Managers;
-using JHP4SD.GumRuntimes;
-using JHP4SD.GumRuntimes.LebegForms.Resources;
 using JHP4SD.Lebeg134.Module.Resources;
 using System;
 /**
@@ -14,10 +9,6 @@ namespace Lebeg134.Resources.Common
     public class Iron : StandardResource
     {
         public Iron(int amount) : base(amount) { }
-        public override SpriteRuntime getSprite()
-        {
-            return spriteLibrary.IronSprite;
-        }
         public override string getName()
         {
             return "Iron";

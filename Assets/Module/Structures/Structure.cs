@@ -1,7 +1,6 @@
 /**
 * @(#) Structure.cs
 */
-using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Graphics;
 using JHP4SD.Lebeg134.Units;
 using System;
@@ -34,7 +33,6 @@ namespace JHP4SD.Lebeg134.Module.Structures
             return Branches.COMMON;
         }
         public abstract string getName();
-        public abstract SpriteRuntime GetSprite();
         public virtual int GetHashCode(Structure obj)
         {
             return obj.GetType().GetHashCode();

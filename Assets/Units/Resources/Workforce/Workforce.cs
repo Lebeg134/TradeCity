@@ -1,4 +1,3 @@
-using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
 using System;
 /**
@@ -19,11 +18,6 @@ namespace Lebeg134.Resources.Workforce
         public override Resource getNewResource(int amount)
         {
             return new Workforce(amount);
-        }
-
-        public override SpriteRuntime getSprite()
-        {
-            return spriteLibrary.WorkforceSprite;
         }
     }
 

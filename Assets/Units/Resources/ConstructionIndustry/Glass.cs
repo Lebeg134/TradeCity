@@ -22,11 +22,6 @@ namespace Lebeg134.Resources.ConstructionIndustry
             return new Glass(amount);
         }
 
-        public override SpriteRuntime getSprite()
-        {
-            return spriteLibrary.GlassSprite;
-        }
-
         public override double getValue()
         {
             return 43.75;

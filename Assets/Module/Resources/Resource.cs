@@ -1,11 +1,7 @@
 /**
 * @(#) Resource.cs
 */
-using Gum.Managers;
-using JHP4SD.GumRuntimes;
-using JHP4SD.GumRuntimes.LebegForms.Resources;
 using JHP4SD.Lebeg134.Module.Graphics;
-using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 
@@ -14,7 +10,6 @@ namespace JHP4SD.Lebeg134.Module.Resources
     [Serializable]
     public abstract class Resource
     {
-        public static ResourceIconsRuntime spriteLibrary = new ResourceIconsRuntime();
         public static VisualUpdater updater = new VisualUpdater();
 
         //Amount of resource stored
@@ -31,7 +26,6 @@ namespace JHP4SD.Lebeg134.Module.Resources
             return stock;
         }
         public abstract String getName();
-        public abstract SpriteRuntime getSprite();
 
         public virtual void gain(int amount)
         {

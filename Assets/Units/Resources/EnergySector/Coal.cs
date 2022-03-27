@@ -1,6 +1,3 @@
-
-
-using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
 using System;
 /**
@@ -21,11 +18,6 @@ namespace Lebeg134.Resources.EnergySector
         public override Resource getNewResource(int amount)
         {
             return new Coal(amount);
-        }
-
-        public override SpriteRuntime getSprite()
-        {
-            return spriteLibrary.CoalSprite;
         }
 
         public override double getValue()

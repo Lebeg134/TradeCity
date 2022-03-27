@@ -1,6 +1,3 @@
-
-
-using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Structures;
 using JHP4SD.Lebeg134.Units;
@@ -35,11 +32,6 @@ namespace Lebeg134.Structures.ConstructionIndustry
         public override string getName()
         {
             return "Craftsman HQ";
-        }
-
-        public override SpriteRuntime GetSprite()
-        {
-            return spriteLibrarySmall.DefaultSprite;
         }
 
         public override List<Resource> getUpkeep()

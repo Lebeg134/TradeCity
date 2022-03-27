@@ -1,6 +1,3 @@
-
-
-using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Structures;
 using JHP4SD.Lebeg134.Units;
@@ -40,11 +37,6 @@ namespace Lebeg134.Structures.ConstructionIndustry
         public override List<Resource> getProduce()
         {
             return new List<Resource> { new Glass(5 * level) };
-        }
-
-        public override SpriteRuntime GetSprite()
-        {
-            return spriteLibrarySmall.DefaultSprite;
         }
 
         public override List<Resource> getUpkeep()

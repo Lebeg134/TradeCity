@@ -23,11 +23,6 @@ namespace Lebeg134.Resources.Common
             return new Wood(amount);
         }
 
-        public override SpriteRuntime getSprite()
-        {
-            return spriteLibrary.WoodSprite;
-        }
-
         public override double getValue()
         {
             return 5;

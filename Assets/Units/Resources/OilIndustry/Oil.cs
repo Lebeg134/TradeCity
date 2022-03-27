@@ -22,11 +22,6 @@ namespace Lebeg134.Resources.OilIndustry
             return new Oil(amount);
         }
 
-        public override SpriteRuntime getSprite()
-        {
-            return spriteLibrary.OilSprite;
-        }
-
         public override double getValue()
         {
             return 20;

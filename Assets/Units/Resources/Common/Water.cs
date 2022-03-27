@@ -1,6 +1,3 @@
-
-
-using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
 using System;
 /**
@@ -21,11 +18,6 @@ namespace Lebeg134.Resources.Common
         public override Resource getNewResource(int amount)
         {
             return new Water(amount);
-        }
-
-        public override SpriteRuntime getSprite()
-        {
-            return spriteLibrary.WaterSprite;
         }
     }
 

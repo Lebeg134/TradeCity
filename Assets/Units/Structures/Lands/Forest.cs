@@ -64,11 +64,6 @@ namespace Lebeg134.Structures.Lands
             return new Forest();
         }
 
-        public override SpriteRuntime GetSprite()
-        {
-            return spriteLibrary.ForestSprite;
-        }
-
         protected override List<Resource> productionLevels(int level)
         {
             return productionLevelStats[LebegUtil.indexInRange(productionLevelStats, level - 1)];

@@ -1,6 +1,3 @@
-
-
-using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
 using System;
 /**
@@ -23,10 +20,6 @@ namespace Lebeg134.Resources.EnergySector
             return new Electricity(amount);
         }
 
-        public override SpriteRuntime getSprite()
-        {
-            return spriteLibrary.ElectricitySprite;
-        }
     }
 
 }

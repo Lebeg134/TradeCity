@@ -22,11 +22,6 @@ namespace Lebeg134.Resources.ConstructionIndustry
             return new Concrete(amount);
         }
 
-        public override SpriteRuntime getSprite()
-        {
-            return spriteLibrary.ConcreteSprite;
-        }
-
         public override double getValue()
         {
             return 20;

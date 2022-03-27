@@ -1,8 +1,6 @@
 /**
 * @(#) Land.cs
 */
-using JHP4SD.GumRuntimes;
-using JHP4SD.GumRuntimes.LebegForms.Resources;
 using JHP4SD.Lebeg134.Module.Graphics;
 using JHP4SD.Lebeg134.Module.MapNS;
 using JHP4SD.Lebeg134.Module.Resources;
@@ -19,7 +17,6 @@ namespace JHP4SD.Lebeg134.Module.Structures
     {
         public static int StartingPrice { get; set; }
         public static VisualUpdater landUpdater = new VisualUpdater();
-        public static LandImagesRuntime spriteLibrary = new LandImagesRuntime();
         protected Player owner;
         protected int level = 1; //Leveling starts from 1
         private int _x = -1, _y = -1;

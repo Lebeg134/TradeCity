@@ -1,6 +1,3 @@
-
-
-using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Structures;
 using JHP4SD.Lebeg134.Units;
@@ -73,11 +70,6 @@ namespace Lebeg134.Structures.EnergySector
         public override int getMaxLevel()
         {
 			return 100;
-        }
-
-        public override SpriteRuntime GetSprite()
-        {
-			return spriteLibrarySmall.CoalPowerplantSprite;
         }
     }
 }

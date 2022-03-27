@@ -1,6 +1,3 @@
-
-
-using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Structures;
 using JHP4SD.Lebeg134.Units.Resources.Common;
@@ -23,11 +20,6 @@ namespace Lebeg134.Structures.Lands
         public override Land GetNew()
         {
             return new Well();
-        }
-
-        public override SpriteRuntime GetSprite()
-        {
-            return spriteLibrary.WellSprite;
         }
 
         protected override List<Resource> productionLevels(int level)

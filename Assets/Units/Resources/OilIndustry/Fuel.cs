@@ -1,6 +1,3 @@
-
-
-using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
 using System;
 /**
@@ -20,11 +17,6 @@ namespace Lebeg134.Resources.OilIndustry
         public override Resource getNewResource(int amount)
         {
             return new Fuel(amount);
-        }
-
-        public override SpriteRuntime getSprite()
-        {
-            return spriteLibrary.FuelSprite;
         }
 
         public override double getValue()

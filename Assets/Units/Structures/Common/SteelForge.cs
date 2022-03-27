@@ -80,11 +80,6 @@ namespace Lebeg134.Structures.Common
         {
             return 2;
         }
-
-        public override SpriteRuntime GetSprite()
-        {
-            return spriteLibrarySmall.SteelForgeSprite;
-        }
     }
 
 }

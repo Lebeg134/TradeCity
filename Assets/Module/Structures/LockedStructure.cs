@@ -1,6 +1,3 @@
-
-
-using JHP4SD.GumRuntimes;
 using System;
 /**
 * @(#) LockedStructure.cs
@@ -38,12 +35,6 @@ namespace JHP4SD.Lebeg134.Module.Structures
         public override string getName()
         {
 			return "Locked";
-        }
-
-        public override SpriteRuntime GetSprite()
-        {
-            // TODO
-            throw new System.NotImplementedException();
         }
     }
 	

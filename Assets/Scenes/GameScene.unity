@@ -183,7 +183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346908449}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -275.8218, y: 253.4662, z: 0}
+  m_LocalPosition: {x: -563, y: -314, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 556147196}
@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 556147198}
   - component: {fileID: 556147197}
   m_Layer: 0
-  m_Name: Navigation
+  m_Name: GUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

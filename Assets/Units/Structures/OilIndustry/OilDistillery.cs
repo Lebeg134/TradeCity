@@ -1,6 +1,3 @@
-
-
-using JHP4SD.GumRuntimes;
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Structures;
 using JHP4SD.Lebeg134.Units;
@@ -42,11 +39,6 @@ namespace Lebeg134.Structures.OilIndustry
         public override List<Resource> getProduce()
         {
             return new List<Resource> { new Fuel(2*level*level), new Chemicals(4*level*level) };
-        }
-
-        public override SpriteRuntime GetSprite()
-        {
-            return spriteLibrarySmall.DefaultSprite;
         }
 
         public override List<Resource> getUpkeep()

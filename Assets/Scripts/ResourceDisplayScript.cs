@@ -8,26 +8,25 @@ using UnityEngine.UI;
 
 public class ResourceDisplayScript : MonoBehaviour
 {
-    
-    public Player player;
+    string[] options = getOptions();
+    [Dropdown("options")]
+    public string resource;
+    Resource watched;
     public Text display;
     public Image icon;
-
-
-    static string[] resources = getOptions();
-    static int selected = 0;
-    static List<Resource> reslist = SessionGenerator.GetResourceList();
-    public Resource watched = reslist[ EditorGUILayout.Popup("Resource", selected, resources)];
+    Player player;
+    
     // Start is called before the first frame update
     void Start()
     {
-        //icon.texture.LoadImage();
+        watched = ConvertToRes(resource);
     }
 
     // Update is called once per frame
     void Update()
     {
-        display.text = player.getRes(watched).ToString();
+        //display.text = player.getRes(watched).ToString();
+        display.text = Random.Range(0, 999).ToString();
     }
 
     static string[] getOptions()
@@ -36,8 +35,17 @@ public class ResourceDisplayScript : MonoBehaviour
         List<string> strlist = new List<string>();
         foreach(Resource res in reslist)
         {
-            strlist.Add(res.ToString());
+            strlist.Add(res.getName());
         }
         return strlist.ToArray();
+    }
+    static Resource ConvertToRes(string name)
+    {
+        foreach (Resource res in SessionGenerator.GetResourceList())
+        {
+            if (res.getName() == name)
+                return res;
+        }
+        return null;
     }
 }

@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aed488825266c4498b0f8ae11b1c059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resource: 
   display: {fileID: 0}
   icon: {fileID: 0}
 --- !u!1 &2546208182744350346
@@ -259,5 +260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aed488825266c4498b0f8ae11b1c059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resource: Money
   display: {fileID: 380447340838638488}
   icon: {fileID: 7912199296195920211}

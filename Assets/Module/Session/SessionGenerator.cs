@@ -35,6 +35,12 @@ namespace JHP4SD.Lebeg134.Module.Session
         }
         static void FillPlayerWithStandard(Player player)
         {
+            player.registerResources(GetResourceList());
+            player.giveRes(new Money(50000));
+            player.giveRes(new Workforce(2000));
+        }
+        static List<Resource> GetResourceList()
+        {
             List<Resource> template = new List<Resource>
             {
                 new Money(0),
@@ -43,11 +49,9 @@ namespace JHP4SD.Lebeg134.Module.Session
                 new Electricity(0), new Coal(0),
                 new Chemicals(0), new Fuel(0), new Ink(0), new Kerosine(0), new Oil(0), new Paint(0), new Plastic(0),
                 new Workforce(0)
-               
+
             };
-            player.registerResources(template);
-            player.giveRes(new Money(50000));
-            player.giveRes(new Workforce(2000));
+            return template;
         }
         static void GenerateStartingOffers(Session session)
         {

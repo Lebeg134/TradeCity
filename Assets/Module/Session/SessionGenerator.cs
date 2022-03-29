@@ -39,7 +39,7 @@ namespace JHP4SD.Lebeg134.Module.Session
             player.giveRes(new Money(50000));
             player.giveRes(new Workforce(2000));
         }
-        static List<Resource> GetResourceList()
+        public static List<Resource> GetResourceList()
         {
             List<Resource> template = new List<Resource>
             {

@@ -13,6 +13,7 @@ public class ResourceDisplayScript : MonoBehaviour
     public string resource;
     Resource watched;
     public Text display;
+    public Text name;
     public Image icon;
     Player player;
     
@@ -20,13 +21,13 @@ public class ResourceDisplayScript : MonoBehaviour
     void Start()
     {
         watched = ConvertToRes(resource);
+        name.text = watched.getName();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //display.text = player.getRes(watched).ToString();
-        display.text = watched.getName();
+        display.text = Random.Range(0, 999999).ToString();
     }
 
     static string[] getOptions()

@@ -26,7 +26,7 @@ public class ResourceDisplayScript : MonoBehaviour
     void Update()
     {
         //display.text = player.getRes(watched).ToString();
-        display.text = Random.Range(0, 999).ToString();
+        display.text = watched.getName();
     }
 
     static string[] getOptions()

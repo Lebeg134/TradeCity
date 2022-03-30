@@ -11,7 +11,7 @@ namespace Lebeg134.Resources.ConstructionIndustry
         public Lumber(int amount) : base(amount) { }
         public override string getName()
         {
-            return "Lunber";
+            return "Lumber";
         }
 
         public override Resource getNewResource(int amount)

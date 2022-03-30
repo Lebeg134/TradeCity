@@ -17,9 +17,12 @@ public class ResourceListScript : MonoBehaviour
             {
                 case "Money":
                 case "Electricity":
+                case "Water":
+                case "Workforce":
                     continue;
             }
             GameObject listItem = Instantiate(ResourceDisplayPrefab);
+            listItem.GetComponent<ResourceDisplayScript>().resource = res.getName();
             listItem.transform.SetParent(Content.transform);
         }
     }

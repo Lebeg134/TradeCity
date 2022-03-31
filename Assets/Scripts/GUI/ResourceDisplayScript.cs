@@ -13,7 +13,7 @@ public class ResourceDisplayScript : MonoBehaviour
     public string resource;
     Resource watched;
     public Text display;
-    public Text name;
+    public Text resName;
     public Image icon;
     Player player;
 
@@ -22,7 +22,7 @@ public class ResourceDisplayScript : MonoBehaviour
     void Start()
     {
         watched = ConvertToRes(resource);
-        name.text = watched.getName();
+        resName.text = watched.getName();
     }
 
     // Update is called once per frame

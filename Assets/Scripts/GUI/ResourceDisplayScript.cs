@@ -16,7 +16,8 @@ public class ResourceDisplayScript : MonoBehaviour
     public Text name;
     public Image icon;
     Player player;
-    
+
+    int num = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,10 @@ public class ResourceDisplayScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        display.text = Random.Range(0, 999999).ToString();
+        if (display!=null && display.text !=null)
+            display.text = num++.ToString();
+        if (num >= 999999)
+            num = 0;
     }
 
     static string[] getOptions()

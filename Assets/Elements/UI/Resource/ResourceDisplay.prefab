@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resource: 
   display: {fileID: 0}
-  name: {fileID: 0}
+  resName: {fileID: 0}
   icon: {fileID: 0}
 --- !u!1 &2546208182744350346
 GameObject:
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resource: Money
   display: {fileID: 380447340838638488}
-  name: {fileID: 3118944157865276231}
+  resName: {fileID: 3118944157865276231}
   icon: {fileID: 7912199296195920211}
 --- !u!1 &8296679790581541016
 GameObject:

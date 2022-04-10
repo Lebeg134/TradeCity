@@ -1,3 +1,4 @@
+using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Session;
 using JHP4SD.Lebeg134.Module.Structures;
 using System.Collections;
@@ -11,6 +12,8 @@ public class BuildingListItemScript : MonoBehaviour
     [Dropdown("options")]
     public string building;
     public Text buildingName;
+    public HorizontalLayoutGroup costsList;
+    public GameObject CostDisplayPrefab;
     Building target;
     
     // Start is called before the first frame update
@@ -18,6 +21,13 @@ public class BuildingListItemScript : MonoBehaviour
     {
         target = ConvertToBuilding(building);
         buildingName.text = target.getName();
+
+        foreach (Resource res in target.Cost())
+        {
+            GameObject listItem = Instantiate(CostDisplayPrefab);
+            listItem.GetComponent<ResourceDisplayScript>().resource = res.getName();
+            listItem.transform.SetParent(costsList.transform);
+        }
     }
 
     // Update is called once per frame

@@ -11,7 +11,7 @@ public class ResourceDisplayScript : MonoBehaviour
     string[] options = getOptions();
     [Dropdown("options")]
     public string resource;
-    Resource watched;
+    protected Resource watched;
     public Text display;
     public Text resName;
     public Image icon;
@@ -19,19 +19,18 @@ public class ResourceDisplayScript : MonoBehaviour
 
     int num = 0;
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
-        watched = ConvertToRes(resource);
+        if (watched == null)
+            watched = ConvertToRes(resource);
         resName.text = watched.getName();
+        display.text = watched.amount().ToString();
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
-        if (display!=null && display.text !=null)
-            display.text = num++.ToString();
-        if (num >= 999999)
-            num = 0;
+
     }
 
     static string[] getOptions()
@@ -44,7 +43,7 @@ public class ResourceDisplayScript : MonoBehaviour
         }
         return strlist.ToArray();
     }
-    static Resource ConvertToRes(string name)
+    static protected Resource ConvertToRes(string name)
     {
         foreach (Resource res in SessionGenerator.GetResourceList())
         {

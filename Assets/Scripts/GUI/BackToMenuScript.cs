@@ -4,22 +4,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using JHP4SD.Lebeg134.Module.TimeManager;
 using JHP4SD.Lebeg134.Module.Session;
 
-public class StartGameScript : MonoBehaviour
+public class BacckToMenuScript : MonoBehaviour
 {
-    public Button newGameBtn;
+    public Button backButton;
     // Start is called before the first frame update
     void Start()
     {
-        newGameBtn.onClick.AddListener(() => StartGame());
+        backButton.onClick.AddListener(()=> Click());
     }
 
-    private void StartGame()
+    private void Click()
     {
+        Clock.Instance.pause();
+        Session.save();
         SceneManager.LoadScene(sceneName: "GameScene");
-        Session session = SessionGenerator.GenerateStandard();
-        session.start();
     }
 
     // Update is called once per frame

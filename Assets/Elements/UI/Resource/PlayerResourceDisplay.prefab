@@ -257,9 +257,9 @@ GameObject:
   - component: {fileID: 4986462233131704704}
   - component: {fileID: 7856747960412057071}
   - component: {fileID: 8649424151943264400}
-  - component: {fileID: 19708667620002969}
+  - component: {fileID: 4664194043646255629}
   m_Layer: 0
-  m_Name: ResourceDisplay
+  m_Name: PlayerResourceDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &19708667620002969
+--- !u!114 &4664194043646255629
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3918729144897826669}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3af2bd74a6906d409fe841c76c05800, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d235d9946bf80745b61f8da03e041c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   resource: 

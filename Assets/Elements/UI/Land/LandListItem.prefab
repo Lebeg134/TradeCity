@@ -114,7 +114,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -158}
-  m_SizeDelta: {x: 150, y: 30}
+  m_SizeDelta: {x: 292, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &3314331191656429669
 CanvasRenderer:
@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 7648321426483834893}
   - component: {fileID: 7648321426483834891}
   - component: {fileID: 7648321426483834890}
+  - component: {fileID: 533856214880142346}
   m_Layer: 0
   m_Name: LandListItem
   m_TagString: Untagged
@@ -237,6 +238,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &533856214880142346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7648321426483834892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0783685db7d1b4e880695f39bc5a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 6729643710128436729}
+  buildingName: {fileID: 6293765376532226673}
+  buildButton: {fileID: 6347005759824382417}
+  costDisplay: {fileID: 7306072361176060969}
+  target: 
 --- !u!1 &7714392547265072340
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +548,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
+--- !u!1 &7306072361176060969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3918729144897826669, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
+  m_PrefabInstance: {fileID: 5982607141363006276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1600191308035480260 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4986462233131704704, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}

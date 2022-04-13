@@ -65,7 +65,20 @@ namespace JHP4SD.Lebeg134.Module.Session
             session.offers.Add(new OilField(), 40000);
             session.offers.Add(new OilRig(), 80000);
         }
-
+        public static List<Land> GetAllLands()
+        {
+            return new List<Land>{
+                new ClearwaterLake(),
+                new Well(),
+                new Forest(),
+                new CoalMine(),
+                new IronMine(),
+                new SandQuarry(),
+                new StoneQuarry(),
+                new OilField(),
+                new OilRig()
+            };
+        }
         internal static List<Building> GetAllBuildings()
         {
             if (allBuildings == null)

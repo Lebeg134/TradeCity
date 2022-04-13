@@ -11,7 +11,7 @@ public class ResourceDisplayScript : MonoBehaviour
     string[] options = getOptions();
     [Dropdown("options")]
     public string resource;
-    protected Resource watched;
+    public Resource watched;
     public Text display;
     public Text resName;
     public Image icon;

@@ -53,11 +53,6 @@ public class BuildingTabControlerScript : MonoBehaviour
 
     public void RegisterAllBuildings(Branches branch) //TODO add player checks
     {
-        //foreach (Building building in Player.CurrentPlayer.getAllBuildings())
-        //{
-        //    if (building.getBranch()==branch)
-        //        RegisterBuilding(building);
-        //}
         foreach (Building building in SessionGenerator.GetAllBuildings())
         {
             if (building.getBranch() == branch)

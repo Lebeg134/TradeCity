@@ -18,11 +18,18 @@ public class AvailableLandsListScript : MonoBehaviour
         {
             GameObject landOfferItem = Instantiate(listItem);
             landOfferItem.GetComponent<LandOfferVisualsScript>().watched = landOffer;
-            landOfferItem.GetComponent<LandOfferVisualsScript>().costDisplay.GetComponent<ResourceDisplayScript>().watched = new Money(offers[landOffer]);
+            landOfferItem.GetComponent<LandOfferVisualsScript>().price = offers[landOffer];
             landOfferItem.transform.SetParent(Content.transform);
         }
     }
-
+    public void Refresh()
+    {
+        foreach (Transform child in Content.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        Start();
+    }
     // Update is called once per frame
     void Update()
     {

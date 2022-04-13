@@ -17,6 +17,7 @@ public class LandOfferVisualsScript : MonoBehaviour
     public string target;
     string[] options = getOptions();
     public Land watched;
+    public int price =1000;
     private static string[] getOptions()
     {
         
@@ -37,12 +38,28 @@ public class LandOfferVisualsScript : MonoBehaviour
             watched = ConvertStringToLand(target);
         }
         buildingName.text = watched.getName();
+        costDisplay.GetComponent<ResourceDisplayScript>().watched = new Money(price);
+        buildButton.onClick.AddListener(() => OnClick());
+        
+    }
+
+    private void OnClick()
+    {
+        if (Player.CurrentPlayer.checkResource(new Money(price)))
+        {
+            Player.CurrentPlayer.subRes(new Money(price));
+            Player.CurrentPlayer.giveStructure(watched);
+            Session.Instance.offers.Remove(watched);
+            int newPrice = price * 2;
+            Session.Instance.offers.Add(watched.GetNew(), newPrice);
+            gameObject.GetComponentInParent<AvailableLandsListScript>().Refresh();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        buildButton.interactable = Player.CurrentPlayer.checkResource(new Money(price));
     }
     Land ConvertStringToLand(string name)
     {

@@ -343,7 +343,7 @@ MonoBehaviour:
   display: {fileID: 380447340838638488}
   resName: {fileID: 3118944157865276231}
   icon: {fileID: 7912199296195920211}
-  indicatorLimit: 30
+  indicatorLimit: 0.75
   upIndicator: {fileID: 1302229117878046291}
   downIndicator: {fileID: 7454179582049690032}
 --- !u!1 &5580229345850652377

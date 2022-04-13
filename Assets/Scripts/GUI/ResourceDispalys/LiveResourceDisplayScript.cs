@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Assets.Scripts.GUI.ResourceDispalys
@@ -15,8 +16,8 @@ namespace Assets.Scripts.GUI.ResourceDispalys
             NEUTRAL,
             DOWN
         }
-        public int indicatorLimit;
-        int indicatorTime;
+        public float indicatorLimit;
+        float indicatorTime;
         int prevAmount = 0;
         public Image upIndicator;
         public Image downIndicator;
@@ -31,7 +32,7 @@ namespace Assets.Scripts.GUI.ResourceDispalys
         {
             int amount = watched.amount();
             display.text = amount.ToString();
-            if (prevAmount == amount && indicatorLimit++ >= indicatorLimit)
+            if (prevAmount == amount && (indicatorTime += Time.deltaTime) >= indicatorLimit)
             {
                 state = IndicatorState.NEUTRAL;
                 indicatorTime = 0;

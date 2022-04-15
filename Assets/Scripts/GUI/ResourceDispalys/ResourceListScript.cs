@@ -4,13 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourceListScript : MonoBehaviour
+
+public class ResourceListScript : ListScript<Resource>
 {
-    public GameObject ResourceDisplayPrefab;
-    public GameObject Content;
-    // Start is called before the first frame update
-    void Start()
+    protected override ICollection<Resource> GetCollection()
     {
+        List<Resource> ret = new List<Resource>();
         foreach (Resource res in SessionGenerator.GetResourceList())
         {
             switch (res.getName())
@@ -21,15 +20,13 @@ public class ResourceListScript : MonoBehaviour
                 case "Workforce":
                     continue;
             }
-            GameObject listItem = Instantiate(ResourceDisplayPrefab);
-            listItem.GetComponent<ResourceDisplayScript>().resource = res.getName();
-            listItem.transform.SetParent(Content.transform);
+            ret.Add(res);
         }
+        return ret;
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void ProcessListItem(Resource item, GameObject newListItem)
     {
-        
+        newListItem.GetComponent<ResourceDisplayScript>().resource = item.getName();
     }
 }

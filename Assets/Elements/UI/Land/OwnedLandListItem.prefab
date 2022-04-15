@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 313098539514872616}
   - component: {fileID: 6455460117839436476}
   - component: {fileID: 1715917720162818242}
+  - component: {fileID: 6365564970041634306}
   m_Layer: 0
   m_Name: OwnedLandListItem
   m_TagString: Untagged
@@ -237,6 +238,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6365564970041634306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5525297055380540516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87c344663c147047b3fdfb49231985f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 2391773888571937137}
+  nameText: {fileID: 7719608450220384157}
+  produceDisplay: {fileID: 3670460628142985014}
 --- !u!1 &6994891676311496583
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +425,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
+--- !u!1 &3670460628142985014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3918729144897826669, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
+  m_PrefabInstance: {fileID: 329333537748541531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4729201687416832475 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4986462233131704704, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}

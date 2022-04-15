@@ -12,13 +12,13 @@ using UnityEngine.UI;
 /// <typeparam name="Collection"> Type of collection that is to be handled</typeparam>
 public abstract class ListScript<T> : MonoBehaviour
 {
-    public GameObject newListItem;
+    public GameObject ListItem;
     public GameObject Content;
 
     /// <summary>
     /// Gets called when the script is instantiated
     /// </summary>
-    void Start()
+    protected virtual void Start()
     {
         Fill();
     }
@@ -31,8 +31,8 @@ public abstract class ListScript<T> : MonoBehaviour
     {
         foreach (T item in GetCollection())
         {
-            Instantiate(newListItem);
-            ProcessListItem(item, ref newListItem);
+            GameObject newListItem = Instantiate(ListItem);
+            ProcessListItem(item, newListItem);
             newListItem.transform.SetParent(Content.transform);
         }
     }
@@ -62,7 +62,7 @@ public abstract class ListScript<T> : MonoBehaviour
     /// </summary>
     /// <param name="item"> Item to be displayed</param>
     /// <param name="newListItem"> Displaying Gameobject that will be added to the list </param>
-    protected abstract void ProcessListItem(T item, ref GameObject newListItem);
+    protected abstract void ProcessListItem(T item, GameObject newListItem);
 
     /// <summary>
     /// Defines the collection to be shown in the list
@@ -74,5 +74,5 @@ public abstract class ListScript<T> : MonoBehaviour
     /// Gets called once every frame
     /// Does nothing by default
     /// </summary>
-    protected void Update() { }
+    protected virtual void Update() { }
 }

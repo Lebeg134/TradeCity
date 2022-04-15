@@ -53,6 +53,7 @@ public class LandOfferVisualsScript : MonoBehaviour
             int newPrice = price * 2;
             Session.Instance.offers.Add(watched.GetNew(), newPrice);
             gameObject.GetComponentInParent<AvailableLandsListScript>().Refresh();
+            gameObject.GetComponentInParent<VisualUpdater>().VisualUpdate();
         }
     }
 

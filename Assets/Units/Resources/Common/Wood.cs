@@ -14,6 +14,10 @@ namespace Lebeg134.Resources.Common
         {
             return "Wood";
         }
+        public override string GetResourcepath()
+        {
+            return BasePath() + "log";
+        }
 
         public override Resource getNewResource(int amount)
         {

@@ -13,7 +13,10 @@ namespace Lebeg134.Resources.OilIndustry
         {
             return "Kerosine";
         }
-
+        public override string GetResourcepath()
+        {
+            return BasePath() + "commercial-airplane";
+        }
         public override Resource getNewResource(int amount)
         {
             return new Kerosine(amount);

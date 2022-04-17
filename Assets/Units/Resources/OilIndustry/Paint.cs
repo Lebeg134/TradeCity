@@ -13,6 +13,10 @@ namespace Lebeg134.Resources.OilIndustry
         {
             return "Paint";
         }
+        public override string GetResourcepath()
+        {
+            return BasePath() + "paint-bucket";
+        }
 
         public override Resource getNewResource(int amount)
         {

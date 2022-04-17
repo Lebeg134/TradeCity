@@ -34,9 +34,8 @@ public class BuildingListItemScript : MonoBehaviour
         buildingName.text = target.getName();
 
         var loadedSprite = Resources.Load<Sprite>("Buildings/" + target.getName());
-        if (loadedSprite == null)
-            loadedSprite = Resources.Load<Sprite>("Buildings/Default");
-        buildingImage.sprite = loadedSprite;
+        if (loadedSprite != null)
+            buildingImage.sprite = loadedSprite;
 
         levelText.enabled = false;
         UpdateCostDisplay();

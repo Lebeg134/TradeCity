@@ -13,7 +13,10 @@ namespace Lebeg134.Resources.OilIndustry
         {
             return "Ink";
         }
-
+        public override string GetResourcepath()
+        {
+            return BasePath() + "quill-ink";
+        }
         public override Resource getNewResource(int amount)
         {
             return new Ink(amount);

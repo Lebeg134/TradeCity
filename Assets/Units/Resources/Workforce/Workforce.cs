@@ -14,6 +14,10 @@ namespace Lebeg134.Resources.Workforce
         {
             return "Workforce";
         }
+        public override string GetResourcepath()
+        {
+            return BasePath() + "person";
+        }
 
         public override Resource getNewResource(int amount)
         {

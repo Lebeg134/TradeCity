@@ -1,6 +1,7 @@
 /**
 * @(#) Structure.cs
 */
+using Assets.Module.Graphics;
 using JHP4SD.Lebeg134.Module.Graphics;
 using JHP4SD.Lebeg134.Units;
 using System;
@@ -8,7 +9,7 @@ using System.Collections.Generic;
 namespace JHP4SD.Lebeg134.Module.Structures
 {
     [Serializable]
-    public abstract class Structure : IEqualityComparer<Structure>
+    public abstract class Structure : IEqualityComparer<Structure>, IGetRes
 	{
         public static VisualUpdater updater = new VisualUpdater();
         protected bool state; //true = on, false = off
@@ -37,6 +38,10 @@ namespace JHP4SD.Lebeg134.Module.Structures
         {
             return obj.GetType().GetHashCode();
         }
-       
+
+        virtual public string GetResourcepath()
+        {
+            return "Structure/Default";
+        }
     }
 }

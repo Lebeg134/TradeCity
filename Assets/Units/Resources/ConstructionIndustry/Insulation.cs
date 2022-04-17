@@ -13,7 +13,10 @@ namespace Lebeg134.Resources.ConstructionIndustry
         {
             return "Insulation";
         }
-
+        public override string GetResourcepath()
+        {
+            return BasePath() + "rolled-cloth";
+        }
         public override Resource getNewResource(int amount)
         {
             return new Insulation(amount);

@@ -13,6 +13,10 @@ namespace Lebeg134.Resources.OilIndustry
         {
             return "Plastic";
         }
+        public override string GetResourcepath()
+        {
+            return BasePath() + "cubes";
+        }
 
         public override Resource getNewResource(int amount)
         {

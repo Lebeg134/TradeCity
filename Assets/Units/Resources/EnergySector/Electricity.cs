@@ -14,7 +14,10 @@ namespace Lebeg134.Resources.EnergySector
         {
             return "Electricity";
         }
-
+        public override string GetResourcepath()
+        {
+            return BasePath() + "electric";
+        }
         public override Resource getNewResource(int amount)
         {
             return new Electricity(amount);

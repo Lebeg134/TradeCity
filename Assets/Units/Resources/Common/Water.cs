@@ -14,6 +14,10 @@ namespace Lebeg134.Resources.Common
         {
             return "Water";
         }
+        public override string GetResourcepath()
+        {
+            return BasePath() + "water-drop";
+        }
 
         public override Resource getNewResource(int amount)
         {

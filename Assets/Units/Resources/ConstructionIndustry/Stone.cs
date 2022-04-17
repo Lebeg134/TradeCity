@@ -13,6 +13,10 @@ namespace Lebeg134.Resources.ConstructionIndustry
         {
             return "Stone";
         }
+        public override string GetResourcepath()
+        {
+            return BasePath() + "stone-block";
+        }
 
         public override Resource getNewResource(int amount)
         {

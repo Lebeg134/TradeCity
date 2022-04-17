@@ -16,6 +16,10 @@ namespace JHP4SD.Lebeg134.Units.Resources.Common
         {
             return "Money";
         }
+        public override string GetResourcepath()
+        {
+            return BasePath() + "money-stack";
+        }
 
         public override Resource getNewResource(int amount)
         {

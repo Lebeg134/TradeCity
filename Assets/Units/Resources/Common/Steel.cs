@@ -14,6 +14,10 @@ namespace Lebeg134.Resources.Common
         {
             return "Steel";
         }
+        public override string GetResourcepath()
+        {
+            return BasePath() + "i-beam";
+        }
 
         public override Resource getNewResource(int amount)
         {

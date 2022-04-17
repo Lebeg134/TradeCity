@@ -1,6 +1,7 @@
 /**
 * @(#) Resource.cs
 */
+using Assets.Module.Graphics;
 using JHP4SD.Lebeg134.Module.Graphics;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Collections.Generic;
 namespace JHP4SD.Lebeg134.Module.Resources
 {
     [Serializable]
-    public abstract class Resource
+    public abstract class Resource: IGetRes
     {
         public static VisualUpdater updater = new VisualUpdater();
 
@@ -20,6 +21,15 @@ namespace JHP4SD.Lebeg134.Module.Resources
                 stock = amount;
             else
                 stock = 0;
+        }
+        virtual public string GetResourcepath()
+        {
+            //Default icon is money stack
+            return "Resource/money-stack";
+        }
+        protected string BasePath()
+        {
+            return "Resource/";
         }
         public int amount()
         {
@@ -66,6 +76,9 @@ namespace JHP4SD.Lebeg134.Module.Resources
             spend(B.stock);
             return this;
         }
+
+        
+
         public static Resource operator +(Resource A, Resource B)
         {
             return A.Add(B);

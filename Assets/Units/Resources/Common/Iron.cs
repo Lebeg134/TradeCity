@@ -13,6 +13,10 @@ namespace Lebeg134.Resources.Common
         {
             return "Iron";
         }
+        public override string GetResourcepath()
+        {
+            return BasePath() + "ore";
+        }
         public override Resource getNewResource(int amount)
         {
             return new Iron(amount);

@@ -16,6 +16,10 @@ namespace Lebeg134.Structures.Lands
         {
             return "Lake";
         }
+        public override string GetResourcepath()
+        {
+            return getBasePath() + "Clearwaterlake";
+        }
 
         public override Land GetNew()
         {

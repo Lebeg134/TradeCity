@@ -115,5 +115,10 @@ namespace JHP4SD.Lebeg134.Module.Structures
         {
             return level;
         }
+
+        override protected string getBasePath()
+        {
+            return base.getBasePath() + "Land/";
+        }
     }
 }

@@ -16,6 +16,10 @@ namespace Lebeg134.Structures.Lands
         {
             return "Oil Rig";
         }
+        public override string GetResourcepath()
+        {
+            return getBasePath() + "OilRig";
+        }
 
         public override Land GetNew()
         {

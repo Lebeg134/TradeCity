@@ -55,6 +55,10 @@ namespace Lebeg134.Structures.Lands
         {
             return "Forest";
         }
+        public override string GetResourcepath()
+        {
+            return getBasePath() + "Forest";
+        }
 
         public override Land GetNew()
         {

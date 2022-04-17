@@ -38,6 +38,10 @@ namespace JHP4SD.Lebeg134.Module.Structures
             //Possibility to transfer ownership?, can implement later if needed
             owner = by;
         }
+        override protected string getBasePath()
+        {
+            return base.getBasePath()+"Building/";
+        }
     }
 
     [Serializable]

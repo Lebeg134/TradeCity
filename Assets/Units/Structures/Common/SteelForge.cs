@@ -50,6 +50,10 @@ namespace Lebeg134.Structures.Common
         {
             return "Steel Forge";
         }
+        public override string GetResourcepath()
+        {
+            return getBasePath() + "steel_forge";
+        }
         public override Branches getBranch()
         {
             return Branches.COMMON;

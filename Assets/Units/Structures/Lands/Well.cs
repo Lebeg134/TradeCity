@@ -16,7 +16,10 @@ namespace Lebeg134.Structures.Lands
         {
             return "Pumping Station";
         }
-
+        public override string GetResourcepath()
+        {
+            return getBasePath() + "Well";
+        }
         public override Land GetNew()
         {
             return new Well();

@@ -16,7 +16,10 @@ namespace Lebeg134.Structures.Lands
         {
             return "Iron Mine";
         }
-
+        public override string GetResourcepath()
+        {
+            return getBasePath() + "IronMine";
+        }
         public override Land GetNew()
         {
             return new IronMine();

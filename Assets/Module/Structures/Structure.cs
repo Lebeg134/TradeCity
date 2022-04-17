@@ -43,5 +43,9 @@ namespace JHP4SD.Lebeg134.Module.Structures
         {
             return "Structure/Default";
         }
+        virtual protected string getBasePath()
+        {
+            return "Structure/";
+        }
     }
 }

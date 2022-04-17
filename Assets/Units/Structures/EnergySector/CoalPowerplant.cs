@@ -15,21 +15,6 @@ namespace Lebeg134.Structures.EnergySector
 	[Serializable]
 	public class CoalPowerplant: CommonProdBuilding
 	{
-		//protected static new readonly List<Resource>[] upgradeLevelsCostsArray =
-		//{
-		//	new List<Resource>{new Wood(100), new Workforce(50)},
-		//	new List<Resource>{new Wood(100), new Steel(100)}
-		//};
-		//protected static new readonly List<Resource>[] upkeepLevelsArray =
-		//{
-		//	new List<Resource>{new Coal(45)},
-		//	new List<Resource>{new Coal(65)}
-		//};
-		//protected static readonly new List<Resource>[] productionLevelsArray =
-		//{
-		//	new List<Resource>{new Electricity(5)},
-		//	new List<Resource>{new Electricity(10)}
-		//};
 		public override Branches getBranch()
 		{
 			return Branches.ENERGY;
@@ -38,6 +23,10 @@ namespace Lebeg134.Structures.EnergySector
         public override string getName()
         {
 			return "Coal Powerplant";
+        }
+        public override string GetResourcepath()
+        {
+            return getBasePath() + "coal_powerplant";
         }
 
         public override List<Resource> getProduce()

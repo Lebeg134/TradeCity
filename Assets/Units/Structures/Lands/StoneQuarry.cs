@@ -16,7 +16,10 @@ namespace Lebeg134.Structures.Lands
         {
             return "Stone Quarry";
         }
-
+        public override string GetResourcepath()
+        {
+            return getBasePath() + "StoneQuarry";
+        }
         public override Land GetNew()
         {
             return new StoneQuarry();

@@ -18,6 +18,7 @@ public class BuildingListItemScript : MonoBehaviour
     string[] options = getOptions();
     [Dropdown("options")]
     public string building;
+    public Image buildingImage;
     public Text buildingName;
     public Button buildButton;
     public Text levelText;
@@ -31,6 +32,12 @@ public class BuildingListItemScript : MonoBehaviour
     {
         target = ConvertToBuilding(building);
         buildingName.text = target.getName();
+
+        var loadedSprite = Resources.Load<Sprite>("Buildings/" + target.getName());
+        if (loadedSprite == null)
+            loadedSprite = Resources.Load<Sprite>("Buildings/Default");
+        buildingImage.sprite = loadedSprite;
+
         levelText.enabled = false;
         UpdateCostDisplay();
         buildButton.onClick.AddListener(() => OnClick());
@@ -104,13 +111,13 @@ public class BuildingListItemScript : MonoBehaviour
         switch (btnState)
         {
             case ButtonState.BUILD:
-                buildButton.GetComponent<Text>().text = "Build";
+                buildButton.GetComponentInChildren<Text>().text = "Build";
                 break;
             case ButtonState.UPGRADE:
-                buildButton.GetComponent<Text>().text = "Upgrade";
+                buildButton.GetComponentInChildren<Text>().text = "Upgrade";
                 break;
             case ButtonState.MAXLEVEL:
-                buildButton.GetComponent<Text>().text = "Maxed";
+                buildButton.GetComponentInChildren<Text>().text = "Maxed";
                 break;
         }
     }

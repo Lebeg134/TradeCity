@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Assets.Module.Graphics
 {
-    class Class1
+    interface IGetRes
     {
+        string GetResourcepath();
     }
 }

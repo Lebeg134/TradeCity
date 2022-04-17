@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building: Concrete Mixing Plant
+  buildingImage: {fileID: 3171238924813224355}
   buildingName: {fileID: 4926203824831279856}
   buildButton: {fileID: 1441557463674241696}
   levelText: {fileID: 5522973060803930692}

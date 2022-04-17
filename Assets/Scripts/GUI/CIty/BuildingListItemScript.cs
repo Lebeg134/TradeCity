@@ -33,7 +33,7 @@ public class BuildingListItemScript : MonoBehaviour
         target = ConvertToBuilding(building);
         buildingName.text = target.getName();
 
-        var loadedSprite = Resources.Load<Sprite>("Buildings/" + target.getName());
+        var loadedSprite = Resources.Load<Sprite>(target.GetResourcepath());
         if (loadedSprite != null)
             buildingImage.sprite = loadedSprite;
 

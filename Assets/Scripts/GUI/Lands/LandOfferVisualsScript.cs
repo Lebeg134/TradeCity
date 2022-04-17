@@ -39,6 +39,11 @@ public class LandOfferVisualsScript : MonoBehaviour
         }
         buildingName.text = watched.getName();
         costDisplay.GetComponent<ResourceDisplayScript>().watched = new Money(price);
+
+        var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
+        if (loadedSprite != null)
+            sprite.sprite = loadedSprite;
+
         buildButton.onClick.AddListener(() => OnClick());
         
     }

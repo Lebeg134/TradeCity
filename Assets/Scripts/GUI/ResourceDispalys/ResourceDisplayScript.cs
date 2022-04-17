@@ -23,8 +23,12 @@ public class ResourceDisplayScript : MonoBehaviour
     {
         if (watched == null)
             watched = ConvertToRes(resource);
-        resName.text = watched.getName();
-        display.text = watched.amount().ToString();
+        resName!.text = watched!.getName();
+        display!.text = watched!.amount().ToString();
+
+        var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
+        if (loadedSprite != null)
+            icon.sprite = loadedSprite;
     }
 
     // Update is called once per frame

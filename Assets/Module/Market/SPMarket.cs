@@ -8,13 +8,15 @@ using System.Threading.Tasks;
 
 namespace Assets.Module.Market
 {
-    class SPMartket
+    class SPMarket
     {
-        public static SPMartket Instance {
+        public delegate void Notify();
+        public static event Notify notifySubscribers; 
+        public static SPMarket Instance {
             get
             {
                 if (instance == null)
-                    return instance = new SPMartket();
+                    return instance = new SPMarket();
                 else
                     return instance;
             }
@@ -23,20 +25,21 @@ namespace Assets.Module.Market
                 instance = value;
             }
         }
-        static SPMartket instance;
+        static SPMarket instance;
 
         List<SPListing> listings = new List<SPListing>();
-
+        public List<SPListing> Listings { get { return listings; } }
         public void RegisterListing(SPListing newListing)
         {
             listings.Add(newListing);
             newListing.register();
+            notifySubscribers?.Invoke();
         }
         public void RemoveListing(SPListing listing)
         {
             listings.Remove(listing);
             Clock.Instance.unRegister(listing);
+            notifySubscribers?.Invoke();
         }
-
     }
 }

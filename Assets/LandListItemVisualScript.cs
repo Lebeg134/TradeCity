@@ -1,3 +1,4 @@
+using Assets.Module.Market;
 using JHP4SD.Lebeg134.Module.Market;
 using JHP4SD.Lebeg134.Units.Resources.Common;
 using System;
@@ -25,8 +26,7 @@ public class LandListItemVisualScript : MonoBehaviour
 
     private void OnClick()
     {
-        throw new NotImplementedException();
-        //remove listing from list
+        SPMarket.Instance.RemoveListing(watched);
     }
 
     // Update is called once per frame

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class ResourceDisplayScript : MonoBehaviour
 {
-    string[] options = getOptions();
+    string[] options = getOptions().ToArray();
     [Dropdown("options")]
     public string resource;
     public Resource watched;
@@ -37,7 +37,7 @@ public class ResourceDisplayScript : MonoBehaviour
 
     }
 
-    static string[] getOptions()
+    public static List<string> getOptions()
     {
         List<Resource> reslist =SessionGenerator.GetResourceList();
         List<string> strlist = new List<string>();
@@ -45,9 +45,9 @@ public class ResourceDisplayScript : MonoBehaviour
         {
             strlist.Add(res.getName());
         }
-        return strlist.ToArray();
+        return strlist;
     }
-    static protected Resource ConvertToRes(string name)
+    public static Resource ConvertToRes(string name)
     {
         foreach (Resource res in SessionGenerator.GetResourceList())
         {

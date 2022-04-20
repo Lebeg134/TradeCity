@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LandListItemVisualScript : MonoBehaviour
+public class ListingItemVisualScript : MonoBehaviour
 {
     public GameObject ListingSubject;
     public GameObject MoneyDisplay;

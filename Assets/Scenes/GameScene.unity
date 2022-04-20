@@ -533,7 +533,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2111418961}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3179,7 +3179,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option A
+  m_Text: 
 --- !u!222 &581543356
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3536,13 +3536,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 629376925}
   m_TextComponent: {fileID: 1537819642}
   m_Placeholder: {fileID: 968789219}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -4166,7 +4166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00013736695}
+  m_AnchoredPosition: {x: 0, y: -0.000006248274}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &828428206
@@ -4837,7 +4837,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: Specify amount...
 --- !u!222 &968789220
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5493,10 +5493,10 @@ RectTransform:
   m_Father: {fileID: 1313589321}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.25, y: 149.26329}
-  m_SizeDelta: {x: -31.5, y: -450.5264}
+  m_AnchoredPosition: {x: -0.25, y: -149.79333}
+  m_SizeDelta: {x: -31.5, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1095893344
 MonoBehaviour:
@@ -5917,6 +5917,7 @@ GameObject:
   - component: {fileID: 1169126024}
   - component: {fileID: 1169126023}
   - component: {fileID: 1169126022}
+  - component: {fileID: 1169126025}
   m_Layer: 0
   m_Name: ResourceSelector
   m_TagString: Untagged
@@ -5994,13 +5995,7 @@ MonoBehaviour:
   m_ItemImage: {fileID: 0}
   m_Value: 0
   m_Options:
-    m_Options:
-    - m_Text: Option A
-      m_Image: {fileID: 0}
-    - m_Text: Option B
-      m_Image: {fileID: 0}
-    - m_Text: Option C
-      m_Image: {fileID: 0}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6043,6 +6038,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169126020}
   m_CullTransparentMesh: 1
+--- !u!114 &1169126025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169126020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baeace58eacf88845ab123c1b07668c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 1169126022}
 --- !u!1 &1183387951
 GameObject:
   m_ObjectHideFlags: 0
@@ -6054,6 +6062,7 @@ GameObject:
   - component: {fileID: 1183387952}
   - component: {fileID: 1183387954}
   - component: {fileID: 1183387953}
+  - component: {fileID: 1183387955}
   m_Layer: 0
   m_Name: MyListings
   m_TagString: Untagged
@@ -6120,6 +6129,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183387951}
   m_CullTransparentMesh: 1
+--- !u!114 &1183387955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183387951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a58a7c535bc4b4ca84c8ff033b6ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListItem: {fileID: 2746746868122521659, guid: 9e8164d106c56294c9755fc94cb58921, type: 3}
+  Content: {fileID: 799282089}
 --- !u!1 &1194622886
 GameObject:
   m_ObjectHideFlags: 0
@@ -6357,13 +6380,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1218183929}
   m_TextComponent: {fileID: 26670917}
   m_Placeholder: {fileID: 1288806843}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -6705,7 +6728,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: Specify amount...
 --- !u!222 &1288806844
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10558,10 +10581,10 @@ RectTransform:
   m_Father: {fileID: 1313589321}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.25, y: 25.472298}
-  m_SizeDelta: {x: -31.5, y: -469.8909}
+  m_AnchoredPosition: {x: 0.25, y: -288.90085}
+  m_SizeDelta: {x: -31.5, y: 128.22229}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2029810317
 MonoBehaviour:

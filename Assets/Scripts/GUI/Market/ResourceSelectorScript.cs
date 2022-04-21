@@ -9,15 +9,19 @@ public class ResourceSelectorScript : MonoBehaviour
 {
     public Resource selected;
     public Dropdown dropdown;
-    List<string> options = ResourceDisplayScript.getOptions();
+    List<string> options;
     // Start is called before the first frame update
     void Start()
     {
+        dropdown.captionText.text = "Select Resource...";
         dropdown.ClearOptions();
+        options = ResourceDisplayScript.getOptions();
+        options.Remove("Money");
         dropdown.AddOptions(options);
         dropdown.onValueChanged.AddListener((int i) =>
         {
             selected = ResourceDisplayScript.ConvertToRes(options[i]);
+            dropdown.captionText.text = selected.getName();
         }
         );
     }

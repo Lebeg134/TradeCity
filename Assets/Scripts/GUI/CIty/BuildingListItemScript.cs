@@ -37,7 +37,8 @@ public class BuildingListItemScript : MonoBehaviour
         if (loadedSprite != null)
             buildingImage.sprite = loadedSprite;
 
-        levelText.enabled = false;
+        levelText.text = "Lvl:" + ((CommonBuilding)target).getLevel();
+
         UpdateCostDisplay();
         buildButton.onClick.AddListener(() => OnClick());
     }
@@ -46,6 +47,8 @@ public class BuildingListItemScript : MonoBehaviour
     void Update()
     {
         UpdateButton();
+        if (target == null) return;
+        UpdateState();
     }
 
     private void OnClick()
@@ -68,24 +71,20 @@ public class BuildingListItemScript : MonoBehaviour
                 //Do nothing
                 break;
         }
-        if (target.CanBeBuilt(Player.CurrentPlayer) && target is CommonBuilding)
+        if (target is CommonBuilding)
         {
-            if (target is CommonBuilding && ((CommonBuilding)target).getLevel() > 0)
-            {
-                levelText.enabled = true;
-                levelText.text = "Lvl:" + ((CommonBuilding)target).getLevel();
-            }
-            else
-                levelText.enabled = false;
+            levelText.text = "Lvl:" + ((CommonBuilding)target).getLevel();
         }
         UpdateState();
+        UpdateButton();
         UpdateCostDisplay();
     }
 
     private void UpdateState()
     {
-        if (Player.CurrentPlayer.hasStructure(target))
+        if (target.CanBeBuilt(Player.CurrentPlayer))
         {
+            btnState= ButtonState.BUILD;
             if (target is CommonBuilding)
             {
                 CommonBuilding focus = (CommonBuilding)target;
@@ -93,20 +92,21 @@ public class BuildingListItemScript : MonoBehaviour
                 {
                     btnState = ButtonState.MAXLEVEL;
                 }
-                else if (focus.checkLevelUp())
+                else if (focus.getLevel() > 0)
                 {
                     btnState = ButtonState.UPGRADE;
                 }
             }
         }
-        else if (target.CanBeBuilt(Player.CurrentPlayer))
-        {
-            btnState= ButtonState.BUILD;
-        }
+        
     }
     private void UpdateButton()
     {
         buildButton.interactable = target.CanBeBuilt(Player.CurrentPlayer);
+        if (btnState == ButtonState.MAXLEVEL)
+        {
+            buildButton.interactable = false;
+        }
         switch (btnState)
         {
             case ButtonState.BUILD:

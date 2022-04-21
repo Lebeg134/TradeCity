@@ -37,7 +37,7 @@ namespace Lebeg134.Structures.ConstructionIndustry
 
         public override List<Resource> getProduce()
         {
-            throw new NotImplementedException();
+            return new List<Resource> { new Lumber(level * 2) };
         }
 
         public override List<Resource> getUpkeep()

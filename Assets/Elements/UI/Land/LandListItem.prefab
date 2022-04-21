@@ -255,6 +255,7 @@ MonoBehaviour:
   buildButton: {fileID: 6347005759824382417}
   costDisplay: {fileID: 7306072361176060969}
   target: 
+  price: 1000
 --- !u!1 &7714392547265072340
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4986462233131704704, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 156
       objectReference: {fileID: 0}
     - target: {fileID: 4986462233131704704, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
       propertyPath: m_SizeDelta.y

@@ -1,5 +1,6 @@
 using Assets.Module.Market;
 using JHP4SD.Lebeg134.Module.Market;
+using JHP4SD.Lebeg134.Module.MarketNS;
 using JHP4SD.Lebeg134.Module.Resources;
 using System;
 using System.Collections;
@@ -12,11 +13,16 @@ public class NewListingScript : MonoBehaviour
     public Button sellAllButton;
     public Button createListingButton;
     public Dropdown resourceSelector;
+    public GameObject resourceDisplay;
     public InputField amountInput;
     public InputField aboveInput;
     // Start is called before the first frame update
     void Start()
     {
+        resourceSelector.onValueChanged.AddListener((var) => UpdateResourceDisplay());
+        amountInput.onValueChanged.AddListener((var) => UpdateResourceDisplay());
+        aboveInput.onValueChanged.AddListener((var) => UpdateResourceDisplay());
+
         resourceSelector.onValueChanged.AddListener((var) => UpdateButtons());
         amountInput.onValueChanged.AddListener((var) => UpdateButtons());
         aboveInput.onValueChanged.AddListener((var) => UpdateButtons());
@@ -45,6 +51,19 @@ public class NewListingScript : MonoBehaviour
         sellOneButton.interactable = resValid && int.Parse(amountInput.text) > 0;
         sellAllButton.interactable = resValid && int.Parse(amountInput.text) > 0;
         createListingButton.interactable = resValid && int.Parse(amountInput.text) > 0 && int.Parse(aboveInput.text) > 0;
+    }
+    void UpdateResourceDisplay()
+    {
+        Resource res = resourceSelector.GetComponent<ResourceSelectorScript>().selected;
+        if (res != null)
+        {
+            int amount = int.Parse(amountInput.text);
+            if (amount > 0)
+            {
+                res = res.getNewResource(GetListing(false).getValue());
+            }
+        }
+        resourceDisplay.GetComponent<ResourceDisplayScript>().watched = res;
     }
     SPListing GetListing(bool autoListing)
     {

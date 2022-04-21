@@ -11,7 +11,19 @@ public class ResourceDisplayScript : MonoBehaviour
     string[] options = getOptions().ToArray();
     [Dropdown("options")]
     public string resource;
-    public Resource watched;
+    public Resource watched
+    {
+        get
+        {
+            return _watched;
+        }
+        set
+        {
+            UpdateVisuals();
+            _watched = value;
+        }
+    }
+    Resource _watched;
     public Text display;
     public Text resName;
     public Image icon;
@@ -23,8 +35,7 @@ public class ResourceDisplayScript : MonoBehaviour
     {
         if (watched == null)
             watched = ConvertToRes(resource);
-        resName!.text = watched!.getName();
-        display!.text = watched!.amount().ToString();
+        UpdateVisuals();
 
         var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
         if (loadedSprite != null)
@@ -35,6 +46,12 @@ public class ResourceDisplayScript : MonoBehaviour
     protected virtual void Update()
     {
 
+    }
+
+    protected virtual void UpdateVisuals()
+    {
+        resName!.text = watched!.getName();
+        display!.text = watched!.amount().ToString();
     }
 
     public static List<string> getOptions()

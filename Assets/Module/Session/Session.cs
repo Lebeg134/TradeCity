@@ -65,6 +65,10 @@ namespace JHP4SD.Lebeg134.Module.Session
             b.Serialize(stream, Instance);
             stream.Close();
         }
+        public static bool saveExists()
+        {
+            return File.Exists(Filename);
+        }
         public static void load()
         {
             Stream stream = File.OpenRead(Filename);

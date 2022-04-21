@@ -2149,10 +2149,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 435880933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d09f26f9366284a44a9dd3194522720d, type: 3}
+  m_Script: {fileID: 11500000, guid: 13b9a88115e8e994abf0f93e6055d3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitButton: {fileID: 435880935}
 --- !u!1 &448403506
 GameObject:
   m_ObjectHideFlags: 0
@@ -8700,7 +8699,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Exit to menu
+  m_Text: Save and Exit to menu
 --- !u!222 &1613655598
 CanvasRenderer:
   m_ObjectHideFlags: 0

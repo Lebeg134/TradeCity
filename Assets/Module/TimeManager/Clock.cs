@@ -10,8 +10,8 @@ namespace JHP4SD.Lebeg134.Module.TimeManager
     public class Clock
     {
         private static Clock _instance = new Clock();
-        public static Clock Instance 
-        { 
+        public static Clock Instance
+        {
             get
             {
                 return _instance;
@@ -19,7 +19,7 @@ namespace JHP4SD.Lebeg134.Module.TimeManager
             set
             {
                 _instance = new Clock();
-                foreach(ITickable tickable in value.tickables)
+                foreach (ITickable tickable in value.tickables)
                 {
                     if (tickable != null)
                         _instance.Register(tickable);
@@ -48,13 +48,24 @@ namespace JHP4SD.Lebeg134.Module.TimeManager
         {
             timer.Enabled = false;
         }
+        public void toggle()
+        {
+            if (timer.Enabled)
+            {
+                pause();
+            }
+            else
+            {
+                start();
+            }
+        }
         public void setSpeed(Speed speed)
         {
             interval = (int)speed;
         }
         void tick(object source, ElapsedEventArgs e)
         {
-            for (int i = 0; i<tickables.Count; i++) // foreach is immuteable! ->crash
+            for (int i = 0; i < tickables.Count; i++) // foreach is immuteable! ->crash
             {
                 tickables[i].tick();
                 if (!timer.Enabled) // Had a lot of crashes because this isn't thread safe

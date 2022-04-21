@@ -588,7 +588,6 @@ GameObject:
   - component: {fileID: 81634448}
   - component: {fileID: 81634447}
   - component: {fileID: 81634446}
-  - component: {fileID: 81634449}
   - component: {fileID: 81634450}
   m_Layer: 0
   m_Name: PlayButton
@@ -674,7 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.74509805, b: 0.33333334, a: 1}
+  m_Color: {r: 0.68235296, g: 0.68235296, b: 0.68235296, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -699,25 +698,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81634444}
   m_CullTransparentMesh: 1
---- !u!95 &81634449
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81634444}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cb95a489a22f10d4cb5563e7d5c4dd02, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &81634450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,8 +712,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   play: {fileID: 21300000, guid: 732ce047e48b5fb45a92457a4c09a64c, type: 3}
   pause: {fileID: 21300000, guid: 5d8a0e600ca45c94e95a57a12ebc43d3, type: 3}
-  playColor: {r: 0, g: 0.7176471, b: 0.32156864, a: 0}
-  pauseColor: {r: 0.6415094, g: 0, b: 0, a: 0}
+  playColor: {r: 0, g: 0.7176471, b: 0.32156864, a: 1}
+  pauseColor: {r: 0.6415094, g: 0, b: 0, a: 1}
   icon: {fileID: 461846027}
   button: {fileID: 81634446}
 --- !u!1 &82441033

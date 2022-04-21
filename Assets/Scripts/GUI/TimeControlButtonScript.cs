@@ -1,3 +1,4 @@
+using JHP4SD.Lebeg134.Module.TimeManager;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,29 +10,36 @@ public class TimeControlButtonScript : MonoBehaviour
     public Sprite pause;
     public Color playColor;
     public Color pauseColor;
+    public Image icon;
     public Button button;
-    bool paused = true;
+    Clock clock;
     // Start is called before the first frame update
     void Start()
     {
-        button.onClick.AddListener(()=> Toggle());
+        clock = Clock.Instance;
+        button.onClick.AddListener(() => Toggle());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateVisuals();
     }
     void Toggle()
     {
-        paused = !paused;
-        if (paused)
+        clock.toggle();
+    }
+    void UpdateVisuals()
+    {
+        if (clock.isEnabled())
         {
-            //button.gameObject.GetComponent<Sprite>().texture.
+            icon.sprite = pause;
+            button.image.color = pauseColor;
         }
         else
         {
-            
+            icon.sprite = play;
+            button.image.color = playColor;
         }
     }
 }

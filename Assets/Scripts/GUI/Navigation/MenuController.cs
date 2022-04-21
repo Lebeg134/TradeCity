@@ -18,11 +18,25 @@ public class MenuController : MonoBehaviour
     public Button mapButton;
     public Button marketButton;
 
-    ActiveScreen active;
+    public ActiveScreen active
+    {
+        get
+        {
+            return _active;
+        }
+        set
+        {
+            _active = value;
+            onScreenChanged.Invoke(value);
+        }
+    }
+    ActiveScreen _active;
+    public delegate void ActiveChanged(ActiveScreen newScreen);
+    public event ActiveChanged onScreenChanged;
     // Start is called before the first frame update
     void Start()
     {
-        cityButton.onClick.AddListener( () => SwitchTo(ActiveScreen.CITY));
+        cityButton.onClick.AddListener(() => SwitchTo(ActiveScreen.CITY));
         mapButton.onClick.AddListener(() => SwitchTo(ActiveScreen.MAP));
         marketButton.onClick.AddListener(() => SwitchTo(ActiveScreen.MARKET));
         active = ActiveScreen.CITY;
@@ -32,11 +46,13 @@ public class MenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     // Switch to given screen
     void SwitchTo(ActiveScreen screen)
     {
+        if (active != screen) 
+            active = screen;
         switch (screen)
         {
             case ActiveScreen.CITY:

@@ -19,8 +19,8 @@ public class ResourceDisplayScript : MonoBehaviour
         }
         set
         {
-            UpdateVisuals();
             _watched = value;
+            UpdateVisuals();
         }
     }
     Resource _watched;
@@ -35,11 +35,7 @@ public class ResourceDisplayScript : MonoBehaviour
     {
         if (watched == null)
             watched = ConvertToRes(resource);
-        UpdateVisuals();
-
-        var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
-        if (loadedSprite != null)
-            icon.sprite = loadedSprite;
+        UpdateVisuals();       
     }
 
     // Update is called once per frame
@@ -52,6 +48,10 @@ public class ResourceDisplayScript : MonoBehaviour
     {
         resName!.text = watched!.getName();
         display!.text = watched!.amount().ToString();
+
+        var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
+        if (loadedSprite != null)
+            icon.sprite = loadedSprite;
     }
 
     public static List<string> getOptions()

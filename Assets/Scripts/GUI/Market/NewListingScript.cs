@@ -2,6 +2,7 @@ using Assets.Module.Market;
 using JHP4SD.Lebeg134.Module.Market;
 using JHP4SD.Lebeg134.Module.MarketNS;
 using JHP4SD.Lebeg134.Module.Resources;
+using JHP4SD.Lebeg134.Units.Resources.Common;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,7 +14,8 @@ public class NewListingScript : MonoBehaviour
     public Button sellAllButton;
     public Button createListingButton;
     public Dropdown resourceSelector;
-    public GameObject resourceDisplay;
+    public GameObject valueDisplay;
+    public GameObject forDisplay;
     public InputField amountInput;
     public InputField aboveInput;
     // Start is called before the first frame update
@@ -55,15 +57,19 @@ public class NewListingScript : MonoBehaviour
     void UpdateResourceDisplay()
     {
         Resource res = resourceSelector.GetComponent<ResourceSelectorScript>().selected;
+        Resource money = new Money(0);
+        int amount = 0;
         if (res != null)
         {
-            int amount = int.Parse(amountInput.text);
+            amount = int.Parse(amountInput.text);
             if (amount > 0)
             {
-                res = res.getNewResource(GetListing(false).getValue());
+                money = new Money(GetListing(false).getValue());
+                res = res.getNewResource(amount);
             }
         }
-        resourceDisplay.GetComponent<ResourceDisplayScript>().watched = res;
+        valueDisplay.GetComponent<ResourceDisplayScript>().watched = money;
+        forDisplay.GetComponent<ResourceDisplayScript>().watched = res;
     }
     SPListing GetListing(bool autoListing)
     {

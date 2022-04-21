@@ -30,8 +30,10 @@ namespace Assets.Scripts.GUI.ResourceDispalys
         }
         protected override void Update()
         {
-            int amount = watched!.amount();
-            display.text = amount!.ToString();
+            if (watched == null) return;
+
+            int amount = watched.amount();
+            display.text = amount.ToString();
             if (prevAmount == amount && (indicatorTime += Time.deltaTime) >= indicatorLimit)
             {
                 state = IndicatorState.NEUTRAL;

@@ -1,5 +1,6 @@
 using JHP4SD.Lebeg134.Module.Resources;
 using JHP4SD.Lebeg134.Module.Session;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -20,9 +21,15 @@ public class ResourceDisplayScript : MonoBehaviour
         set
         {
             _watched = value;
-            UpdateVisuals();
+            onWatchedChanged();
+            
         }
     }
+    protected virtual void onWatchedChanged()
+    {
+        UpdateVisuals();
+    }
+
     Resource _watched;
     public Text display;
     public Text resName;
@@ -48,7 +55,10 @@ public class ResourceDisplayScript : MonoBehaviour
     {
         resName!.text = watched!.getName();
         display!.text = watched!.amount().ToString();
-
+        LoadSprite();
+    }
+    protected void LoadSprite()
+    {
         var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
         if (loadedSprite != null)
             icon.sprite = loadedSprite;

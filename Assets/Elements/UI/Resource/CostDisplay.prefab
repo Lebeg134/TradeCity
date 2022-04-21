@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 4986462233131704704}
   - component: {fileID: 7856747960412057071}
   - component: {fileID: 8649424151943264400}
-  - component: {fileID: 4740516756177294563}
+  - component: {fileID: 3537512130792373198}
   m_Layer: 0
   m_Name: CostDisplay
   m_TagString: Untagged
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4740516756177294563
+--- !u!114 &3537512130792373198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,13 +259,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3918729144897826669}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9aed488825266c4498b0f8ae11b1c059, type: 3}
+  m_Script: {fileID: 11500000, guid: af9b5427a33d8e04cb5d0f804749b336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resource: Money
+  resource: 
   display: {fileID: 380447340838638488}
   resName: {fileID: 3118944157865276231}
   icon: {fileID: 7912199296195920211}
+  notEnoughColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &8296679790581541016
 GameObject:
   m_ObjectHideFlags: 0

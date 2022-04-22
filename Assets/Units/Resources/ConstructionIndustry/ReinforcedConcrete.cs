@@ -9,7 +9,7 @@ namespace Lebeg134.Resources.ConstructionIndustry
     public class ReinforcedConcrete : StandardResource
     {
         public ReinforcedConcrete(int amount) : base(amount) { }
-        public override string getName()
+        public override string GetName()
         {
             return "Reinforced Concrete";
         }

@@ -12,7 +12,7 @@ public class ResourceListScript : ListScript<Resource>
         List<Resource> ret = new List<Resource>();
         foreach (Resource res in SessionGenerator.GetResourceList())
         {
-            switch (res.getName())
+            switch (res.GetName())
             {
                 case "Money":
                 case "Electricity":
@@ -27,6 +27,6 @@ public class ResourceListScript : ListScript<Resource>
 
     protected override void ProcessListItem(Resource item, GameObject newListItem)
     {
-        newListItem.GetComponent<ResourceDisplayScript>().resource = item.getName();
+        newListItem.GetComponent<ResourceDisplayScript>().resource = item.GetName();
     }
 }

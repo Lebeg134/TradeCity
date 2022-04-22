@@ -12,7 +12,7 @@ namespace JHP4SD.Lebeg134.Units.Resources.Common
     {
         public Money(int amount) : base(amount) { }
 
-        public override string getName()
+        public override string GetName()
         {
             return "Money";
         }

@@ -9,7 +9,7 @@ namespace Lebeg134.Resources.ConstructionIndustry
     public class Bricks : StandardResource
     {
         public Bricks(int amount) : base(amount) { }
-        public override string getName()
+        public override string GetName()
         {
             return "Bricks";
         }

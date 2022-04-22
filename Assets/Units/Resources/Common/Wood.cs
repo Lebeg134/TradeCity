@@ -10,7 +10,7 @@ namespace Lebeg134.Resources.Common
     {
         public Wood(int amount) : base(amount) { }
 
-        public override string getName()
+        public override string GetName()
         {
             return "Wood";
         }

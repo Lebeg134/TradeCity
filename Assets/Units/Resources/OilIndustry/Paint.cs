@@ -9,7 +9,7 @@ namespace Lebeg134.Resources.OilIndustry
     public class Paint : StandardResource
     {
         public Paint(int amount) : base(amount) { }
-        public override string getName()
+        public override string GetName()
         {
             return "Paint";
         }

@@ -35,7 +35,7 @@ namespace JHP4SD.Lebeg134.Module.Resources
         {
             return stock;
         }
-        public abstract String getName();
+        public abstract String GetName();
 
         public virtual void gain(int amount)
         {

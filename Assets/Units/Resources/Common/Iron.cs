@@ -9,7 +9,7 @@ namespace Lebeg134.Resources.Common
     public class Iron : StandardResource
     {
         public Iron(int amount) : base(amount) { }
-        public override string getName()
+        public override string GetName()
         {
             return "Iron";
         }

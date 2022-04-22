@@ -53,7 +53,7 @@ public class ResourceDisplayScript : MonoBehaviour
 
     protected virtual void UpdateVisuals()
     {
-        resName!.text = watched!.getName();
+        resName!.text = watched!.GetName();
         display!.text = watched!.amount().ToString();
         LoadSprite();
     }
@@ -70,7 +70,7 @@ public class ResourceDisplayScript : MonoBehaviour
         List<string> strlist = new List<string>();
         foreach(Resource res in reslist)
         {
-            strlist.Add(res.getName());
+            strlist.Add(res.GetName());
         }
         return strlist;
     }
@@ -78,7 +78,7 @@ public class ResourceDisplayScript : MonoBehaviour
     {
         foreach (Resource res in SessionGenerator.GetResourceList())
         {
-            if (res.getName() == name)
+            if (res.GetName() == name)
                 return res;
         }
         return null;

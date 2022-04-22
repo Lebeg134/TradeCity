@@ -21,7 +21,7 @@ public class ResourceSelectorScript : MonoBehaviour
         dropdown.onValueChanged.AddListener((int i) =>
         {
             selected = ResourceDisplayScript.ConvertToRes(options[i]);
-            dropdown.captionText.text = selected.getName();
+            dropdown.captionText.text = selected.GetName();
             dropdown.Hide();
         }
         );
@@ -32,8 +32,8 @@ public class ResourceSelectorScript : MonoBehaviour
         List<string> options = new List<string>();
         foreach (Resource res in SessionGenerator.GetResourceList())
         {
-            if (res is ISellable && res.getName() != "Money")
-                options.Add(res.getName());
+            if (res is ISellable && res.GetName() != "Money")
+                options.Add(res.GetName());
         }
         return options;
     }

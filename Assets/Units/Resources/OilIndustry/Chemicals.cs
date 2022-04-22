@@ -9,7 +9,7 @@ namespace Lebeg134.Resources.OilIndustry
     public class Chemicals : StandardResource
     {
         public Chemicals(int amount) : base(amount) { }
-        public override string getName()
+        public override string GetName()
         {
             return "Chemicals";
         }

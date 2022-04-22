@@ -10,7 +10,7 @@ namespace Lebeg134.Resources.Workforce
     {
         public Workforce(int amount) : base(amount) { }
 
-        public override string getName()
+        public override string GetName()
         {
             return "Workforce";
         }

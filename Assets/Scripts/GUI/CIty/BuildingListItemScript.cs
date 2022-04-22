@@ -37,7 +37,8 @@ public class BuildingListItemScript : MonoBehaviour
         if (loadedSprite != null)
             buildingImage.sprite = loadedSprite;
 
-        levelText.text = "Lvl:" + ((CommonBuilding)target).getLevel();
+        if (target is CommonBuilding)
+            levelText.text = "Lvl:" + ((CommonBuilding)target).getLevel();
 
         UpdateCostDisplay();
         buildButton.onClick.AddListener(() => OnClick());

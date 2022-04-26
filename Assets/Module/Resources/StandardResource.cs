@@ -1,10 +1,10 @@
 /**
 * @(#) StandardResource.cs
 */
-using JHP4SD.Lebeg134.Module.MarketNS;
+using Lebeg134.Module.MarketNS;
 using System;
 
-namespace JHP4SD.Lebeg134.Module.Resources
+namespace Lebeg134.Module.Resources
 {
     [Serializable]
     public abstract class StandardResource : Resource, ISellable
@@ -12,7 +12,7 @@ namespace JHP4SD.Lebeg134.Module.Resources
         public StandardResource(int amount):base(amount)
         {
         }
-        public abstract double getValue();
+        public abstract double GetValue();
         public void reportListing(Listing listing)
         {
             throw new System.NotImplementedException();

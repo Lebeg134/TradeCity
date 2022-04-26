@@ -1,12 +1,11 @@
 /**
 * @(#) Resource.cs
 */
-using Assets.Module.Graphics;
-using JHP4SD.Lebeg134.Module.Graphics;
+using Lebeg134.Module.Graphics;
 using System;
 using System.Collections.Generic;
 
-namespace JHP4SD.Lebeg134.Module.Resources
+namespace Lebeg134.Module.Resources
 {
     [Serializable]
     public abstract class Resource: IGetRes

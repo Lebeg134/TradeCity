@@ -1,5 +1,5 @@
-﻿using JHP4SD.Lebeg134.Module.Resources;
-using JHP4SD.Lebeg134.Units.Resources.Common;
+﻿using Lebeg134.Module.Resources;
+using Lebeg134.Units.Resources.Common;
 using Lebeg134.Resources.Workforce;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JHP4SD.Lebeg134.Assets.Module.Graphics
+namespace Lebeg134.Assets.Module.Graphics
 {
     public static class ResourceSpriteDefinition
     {

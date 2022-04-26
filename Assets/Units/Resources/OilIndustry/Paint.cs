@@ -1,4 +1,4 @@
-using JHP4SD.Lebeg134.Module.Resources;
+using Lebeg134.Module.Resources;
 using System;
 /**
 * @(#) Paint.cs
@@ -23,7 +23,7 @@ namespace Lebeg134.Resources.OilIndustry
             return new Paint(amount);
         }
 
-        public override double getValue()
+        public override double GetValue()
         {
             return 15.625;
         }

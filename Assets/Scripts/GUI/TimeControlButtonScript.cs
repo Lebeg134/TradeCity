@@ -1,4 +1,4 @@
-using JHP4SD.Lebeg134.Module.TimeManager;
+using Lebeg134.Module.TimeManager;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

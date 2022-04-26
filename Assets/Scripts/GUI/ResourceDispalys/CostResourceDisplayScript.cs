@@ -1,4 +1,4 @@
-﻿using JHP4SD.Lebeg134.Module.Session;
+﻿using Lebeg134.Module.Session;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts.GUI.ResourceDispalys
+namespace Lebeg134.Scripts.GUI.ResourceDispalys
 {
     internal class CostResourceDisplayScript:ResourceDisplayScript
     {

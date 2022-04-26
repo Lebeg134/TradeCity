@@ -1,15 +1,15 @@
-﻿using JHP4SD.Lebeg134.Module.MarketNS;
-using JHP4SD.Lebeg134.Module.Resources;
-using JHP4SD.Lebeg134.Module.Session;
-using JHP4SD.Lebeg134.Module.TimeManager;
-using JHP4SD.Lebeg134.Units.Resources.Common;
+﻿using Lebeg134.Module.MarketNS;
+using Lebeg134.Module.Resources;
+using Lebeg134.Module.Session;
+using Lebeg134.Module.TimeManager;
+using Lebeg134.Units.Resources.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JHP4SD.Lebeg134.Module.Market
+namespace Lebeg134.Module.Market
 {
     [Serializable]
     public class SPListing: ITickable
@@ -70,7 +70,7 @@ namespace JHP4SD.Lebeg134.Module.Market
         }
         public int getValue()
         {
-            return (int)Math.Floor(sell.amount() * sell.getValue());
+            return (int)Math.Floor(sell.amount() * sell.GetValue());
         }
         public void register()
         {

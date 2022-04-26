@@ -1,6 +1,6 @@
-using JHP4SD.Lebeg134.Module.Resources;
-using JHP4SD.Lebeg134.Module.Structures;
-using JHP4SD.Lebeg134.Module.Utilities;
+using Lebeg134.Module.Resources;
+using Lebeg134.Module.Structures;
+using Lebeg134.Module.Utilities;
 using Lebeg134.Resources.Common;
 using System;
 using System.Collections.Generic;

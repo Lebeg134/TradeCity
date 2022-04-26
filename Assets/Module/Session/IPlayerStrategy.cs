@@ -4,7 +4,7 @@ using System;
 /**
 * @(#) IPlayerStrategy.cs
 */
-namespace JHP4SD.Lebeg134.Module.Session
+namespace Lebeg134.Module.Session
 {
     public interface IPlayerStrategy
     {

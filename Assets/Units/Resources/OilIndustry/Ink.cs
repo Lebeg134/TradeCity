@@ -1,4 +1,4 @@
-using JHP4SD.Lebeg134.Module.Resources;
+using Lebeg134.Module.Resources;
 using System;
 /**
 * @(#) Ink.cs
@@ -22,7 +22,7 @@ namespace Lebeg134.Resources.OilIndustry
             return new Ink(amount);
         }
 
-        public override double getValue()
+        public override double GetValue()
         {
             return 18;
         }

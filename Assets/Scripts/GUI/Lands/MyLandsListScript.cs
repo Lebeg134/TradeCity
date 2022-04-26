@@ -1,6 +1,6 @@
-using Assets.Scripts.GUI.VisualUpdaters;
-using JHP4SD.Lebeg134.Module.Session;
-using JHP4SD.Lebeg134.Module.Structures;
+using Lebeg134.Scripts.GUI.VisualUpdaters;
+using Lebeg134.Module.Session;
+using Lebeg134.Module.Structures;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

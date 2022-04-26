@@ -1,4 +1,4 @@
-using JHP4SD.Lebeg134.Module.Resources;
+using Lebeg134.Module.Resources;
 using System;
 /**
 * @(#) Kerosene.cs
@@ -22,7 +22,7 @@ namespace Lebeg134.Resources.OilIndustry
             return new Kerosine(amount);
         }
 
-        public override double getValue()
+        public override double GetValue()
         {
             return 83.45;
         }

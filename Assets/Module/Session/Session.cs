@@ -1,18 +1,18 @@
 /**
  * @(#) Session.cs
  */
-using JHP4SD.Lebeg134.Module.TimeManager;
-using JHP4SD.Lebeg134.Module.MapNS;
-using JHP4SD.Lebeg134.Module.MarketNS;
+using Lebeg134.Module.TimeManager;
+using Lebeg134.Module.MapNS;
+using Lebeg134.Module.MarketNS;
 using System.Collections.Generic;
-using static JHP4SD.Lebeg134.Module.Session.Player;
+using static Lebeg134.Module.Session.Player;
 using System;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using JHP4SD.Lebeg134.Module.Structures;
+using Lebeg134.Module.Structures;
 
-namespace JHP4SD.Lebeg134.Module.Session
+namespace Lebeg134.Module.Session
 {
     [Serializable]
     public class Session : ITickable

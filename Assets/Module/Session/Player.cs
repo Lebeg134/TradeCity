@@ -1,13 +1,13 @@
 /**
 * @(#) Player.cs
 */
-using JHP4SD.Lebeg134.Module.Resources;
-using JHP4SD.Lebeg134.Module.Structures;
-using JHP4SD.Lebeg134.Module.TimeManager;
+using Lebeg134.Module.Resources;
+using Lebeg134.Module.Structures;
+using Lebeg134.Module.TimeManager;
 using System;
 using System.Collections.Generic;
 
-namespace JHP4SD.Lebeg134.Module.Session
+namespace Lebeg134.Module.Session
 {
 
     [Serializable]

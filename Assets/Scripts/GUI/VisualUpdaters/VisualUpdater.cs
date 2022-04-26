@@ -1,4 +1,4 @@
-using Assets.Scripts.GUI.VisualUpdaters;
+using Lebeg134.Scripts.GUI.VisualUpdaters;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

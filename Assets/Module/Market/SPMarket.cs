@@ -1,12 +1,12 @@
-﻿using JHP4SD.Lebeg134.Module.Market;
-using JHP4SD.Lebeg134.Module.TimeManager;
+﻿using Lebeg134.Module.Market;
+using Lebeg134.Module.TimeManager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Module.Market
+namespace Lebeg134.Module.Market
 {
     class SPMarket
     {

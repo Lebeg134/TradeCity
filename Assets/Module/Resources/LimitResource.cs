@@ -4,7 +4,7 @@ using System;
 /**
 * @(#) LimitResource.cs
 */
-namespace JHP4SD.Lebeg134.Module.Resources
+namespace Lebeg134.Module.Resources
 {
     [Serializable]
     public abstract class LimitResource : Resource

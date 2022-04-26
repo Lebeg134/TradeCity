@@ -2,7 +2,7 @@ using System;
 /**
 * @(#) LockedStructure.cs
 */
-namespace JHP4SD.Lebeg134.Module.Structures
+namespace Lebeg134.Module.Structures
 {
     [Serializable]
     public class LockedStructure : Structure

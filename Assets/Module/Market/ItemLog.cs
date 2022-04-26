@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace JHP4SD.Lebeg134.Module.MarketNS
+namespace Lebeg134.Module.MarketNS
 {
     [Serializable]
     struct ItemLog

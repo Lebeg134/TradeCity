@@ -3,10 +3,10 @@
  */
 using System;
 using System.Collections.Generic;
-using JHP4SD.Lebeg134.Module.Resources;
-using JHP4SD.Lebeg134.Module.Structures;
+using Lebeg134.Module.Resources;
+using Lebeg134.Module.Structures;
 
-namespace JHP4SD.Lebeg134.Module.Session
+namespace Lebeg134.Module.Session
 {
     public partial class Player
     {

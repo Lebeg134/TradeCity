@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Module.Graphics
+namespace Lebeg134.Module.Graphics
 {
     interface IGetRes
     {

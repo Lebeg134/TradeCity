@@ -1,6 +1,5 @@
-using Assets.Module.Market;
-using JHP4SD.Lebeg134.Module.Market;
-using JHP4SD.Lebeg134.Units.Resources.Common;
+using Lebeg134.Module.Market;
+using Lebeg134.Units.Resources.Common;
 using System;
 using System.Collections;
 using System.Collections.Generic;

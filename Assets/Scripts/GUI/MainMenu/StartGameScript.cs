@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using JHP4SD.Lebeg134.Module.Session;
+using Lebeg134.Module.Session;
 
 public class StartGameScript : MonoBehaviour
 {

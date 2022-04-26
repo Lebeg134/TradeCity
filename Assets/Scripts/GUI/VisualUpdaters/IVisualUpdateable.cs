@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.GUI.VisualUpdaters
+namespace Lebeg134.Scripts.GUI.VisualUpdaters
 {
     interface IVisualUpdateable
     {

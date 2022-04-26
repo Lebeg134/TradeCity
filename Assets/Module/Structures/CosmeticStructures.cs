@@ -2,7 +2,7 @@
  * @(#) CosmeticStructures.cs
  */
 
-namespace JHP4SD.Lebeg134.Module.Structures
+namespace Lebeg134.Module.Structures
 {
     public abstract class CosmeticStructures : Structure
     {

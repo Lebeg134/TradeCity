@@ -1,12 +1,12 @@
 /**
 * @(#) CommonBuilding.cs
 */
-using JHP4SD.Lebeg134.Module.Resources;
-using JHP4SD.Lebeg134.Module.Session;
+using Lebeg134.Module.Resources;
+using Lebeg134.Module.Session;
 using System;
 using System.Collections.Generic;
 
-namespace JHP4SD.Lebeg134.Module.Structures
+namespace Lebeg134.Module.Structures
 {
     [Serializable]
     public abstract class CommonBuilding : Building, IUpgradeable

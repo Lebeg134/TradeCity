@@ -1,4 +1,4 @@
-using JHP4SD.Lebeg134.Module.Resources;
+using Lebeg134.Module.Resources;
 using System;
 /**
 * @(#) Wood.cs
@@ -24,7 +24,7 @@ namespace Lebeg134.Resources.Common
             return new Wood(amount);
         }
 
-        public override double getValue()
+        public override double GetValue()
         {
             return 5;
         }

@@ -1,5 +1,4 @@
-﻿using Assets.Module.Market;
-using JHP4SD.Lebeg134.Module.Market;
+﻿using Lebeg134.Module.Market;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Assets.Scripts.GUI.Market
+namespace Lebeg134.Scripts.GUI.Market
 {
     class MyListingsListScript : ListScript<SPListing>
     {

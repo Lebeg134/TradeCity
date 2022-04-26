@@ -1,13 +1,13 @@
 /**
 * @(#) Listing.cs
 */
-using JHP4SD.Lebeg134.Module.Resources;
-using JHP4SD.Lebeg134.Module.Session;
-using JHP4SD.Lebeg134.Module.TimeManager;
+using Lebeg134.Module.Resources;
+using Lebeg134.Module.Session;
+using Lebeg134.Module.TimeManager;
 using System;
 using System.Collections.Generic;
 
-namespace JHP4SD.Lebeg134.Module.MarketNS
+namespace Lebeg134.Module.MarketNS
 {
     [Serializable]
     public class Listing : ITickable, IComparer<Listing>

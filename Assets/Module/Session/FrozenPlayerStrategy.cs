@@ -1,9 +1,9 @@
 /**
 * @(#) FrozenPlayerStrategy.cs
 */
-using static JHP4SD.Lebeg134.Module.Session.Player;
+using static Lebeg134.Module.Session.Player;
 
-namespace JHP4SD.Lebeg134.Module.Session
+namespace Lebeg134.Module.Session
 {
     public partial class Player
     {

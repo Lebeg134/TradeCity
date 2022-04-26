@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="JHP4SD.Lebeg134.Module.TimeManager.Clock">
+  <Class Name="Lebeg134.Module.TimeManager.Clock">
     <Position X="4" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAREAAAAAAAAAQAgAAEAAACAAAARAAAAQAAQAABAIEA=</HashCode>
@@ -10,14 +10,14 @@
       <Field Name="tickables" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Interface Name="JHP4SD.Lebeg134.Module.TimeManager.ITickable">
+  <Interface Name="Lebeg134.Module.TimeManager.ITickable">
     <Position X="0.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Assets\Module\TimeManager\ITickable.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="JHP4SD.Lebeg134.Module.TimeManager.Speed">
+  <Enum Name="Lebeg134.Module.TimeManager.Speed">
     <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAABCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>

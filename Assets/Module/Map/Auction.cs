@@ -1,14 +1,14 @@
 /**
  * @(#) Auction.cs
  */
-using JHP4SD.Lebeg134.Module.Session;
-using JHP4SD.Lebeg134.Module.Structures;
-using JHP4SD.Lebeg134.Module.TimeManager;
+using Lebeg134.Module.Session;
+using Lebeg134.Module.Structures;
+using Lebeg134.Module.TimeManager;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace JHP4SD.Lebeg134.Module.MapNS
+namespace Lebeg134.Module.MapNS
 {
     [Serializable]
     public class Auction : ITickable, IEqualityComparer<Auction>
@@ -29,7 +29,7 @@ namespace JHP4SD.Lebeg134.Module.MapNS
             _timePerRound = timePerRound;
             _lastBidder = initiater;
         }
-        public void bid(Player by, int bid)
+        public void Bid(Player by, int bid)
         {
             if (bid > _currentPrice + _minBid)
             {
@@ -37,7 +37,7 @@ namespace JHP4SD.Lebeg134.Module.MapNS
                 _lastBidder = by;
             }
         }
-        public void finish()
+        public void Finish()
         {
             if (_lastBidder != null)
             {
@@ -48,7 +48,7 @@ namespace JHP4SD.Lebeg134.Module.MapNS
         public void tick()
         {
             if (--_timeRemaining <= 0)
-                finish();
+                Finish();
         }
         public void register()
         {

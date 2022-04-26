@@ -1,14 +1,14 @@
 /**
 * @(#) Map.cs
 */
-using JHP4SD.Lebeg134.Module.Session;
-using JHP4SD.Lebeg134.Module.Structures;
-using JHP4SD.Lebeg134.Module.TimeManager;
+using Lebeg134.Module.Session;
+using Lebeg134.Module.Structures;
+using Lebeg134.Module.TimeManager;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace JHP4SD.Lebeg134.Module.MapNS
+namespace Lebeg134.Module.MapNS
 {
     [Serializable]
     public class Map : ITickable
@@ -39,7 +39,7 @@ namespace JHP4SD.Lebeg134.Module.MapNS
                 _structures[x, y] = structure;
             }
         }
-        public void startAuction(int x, int y, Player by)
+        public void StartAuction(int x, int y, Player by)
         {
             IMapStructure subject = _structures[x, y];
             if (!subject.IsAuctionable())

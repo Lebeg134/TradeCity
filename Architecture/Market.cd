@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="JHP4SD.Lebeg134.Module.MarketNS.Listing" BaseTypeListCollapsed="true">
+  <Class Name="Lebeg134.Module.MarketNS.Listing" BaseTypeListCollapsed="true">
     <Position X="0.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AABAAAAAEgAAEAAAgAAAAAAAAAAgECAAAQBAAAAgAAA=</HashCode>
@@ -12,7 +12,7 @@
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="JHP4SD.Lebeg134.Module.MarketNS.Market" BaseTypeListCollapsed="true">
+  <Class Name="Lebeg134.Module.MarketNS.Market" BaseTypeListCollapsed="true">
     <Position X="5.5" Y="6.75" Width="3" />
     <TypeIdentifier>
       <HashCode>IABBAAAAAAAAAAAIAACAAACAGQAgAEAAARAAAAAAAAA=</HashCode>
@@ -23,7 +23,7 @@
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="JHP4SD.Lebeg134.Module.Market.SPListing" BaseTypeListCollapsed="true">
+  <Class Name="Lebeg134.Module.Market.SPListing" BaseTypeListCollapsed="true">
     <Position X="7.5" Y="0.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AARAAAAAAABAACIAQAAAAAAAAAAAAAAQAQAAAIAAAAA=</HashCode>
@@ -34,10 +34,10 @@
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Assets.Module.Market.SPMarket">
+  <Class Name="Lebeg134.Module.Market.SPMarket">
     <Position X="11.25" Y="0.75" Width="2" />
     <NestedTypes>
-      <Delegate Name="Assets.Module.Market.SPMarket.Notify" Collapsed="true">
+      <Delegate Name="Lebeg134.Module.Market.SPMarket.Notify" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Assets\Module\Market\SPMarket.cs</NewMemberFileName>
         </TypeIdentifier>
@@ -51,14 +51,14 @@
       <Field Name="listings" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Struct Name="JHP4SD.Lebeg134.Module.MarketNS.ItemLog">
+  <Struct Name="Lebeg134.Module.MarketNS.ItemLog">
     <Position X="0.5" Y="7.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAIAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Assets\Module\Market\ItemLog.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Interface Name="JHP4SD.Lebeg134.Module.MarketNS.ISellable">
+  <Interface Name="Lebeg134.Module.MarketNS.ISellable">
     <Position X="3.75" Y="1.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAACAAAAAAAAAAABAAgAAAAAAAAAAAAAA=</HashCode>

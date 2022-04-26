@@ -1,10 +1,10 @@
 /**
  * @(#) IProducer.cs
  */
-using JHP4SD.Lebeg134.Module.Resources;
+using Lebeg134.Module.Resources;
 using System.Collections.Generic;
-using JHP4SD.Lebeg134.Module.TimeManager;
-namespace JHP4SD.Lebeg134.Module.Structures
+using Lebeg134.Module.TimeManager;
+namespace Lebeg134.Module.Structures
 {
 	public interface IProducer : ITickable
 	{

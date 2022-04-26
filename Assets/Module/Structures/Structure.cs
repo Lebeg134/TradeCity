@@ -1,12 +1,11 @@
 /**
 * @(#) Structure.cs
 */
-using Assets.Module.Graphics;
-using JHP4SD.Lebeg134.Module.Graphics;
-using JHP4SD.Lebeg134.Units;
+using Lebeg134.Module.Graphics;
+using Lebeg134.Units;
 using System;
 using System.Collections.Generic;
-namespace JHP4SD.Lebeg134.Module.Structures
+namespace Lebeg134.Module.Structures
 {
     [Serializable]
     public abstract class Structure : IEqualityComparer<Structure>, IGetRes

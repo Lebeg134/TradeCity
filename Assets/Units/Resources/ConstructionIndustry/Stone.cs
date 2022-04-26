@@ -1,4 +1,4 @@
-using JHP4SD.Lebeg134.Module.Resources;
+using Lebeg134.Module.Resources;
 using System;
 /**
 * @(#) Stone.cs
@@ -23,7 +23,7 @@ namespace Lebeg134.Resources.ConstructionIndustry
             return new Stone(amount);
         }
 
-        public override double getValue()
+        public override double GetValue()
         {
             return 2;
         }

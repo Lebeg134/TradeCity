@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts.GUI.ResourceDispalys
+namespace Lebeg134.Scripts.GUI.ResourceDispalys
 {
     class LiveResourceDisplayScript: ResourceDisplayScript
     {

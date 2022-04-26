@@ -1,6 +1,6 @@
-﻿using JHP4SD.Lebeg134.Module.Resources;
-using JHP4SD.Lebeg134.Module.Structures;
-using JHP4SD.Lebeg134.Units.Resources.Common;
+﻿using Lebeg134.Module.Resources;
+using Lebeg134.Module.Structures;
+using Lebeg134.Units.Resources.Common;
 using Lebeg134.Resources.Common;
 using Lebeg134.Resources.ConstructionIndustry;
 using Lebeg134.Resources.EnergySector;
@@ -17,7 +17,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JHP4SD.Lebeg134.Module.Session
+namespace Lebeg134.Module.Session
 {
     static class SessionGenerator
     {

@@ -1,4 +1,4 @@
-using JHP4SD.Lebeg134.Module.Resources;
+using Lebeg134.Module.Resources;
 using System;
 /**
 * @(#) Glass.cs
@@ -22,7 +22,7 @@ namespace Lebeg134.Resources.ConstructionIndustry
             return new Glass(amount);
         }
 
-        public override double getValue()
+        public override double GetValue()
         {
             return 43.75;
         }

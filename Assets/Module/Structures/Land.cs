@@ -1,16 +1,16 @@
 /**
 * @(#) Land.cs
 */
-using JHP4SD.Lebeg134.Module.Graphics;
-using JHP4SD.Lebeg134.Module.MapNS;
-using JHP4SD.Lebeg134.Module.Resources;
-using JHP4SD.Lebeg134.Module.Session;
-using JHP4SD.Lebeg134.Module.TimeManager;
-using JHP4SD.Lebeg134.Units;
+using Lebeg134.Module.Graphics;
+using Lebeg134.Module.MapNS;
+using Lebeg134.Module.Resources;
+using Lebeg134.Module.Session;
+using Lebeg134.Module.TimeManager;
+using Lebeg134.Units;
 using System;
 using System.Collections.Generic;
 
-namespace JHP4SD.Lebeg134.Module.Structures
+namespace Lebeg134.Module.Structures
 {
     [Serializable]
     public abstract class Land : Structure, IUpgradeable, IProducer, IOwnable, IMapStructure

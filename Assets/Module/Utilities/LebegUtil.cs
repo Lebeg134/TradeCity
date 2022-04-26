@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JHP4SD.Lebeg134.Module.Utilities
+namespace Lebeg134.Module.Utilities
 {
     static class LebegUtil
     {

@@ -1,4 +1,4 @@
-using JHP4SD.Lebeg134.Module.Resources;
+using Lebeg134.Module.Resources;
 using System;
 /**
 * @(#) Iron.cs
@@ -21,7 +21,7 @@ namespace Lebeg134.Resources.Common
         {
             return new Iron(amount);
         }
-        public override double getValue()
+        public override double GetValue()
         {
             return 10;
         }

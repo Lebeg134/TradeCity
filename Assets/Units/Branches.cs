@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JHP4SD.Lebeg134.Units
+namespace Lebeg134.Units
 {
     public enum Branches
     {

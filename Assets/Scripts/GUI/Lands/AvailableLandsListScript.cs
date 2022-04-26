@@ -1,6 +1,6 @@
-using JHP4SD.Lebeg134.Module.Session;
-using JHP4SD.Lebeg134.Module.Structures;
-using JHP4SD.Lebeg134.Units.Resources.Common;
+using Lebeg134.Module.Session;
+using Lebeg134.Module.Structures;
+using Lebeg134.Units.Resources.Common;
 using Lebeg134.Structures.Lands;
 using System.Collections;
 using System.Collections.Generic;

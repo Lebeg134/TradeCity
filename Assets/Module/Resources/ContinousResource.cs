@@ -19,16 +19,16 @@ namespace Lebeg134.Module.Resources
         {
             baseLine -= by;
         }
-        public void reset()
+        public void Reset()
         {
             stock = 0;
         }
-        public void tick()
+        public void Tick()
         {
-            reset();
+            Reset();
         }
 
-        public void register()
+        public void Register()
         {
             Clock.Instance.Register(this);
         }

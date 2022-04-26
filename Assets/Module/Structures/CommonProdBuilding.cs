@@ -12,18 +12,18 @@ namespace Lebeg134.Module.Structures
     [Serializable]
     public abstract class CommonProdBuilding : CommonBuilding, IProducer
     {
-        public abstract List<Resource> getProduce();
+        public abstract List<Resource> GetProduce();
         public void Produce()
         {
             ProducerStrategy.Produce(owner, this);
         }
 
-        public void register()
+        public void Register()
         {
             Clock.Instance.Register(this);
         }
 
-        public void tick()
+        public void Tick()
         {
             Produce();
         }

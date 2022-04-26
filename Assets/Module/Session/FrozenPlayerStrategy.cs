@@ -10,23 +10,23 @@ namespace Lebeg134.Module.Session
         public class FrozenPlayerStrategy : PlayerStrategyBase
         {
             public FrozenPlayerStrategy(Player subject) : base(subject) { }
-            override public void freeze()
+            override public void Freeze()
             {
                 // Do nothing, already frozen
             }
-            override public void goBankrupt()
+            override public void GoBankrupt()
             {
                 // Frozen player can't go bankrupt
             }
-            override public bool isFrozen()
+            override public bool IsFrozen()
             {
                 return true;
             }
-            override public void tick()
+            override public void Tick()
             {
                 // Do nothing, player is frozen
             }
-            override public void unFreeze(IPlayerStrategy newStrategy)
+            override public void UnFreeze(IPlayerStrategy newStrategy)
             {
                 player.playerStrategy = newStrategy;
             }

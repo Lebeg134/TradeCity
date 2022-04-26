@@ -33,7 +33,7 @@ public class NewListingScript : MonoBehaviour
             GetListing(false)?.Complete()
         );
         sellAllButton.onClick.AddListener(() => 
-            GetListing(false)?.completeAll()
+            GetListing(false)?.CompleteAll()
         );
         createListingButton.onClick.AddListener(() =>
             SPMarket.Instance.RegisterListing(GetListing(true))
@@ -63,12 +63,12 @@ public class NewListingScript : MonoBehaviour
             amount = int.Parse(amountInput.text);
             if (amount > 0)
             {
-                money = new Money(GetListing(false).getValue());
-                res = res.getNewResource(amount);
+                money = new Money(GetListing(false).GetValue());
+                res = res.GetNewResource(amount);
             }
         }
-        valueDisplay.GetComponent<ResourceDisplayScript>().watched = money;
-        forDisplay.GetComponent<ResourceDisplayScript>().watched = res;
+        valueDisplay.GetComponent<ResourceDisplayScript>().Watched = money;
+        forDisplay.GetComponent<ResourceDisplayScript>().Watched = res;
     }
     SPListing GetListing(bool autoListing)
     {
@@ -77,6 +77,6 @@ public class NewListingScript : MonoBehaviour
         int above = 0;
         if (autoListing)
             int.TryParse(aboveInput.text, out above);
-        return new SPListing(res.getNewResource(amount), above);
+        return new SPListing(res.GetNewResource(amount), above);
     }
 }

@@ -11,7 +11,7 @@ public class ResourceSelectorScript : MonoBehaviour
 {
     public Resource selected;
     public Dropdown dropdown;
-    List<string> options = getOptions();
+    List<string> options = GetOptions();
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +27,7 @@ public class ResourceSelectorScript : MonoBehaviour
         );
     }
 
-    private static List<string> getOptions()
+    private static List<string> GetOptions()
     {
         List<string> options = new List<string>();
         foreach (Resource res in SessionGenerator.GetResourceList())

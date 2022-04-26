@@ -15,32 +15,32 @@ namespace Lebeg134.Module.Structures
         public abstract List<IOwnable> Criteria();
         public abstract List<Resource> Cost();
         protected Player owner;
-        public abstract override Branches getBranch();
+        public abstract override Branches GetBranch();
         public Building(Player owner = null)
         {
             this.owner = owner;
         }
-        public abstract List<Resource> getUpkeep();
+        public abstract List<Resource> GetUpkeep();
         public virtual void Build(Player by)
         {
             if (CanBeBuilt(by))
             {
-                by.subRes(Cost());
-                by.giveStructure(this);
+                by.SubRes(Cost());
+                by.GiveStructure(this);
             }
         }
         public bool CanBeBuilt(Player by)
         {
-            return by.checkResources(Cost()) && by.checkStructures(Criteria());
+            return by.CheckResources(Cost()) && by.CheckStructures(Criteria());
         }
-        public virtual void acquire(Player by)
+        public virtual void Acquire(Player by)
         {
             //Possibility to transfer ownership?, can implement later if needed
             owner = by;
         }
-        override protected string getBasePath()
+        override protected string GetBasePath()
         {
-            return base.getBasePath()+"Building/";
+            return base.GetBasePath()+"Building/";
         }
     }
 

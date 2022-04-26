@@ -41,16 +41,16 @@ namespace Lebeg134.Module.MapNS
         {
             if (_lastBidder != null)
             {
-                _subject.acquire(_lastBidder);
+                _subject.Acquire(_lastBidder);
                 throw new AuctionFinishedException();
             }
         }
-        public void tick()
+        public void Tick()
         {
             if (--_timeRemaining <= 0)
                 Finish();
         }
-        public void register()
+        public void Register()
         {
             //Do nothing - Auctions are ticked by container
         }

@@ -24,17 +24,17 @@ namespace Lebeg134.Structures.ConstructionIndustry
             return new List<IOwnable>();
         }
 
-        public override Branches getBranch()
+        public override Branches GetBranch()
         {
             return Branches.CONSTRUCTION;
         }
 
-        public override string getName()
+        public override string GetName()
         {
             return "Craftsman HQ";
         }
 
-        public override List<Resource> getUpkeep()
+        public override List<Resource> GetUpkeep()
         {
             return new List<Resource> { new Electricity(5) };
         }

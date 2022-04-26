@@ -17,7 +17,7 @@ namespace Lebeg134.Resources.ConstructionIndustry
         {
             return BasePath() + "broken-bottle";
         }
-        public override Resource getNewResource(int amount)
+        public override Resource GetNewResource(int amount)
         {
             return new Glass(amount);
         }

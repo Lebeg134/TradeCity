@@ -27,7 +27,7 @@ namespace Lebeg134.Module.MarketNS
             _amount = amount;
             _timeLeft = defaultTime;
         }
-        public int complete(Player by, int number = -1)
+        public int Complete(Player by, int number = -1)
         {
             if (number == -1)
                 number = _amount;
@@ -37,8 +37,8 @@ namespace Lebeg134.Module.MarketNS
             {
                 try
                 {
-                    by.subRes((Resource)WantSellable);
-                    by.giveRes((Resource)ForSellable);
+                    by.SubRes((Resource)WantSellable);
+                    by.GiveRes((Resource)ForSellable);
                 }
                 catch (NotEnoughResourceException)
                 {
@@ -47,27 +47,27 @@ namespace Lebeg134.Module.MarketNS
             }
             return count;
         }
-        public void cancel()
+        public void Cancel()
         {
             for (; _amount > 0; _amount--)
-                Poster.giveRes((Resource)ForSellable);
+                Poster.GiveRes((Resource)ForSellable);
         }
-        public int lockResources(bool all = false)
+        public int LockResources(bool all = false)
         {
             int count = 0;
             if (all)
             {
                 count = _amount;
-                Resource sub = ForSellable.getNewResource(_amount);
-                Poster.checkResource(sub);
-                Poster.subRes(sub);
+                Resource sub = ForSellable.GetNewResource(_amount);
+                Poster.CheckResource(sub);
+                Poster.SubRes(sub);
             }
             else
             {
                 try
                 {
                     for (; count < _amount; count++)
-                        Poster.subRes((Resource)ForSellable);
+                        Poster.SubRes((Resource)ForSellable);
                 }
                 catch (NotEnoughResourceException)
                 {
@@ -76,24 +76,24 @@ namespace Lebeg134.Module.MarketNS
             }
             return count;
         }
-        public double value()
+        public double Value()
         {
-            return WantSellable.amount() / ForSellable.amount();
+            return WantSellable.Amount() / ForSellable.Amount();
         }
-        public void tick()
+        public void Tick()
         {
             if (--_timeLeft <= 0)
             {
-                cancel();
+                Cancel();
             }
         }
-        public void register()
+        public void Register()
         {
             throw new System.NotImplementedException();
         }
         public int Compare(Listing x, Listing y)
         {
-            return x.value().CompareTo(y.value());
+            return x.Value().CompareTo(y.Value());
         }
     }
 }

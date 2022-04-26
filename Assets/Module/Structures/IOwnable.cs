@@ -6,6 +6,6 @@ namespace Lebeg134.Module.Structures
 {
     public interface IOwnable
     {
-        void acquire(Player by);
+        void Acquire(Player by);
     }
 }

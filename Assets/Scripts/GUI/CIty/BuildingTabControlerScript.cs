@@ -35,8 +35,8 @@ public class BuildingTabControlerScript : MonoBehaviour
 
     void Switch(Branches tab)
     {
-        getBranchButton(active).interactable = true;
-        getBranchButton(tab).interactable = false;
+        GetBranchButton(active).interactable = true;
+        GetBranchButton(tab).interactable = false;
         active = tab;
         for (int i = 0; i < content.transform.childCount; i++)
         {
@@ -47,7 +47,7 @@ public class BuildingTabControlerScript : MonoBehaviour
     public void RegisterBuilding(Building building)
     {
         GameObject listItem = Instantiate(buildingListItemPrefab);
-        listItem.GetComponent<BuildingListItemScript>().building = building.getName();
+        listItem.GetComponent<BuildingListItemScript>().building = building.GetName();
         listItem.transform.SetParent(content.transform);
     }
 
@@ -55,11 +55,11 @@ public class BuildingTabControlerScript : MonoBehaviour
     {
         foreach (Building building in SessionGenerator.GetAllBuildings())
         {
-            if (building.getBranch() == branch)
+            if (building.GetBranch() == branch)
                 RegisterBuilding(building);
         }
     }
-    Button getBranchButton(Branches branch)
+    Button GetBranchButton(Branches branch)
     {
         switch (branch)
         {

@@ -14,16 +14,16 @@ public class ContinueButtonScript : MonoBehaviour
     {
         button = GetComponent<Button>();
         UpdateVisuals();
-        button.onClick.AddListener(() => onClick());
+        button.onClick.AddListener(() => OnClick());
     }
 
-    private void onClick()
+    private void OnClick()
     {
         try
         {
-            Session.load();
+            Session.Load();
             SceneManager.LoadScene(sceneName: "GameScene");
-            Session.Instance.start();
+            Session.Instance.Start();
         }
         catch (Exception)
         {
@@ -38,6 +38,6 @@ public class ContinueButtonScript : MonoBehaviour
     }
     void UpdateVisuals()
     {
-        button.interactable = Session.saveExists();
+        button.interactable = Session.SaveExists();
     }
 }

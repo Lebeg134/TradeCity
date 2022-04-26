@@ -14,11 +14,11 @@ namespace Lebeg134.Module.Structures
 			subject.Off();
 			_subject = subject;
         }
-		public static LockedStructure wrap( Structure subject )
+		public static LockedStructure Wrap( Structure subject )
 		{
 			return new LockedStructure(subject);
 		}
-		public Structure unwrap()
+		public Structure Unwrap()
 		{
 			_subject.On();
 			return _subject;
@@ -32,7 +32,7 @@ namespace Lebeg134.Module.Structures
             //Do nothing
         }
 
-        public override string getName()
+        public override string GetName()
         {
 			return "Locked";
         }

@@ -20,27 +20,27 @@ namespace Lebeg134.Structures.OilIndustry
             return new List<IOwnable>();
         }
 
-        public override Branches getBranch()
+        public override Branches GetBranch()
         {
             return Branches.OIL;
         }
 
-        public override int getMaxLevel()
+        public override int GetMaxLevel()
         {
             return 10;
         }
 
-        public override string getName()
+        public override string GetName()
         {
             return "Chemical Research Facility";
         }
 
-        public override List<Resource> getUpkeep()
+        public override List<Resource> GetUpkeep()
         {
             return new List<Resource> { new Electricity(2 * level) , new Oil(10)};
         }
 
-        public override List<Resource> upgradeLevelsCosts(int level)
+        public override List<Resource> UpgradeLevelsCosts(int level)
         {
             if (level == 0)
                 return new List<Resource> { new Concrete(100), new Workforce(25) };

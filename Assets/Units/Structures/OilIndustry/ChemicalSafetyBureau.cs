@@ -24,17 +24,17 @@ namespace Lebeg134.Structures.OilIndustry
             return new List<IOwnable>();
         }
 
-        public override Branches getBranch()
+        public override Branches GetBranch()
         {
             return Branches.OIL;
         }
 
-        public override string getName()
+        public override string GetName()
         {
             return "Chemical Safety Bureau";
         }
 
-        public override List<Resource> getUpkeep()
+        public override List<Resource> GetUpkeep()
         {
             return new List<Resource> { new Electricity(5) };
         }

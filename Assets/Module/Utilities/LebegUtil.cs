@@ -9,7 +9,7 @@ namespace Lebeg134.Module.Utilities
 {
     static class LebegUtil
     {
-        public static int indexInRange(ICollection collection, int index)
+        public static int IndexInRange(ICollection collection, int index)
         {
             int i = 0;
             if (index < 0)

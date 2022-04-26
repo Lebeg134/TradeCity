@@ -17,7 +17,7 @@ namespace Lebeg134.Resources.OilIndustry
         {
             return BasePath() + "gas-pump";
         }
-        public override Resource getNewResource(int amount)
+        public override Resource GetNewResource(int amount)
         {
             return new Fuel(amount);
         }

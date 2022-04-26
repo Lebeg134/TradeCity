@@ -20,10 +20,10 @@ namespace Lebeg134.Module.Session
             {
                 foreach (IOwnable ownable in player.owned)
                 {
-                    ownable.acquire(null);
+                    ownable.Acquire(null);
                 }
             }
-            public override void unFreeze(IPlayerStrategy newStrategy)
+            public override void UnFreeze(IPlayerStrategy newStrategy)
             {
                 // Do nothing, cannot unfreeze Bankrupt player
             }

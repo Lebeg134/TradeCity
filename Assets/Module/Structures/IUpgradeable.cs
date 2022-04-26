@@ -6,8 +6,8 @@ namespace Lebeg134.Module.Structures
 {
     public interface IUpgradeable
     {
-        void levelUp();
-        int getMaxLevel();
-        int getLevel();
+        void LevelUp();
+        int GetMaxLevel();
+        int GetLevel();
     }
 }

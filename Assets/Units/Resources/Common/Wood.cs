@@ -19,7 +19,7 @@ namespace Lebeg134.Resources.Common
             return BasePath() + "log";
         }
 
-        public override Resource getNewResource(int amount)
+        public override Resource GetNewResource(int amount)
         {
             return new Wood(amount);
         }

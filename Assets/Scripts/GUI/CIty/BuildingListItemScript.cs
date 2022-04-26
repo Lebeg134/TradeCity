@@ -15,7 +15,7 @@ public class BuildingListItemScript : MonoBehaviour
         UPGRADE,
         MAXLEVEL
     }
-    string[] options = getOptions();
+    string[] options = GetOptions();
     [Dropdown("options")]
     public string building;
     public Image buildingImage;
@@ -31,14 +31,14 @@ public class BuildingListItemScript : MonoBehaviour
     void Start()
     {
         target = ConvertToBuilding(building);
-        buildingName.text = target.getName();
+        buildingName.text = target.GetName();
 
         var loadedSprite = Resources.Load<Sprite>(target.GetResourcepath());
         if (loadedSprite != null)
             buildingImage.sprite = loadedSprite;
 
         if (target is CommonBuilding)
-            levelText.text = "Lvl:" + ((CommonBuilding)target).getLevel();
+            levelText.text = "Lvl:" + ((CommonBuilding)target).GetLevel();
 
         UpdateCostDisplay();
         buildButton.onClick.AddListener(() => OnClick());
@@ -60,11 +60,11 @@ public class BuildingListItemScript : MonoBehaviour
                 target.Build(Player.CurrentPlayer);
                 break;
             case ButtonState.UPGRADE:
-                if (Player.CurrentPlayer.hasStructure(target))
+                if (Player.CurrentPlayer.HasStructure(target))
                 {
                     if (target is CommonBuilding)
                     {
-                        ((CommonBuilding)target).levelUp();
+                        ((CommonBuilding)target).LevelUp();
                     }
                 }
                 break;
@@ -74,7 +74,7 @@ public class BuildingListItemScript : MonoBehaviour
         }
         if (target is CommonBuilding)
         {
-            levelText.text = "Lvl:" + ((CommonBuilding)target).getLevel();
+            levelText.text = "Lvl:" + ((CommonBuilding)target).GetLevel();
         }
         UpdateState();
         UpdateButton();
@@ -93,7 +93,7 @@ public class BuildingListItemScript : MonoBehaviour
                 {
                     btnState = ButtonState.MAXLEVEL;
                 }
-                else if (focus.getLevel() > 0)
+                else if (focus.GetLevel() > 0)
                 {
                     btnState = ButtonState.UPGRADE;
                 }
@@ -130,18 +130,18 @@ public class BuildingListItemScript : MonoBehaviour
         foreach (Resource res in target.Cost())
         {
             GameObject listItem = Instantiate(CostDisplayPrefab);
-            listItem.GetComponent<ResourceDisplayScript>().watched = res;
+            listItem.GetComponent<ResourceDisplayScript>().Watched = res;
             listItem.transform.SetParent(costsList.transform);
         }
     }
 
-    static string[] getOptions()
+    static string[] GetOptions()
     {
         List<Building> buildingList = SessionGenerator.GetAllBuildings();
         List<string> strlist = new List<string>();
         foreach (Building building in buildingList)
         {
-            strlist.Add(building.getName());
+            strlist.Add(building.GetName());
         }
         return strlist.ToArray();
     }
@@ -149,7 +149,7 @@ public class BuildingListItemScript : MonoBehaviour
     {
         foreach (Building building in SessionGenerator.GetAllBuildings())
         {
-            if (building.getName() == name)
+            if (building.GetName() == name)
                 return building;
         }
         return null;

@@ -14,9 +14,9 @@ namespace Lebeg134.Scripts.GUI.ResourceDispalys
         protected override void Update()
         {
             base.Update();
-            if (watched != null)
+            if (Watched != null)
             {
-                icon.color = Player.CurrentPlayer.checkResource(watched) ?
+                icon.color = Player.CurrentPlayer.CheckResource(Watched) ?
                 Color.white : Color.red;
             }
             

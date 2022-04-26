@@ -12,25 +12,25 @@ namespace Lebeg134.Module.Structures
     public abstract class CommonBuilding : Building, IUpgradeable
     {
         protected int level = 0; //Level 0 means unbuilt building
-        public abstract List<Resource> upgradeLevelsCosts(int level);
-        public void levelUp()
+        public abstract List<Resource> UpgradeLevelsCosts(int level);
+        public void LevelUp()
         {
-            if (checkLevelUp())
+            if (CheckLevelUp())
             {
-                owner.subRes(upgradeLevelsCosts(level));
+                owner.SubRes(UpgradeLevelsCosts(level));
                 level++;
             }
                 
         }
-        public bool checkLevelUp()
+        public bool CheckLevelUp()
         {
-            return level < getMaxLevel() && owner.checkResources(upgradeLevelsCosts(level));
+            return level < GetMaxLevel() && owner.CheckResources(UpgradeLevelsCosts(level));
         }
 
-        public abstract int getMaxLevel();
+        public abstract int GetMaxLevel();
         public bool IsMaxLevel()
         {
-            return level == getMaxLevel();
+            return level == GetMaxLevel();
         }
 
         public override void Build(Player by)
@@ -40,13 +40,13 @@ namespace Lebeg134.Module.Structures
         }
         public override List<Resource> Cost()
         {
-            if (getMaxLevel() > level)
-                return upgradeLevelsCosts(level);
+            if (GetMaxLevel() > level)
+                return UpgradeLevelsCosts(level);
             else
                 return new List<Resource>();
         }
 
-        public int getLevel()
+        public int GetLevel()
         {
             return level;
         }

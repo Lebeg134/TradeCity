@@ -37,13 +37,13 @@ namespace Lebeg134.Module.Session
 
         public Session()
         {
-            register();
+            Register();
             _players = new List<Player>();
         }
-        public void start()
+        public void Start()
         {
             _instance = this;
-            Clock.Instance.start();
+            Clock.Instance.Start();
             Running = true;
         }
         ///// <summary>
@@ -58,18 +58,18 @@ namespace Lebeg134.Module.Session
         //    //Memento?	
         //}
 
-        public static void save()
+        public static void Save()
         {
             Stream stream = File.OpenWrite(Filename);
             BinaryFormatter b = new BinaryFormatter();
             b.Serialize(stream, Instance);
             stream.Close();
         }
-        public static bool saveExists()
+        public static bool SaveExists()
         {
             return File.Exists(Filename);
         }
-        public static void load()
+        public static void Load()
         {
             Stream stream = File.OpenRead(Filename);
             BinaryFormatter b = new BinaryFormatter();
@@ -79,25 +79,25 @@ namespace Lebeg134.Module.Session
             Clock.Instance.Clear();
             Clock.Instance.Register(Instance);
         }
-        public void login(Player player)
+        public void Login(Player player)
         {
             if (!_players.Contains(player))
                 _players.Add(player);
             else
-                player.unFreeze(new StandardPlayerStrategy(player));
+                player.UnFreeze(new StandardPlayerStrategy(player));
         }
-        public void logout(Player player)
+        public void Logout(Player player)
         {
             if (_players.Contains(player))
-                player.freeze();
+                player.Freeze();
         }
-        public void deletePlayer(Player player)
+        public void DeletePlayer(Player player)
         {
-            player.goBankrupt();
+            player.GoBankrupt();
             _players.Remove(player);
             // TODO Remove ownerships?
         }
-        public void tick()
+        public void Tick()
         {
             //TODO tick market and generate event stuff in the future
 
@@ -105,10 +105,10 @@ namespace Lebeg134.Module.Session
 
             foreach (Player player in _players)
             {
-                player.tick();
+                player.Tick();
             }
         }
-        public void register()
+        public void Register()
         {
             Clock.Instance.Register(this);
         }

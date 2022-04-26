@@ -34,40 +34,40 @@ namespace Lebeg134.Module.TimeManager
         {
             timer = new Timer();
             timer.Interval = interval;
-            timer.Elapsed += tick;
+            timer.Elapsed += Tick;
         }
-        public void initialize()
+        public void Initialize()
         {
 
         }
-        public void start()
+        public void Start()
         {
             timer.Enabled = true;
         }
-        public void pause()
+        public void Pause()
         {
             timer.Enabled = false;
         }
-        public void toggle()
+        public void Toggle()
         {
             if (timer.Enabled)
             {
-                pause();
+                Pause();
             }
             else
             {
-                start();
+                Start();
             }
         }
-        public void setSpeed(Speed speed)
+        public void SetSpeed(Speed speed)
         {
             interval = (int)speed;
         }
-        void tick(object source, ElapsedEventArgs e)
+        void Tick(object source, ElapsedEventArgs e)
         {
             for (int i = 0; i < tickables.Count; i++) // foreach is immuteable! ->crash
             {
-                tickables[i].tick();
+                tickables[i].Tick();
                 if (!timer.Enabled) // Had a lot of crashes because this isn't thread safe
                     break;
             }
@@ -76,11 +76,11 @@ namespace Lebeg134.Module.TimeManager
         {
             tickables.Add(tickable);
         }
-        public void unRegister(ITickable tickable)
+        public void UnRegister(ITickable tickable)
         {
             tickables.Remove(tickable);
         }
-        public bool isEnabled()
+        public bool IsEnabled()
         {
             return timer.Enabled;
         }

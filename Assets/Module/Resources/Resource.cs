@@ -30,13 +30,13 @@ namespace Lebeg134.Module.Resources
         {
             return "Resource/";
         }
-        public int amount()
+        public int Amount()
         {
             return stock;
         }
         public abstract String GetName();
 
-        public virtual void gain(int amount)
+        public virtual void Gain(int amount)
         {
             if (amount < 0)
             {
@@ -44,7 +44,7 @@ namespace Lebeg134.Module.Resources
             }
             stock += amount;
         }
-        public virtual void spend(int amount)
+        public virtual void Spend(int amount)
         {
             if (amount < 0)
             {
@@ -56,7 +56,7 @@ namespace Lebeg134.Module.Resources
             }
             else throw new NotEnoughResourceException();
         }
-        public virtual void setAmount(int amount)
+        public virtual void SetAmount(int amount)
         {
             if (amount < 0)
             {
@@ -64,15 +64,15 @@ namespace Lebeg134.Module.Resources
             }
             stock = amount;
         }
-        public abstract Resource getNewResource(int amount);
+        public abstract Resource GetNewResource(int amount);
         protected Resource Add(Resource B)
         {
-            gain(B.stock);
+            Gain(B.stock);
             return this;
         }
         protected Resource Sub(Resource B)
         {
-            spend(B.stock);
+            Spend(B.stock);
             return this;
         }
 

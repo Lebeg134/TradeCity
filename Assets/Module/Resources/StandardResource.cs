@@ -13,11 +13,11 @@ namespace Lebeg134.Module.Resources
         {
         }
         public abstract double GetValue();
-        public void reportListing(Listing listing)
+        public void ReportListing(Listing listing)
         {
             throw new System.NotImplementedException();
         }
-        public void simulatePrice()
+        public void SimulatePrice()
         {
             throw new System.NotImplementedException();
         }

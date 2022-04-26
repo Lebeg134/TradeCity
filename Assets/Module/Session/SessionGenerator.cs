@@ -28,16 +28,16 @@ namespace Lebeg134.Module.Session
             Player thisPlayer = new Player();
             Player.CurrentPlayer = thisPlayer;
             FillPlayerWithStandard(thisPlayer);
-            newSession.login(thisPlayer);
+            newSession.Login(thisPlayer);
             GenerateStartingOffers(newSession);
 
             return newSession;
         }
         static void FillPlayerWithStandard(Player player)
         {
-            player.registerResources(GetResourceList());
-            player.giveRes(new Money(50000));
-            player.giveRes(new Workforce(2000));
+            player.RegisterResources(GetResourceList());
+            player.GiveRes(new Money(50000));
+            player.GiveRes(new Workforce(2000));
         }
         public static List<Resource> GetResourceList()
         {

@@ -8,8 +8,8 @@ namespace Lebeg134.Module.Structures
 {
 	public interface IProducer : ITickable
 	{
-		List<Resource> getProduce();
-        List<Resource> getUpkeep();
+		List<Resource> GetProduce();
+        List<Resource> GetUpkeep();
 		void Produce();
     }
 

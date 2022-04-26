@@ -17,7 +17,7 @@ namespace Lebeg134.Resources.OilIndustry
         {
             return BasePath() + "chemical-drop";
         }
-        public override Resource getNewResource(int amount)
+        public override Resource GetNewResource(int amount)
         {
             return new Chemicals(amount);
         }

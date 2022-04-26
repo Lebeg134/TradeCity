@@ -14,7 +14,7 @@ namespace Lebeg134.Structures.Common
     [Serializable]
     public class SteelForge : CommonProdBuilding
     {
-        protected static List<Resource>[] upgradeLevelsCostsArray
+        protected static List<Resource>[] UpgradeLevelsCostsArray
         {
             get
             {
@@ -25,7 +25,7 @@ namespace Lebeg134.Structures.Common
             }
         }
 
-        protected static List<Resource>[] upkeepLevelsArray
+        protected static List<Resource>[] UpkeepLevelsArray
         {
             get
             {
@@ -36,7 +36,7 @@ namespace Lebeg134.Structures.Common
             }
         }
 
-        protected static List<Resource>[] productionLevels
+        protected static List<Resource>[] ProductionLevels
         {
             get
             {
@@ -46,15 +46,15 @@ namespace Lebeg134.Structures.Common
                 };
             }
         }
-        public override string getName()
+        public override string GetName()
         {
             return "Steel Forge";
         }
         public override string GetResourcepath()
         {
-            return getBasePath() + "steel_forge";
+            return GetBasePath() + "steel_forge";
         }
-        public override Branches getBranch()
+        public override Branches GetBranch()
         {
             return Branches.COMMON;
         }
@@ -64,23 +64,23 @@ namespace Lebeg134.Structures.Common
             return new List<IOwnable>();
         }
 
-        public override List<Resource> upgradeLevelsCosts(int level)
+        public override List<Resource> UpgradeLevelsCosts(int level)
         {
-            return upgradeLevelsCostsArray[level];
+            return UpgradeLevelsCostsArray[level];
         }
 
-        public override List<Resource> getUpkeep()
+        public override List<Resource> GetUpkeep()
         {
             
-            return upkeepLevelsArray[level - 1];
+            return UpkeepLevelsArray[level - 1];
         }
 
-        public override List<Resource> getProduce()
+        public override List<Resource> GetProduce()
         {
-            return productionLevels[level - 1];
+            return ProductionLevels[level - 1];
         }
 
-        public override int getMaxLevel()
+        public override int GetMaxLevel()
         {
             return 2;
         }

@@ -27,11 +27,11 @@ public class TimeControlButtonScript : MonoBehaviour
     }
     void Toggle()
     {
-        clock.toggle();
+        clock.Toggle();
     }
     void UpdateVisuals()
     {
-        if (clock.isEnabled())
+        if (clock.IsEnabled())
         {
             icon.sprite = pause;
             button.image.color = pauseColor;

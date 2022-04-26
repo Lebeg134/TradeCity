@@ -19,29 +19,29 @@ namespace Lebeg134.Module.Session
             {
                 player = subject;
             }
-            public virtual void freeze()
+            public virtual void Freeze()
             {
-                if(!player.isFrozen())
+                if(!player.IsFrozen())
                     player.playerStrategy = new FrozenPlayerStrategy(player);
             }
-            public virtual void goBankrupt()
+            public virtual void GoBankrupt()
             {
                 player.playerStrategy = new BankruptPlayerStrategy(player);
             }
-            public virtual bool isFrozen()
+            public virtual bool IsFrozen()
             {
                 return false;
             }
 
-            public virtual void tick()
+            public virtual void Tick()
             {
                 foreach (ITickable tickable in player.owned)
                 {
-                    tickable.tick();
+                    tickable.Tick();
                 }
             }
 
-            public virtual void unFreeze(IPlayerStrategy newStrategy)
+            public virtual void UnFreeze(IPlayerStrategy newStrategy)
             {
                 // Player not frozen, do nothing
             }

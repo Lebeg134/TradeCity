@@ -11,10 +11,10 @@ namespace Lebeg134.Module.Structures
         public static void Produce(Player owner, IProducer producer)
         {
             // Could implement more complex method later
-            if (owner.checkResources(producer.getUpkeep()))
+            if (owner.CheckResources(producer.GetUpkeep()))
             {
-                owner.subRes(producer.getUpkeep());
-                owner.giveRes(producer.getProduce());
+                owner.SubRes(producer.GetUpkeep());
+                owner.GiveRes(producer.GetProduce());
             }
         }
     }

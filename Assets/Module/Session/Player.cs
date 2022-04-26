@@ -24,11 +24,11 @@ namespace Lebeg134.Module.Session
         {
             playerStrategy = new StandardPlayerStrategy(this);
         }
-        internal IEnumerable<Resource> getAllRes()
+        internal IEnumerable<Resource> GetAllRes()
         {
             return ownedResources.Values;
         }
-        public bool hasStructure(IOwnable structure)
+        public bool HasStructure(IOwnable structure)
         {
             foreach (IOwnable ownable in owned)
             {
@@ -37,13 +37,13 @@ namespace Lebeg134.Module.Session
             }
             return false;
         }
-        public bool checkStructures(List<IOwnable> structures, bool throwException = false)
+        public bool CheckStructures(List<IOwnable> structures, bool throwException = false)
         {
             bool valid = true;
             List<IOwnable> missingStructures = new List<IOwnable>();
             foreach (IOwnable ownable in structures)
             {
-                if (!hasStructure(ownable))
+                if (!HasStructure(ownable))
                 {
                     valid = false;
                     missingStructures.Add(ownable);
@@ -53,12 +53,12 @@ namespace Lebeg134.Module.Session
                 throw new MissingStructuresException(missingStructures);
             return valid;
         }
-        public void giveStructure(IOwnable structure)
+        public void GiveStructure(IOwnable structure)
         {
             owned.Add(structure);
-            structure.acquire(this);
+            structure.Acquire(this);
         }
-        public List<Building> getAllBuildings()
+        public List<Building> GetAllBuildings()
         {
             List<Building> ret = new List<Building>();
             foreach (IOwnable item in owned)
@@ -82,58 +82,58 @@ namespace Lebeg134.Module.Session
             }
             return ret;
         }
-        public bool hasResource(Resource res)
+        public bool HasResource(Resource res)
         {
             return ownedResources.ContainsKey(res.GetType());
         }
-        public bool checkResource(Resource res)
+        public bool CheckResource(Resource res)
         {
-            return checkResources(new List<Resource>() { res });
+            return CheckResources(new List<Resource>() { res });
         }
-        public bool checkResources(List<Resource> resources, bool throwException = false)
+        public bool CheckResources(List<Resource> resources, bool throwException = false)
         {
             bool valid = true;
             List<Resource> missingResources = new List<Resource>();
             foreach (Resource resource in resources)
             {
-                if (hasResource(resource))
+                if (HasResource(resource))
                 {
-                    int dif = ownedResources[resource.GetType()].amount() - resource.amount();
+                    int dif = ownedResources[resource.GetType()].Amount() - resource.Amount();
                     if (dif < 0)
                     {
-                        missingResources.Add(resource.getNewResource(dif));
+                        missingResources.Add(resource.GetNewResource(dif));
                         valid = false;
                     }
                 }
                 else
                 {
-                    missingResources.Add(resource.getNewResource(resource.amount()));
+                    missingResources.Add(resource.GetNewResource(resource.Amount()));
                 }
             }
             if (!valid && throwException)
                 throw new NotEnoughResourceException(missingResources);
             return valid;
         }
-        public void subRes(Resource resource)
+        public void SubRes(Resource resource)
         {
             ownedResources[resource.GetType()] -= resource;
         }
-        public void subRes(List<Resource> resources)
+        public void SubRes(List<Resource> resources)
         {
             foreach (Resource res in resources)
             {
-                subRes(res);
+                SubRes(res);
             }
         }
-        public int getRes(Resource resource)
+        public int GetRes(Resource resource)
         {
-            return ownedResources[resource.GetType()].amount();
+            return ownedResources[resource.GetType()].Amount();
         }
-        public Resource getResRef(Resource resource)
+        public Resource GetResRef(Resource resource)
         {
             return ownedResources[resource.GetType()];
         }
-        public void giveRes(Resource resource)
+        public void GiveRes(Resource resource)
         {
             if (resource is ContinousResource)
             {
@@ -145,45 +145,45 @@ namespace Lebeg134.Module.Session
             }
             
         }
-        public void giveRes(List<Resource> resources)
+        public void GiveRes(List<Resource> resources)
         {
             foreach (Resource res in resources)
             {
-                giveRes(res);
+                GiveRes(res);
             }
         }
-        public void registerResources(List<Resource> newResList)
+        public void RegisterResources(List<Resource> newResList)
         {
             foreach (Resource res in newResList)
             {
-                ownedResources.Add(res.GetType(), res.getNewResource(0));
+                ownedResources.Add(res.GetType(), res.GetNewResource(0));
                 if(res is ContinousResource)
                 {
-                    cntResourcesBuffer.Add(res.GetType(), res.getNewResource(0));
+                    cntResourcesBuffer.Add(res.GetType(), res.GetNewResource(0));
                 }
             }
         }
-        public void freeze()
+        public void Freeze()
         {
-            playerStrategy.freeze();
+            playerStrategy.Freeze();
         }
-        public void unFreeze(IPlayerStrategy newStrategy)
+        public void UnFreeze(IPlayerStrategy newStrategy)
         {
-            playerStrategy.unFreeze(newStrategy);
+            playerStrategy.UnFreeze(newStrategy);
         }
-        public bool isFrozen()
+        public bool IsFrozen()
         {
-            return playerStrategy.isFrozen();
+            return playerStrategy.IsFrozen();
         }
-        public void goBankrupt()
+        public void GoBankrupt()
         {
-            playerStrategy.goBankrupt();
+            playerStrategy.GoBankrupt();
         }
-        public void tick()
+        public void Tick()
         {
-            playerStrategy.tick();
+            playerStrategy.Tick();
         }
-        public void register()
+        public void Register()
         {
             Clock.Instance.Register(this);
         }

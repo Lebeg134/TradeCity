@@ -12,11 +12,11 @@ namespace Lebeg134.Module.Resources
         static int limit;
 
         public LimitResource(int amount) : base(amount) { }
-        public void incLimit(int by) //Static?
+        public void IncLimit(int by) //Static?
         {
             limit += by;
         }
-        public void decLimit(int by) //Static?
+        public void DecLimit(int by) //Static?
         {
             int newLimit = limit - by;
             if (newLimit >= 0)
@@ -24,12 +24,12 @@ namespace Lebeg134.Module.Resources
                 limit = newLimit;
             }
         }
-        override public void gain(int amount)
+        override public void Gain(int amount)
         {
             int newStock = limit + stock;
             if (newStock <= limit)
             {
-                base.gain(amount);
+                base.Gain(amount);
             }
             else
             {

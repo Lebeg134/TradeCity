@@ -25,7 +25,7 @@ namespace Lebeg134.Module.Market
                     throw new Exception("Resource not sellable");
             }
         }
-        public ISellable sellable { get => sell; }
+        public ISellable Sellable { get => sell; }
         ISellable sell;
         public int above;
         public SPListing(Resource sellable, int sellAbove)
@@ -33,18 +33,18 @@ namespace Lebeg134.Module.Market
             Sell = sellable;
             above = sellAbove;
         }
-        public void tick()
+        public void Tick()
         {
             Complete();
         }
         public void Complete(bool throws = false)
         {
-            if (Player.CurrentPlayer.getRes(Sell) > above && Player.CurrentPlayer.hasResource(Sell))
+            if (Player.CurrentPlayer.GetRes(Sell) > above && Player.CurrentPlayer.HasResource(Sell))
             {
                 try
                 {
-                    Player.CurrentPlayer.subRes(Sell);
-                    Player.CurrentPlayer.giveRes(new Money(getValue()));
+                    Player.CurrentPlayer.SubRes(Sell);
+                    Player.CurrentPlayer.GiveRes(new Money(GetValue()));
                 }
                 catch (Exception)
                 {
@@ -53,9 +53,9 @@ namespace Lebeg134.Module.Market
                 
             }
         }
-        public void completeAll()
+        public void CompleteAll()
         {
-            while (Player.CurrentPlayer.getRes(Sell) > above && Player.CurrentPlayer.hasResource(Sell))
+            while (Player.CurrentPlayer.GetRes(Sell) > above && Player.CurrentPlayer.HasResource(Sell))
             {
                 try
                 {
@@ -68,11 +68,11 @@ namespace Lebeg134.Module.Market
                 }
             }
         }
-        public int getValue()
+        public int GetValue()
         {
-            return (int)Math.Floor(sell.amount() * sell.GetValue());
+            return (int)Math.Floor(sell.Amount() * sell.GetValue());
         }
-        public void register()
+        public void Register()
         {
             Clock.Instance.Register(this);
         }

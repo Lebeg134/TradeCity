@@ -12,13 +12,13 @@ namespace Lebeg134.Structures.Lands
     [Serializable]
     public class ClearwaterLake : Land
     {
-        public override string getName()
+        public override string GetName()
         {
             return "Lake";
         }
         public override string GetResourcepath()
         {
-            return getBasePath() + "Clearwaterlake";
+            return GetBasePath() + "Clearwaterlake";
         }
 
         public override Land GetNew()
@@ -26,12 +26,12 @@ namespace Lebeg134.Structures.Lands
             return new ClearwaterLake();
         }
 
-        protected override List<Resource> productionLevels(int level)
+        protected override List<Resource> ProductionLevels(int level)
         {
             return new List<Resource>() { new Water(10) };
         }
 
-        protected override List<Resource> upgradeLevelsCosts(int level)
+        protected override List<Resource> UpgradeLevelsCosts(int level)
         {
             return new List<Resource>() { new Money(100 * level) };
         }

@@ -15,16 +15,16 @@ public class LandOfferVisualsScript : MonoBehaviour
     public GameObject costDisplay;
     [Dropdown("options")]
     public string target;
-    string[] options = getOptions();
+    string[] options = GetOptions();
     public Land watched;
     public int price =1000;
-    private static string[] getOptions()
+    private static string[] GetOptions()
     {
         
         List<string> options = new List<string>();
         foreach (Land land in SessionGenerator.GetAllLands())
         {
-            options.Add(land.getName());
+            options.Add(land.GetName());
         }
         return options.ToArray();
     }
@@ -37,8 +37,8 @@ public class LandOfferVisualsScript : MonoBehaviour
         {
             watched = ConvertStringToLand(target);
         }
-        buildingName.text = watched.getName();
-        costDisplay.GetComponent<ResourceDisplayScript>().watched = new Money(price);
+        buildingName.text = watched.GetName();
+        costDisplay.GetComponent<ResourceDisplayScript>().Watched = new Money(price);
 
         var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
         if (loadedSprite != null)
@@ -50,10 +50,10 @@ public class LandOfferVisualsScript : MonoBehaviour
 
     private void OnClick()
     {
-        if (Player.CurrentPlayer.checkResource(new Money(price)))
+        if (Player.CurrentPlayer.CheckResource(new Money(price)))
         {
-            Player.CurrentPlayer.subRes(new Money(price));
-            Player.CurrentPlayer.giveStructure(watched);
+            Player.CurrentPlayer.SubRes(new Money(price));
+            Player.CurrentPlayer.GiveStructure(watched);
             Session.Instance.offers.Remove(watched);
             int newPrice = price * 2;
             Session.Instance.offers.Add(watched.GetNew(), newPrice);
@@ -65,13 +65,13 @@ public class LandOfferVisualsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        buildButton.interactable = Player.CurrentPlayer.checkResource(new Money(price));
+        buildButton.interactable = Player.CurrentPlayer.CheckResource(new Money(price));
     }
     Land ConvertStringToLand(string name)
     {
         foreach (Land land in SessionGenerator.GetAllLands())
         {
-            if (land.getName() == name)
+            if (land.GetName() == name)
                 return land;
         }
         return null;

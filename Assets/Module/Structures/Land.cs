@@ -31,34 +31,34 @@ namespace Lebeg134.Module.Structures
         {
             return StartingPrice;
         }
-        public void acquire(Player by)
+        public void Acquire(Player by)
         {
             owner = by;
         }
-        public bool hasOwner()
+        public bool HasOwner()
         {
             return owner != null;
         }
-        public void levelUp()
+        public void LevelUp()
         {
-            if (owner.checkResources(upgradeLevelsCosts(level))) //Level is 1 higher than index used for level stats
+            if (owner.CheckResources(UpgradeLevelsCosts(level))) //Level is 1 higher than index used for level stats
                 level++;
         }
-        protected abstract List<Resource> upgradeLevelsCosts(int level);
-        public List<Resource> getProduce()
+        protected abstract List<Resource> UpgradeLevelsCosts(int level);
+        public List<Resource> GetProduce()
         {
-            return productionLevels(level - 1);
+            return ProductionLevels(level - 1);
         }
-        protected abstract List<Resource> productionLevels(int level);
+        protected abstract List<Resource> ProductionLevels(int level);
         public void Produce()
         {
             ProducerStrategy.Produce(owner, this);
         }
-        public void tick()
+        public void Tick()
         {
             Produce();
         }
-        public void register()
+        public void Register()
         {
             Clock.Instance.Register(this);
         }
@@ -101,24 +101,24 @@ namespace Lebeg134.Module.Structures
             return GetHashCode((Land)obj);
         }
 
-        public List<Resource> getUpkeep()
+        public List<Resource> GetUpkeep()
         {
             return new List<Resource>(); // No upkeep for lands
         }
 
-        public int getMaxLevel()
+        public int GetMaxLevel()
         {
             return 10;
         }
 
-        public int getLevel()
+        public int GetLevel()
         {
             return level;
         }
 
-        override protected string getBasePath()
+        override protected string GetBasePath()
         {
-            return base.getBasePath() + "Land/";
+            return base.GetBasePath() + "Land/";
         }
     }
 }

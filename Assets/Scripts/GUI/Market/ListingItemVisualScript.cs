@@ -16,9 +16,9 @@ public class ListingItemVisualScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ListingSubject.GetComponent<ResourceDisplayScript>().watched = watched.Sell;
-        MoneyDisplay.GetComponent<ResourceDisplayScript>().watched = new Money(watched.getValue());
-        AboveDisplay.GetComponent<ResourceDisplayScript>().watched = watched.Sell.getNewResource(watched.above);
+        ListingSubject.GetComponent<ResourceDisplayScript>().Watched = watched.Sell;
+        MoneyDisplay.GetComponent<ResourceDisplayScript>().Watched = new Money(watched.GetValue());
+        AboveDisplay.GetComponent<ResourceDisplayScript>().Watched = watched.Sell.GetNewResource(watched.above);
 
         CancelButton.onClick.AddListener(() => OnClick()); ;
     }

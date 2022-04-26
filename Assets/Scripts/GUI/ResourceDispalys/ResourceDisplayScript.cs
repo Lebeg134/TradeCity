@@ -9,10 +9,10 @@ using UnityEngine.UI;
 
 public class ResourceDisplayScript : MonoBehaviour
 {
-    string[] options = getOptions().ToArray();
+    string[] options = GetOptions().ToArray();
     [Dropdown("options")]
     public string resource;
-    public Resource watched
+    public Resource Watched
     {
         get
         {
@@ -21,11 +21,11 @@ public class ResourceDisplayScript : MonoBehaviour
         set
         {
             _watched = value;
-            onWatchedChanged();
+            OnWatchedChanged();
             
         }
     }
-    protected virtual void onWatchedChanged()
+    protected virtual void OnWatchedChanged()
     {
         UpdateVisuals();
     }
@@ -40,8 +40,8 @@ public class ResourceDisplayScript : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        if (watched == null)
-            watched = ConvertToRes(resource);
+        if (Watched == null)
+            Watched = ConvertToRes(resource);
         UpdateVisuals();       
     }
 
@@ -53,18 +53,18 @@ public class ResourceDisplayScript : MonoBehaviour
 
     protected virtual void UpdateVisuals()
     {
-        resName!.text = watched!.GetName();
-        display!.text = watched!.amount().ToString();
+        resName!.text = Watched!.GetName();
+        display!.text = Watched!.Amount().ToString();
         LoadSprite();
     }
     protected void LoadSprite()
     {
-        var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
+        var loadedSprite = Resources.Load<Sprite>(Watched.GetResourcepath());
         if (loadedSprite != null)
             icon.sprite = loadedSprite;
     }
 
-    public static List<string> getOptions()
+    public static List<string> GetOptions()
     {
         List<Resource> reslist =SessionGenerator.GetResourceList();
         List<string> strlist = new List<string>();

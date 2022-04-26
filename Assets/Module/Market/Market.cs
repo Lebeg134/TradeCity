@@ -15,27 +15,27 @@ namespace Lebeg134.Module.MarketNS
         private Dictionary<System.Type, ItemLog> _registeredItems;
         private Dictionary<System.Type, List<Listing>> _listings;
 
-        void generateListing(ISellable of, int num)
+        void GenerateListing(ISellable of, int num)
         {
 
         }
-        public int postListing(ISellable wantSellable, ISellable forSellable, Player by, int amount = 1, bool all = false)
+        public int PostListing(ISellable wantSellable, ISellable forSellable, Player by, int amount = 1, bool all = false)
         {
             // TODO check if Listing already exists
             Listing post = new Listing(wantSellable, forSellable, by, amount);
             List<Listing> listings = _listings[forSellable.GetType()];
-            int newAmount = post.lockResources(all);
+            int newAmount = post.LockResources(all);
             if (amount != newAmount)
                 post = new Listing(wantSellable, forSellable, by, newAmount);
             listings.Add(post);
             return amount;
         }
-        public double getValueOf(ISellable sellable)
+        public double GetValueOf(ISellable sellable)
         {
             //TODO
             return 0;
         }
-        public Listing getMinSell(ISellable wantSellable, ISellable forSellable)
+        public Listing GetMinSell(ISellable wantSellable, ISellable forSellable)
         {
             List<Listing> listings = _listings[wantSellable.GetType()].FindAll(x => x.ForSellable.Equals(forSellable));
             if (listings.Count > 0)
@@ -46,7 +46,7 @@ namespace Lebeg134.Module.MarketNS
             else
                 return null;
         }
-        public Listing getMaxBuy(ISellable wantSellable, ISellable forSellable)
+        public Listing GetMaxBuy(ISellable wantSellable, ISellable forSellable)
         {
             List<Listing> listings = _listings[forSellable.GetType()].FindAll(x => x.WantSellable.Equals(wantSellable));
             if (listings?.Count > 0)
@@ -57,7 +57,7 @@ namespace Lebeg134.Module.MarketNS
             else
                 return null;
         }
-        public void removePlayer(Player player)
+        public void RemovePlayer(Player player)
         {
             foreach (List<Listing> list in _listings.Values)
             {
@@ -65,13 +65,13 @@ namespace Lebeg134.Module.MarketNS
                 {
                     if (listing.Poster.Equals(player))
                     {
-                        listing.cancel();
+                        listing.Cancel();
                         list.Remove(listing);
                     }
                 }
             }
         }
-        public List<Listing> getPlayerListingsList(Player player)
+        public List<Listing> GetPlayerListingsList(Player player)
         {
             List<Listing> myListings = new List<Listing>();
             foreach (List<Listing> list in _listings.Values)
@@ -80,26 +80,26 @@ namespace Lebeg134.Module.MarketNS
             }
             return myListings;
         }
-        public void simulate()
+        public void Simulate()
         {
             // Generate new listings
         }
-        void autoCompleteListings()
+        void AutoCompleteListings()
         {
             // Could be moved to postListing
         }
-        public void tick()
+        public void Tick()
         {
             foreach (List<Listing> list in _listings.Values)
             {
                 foreach (Listing listing in list)
                 {
-                    listing.tick();
+                    listing.Tick();
                 }
             }
-            simulate();
+            Simulate();
         }
-        public void register()
+        public void Register()
         {
             throw new System.NotImplementedException();
         }

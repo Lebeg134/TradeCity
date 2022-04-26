@@ -13,8 +13,8 @@ public class BackToMenuScript : MonoBehaviour
     {
         GetComponent<Button>().onClick.AddListener(() => 
         {
-            Clock.Instance.pause();
-            Session.save();
+            Clock.Instance.Pause();
+            Session.Save();
             SceneManager.LoadScene(sceneName: "MainMenu"); 
         });
     }

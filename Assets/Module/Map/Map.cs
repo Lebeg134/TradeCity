@@ -25,7 +25,7 @@ namespace Lebeg134.Module.MapNS
             _sizeX = sizeX;
             _sizeY = sizeY;
             _structures = new IMapStructure[_sizeX, _sizeY];
-            register();
+            Register();
         }
         public IMapStructure GetStructure(int x, int y)
         {
@@ -57,13 +57,13 @@ namespace Lebeg134.Module.MapNS
                 }
             }
         }
-        public void tick()
+        public void Tick()
         {
             foreach (Auction auction in _liveAuctions)
             {
                 try
                 {
-                    auction.tick();
+                    auction.Tick();
                 }
                 catch (AuctionFinishedException)
                 {
@@ -71,7 +71,7 @@ namespace Lebeg134.Module.MapNS
                 }
             }
         }
-        public void register()
+        public void Register()
         {
             Clock.Instance.Register(this);
         }

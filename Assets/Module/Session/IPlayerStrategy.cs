@@ -8,11 +8,11 @@ namespace Lebeg134.Module.Session
 {
     public interface IPlayerStrategy
     {
-        void freeze();
-        void unFreeze(IPlayerStrategy newStrategy);
-        bool isFrozen();
-        void goBankrupt();
-        void tick();
+        void Freeze();
+        void UnFreeze(IPlayerStrategy newStrategy);
+        bool IsFrozen();
+        void GoBankrupt();
+        void Tick();
     }
 
 }

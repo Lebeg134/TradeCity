@@ -20,32 +20,32 @@ namespace Lebeg134.Structures.ConstructionIndustry
             return new List<IOwnable>();
         }
 
-        public override Branches getBranch()
+        public override Branches GetBranch()
         {
             return Branches.CONSTRUCTION;
         }
 
-        public override int getMaxLevel()
+        public override int GetMaxLevel()
         {
             return 20;
         }
 
-        public override string getName()
+        public override string GetName()
         {
             return "Lumberyard";
         }
 
-        public override List<Resource> getProduce()
+        public override List<Resource> GetProduce()
         {
             return new List<Resource> { new Lumber(level * 2) };
         }
 
-        public override List<Resource> getUpkeep()
+        public override List<Resource> GetUpkeep()
         {
             return new List<Resource> { new Wood(3*level), new Electricity(2*level) };
         }
 
-        public override List<Resource> upgradeLevelsCosts(int level)
+        public override List<Resource> UpgradeLevelsCosts(int level)
         {
             if (level == 0)
                 return new List<Resource> { new Wood(100), new Workforce(10) };

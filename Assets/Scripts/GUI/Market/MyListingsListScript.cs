@@ -13,7 +13,7 @@ namespace Lebeg134.Scripts.GUI.Market
         protected override void Start()
         {
             base.Start();
-            SPMarket.notifySubscribers += Refresh;
+            SPMarket.NotifySubscribers += Refresh;
         }
         protected override ICollection<SPListing> GetCollection()
         {

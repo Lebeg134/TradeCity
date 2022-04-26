@@ -21,7 +21,7 @@ namespace Lebeg134.Units.Resources.Common
             return BasePath() + "money-stack";
         }
 
-        public override Resource getNewResource(int amount)
+        public override Resource GetNewResource(int amount)
         {
             return new Money(amount);
         }

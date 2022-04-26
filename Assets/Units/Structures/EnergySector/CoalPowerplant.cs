@@ -15,26 +15,26 @@ namespace Lebeg134.Structures.EnergySector
 	[Serializable]
 	public class CoalPowerplant: CommonProdBuilding
 	{
-		public override Branches getBranch()
+		public override Branches GetBranch()
 		{
 			return Branches.ENERGY;
 		}
 
-        public override string getName()
+        public override string GetName()
         {
 			return "Coal Powerplant";
         }
         public override string GetResourcepath()
         {
-            return getBasePath() + "coal_powerplant";
+            return GetBasePath() + "coal_powerplant";
         }
 
-        public override List<Resource> getProduce()
+        public override List<Resource> GetProduce()
         {
 			return new List<Resource> { new Electricity(5*level) };
         }
 
-        public override List<Resource> getUpkeep()
+        public override List<Resource> GetUpkeep()
         {
 			return new List<Resource> { new Coal(15 * level) };
         }
@@ -44,7 +44,7 @@ namespace Lebeg134.Structures.EnergySector
 			return new List<IOwnable>();
         }
 
-        public override List<Resource> upgradeLevelsCosts(int level)
+        public override List<Resource> UpgradeLevelsCosts(int level)
         {
 			if (level == 0)
 				return new List<Resource> { new Stone(100), new Workforce(50) };
@@ -56,7 +56,7 @@ namespace Lebeg134.Structures.EnergySector
 				return new List<Resource> { new ReinforcedConcrete(50 * level), new Steel(25 * level) };
         }
 
-        public override int getMaxLevel()
+        public override int GetMaxLevel()
         {
 			return 100;
         }

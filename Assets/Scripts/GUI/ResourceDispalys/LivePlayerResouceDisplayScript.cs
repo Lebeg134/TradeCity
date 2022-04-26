@@ -11,7 +11,7 @@ namespace Lebeg134.Scripts.GUI.ResourceDispalys
     {
         protected override void Start()
         {
-            watched = Player.CurrentPlayer.getResRef(ConvertToRes(resource));
+            Watched = Player.CurrentPlayer.GetResRef(ConvertToRes(resource));
             base.Start();
         }
     }

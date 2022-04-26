@@ -14,7 +14,7 @@ namespace Lebeg134.Module.Session
         public class StandardPlayerStrategy : PlayerStrategyBase
         {
             public StandardPlayerStrategy(Player subject) : base(subject) { }
-            public override void tick()
+            public override void Tick()
             {
                 Produce();
             }
@@ -22,8 +22,8 @@ namespace Lebeg134.Module.Session
             {
                 foreach (Resource cntRes in player.cntResourcesBuffer.Values)
                 {
-                    player.ownedResources[cntRes.GetType()].setAmount(cntRes.amount());
-                    cntRes.setAmount(0);
+                    player.ownedResources[cntRes.GetType()].SetAmount(cntRes.Amount());
+                    cntRes.SetAmount(0);
                 }
                 foreach (IProducer producer in player.owned)
                 {

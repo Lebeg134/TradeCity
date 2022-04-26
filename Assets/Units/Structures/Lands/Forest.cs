@@ -12,7 +12,7 @@ namespace Lebeg134.Structures.Lands
     [Serializable]
     public class Forest : Land
     {
-        protected static List<Resource>[] upgradeLevelsCostStats
+        protected static List<Resource>[] UpgradeLevelsCostStats
         {
             get
             {
@@ -31,7 +31,7 @@ namespace Lebeg134.Structures.Lands
             }
         }
 
-        protected static List<Resource>[] productionLevelStats
+        protected static List<Resource>[] ProductionLevelStats
         {
             get
             {
@@ -51,13 +51,13 @@ namespace Lebeg134.Structures.Lands
             }
         }
 
-        public override string getName()
+        public override string GetName()
         {
             return "Forest";
         }
         public override string GetResourcepath()
         {
-            return getBasePath() + "Forest";
+            return GetBasePath() + "Forest";
         }
 
         public override Land GetNew()
@@ -65,12 +65,12 @@ namespace Lebeg134.Structures.Lands
             return new Forest();
         }
 
-        protected override List<Resource> productionLevels(int level)
+        protected override List<Resource> ProductionLevels(int level)
         {
-            return productionLevelStats[LebegUtil.indexInRange(productionLevelStats, level - 1)];
+            return ProductionLevelStats[LebegUtil.IndexInRange(ProductionLevelStats, level - 1)];
         }
 
-        protected override List<Resource> upgradeLevelsCosts(int level)
+        protected override List<Resource> UpgradeLevelsCosts(int level)
         {
             throw new System.NotImplementedException();
         }

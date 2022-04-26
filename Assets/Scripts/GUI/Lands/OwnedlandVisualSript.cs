@@ -15,8 +15,8 @@ public class OwnedlandVisualSript : MonoBehaviour
 
     void Start()
     {
-        nameText.text = watched.getName();
-        produceDisplay.GetComponent<ResourceDisplayScript>().watched = watched.getProduce()[0]; //TODO if produces more than one!
+        nameText.text = watched.GetName();
+        produceDisplay.GetComponent<ResourceDisplayScript>().Watched = watched.GetProduce()[0]; //TODO if produces more than one!
 
         var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
         if (loadedSprite != null)

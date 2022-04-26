@@ -10,18 +10,18 @@ namespace Lebeg134.Module.Structures
     [Serializable]
     public abstract class SpecialProdBuilding : SpecialBuilding, IProducer
 	{
-        abstract public List<Resource> getProduce();
+        abstract public List<Resource> GetProduce();
         public void Produce()
         {
             ProducerStrategy.Produce(owner, this);
         }
 
-        public void register()
+        public void Register()
         {
             Clock.Instance.Register(this);
         }
 
-        public void tick()
+        public void Tick()
         {
             Produce();
         }

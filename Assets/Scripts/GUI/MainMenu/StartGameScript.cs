@@ -19,7 +19,7 @@ public class StartGameScript : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName: "GameScene");
         Session session = SessionGenerator.GenerateStandard();
-        session.start();
+        session.Start();
     }
 
     // Update is called once per frame

@@ -28,11 +28,11 @@ namespace Lebeg134.Module.Structures
         {
             return x.GetType() == y.GetType();
         }
-        public virtual Branches getBranch()
+        public virtual Branches GetBranch()
         {
             return Branches.COMMON;
         }
-        public abstract string getName();
+        public abstract string GetName();
         public virtual int GetHashCode(Structure obj)
         {
             return obj.GetType().GetHashCode();
@@ -42,7 +42,7 @@ namespace Lebeg134.Module.Structures
         {
             return "Structure/Default";
         }
-        virtual protected string getBasePath()
+        virtual protected string GetBasePath()
         {
             return "Structure/";
         }

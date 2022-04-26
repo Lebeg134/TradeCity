@@ -11,7 +11,7 @@ namespace Lebeg134.Module.Market
     class SPMarket
     {
         public delegate void Notify();
-        public static event Notify notifySubscribers; 
+        public static event Notify NotifySubscribers; 
         public static SPMarket Instance {
             get
             {
@@ -32,14 +32,14 @@ namespace Lebeg134.Module.Market
         public void RegisterListing(SPListing newListing)
         {
             listings.Add(newListing);
-            newListing.register();
-            notifySubscribers?.Invoke();
+            newListing.Register();
+            NotifySubscribers?.Invoke();
         }
         public void RemoveListing(SPListing listing)
         {
             listings.Remove(listing);
-            Clock.Instance.unRegister(listing);
-            notifySubscribers?.Invoke();
+            Clock.Instance.UnRegister(listing);
+            NotifySubscribers?.Invoke();
         }
     }
 }

@@ -16,21 +16,21 @@ namespace Lebeg134.Module.MarketNS
         public ISellable WantSellable { get; }
         public ISellable ForSellable { get; }
         public Player Poster { get; }
-        private int _amount;
-        private int _timeLeft;
+        private int amount;
+        private int timeLeft;
 
         public Listing(ISellable wantSellable, ISellable forSellable, Player postedBy, int amount = 1)
         {
             WantSellable = wantSellable;
             ForSellable = forSellable;
             Poster = postedBy;
-            _amount = amount;
-            _timeLeft = defaultTime;
+            this.amount = amount;
+            timeLeft = defaultTime;
         }
         public int Complete(Player by, int number = -1)
         {
             if (number == -1)
-                number = _amount;
+                number = amount;
             int count = 0;
             if (number <= 0 || Poster == by) return 0;
             for (; count <= number; count++)
@@ -49,7 +49,7 @@ namespace Lebeg134.Module.MarketNS
         }
         public void Cancel()
         {
-            for (; _amount > 0; _amount--)
+            for (; amount > 0; amount--)
                 Poster.GiveRes((Resource)ForSellable);
         }
         public int LockResources(bool all = false)
@@ -57,8 +57,8 @@ namespace Lebeg134.Module.MarketNS
             int count = 0;
             if (all)
             {
-                count = _amount;
-                Resource sub = ForSellable.GetNewResource(_amount);
+                count = amount;
+                Resource sub = ForSellable.GetNewResource(amount);
                 Poster.CheckResource(sub);
                 Poster.SubRes(sub);
             }
@@ -66,12 +66,12 @@ namespace Lebeg134.Module.MarketNS
             {
                 try
                 {
-                    for (; count < _amount; count++)
+                    for (; count < amount; count++)
                         Poster.SubRes((Resource)ForSellable);
                 }
                 catch (NotEnoughResourceException)
                 {
-                    _amount = count;
+                    amount = count;
                 }
             }
             return count;
@@ -82,7 +82,7 @@ namespace Lebeg134.Module.MarketNS
         }
         public void Tick()
         {
-            if (--_timeLeft <= 0)
+            if (--timeLeft <= 0)
             {
                 Cancel();
             }

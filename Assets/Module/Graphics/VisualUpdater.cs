@@ -12,16 +12,16 @@ namespace Lebeg134.Module.Graphics
         {
             get
             {
-                if (_updater == null)
-                    _updater = new VisualUpdater();
-                return _updater;
+                if (updater == null)
+                    updater = new VisualUpdater();
+                return updater;
             }
             set
             {
-                _updater = value;
+                updater = value;
             }
         }
-        static VisualUpdater _updater;
+        static VisualUpdater updater;
         List<IUpdateable> subscribers = new List<IUpdateable>();
 
         public void Register(IUpdateable subscriber)

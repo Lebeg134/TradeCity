@@ -9,20 +9,20 @@ namespace Lebeg134.Module.TimeManager
 {
     public class Clock
     {
-        private static Clock _instance = new Clock();
+        private static Clock instance = new Clock();
         public static Clock Instance
         {
             get
             {
-                return _instance;
+                return instance;
             }
             set
             {
-                _instance = new Clock();
+                instance = new Clock();
                 foreach (ITickable tickable in value.tickables)
                 {
                     if (tickable != null)
-                        _instance.Register(tickable);
+                        instance.Register(tickable);
                 }
             }
         }

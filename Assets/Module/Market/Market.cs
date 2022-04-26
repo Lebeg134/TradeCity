@@ -13,7 +13,7 @@ namespace Lebeg134.Module.MarketNS
     public class Market : ITickable
     {
         private Dictionary<System.Type, ItemLog> _registeredItems;
-        private Dictionary<System.Type, List<Listing>> _listings;
+        private Dictionary<System.Type, List<Listing>> listings;
 
         void GenerateListing(ISellable of, int num)
         {
@@ -23,7 +23,7 @@ namespace Lebeg134.Module.MarketNS
         {
             // TODO check if Listing already exists
             Listing post = new Listing(wantSellable, forSellable, by, amount);
-            List<Listing> listings = _listings[forSellable.GetType()];
+            List<Listing> listings = listings[forSellable.GetType()];
             int newAmount = post.LockResources(all);
             if (amount != newAmount)
                 post = new Listing(wantSellable, forSellable, by, newAmount);
@@ -37,7 +37,7 @@ namespace Lebeg134.Module.MarketNS
         }
         public Listing GetMinSell(ISellable wantSellable, ISellable forSellable)
         {
-            List<Listing> listings = _listings[wantSellable.GetType()].FindAll(x => x.ForSellable.Equals(forSellable));
+            List<Listing> listings = listings[wantSellable.GetType()].FindAll(x => x.ForSellable.Equals(forSellable));
             if (listings.Count > 0)
             {
                 listings.Sort();
@@ -48,7 +48,7 @@ namespace Lebeg134.Module.MarketNS
         }
         public Listing GetMaxBuy(ISellable wantSellable, ISellable forSellable)
         {
-            List<Listing> listings = _listings[forSellable.GetType()].FindAll(x => x.WantSellable.Equals(wantSellable));
+            List<Listing> listings = listings[forSellable.GetType()].FindAll(x => x.WantSellable.Equals(wantSellable));
             if (listings?.Count > 0)
             {
                 listings.Sort();
@@ -59,7 +59,7 @@ namespace Lebeg134.Module.MarketNS
         }
         public void RemovePlayer(Player player)
         {
-            foreach (List<Listing> list in _listings.Values)
+            foreach (List<Listing> list in listings.Values)
             {
                 foreach (Listing listing in list)
                 {
@@ -74,7 +74,7 @@ namespace Lebeg134.Module.MarketNS
         public List<Listing> GetPlayerListingsList(Player player)
         {
             List<Listing> myListings = new List<Listing>();
-            foreach (List<Listing> list in _listings.Values)
+            foreach (List<Listing> list in listings.Values)
             {
                 myListings.AddRange(list.FindAll(x => x.Poster.Equals(player)));
             }
@@ -90,7 +90,7 @@ namespace Lebeg134.Module.MarketNS
         }
         public void Tick()
         {
-            foreach (List<Listing> list in _listings.Values)
+            foreach (List<Listing> list in listings.Values)
             {
                 foreach (Listing listing in list)
                 {

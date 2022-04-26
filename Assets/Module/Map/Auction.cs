@@ -14,40 +14,40 @@ namespace Lebeg134.Module.MapNS
     public class Auction : ITickable, IEqualityComparer<Auction>
     {
         Land _subject;
-        int _currentPrice;
-        int _minBid;
-        Player _lastBidder;
-        int _timeRemaining;
-        int _timePerRound;
+        int currentPrice;
+        int minBid;
+        Player lastBidder;
+        int timeRemaining;
+        int timePerRound;
 
         public Auction(Land subject, int minBid, int timePerRound, Player initiater = null)
         {
             _subject = subject;
-            _currentPrice = subject.GetStartingPrice();
-            _minBid = minBid;
-            _timeRemaining = timePerRound;
-            _timePerRound = timePerRound;
-            _lastBidder = initiater;
+            currentPrice = subject.GetStartingPrice();
+            this.minBid = minBid;
+            timeRemaining = timePerRound;
+            this.timePerRound = timePerRound;
+            lastBidder = initiater;
         }
         public void Bid(Player by, int bid)
         {
-            if (bid > _currentPrice + _minBid)
+            if (bid > currentPrice + minBid)
             {
-                _timeRemaining = _timePerRound;
-                _lastBidder = by;
+                timeRemaining = timePerRound;
+                lastBidder = by;
             }
         }
         public void Finish()
         {
-            if (_lastBidder != null)
+            if (lastBidder != null)
             {
-                _subject.Acquire(_lastBidder);
+                _subject.Acquire(lastBidder);
                 throw new AuctionFinishedException();
             }
         }
         public void Tick()
         {
-            if (--_timeRemaining <= 0)
+            if (--timeRemaining <= 0)
                 Finish();
         }
         public void Register()

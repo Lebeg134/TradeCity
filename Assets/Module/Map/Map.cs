@@ -13,18 +13,18 @@ namespace Lebeg134.Module.MapNS
     [Serializable]
     public class Map : ITickable
     {
-        readonly int _defaultBid = 100;
-        readonly int _defaultTimePerRound = 100;
+        readonly int defaultBid = 100;
+        readonly int defaultTimePerRound = 100;
 
         IMapStructure[,] _structures;
-        readonly int _sizeX, _sizeY;
-        List<Auction> _liveAuctions = new List<Auction>();
+        readonly int sizeX, sizeY;
+        List<Auction> liveAuctions = new List<Auction>();
 
         public Map(int sizeX, int sizeY)
         {
-            _sizeX = sizeX;
-            _sizeY = sizeY;
-            _structures = new IMapStructure[_sizeX, _sizeY];
+            this.sizeX = sizeX;
+            this.sizeY = sizeY;
+            _structures = new IMapStructure[this.sizeX, this.sizeY];
             Register();
         }
         public IMapStructure GetStructure(int x, int y)
@@ -46,20 +46,20 @@ namespace Lebeg134.Module.MapNS
                 throw new NotAuctionableException();
             else
             {
-                Auction newAuction = new Auction((Land)subject, _defaultBid, _defaultTimePerRound, by);
-                if (_liveAuctions.Contains(newAuction))
+                Auction newAuction = new Auction((Land)subject, defaultBid, defaultTimePerRound, by);
+                if (liveAuctions.Contains(newAuction))
                 {
                     throw new AuctionAlreadyExistsException();
                 }
                 else
                 {
-                    _liveAuctions.Add(newAuction);
+                    liveAuctions.Add(newAuction);
                 }
             }
         }
         public void Tick()
         {
-            foreach (Auction auction in _liveAuctions)
+            foreach (Auction auction in liveAuctions)
             {
                 try
                 {
@@ -67,7 +67,7 @@ namespace Lebeg134.Module.MapNS
                 }
                 catch (AuctionFinishedException)
                 {
-                    _liveAuctions.Remove(auction);
+                    liveAuctions.Remove(auction);
                 }
             }
         }

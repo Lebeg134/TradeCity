@@ -7,12 +7,12 @@ namespace Lebeg134.Module.Structures
     [Serializable]
     public class LockedStructure : Structure
 	{
-		Structure _subject;
+		Structure subject;
 		
 		LockedStructure(Structure subject)
         {
 			subject.Off();
-			_subject = subject;
+			this.subject = subject;
         }
 		public static LockedStructure Wrap( Structure subject )
 		{
@@ -20,8 +20,8 @@ namespace Lebeg134.Module.Structures
 		}
 		public Structure Unwrap()
 		{
-			_subject.On();
-			return _subject;
+			subject.On();
+			return subject;
 		}
         public override void On()
         {

@@ -27,13 +27,13 @@ namespace Lebeg134.Module.Session
         {
             get
             {
-                if (_instance != null)
-                    return _instance;
+                if (instance != null)
+                    return instance;
                 else
                     throw new System.Exception("No started Sessions");
             }
         }
-        private static Session _instance;
+        private static Session instance;
 
         public Session()
         {
@@ -42,7 +42,7 @@ namespace Lebeg134.Module.Session
         }
         public void Start()
         {
-            _instance = this;
+            instance = this;
             Clock.Instance.Start();
             Running = true;
         }
@@ -73,7 +73,7 @@ namespace Lebeg134.Module.Session
         {
             Stream stream = File.OpenRead(Filename);
             BinaryFormatter b = new BinaryFormatter();
-            _instance = (Session)b.Deserialize(stream);
+            instance = (Session)b.Deserialize(stream);
             stream.Close();
             CurrentPlayer = Instance._players[0]; // TODO need to change when multiple players
             Clock.Instance.Clear();

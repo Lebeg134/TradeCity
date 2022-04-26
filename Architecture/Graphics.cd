@@ -3,20 +3,13 @@
   <Class Name="Lebeg134.Module.Graphics.VisualUpdater" BaseTypeListCollapsed="true">
     <Position X="1" Y="2.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAABAAABQAQAAAAAEAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAABAAABQAAAAAAAEAE=</HashCode>
       <FileName>Assets\Module\Graphics\VisualUpdater.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Field Name="subscribers" />
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="Lebeg134.Assets.Module.Graphics.ResourceSpriteDefinition">
-    <Position X="4.5" Y="0.5" Width="3" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Module\Graphics\ResourceSpriteDefinition.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Interface Name="Lebeg134.Module.Graphics.IGetRes">
     <Position X="4.5" Y="1.75" Width="2" />

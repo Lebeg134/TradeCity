@@ -1,10 +1,10 @@
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
-using Lebeg134.Units;
 using Lebeg134.Resources.ConstructionIndustry;
 using Lebeg134.Resources.EnergySector;
 using Lebeg134.Resources.OilIndustry;
 using Lebeg134.Resources.Workforce;
+using Lebeg134.Units;
 using System;
 using System.Collections.Generic;
 /**
@@ -37,7 +37,7 @@ namespace Lebeg134.Structures.OilIndustry
 
         public override List<Resource> GetUpkeep()
         {
-            return new List<Resource> { new Electricity(2 * level) , new Oil(10)};
+            return new List<Resource> { new Electricity(2 * level), new Oil(10) };
         }
 
         public override List<Resource> UpgradeLevelsCosts(int level)

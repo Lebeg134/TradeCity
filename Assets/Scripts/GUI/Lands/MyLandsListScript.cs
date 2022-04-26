@@ -1,7 +1,6 @@
-using Lebeg134.Scripts.GUI.VisualUpdaters;
 using Lebeg134.Module.Session;
 using Lebeg134.Module.Structures;
-using System.Collections;
+using Lebeg134.Scripts.GUI.VisualUpdaters;
 using System.Collections.Generic;
 using UnityEngine;
 

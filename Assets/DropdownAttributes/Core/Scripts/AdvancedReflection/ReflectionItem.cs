@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Reflection;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 public class ReflectionItem
 {
@@ -54,7 +51,7 @@ public class ReflectionItem
         {
             return ReflectionItemType.COLLECTION;
         }
-        if (DetectPrimaryTypeFromString(Target)!=null)
+        if (DetectPrimaryTypeFromString(Target) != null)
         {//It is primary type
             return ReflectionItemType.PRIMITIVEINSTANCE;
         }
@@ -66,7 +63,7 @@ public class ReflectionItem
         bool couldBeClass = (staticClass != null);
 
 
-        if(couldBeInstance && couldBeClass)
+        if (couldBeInstance && couldBeClass)
         {//WARNING
             Debug.LogError($"Reflection confused. the target {Target} in {MasterType} could be instance or class at the same time!");
             return ReflectionItemType.InstanceOrClass;
@@ -101,7 +98,8 @@ public class ReflectionItem
 
             }
         }
-        catch (Exception e) {
+        catch (Exception e)
+        {
             if (ReflectionSystem.DebugMode)
                 Debug.LogException(e);
             return null;
@@ -131,7 +129,7 @@ public class ReflectionItem
     {
         Type currentType = MasterType;
         FieldInfo info = currentType?.GetFieldBypassProtection(Target);
-        while(info == null)
+        while (info == null)
         {
             if (currentType == null) return null;
             currentType = currentType.BaseType;
@@ -139,7 +137,7 @@ public class ReflectionItem
         }
         //debug($"info {info.Name}");
         return info.GetValue(Master);
-        
+
     }
     private object FindInstanceVariableByProperty(string Target)
     {
@@ -168,7 +166,7 @@ public class ReflectionItem
         object[] parameters = GetParametersFromTarget();
         if (MethodName == "ToString") return Master.ToString();
         MethodInfo info = null;
-        foreach(MethodInfo i in MasterType?.GetMethods())
+        foreach (MethodInfo i in MasterType?.GetMethods())
         {
             if (MethodName == i.Name) info = i;
         }
@@ -198,7 +196,7 @@ public class ReflectionItem
         //debug($"Trimmed parameter part: >{parameterPart}<");
         string[] stringParameterArray = ReflectionExtensions.SplitIgnoringSplitterInBrackets(parameterPart, ',');
         object[] result = new object[stringParameterArray.Length];
-        for (int i = 0 ; i < stringParameterArray.Length; i++)
+        for (int i = 0; i < stringParameterArray.Length; i++)
         {//turrning string array into object array
             string str = stringParameterArray[i];
             if (ReflectionExtensions.MathCharacterNotInBracketsExists(str))
@@ -249,7 +247,7 @@ public class ReflectionItem
     }
     private Type DetectPrimaryTypeFromString(string str)
     {
-        if (str.Length > 0) if (str[0] == '"' && str[str.Length-1] == '"')
+        if (str.Length > 0) if (str[0] == '"' && str[str.Length - 1] == '"')
             {//it is a string
                 return typeof(string);
             }
@@ -308,7 +306,7 @@ public class ReflectionItem
             int currentIndex = collectionIndexes[i];
             //Debug.Log($"collection BBB current index: {currentIndex}");
             currentCollectionObject = GetValueInCollection(currentCollectionObject, currentIndex);
-        } 
+        }
         return currentCollectionObject;
 
 
@@ -346,11 +344,11 @@ public class ReflectionItem
     }
     private int[] GetCollectionIndexesFromTarget()
     {
-        string collectionPart = Target.Split(new [] {'['}, 2)[1];//"list[0][3][2]"   ->   "0][3][2]"
+        string collectionPart = Target.Split(new[] { '[' }, 2)[1];//"list[0][3][2]"   ->   "0][3][2]"
         collectionPart = "[" + collectionPart; // "0][3][2]" -> "[0][3][2]"
         //Debug.Log($"collection part: {collectionPart}");
         return CollectionPartStringToIntArray(collectionPart);
-        
+
     }
     #endregion
     #endregion
@@ -360,7 +358,7 @@ public class ReflectionItem
     {//Assume input: "GetListFromMap(0)[0]"
         string[] SplittedArray = Target.SplitIgnoringSplitterInBrackets(')');//["GetListFromMap(0", "[0]"]
         if (SplittedArray.Length != 2) return null;
-        string MethodPart = SplittedArray[0]+")";//"GetListFromMap(0)"
+        string MethodPart = SplittedArray[0] + ")";//"GetListFromMap(0)"
         string CollectionPart = SplittedArray[1];//"[0]"
         object MethodResult = ReflectionSystem.GetValue(BaseMaster, Master, MethodPart);
         if (MethodResult == null) return null;

@@ -1,18 +1,14 @@
-﻿using Lebeg134.Module.Market;
-using Lebeg134.Module.TimeManager;
-using System;
+﻿using Lebeg134.Module.TimeManager;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lebeg134.Module.Market
 {
     class SPMarket
     {
         public delegate void Notify();
-        public static event Notify NotifySubscribers; 
-        public static SPMarket Instance {
+        public static event Notify NotifySubscribers;
+        public static SPMarket Instance
+        {
             get
             {
                 if (instance == null)

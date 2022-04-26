@@ -1,8 +1,6 @@
 using Lebeg134.Module.Session;
 using Lebeg134.Module.Structures;
 using Lebeg134.Units;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,7 +28,7 @@ public class BuildingTabControlerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void Switch(Branches tab)

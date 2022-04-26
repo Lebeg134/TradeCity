@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -52,7 +50,7 @@ public class MenuController : MonoBehaviour
     // Switch to given screen
     void SwitchTo(ActiveScreen screen)
     {
-        if (Active != screen) 
+        if (Active != screen)
             Active = screen;
         switch (screen)
         {

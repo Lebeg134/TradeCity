@@ -9,19 +9,19 @@ namespace Lebeg134.Module.Structures
 {
     [Serializable]
     public abstract class Structure : IEqualityComparer<Structure>, IGetRes
-	{
+    {
         protected bool state; //true = on, false = off
-		public virtual void On()
+        public virtual void On()
         {
-			state = true;
+            state = true;
         }
-		public virtual void Off()
+        public virtual void Off()
         {
-			state = false;
+            state = false;
         }
-		public bool GetState()
+        public bool GetState()
         {
-			return state;
+            return state;
         }
         public virtual bool Equals(Structure x, Structure y)
         {

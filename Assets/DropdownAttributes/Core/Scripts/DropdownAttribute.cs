@@ -1,6 +1,5 @@
 ﻿
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -25,10 +24,10 @@ public class DropdownAttribute : PropertyAttribute
     {//With property name to get name
         //[Dropdown("SkillDatabase.Instance.SkillList", "skillID")]
         ListPath = listPath;
-        GetItemName = ( (baseMaster, obj) =>
-         {
-             return ReflectionSystem.GetValue(baseMaster, obj, ItemNameProperty)?.ToString();
-         });
+        GetItemName = ((baseMaster, obj) =>
+        {
+            return ReflectionSystem.GetValue(baseMaster, obj, ItemNameProperty)?.ToString();
+        });
         this.ItemNameProperty = ItemNameProperty;
     }
     public DropdownAttribute(string listPath)
@@ -36,15 +35,15 @@ public class DropdownAttribute : PropertyAttribute
         ListPath = listPath;
         GetItemName = ((baseMaster, master) =>
         {
-            if(master is Object)
+            if (master is Object)
             {//is Unity Object
                 return master.GetType().GetProperty("name").GetValue(master).ToString();
             }
-            else if(master is string)
+            else if (master is string)
             {//string
                 return master.ToString();
             }
-            else if(master.GetType().IsPrimitive)
+            else if (master.GetType().IsPrimitive)
             {//short, long, int, bool, char, double, float
                 return master.ToString();
             }

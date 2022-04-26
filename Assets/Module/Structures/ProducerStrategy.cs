@@ -1,7 +1,6 @@
 ﻿/**
 * @(#) ProducerStrategy.cs
 */
-using Lebeg134.Module.Resources;
 using Lebeg134.Module.Session;
 
 namespace Lebeg134.Module.Structures

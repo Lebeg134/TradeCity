@@ -1,7 +1,7 @@
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
-using Lebeg134.Units.Resources.Common;
 using Lebeg134.Resources.EnergySector;
+using Lebeg134.Units.Resources.Common;
 using System;
 using System.Collections.Generic;
 /**
@@ -10,8 +10,8 @@ using System.Collections.Generic;
 namespace Lebeg134.Structures.Lands
 {
     [Serializable]
-    public class CoalMine: Land
-	{
+    public class CoalMine : Land
+    {
         public override string GetName()
         {
             return "Coal Mine";
@@ -33,8 +33,8 @@ namespace Lebeg134.Structures.Lands
 
         protected override List<Resource> UpgradeLevelsCosts(int level)
         {
-            return new List<Resource> { new Money(100 * level+250) };
+            return new List<Resource> { new Money(100 * level + 250) };
         }
     }
-	
+
 }

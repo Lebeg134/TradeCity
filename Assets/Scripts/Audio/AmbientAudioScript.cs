@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class AmbientAudioScript : MonoBehaviour
 {
@@ -29,7 +26,7 @@ public class AmbientAudioScript : MonoBehaviour
             case ActiveScreen.MARKET:
                 audioSource.clip = marketAmbient;
                 break;
-                
+
         }
         audioSource.Play();
     }

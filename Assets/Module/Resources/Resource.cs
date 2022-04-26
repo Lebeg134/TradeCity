@@ -8,7 +8,7 @@ using System.Collections.Generic;
 namespace Lebeg134.Module.Resources
 {
     [Serializable]
-    public abstract class Resource: IGetRes
+    public abstract class Resource : IGetRes
     {
         //Amount of resource stored
         protected int stock;
@@ -74,7 +74,7 @@ namespace Lebeg134.Module.Resources
             return this;
         }
 
-        
+
 
         public static Resource operator +(Resource A, Resource B)
         {

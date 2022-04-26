@@ -6,23 +6,23 @@ namespace Lebeg134.Module.Structures
 {
     [Serializable]
     public class LockedStructure : Structure
-	{
-		Structure subject;
-		
-		LockedStructure(Structure subject)
+    {
+        Structure subject;
+
+        LockedStructure(Structure subject)
         {
-			subject.Off();
-			this.subject = subject;
+            subject.Off();
+            this.subject = subject;
         }
-		public static LockedStructure Wrap( Structure subject )
-		{
-			return new LockedStructure(subject);
-		}
-		public Structure Unwrap()
-		{
-			subject.On();
-			return subject;
-		}
+        public static LockedStructure Wrap(Structure subject)
+        {
+            return new LockedStructure(subject);
+        }
+        public Structure Unwrap()
+        {
+            subject.On();
+            return subject;
+        }
         public override void On()
         {
             //Do nothing
@@ -34,8 +34,8 @@ namespace Lebeg134.Module.Structures
 
         public override string GetName()
         {
-			return "Locked";
+            return "Locked";
         }
     }
-	
+
 }

@@ -4,8 +4,8 @@
 
 namespace Lebeg134.Structures.EnergySector
 {
-	public class FireStation
-	{
-	}
-	
+    public class FireStation
+    {
+    }
+
 }

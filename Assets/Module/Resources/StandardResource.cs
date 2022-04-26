@@ -9,7 +9,7 @@ namespace Lebeg134.Module.Resources
     [Serializable]
     public abstract class StandardResource : Resource, ISellable
     {
-        public StandardResource(int amount):base(amount)
+        public StandardResource(int amount) : base(amount)
         {
         }
         public abstract double GetValue();

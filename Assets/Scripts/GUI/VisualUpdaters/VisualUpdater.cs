@@ -1,6 +1,4 @@
 using Lebeg134.Scripts.GUI.VisualUpdaters;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class VisualUpdater : MonoBehaviour, IVisualUpdateable
@@ -11,8 +9,8 @@ public class VisualUpdater : MonoBehaviour, IVisualUpdateable
     {
         target.GetComponent<IVisualUpdateable>().VisualUpdate();
     }
-    void Start(){}
-    void Update(){}
+    void Start() { }
+    void Update() { }
 
 
 }

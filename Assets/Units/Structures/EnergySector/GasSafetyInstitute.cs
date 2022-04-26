@@ -4,8 +4,8 @@
 
 namespace Lebeg134.Structures.EnergySector
 {
-	public class GasSafetyInstitute
-	{
-	}
-	
+    public class GasSafetyInstitute
+    {
+    }
+
 }

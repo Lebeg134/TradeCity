@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class ReflectionSystem
@@ -52,7 +49,7 @@ public class ReflectionSystem
         {
             display += str + arrowSymbol;
         }
-        display = display.Substring(0, display.Length-arrowSymbol.Length); //remove the arrow
+        display = display.Substring(0, display.Length - arrowSymbol.Length); //remove the arrow
         display += "</b>";
         debug(display);
         #endregion
@@ -85,7 +82,7 @@ public class ReflectionSystem
             {//instance variable
                 /*try
                 {*/
-                    currentMaster = reflectionItem.GetValue();
+                currentMaster = reflectionItem.GetValue();
                 /*}
                 catch (Exception e)
                 {

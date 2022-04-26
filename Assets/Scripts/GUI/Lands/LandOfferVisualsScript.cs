@@ -1,8 +1,6 @@
 using Lebeg134.Module.Session;
 using Lebeg134.Module.Structures;
 using Lebeg134.Units.Resources.Common;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,10 +15,10 @@ public class LandOfferVisualsScript : MonoBehaviour
     public string target;
     string[] options = GetOptions();
     public Land watched;
-    public int price =1000;
+    public int price = 1000;
     private static string[] GetOptions()
     {
-        
+
         List<string> options = new List<string>();
         foreach (Land land in SessionGenerator.GetAllLands())
         {
@@ -29,7 +27,7 @@ public class LandOfferVisualsScript : MonoBehaviour
         return options.ToArray();
     }
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +43,7 @@ public class LandOfferVisualsScript : MonoBehaviour
             sprite.sprite = loadedSprite;
 
         buildButton.onClick.AddListener(() => OnClick());
-        
+
     }
 
     private void OnClick()

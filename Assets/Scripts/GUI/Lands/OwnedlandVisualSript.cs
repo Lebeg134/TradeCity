@@ -1,8 +1,4 @@
-using Lebeg134.Scripts.GUI.VisualUpdaters;
-using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,6 +20,6 @@ public class OwnedlandVisualSript : MonoBehaviour
     }
     void Update()
     {
-        
+
     }
 }

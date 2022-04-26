@@ -1,10 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using Lebeg134.Module.Session;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartGameScript : MonoBehaviour
 {
@@ -25,6 +22,6 @@ public class StartGameScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

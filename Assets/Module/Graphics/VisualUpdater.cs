@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Lebeg134.Module.Graphics
 {
-    public class VisualUpdater: IUpdateable
+    public class VisualUpdater : IUpdateable
     {
         public static VisualUpdater Instance
         {
@@ -27,7 +23,7 @@ namespace Lebeg134.Module.Graphics
         public void Register(IUpdateable subscriber)
         {
             if (!subscribers.Contains(subscriber))
-            subscribers.Add(subscriber);
+                subscribers.Add(subscriber);
         }
         public void UnRegister(IUpdateable subscriber)
         {

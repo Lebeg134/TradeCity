@@ -1,6 +1,3 @@
-
-
-using Lebeg134.Module.Structures;
 using Lebeg134.Module.TimeManager;
 using System;
 /**
@@ -8,7 +5,7 @@ using System;
 */
 namespace Lebeg134.Module.Session
 {
-    
+
     public partial class Player
     {
         [Serializable]
@@ -21,7 +18,7 @@ namespace Lebeg134.Module.Session
             }
             public virtual void Freeze()
             {
-                if(!player.IsFrozen())
+                if (!player.IsFrozen())
                     player.playerStrategy = new FrozenPlayerStrategy(player);
             }
             public virtual void GoBankrupt()

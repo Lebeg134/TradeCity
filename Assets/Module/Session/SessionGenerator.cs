@@ -1,6 +1,5 @@
 ﻿using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
-using Lebeg134.Units.Resources.Common;
 using Lebeg134.Resources.Common;
 using Lebeg134.Resources.ConstructionIndustry;
 using Lebeg134.Resources.EnergySector;
@@ -11,11 +10,7 @@ using Lebeg134.Structures.ConstructionIndustry;
 using Lebeg134.Structures.EnergySector;
 using Lebeg134.Structures.Lands;
 using Lebeg134.Structures.OilIndustry;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lebeg134.Module.Session
 {

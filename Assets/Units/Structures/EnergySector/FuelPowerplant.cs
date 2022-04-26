@@ -4,8 +4,8 @@
 
 namespace Lebeg134.Structures.EnergySector
 {
-	public class FuelPowerplant
-	{
-	}
-	
+    public class FuelPowerplant
+    {
+    }
+
 }

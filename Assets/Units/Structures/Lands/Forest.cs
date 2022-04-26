@@ -35,7 +35,7 @@ namespace Lebeg134.Structures.Lands
         {
             get
             {
-                return new[] 
+                return new[]
                 {
                     new List<Resource> {new Wood(10)},
                     new List<Resource> {new Wood(20)},

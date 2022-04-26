@@ -40,7 +40,7 @@ namespace Lebeg134.Module.Structures
         }
         override protected string GetBasePath()
         {
-            return base.GetBasePath()+"Building/";
+            return base.GetBasePath() + "Building/";
         }
     }
 

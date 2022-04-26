@@ -20,7 +20,7 @@ namespace Lebeg134.Module.Structures
                 owner.SubRes(UpgradeLevelsCosts(level));
                 level++;
             }
-                
+
         }
         public bool CheckLevelUp()
         {

@@ -8,7 +8,7 @@ namespace Lebeg134.Resources.EnergySector
     [Serializable]
     public class Coal : StandardResource
     {
-        public Coal(int amount):base(amount) { }
+        public Coal(int amount) : base(amount) { }
 
         public override string GetName()
         {

@@ -4,8 +4,8 @@
 
 namespace Lebeg134.Structures.ConstructionIndustry
 {
-	public class InsulationFactory
-	{
-	}
-	
+    public class InsulationFactory
+    {
+    }
+
 }

@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace Lebeg134.Scripts.GUI.ResourceDispalys
 {
-    class LiveResourceDisplayScript: ResourceDisplayScript
+    class LiveResourceDisplayScript : ResourceDisplayScript
     {
         enum IndicatorState
         {
@@ -39,12 +34,12 @@ namespace Lebeg134.Scripts.GUI.ResourceDispalys
                 state = IndicatorState.NEUTRAL;
                 indicatorTime = 0;
             }
-            else if(prevAmount < amount)
+            else if (prevAmount < amount)
             {
                 state = IndicatorState.UP;
                 indicatorTime = 0;
             }
-            else if(prevAmount > amount)
+            else if (prevAmount > amount)
             {
                 state = IndicatorState.DOWN;
                 indicatorTime = 0;

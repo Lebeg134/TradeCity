@@ -1,8 +1,6 @@
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Session;
 using Lebeg134.Module.Structures;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,7 +24,7 @@ public class BuildingListItemScript : MonoBehaviour
     public GameObject CostDisplayPrefab;
     Building target;
     ButtonState btnState = ButtonState.BUILD;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -85,7 +83,7 @@ public class BuildingListItemScript : MonoBehaviour
     {
         if (target.CanBeBuilt(Player.CurrentPlayer))
         {
-            btnState= ButtonState.BUILD;
+            btnState = ButtonState.BUILD;
             if (target is CommonBuilding)
             {
                 CommonBuilding focus = (CommonBuilding)target;
@@ -99,7 +97,7 @@ public class BuildingListItemScript : MonoBehaviour
                 }
             }
         }
-        
+
     }
     private void UpdateButton()
     {

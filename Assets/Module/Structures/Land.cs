@@ -1,12 +1,10 @@
 /**
 * @(#) Land.cs
 */
-using Lebeg134.Module.Graphics;
 using Lebeg134.Module.MapNS;
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Session;
 using Lebeg134.Module.TimeManager;
-using Lebeg134.Units;
 using System;
 using System.Collections.Generic;
 
@@ -74,7 +72,7 @@ namespace Lebeg134.Module.Structures
         {
             if (a.GetType() == b.GetType())
                 return ((Land)a).Equals((Land)b);
-            else 
+            else
                 return false;
         }
         public int GetHashCode(IMapStructure obj)

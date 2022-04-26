@@ -143,7 +143,7 @@ namespace Lebeg134.Module.Session
             {
                 ownedResources[resource.GetType()] += resource;
             }
-            
+
         }
         public void GiveRes(List<Resource> resources)
         {
@@ -157,7 +157,7 @@ namespace Lebeg134.Module.Session
             foreach (Resource res in newResList)
             {
                 ownedResources.Add(res.GetType(), res.GetNewResource(0));
-                if(res is ContinousResource)
+                if (res is ContinousResource)
                 {
                     cntResourcesBuffer.Add(res.GetType(), res.GetNewResource(0));
                 }

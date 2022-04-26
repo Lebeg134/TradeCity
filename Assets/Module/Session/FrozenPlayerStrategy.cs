@@ -1,7 +1,6 @@
 /**
 * @(#) FrozenPlayerStrategy.cs
 */
-using static Lebeg134.Module.Session.Player;
 
 namespace Lebeg134.Module.Session
 {

@@ -1,11 +1,7 @@
 ﻿using Lebeg134.Module.Resources;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Lebeg134.Units.Resources.Common
+namespace Lebeg134.Resources.Common
 {
     [Serializable]
     class Money : StandardResource

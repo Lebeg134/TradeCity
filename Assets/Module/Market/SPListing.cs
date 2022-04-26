@@ -4,19 +4,15 @@ using Lebeg134.Module.Session;
 using Lebeg134.Module.TimeManager;
 using Lebeg134.Units.Resources.Common;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lebeg134.Module.Market
 {
     [Serializable]
-    public class SPListing: ITickable
+    public class SPListing : ITickable
     {
         public Resource Sell
         {
-            get => (Resource)sell; 
+            get => (Resource)sell;
             set
             {
                 if (value is ISellable)
@@ -50,7 +46,7 @@ namespace Lebeg134.Module.Market
                 {
                     if (throws) throw;
                 }
-                
+
             }
         }
         public void CompleteAll()

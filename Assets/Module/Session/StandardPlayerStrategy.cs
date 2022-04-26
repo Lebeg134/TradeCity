@@ -1,10 +1,9 @@
 ﻿/**
  * @(#) StandardPlayerStrategy.cs
  */
-using System;
-using System.Collections.Generic;
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
+using System;
 
 namespace Lebeg134.Module.Session
 {
@@ -29,7 +28,7 @@ namespace Lebeg134.Module.Session
                 {
                     producer.Produce();
                 }
-                
+
             }
         }
     }

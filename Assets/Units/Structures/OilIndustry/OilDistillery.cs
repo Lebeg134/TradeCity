@@ -1,11 +1,11 @@
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
-using Lebeg134.Units;
 using Lebeg134.Resources.Common;
 using Lebeg134.Resources.ConstructionIndustry;
 using Lebeg134.Resources.EnergySector;
 using Lebeg134.Resources.OilIndustry;
 using Lebeg134.Resources.Workforce;
+using Lebeg134.Units;
 using System;
 using System.Collections.Generic;
 /**
@@ -38,7 +38,7 @@ namespace Lebeg134.Structures.OilIndustry
 
         public override List<Resource> GetProduce()
         {
-            return new List<Resource> { new Fuel(2*level*level), new Chemicals(4*level*level) };
+            return new List<Resource> { new Fuel(2 * level * level), new Chemicals(4 * level * level) };
         }
 
         public override List<Resource> GetUpkeep()

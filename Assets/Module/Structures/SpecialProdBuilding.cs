@@ -9,7 +9,7 @@ namespace Lebeg134.Module.Structures
 {
     [Serializable]
     public abstract class SpecialProdBuilding : SpecialBuilding, IProducer
-	{
+    {
         abstract public List<Resource> GetProduce();
         public void Produce()
         {
@@ -26,5 +26,5 @@ namespace Lebeg134.Module.Structures
             Produce();
         }
     }
-	
+
 }

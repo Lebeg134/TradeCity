@@ -1,10 +1,6 @@
 using Lebeg134.Module.Market;
-using Lebeg134.Module.MarketNS;
 using Lebeg134.Module.Resources;
 using Lebeg134.Units.Resources.Common;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class NewListingScript : MonoBehaviour
@@ -29,10 +25,10 @@ public class NewListingScript : MonoBehaviour
         aboveInput.onValueChanged.AddListener((var) => UpdateButtons());
 
         UpdateButtons();
-        sellOneButton.onClick.AddListener(() => 
+        sellOneButton.onClick.AddListener(() =>
             GetListing(false)?.Complete()
         );
-        sellAllButton.onClick.AddListener(() => 
+        sellAllButton.onClick.AddListener(() =>
             GetListing(false)?.CompleteAll()
         );
         createListingButton.onClick.AddListener(() =>
@@ -44,7 +40,7 @@ public class NewListingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     void UpdateButtons()
     {

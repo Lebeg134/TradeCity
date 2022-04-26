@@ -1,9 +1,6 @@
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Session;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,7 +19,7 @@ public class ResourceDisplayScript : MonoBehaviour
         {
             _watched = value;
             OnWatchedChanged();
-            
+
         }
     }
     protected virtual void OnWatchedChanged()
@@ -41,7 +38,7 @@ public class ResourceDisplayScript : MonoBehaviour
     {
         if (Watched == null)
             Watched = ConvertToRes(resource);
-        UpdateVisuals();       
+        UpdateVisuals();
     }
 
     // Update is called once per frame
@@ -66,9 +63,9 @@ public class ResourceDisplayScript : MonoBehaviour
 
     public static List<string> GetOptions()
     {
-        List<Resource> reslist =SessionGenerator.GetResourceList();
+        List<Resource> reslist = SessionGenerator.GetResourceList();
         List<string> strlist = new List<string>();
-        foreach(Resource res in reslist)
+        foreach (Resource res in reslist)
         {
             strlist.Add(res.GetName());
         }

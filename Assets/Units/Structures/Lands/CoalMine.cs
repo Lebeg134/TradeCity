@@ -1,7 +1,7 @@
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
-using Lebeg134.Resources.EnergySector;
 using Lebeg134.Resources.Common;
+using Lebeg134.Resources.EnergySector;
 using System;
 using System.Collections.Generic;
 /**

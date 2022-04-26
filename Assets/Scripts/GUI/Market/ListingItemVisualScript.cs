@@ -1,5 +1,5 @@
 using Lebeg134.Module.Market;
-using Lebeg134.Units.Resources.Common;
+using Lebeg134.Resources.Common;
 using UnityEngine;
 using UnityEngine.UI;
 

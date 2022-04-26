@@ -13,7 +13,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JHP4SD.Lebeg134.Module.MarketNS.Market" BaseTypeListCollapsed="true">
-    <Position X="4" Y="6.75" Width="3" />
+    <Position X="5.5" Y="6.75" Width="3" />
     <TypeIdentifier>
       <HashCode>IABBAAAAAAAAAAAIAACAAACAGQAgAEAAARAAAAAAAAA=</HashCode>
       <FileName>Assets\Module\Market\Market.cs</FileName>
@@ -35,7 +35,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Assets.Module.Market.SPMarket">
-    <Position X="10.5" Y="0.75" Width="2" />
+    <Position X="11.25" Y="0.75" Width="2" />
     <NestedTypes>
       <Delegate Name="Assets.Module.Market.SPMarket.Notify" Collapsed="true">
         <TypeIdentifier>

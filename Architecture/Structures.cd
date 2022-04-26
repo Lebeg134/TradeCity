@@ -83,22 +83,22 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="JHP4SD.Lebeg134.Module.Structures.IOwnable" Collapsed="true">
-    <Position X="15.75" Y="1.75" Width="1.5" />
+  <Interface Name="JHP4SD.Lebeg134.Module.Structures.IOwnable">
+    <Position X="15.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Module\Structures\IOwnable.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="JHP4SD.Lebeg134.Module.Structures.IProducer" Collapsed="true">
-    <Position X="17.5" Y="1.75" Width="1.5" />
+  <Interface Name="JHP4SD.Lebeg134.Module.Structures.IProducer">
+    <Position X="15.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Assets\Module\Structures\IProducer.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="JHP4SD.Lebeg134.Module.Structures.IUpgradeable" Collapsed="true">
-    <Position X="15.75" Y="2.5" Width="1.5" />
+  <Interface Name="JHP4SD.Lebeg134.Module.Structures.IUpgradeable">
+    <Position X="15.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAABAA=</HashCode>
       <FileName>Assets\Module\Structures\IUpgradeable.cs</FileName>

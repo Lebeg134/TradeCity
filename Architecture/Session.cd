@@ -45,15 +45,15 @@
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="JHP4SD.Lebeg134.Module.Session.SessionGenerator" Collapsed="true">
-    <Position X="9.5" Y="0.5" Width="1.5" />
+  <Class Name="JHP4SD.Lebeg134.Module.Session.SessionGenerator">
+    <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IABAAAAAAAAAAAAAAAAABAAAAIAAIACAAAAAQAAAAAA=</HashCode>
       <FileName>Assets\Module\Session\SessionGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="JHP4SD.Lebeg134.Module.Session.IPlayerStrategy" Collapsed="true">
-    <Position X="9.5" Y="1.75" Width="1.5" />
+  <Interface Name="JHP4SD.Lebeg134.Module.Session.IPlayerStrategy">
+    <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAEAAAgAAAAAAAAAAAABAAAAAAAAAAAAAAgAAAAA=</HashCode>
       <FileName>Assets\Module\Session\IPlayerStrategy.cs</FileName>

@@ -12,7 +12,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="JHP4SD.Lebeg134.Module.MapNS.AuctionFinishedException" Collapsed="true">
-    <Position X="9.75" Y="0.5" Width="1.5" />
+    <Position X="8" Y="1.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Module\Map\Auction.cs</FileName>
@@ -30,14 +30,14 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="JHP4SD.Lebeg134.Module.MapNS.AuctionAlreadyExistsException" Collapsed="true">
-    <Position X="8" Y="0.5" Width="1.5" />
+    <Position X="8" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Module\Map\Map.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="JHP4SD.Lebeg134.Module.MapNS.NotAuctionableException" Collapsed="true">
-    <Position X="8" Y="1.5" Width="1.5" />
+    <Position X="8" Y="2.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Module\Map\Map.cs</FileName>

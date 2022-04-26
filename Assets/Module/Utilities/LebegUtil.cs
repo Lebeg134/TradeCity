@@ -15,5 +15,13 @@ namespace Lebeg134.Module.Utilities
                 i = index;
             return i;
         }
+        public static float Clamp(float num, float min, float max)
+        {
+            if (num < min)
+                return min;
+            if (num > max)
+                return max;
+            return num;
+        }
     }
 }

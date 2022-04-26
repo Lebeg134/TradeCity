@@ -16,7 +16,7 @@ namespace Lebeg134.Module.MapNS
         readonly int defaultBid = 100;
         readonly int defaultTimePerRound = 100;
 
-        IMapStructure[,] _structures;
+        IMapStructure[,] structures;
         readonly int sizeX, sizeY;
         List<Auction> liveAuctions = new List<Auction>();
 
@@ -24,24 +24,24 @@ namespace Lebeg134.Module.MapNS
         {
             this.sizeX = sizeX;
             this.sizeY = sizeY;
-            _structures = new IMapStructure[this.sizeX, this.sizeY];
+            structures = new IMapStructure[this.sizeX, this.sizeY];
             Register();
         }
         public IMapStructure GetStructure(int x, int y)
         {
-            return _structures[x, y];
+            return structures[x, y];
         }
         public void SetStructure(int x, int y, IMapStructure structure, bool replace = false)
         {
-            if (replace || _structures[x, y] == null)
+            if (replace || structures[x, y] == null)
             {
                 structure.SetCoords(x, y);
-                _structures[x, y] = structure;
+                structures[x, y] = structure;
             }
         }
         public void StartAuction(int x, int y, Player by)
         {
-            IMapStructure subject = _structures[x, y];
+            IMapStructure subject = structures[x, y];
             if (!subject.IsAuctionable())
                 throw new NotAuctionableException();
             else

@@ -13,7 +13,7 @@ namespace Lebeg134.Module.MapNS
     [Serializable]
     public class Auction : ITickable, IEqualityComparer<Auction>
     {
-        Land _subject;
+        Land subject;
         int currentPrice;
         int minBid;
         Player lastBidder;
@@ -22,7 +22,7 @@ namespace Lebeg134.Module.MapNS
 
         public Auction(Land subject, int minBid, int timePerRound, Player initiater = null)
         {
-            _subject = subject;
+            this.subject = subject;
             currentPrice = subject.GetStartingPrice();
             this.minBid = minBid;
             timeRemaining = timePerRound;
@@ -41,7 +41,7 @@ namespace Lebeg134.Module.MapNS
         {
             if (lastBidder != null)
             {
-                _subject.Acquire(lastBidder);
+                subject.Acquire(lastBidder);
                 throw new AuctionFinishedException();
             }
         }
@@ -56,11 +56,11 @@ namespace Lebeg134.Module.MapNS
         }
         public bool Equals(Auction x, Auction y)
         {
-            return x._subject.Equals(y._subject);
+            return x.subject.Equals(y.subject);
         }
         public int GetHashCode(Auction obj)
         {
-            return _subject.GetHashCode();
+            return subject.GetHashCode();
         }
     }
     [Serializable]

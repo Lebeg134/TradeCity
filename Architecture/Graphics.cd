@@ -19,7 +19,7 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="Lebeg134.Module.Graphics.IUpdateable">
-    <Position X="1" Y="0.5" Width="1.5" />
+    <Position X="2" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Module\Graphics\IUpdateable.cs</FileName>

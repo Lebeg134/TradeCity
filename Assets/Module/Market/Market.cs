@@ -12,7 +12,7 @@ namespace Lebeg134.Module.MarketNS
     [Serializable]
     public class Market : ITickable
     {
-        private Dictionary<System.Type, ItemLog> _registeredItems;
+        private Dictionary<System.Type, ItemLog> registeredItems;
         private Dictionary<System.Type, List<Listing>> listings;
 
         void GenerateListing(ISellable of, int num)

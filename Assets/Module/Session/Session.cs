@@ -19,7 +19,7 @@ namespace Lebeg134.Module.Session
     {
         public static readonly string Filename = "save.dat";
         //Market _market;
-        List<Player> _players;
+        List<Player> players;
         //Map _map; not implemented
         public Dictionary<Land, int> offers = new Dictionary<Land, int>();
         public bool Running = false;
@@ -38,7 +38,7 @@ namespace Lebeg134.Module.Session
         public Session()
         {
             Register();
-            _players = new List<Player>();
+            players = new List<Player>();
         }
         public void Start()
         {
@@ -75,26 +75,26 @@ namespace Lebeg134.Module.Session
             BinaryFormatter b = new BinaryFormatter();
             instance = (Session)b.Deserialize(stream);
             stream.Close();
-            CurrentPlayer = Instance._players[0]; // TODO need to change when multiple players
+            CurrentPlayer = Instance.players[0]; // TODO need to change when multiple players
             Clock.Instance.Clear();
             Clock.Instance.Register(Instance);
         }
         public void Login(Player player)
         {
-            if (!_players.Contains(player))
-                _players.Add(player);
+            if (!players.Contains(player))
+                players.Add(player);
             else
                 player.UnFreeze(new StandardPlayerStrategy(player));
         }
         public void Logout(Player player)
         {
-            if (_players.Contains(player))
+            if (players.Contains(player))
                 player.Freeze();
         }
         public void DeletePlayer(Player player)
         {
             player.GoBankrupt();
-            _players.Remove(player);
+            players.Remove(player);
             // TODO Remove ownerships?
         }
         public void Tick()
@@ -103,7 +103,7 @@ namespace Lebeg134.Module.Session
 
             //TODO add land offers randomly
 
-            foreach (Player player in _players)
+            foreach (Player player in players)
             {
                 player.Tick();
             }

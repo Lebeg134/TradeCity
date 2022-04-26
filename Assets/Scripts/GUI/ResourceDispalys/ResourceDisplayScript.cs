@@ -16,11 +16,11 @@ public class ResourceDisplayScript : MonoBehaviour
     {
         get
         {
-            return _watched;
+            return watched;
         }
         set
         {
-            _watched = value;
+            watched = value;
             OnWatchedChanged();
             
         }
@@ -30,7 +30,7 @@ public class ResourceDisplayScript : MonoBehaviour
         UpdateVisuals();
     }
 
-    Resource _watched;
+    Resource watched;
     public Text display;
     public Text resName;
     public Image icon;

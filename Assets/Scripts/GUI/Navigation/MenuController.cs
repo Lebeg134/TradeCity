@@ -18,21 +18,21 @@ public class MenuController : MonoBehaviour
     public Button mapButton;
     public Button marketButton;
 
-    public ActiveScreen active
+    public ActiveScreen Active
     {
         get
         {
-            return _active;
+            return active;
         }
         set
         {
-            _active = value;
-            onScreenChanged.Invoke(value);
+            active = value;
+            OnScreenChanged.Invoke(value);
         }
     }
-    ActiveScreen _active;
+    ActiveScreen active;
     public delegate void ActiveChanged(ActiveScreen newScreen);
-    public event ActiveChanged onScreenChanged;
+    public event ActiveChanged OnScreenChanged;
     // Start is called before the first frame update
     void Start()
     {

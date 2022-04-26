@@ -18,9 +18,9 @@ namespace Lebeg134.Module.Session
     public class Session : ITickable
     {
         public static readonly string Filename = "save.dat";
-        //Market _market;
+        //Market market;
         List<Player> players;
-        //Map _map; not implemented
+        //Map map; not implemented
         public Dictionary<Land, int> offers = new Dictionary<Land, int>();
         public bool Running = false;
         public static Session Instance

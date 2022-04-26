@@ -19,12 +19,12 @@ namespace Lebeg134.Module.Structures
         public static VisualUpdater landUpdater = new VisualUpdater();
         protected Player owner;
         protected int level = 1; //Leveling starts from 1
-        private int _x = -1, _y = -1;
+        private int x = -1, y = -1;
 
         public abstract Land GetNew();
         public bool Equals(Land A, Land B)
         {
-            return A.GetType() == B.GetType() && A._x == B._x && A._y == B._y && A.owner == B.owner;
+            return A.GetType() == B.GetType() && A.x == B.x && A.y == B.y && A.owner == B.owner;
         }
 
         public int GetStartingPrice()
@@ -64,8 +64,8 @@ namespace Lebeg134.Module.Structures
         }
         public void SetCoords(int x, int y)
         {
-            _x = x;
-            _y = y;
+            this.x = x;
+            this.y = y;
         }
         public virtual bool IsAuctionable()
         {
@@ -85,8 +85,8 @@ namespace Lebeg134.Module.Structures
             {
                 int hash = 113;
                 hash = hash * 53 + GetType().GetHashCode();
-                hash = hash * 53 + _x.GetHashCode();
-                hash = hash * 53 + _y.GetHashCode();
+                hash = hash * 53 + x.GetHashCode();
+                hash = hash * 53 + y.GetHashCode();
                 if (owner != null)
                     hash = hash * 53 + owner.GetHashCode();
                 return hash;

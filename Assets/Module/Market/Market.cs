@@ -23,11 +23,11 @@ namespace Lebeg134.Module.MarketNS
         {
             // TODO check if Listing already exists
             Listing post = new Listing(wantSellable, forSellable, by, amount);
-            List<Listing> listings = listings[forSellable.GetType()];
+            List<Listing> relevantListings = listings[forSellable.GetType()];
             int newAmount = post.LockResources(all);
             if (amount != newAmount)
                 post = new Listing(wantSellable, forSellable, by, newAmount);
-            listings.Add(post);
+            relevantListings.Add(post);
             return amount;
         }
         public double GetValueOf(ISellable sellable)
@@ -37,22 +37,22 @@ namespace Lebeg134.Module.MarketNS
         }
         public Listing GetMinSell(ISellable wantSellable, ISellable forSellable)
         {
-            List<Listing> listings = listings[wantSellable.GetType()].FindAll(x => x.ForSellable.Equals(forSellable));
-            if (listings.Count > 0)
+            List<Listing> relevantListings = listings[wantSellable.GetType()].FindAll(x => x.ForSellable.Equals(forSellable));
+            if (relevantListings.Count > 0)
             {
-                listings.Sort();
-                return listings.First();
+                relevantListings.Sort();
+                return relevantListings.First();
             }
             else
                 return null;
         }
         public Listing GetMaxBuy(ISellable wantSellable, ISellable forSellable)
         {
-            List<Listing> listings = listings[forSellable.GetType()].FindAll(x => x.WantSellable.Equals(wantSellable));
+            List<Listing> relevantListings = listings[forSellable.GetType()].FindAll(x => x.WantSellable.Equals(wantSellable));
             if (listings?.Count > 0)
             {
-                listings.Sort();
-                return listings.Last();
+                relevantListings.Sort();
+                return relevantListings.Last();
             }
             else
                 return null;

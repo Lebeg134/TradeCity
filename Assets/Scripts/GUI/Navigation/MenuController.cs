@@ -22,15 +22,16 @@ public class MenuController : MonoBehaviour
     {
         get
         {
-            return active;
+            return _active;
         }
         set
         {
-            active = value;
+            _active = value;
             OnScreenChanged.Invoke(value);
         }
     }
-    ActiveScreen active;
+    //this should actually only be used through Property
+    private ActiveScreen _active;
     public delegate void ActiveChanged(ActiveScreen newScreen);
     public event ActiveChanged OnScreenChanged;
     // Start is called before the first frame update
@@ -39,8 +40,8 @@ public class MenuController : MonoBehaviour
         cityButton.onClick.AddListener(() => SwitchTo(ActiveScreen.CITY));
         mapButton.onClick.AddListener(() => SwitchTo(ActiveScreen.MAP));
         marketButton.onClick.AddListener(() => SwitchTo(ActiveScreen.MARKET));
-        active = ActiveScreen.CITY;
-        SwitchTo(active);
+        Active = ActiveScreen.CITY;
+        SwitchTo(Active);
     }
 
     // Update is called once per frame
@@ -51,8 +52,8 @@ public class MenuController : MonoBehaviour
     // Switch to given screen
     void SwitchTo(ActiveScreen screen)
     {
-        if (active != screen) 
-            active = screen;
+        if (Active != screen) 
+            Active = screen;
         switch (screen)
         {
             case ActiveScreen.CITY:

@@ -11945,7 +11945,6 @@ GameObject:
   - component: {fileID: 2144028617}
   - component: {fileID: 2144028621}
   - component: {fileID: 2144028620}
-  - component: {fileID: 2144028622}
   m_Layer: 5
   m_Name: CIty
   m_TagString: Untagged
@@ -12072,18 +12071,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2144028615}
   m_CullTransparentMesh: 1
---- !u!114 &2144028622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144028615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855b074676a9fba45a0515e3662483b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6445212103216073158
 PrefabInstance:
   m_ObjectHideFlags: 0

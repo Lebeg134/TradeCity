@@ -10,7 +10,6 @@ namespace Lebeg134.Module.Structures
     [Serializable]
     public abstract class Structure : IEqualityComparer<Structure>, IGetRes
 	{
-        public static VisualUpdater updater = new VisualUpdater();
         protected bool state; //true = on, false = off
 		public virtual void On()
         {

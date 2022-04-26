@@ -10,8 +10,6 @@ namespace Lebeg134.Module.Resources
     [Serializable]
     public abstract class Resource: IGetRes
     {
-        public static VisualUpdater updater = new VisualUpdater();
-
         //Amount of resource stored
         protected int stock;
         public Resource(int amount = 0)

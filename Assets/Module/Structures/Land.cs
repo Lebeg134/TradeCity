@@ -16,7 +16,6 @@ namespace Lebeg134.Module.Structures
     public abstract class Land : Structure, IUpgradeable, IProducer, IOwnable, IMapStructure
     {
         public static int StartingPrice { get; set; }
-        public static VisualUpdater landUpdater = new VisualUpdater();
         protected Player owner;
         protected int level = 1; //Leveling starts from 1
         private int x = -1, y = -1;

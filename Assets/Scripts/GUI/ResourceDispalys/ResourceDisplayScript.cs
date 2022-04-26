@@ -16,11 +16,11 @@ public class ResourceDisplayScript : MonoBehaviour
     {
         get
         {
-            return watched;
+            return _watched;
         }
         set
         {
-            watched = value;
+            _watched = value;
             OnWatchedChanged();
             
         }
@@ -29,8 +29,7 @@ public class ResourceDisplayScript : MonoBehaviour
     {
         UpdateVisuals();
     }
-
-    Resource watched;
+    Resource _watched;
     public Text display;
     public Text resName;
     public Image icon;
@@ -53,8 +52,9 @@ public class ResourceDisplayScript : MonoBehaviour
 
     protected virtual void UpdateVisuals()
     {
-        resName!.text = Watched!.GetName();
-        display!.text = Watched!.Amount().ToString();
+        if (Watched == null) return;
+        resName.text = Watched.GetName();
+        display.text = Watched.Amount().ToString();
         LoadSprite();
     }
     protected void LoadSprite()

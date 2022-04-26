@@ -14,11 +14,10 @@ public class AmbientAudioScript : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        screenNavigator.GetComponent<MenuController>().OnScreenChanged += onScreenChange;
+        screenNavigator.GetComponent<MenuController>().OnScreenChanged += OnScreenChange;
     }
-    void onScreenChange(ActiveScreen activeScreen)
+    void OnScreenChange(ActiveScreen activeScreen)
     {
-
         switch (activeScreen)
         {
             case ActiveScreen.CITY:

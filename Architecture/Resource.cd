@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Lebeg134.Module.Resources.ContinousResource">
+    <Position X="1.75" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIBAAAAAAAAAAACAABACAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\Module\Resources\ContinousResource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lebeg134.Module.Resources.LimitResource">
+    <Position X="6" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEBAgAAAAAAAAAIAAA=</HashCode>
+      <FileName>Assets\Module\Resources\LimitResource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Module.Resources.Resource">
+    <Position X="32.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAIAAAQAAAAAAAAAQAEAAACgAEABAIAAAAAAAAAABAQ=</HashCode>
+      <FileName>Assets\Module\Resources\Resource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lebeg134.Module.Resources.NotEnoughResourceException" Collapsed="true">
+    <Position X="70" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Module\Resources\Resource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Module.Resources.StandardResource">
+    <Position X="37" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAIAAAAAAAgAAAAAAAAAAAAIAQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Module\Resources\StandardResource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lebeg134.Resources.Common.Iron">
+    <Position X="8.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\Common\Iron.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.Common.Steel">
+    <Position X="56.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\Common\Steel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.Common.Water">
+    <Position X="2.75" Y="8.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\Common\Water.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.Common.Wood">
+    <Position X="11.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\Common\Wood.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.ConstructionIndustry.Bricks">
+    <Position X="62" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\ConstructionIndustry\Bricks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.ConstructionIndustry.Concrete">
+    <Position X="26.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\ConstructionIndustry\Concrete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.ConstructionIndustry.Glass">
+    <Position X="14.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\ConstructionIndustry\Glass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.ConstructionIndustry.Insulation">
+    <Position X="65" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\ConstructionIndustry\Insulation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.ConstructionIndustry.Lumber">
+    <Position X="29.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\ConstructionIndustry\Lumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.ConstructionIndustry.ReinforcedConcrete">
+    <Position X="17.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\ConstructionIndustry\ReinforcedConcrete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.ConstructionIndustry.Sand">
+    <Position X="20.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\ConstructionIndustry\Sand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.ConstructionIndustry.Stone">
+    <Position X="41.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\ConstructionIndustry\Stone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.EnergySector.Coal">
+    <Position X="32.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\EnergySector\Coal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.EnergySector.Electricity" Collapsed="true">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\EnergySector\Electricity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.EnergySector.Steam" Collapsed="true">
+    <Position X="70" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Units\Resources\EnergySector\Steam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.OilIndustry.Chemicals">
+    <Position X="35.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\OilIndustry\Chemicals.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.OilIndustry.Fuel">
+    <Position X="38.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\OilIndustry\Fuel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.OilIndustry.Gas" Collapsed="true">
+    <Position X="68.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Units\Resources\OilIndustry\Gas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.OilIndustry.Ink">
+    <Position X="44.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\OilIndustry\Ink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.OilIndustry.Kerosine">
+    <Position X="23.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\OilIndustry\Kerosene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.OilIndustry.Oil">
+    <Position X="47.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\OilIndustry\Oil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.OilIndustry.Paint">
+    <Position X="50.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\OilIndustry\Paint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.OilIndustry.Plastic">
+    <Position X="53.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\OilIndustry\Plastic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.Workforce.Population" Collapsed="true">
+    <Position X="68.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Units\Resources\Workforce\Population.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.Workforce.Workforce">
+    <Position X="5.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\Workforce\Workforce.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Resources.Common.Money">
+    <Position X="59.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Units\Resources\Common\Money.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

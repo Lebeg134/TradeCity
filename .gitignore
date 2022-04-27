@@ -353,5 +353,12 @@ MigrationBackup/
 *.csvSettings
 *.sln.metaproj
 
+<<<<<<< HEAD
 # Custom git ignores
 GumLastChangeFilePath.txt
+=======
+# Temporary auto-generated Android Assets
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+/UpgradeLog.htm
+>>>>>>> unity-refactor

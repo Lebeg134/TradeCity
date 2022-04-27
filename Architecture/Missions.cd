@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Mission">
+    <Position X="4" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABIAkAAAAAgAAACAAAAIABQACBAEAAIAAAAAAAQAA=</HashCode>
+      <FileName>Assets\Module\Missions\Mission.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="goal" />
+      <Field Name="reward" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ResourceReward" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Module\Missions\ResourceReward.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ResourceGoalBase" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAQAABQAAAgAAFAAAAAAAIAAA=</HashCode>
+      <FileName>Assets\Module\Missions\ResourceGoalBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OwnableReward" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAQA=</HashCode>
+      <FileName>Assets\Module\Missions\OwnableReward.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BuildGoal" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Assets\Module\Missions\BuildGoal.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReachResourceGoal">
+    <Position X="5.75" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAQAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Module\Missions\ReachResourceGoal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollectResourceGoal">
+    <Position X="8.75" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAQAABAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Module\Missions\CollectResourceGoal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IAchievable">
+    <Position X="7.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Assets\Module\Missions\IAchievable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IRewardable">
+    <Position X="0.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Module\Missions\IRewardable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -36,8 +36,8 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BuildGoal" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.25" Y="5.25" Width="1.5" />
+  <Class Name="BuildGoal" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Assets\Module\Missions\BuildGoal.cs</FileName>

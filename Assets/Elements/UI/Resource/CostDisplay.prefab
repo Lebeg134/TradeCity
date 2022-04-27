@@ -266,7 +266,7 @@ MonoBehaviour:
   display: {fileID: 380447340838638488}
   resName: {fileID: 3118944157865276231}
   icon: {fileID: 7912199296195920211}
-  notEnoughColor: {r: 1, g: 0, b: 0, a: 0}
+  redIfNotEnough: 1
 --- !u!1 &8296679790581541016
 GameObject:
   m_ObjectHideFlags: 0

@@ -335,6 +335,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 313098539514872616}
     m_Modifications:
+    - target: {fileID: 3537512130792373198, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
+      propertyPath: redIfNotEnough
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3918729144897826669, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
       propertyPath: m_Name
       value: CostDisplay

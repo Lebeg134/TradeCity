@@ -23,13 +23,13 @@ namespace Lebeg134.Module.Structures
         public abstract List<Resource> GetUpkeep();
         public virtual void Build(Player by)
         {
-            if (CanBeBuilt(by))
+            if (CanBuild(by))
             {
                 by.SubRes(Cost());
                 by.GiveStructure(this);
             }
         }
-        public bool CanBeBuilt(Player by)
+        public bool CanBuild(Player by)
         {
             return by.CheckResources(Cost()) && by.CheckStructures(Criteria());
         }

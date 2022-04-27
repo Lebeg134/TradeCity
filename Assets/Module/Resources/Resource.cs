@@ -10,6 +10,7 @@ namespace Lebeg134.Module.Resources
     [Serializable]
     public abstract class Resource : IGetRes
     {
+        event Action<int> OnAmountChange;
         //Amount of resource stored
         protected int stock;
         public Resource(int amount = 0)
@@ -41,6 +42,7 @@ namespace Lebeg134.Module.Resources
                 throw new ArgumentException("Can not gain negative amount");
             }
             stock += amount;
+            OnAmountChange?.Invoke(amount);
         }
         public virtual void Spend(int amount)
         {
@@ -51,6 +53,7 @@ namespace Lebeg134.Module.Resources
             if (stock >= amount)
             {
                 stock -= amount;
+                OnAmountChange?.Invoke(-amount);
             }
             else throw new NotEnoughResourceException();
         }
@@ -60,7 +63,9 @@ namespace Lebeg134.Module.Resources
             {
                 throw new ArgumentException("Can not set negative amount");
             }
+            int prevStock = stock;
             stock = amount;
+            OnAmountChange?.Invoke(stock - prevStock);
         }
         public abstract Resource GetNewResource(int amount);
         protected Resource Add(Resource B)

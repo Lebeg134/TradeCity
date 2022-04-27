@@ -81,7 +81,7 @@ public class BuildingListItemScript : MonoBehaviour
 
     private void UpdateState()
     {
-        if (target.CanBeBuilt(Player.CurrentPlayer))
+        if (target.CanBuild(Player.CurrentPlayer))
         {
             btnState = ButtonState.BUILD;
             if (target is CommonBuilding)
@@ -101,7 +101,7 @@ public class BuildingListItemScript : MonoBehaviour
     }
     private void UpdateButton()
     {
-        buildButton.interactable = target.CanBeBuilt(Player.CurrentPlayer);
+        buildButton.interactable = target.CanBuild(Player.CurrentPlayer);
         if (btnState == ButtonState.MAXLEVEL)
         {
             buildButton.interactable = false;

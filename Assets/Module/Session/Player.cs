@@ -13,7 +13,10 @@ namespace Lebeg134.Module.Session
     [Serializable]
     public partial class Player : ITickable
     {
-        //Session session;
+        event Action<Resource> OnResourceChange;
+        event Action<IOwnable> OnAquire;
+        event Action<CommonBuilding> OnUpgrade;
+
         List<IOwnable> owned = new List<IOwnable>();
         Dictionary<Type, Resource> ownedResources = new Dictionary<Type, Resource>();
         Dictionary<Type, Resource> cntResourcesBuffer = new Dictionary<Type, Resource>();

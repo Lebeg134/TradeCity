@@ -1,6 +1,7 @@
 /**
  * @(#) Session.cs
  */
+using Lebeg134.Module.Missions;
 using Lebeg134.Module.Structures;
 using Lebeg134.Module.TimeManager;
 using System;

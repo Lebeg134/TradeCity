@@ -1,4 +1,5 @@
-﻿using Lebeg134.Module.Resources;
+﻿using Lebeg134.Module.Missions;
+using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
 using Lebeg134.Resources.Common;
 using Lebeg134.Resources.ConstructionIndustry;
@@ -26,6 +27,10 @@ namespace Lebeg134.Module.Session
             newSession.Login(thisPlayer);
             GenerateStartingOffers(newSession);
             newSession.missions.AddRange(GenerateMissions());
+            foreach (Mission m in newSession.missions)
+            {
+                m.Accept(Player.CurrentPlayer);
+            }
 
             return newSession;
         }

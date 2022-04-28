@@ -4,8 +4,10 @@ using System;
 
 namespace Lebeg134.Module.Missions
 {
+    [Serializable]
     public class Mission : ITickable
     {
+        //public event Action OnProgress;
         public event Action OnAchievement;
         public event Action OnClaim;
 

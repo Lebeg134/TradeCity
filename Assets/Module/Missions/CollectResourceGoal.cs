@@ -1,9 +1,11 @@
 ﻿using Lebeg134.Module.Resources;
 using Lebeg134.Module.Session;
 using Lebeg134.Module.Utilities;
+using System;
 
 namespace Lebeg134.Module.Missions
 {
+    [Serializable]
     public class CollectResourceGoal : ResourceGoalBase
     {
         int goal;
@@ -26,7 +28,7 @@ namespace Lebeg134.Module.Missions
         }
         protected override string GetText()
         {
-            return string.Format("Collect {0} {1}!", watched, goal);
+            return string.Format("Collect {0} {1}!", goal, watched.GetName());
         }
     }
 }

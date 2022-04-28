@@ -1,9 +1,11 @@
 ﻿using Lebeg134.Module.Resources;
 using Lebeg134.Module.Session;
 using Lebeg134.Module.Utilities;
+using System;
 
 namespace Lebeg134.Module.Missions
 {
+    [Serializable]
     public class ReachResourceGoal : ResourceGoalBase
     {
         private int goal;
@@ -22,7 +24,7 @@ namespace Lebeg134.Module.Missions
 
         protected override string GetText()
         {
-            return string.Format("Reach {0} {1}!", watched, goal);
+            return string.Format("Reach {0} {1}!", goal, watched.GetName());
         }
     }
 }

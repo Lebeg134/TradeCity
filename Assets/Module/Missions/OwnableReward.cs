@@ -1,8 +1,10 @@
 ﻿using Lebeg134.Module.Session;
 using Lebeg134.Module.Structures;
+using System;
 
 namespace Lebeg134.Module.Missions
 {
+    [Serializable]
     public class OwnableReward : IRewardable
     {
         IOwnable ownable;

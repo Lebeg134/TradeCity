@@ -3,6 +3,7 @@ using System;
 
 namespace Lebeg134.Module.Missions
 {
+    [Serializable]
     public class BuildGoal : IAchievable
     {
         public string Text => throw new NotImplementedException();

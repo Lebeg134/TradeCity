@@ -1,8 +1,10 @@
 ﻿using Lebeg134.Module.Resources;
 using Lebeg134.Module.Session;
+using System;
 
 namespace Lebeg134.Module.Missions
 {
+    [Serializable]
     public class ResourceReward : IRewardable
     {
         Resource resource;

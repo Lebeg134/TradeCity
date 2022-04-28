@@ -4,6 +4,7 @@ using System;
 
 namespace Lebeg134.Module.Missions
 {
+    [Serializable]
     public abstract class ResourceGoalBase : IAchievable
     {
         public event Action OnAchieve;

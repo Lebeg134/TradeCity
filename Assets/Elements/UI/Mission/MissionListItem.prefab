@@ -195,7 +195,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: 50, y: 30}
+  m_SizeDelta: {x: 55, y: 40}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &713257163328231826
 CanvasRenderer:
@@ -256,7 +256,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.3254902, g: 0.654902, b: 0.54509807, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -383,6 +383,22 @@ PrefabInstance:
     - target: {fileID: 250037697227642665, guid: db6756de556b683428883b25b043ffd0, type: 3}
       propertyPath: m_Value
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 250037697227642665, guid: db6756de556b683428883b25b043ffd0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3364751427521184615, guid: db6756de556b683428883b25b043ffd0, type: 3}
+      propertyPath: m_Color.b
+      value: 0.54509807
+      objectReference: {fileID: 0}
+    - target: {fileID: 3364751427521184615, guid: db6756de556b683428883b25b043ffd0, type: 3}
+      propertyPath: m_Color.g
+      value: 0.654902
+      objectReference: {fileID: 0}
+    - target: {fileID: 3364751427521184615, guid: db6756de556b683428883b25b043ffd0, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
       objectReference: {fileID: 0}
     - target: {fileID: 4229330682298191370, guid: db6756de556b683428883b25b043ffd0, type: 3}
       propertyPath: m_AnchorMax.x

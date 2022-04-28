@@ -21,7 +21,7 @@ namespace Lebeg134.Module.Missions
 
         public string Text { get { return goal.Text; } }
         public bool IsAccepted { get { return isAccepted; } }
-        public bool IsAchieved { get { return isAchieved; } }
+        public bool IsAchieved { get { return goal.IsAchieved(); } }
         public bool IsClaimed { get { return isClaimed; } }
 
         public Mission(IAchievable goal, IRewardable reward, Player owner = null)
@@ -45,10 +45,9 @@ namespace Lebeg134.Module.Missions
             if (isAchieved)
             {
                 reward.Reward(owner);
-                OnClaim.Invoke();
+                isClaimed = true;
+                OnClaim?.Invoke();
             }
-            else
-                throw new MissionNotAchievedException();
         }
         public void Accept(Player by)
         {
@@ -68,7 +67,7 @@ namespace Lebeg134.Module.Missions
             if (isAccepted && !isAchieved && goal.IsAchieved())
             {
                 isAchieved = true;
-                OnAchievement.Invoke();
+                OnAchievement?.Invoke();
             }
         }
 

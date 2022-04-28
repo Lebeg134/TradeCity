@@ -30,9 +30,7 @@ public class ResourceDisplayScript : MonoBehaviour
     public Text display;
     public Text resName;
     public Image icon;
-    Player player;
 
-    int num = 0;
     // Start is called before the first frame update
     protected virtual void Start()
     {

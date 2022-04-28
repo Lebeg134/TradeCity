@@ -42,6 +42,8 @@ namespace Lebeg134.Module.Session
         }
         public static List<Resource> GetResourceList()
         {
+            Workforce workforce = new Workforce(0);
+            workforce.IncLimit(10000);
             List<Resource> template = new List<Resource>
             {
                 new Money(0),
@@ -49,9 +51,9 @@ namespace Lebeg134.Module.Session
                 new Bricks(0), new Concrete(0), new Glass(0), new Insulation(0), new Lumber(0), new ReinforcedConcrete(0), new Sand(0), new Stone(0),
                 new Electricity(0), new Coal(0),
                 new Chemicals(0), new Fuel(0), new Ink(0), new Kerosine(0), new Oil(0), new Paint(0), new Plastic(0),
-                new Workforce(0)
-
+                workforce
             };
+            
             return template;
         }
         static void GenerateStartingOffers(Session session)
@@ -84,8 +86,10 @@ namespace Lebeg134.Module.Session
         {
             return new List<Mission>
             {
-                new Mission(new ReachResourceGoal(new Money(100000)), new ResourceReward(new Workforce(10000))),
-                new Mission(new CollectResourceGoal(new Steel(1000)), new ResourceReward(new Money(10000)))
+                new Mission(new ReachResourceGoal(new Money(100000)), new ResourceReward(new Workforce(1000))),
+                new Mission(new CollectResourceGoal(new Steel(1000)), new ResourceReward(new Money(10000))),
+                new Mission(new CollectResourceGoal(new Coal(100)), new ResourceReward(new Bricks(250)))
+
             };
         } 
         internal static List<Building> GetAllBuildings()

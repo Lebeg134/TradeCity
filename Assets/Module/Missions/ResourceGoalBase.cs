@@ -24,16 +24,17 @@ namespace Lebeg134.Module.Missions
         }
         protected void InvokeOnAchieve()
         {
-            OnAchieve.Invoke();
+            OnAchieve?.Invoke();
         }
         public abstract float CheckStatus();
 
         public virtual bool IsAchieved()
         {
+            if (achieved) return true;
             if (CheckStatus() >= 1)
             {
                 achieved = true;
-                OnAchieve.Invoke();
+                OnAchieve?.Invoke();
                 return true;
             }
             return achieved;

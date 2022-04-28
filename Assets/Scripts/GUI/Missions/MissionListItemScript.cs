@@ -40,7 +40,7 @@ public class MissionListItemScript : MonoBehaviour
         if (watched.IsClaimed)
         {
             claimButton.interactable = false;
-            claimButton.GetComponent<Text>().text = "Claimed";
+            claimButton.GetComponentInChildren<Text>().text = "Claimed";
         }
         else
         {

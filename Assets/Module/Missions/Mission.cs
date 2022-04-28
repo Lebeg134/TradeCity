@@ -35,7 +35,6 @@ namespace Lebeg134.Module.Missions
                 Accept(owner);
             }
         }
-
         public float CheckStatus()
         {
             return goal.CheckStatus();
@@ -56,6 +55,7 @@ namespace Lebeg134.Module.Missions
             owner = by;
             goal.Accept(by);
             isAccepted = true;
+            Register();
         }
 
         public void Register()

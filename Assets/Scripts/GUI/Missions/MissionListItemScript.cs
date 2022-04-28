@@ -50,6 +50,7 @@ public class MissionListItemScript : MonoBehaviour
 
     void UpdateVisuals()
     {
+        if (watched == null) return;
         if (watched.IsAchieved)
         {
             progressBar.value = 1;

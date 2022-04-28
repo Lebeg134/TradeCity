@@ -26,10 +26,10 @@ namespace Lebeg134.Module.Session
         public Player()
         {
             playerStrategy = new StandardPlayerStrategy(this);
-            foreach (Resource res in ownedResources.Values)
-            {
-                res.OnAmountChange += (amount) => OnResourceChange.Invoke(res.GetNewResource(amount));
-            }
+            //foreach (Resource res in ownedResources.Values)
+            //{
+            //    res.OnAmountChange += (amount) => OnResourceChange.Invoke(res.GetNewResource(amount));
+            //}
         }
 
 
@@ -126,6 +126,7 @@ namespace Lebeg134.Module.Session
         public void SubRes(Resource resource)
         {
             ownedResources[resource.GetType()] -= resource;
+            OnResourceChange?.Invoke(resource.GetNewResource(-resource.Amount()));
         }
         public void SubRes(List<Resource> resources)
         {
@@ -144,6 +145,7 @@ namespace Lebeg134.Module.Session
         }
         public void GiveRes(Resource resource)
         {
+            OnResourceChange?.Invoke(resource);
             if (resource is ContinousResource)
             {
                 cntResourcesBuffer[resource.GetType()] += resource;

@@ -710,8 +710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b827e25ac26214f882fa4df4aeb78d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  play: {fileID: 21300000, guid: 732ce047e48b5fb45a92457a4c09a64c, type: 3}
-  pause: {fileID: 21300000, guid: 5d8a0e600ca45c94e95a57a12ebc43d3, type: 3}
+  play: {fileID: 21300000, guid: 7314def9bd526d645aa07aa23f64ac4a, type: 3}
+  pause: {fileID: 21300000, guid: 2666130f7ed8a634d8cbe2e7003b543a, type: 3}
   playColor: {r: 0, g: 0.7176471, b: 0.32156864, a: 1}
   pauseColor: {r: 0.6415094, g: 0, b: 0, a: 1}
   icon: {fileID: 461846027}
@@ -1089,7 +1089,7 @@ PrefabInstance:
     - target: {fileID: 7226739018477293941, guid: 31003952bc6a50e479ef44f8b12fc743, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5f376acd1b9f1d84aa08977f8723716b, type: 3}
+      objectReference: {fileID: 21300000, guid: d8cb7b0f5fd9a684d8eb00623bd5b4f5, type: 3}
     - target: {fileID: 9029556020161820824, guid: 31003952bc6a50e479ef44f8b12fc743, type: 3}
       propertyPath: m_Name
       value: ConstructionBranchButton
@@ -2459,7 +2459,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0ffaef6c42e73134f82c6ac01989f943, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df46246c37227b643847b21e5dabb456, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2636,14 +2636,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.34509805, g: 0.34509805, b: 0.34509805, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 732ce047e48b5fb45a92457a4c09a64c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08380db574cf877438fcbb6fb8c163f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4927,7 +4927,7 @@ PrefabInstance:
     - target: {fileID: 7226739018477293941, guid: 31003952bc6a50e479ef44f8b12fc743, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4aa027470078c644dbba4c7e46066f37, type: 3}
+      objectReference: {fileID: 21300000, guid: 7cca08bbae22bb84e886f44daec8b386, type: 3}
     - target: {fileID: 9029556020161820824, guid: 31003952bc6a50e479ef44f8b12fc743, type: 3}
       propertyPath: m_Name
       value: EnergyBranchButton
@@ -5637,7 +5637,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0c962dffe10e1cc46a8a3bd419772432, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c42a7587a178ffe4295e332c7c207982, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7636,7 +7636,7 @@ PrefabInstance:
     - target: {fileID: 7226739018477293941, guid: 31003952bc6a50e479ef44f8b12fc743, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: fdd17d2387015e84fbb87baaa9827a63, type: 3}
+      objectReference: {fileID: 21300000, guid: 66588dec79ab0c64998ee2814f9e13b7, type: 3}
     - target: {fileID: 9029556020161820824, guid: 31003952bc6a50e479ef44f8b12fc743, type: 3}
       propertyPath: m_Name
       value: OilBranchButton
@@ -9437,7 +9437,7 @@ PrefabInstance:
     - target: {fileID: 7226739018477293941, guid: 31003952bc6a50e479ef44f8b12fc743, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d4185d0f08677034c89b87df4c3dd636, type: 3}
+      objectReference: {fileID: 21300000, guid: d45c40db20abc4847a182ff9782a877e, type: 3}
     - target: {fileID: 9029556020161820824, guid: 31003952bc6a50e479ef44f8b12fc743, type: 3}
       propertyPath: m_Name
       value: WorkforceBranchButton
@@ -12053,7 +12053,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3c534b65891d7c24187ce88e709e2950, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e835f8f11d6ef594ea88f6194b72aec4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12194,6 +12194,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7226739018477293941, guid: 31003952bc6a50e479ef44f8b12fc743, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f91ef2251cb0c644cb791056fa2608b9, type: 3}
     - target: {fileID: 9029556020161820824, guid: 31003952bc6a50e479ef44f8b12fc743, type: 3}
       propertyPath: m_Name
       value: CommonBranchButton

@@ -2,28 +2,31 @@
 using Lebeg134.Module.Session;
 using Lebeg134.Module.Utilities;
 
-public class CollectResourceGoal : ResourceGoalBase
+namespace Lebeg134.Module.Missions
 {
-    int goal;
-    int collected = 0;
-    public CollectResourceGoal(Resource resource, Player player = null) : base(resource, player)
+    public class CollectResourceGoal : ResourceGoalBase
     {
-        goal = resource.Amount();
-    }
-    public override float CheckStatus()
-    {
-        return LebegUtil.Clamp((float)collected / goal, 0, 1);
-    }
-    public override void OnResourceChange(Resource resource)
-    {
-        if (resource.GetType() == watched.GetType() && resource.Amount() > 0)
+        int goal;
+        int collected = 0;
+        public CollectResourceGoal(Resource resource, Player player = null) : base(resource, player)
         {
-            collected += resource.Amount();
-            IsAchieved();
+            goal = resource.Amount();
         }
-    }
-    protected override string GetText()
-    {
-        return string.Format("Collect {0} {1}!", watched, goal);
+        public override float CheckStatus()
+        {
+            return LebegUtil.Clamp((float)collected / goal, 0, 1);
+        }
+        public override void OnResourceChange(Resource resource)
+        {
+            if (resource.GetType() == watched.GetType() && resource.Amount() > 0)
+            {
+                collected += resource.Amount();
+                IsAchieved();
+            }
+        }
+        protected override string GetText()
+        {
+            return string.Format("Collect {0} {1}!", watched, goal);
+        }
     }
 }

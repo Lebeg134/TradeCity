@@ -1,29 +1,32 @@
 ﻿using Lebeg134.Module.Session;
 using System;
 
-public class BuildGoal : IAchievable
+namespace Lebeg134.Module.Missions
 {
-    public string Text => throw new NotImplementedException();
-
-    public event Action OnAchieve;
-
-    public void Accept(Player by)
+    public class BuildGoal : IAchievable
     {
-        throw new NotImplementedException();
-    }
+        public string Text => throw new NotImplementedException();
 
-    public float CheckStatus()
-    {
-        throw new NotImplementedException();
-    }
+        public event Action OnAchieve;
 
-    public bool IsAchieved()
-    {
-        throw new NotImplementedException();
-    }
+        public void Accept(Player by)
+        {
+            throw new NotImplementedException();
+        }
 
-    public void RegisterToEvents()
-    {
-        throw new NotImplementedException();
+        public float CheckStatus()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsAchieved()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RegisterToEvents()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

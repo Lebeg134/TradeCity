@@ -2,49 +2,52 @@
 using Lebeg134.Module.Session;
 using System;
 
-public abstract class ResourceGoalBase : IAchievable
+namespace Lebeg134.Module.Missions
 {
-    public event Action OnAchieve;
-    protected Resource watched;
-    protected Player player;
-    private bool achieved = false;
-
-    public string Text => GetText();
-
-    protected abstract string GetText();
-
-    public ResourceGoalBase(Resource watched, Player player = null)
+    public abstract class ResourceGoalBase : IAchievable
     {
-        this.watched = watched;
-        if (player != null)
-            Accept(player);
-    }
-    protected void InvokeOnAchieve()
-    {
-        OnAchieve.Invoke();
-    }
-    public abstract float CheckStatus();
+        public event Action OnAchieve;
+        protected Resource watched;
+        protected Player player;
+        private bool achieved = false;
 
-    public virtual bool IsAchieved()
-    {
-        if (CheckStatus() >= 1)
+        public string Text => GetText();
+
+        protected abstract string GetText();
+
+        public ResourceGoalBase(Resource watched, Player player = null)
         {
-            achieved = true;
-            OnAchieve.Invoke();
-            return true;
+            this.watched = watched;
+            if (player != null)
+                Accept(player);
         }
-        return achieved;
-    }
-    public abstract void OnResourceChange(Resource resource);
+        protected void InvokeOnAchieve()
+        {
+            OnAchieve.Invoke();
+        }
+        public abstract float CheckStatus();
 
-    public void RegisterToEvents()
-    {
-        player.OnResourceChange += OnResourceChange;
-    }
+        public virtual bool IsAchieved()
+        {
+            if (CheckStatus() >= 1)
+            {
+                achieved = true;
+                OnAchieve.Invoke();
+                return true;
+            }
+            return achieved;
+        }
+        public abstract void OnResourceChange(Resource resource);
 
-    public void Accept(Player by)
-    {
-        player = by;
-        RegisterToEvents();
+        public void RegisterToEvents()
+        {
+            player.OnResourceChange += OnResourceChange;
+        }
+
+        public void Accept(Player by)
+        {
+            player = by;
+            RegisterToEvents();
+        }
     }
 }

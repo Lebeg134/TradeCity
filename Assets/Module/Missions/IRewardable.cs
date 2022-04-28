@@ -1,7 +1,10 @@
 ﻿using Lebeg134.Module.Session;
 
-public interface IRewardable
+namespace Lebeg134.Module.Missions
 {
-    void Reward(Player player);
-    object GetReward();
+    public interface IRewardable
+    {
+        void Reward(Player player);
+        object GetReward();
+    }
 }

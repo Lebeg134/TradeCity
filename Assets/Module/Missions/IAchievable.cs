@@ -1,14 +1,17 @@
 ﻿using Lebeg134.Module.Session;
 using System;
 
-public interface IAchievable
+namespace Lebeg134.Module.Missions
 {
-    string Text { get; }
+    public interface IAchievable
+    {
+        string Text { get; }
 
-    event Action OnAchieve;
+        event Action OnAchieve;
 
-    float CheckStatus();
-    bool IsAchieved();
-    void RegisterToEvents();
-    void Accept(Player by);
+        float CheckStatus();
+        bool IsAchieved();
+        void RegisterToEvents();
+        void Accept(Player by);
+    }
 }

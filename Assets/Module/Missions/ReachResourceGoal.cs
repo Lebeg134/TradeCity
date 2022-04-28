@@ -5,10 +5,9 @@ using Lebeg134.Module.Utilities;
 public class ReachResourceGoal : ResourceGoalBase
 {
     private int goal;
-    public ReachResourceGoal(Resource resource, Player player, int goal) : base(resource, player)
+    public ReachResourceGoal(Resource resource, Player player = null) : base(resource, player)
     {
-        this.player = player;
-        this.goal = goal;
+        goal = resource.Amount();
     }
     public override float CheckStatus()
     {
@@ -17,5 +16,10 @@ public class ReachResourceGoal : ResourceGoalBase
     public override void OnResourceChange(Resource resource)
     {
         IsAchieved();
+    }
+
+    protected override string GetText()
+    {
+        return string.Format("Reach {0} {1}!", watched, goal);
     }
 }

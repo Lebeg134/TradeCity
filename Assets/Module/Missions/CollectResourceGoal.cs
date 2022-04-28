@@ -6,9 +6,9 @@ public class CollectResourceGoal : ResourceGoalBase
 {
     int goal;
     int collected = 0;
-    public CollectResourceGoal(Resource resource, Player player, int goal) : base(resource, player)
+    public CollectResourceGoal(Resource resource, Player player = null) : base(resource, player)
     {
-        this.goal = goal;
+        goal = resource.Amount();
     }
     public override float CheckStatus()
     {
@@ -21,5 +21,9 @@ public class CollectResourceGoal : ResourceGoalBase
             collected += resource.Amount();
             IsAchieved();
         }
+    }
+    protected override string GetText()
+    {
+        return string.Format("Collect {0} {1}!", watched, goal);
     }
 }

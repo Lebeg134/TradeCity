@@ -10,7 +10,7 @@ namespace Lebeg134.Module.Resources
     [Serializable]
     public abstract class Resource : IGetRes
     {
-        event Action<int> OnAmountChange;
+        public event Action<int> OnAmountChange;
         //Amount of resource stored
         protected int stock;
         public Resource(int amount = 0)

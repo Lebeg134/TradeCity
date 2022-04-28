@@ -8,11 +8,16 @@ public abstract class ResourceGoalBase : IAchievable
     protected Resource watched;
     protected Player player;
     private bool achieved = false;
-    public ResourceGoalBase(Resource watched, Player player)
+
+    public string Text => GetText();
+
+    protected abstract string GetText();
+
+    public ResourceGoalBase(Resource watched, Player player = null)
     {
         this.watched = watched;
-        this.player = player;
-        //TODO Register OnResourceChange
+        if (player != null)
+            Accept(player);
     }
     protected void InvokeOnAchieve()
     {
@@ -31,4 +36,15 @@ public abstract class ResourceGoalBase : IAchievable
         return achieved;
     }
     public abstract void OnResourceChange(Resource resource);
+
+    public void RegisterToEvents()
+    {
+        player.OnResourceChange += OnResourceChange;
+    }
+
+    public void Accept(Player by)
+    {
+        player = by;
+        RegisterToEvents();
+    }
 }

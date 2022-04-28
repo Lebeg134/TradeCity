@@ -15,10 +15,9 @@ namespace Lebeg134.Module.Session
     public class Session : ITickable
     {
         public static readonly string Filename = "save.dat";
-        //Market market;
         List<Player> players;
-        //Map map; not implemented
         public Dictionary<Land, int> offers = new Dictionary<Land, int>();
+        public List<Mission> missions = new List<Mission>();
         public bool Running = false;
         public static Session Instance
         {
@@ -43,17 +42,6 @@ namespace Lebeg134.Module.Session
             Clock.Instance.Start();
             Running = true;
         }
-        ///// <summary>
-        ///// Loads saved instance
-        ///// </summary>
-        //public Session load()
-        //{
-        //    return null;
-        //}
-        //public void save(string path)
-        //{
-        //    //Memento?	
-        //}
 
         public static void Save()
         {

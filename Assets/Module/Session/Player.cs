@@ -13,9 +13,9 @@ namespace Lebeg134.Module.Session
     [Serializable]
     public partial class Player : ITickable
     {
-        event Action<Resource> OnResourceChange;
-        event Action<IOwnable> OnAquire;
-        event Action<CommonBuilding> OnUpgrade;
+        public event Action<Resource> OnResourceChange;
+        //public event Action<IOwnable> OnAquire;
+        //public event Action<CommonBuilding> OnUpgrade;
 
         List<IOwnable> owned = new List<IOwnable>();
         Dictionary<Type, Resource> ownedResources = new Dictionary<Type, Resource>();
@@ -26,7 +26,13 @@ namespace Lebeg134.Module.Session
         public Player()
         {
             playerStrategy = new StandardPlayerStrategy(this);
+            foreach (Resource res in ownedResources.Values)
+            {
+                res.OnAmountChange += (amount) => OnResourceChange.Invoke(res.GetNewResource(amount));
+            }
         }
+
+
         internal IEnumerable<Resource> GetAllRes()
         {
             return ownedResources.Values;

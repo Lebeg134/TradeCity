@@ -25,6 +25,7 @@ namespace Lebeg134.Module.Session
             FillPlayerWithStandard(thisPlayer);
             newSession.Login(thisPlayer);
             GenerateStartingOffers(newSession);
+            newSession.missions.AddRange(GenerateMissions());
 
             return newSession;
         }
@@ -74,6 +75,14 @@ namespace Lebeg134.Module.Session
                 new OilRig()
             };
         }
+        public static List<Mission> GenerateMissions()
+        {
+            return new List<Mission>
+            {
+                new Mission(new ReachResourceGoal(new Money(100000)), new ResourceReward(new Workforce(10000))),
+                new Mission(new CollectResourceGoal(new Steel(1000)), new ResourceReward(new Money(10000)))
+            };
+        } 
         internal static List<Building> GetAllBuildings()
         {
             if (allBuildings == null)

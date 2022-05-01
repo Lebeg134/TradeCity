@@ -14,7 +14,6 @@ namespace Lebeg134.Scripts.GUI.ResourceDispalys
                 icon.color = Player.CurrentPlayer.CheckResource(Watched) ?
                 Color.white : Color.red;
             }
-
         }
     }
 }

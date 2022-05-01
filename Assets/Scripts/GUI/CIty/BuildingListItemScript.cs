@@ -81,43 +81,38 @@ public class BuildingListItemScript : MonoBehaviour
 
     private void UpdateState()
     {
-        if (target.CanBuild(Player.CurrentPlayer))
+        btnState = ButtonState.BUILD;
+        if (target is CommonBuilding)
         {
-            btnState = ButtonState.BUILD;
-            if (target is CommonBuilding)
+            CommonBuilding focus = (CommonBuilding)target;
+            if (focus.IsMaxLevel())
             {
-                CommonBuilding focus = (CommonBuilding)target;
-                if (focus.IsMaxLevel())
-                {
-                    btnState = ButtonState.MAXLEVEL;
-                }
-                else if (focus.GetLevel() > 0)
-                {
-                    btnState = ButtonState.UPGRADE;
-                }
+                btnState = ButtonState.MAXLEVEL;
+            }
+            else if (focus.GetLevel() > 0)
+            {
+                btnState = ButtonState.UPGRADE;
             }
         }
-
     }
     private void UpdateButton()
     {
-        buildButton.interactable = target.CanBuild(Player.CurrentPlayer);
-        if (btnState == ButtonState.MAXLEVEL)
-        {
-            buildButton.interactable = false;
-        }
         switch (btnState)
         {
             case ButtonState.BUILD:
                 buildButton.GetComponentInChildren<Text>().text = "Build";
+                buildButton.interactable = target.CanBuild(Player.CurrentPlayer);
                 break;
             case ButtonState.UPGRADE:
                 buildButton.GetComponentInChildren<Text>().text = "Upgrade";
+                buildButton.interactable = target.CanBuild(Player.CurrentPlayer);
                 break;
             case ButtonState.MAXLEVEL:
                 buildButton.GetComponentInChildren<Text>().text = "Maxed";
+                buildButton.interactable = false;
                 break;
         }
+        buildButton.Select();
     }
     private void UpdateCostDisplay()
     {

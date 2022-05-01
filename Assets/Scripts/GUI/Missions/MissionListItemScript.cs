@@ -13,11 +13,12 @@ public class MissionListItemScript : MonoBehaviour
     Mission watched;
     private void Awake()
     {
-        UpdateVisuals();
+        
     }
     public void Update()
     {
-        UpdateVisuals();
+        if (watched != null)
+            UpdateVisuals();
     }
     public void SetWatched(Mission mission)
     {
@@ -46,11 +47,11 @@ public class MissionListItemScript : MonoBehaviour
         {
             claimButton.interactable = watched.IsAchieved;
         }
+        claimButton.Select();
     }
 
     void UpdateVisuals()
     {
-        if (watched == null) return;
         if (watched.IsAchieved)
         {
             progressBar.value = 1;

@@ -107,7 +107,7 @@ namespace Lebeg134.Module.Session
             {
                 if (HasResource(resource))
                 {
-                    int dif = ownedResources[resource.GetType()].Amount() - resource.Amount();
+                    int dif = ownedResources[resource.GetType()].GetStock() - resource.GetStock();
                     if (dif < 0)
                     {
                         missingResources.Add(resource.GetNewResource(dif));
@@ -116,7 +116,7 @@ namespace Lebeg134.Module.Session
                 }
                 else
                 {
-                    missingResources.Add(resource.GetNewResource(resource.Amount()));
+                    missingResources.Add(resource.GetNewResource(resource.GetStock()));
                 }
             }
             if (!valid && throwException)
@@ -126,7 +126,7 @@ namespace Lebeg134.Module.Session
         public void SubRes(Resource resource)
         {
             ownedResources[resource.GetType()] -= resource;
-            OnResourceChange?.Invoke(resource.GetNewResource(-resource.Amount()));
+            OnResourceChange?.Invoke(resource.GetNewResource(-resource.GetStock()));
         }
         public void SubRes(List<Resource> resources)
         {
@@ -137,7 +137,7 @@ namespace Lebeg134.Module.Session
         }
         public int GetRes(Resource resource)
         {
-            return ownedResources[resource.GetType()].Amount();
+            return ownedResources[resource.GetType()].GetStock();
         }
         public Resource GetResRef(Resource resource)
         {

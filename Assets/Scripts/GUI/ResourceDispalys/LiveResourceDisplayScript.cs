@@ -20,14 +20,14 @@ namespace Lebeg134.Scripts.GUI.ResourceDispalys
         protected override void Start()
         {
             base.Start();
-            prevAmount = Watched.Amount();
+            prevAmount = Watched.GetStock();
             UpdateIndicator(state);
         }
         protected override void Update()
         {
             if (Watched == null) return;
 
-            int amount = Watched.Amount();
+            int amount = Watched.GetStock();
             display.text = amount.ToString();
             if (prevAmount == amount && (indicatorTime += Time.deltaTime) >= indicatorLimit)
             {

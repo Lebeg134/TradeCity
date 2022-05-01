@@ -21,8 +21,8 @@ namespace Lebeg134.Module.Session
             {
                 foreach (Resource cntRes in player.cntResourcesBuffer.Values)
                 {
-                    player.ownedResources[cntRes.GetType()].SetAmount(cntRes.Amount());
-                    cntRes.SetAmount(0);
+                    player.ownedResources[cntRes.GetType()].SetStock(cntRes.GetStock());
+                    cntRes.SetStock(0);
                 }
                 foreach (IProducer producer in player.owned)
                 {

@@ -66,7 +66,7 @@ namespace Lebeg134.Module.Market
         }
         public int GetValue()
         {
-            return (int)Math.Floor(sell.Amount() * sell.GetValue());
+            return (int)Math.Floor(sell.GetStock() * sell.GetValue());
         }
         public void Register()
         {

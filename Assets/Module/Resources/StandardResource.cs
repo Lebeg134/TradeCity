@@ -9,9 +9,7 @@ namespace Lebeg134.Module.Resources
     [Serializable]
     public abstract class StandardResource : Resource, ISellable
     {
-        public StandardResource(int amount) : base(amount)
-        {
-        }
+        public StandardResource(int amount) : base(amount) { }
         public abstract double GetValue();
         public void ReportListing(Listing listing)
         {
@@ -23,7 +21,8 @@ namespace Lebeg134.Module.Resources
         }
         public bool Equals(ISellable x, ISellable y)
         {
-            throw new System.NotImplementedException();
+            // POT
+            return (x.GetType() == y.GetType());
         }
 
         public int GetHashCode(ISellable obj)

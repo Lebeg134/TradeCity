@@ -10,6 +10,6 @@ namespace Lebeg134.Module.MarketNS
         double GetValue();
         void SimulatePrice();
         Resource GetNewResource(int amount);
-        int Amount();
+        int GetStock();
     }
 }

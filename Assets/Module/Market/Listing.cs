@@ -78,7 +78,7 @@ namespace Lebeg134.Module.MarketNS
         }
         public double Value()
         {
-            return WantSellable.Amount() / ForSellable.Amount();
+            return WantSellable.GetStock() / ForSellable.GetStock();
         }
         public void Tick()
         {

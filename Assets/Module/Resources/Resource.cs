@@ -20,22 +20,22 @@ namespace Lebeg134.Module.Resources
             else
                 stock = 0;
         }
+        public int GetStock()
+        {
+            return stock;
+        }
+        public abstract string GetName();
         virtual public string GetResourcepath()
         {
             //Default icon is money stack
-            return "Resource/money-stack";
+            return "Resource/unknown";
         }
         protected string BasePath()
         {
             return "Resource/";
         }
-        public int Amount()
-        {
-            return stock;
-        }
-        public abstract String GetName();
 
-        public virtual void Gain(int amount)
+        public virtual Resource Gain(int amount)
         {
             if (amount < 0)
             {
@@ -43,8 +43,9 @@ namespace Lebeg134.Module.Resources
             }
             stock += amount;
             OnAmountChange?.Invoke(amount);
+            return this;
         }
-        public virtual void Spend(int amount)
+        public virtual Resource Spend(int amount)
         {
             if (amount < 0)
             {
@@ -56,8 +57,9 @@ namespace Lebeg134.Module.Resources
                 OnAmountChange?.Invoke(-amount);
             }
             else throw new NotEnoughResourceException();
+            return this;
         }
-        public virtual void SetAmount(int amount)
+        public virtual void SetStock(int amount)
         {
             if (amount < 0)
             {
@@ -68,26 +70,15 @@ namespace Lebeg134.Module.Resources
             OnAmountChange?.Invoke(stock - prevStock);
         }
         public abstract Resource GetNewResource(int amount);
-        protected Resource Add(Resource B)
-        {
-            Gain(B.stock);
-            return this;
-        }
-        protected Resource Sub(Resource B)
-        {
-            Spend(B.stock);
-            return this;
-        }
-
-
-
         public static Resource operator +(Resource A, Resource B)
         {
-            return A.Add(B);
+            if (A.GetType() != B.GetType()) throw new ArgumentException("Not same Type!");
+            return A.Gain(B.stock);
         }
         public static Resource operator -(Resource A, Resource B)
         {
-            return A.Sub(B);
+            if (A.GetType() != B.GetType()) throw new ArgumentException("Not same Type!");
+            return A.Spend(B.stock);
         }
     }
 

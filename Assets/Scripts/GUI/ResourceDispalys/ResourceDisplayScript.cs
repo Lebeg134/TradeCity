@@ -49,7 +49,7 @@ public class ResourceDisplayScript : MonoBehaviour
     {
         if (Watched == null) return;
         resName.text = Watched.GetName();
-        display.text = Watched.Amount().ToString();
+        display.text = Watched.GetStock().ToString();
         LoadSprite();
     }
     protected void LoadSprite()

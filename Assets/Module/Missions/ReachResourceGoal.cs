@@ -11,7 +11,7 @@ namespace Lebeg134.Module.Missions
         private int goal;
         public ReachResourceGoal(Resource resource, Player player = null) : base(resource, player)
         {
-            goal = resource.Amount();
+            goal = resource.GetStock();
         }
         public override float CheckStatus()
         {

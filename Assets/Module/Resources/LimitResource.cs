@@ -9,33 +9,29 @@ namespace Lebeg134.Module.Resources
     [Serializable]
     public abstract class LimitResource : Resource
     {
-        static int limit;
-
+        private int limit;
         public LimitResource(int amount) : base(amount) { }
-        public void IncLimit(int by) //Static?
+        public void IncLimit(int by = 1)
         {
             limit += by;
         }
-        public void DecLimit(int by) //Static?
+        public void DecLimit(int by = 1)
         {
-            int newLimit = limit - by;
-            if (newLimit >= 0)
-            {
-                limit = newLimit;
-            }
+            limit -= by;
+            if (limit < 0)
+                limit = 0;
         }
-        override public void Gain(int amount)
+        override public Resource Gain(int amount)
         {
-            int newStock = limit + stock;
-            if (newStock <= limit)
+            if (stock + amount <= limit)
             {
                 base.Gain(amount);
             }
             else
             {
-                stock = limit;
-                //throw new ResourceLimitExceededException();
+                base.Gain(stock + amount - limit);
             }
+            return this;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Lebeg134.Module.Missions
         int collected = 0;
         public CollectResourceGoal(Resource resource, Player player = null) : base(resource, player)
         {
-            goal = resource.Amount();
+            goal = resource.GetStock();
         }
         public override float CheckStatus()
         {
@@ -20,9 +20,9 @@ namespace Lebeg134.Module.Missions
         }
         public override void OnResourceChange(Resource resource)
         {
-            if (resource.GetType() == watched.GetType() && resource.Amount() > 0)
+            if (resource.GetType() == watched.GetType() && resource.GetStock() > 0)
             {
-                collected += resource.Amount();
+                collected += resource.GetStock();
                 IsAchieved();
             }
         }

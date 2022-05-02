@@ -16,7 +16,7 @@ namespace Lebeg134.Structures.OilIndustry
     [Serializable]
     public class OilDistillery : CommonProdBuilding
     {
-        public override List<IOwnable> Criteria()
+        public override List<IOwnable> GetCriteria()
         {
             return new List<IOwnable> { new ChemicalResearchFacility(), new ChemicalSafetyBureau() };
         }
@@ -26,7 +26,7 @@ namespace Lebeg134.Structures.OilIndustry
             return Branches.OIL;
         }
 
-        public override int GetMaxLevel()
+        public override int REPLACEMEGetMaxLevel()
         {
             return 10;
         }
@@ -46,7 +46,7 @@ namespace Lebeg134.Structures.OilIndustry
             return new List<Resource> { new Oil(30 * level * level), new Electricity(26 * level * level) };
         }
 
-        public override List<Resource> UpgradeLevelsCosts(int level)
+        public override List<Resource> GetUpgradeCost(int level)
         {
             if (level == 0)
                 return new List<Resource> { new Concrete(500), new Workforce(100) };

@@ -15,7 +15,7 @@ namespace Lebeg134.Structures.ConstructionIndustry
     [Serializable]
     public class ConcreteMixingPlant : CommonProdBuilding
     {
-        public override List<IOwnable> Criteria()
+        public override List<IOwnable> GetCriteria()
         {
             return new List<IOwnable>();
         }
@@ -25,7 +25,7 @@ namespace Lebeg134.Structures.ConstructionIndustry
             return Branches.CONSTRUCTION;
         }
 
-        public override int GetMaxLevel()
+        public override int REPLACEMEGetMaxLevel()
         {
             return 5;
         }
@@ -45,7 +45,7 @@ namespace Lebeg134.Structures.ConstructionIndustry
             return new List<Resource> { new Water(5 * level), new Sand(15 * level), new Electricity(10 * level) };
         }
 
-        public override List<Resource> UpgradeLevelsCosts(int level)
+        public override List<Resource> GetUpgradeCost(int level)
         {
             if (level == 0)
                 return new List<Resource> { new Stone(100), new Workforce(25) };

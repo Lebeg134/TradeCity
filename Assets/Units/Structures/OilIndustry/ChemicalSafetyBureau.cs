@@ -14,12 +14,12 @@ namespace Lebeg134.Structures.OilIndustry
     [Serializable]
     public class ChemicalSafetyBureau : SpecialBuilding
     {
-        public override List<Resource> Cost()
+        public override List<Resource> GetCost()
         {
             return new List<Resource> { new Bricks(250), new Workforce(25) };
         }
 
-        public override List<IOwnable> Criteria()
+        public override List<IOwnable> GetCriteria()
         {
             return new List<IOwnable>();
         }

@@ -59,12 +59,12 @@ namespace Lebeg134.Structures.Common
             return Branches.COMMON;
         }
 
-        public override List<IOwnable> Criteria()
+        public override List<IOwnable> GetCriteria()
         {
             return new List<IOwnable>();
         }
 
-        public override List<Resource> UpgradeLevelsCosts(int level)
+        public override List<Resource> GetUpgradeCost(int level)
         {
             return UpgradeLevelsCostsArray[level];
         }
@@ -80,7 +80,7 @@ namespace Lebeg134.Structures.Common
             return ProductionLevels[level - 1];
         }
 
-        public override int GetMaxLevel()
+        public override int REPLACEMEGetMaxLevel()
         {
             return 2;
         }

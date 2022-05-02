@@ -36,7 +36,7 @@ public class BuildingListItemScript : MonoBehaviour
             buildingImage.sprite = loadedSprite;
 
         if (target is CommonBuilding)
-            levelText.text = "Lvl:" + ((CommonBuilding)target).GetLevel();
+            levelText.text = "Lvl:" + ((CommonBuilding)target).REPLACEMEGetLevel();
 
         UpdateCostDisplay();
         buildButton.onClick.AddListener(() => OnClick());
@@ -72,7 +72,7 @@ public class BuildingListItemScript : MonoBehaviour
         }
         if (target is CommonBuilding)
         {
-            levelText.text = "Lvl:" + ((CommonBuilding)target).GetLevel();
+            levelText.text = "Lvl:" + ((CommonBuilding)target).REPLACEMEGetLevel();
         }
         UpdateState();
         UpdateButton();
@@ -89,7 +89,7 @@ public class BuildingListItemScript : MonoBehaviour
             {
                 btnState = ButtonState.MAXLEVEL;
             }
-            else if (focus.GetLevel() > 0)
+            else if (focus.REPLACEMEGetLevel() > 0)
             {
                 btnState = ButtonState.UPGRADE;
             }
@@ -120,7 +120,7 @@ public class BuildingListItemScript : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-        foreach (Resource res in target.Cost())
+        foreach (Resource res in target.GetCost())
         {
             GameObject listItem = Instantiate(CostDisplayPrefab);
             listItem.GetComponent<ResourceDisplayScript>().Watched = res;

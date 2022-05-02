@@ -39,12 +39,12 @@ namespace Lebeg134.Structures.EnergySector
             return new List<Resource> { new Coal(15 * level) };
         }
 
-        public override List<IOwnable> Criteria()
+        public override List<IOwnable> GetCriteria()
         {
             return new List<IOwnable>();
         }
 
-        public override List<Resource> UpgradeLevelsCosts(int level)
+        public override List<Resource> GetUpgradeCost(int level)
         {
             if (level == 0)
                 return new List<Resource> { new Stone(100), new Workforce(50) };
@@ -56,7 +56,7 @@ namespace Lebeg134.Structures.EnergySector
                 return new List<Resource> { new ReinforcedConcrete(50 * level), new Steel(25 * level) };
         }
 
-        public override int GetMaxLevel()
+        public override int REPLACEMEGetMaxLevel()
         {
             return 100;
         }

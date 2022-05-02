@@ -14,7 +14,7 @@ namespace Lebeg134.Structures.ConstructionIndustry
     [Serializable]
     public class GlassKiln : CommonProdBuilding
     {
-        public override List<IOwnable> Criteria()
+        public override List<IOwnable> GetCriteria()
         {
             return new List<IOwnable> { new CraftsmanHQ() };
         }
@@ -24,7 +24,7 @@ namespace Lebeg134.Structures.ConstructionIndustry
             return Branches.CONSTRUCTION;
         }
 
-        public override int GetMaxLevel()
+        public override int REPLACEMEGetMaxLevel()
         {
             return 10;
         }
@@ -44,7 +44,7 @@ namespace Lebeg134.Structures.ConstructionIndustry
             return new List<Resource> { new Sand(25 * level), new Electricity(25 * level) };
         }
 
-        public override List<Resource> UpgradeLevelsCosts(int level)
+        public override List<Resource> GetUpgradeCost(int level)
         {
             if (level == 0)
                 return new List<Resource> { new Bricks(150), new Workforce(25) };

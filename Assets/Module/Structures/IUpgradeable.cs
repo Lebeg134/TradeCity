@@ -15,7 +15,7 @@ namespace Lebeg134.Module.Structures
         BuildingState BuildingState { get; }
         int Level { get; }
         void LevelUp();
-        int REPLACEMEGetMaxLevel();
+        int GetMaxLevel();
         // TODO Remove!!
         int REPLACEMEGetLevel();
     }

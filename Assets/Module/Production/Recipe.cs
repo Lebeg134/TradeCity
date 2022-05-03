@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Assets.Module.Production
 {
-    internal class Recipe: ITickable
+    public abstract class Recipe
     {
         public string Name { get; set; }
         private List<Resource> input;
@@ -16,21 +16,13 @@ namespace Assets.Module.Production
 
         public void AddResource(Resource resource)
         {
-            
+            input += resource;
         }
-        public Resource Produce()
+        protected abstract void Process();
+        public List<Resource> Produce()
         {
-
-        }
-
-        public void Tick()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Register()
-        {
-            Clock.Instance.Register(this);
+            Process();
+            return output;
         }
     }
 }

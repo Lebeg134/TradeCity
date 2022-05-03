@@ -80,15 +80,26 @@ namespace Lebeg134.Module.Resources
             if (A.GetType() != B.GetType()) throw new ArgumentException("Not same Type!");
             return A.Spend(B.stock);
         }
-    }
-
-    [Serializable]
-    internal class NotEnoughResourceException : Exception
-    {
-        List<Resource> missingResources;
-        public NotEnoughResourceException(List<Resource> missingResources = null)
+        public static List<Resource> operator +(List<Resource> list, Resource B)
         {
-            this.missingResources = missingResources;
+            foreach (Resource A in list)
+            {
+                if (A.GetName() == B.GetName())
+                {
+                    A.Gain(B.stock);
+                }
+            }
+            return list;
+        }
+
+        [Serializable]
+        internal class NotEnoughResourceException : Exception
+        {
+            List<Resource> missingResources;
+            public NotEnoughResourceException(List<Resource> missingResources = null)
+            {
+                this.missingResources = missingResources;
+            }
         }
     }
 }

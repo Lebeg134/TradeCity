@@ -103,7 +103,7 @@ namespace Lebeg134.Module.Structures
             return new List<Resource>(); // No upkeep for lands
         }
 
-        public int REPLACEMEGetMaxLevel()
+        public int GetMaxLevel()
         {
             return 10;
         }

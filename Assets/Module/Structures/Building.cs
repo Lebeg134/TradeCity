@@ -1,6 +1,7 @@
 /**
  * @(#) Building.cs
  */
+using Assets.Module.Production;
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Session;
 using Lebeg134.Units;
@@ -17,18 +18,19 @@ namespace Lebeg134.Module.Structures
         public event Action<Building> OnMaxLevelReached;
         protected Player owner;
         protected int level = 0;
+        protected List<Recipe> recipes = new List<Recipe>();
         public BuildingState BuildingState
         {
             get
             {
                 if (level == 0) return BuildingState.BUILD;
-                if (level < REPLACEMEGetMaxLevel()) return BuildingState.UPGRADE;
-                if (level >= REPLACEMEGetMaxLevel()) return BuildingState.MAXLEVEL;
+                if (level < GetMaxLevel()) return BuildingState.UPGRADE;
+                if (level >= GetMaxLevel()) return BuildingState.MAXLEVEL;
                 throw new Exception("Illegal building state");
             }
         }
         public int Level => level;
-        public int MaxLevel => REPLACEMEGetMaxLevel();
+        public int MaxLevel => GetMaxLevel();
 
         public Building(Player owner = null)
         {
@@ -86,7 +88,7 @@ namespace Lebeg134.Module.Structures
         {
             return base.GetBasePath() + "Building/";
         }
-        public abstract int REPLACEMEGetMaxLevel();
+        public abstract int GetMaxLevel();
         public int REPLACEMEGetLevel()
         {
             //TODO Remove!

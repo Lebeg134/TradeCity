@@ -11,7 +11,7 @@ using System.Collections.Generic;
 namespace Lebeg134.Module.Structures
 {
     [Serializable]
-    public abstract class Building : Structure, IOwnable, IUpgradeable
+    public abstract class Building : Structure, IOwnable, IBuilding
     {
         public event Action<Building> OnBuild;
         public event Action<Building> OnUpgrade;
@@ -89,11 +89,6 @@ namespace Lebeg134.Module.Structures
             return base.GetBasePath() + "Building/";
         }
         public abstract int GetMaxLevel();
-        public int REPLACEMEGetLevel()
-        {
-            //TODO Remove!
-            throw new NotImplementedException();
-        }
     }
 
     [Serializable]

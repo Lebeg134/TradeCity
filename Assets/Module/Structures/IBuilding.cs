@@ -10,13 +10,11 @@ namespace Lebeg134.Module.Structures
         UPGRADE,
         MAXLEVEL
     }
-    public interface IUpgradeable
+    public interface IBuilding
     {
         BuildingState BuildingState { get; }
         int Level { get; }
+        int MaxLevel { get; }
         void LevelUp();
-        int GetMaxLevel();
-        // TODO Remove!!
-        int REPLACEMEGetLevel();
     }
 }

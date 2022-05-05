@@ -11,7 +11,7 @@ using System.Collections.Generic;
 namespace Lebeg134.Module.Structures
 {
     [Serializable]
-    public abstract class Land : Structure, IUpgradeable, IProducer, IOwnable, IMapStructure
+    public abstract class Land : Structure, IBuilding, IProducer, IOwnable, IMapStructure
     {
         public static int StartingPrice { get; set; }
         protected Player owner;

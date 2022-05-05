@@ -8,11 +8,19 @@ using System.Threading.Tasks;
 
 namespace Assets.Module.Production
 {
+    public enum RecipePriority
+    {
+        LOW,
+        MEDIUM,
+        HIGH,
+        HIGHEST
+    }
     public abstract class Recipe
     {
         public string Name { get; set; }
         private List<Resource> input;
         private List<Resource> output;
+        public RecipePriority InputPriority { get; set; }
 
         public void AddResource(Resource resource)
         {

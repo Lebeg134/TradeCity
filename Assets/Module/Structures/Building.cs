@@ -16,9 +16,12 @@ namespace Lebeg134.Module.Structures
         public event Action<Building> OnBuild;
         public event Action<Building> OnUpgrade;
         public event Action<Building> OnMaxLevelReached;
+
         protected Player owner;
         protected int level = 0;
         protected List<Recipe> recipes = new List<Recipe>();
+
+        public Player Owner => owner;
         public BuildingState BuildingState
         {
             get
@@ -31,73 +34,71 @@ namespace Lebeg134.Module.Structures
         }
         public int Level => level;
         public int MaxLevel => GetMaxLevel();
+        public List<Recipe> Recipes => recipes;
 
-        public Building(Player owner = null)
-        {
-            this.owner = owner;
-        }
-        public abstract List<IOwnable> GetCriteria(int level);
-        public abstract List<Resource> GetCost(int level);
-        public abstract List<Resource> GetUpkeep(int level);
-        protected virtual bool Construct(Player by, int level = 0)
-        {
-            if (CheckCriteria(by, level))
-            {
-                by.SubRes(GetCost(level));
-                by.GiveStructure(this);
-                BuildingState buildingState = BuildingState;
-                this.level++;
-                if (buildingState == BuildingState.BUILD) OnBuild?.Invoke(this);
-                if (buildingState == BuildingState.UPGRADE) OnUpgrade?.Invoke(this);
-                if (BuildingState == BuildingState.MAXLEVEL) OnMaxLevelReached?.Invoke(this);
-                return true;
-            }
-            return false;
-        }
-        public virtual bool CheckCriteria(Player by, int level = 0)
-        {
-            return by.CheckResources(GetCost(level)) && by.CheckStructures(GetCriteria(level));
-        }
-        public bool CheckCriteria()
-        {
-            return CheckCriteria(owner, level);
-        }
-        public virtual void Build(Player by)
-        {
-            if (level == 0 && Construct(by, 0))
-            {
-                // TODO Register Off events
-            }
-        }
-        public void LevelUp()
-        {
-            if (level > 0 && level < MaxLevel)
-                Construct(owner, level);
-        }
-        public bool CanBuild(Player by)
-        {
-            if (level != 0) return false;
-            return CheckCriteria(by, 0);
-        }
-        public virtual void Acquire(Player by)
+        public void Acquire(Player by)
         {
             //Possibility to transfer ownership?, can implement later if needed
             owner = by;
         }
+        public void Build(Player by)
+        {
+            if (CanBuild(by))
+            {
+                by.SubRes(GetCost(0));
+                Acquire(by);
+                OnBuild?.Invoke(this);
+                if (BuildingState == BuildingState.MAXLEVEL)
+                    OnMaxLevelReached?.Invoke(this);
+            }
+        }
+        public bool CanBuild(Player by)
+        {
+            if (BuildingState != BuildingState.BUILD) return false;
+            return CheckCriteria(by, 0);
+        }
+        public void Upgrade()
+        {
+            if (CanUpgrade())
+            {
+                owner.SubRes(GetCost(Level));
+                OnUpgrade?.Invoke(this);
+                if (BuildingState == BuildingState.MAXLEVEL)
+                    OnMaxLevelReached?.Invoke(this);
+            }
+        }
+
+        public bool CanUpgrade()
+        {
+            if (BuildingState != BuildingState.UPGRADE) return false;
+            return CheckCriteria(owner, level);
+        }
+        public List<Resource> GetUpkeep()
+        {
+            return GetUpkeep(level);
+        }
+        public void PutResources(List<Resource> resources)
+        {
+            throw new NotImplementedException();
+        }
+        public List<Resource> GetProduce()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected abstract int GetMaxLevel();
+        protected abstract List<Resource> GetCost(int level);
+        protected abstract List<IOwnable> GetCriteria(int level);
+        protected abstract List<Resource> GetUpkeep(int level);
+
+        protected virtual bool CheckCriteria(Player by, int level = 0)
+        {
+            return by.CheckResources(GetCost(level)) && by.CheckStructures(GetCriteria(level));
+        }
+
         override protected string GetBasePath()
         {
             return base.GetBasePath() + "Building/";
-        }
-        public abstract int GetMaxLevel();
-    }
-
-    [Serializable]
-    internal class MissingStructuresException : Exception
-    {
-        List<IOwnable> missingStructures;
-        public MissingStructuresException(List<IOwnable> missingStructures)
-        {
-            this.missingStructures = missingStructures;
         }
     }
 }

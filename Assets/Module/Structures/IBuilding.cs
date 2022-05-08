@@ -1,7 +1,10 @@
+using Lebeg134.Module.Resources;
+using Lebeg134.Module.Session;
+using System;
+using System.Collections.Generic;
 /**
- * @(#) IUpgradeable.cs
- */
-
+* @(#) IUpgradeable.cs
+*/
 namespace Lebeg134.Module.Structures
 {
     public enum BuildingState
@@ -10,11 +13,18 @@ namespace Lebeg134.Module.Structures
         UPGRADE,
         MAXLEVEL
     }
-    public interface IBuilding
+    public interface IBuilding: IProducer
     {
+        public event Action<Building> OnBuild;
+        public event Action<Building> OnUpgrade;
+        public event Action<Building> OnMaxLevelReached;
         BuildingState BuildingState { get; }
         int Level { get; }
         int MaxLevel { get; }
-        void LevelUp();
+        void Build(Player by);
+        bool CanBuild(Player by);
+        void Upgrade();
+        bool CanUpgrade();
+        List<Resource> GetUpkeep();
     }
 }

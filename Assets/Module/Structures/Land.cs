@@ -36,7 +36,7 @@ namespace Lebeg134.Module.Structures
         {
             return owner != null;
         }
-        public void LevelUp()
+        public void Upgrade()
         {
             if (owner.CheckResources(UpgradeLevelsCosts(level))) //Level is 1 higher than index used for level stats
                 level++;

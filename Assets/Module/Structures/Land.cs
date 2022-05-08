@@ -1,6 +1,7 @@
 /**
 * @(#) Land.cs
 */
+using Assets.Module.Structures;
 using Lebeg134.Module.MapNS;
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Session;
@@ -11,7 +12,7 @@ using System.Collections.Generic;
 namespace Lebeg134.Module.Structures
 {
     [Serializable]
-    public abstract class Land : Structure, IBuilding, IProducer, IOwnable, IMapStructure
+    public abstract class Land : RecipeHolderLevelableStructure, IProducer, IOwnable, IMapStructure
     {
         public static int StartingPrice { get; set; }
         protected Player owner;

@@ -1,32 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="Lebeg134.Module.MarketNS.Listing" BaseTypeListCollapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.75" />
+    <Position X="10.75" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AABAAAAAEgAAEAAAgAAAAAAAAAAgECAAAQBAAAAgAAA=</HashCode>
+      <HashCode>AAAAAAAAQAAAABIAgAAAAAAAAAAhkAAAAARgAAAgQAA=</HashCode>
       <FileName>Assets\Module\Market\Listing.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="ForSellable" />
       <Property Name="WantSellable" />
+      <Property Name="ForSellable" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Lebeg134.Module.MarketNS.Market" BaseTypeListCollapsed="true">
-    <Position X="5.5" Y="6.75" Width="3" />
+    <Position X="15.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IABBAAAAAAAAAAAIAACAAACAGQAgAEAAARAAAAAAAAA=</HashCode>
+      <HashCode>AABAAAAAEQgAAAAAADABACAAAAABAAAAAAAAASCAQAA=</HashCode>
       <FileName>Assets\Module\Market\Market.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="_registeredItems" />
-    </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Lebeg134.Module.Market.SPListing" BaseTypeListCollapsed="true">
-    <Position X="7.5" Y="0.75" Width="1.75" />
+    <Position X="3.75" Y="0.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AARAAAAAAABAACIAQAAAAAAAAAAAAAAQAQAAAIAAAAA=</HashCode>
+      <HashCode>gAAAAAAEIABAAAIAQAAAAAAAAAABAAAQAAAAAAAAQAA=</HashCode>
       <FileName>Assets\Module\Market\SPListing.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -35,7 +32,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Lebeg134.Module.Market.SPMarket">
-    <Position X="11.25" Y="0.75" Width="2" />
+    <Position X="0.5" Y="0.75" Width="2" />
     <NestedTypes>
       <Delegate Name="Lebeg134.Module.Market.SPMarket.Notify" Collapsed="true">
         <TypeIdentifier>
@@ -44,7 +41,7 @@
       </Delegate>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAAAgAAIAAAABAAAABQAAAAQAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAIAAAQBAAAABQAAAAQAAAAA=</HashCode>
       <FileName>Assets\Module\Market\SPMarket.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -52,16 +49,16 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Struct Name="Lebeg134.Module.MarketNS.ItemLog">
-    <Position X="0.5" Y="7.75" Width="2" />
+    <Position X="13.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAIAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Assets\Module\Market\ItemLog.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Interface Name="Lebeg134.Module.MarketNS.ISellable">
-    <Position X="3.75" Y="1.5" Width="2.25" />
+    <Position X="7" Y="1.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>BAAAAAAAAAAAACAAAAAAAAAAABAAgAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAACAAAAAAQAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Module\Market\ISellable.cs</FileName>
     </TypeIdentifier>
   </Interface>

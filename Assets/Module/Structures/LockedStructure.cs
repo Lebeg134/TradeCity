@@ -1,3 +1,4 @@
+using Lebeg134.Units;
 using System;
 /**
 * @(#) LockedStructure.cs
@@ -34,7 +35,12 @@ namespace Lebeg134.Module.Structures
 
         public override string GetName()
         {
-            return "Locked";
+            return "Locked "+subject.GetName();
+        }
+
+        public override Branches GetBranch()
+        {
+            throw new NotImplementedException();
         }
     }
 

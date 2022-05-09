@@ -11,17 +11,15 @@ using System.Collections.Generic;
 namespace Lebeg134.Module.Structures
 {
     [Serializable]
-    public abstract class Building : Structure, IOwnable, IBuilding
+    public abstract class Building : CommonStructure, IOwnable, IBuilding
     {
+        // ========== Public events
         public event Action<Building> OnBuild;
-        public event Action<Building> OnUpgrade;
-        public event Action<Building> OnMaxLevelReached;
 
-        protected Player owner;
-        protected int level = 0;
+        // ========== Attributes
         protected List<Recipe> recipes = new List<Recipe>();
 
-        public Player Owner => owner;
+        // ========== Properties
         public BuildingState BuildingState
         {
             get
@@ -32,15 +30,9 @@ namespace Lebeg134.Module.Structures
                 throw new Exception("Illegal building state");
             }
         }
-        public int Level => level;
-        public int MaxLevel => GetMaxLevel();
         public List<Recipe> Recipes => recipes;
 
-        public void Acquire(Player by)
-        {
-            //Possibility to transfer ownership?, can implement later if needed
-            owner = by;
-        }
+        // ========== Interface Implementations
         public void Build(Player by)
         {
             if (CanBuild(by))
@@ -49,33 +41,13 @@ namespace Lebeg134.Module.Structures
                 Acquire(by);
                 OnBuild?.Invoke(this);
                 if (BuildingState == BuildingState.MAXLEVEL)
-                    OnMaxLevelReached?.Invoke(this);
+                    InvokeOnMaxLevelReached();
             }
         }
         public bool CanBuild(Player by)
         {
             if (BuildingState != BuildingState.BUILD) return false;
             return CheckCriteria(by, 0);
-        }
-        public void Upgrade()
-        {
-            if (CanUpgrade())
-            {
-                owner.SubRes(GetCost(Level));
-                OnUpgrade?.Invoke(this);
-                if (BuildingState == BuildingState.MAXLEVEL)
-                    OnMaxLevelReached?.Invoke(this);
-            }
-        }
-
-        public bool CanUpgrade()
-        {
-            if (BuildingState != BuildingState.UPGRADE) return false;
-            return CheckCriteria(owner, level);
-        }
-        public List<Resource> GetUpkeep()
-        {
-            return GetUpkeep(level);
         }
         public void PutResources(List<Resource> resources)
         {
@@ -85,17 +57,13 @@ namespace Lebeg134.Module.Structures
         {
             throw new NotImplementedException();
         }
-
-        protected abstract int GetMaxLevel();
-        protected abstract List<Resource> GetCost(int level);
-        protected abstract List<IOwnable> GetCriteria(int level);
-        protected abstract List<Resource> GetUpkeep(int level);
-
-        protected virtual bool CheckCriteria(Player by, int level = 0)
+        public List<Resource> GetUpkeep()
         {
-            return by.CheckResources(GetCost(level)) && by.CheckStructures(GetCriteria(level));
+            return GetUpkeep(level);
         }
 
+        // ========== Internal Methods
+        protected abstract List<Resource> GetUpkeep(int level);
         override protected string GetBasePath()
         {
             return base.GetBasePath() + "Building/";

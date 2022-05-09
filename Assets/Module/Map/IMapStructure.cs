@@ -1,14 +1,14 @@
 /**
 * @(#) IMapStructure.cs
 */
-using System.Collections.Generic;
+using Lebeg134.Module.Session;
 
 namespace Lebeg134.Module.MapNS
 {
-    public interface IMapStructure : IEqualityComparer<IMapStructure>
+    public interface IMapStructure
     {
-        void SetCoords(int x, int y);
+        void GetPosition(); //TODO when graphics
         bool IsAuctionable();
-        //TODO when graphics
+        void Purchase(Player by);
     }
 }

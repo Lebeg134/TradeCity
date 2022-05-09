@@ -1,108 +1,92 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="Lebeg134.Module.Structures.Building">
-    <Position X="2.25" Y="4.5" Width="2.25" />
+    <Position X="2" Y="14" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACAAAEAAAAAAgAAAAAAAABIAACAggAQAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAIAAABAgAgAAAIEQAABAAAgA=</HashCode>
       <FileName>Assets\Module\Structures\Building.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Lebeg134.Module.Structures.MissingStructuresException" Collapsed="true">
-    <Position X="15.75" Y="0.5" Width="1.5" />
+  <Class Name="Lebeg134.Module.Structures.CommonStructure">
+    <Position X="3" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Module\Structures\Building.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Lebeg134.Module.Structures.CommonBuilding">
-    <Position X="0.5" Y="8.5" Width="2.75" />
-    <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAAAAAAEAABAAAAEAgQAAAAAAECAABAA=</HashCode>
-      <FileName>Assets\Module\Structures\CommonBuilding.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Lebeg134.Module.Structures.CommonProdBuilding">
-    <Position X="0.75" Y="12.25" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>BABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAEAAA=</HashCode>
-      <FileName>Assets\Module\Structures\CommonProdBuilding.cs</FileName>
+      <HashCode>AQAAAACAAAAAgEAAAgQgEAAABAEAAAAhAAAIAAAAgEA=</HashCode>
+      <FileName>Assets\Module\Structures\CommonStructure.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Lebeg134.Module.Structures.CosmeticStructures">
-    <Position X="7" Y="4.5" Width="1.5" />
+    <Position X="6.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Module\Structures\CosmeticStructures.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lebeg134.Module.Structures.Land">
-    <Position X="12" Y="4.5" Width="2.75" />
+    <Position X="4.25" Y="14" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>DABAAQAIEAQAgAAAhAFAACIAAAEhAYQAAQAAAAAUBAA=</HashCode>
+      <HashCode>AAQAAAAAACAAAAAAQAAAAAAABAABAAAAAAQAAAAQQAA=</HashCode>
       <FileName>Assets\Module\Structures\Land.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Lebeg134.Module.Structures.LockedStructure">
-    <Position X="9.25" Y="4.5" Width="2" />
+    <Position X="8.75" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAQIAAAAAAAAAAAAAAAACAAAAAAAAAEAAAAAIA=</HashCode>
+      <HashCode>AAAgAIAAAAAAEAAAAAAAAACAAAAAAAAgAAAAAAAABIA=</HashCode>
       <FileName>Assets\Module\Structures\LockedStructure.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lebeg134.Module.Structures.ProducerStrategy" Collapsed="true">
-    <Position X="17.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Module\Structures\ProducerStrategy.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Lebeg134.Module.Structures.SpecialBuilding">
-    <Position X="4.5" Y="8.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Module\Structures\SpecialBuilding.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Lebeg134.Module.Structures.SpecialProdBuilding">
-    <Position X="4" Y="10.25" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>BABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAEAAA=</HashCode>
-      <FileName>Assets\Module\Structures\SpecialProdBuilding.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="Lebeg134.Module.Structures.Structure">
-    <Position X="6.75" Y="0.5" Width="2" />
+    <Position X="5.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAMAAAAAAAAAAgAAAAAAAAGAAAIQEAAAEAAAAAIE=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAAAgAABAAgABUAACIAgAAAAAAAABIA=</HashCode>
       <FileName>Assets\Module\Structures\Structure.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="Lebeg134.Module.Structures.IOwnable">
-    <Position X="15.75" Y="5.25" Width="1.5" />
+  <Interface Name="Lebeg134.Module.Structures.IBuilding">
+    <Position X="10" Y="14.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Module\Structures\IOwnable.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAgAABIEAAAAAAAkA=</HashCode>
+      <FileName>Assets\Module\Structures\Interfaces\IBuilding.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Lebeg134.Module.Structures.ILand">
+    <Position X="7.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\Module\Structures\Interfaces\ILand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Lebeg134.Module.Structures.IOwnable">
+    <Position X="7.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Module\Structures\Interfaces\IOwnable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Lebeg134.Module.Structures.IProducer">
-    <Position X="15.75" Y="1.5" Width="1.5" />
+    <Position X="12.75" Y="13.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Assets\Module\Structures\IProducer.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAABAAAAA=</HashCode>
+      <FileName>Assets\Module\Structures\Interfaces\IProducer.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Lebeg134.Module.Structures.IUpgradeable">
-    <Position X="15.75" Y="3.5" Width="1.5" />
+    <Position X="7.75" Y="11.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAABAA=</HashCode>
-      <FileName>Assets\Module\Structures\IUpgradeable.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAQgAAAAAAAAAAAgAAAIAAAAAAA=</HashCode>
+      <FileName>Assets\Module\Structures\Interfaces\IUpgradeable.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Enum Name="Lebeg134.Module.Structures.BuildingState">
+    <Position X="16.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACQAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Module\Structures\Interfaces\IBuilding.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

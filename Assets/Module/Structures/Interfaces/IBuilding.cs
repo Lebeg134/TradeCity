@@ -13,18 +13,14 @@ namespace Lebeg134.Module.Structures
         UPGRADE,
         MAXLEVEL
     }
-    public interface IBuilding: IProducer
+    public interface IBuilding : IProducer, IOwnable, IUpgradeable
     {
         public event Action<Building> OnBuild;
-        public event Action<Building> OnUpgrade;
-        public event Action<Building> OnMaxLevelReached;
         BuildingState BuildingState { get; }
         int Level { get; }
         int MaxLevel { get; }
         void Build(Player by);
         bool CanBuild(Player by);
-        void Upgrade();
-        bool CanUpgrade();
         List<Resource> GetUpkeep();
     }
 }

@@ -1,60 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Lebeg134.Module.MapNS.Auction" BaseTypeListCollapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.75" />
+  <Class Name="Lebeg134.Module.MapNS.Auction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAAAAAAAAYAAAAgAAAAAAAACAgAIABAQAASAAAAAA=</HashCode>
+      <HashCode>AAAAAAgAAAAEAAAAiAAAAgCAAAABAIgAAAAAAAAAYAg=</HashCode>
       <FileName>Assets\Module\Map\Auction.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_subject" />
-    </ShowAsAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Lebeg134.Module.MapNS.AuctionFinishedException" Collapsed="true">
-    <Position X="8" Y="1.5" Width="2" />
+    <Position X="6" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Module\Map\Auction.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lebeg134.Module.MapNS.Map" BaseTypeListCollapsed="true">
-    <Position X="4.75" Y="5.5" Width="2.25" />
+  <Class Name="Lebeg134.Module.MapNS.Map" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAAAACAAgABAQACAAAAQAAAAAAAABAAQAAAAIAAAA=</HashCode>
+      <HashCode>AAAAAAgAAAAABAAIAAAAAAAAAABhAAhAEACAAAAAQAA=</HashCode>
       <FileName>Assets\Module\Map\Map.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="_structures" />
-    </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Lebeg134.Module.MapNS.AuctionAlreadyExistsException" Collapsed="true">
-    <Position X="8" Y="0.5" Width="2.25" />
+    <Position X="4.25" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Module\Map\Map.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lebeg134.Module.MapNS.NotAuctionableException" Collapsed="true">
-    <Position X="8" Y="2.5" Width="2" />
+    <Position X="4.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Module\Map\Map.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lebeg134.Module.Structures.Land" Collapsed="true">
-    <Position X="3.75" Y="2" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>DABAAQAIEAQAgAAAhAFAACIAAAEhAYQAAQAAAAAUBAA=</HashCode>
-      <FileName>Assets\Module\Structures\Land.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Interface Name="Lebeg134.Module.MapNS.IMapStructure" Collapsed="true">
-    <Position X="4.25" Y="3.75" Width="2.25" />
+    <Position X="2.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>Assets\Module\Map\IMapStructure.cs</FileName>
     </TypeIdentifier>
   </Interface>

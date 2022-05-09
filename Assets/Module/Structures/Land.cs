@@ -6,6 +6,7 @@ using Lebeg134.Module.Resources;
 using Lebeg134.Module.Session;
 using Lebeg134.Module.TimeManager;
 using Lebeg134.Resources.Common;
+using Lebeg134.Units;
 using System;
 using System.Collections.Generic;
 
@@ -14,6 +15,7 @@ namespace Lebeg134.Module.Structures
     [Serializable]
     public abstract class Land : CommonStructure, ILand, IMapStructure
     {
+        private const int defaultMaxLevel = 100;
         // ========== Public events
         public event Action<Land> OnPurchase;
 
@@ -44,7 +46,29 @@ namespace Lebeg134.Module.Structures
         {
             owner?.GiveRes(GetProduce());
         }
-        public abstract List<Resource> GetStartingCost();
+        public abstract Land GetNew();
+        //public abstract List<Resource> GetStartingCost();
+        public List<Resource> GetStartingCost()
+        {
+            //TODO!!
+            throw new NotImplementedException();
+        }
+        public int GetStartingPrice()
+        {
+            //TODO replace!!
+            return 100;
+        }
+
+        // ========== Abstract method implementations
+        protected override int GetMaxLevel()
+        {
+            return defaultMaxLevel;
+        }
+        public override Branches GetBranch()
+        {
+            //TODO replace!!
+            throw new NotImplementedException();
+        }
 
         // ========== Internal Methods
         protected abstract List<Resource> GetProduce(int level);

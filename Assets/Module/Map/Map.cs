@@ -31,14 +31,14 @@ namespace Lebeg134.Module.MapNS
         {
             return structures[x, y];
         }
-        public void SetStructure(int x, int y, IMapStructure structure, bool replace = false)
-        {
-            if (replace || structures[x, y] == null)
-            {
-                structure.SetCoords(x, y);
-                structures[x, y] = structure;
-            }
-        }
+        //public void SetStructure(int x, int y, IMapStructure structure, bool replace = false)
+        //{
+        //    if (replace || structures[x, y] == null)
+        //    {
+        //        structure.SetCoords(x, y);
+        //        structures[x, y] = structure;
+        //    }
+        //}
         public void StartAuction(int x, int y, Player by)
         {
             IMapStructure subject = structures[x, y];

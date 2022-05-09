@@ -26,12 +26,12 @@ namespace Lebeg134.Structures.Lands
             return new CoalMine();
         }
 
-        protected override List<Resource> ProductionLevels(int level)
+        protected override List<Resource> GetProduce(int level)
         {
             return new List<Resource> { new Coal(25) };
         }
 
-        protected override List<Resource> UpgradeLevelsCosts(int level)
+        protected override List<Resource> GetCost(int level)
         {
             return new List<Resource> { new Money(100 * level + 250) };
         }

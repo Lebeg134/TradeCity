@@ -11,11 +11,11 @@ public class ReflectionItem
     public object Master;//the master object
     public Type MasterType;//the master object
     public string Target;//the Target variable name
-    private void debug(object obj)
+    private void Debug(object obj)
     {
         if (ReflectionSystem.DebugMode)
         {
-            Debug.Log(obj);
+            UnityEngine.Debug.Log(obj);
         }
     }
 
@@ -26,7 +26,7 @@ public class ReflectionItem
         MasterType = master.GetType();
         Target = target;
         ReflectionItemType = DetectReflectionItemType(target);//Detect the type first
-        debug($"<b><color=teal>[Reflection Progress]</color></b> Master class: <b>{MasterType.Name}</b><color=olive>(INSTANCE)</color> {ReflectionSystem.arrowSymbol} Target: <b>{Target}</b><color=olive>({ReflectionItemType})</color> \n");
+        Debug($"<b><color=teal>[Reflection Progress]</color></b> Master class: <b>{MasterType.Name}</b><color=olive>(INSTANCE)</color> {ReflectionSystem.arrowSymbol} Target: <b>{Target}</b><color=olive>({ReflectionItemType})</color> \n");
     }
     public ReflectionItem(object baseMaster, Type masterType, string target)
     {
@@ -35,7 +35,7 @@ public class ReflectionItem
         MasterType = masterType;
         Target = target;
         ReflectionItemType = DetectReflectionItemType(target);//Detect the type first
-        debug($"<b><color=teal>[Reflection Progress]</color></b> Master class: <b>{MasterType.Name}</b><color=olive>(STATIC CLASS)</color> {ReflectionSystem.arrowSymbol} Target: <b>{Target}</b><color=olive>({ReflectionItemType})</color> \n");
+        Debug($"<b><color=teal>[Reflection Progress]</color></b> Master class: <b>{MasterType.Name}</b><color=olive>(STATIC CLASS)</color> {ReflectionSystem.arrowSymbol} Target: <b>{Target}</b><color=olive>({ReflectionItemType})</color> \n");
     }
     private ReflectionItemType DetectReflectionItemType(string Target)
     {
@@ -65,7 +65,7 @@ public class ReflectionItem
 
         if (couldBeInstance && couldBeClass)
         {//WARNING
-            Debug.LogError($"Reflection confused. the target {Target} in {MasterType} could be instance or class at the same time!");
+            UnityEngine.Debug.LogError($"Reflection confused. the target {Target} in {MasterType} could be instance or class at the same time!");
             return ReflectionItemType.InstanceOrClass;
         }
 
@@ -85,7 +85,7 @@ public class ReflectionItem
                 case ReflectionItemType.INSTANCE:
                     return FindInstanceVariable(Target);
                 case ReflectionItemType.CLASS:
-                    Debug.LogError("Please use GetStaticClass() instead of GetValue() if the ReflectionItemType is Class");
+                    UnityEngine.Debug.LogError("Please use GetStaticClass() instead of GetValue() if the ReflectionItemType is Class");
                     return FindStaticClass(Target);
                 case ReflectionItemType.METHOD:
                     return FindMethodResult();
@@ -101,7 +101,7 @@ public class ReflectionItem
         catch (Exception e)
         {
             if (ReflectionSystem.DebugMode)
-                Debug.LogException(e);
+                UnityEngine.Debug.LogException(e);
             return null;
         }
         return null;
@@ -174,7 +174,7 @@ public class ReflectionItem
         //MethodInfo info = MasterType?.GetMethod(MethodName);
         if (info == null) return null;
         object result = info.Invoke(Master, parameters);
-        debug($"<color=darkblue><b>[Invoke method]</b></color> <b>{MasterType.Name}.{Target}</b>  Result: <b>{result.ToStringWithQuotes()}</b>\n");
+        Debug($"<color=darkblue><b>[Invoke method]</b></color> <b>{MasterType.Name}.{Target}</b>  Result: <b>{result.ToStringWithQuotes()}</b>\n");
 
         return result;
     }
@@ -201,7 +201,7 @@ public class ReflectionItem
             string str = stringParameterArray[i];
             if (ReflectionExtensions.MathCharacterNotInBracketsExists(str))
             {//The user try to do the math.
-                Debug.LogError($"Currently mathematical symbol could not be used, Wrong path:  \"{Target}\" ");
+                UnityEngine.Debug.LogError($"Currently mathematical symbol could not be used, Wrong path:  \"{Target}\" ");
             }
             Type primaryType = DetectPrimaryTypeFromString(str);
             if (primaryType != null)

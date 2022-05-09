@@ -15,7 +15,7 @@ namespace Lebeg134.Module.Session
     {
         public event Action<Resource> OnResourceChange;
         //public event Action<IOwnable> OnAquire;
-        //public event Action<CommonBuilding> OnUpgrade;
+        //public event Action<Building> OnUpgrade;
 
         List<IOwnable> owned = new List<IOwnable>();
         Dictionary<Type, Resource> ownedResources = new Dictionary<Type, Resource>();
@@ -59,7 +59,7 @@ namespace Lebeg134.Module.Session
                 }
             }
             if (!valid && throwException)
-                throw new MissingStructuresException(missingStructures);
+                throw new Exception();
             return valid;
         }
         public void GiveStructure(IOwnable structure)
@@ -120,7 +120,7 @@ namespace Lebeg134.Module.Session
                 }
             }
             if (!valid && throwException)
-                throw new NotEnoughResourceException(missingResources);
+                throw new Exception();
             return valid;
         }
         public void SubRes(Resource resource)

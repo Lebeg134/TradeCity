@@ -7,12 +7,7 @@ using UnityEngine.UI;
 
 public class BuildingListItemScript : MonoBehaviour
 {
-    public enum ButtonState
-    {
-        BUILD,
-        UPGRADE,
-        MAXLEVEL
-    }
+    
     string[] options = GetOptions();
     [Dropdown("options")]
     public string building;
@@ -23,7 +18,7 @@ public class BuildingListItemScript : MonoBehaviour
     public HorizontalLayoutGroup costsList;
     public GameObject CostDisplayPrefab;
     Building target;
-    ButtonState btnState = ButtonState.BUILD;
+    BuildingState btnState = BuildingState.BUILD;
 
     // Start is called before the first frame update
     void Start()
@@ -35,8 +30,8 @@ public class BuildingListItemScript : MonoBehaviour
         if (loadedSprite != null)
             buildingImage.sprite = loadedSprite;
 
-        if (target is CommonBuilding)
-            levelText.text = "Lvl:" + ((CommonBuilding)target).REPLACEMEGetLevel();
+        if (target is Building)
+            levelText.text = "Lvl:" + ((Building)target).Level;
 
         UpdateCostDisplay();
         buildButton.onClick.AddListener(() => OnClick());
@@ -54,25 +49,25 @@ public class BuildingListItemScript : MonoBehaviour
     {
         switch (btnState)
         {
-            case ButtonState.BUILD:
+            case BuildingState.BUILD:
                 target.Build(Player.CurrentPlayer);
                 break;
-            case ButtonState.UPGRADE:
+            case BuildingState.UPGRADE:
                 if (Player.CurrentPlayer.HasStructure(target))
                 {
-                    if (target is CommonBuilding)
+                    if (target is Building)
                     {
-                        ((CommonBuilding)target).LevelUp();
+                        ((Building)target).Upgrade();
                     }
                 }
                 break;
-            case ButtonState.MAXLEVEL:
+            case BuildingState.MAXLEVEL:
                 //Do nothing
                 break;
         }
-        if (target is CommonBuilding)
+        if (target is Building)
         {
-            levelText.text = "Lvl:" + ((CommonBuilding)target).REPLACEMEGetLevel();
+            levelText.text = "Lvl:" + ((Building)target).Level;
         }
         UpdateState();
         UpdateButton();
@@ -81,33 +76,21 @@ public class BuildingListItemScript : MonoBehaviour
 
     private void UpdateState()
     {
-        btnState = ButtonState.BUILD;
-        if (target is CommonBuilding)
-        {
-            CommonBuilding focus = (CommonBuilding)target;
-            if (focus.IsMaxLevel())
-            {
-                btnState = ButtonState.MAXLEVEL;
-            }
-            else if (focus.REPLACEMEGetLevel() > 0)
-            {
-                btnState = ButtonState.UPGRADE;
-            }
-        }
+        btnState = target.BuildingState;
     }
     private void UpdateButton()
     {
         switch (btnState)
         {
-            case ButtonState.BUILD:
+            case BuildingState.BUILD:
                 buildButton.GetComponentInChildren<Text>().text = "Build";
                 buildButton.interactable = target.CanBuild(Player.CurrentPlayer);
                 break;
-            case ButtonState.UPGRADE:
+            case BuildingState.UPGRADE:
                 buildButton.GetComponentInChildren<Text>().text = "Upgrade";
                 buildButton.interactable = target.CanBuild(Player.CurrentPlayer);
                 break;
-            case ButtonState.MAXLEVEL:
+            case BuildingState.MAXLEVEL:
                 buildButton.GetComponentInChildren<Text>().text = "Maxed";
                 buildButton.interactable = false;
                 break;

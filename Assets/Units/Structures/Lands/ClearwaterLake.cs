@@ -25,12 +25,12 @@ namespace Lebeg134.Structures.Lands
             return new ClearwaterLake();
         }
 
-        protected override List<Resource> ProductionLevels(int level)
+        protected override List<Resource> GetProduce(int level)
         {
             return new List<Resource>() { new Water(10) };
         }
 
-        protected override List<Resource> UpgradeLevelsCosts(int level)
+        protected override List<Resource> GetCost(int level)
         {
             return new List<Resource>() { new Money(100 * level) };
         }

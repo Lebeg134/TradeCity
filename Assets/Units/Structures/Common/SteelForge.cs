@@ -12,9 +12,9 @@ using System.Collections.Generic;
 namespace Lebeg134.Structures.Common
 {
     [Serializable]
-    public class SteelForge : CommonProdBuilding
+    public class SteelForge : Building
     {
-        protected static List<Resource>[] UpgradeLevelsCostsArray
+        protected static List<Resource>[] GetCostArray
         {
             get
             {
@@ -36,7 +36,7 @@ namespace Lebeg134.Structures.Common
             }
         }
 
-        protected static List<Resource>[] ProductionLevels
+        protected static List<Resource>[] GetProduces
         {
             get
             {
@@ -64,12 +64,12 @@ namespace Lebeg134.Structures.Common
             return new List<IOwnable>();
         }
 
-        public override List<Resource> GetUpgradeCost(int level)
+        protected override List<Resource> GetCost(int level)
         {
-            return UpgradeLevelsCostsArray[level];
+            return GetCostArray[level];
         }
 
-        public override List<Resource> GetUpkeep()
+        protected override List<Resource> GetUpkeep(int level)
         {
 
             return UpkeepLevelsArray[level - 1];
@@ -77,10 +77,10 @@ namespace Lebeg134.Structures.Common
 
         public override List<Resource> GetProduce()
         {
-            return ProductionLevels[level - 1];
+            return GetProduces[level - 1];
         }
 
-        public override int REPLACEMEGetMaxLevel()
+        protected override int GetMaxLevel()
         {
             return 2;
         }

@@ -50,7 +50,10 @@ namespace Lebeg134.Module.Structures
         // ========== Internal Methods
         protected abstract int GetMaxLevel();
         protected abstract List<Resource> GetCost(int level);
-        protected abstract List<IOwnable> GetCriteria(int level);
+        protected virtual List<IOwnable> GetCriteria(int level)
+        {
+            return new List<IOwnable>();
+        }
         protected virtual bool CheckCriteria(Player by, int level = 0)
         {
             return by.CheckResources(GetCost(level)) && by.CheckStructures(GetCriteria(level));

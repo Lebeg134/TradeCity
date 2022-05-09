@@ -22,5 +22,7 @@ namespace Lebeg134.Module.Structures
         void Build(Player by);
         bool CanBuild(Player by);
         List<Resource> GetUpkeep();
+        List<Resource> GetCost();
+        List<IOwnable> GetCriteria();
     }
 }

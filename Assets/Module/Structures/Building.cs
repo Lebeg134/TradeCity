@@ -49,17 +49,25 @@ namespace Lebeg134.Module.Structures
             if (BuildingState != BuildingState.BUILD) return false;
             return CheckCriteria(by, 0);
         }
+        public virtual List<Resource> GetUpkeep()
+        {
+            return GetUpkeep(level);
+        }
+        public virtual List<Resource> GetCost()
+        {
+            return GetCost(level);
+        }
+        public virtual List<IOwnable> GetCriteria()
+        {
+            return GetCriteria(level);
+        }
         public void PutResources(List<Resource> resources)
         {
             throw new NotImplementedException();
         }
-        public List<Resource> GetProduce()
+        public virtual List<Resource> GetProduce()
         {
             throw new NotImplementedException();
-        }
-        public List<Resource> GetUpkeep()
-        {
-            return GetUpkeep(level);
         }
 
         // ========== Internal Methods

@@ -13,7 +13,7 @@ using System.Collections.Generic;
 namespace Lebeg134.Structures.EnergySector
 {
     [Serializable]
-    public class CoalPowerplant : CommonProdBuilding
+    public class CoalPowerplant : Building
     {
         public override Branches GetBranch()
         {
@@ -34,7 +34,7 @@ namespace Lebeg134.Structures.EnergySector
             return new List<Resource> { new Electricity(5 * level) };
         }
 
-        public override List<Resource> GetUpkeep()
+        protected override List<Resource> GetUpkeep(int level)
         {
             return new List<Resource> { new Coal(15 * level) };
         }
@@ -44,7 +44,7 @@ namespace Lebeg134.Structures.EnergySector
             return new List<IOwnable>();
         }
 
-        public override List<Resource> GetUpgradeCost(int level)
+        protected override List<Resource> GetCost(int level)
         {
             if (level == 0)
                 return new List<Resource> { new Stone(100), new Workforce(50) };
@@ -56,7 +56,7 @@ namespace Lebeg134.Structures.EnergySector
                 return new List<Resource> { new ReinforcedConcrete(50 * level), new Steel(25 * level) };
         }
 
-        public override int REPLACEMEGetMaxLevel()
+        protected override int GetMaxLevel()
         {
             return 100;
         }

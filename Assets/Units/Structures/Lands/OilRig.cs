@@ -26,12 +26,12 @@ namespace Lebeg134.Structures.Lands
             return new OilRig();
         }
 
-        protected override List<Resource> ProductionLevels(int level)
+        protected override List<Resource> GetProduce(int level)
         {
             return new List<Resource>() { new Oil(20) };
         }
 
-        protected override List<Resource> UpgradeLevelsCosts(int level)
+        protected override List<Resource> GetCost(int level)
         {
             return new List<Resource>() { new Money(100 * level) };
         }

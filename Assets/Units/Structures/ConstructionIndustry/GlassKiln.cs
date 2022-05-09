@@ -12,7 +12,7 @@ using System.Collections.Generic;
 namespace Lebeg134.Structures.ConstructionIndustry
 {
     [Serializable]
-    public class GlassKiln : CommonProdBuilding
+    public class GlassKiln : Building
     {
         public override List<IOwnable> GetCriteria()
         {
@@ -24,7 +24,7 @@ namespace Lebeg134.Structures.ConstructionIndustry
             return Branches.CONSTRUCTION;
         }
 
-        public override int REPLACEMEGetMaxLevel()
+        protected override int GetMaxLevel()
         {
             return 10;
         }
@@ -39,12 +39,12 @@ namespace Lebeg134.Structures.ConstructionIndustry
             return new List<Resource> { new Glass(5 * level) };
         }
 
-        public override List<Resource> GetUpkeep()
+        protected override List<Resource> GetUpkeep(int level)
         {
             return new List<Resource> { new Sand(25 * level), new Electricity(25 * level) };
         }
 
-        public override List<Resource> GetUpgradeCost(int level)
+        protected override List<Resource> GetCost(int level)
         {
             if (level == 0)
                 return new List<Resource> { new Bricks(150), new Workforce(25) };

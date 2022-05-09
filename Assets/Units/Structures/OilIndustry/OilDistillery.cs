@@ -14,7 +14,7 @@ using System.Collections.Generic;
 namespace Lebeg134.Structures.OilIndustry
 {
     [Serializable]
-    public class OilDistillery : CommonProdBuilding
+    public class OilDistillery : Building
     {
         public override List<IOwnable> GetCriteria()
         {
@@ -26,7 +26,7 @@ namespace Lebeg134.Structures.OilIndustry
             return Branches.OIL;
         }
 
-        public override int REPLACEMEGetMaxLevel()
+        protected override int GetMaxLevel()
         {
             return 10;
         }
@@ -41,12 +41,12 @@ namespace Lebeg134.Structures.OilIndustry
             return new List<Resource> { new Fuel(2 * level * level), new Chemicals(4 * level * level) };
         }
 
-        public override List<Resource> GetUpkeep()
+        protected override List<Resource> GetUpkeep(int level)
         {
             return new List<Resource> { new Oil(30 * level * level), new Electricity(26 * level * level) };
         }
 
-        public override List<Resource> GetUpgradeCost(int level)
+        protected override List<Resource> GetCost(int level)
         {
             if (level == 0)
                 return new List<Resource> { new Concrete(500), new Workforce(100) };

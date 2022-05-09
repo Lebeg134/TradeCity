@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Lebeg134.Module.Resources;
+using System;
+using System.Collections.Generic;
 
 namespace Lebeg134.Module.Structures
 {

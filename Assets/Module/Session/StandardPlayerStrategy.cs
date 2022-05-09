@@ -26,7 +26,7 @@ namespace Lebeg134.Module.Session
                 }
                 foreach (IProducer producer in player.owned)
                 {
-                    producer.Produce();
+                    //producer.Produce();
                 }
 
             }

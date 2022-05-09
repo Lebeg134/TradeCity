@@ -40,7 +40,7 @@ namespace Lebeg134.Module.MarketNS
                     by.SubRes((Resource)WantSellable);
                     by.GiveRes((Resource)ForSellable);
                 }
-                catch (NotEnoughResourceException)
+                catch (Exception)
                 {
                     break;
                 }
@@ -69,7 +69,7 @@ namespace Lebeg134.Module.MarketNS
                     for (; count < amount; count++)
                         Poster.SubRes((Resource)ForSellable);
                 }
-                catch (NotEnoughResourceException)
+                catch (Exception)
                 {
                     amount = count;
                 }

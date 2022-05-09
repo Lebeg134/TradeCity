@@ -23,11 +23,11 @@ public class ReflectionSystem
     {
         DebugMode = false;
     }
-    private static void debug(object obj)
+    private static void Debug(object obj)
     {
         if (DebugMode)
         {
-            Debug.Log(obj);
+            UnityEngine.Debug.Log(obj);
         }
     }
     #endregion
@@ -51,7 +51,7 @@ public class ReflectionSystem
         }
         display = display.Substring(0, display.Length - arrowSymbol.Length); //remove the arrow
         display += "</b>";
-        debug(display);
+        Debug(display);
         #endregion
 
         //Trying to know if the SkillDatabase is instance var or static class
@@ -94,8 +94,8 @@ public class ReflectionSystem
 
 
         //if (currentMaster == null) return (object)currentMasterType;
-        debug($"<color=green><b>[RESULT]</b></color> <b> {currentMaster.ToStringWithQuotes()} </b>\n");
-        debug("<color=maroon><b>↑↑↑↑↑↑↑↑END Reflection↑↑↑↑↑↑↑↑</b></color>\n");
+        Debug($"<color=green><b>[RESULT]</b></color> <b> {currentMaster.ToStringWithQuotes()} </b>\n");
+        Debug("<color=maroon><b>↑↑↑↑↑↑↑↑END Reflection↑↑↑↑↑↑↑↑</b></color>\n");
         return currentMaster;
     }
 }

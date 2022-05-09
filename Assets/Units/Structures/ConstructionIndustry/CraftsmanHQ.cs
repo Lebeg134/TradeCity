@@ -14,7 +14,7 @@ namespace Lebeg134.Structures.ConstructionIndustry
     [Serializable]
     public class CraftsmanHQ : SpecialBuilding
     {
-        protected override List<Resource> GetCost()
+        public override List<Resource> GetCost()
         {
             return new List<Resource> { new Concrete(100), new Steel(100) };
         }

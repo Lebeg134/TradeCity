@@ -30,8 +30,7 @@ public class BuildingListItemScript : MonoBehaviour
         if (loadedSprite != null)
             buildingImage.sprite = loadedSprite;
 
-        if (target is Building)
-            levelText.text = "Lvl:" + ((Building)target).Level;
+        levelText.text = "Lvl:" + (target).Level;
 
         UpdateCostDisplay();
         buildButton.onClick.AddListener(() => OnClick());

@@ -27,6 +27,11 @@ namespace Lebeg134.Module.Session
                         producers.Add((IProducer)owned);
                 });
                 player.Production.Produce(producers);
+                foreach (Resource res in player.GetAllRes())
+                {
+                    res.Tick();
+                }
+                player.Production.GatherProducts();
             }
         }
     }

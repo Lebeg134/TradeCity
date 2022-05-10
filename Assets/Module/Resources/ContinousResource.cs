@@ -7,7 +7,7 @@ using System;
 namespace Lebeg134.Module.Resources
 {
     [Serializable]
-    public abstract class ContinousResource : Resource, ITickable
+    public abstract class ContinousResource : Resource
     {
         private BufferResource buffer;
         public ContinousResource(int amount) : base(amount) { }
@@ -21,13 +21,9 @@ namespace Lebeg134.Module.Resources
             stock = buffer.GetStock();
             buffer.Clear();
         }
-        public void Tick()
+        public override void Tick()
         {
             LoadBuffer();
-        }
-        public void Register()
-        {
-            Clock.Instance.Register(this);
         }
         internal class BufferResource : Resource
         {

@@ -27,12 +27,12 @@ namespace Lebeg134.Module.Structures
         public int MaxLevel => GetMaxLevel();
 
         // ========== Interface Implementations
-        public void Acquire(Player by)
+        public virtual void Acquire(Player by)
         {
             //Possibility to transfer ownership?, can implement later if needed
             owner = by;
         }
-        public void Upgrade()
+        public virtual void Upgrade()
         {
             if (CanUpgrade())
             {

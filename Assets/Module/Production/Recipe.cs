@@ -18,8 +18,9 @@ namespace Lebeg134.Module.Production
     public abstract class Recipe
     {
         public string Name { get; set; }
-        private List<Resource> input;
-        private List<Resource> output;
+        protected List<Resource> input;
+        protected List<Resource> output;
+        public int Limit { get; set; }
         public RecipePriority InputPriority { get; set; }
         public List<Resource>  Input => input;
 

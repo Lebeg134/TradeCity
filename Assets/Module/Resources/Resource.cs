@@ -2,13 +2,14 @@
 * @(#) Resource.cs
 */
 using Lebeg134.Module.Graphics;
+using Lebeg134.Module.TimeManager;
 using System;
 using System.Collections.Generic;
 
 namespace Lebeg134.Module.Resources
 {
     [Serializable]
-    public abstract class Resource : IGetRes
+    public abstract class Resource : IGetRes, ITickable
     {
         public event Action<int> OnAmountChange;
         //Amount of resource stored
@@ -70,6 +71,17 @@ namespace Lebeg134.Module.Resources
             OnAmountChange?.Invoke(stock - prevStock);
         }
         public abstract Resource GetNewResource(int amount);
+
+        public virtual void Tick()
+        {
+            //do nothing by default
+        }
+
+        public void Register()
+        {
+            //Cannot be directly registered
+        }
+
         public static Resource operator +(Resource A, Resource B)
         {
             if (A.GetType() != B.GetType()) throw new ArgumentException("Not same Type!");

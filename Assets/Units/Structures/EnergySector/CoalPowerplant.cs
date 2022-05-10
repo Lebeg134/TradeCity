@@ -1,3 +1,4 @@
+using Lebeg134.Module.Production;
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
 using Lebeg134.Resources.Common;
@@ -15,6 +16,15 @@ namespace Lebeg134.Structures.EnergySector
     [Serializable]
     public class CoalPowerplant : Building
     {
+        public CoalPowerplant()
+        {
+            recipes.Add(new SimpleRecipe(new Coal(3), new Electricity(1), 5));
+        }
+        public override void Upgrade()
+        {
+            base.Upgrade();
+            recipes[0].Limit += 5;
+        }
         public override Branches GetBranch()
         {
             return Branches.ENERGY;
@@ -29,14 +39,9 @@ namespace Lebeg134.Structures.EnergySector
             return GetBasePath() + "coal_powerplant";
         }
 
-        public override List<Resource> GetProduce()
-        {
-            return new List<Resource> { new Electricity(5 * level) };
-        }
-
         protected override List<Resource> GetUpkeep(int level)
         {
-            return new List<Resource> { new Coal(15 * level) };
+            return new List<Resource>();
         }
 
         public override List<IOwnable> GetCriteria()

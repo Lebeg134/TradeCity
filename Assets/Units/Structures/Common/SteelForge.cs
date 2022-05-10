@@ -1,3 +1,4 @@
+using Lebeg134.Module.Production;
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
 using Lebeg134.Resources.Common;
@@ -30,22 +31,21 @@ namespace Lebeg134.Structures.Common
             get
             {
                 return new[]{
-                    new List<Resource>{new Iron(10), new Electricity(1)},
-                    new List<Resource>{new Iron(20), new Electricity(2)}
+                    new List<Resource>{new Electricity(1)},
+                    new List<Resource>{new Electricity(2)}
                 };
             }
+        }
+        public SteelForge()
+        {
+            recipes.Add(new SimpleRecipe(new Iron(2), new Steel(1), 5));
+        }
+        public override void Upgrade()
+        {
+            base.Upgrade();
+            recipes[0].Limit += 5;
         }
 
-        protected static List<Resource>[] GetProduces
-        {
-            get
-            {
-                return new[]{
-                    new List<Resource> { new Steel(5) },
-                    new List<Resource> { new Steel(10) }
-                };
-            }
-        }
         public override string GetName()
         {
             return "Steel Forge";
@@ -75,10 +75,6 @@ namespace Lebeg134.Structures.Common
             return UpkeepLevelsArray[level - 1];
         }
 
-        public override List<Resource> GetProduce()
-        {
-            return GetProduces[level - 1];
-        }
 
         protected override int GetMaxLevel()
         {

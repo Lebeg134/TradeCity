@@ -1,7 +1,7 @@
 /**
  * @(#) IProducer.cs
  */
-using Assets.Module.Production;
+using Lebeg134.Module.Production;
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.TimeManager;
 using System.Collections.Generic;

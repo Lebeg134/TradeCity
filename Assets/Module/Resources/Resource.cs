@@ -80,6 +80,14 @@ namespace Lebeg134.Module.Resources
             if (A.GetType() != B.GetType()) throw new ArgumentException("Not same Type!");
             return A.Spend(B.stock);
         }
+        public static Resource operator +(Resource A, int B)
+        {
+            return A.Gain(B);
+        }
+        public static Resource operator-(Resource A, int B)
+        {
+            return A.Spend(B);
+        }
         public static List<Resource> operator +(List<Resource> list, Resource B)
         {
             foreach (Resource A in list)

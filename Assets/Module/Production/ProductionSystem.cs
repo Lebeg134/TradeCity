@@ -1,16 +1,11 @@
 ﻿using Lebeg134.Module.Resources;
 using Lebeg134.Module.Session;
 using Lebeg134.Module.Structures;
-using Lebeg134.Module.TimeManager;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Assets.Module.Production
+namespace Lebeg134.Module.Production
 {
-    public class ProductionSystem: ITickable
+    public class ProductionSystem: IProductionSystem
     {
         private Player owner;
         List<Resource> outBuffer;
@@ -18,27 +13,31 @@ namespace Assets.Module.Production
         {
             this.owner = owner;
         }
-        private void DistributeResources()
+        private void DistributeResources(List<Recipe> recipes, Resource resource)
         {
 
         }
-        private List<Building> GetConsumersOf(Resource resource)
-        {
-            return null;
-        }
-        private void GatherProducts()
+        public void GatherProducts()
         {
 
         }
 
-        public void Tick()
+        public void Produce(List<IProducer> producers)
         {
-            throw new NotImplementedException();
-        }
+            List<Recipe> recipes = new List<Recipe>();
+            foreach (IProducer producer in producers)
+            {
+                recipes.AddRange(producer.Recipes);
+            }
 
-        public void Register()
-        {
-            Clock.Instance.Register(this);
+            foreach (Resource playerRes in owner.GetAllRes())
+            {
+                DistributeResources(recipes, playerRes);
+            }
+
+            recipes.ForEach((recipe) => recipe.Produce());
+
+            GatherProducts();
         }
     }
 }

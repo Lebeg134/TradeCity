@@ -20,6 +20,12 @@ namespace Lebeg134.Module.Structures
         public event Action<Land> OnPurchase;
 
         // ========== Interface Implementations
+        public override void Acquire(Player by)
+        {
+            base.Acquire(by);
+            OnPurchase?.Invoke(this);
+            Register();
+        }
         public void GetPosition()
         {
             throw new NotImplementedException();
@@ -35,8 +41,6 @@ namespace Lebeg134.Module.Structures
         public void Purchase(Player by)
         {
             Acquire(by);
-            OnPurchase?.Invoke(this);
-            Register();
         }
         public void Register()
         {

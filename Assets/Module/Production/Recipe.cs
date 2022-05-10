@@ -23,6 +23,12 @@ namespace Lebeg134.Module.Production
         public int Limit { get; set; }
         public RecipePriority InputPriority { get; set; }
         public List<Resource>  Input => input;
+        
+        public Recipe()
+        {
+            input = new List<Resource>();
+            output = new List<Resource>();
+        }
 
         /// <summary>
         /// Method subtracts maximum amount from given resource to produce with full capacity

@@ -9,6 +9,7 @@ using Lebeg134.Resources.Common;
 using Lebeg134.Units;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Lebeg134.Module.Structures
 {
@@ -24,7 +25,6 @@ namespace Lebeg134.Module.Structures
         {
             base.Acquire(by);
             OnPurchase?.Invoke(this);
-            Register();
         }
         public void GetPosition()
         {
@@ -48,7 +48,7 @@ namespace Lebeg134.Module.Structures
         }
         public void Tick()
         {
-            owner?.GiveRes(GetProduce());
+            owner.GiveRes(GetProduce());
         }
         public abstract Land GetNew();
         //public abstract List<Resource> GetStartingCost();

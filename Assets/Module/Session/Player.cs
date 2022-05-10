@@ -7,6 +7,7 @@ using Lebeg134.Module.Structures;
 using Lebeg134.Module.TimeManager;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Lebeg134.Module.Session
 {

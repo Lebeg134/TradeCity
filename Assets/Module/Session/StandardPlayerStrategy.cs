@@ -14,9 +14,13 @@ namespace Lebeg134.Module.Session
         [Serializable]
         public class StandardPlayerStrategy : PlayerStrategyBase
         {
-            public StandardPlayerStrategy(Player subject) : base(subject) { }
+            public StandardPlayerStrategy(Player subject) : base(subject) 
+            {
+                player.Production = new ProductionSystem(player, new EvenDistributionStrartegy());
+            }
             public override void Tick()
             {
+                base.Tick();
                 Produce();
             }
             private void Produce()

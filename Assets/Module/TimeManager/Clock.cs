@@ -3,6 +3,7 @@
 */
 using System.Collections.Generic;
 using System.Timers;
+using UnityEngine;
 
 namespace Lebeg134.Module.TimeManager
 {
@@ -64,12 +65,7 @@ namespace Lebeg134.Module.TimeManager
         }
         void Tick(object source, ElapsedEventArgs e)
         {
-            for (int i = 0; i < tickables.Count; i++) // foreach is immuteable! ->crash
-            {
-                tickables[i].Tick();
-                if (!timer.Enabled) // Had a lot of crashes because this isn't thread safe
-                    break;
-            }
+            tickables.ForEach((tickable) => tickable.Tick());
         }
         public void Register(ITickable tickable)
         {

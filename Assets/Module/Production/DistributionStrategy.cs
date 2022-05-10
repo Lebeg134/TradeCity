@@ -10,10 +10,15 @@ namespace Lebeg134.Module.Production
 {
     public abstract class DistributionStrategy : IDistributionStrategy
     {
-        static List<IDistributionStrategy> GetAllStrategys()
+        public static List<IDistributionStrategy> GetAllStrategys()
         {
             return new List<IDistributionStrategy>() { new EvenDistributionStrartegy()};
         }
+        public static void DistributeDefault(Resource resource, List<Recipe> recipes)
+        {
+
+        }
+
 
         public abstract void Distribute(Resource resource, List<Recipe> recipes);
 

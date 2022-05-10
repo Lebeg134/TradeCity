@@ -8,18 +8,39 @@ namespace Lebeg134.Module.Production
     public class ProductionSystem: IProductionSystem
     {
         private Player owner;
-        List<Resource> outBuffer;
-        public ProductionSystem(Player owner)
+        private List<Resource> outBuffer;
+        IDistributionStrategy DistStrategy { get; set; }
+        public ProductionSystem(Player owner, IDistributionStrategy distributionStrategy)
         {
             this.owner = owner;
+            DistStrategy = distributionStrategy;
         }
-        private void DistributeResources(List<Recipe> recipes, Resource resource)
+        private void DistributeResources(Resource resource, List<Recipe> recipes)
         {
-
+            if (owner.HasResource(resource.GetNewResource(SumResFromRecipes(resource, recipes))))
+                DistributionStrategy.DistributeDefault(resource, recipes);
+            else
+                DistStrategy.Distribute(resource, recipes);
         }
+        private int SumResFromRecipes(Resource resource, List<Recipe> recipes)
+        {
+            int amount = 0;
+            foreach (Recipe recipe in recipes)
+            {
+                foreach (Resource res in recipe.Input)
+                {
+                    if(res.GetType() == resource.GetType())
+                    {
+                        amount += res.GetStock();
+                    }
+                }
+            }
+            return amount;
+        }
+
         public void GatherProducts()
         {
-
+            owner.GiveRes(outBuffer);
         }
 
         public void Produce(List<IProducer> producers)
@@ -32,12 +53,14 @@ namespace Lebeg134.Module.Production
 
             foreach (Resource playerRes in owner.GetAllRes())
             {
-                DistributeResources(recipes, playerRes);
+                DistributeResources(playerRes, recipes);
             }
 
-            recipes.ForEach((recipe) => recipe.Produce());
-
-            GatherProducts();
+            outBuffer.Clear();
+            foreach (Recipe recipe in recipes)
+            {
+                outBuffer.AddRange(recipe.Produce());
+            }
         }
     }
 }

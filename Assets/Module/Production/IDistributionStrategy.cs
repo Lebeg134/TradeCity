@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Lebeg134.Module.Production
 {
-    interface IDistributionStrategy
+    public interface IDistributionStrategy
     {
         void Distribute(Resource resource, List<Recipe> recipes);
         string GetName();

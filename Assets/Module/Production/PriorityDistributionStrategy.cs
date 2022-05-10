@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lebeg134.Module.Production
 {
-    class PriorityDistributionStrategy : DistributionStrategy
+    public class PriorityDistributionStrategy : DistributionStrategy
     {
         public override void Distribute(Resource resource, List<Recipe> recipes)
         {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Lebeg134.Module.Production
 {
-    class EvenDistributionStrartegy : DistributionStrategy
+    public class EvenDistributionStrartegy : DistributionStrategy
     {
         public override void Distribute(Resource resource, List<Recipe> inputs)
         {

@@ -1,9 +1,11 @@
 ﻿/**
  * @(#) StandardPlayerStrategy.cs
  */
+using Lebeg134.Module.Production;
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
 using System;
+using System.Collections.Generic;
 
 namespace Lebeg134.Module.Session
 {
@@ -19,16 +21,12 @@ namespace Lebeg134.Module.Session
             }
             private void Produce()
             {
-                foreach (Resource cntRes in player.cntResourcesBuffer.Values)
-                {
-                    player.ownedResources[cntRes.GetType()].SetStock(cntRes.GetStock());
-                    cntRes.SetStock(0);
-                }
-                foreach (IProducer producer in player.owned)
-                {
-                    //producer.Produce();
-                }
-
+                List<IProducer> producers = new List<IProducer>();
+                player.owned.ForEach((owned) => {
+                    if (owned is IProducer)
+                        producers.Add((IProducer)owned);
+                });
+                player.Production.Produce(producers);
             }
         }
     }

@@ -1,6 +1,7 @@
 /**
 * @(#) Player.cs
 */
+using Lebeg134.Module.Production;
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
 using Lebeg134.Module.TimeManager;
@@ -19,8 +20,8 @@ namespace Lebeg134.Module.Session
 
         List<IOwnable> owned = new List<IOwnable>();
         Dictionary<Type, Resource> ownedResources = new Dictionary<Type, Resource>();
-        Dictionary<Type, Resource> cntResourcesBuffer = new Dictionary<Type, Resource>();
         IPlayerStrategy playerStrategy;
+        ProductionSystem Production { get; set; }
         public static Player CurrentPlayer { get; set; }
 
         public Player()
@@ -146,15 +147,7 @@ namespace Lebeg134.Module.Session
         public void GiveRes(Resource resource)
         {
             OnResourceChange?.Invoke(resource);
-            if (resource is ContinousResource)
-            {
-                cntResourcesBuffer[resource.GetType()] += resource;
-            }
-            else
-            {
-                ownedResources[resource.GetType()] += resource;
-            }
-
+            ownedResources[resource.GetType()] += resource;
         }
         public void GiveRes(List<Resource> resources)
         {
@@ -168,10 +161,6 @@ namespace Lebeg134.Module.Session
             foreach (Resource res in newResList)
             {
                 ownedResources.Add(res.GetType(), res.GetNewResource(0));
-                if (res is ContinousResource)
-                {
-                    cntResourcesBuffer.Add(res.GetType(), res.GetNewResource(0));
-                }
             }
         }
         public void Freeze()

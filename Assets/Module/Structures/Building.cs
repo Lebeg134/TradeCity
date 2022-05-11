@@ -40,6 +40,7 @@ namespace Lebeg134.Module.Structures
             {
                 by.SubRes(GetCost(0));
                 by.GiveStructure(this);
+                level = 1;
                 Debug.Log(GetName()+" built");
                 string buildings = "{ ";
                 by.GetAllBuildings().ForEach((building) => buildings += building.GetName() + ", ");

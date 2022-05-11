@@ -18,7 +18,6 @@ public class BuildingListItemScript : MonoBehaviour
     public HorizontalLayoutGroup costsList;
     public GameObject CostDisplayPrefab;
     Building target;
-    BuildingState btnState = BuildingState.BUILD;
 
     // Start is called before the first frame update
     void Start()
@@ -41,12 +40,12 @@ public class BuildingListItemScript : MonoBehaviour
     {
         UpdateButton();
         if (target == null) return;
-        UpdateState();
     }
 
     private void OnClick()
     {
-        switch (btnState)
+        Debug.Log(target.BuildingState);
+        switch (target.BuildingState)
         {
             case BuildingState.BUILD:
                 target.Build(Player.CurrentPlayer);
@@ -62,18 +61,12 @@ public class BuildingListItemScript : MonoBehaviour
                 break;
         }
         levelText.text = "Lvl:" + target.Level;
-        UpdateState();
         UpdateButton();
         UpdateCostDisplay();
     }
-
-    private void UpdateState()
-    {
-        btnState = target.BuildingState;
-    }
     private void UpdateButton()
     {
-        switch (btnState)
+        switch (target.BuildingState)
         {
             case BuildingState.BUILD:
                 buildButton.GetComponentInChildren<Text>().text = "Build";

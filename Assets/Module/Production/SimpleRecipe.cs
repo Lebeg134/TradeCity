@@ -8,18 +8,18 @@ using UnityEngine;
 
 namespace Lebeg134.Module.Production
 {
-    public class SimpleRecipe:Recipe
+    public class SimpleRecipe : Recipe
     {
         Resource from, to;
-        
-         
+
+
         /// <summary>
         /// Constructor of simple custom recipes where the two Resources define the ratio between convertion
         /// </summary>
         /// <param name="from">Input requirement of the Recipe</param>
         /// <param name="to">Output of the recipe</param>
         /// <param name="limit">Default number of times recipe can be crafted in a period</param>
-        public SimpleRecipe(Resource from, Resource to, int limit):base()
+        public SimpleRecipe(Resource from, Resource to, int limit) : base()
         {
             this.from = from;
             input.Add(from.GetNewResource(0));
@@ -44,11 +44,12 @@ namespace Lebeg134.Module.Production
         protected override void Process()
         {
             Resource resource = input.Find((res) => res.GetType() == from.GetType());
-            int num = resource.GetStock()/from.GetStock();
+            int num = resource.GetStock() / from.GetStock();
             if (num > Limit)
                 Limit = num;
-            resource.Spend(num*from.GetStock());
-            Debug.Log("Produced: "+ to.GetStock() * num+" "+to.GetName());
+            resource.Spend(num * from.GetStock());
+            if (num > 0)
+                Debug.Log("Produced: " + to.GetStock() * num + " " + to.GetName());
             output.Add(to.GetNewResource(to.GetStock() * num));
         }
     }

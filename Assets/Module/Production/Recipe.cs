@@ -39,7 +39,6 @@ namespace Lebeg134.Module.Production
         protected abstract void Process();
         public List<Resource> Produce()
         {
-            Debug.Log("Production called");
             Process();
             return output;
         }

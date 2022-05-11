@@ -38,7 +38,6 @@ namespace Lebeg134.Module.Session
                 {
                     res.Tick();
                 }
-                Debug.Log("Gathering started");
                 player.Production.GatherProducts();
             }
         }

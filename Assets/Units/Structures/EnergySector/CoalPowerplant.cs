@@ -20,7 +20,6 @@ namespace Lebeg134.Structures.EnergySector
         public CoalPowerplant()
         {
             recipes.Add(new SimpleRecipe(new Coal(3), new Electricity(1), 5));
-            Debug.Log("Recipe added");
         }
         public override void Upgrade()
         {

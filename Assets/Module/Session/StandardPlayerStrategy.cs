@@ -21,6 +21,10 @@ namespace Lebeg134.Module.Session
             }
             public override void Tick()
             {
+                foreach (Resource res in player.GetAllRes())
+                {
+                    res.Tick();
+                }
                 base.Tick();
                 Produce();
             }
@@ -33,10 +37,6 @@ namespace Lebeg134.Module.Session
                         producers.Add((IProducer)owned);
                     }
                 });
-                foreach (Resource res in player.GetAllRes())
-                {
-                    res.Tick();
-                }
                 player.Production.Produce(producers);
                 player.Production.GatherProducts();
             }

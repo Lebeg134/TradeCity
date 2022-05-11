@@ -80,8 +80,13 @@ namespace Lebeg134.Module.Structures
         public void Tick()
         {
             //TODO check if theres a better method than auto turn-on
-            Debug.Log("Upkeep is "+GetUpkeep()[0].GetStock()+" "+GetUpkeep()[0].GetName());
-            Debug.Log("Player has " + owner.GetRes(GetUpkeep()[0]) + " " + GetUpkeep()[0].GetName());
+            if (GetUpkeep().Count >= 1)
+            {
+                Debug.Log("Upkeep is " + GetUpkeep()[0].GetStock() + " " + GetUpkeep()[0].GetName());
+                Debug.Log("Player has " + owner.GetRes(GetUpkeep()[0]) + " " + GetUpkeep()[0].GetName());
+            }
+            else
+                Debug.Log("Free Upkeep yay");
             if (owner.CheckResources(GetUpkeep()))
             {
                 owner.SubRes(GetUpkeep());

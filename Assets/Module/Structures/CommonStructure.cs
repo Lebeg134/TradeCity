@@ -37,6 +37,7 @@ namespace Lebeg134.Module.Structures
             if (CanUpgrade())
             {
                 owner.SubRes(GetCost(Level));
+                level++;
                 OnUpgrade?.Invoke(this);
                 if (level >= MaxLevel)
                     OnMaxLevelReached?.Invoke(this);

@@ -74,7 +74,7 @@ public class BuildingListItemScript : MonoBehaviour
                 break;
             case BuildingState.UPGRADE:
                 buildButton.GetComponentInChildren<Text>().text = "Upgrade";
-                buildButton.interactable = target.CanBuild(Player.CurrentPlayer);
+                buildButton.interactable = target.CanUpgrade();
                 break;
             case BuildingState.MAXLEVEL:
                 buildButton.GetComponentInChildren<Text>().text = "Maxed";

@@ -9,12 +9,13 @@ namespace Lebeg134.Module.Resources
     [Serializable]
     public abstract class ContinousResource : Resource
     {
-        private BufferResource buffer;
+        private BufferResource buffer = new BufferResource();
         public ContinousResource(int amount) : base(amount) { }
 
         public override Resource Gain(int amount)
         {
-            return buffer.Gain(amount);
+            buffer.Gain(amount);
+            return this;
         }
         void LoadBuffer()
         {

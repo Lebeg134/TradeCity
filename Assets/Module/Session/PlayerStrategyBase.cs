@@ -1,6 +1,7 @@
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.TimeManager;
 using System;
+using UnityEngine;
 /**
 * @(#) PlayerStrategyBase.cs
 */
@@ -33,9 +34,10 @@ namespace Lebeg134.Module.Session
 
             public virtual void Tick()
             {
-                foreach (ITickable tickable in player.owned)
+                foreach (var tickable in player.owned)
                 {
-                    tickable.Tick();
+                    if (tickable is ITickable)
+                        ((ITickable)tickable).Tick();
                 }
             }
 

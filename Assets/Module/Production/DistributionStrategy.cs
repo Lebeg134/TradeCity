@@ -16,7 +16,10 @@ namespace Lebeg134.Module.Production
         }
         public static void DistributeDefault(Resource resource, List<Recipe> recipes)
         {
-
+            foreach (Recipe recipe in recipes)
+            {
+                recipe.AddResource(resource);
+            }
         }
 
 

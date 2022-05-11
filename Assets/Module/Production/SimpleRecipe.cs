@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Lebeg134.Module.Production
 {
@@ -47,7 +48,7 @@ namespace Lebeg134.Module.Production
             if (num > Limit)
                 Limit = num;
             resource.Spend(num*from.GetStock());
-
+            Debug.Log("Produced: "+ to.GetStock() * num+" "+to.GetName());
             output.Add(to.GetNewResource(to.GetStock() * num));
         }
     }

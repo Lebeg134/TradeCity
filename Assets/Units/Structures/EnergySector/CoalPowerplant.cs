@@ -8,6 +8,7 @@ using Lebeg134.Resources.Workforce;
 using Lebeg134.Units;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 /**
 * @(#) CoalPowerplant.cs
 */
@@ -19,6 +20,7 @@ namespace Lebeg134.Structures.EnergySector
         public CoalPowerplant()
         {
             recipes.Add(new SimpleRecipe(new Coal(3), new Electricity(1), 5));
+            Debug.Log("Recipe added");
         }
         public override void Upgrade()
         {

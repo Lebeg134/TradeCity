@@ -3,7 +3,7 @@
   <Class Name="Lebeg134.Module.Structures.Building">
     <Position X="2" Y="14" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAIAAABAgAgAAAIEQAABAAAgA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAEAgAAAAIAAABAgAgAAAIEQAABAAAgA=</HashCode>
       <FileName>Assets\Module\Structures\Building.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -26,7 +26,7 @@
   <Class Name="Lebeg134.Module.Structures.Land">
     <Position X="4.25" Y="14" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAAAQAAAAAAABAABAAAAAAQAAAAQQAA=</HashCode>
+      <HashCode>AAQAAAAAACAAAAAAQgAAACAABAABAAAgAIQAAAAQQAA=</HashCode>
       <FileName>Assets\Module\Structures\Land.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -49,14 +49,14 @@
   <Interface Name="Lebeg134.Module.Structures.IBuilding">
     <Position X="10" Y="14.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAgAABIEAAAAAAAkA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAEAAAAAAAAAAAAgAgAABIEAAAAAAAkA=</HashCode>
       <FileName>Assets\Module\Structures\Interfaces\IBuilding.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Lebeg134.Module.Structures.ILand">
     <Position X="7.75" Y="14.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAQAAAACAAAAAAAAAAAAQAAAAAAAA=</HashCode>
       <FileName>Assets\Module\Structures\Interfaces\ILand.cs</FileName>
     </TypeIdentifier>
   </Interface>

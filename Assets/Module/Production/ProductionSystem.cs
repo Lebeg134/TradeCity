@@ -1,14 +1,17 @@
 ﻿using Lebeg134.Module.Resources;
 using Lebeg134.Module.Session;
 using Lebeg134.Module.Structures;
+using Lebeg134.Resources.Common;
+using Lebeg134.Resources.EnergySector;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Lebeg134.Module.Production
 {
     public class ProductionSystem: IProductionSystem
     {
         private Player owner;
-        private List<Resource> outBuffer;
+        private List<Resource> outBuffer = new List<Resource>();
         IDistributionStrategy DistStrategy { get; set; }
         public ProductionSystem(Player owner, IDistributionStrategy distributionStrategy)
         {
@@ -17,10 +20,15 @@ namespace Lebeg134.Module.Production
         }
         private void DistributeResources(Resource resource, List<Recipe> recipes)
         {
+            if (recipes.Count > 0 && (resource.GetType() == typeof(Coal) || resource.GetType() == typeof(Wood)))
+                Debug.Log("Distributing " +resource.GetStock()+" "+ resource.GetName() + " to " + recipes.Count + " recipes");
             if (owner.HasResource(resource.GetNewResource(SumResFromRecipes(resource, recipes))))
                 DistributionStrategy.DistributeDefault(resource, recipes);
             else
                 DistStrategy.Distribute(resource, recipes);
+            if (recipes.Count > 0 && (resource.GetType() == typeof(Coal) || resource.GetType() == typeof(Wood)))
+                Debug.Log("After distr: " + resource.GetStock() + " " + resource.GetName());
+
         }
         private int SumResFromRecipes(Resource resource, List<Recipe> recipes)
         {
@@ -41,6 +49,7 @@ namespace Lebeg134.Module.Production
         public void GatherProducts()
         {
             owner.GiveRes(outBuffer);
+            Debug.Log("Gave owner " + outBuffer.Count);
         }
 
         public void Produce(List<IProducer> producers)
@@ -48,6 +57,7 @@ namespace Lebeg134.Module.Production
             List<Recipe> recipes = new List<Recipe>();
             foreach (IProducer producer in producers)
             {
+                Debug.Log("Adding recipes from " + producer.ToString());
                 recipes.AddRange(producer.Recipes);
             }
 
@@ -57,9 +67,14 @@ namespace Lebeg134.Module.Production
             }
 
             outBuffer.Clear();
+            Debug.Log("num of recipes to produce: " + recipes.Count);
             foreach (Recipe recipe in recipes)
             {
-                outBuffer.AddRange(recipe.Produce());
+                List<Resource> reslist = recipe.Produce();
+                Debug.Log("Adding resources to out buffer "+reslist.Count);
+                outBuffer.AddRange(reslist);
+                reslist.Clear();
+                //TODO Limit resources potencial bug!
             }
 
         }

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lebeg134.Module.Production.DistributionStrategy">
+    <Position X="8.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAhAA=</HashCode>
+      <FileName>Assets\Module\Production\DistributionStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lebeg134.Module.Production.EvenDistributionStrartegy">
+    <Position X="7.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhAA=</HashCode>
+      <FileName>Assets\Module\Production\EvenDistributionStrartegy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Module.Production.PriorityDistributionStrategy">
+    <Position X="9.5" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhAA=</HashCode>
+      <FileName>Assets\Module\Production\PriorityDistributionStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Module.Production.ProductionSystem" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAEAAAgAgAAAAAAAAAAIAAAAAAAEAAAAAAgAA=</HashCode>
+      <FileName>Assets\Module\Production\ProductionSystem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lebeg134.Module.Production.Recipe">
+    <Position X="12.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAIgAAAQQAGAAAABAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Module\Production\Recipe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lebeg134.Module.Production.SimpleRecipe">
+    <Position X="12.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAgAAAAgAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Module\Production\SimpleRecipe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Lebeg134.Module.Production.IDistributionStrategy">
+    <Position X="16.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhAA=</HashCode>
+      <FileName>Assets\Module\Production\IDistributionStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Lebeg134.Module.Production.IProductionSystem">
+    <Position X="14.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Module\Production\IProductionSystem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Lebeg134.Module.Production.RecipePriority">
+    <Position X="10.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAgAAABAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\Module\Production\Recipe.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

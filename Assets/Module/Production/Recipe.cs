@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Lebeg134.Module.Production
 {
@@ -38,6 +39,7 @@ namespace Lebeg134.Module.Production
         protected abstract void Process();
         public List<Resource> Produce()
         {
+            Debug.Log("Production called");
             Process();
             return output;
         }

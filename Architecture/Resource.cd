@@ -13,7 +13,6 @@
       <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAABAAAAAABAAAAAQAA=</HashCode>
       <FileName>Assets\Module\Resources\ContinousResource.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Lebeg134.Module.Resources.LimitResource">
     <Position X="6" Y="5" Width="1.5" />
@@ -32,7 +31,7 @@
       </Class>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>BAAAAAQAAAAAAEAAQAEAAAAgCMABAIAAAAAAAAAABAA=</HashCode>
+      <HashCode>BAAAAAQAAAAAAEAAQAEAAAAgCMABAIAAAAAAAAAARAA=</HashCode>
       <FileName>Assets\Module\Resources\Resource.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

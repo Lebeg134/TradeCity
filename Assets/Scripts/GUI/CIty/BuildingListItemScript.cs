@@ -54,20 +54,14 @@ public class BuildingListItemScript : MonoBehaviour
             case BuildingState.UPGRADE:
                 if (Player.CurrentPlayer.HasStructure(target))
                 {
-                    if (target is Building)
-                    {
-                        ((Building)target).Upgrade();
-                    }
+                    target.Upgrade();
                 }
                 break;
             case BuildingState.MAXLEVEL:
                 //Do nothing
                 break;
         }
-        if (target is Building)
-        {
-            levelText.text = "Lvl:" + ((Building)target).Level;
-        }
+        levelText.text = "Lvl:" + target.Level;
         UpdateState();
         UpdateButton();
         UpdateCostDisplay();

@@ -18,7 +18,7 @@
   <Class Name="Lebeg134.Module.MapNS.Map" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="2.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAABAAIAAAAAAAAAABhAAhAEACAAAAAQAA=</HashCode>
+      <HashCode>AAAAAAgAAAAABAAIAAAAAAAAAABhAAgAEACAAAAAQAA=</HashCode>
       <FileName>Assets\Module\Map\Map.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />

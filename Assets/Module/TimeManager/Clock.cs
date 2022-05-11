@@ -65,7 +65,15 @@ namespace Lebeg134.Module.TimeManager
         }
         void Tick(object source, ElapsedEventArgs e)
         {
-            tickables.ForEach((tickable) => tickable.Tick());
+            try
+            {
+                tickables.ForEach((tickable) => tickable.Tick());
+            }
+            catch (System.Exception exc)
+            {
+                Debug.LogError(exc.StackTrace);
+                throw;
+            }
         }
         public void Register(ITickable tickable)
         {

@@ -6,6 +6,7 @@ using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Lebeg134.Module.Session
 {
@@ -28,13 +29,16 @@ namespace Lebeg134.Module.Session
                 List<IProducer> producers = new List<IProducer>();
                 player.owned.ForEach((owned) => {
                     if (owned is IProducer)
+                    {
                         producers.Add((IProducer)owned);
+                    }
                 });
                 player.Production.Produce(producers);
                 foreach (Resource res in player.GetAllRes())
                 {
                     res.Tick();
                 }
+                Debug.Log("Gathering started");
                 player.Production.GatherProducts();
             }
         }

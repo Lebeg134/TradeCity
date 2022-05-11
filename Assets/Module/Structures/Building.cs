@@ -7,6 +7,7 @@ using Lebeg134.Module.Session;
 using Lebeg134.Units;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Lebeg134.Module.Structures
 {
@@ -38,6 +39,11 @@ namespace Lebeg134.Module.Structures
             if (CanBuild(by))
             {
                 by.SubRes(GetCost(0));
+                by.GiveStructure(this);
+                Debug.Log(GetName()+" built");
+                string buildings = "{ ";
+                by.GetAllBuildings().ForEach((building) => buildings += building.GetName() + ", ");
+                Debug.Log(buildings + "}");
                 Acquire(by);
                 OnBuild?.Invoke(this);
                 if (BuildingState == BuildingState.MAXLEVEL)

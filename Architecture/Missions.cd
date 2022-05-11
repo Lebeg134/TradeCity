@@ -7,8 +7,8 @@
       <FileName>Assets\Module\Missions\Mission.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="reward" />
       <Field Name="goal" />
+      <Field Name="reward" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>

@@ -42,9 +42,9 @@ namespace Lebeg134.Module.Structures
         }
         public virtual void Off()
         {
-            if (!isOn)
+            if (isOn)
             {
-                isOn = true;
+                isOn = false;
                 OnTurnOff?.Invoke(this);
             }
         }

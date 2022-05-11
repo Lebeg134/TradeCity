@@ -51,6 +51,7 @@ namespace Lebeg134.Module.Production
             List<Recipe> recipes = new List<Recipe>();
             foreach (IProducer producer in producers)
             {
+                if (producer is Building && !((Building)producer).IsOn) continue;
                 recipes.AddRange(producer.Recipes);
             }
 

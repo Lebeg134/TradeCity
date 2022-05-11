@@ -77,6 +77,30 @@ namespace Lebeg134.Module.Structures
             throw new NotImplementedException();
         }
 
+        public void Tick()
+        {
+            //TODO check if theres a better method than auto turn-on
+            Debug.Log("Upkeep is "+GetUpkeep()[0].GetStock()+" "+GetUpkeep()[0].GetName());
+            Debug.Log("Player has " + owner.GetRes(GetUpkeep()[0]) + " " + GetUpkeep()[0].GetName());
+            if (owner.CheckResources(GetUpkeep()))
+            {
+                owner.SubRes(GetUpkeep());
+                Debug.Log("Upkeep subtracted");
+                On();
+            }
+            else
+            {
+                Off();
+            }
+            Debug.Log("Building is on:" + isOn);
+        }
+
+        public void Register()
+        {
+            //cannot register directly
+            throw new NotImplementedException();
+        }
+
         // ========== Internal Methods
         protected abstract List<Resource> GetUpkeep(int level);
         override protected string GetBasePath()

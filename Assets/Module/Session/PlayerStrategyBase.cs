@@ -36,8 +36,12 @@ namespace Lebeg134.Module.Session
             {
                 foreach (var tickable in player.owned)
                 {
+                    
                     if (tickable is ITickable)
+                    {
+                        Debug.Log("Ticked: " + tickable.ToString());
                         ((ITickable)tickable).Tick();
+                    }
                 }
             }
 

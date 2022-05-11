@@ -39,6 +39,9 @@ namespace Lebeg134.Module.Session
             player.RegisterResources(GetResourceList());
             player.GiveRes(new Money(50000));
             player.GiveRes(new Workforce(2000));
+            player.GiveRes(new Wood(1000));
+            player.GiveRes(new Iron(1000));
+            player.GiveRes(new Stone(1000));
         }
         public static List<Resource> GetResourceList()
         {

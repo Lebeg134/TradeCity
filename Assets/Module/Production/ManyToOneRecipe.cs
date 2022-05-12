@@ -25,13 +25,16 @@ namespace Lebeg134.Module.Production
         {
             foreach(Resource res in from)
             {
-                if (resource.GetType() == from.GetType())
+                if (resource.GetType() == res.GetType())
                 {
-                    int subtract = res.GetStock() * Limit;
+                    Debug.Log("Adding " + res.GetName());
+                    int subtract = res.GetStock() * Limit-input.Find((r) => r.GetType() == res.GetType()).GetStock();
+                    if (subtract < 0) return 0; //if limit gets lower somehow this is needed
                     if (subtract > resource.GetStock())
                         subtract = resource.GetStock();
                     resource.Spend(subtract);
                     input += resource.GetNewResource(subtract);
+                    Debug.Log("Added " + subtract);
                     return subtract;
                 }
             }
@@ -40,6 +43,11 @@ namespace Lebeg134.Module.Production
 
         protected override void Process()
         {
+            string inBuffer = "Resources in: ";
+            foreach (Resource resource in input)
+            {
+                inBuffer += resource.GetStock() + " " + resource.GetName() + ", ";
+            }
             List<int> num = new List<int>();
             var zipped = input.Zip(from, (inp, frm) => new
             {
@@ -51,10 +59,13 @@ namespace Lebeg134.Module.Production
                 num.Add(line.inpt.GetStock() / line.from.GetStock());
             }
             int craft = num.Min();
+            Debug.Log(craft);
             foreach(var line in zipped)
             {
                 line.inpt.Spend(craft * line.from.GetStock());
+                Debug.Log("Spent: " + craft * line.from.GetStock() + " " + line.from.GetName());
             }
+            Debug.Log(inBuffer);
             Debug.Log("Produced: " + to.GetStock() * craft + " " + to.GetName());
             output.Add(to.GetNewResource(craft * to.GetStock()));
         }

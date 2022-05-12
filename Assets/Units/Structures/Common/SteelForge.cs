@@ -25,20 +25,9 @@ namespace Lebeg134.Structures.Common
                 };
             }
         }
-
-        protected static List<Resource>[] UpkeepLevelsArray
-        {
-            get
-            {
-                return new[]{
-                    new List<Resource>{new Electricity(1)},
-                    new List<Resource>{new Electricity(2)}
-                };
-            }
-        }
         public SteelForge()
         {
-            recipes.Add(new SimpleRecipe(new Iron(2), new Steel(1), 5));
+            recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(1), new Iron(2) }, new Steel(1), 5));
         }
         public override void Upgrade()
         {
@@ -68,13 +57,6 @@ namespace Lebeg134.Structures.Common
         {
             return GetCostArray[level];
         }
-
-        protected override List<Resource> GetUpkeep(int level)
-        {
-
-            return UpkeepLevelsArray[level - 1];
-        }
-
 
         protected override int GetMaxLevel()
         {

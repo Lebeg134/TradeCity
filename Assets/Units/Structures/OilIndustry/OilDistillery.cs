@@ -1,3 +1,4 @@
+using Lebeg134.Module.Production;
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
 using Lebeg134.Resources.Common;
@@ -16,6 +17,19 @@ namespace Lebeg134.Structures.OilIndustry
     [Serializable]
     public class OilDistillery : Building
     {
+        public OilDistillery()
+        {
+            Recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(15), new Oil(15) }, new Fuel(2), 1));
+            Recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(10), new Oil(15) }, new Chemicals(4),1));
+        }
+        public override void Upgrade()
+        {
+            base.Upgrade();
+            foreach (Recipe recipe in Recipes)
+            {
+                recipe.Limit = level * level;
+            }
+        }
         public override List<IOwnable> GetCriteria()
         {
             return new List<IOwnable> { new ChemicalResearchFacility(), new ChemicalSafetyBureau() };

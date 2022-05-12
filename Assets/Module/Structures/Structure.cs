@@ -12,7 +12,7 @@ namespace Lebeg134.Module.Structures
     {
         public event Action<Structure> OnTurnOn;
         public event Action<Structure> OnTurnOff;
-        protected bool isOn;
+        protected bool isOn = true;
         public bool IsOn 
         { 
             get

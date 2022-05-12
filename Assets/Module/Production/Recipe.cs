@@ -40,6 +40,10 @@ namespace Lebeg134.Module.Production
         protected abstract void Process();
         public List<Resource> Produce()
         {
+            foreach (Resource resource in input) //TODO Potential error if custom ticks are implemented
+            {
+                resource.Tick();
+            }
             Process();
             return output;
         }

@@ -21,4 +21,8 @@ public class BackToMenuScript : MonoBehaviour
     {
 
     }
+    private void OnApplicationQuit()
+    {
+        Clock.Instance.Pause();
+    }
 }

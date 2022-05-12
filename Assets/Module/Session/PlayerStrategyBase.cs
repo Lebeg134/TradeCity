@@ -39,7 +39,6 @@ namespace Lebeg134.Module.Session
                     
                     if (tickable is ITickable)
                     {
-                        Debug.Log("Ticked: " + tickable.ToString());
                         ((ITickable)tickable).Tick();
                     }
                 }

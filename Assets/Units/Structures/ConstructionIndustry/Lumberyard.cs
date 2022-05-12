@@ -1,3 +1,4 @@
+using Lebeg134.Module.Production;
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
 using Lebeg134.Resources.Common;
@@ -15,6 +16,10 @@ namespace Lebeg134.Structures.ConstructionIndustry
     [Serializable]
     public class Lumberyard : Building
     {
+        public Lumberyard()
+        {
+            Recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(1), new Wood(10) }, new Lumber(5), 5));
+        }
         public override List<IOwnable> GetCriteria()
         {
             return new List<IOwnable>();

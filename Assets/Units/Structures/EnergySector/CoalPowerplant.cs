@@ -19,12 +19,12 @@ namespace Lebeg134.Structures.EnergySector
     {
         public CoalPowerplant()
         {
-            recipes.Add(new SimpleRecipe(new Coal(3), new Electricity(1), 5));
+            recipes.Add(new SimpleRecipe(new Coal(2), new Electricity(1), 10));
         }
         public override void Upgrade()
         {
             base.Upgrade();
-            recipes[0].Limit += 5;
+            recipes[0].Limit += 10;
         }
         public override Branches GetBranch()
         {

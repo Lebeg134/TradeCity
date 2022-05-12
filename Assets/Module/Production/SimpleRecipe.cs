@@ -19,13 +19,13 @@ namespace Lebeg134.Module.Production
         /// <param name="from">Input requirement of the Recipe</param>
         /// <param name="to">Output of the recipe</param>
         /// <param name="limit">Default number of times recipe can be crafted in a period</param>
-        public SimpleRecipe(Resource from, Resource to, int limit) : base()
+        public SimpleRecipe(Resource from, Resource to, int limit) : base(limit)
         {
             this.from = from;
             input.Add(from.GetNewResource(0));
             this.to = to;
             output.Add(to.GetNewResource(0));
-            this.Limit = limit;
+            
         }
         public override int AddResource(Resource resource)
         {

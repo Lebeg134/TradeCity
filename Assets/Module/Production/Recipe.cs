@@ -25,10 +25,11 @@ namespace Lebeg134.Module.Production
         public RecipePriority InputPriority { get; set; }
         public List<Resource>  Input => input;
         
-        public Recipe()
+        public Recipe(int limit)
         {
             input = new List<Resource>();
             output = new List<Resource>();
+            Limit = limit;
         }
 
         /// <summary>

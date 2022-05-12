@@ -101,7 +101,7 @@ namespace Lebeg134.Module.Session
             {
                 allBuildings = new List<Building> {
                     new SteelForge(),
-                    new ConcreteMixingPlant(), new CraftsmanHQ(), new GlassKiln(),new Lumberyard(),
+                    new ConcreteMixingPlant(), new CraftsmanHQ(), new GlassKiln(),new Lumberyard(),new StoneCutter(),
                     new CoalPowerplant(),
                     new ChemicalResearchFacility(), new ChemicalSafetyBureau(), new OilDistillery()
                 };

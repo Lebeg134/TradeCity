@@ -1,3 +1,4 @@
+using Lebeg134.Module.Production;
 using Lebeg134.Module.Resources;
 using Lebeg134.Module.Structures;
 using Lebeg134.Resources.Common;
@@ -15,6 +16,10 @@ namespace Lebeg134.Structures.ConstructionIndustry
     [Serializable]
     public class ConcreteMixingPlant : Building
     {
+        public ConcreteMixingPlant()
+        {
+            Recipes.Add(new ManyToOneRecipe(new List<Resource> { new Water(1), new Sand(5) }, new Concrete(3), 5));
+        }
         public override List<IOwnable> GetCriteria()
         {
             return new List<IOwnable>();

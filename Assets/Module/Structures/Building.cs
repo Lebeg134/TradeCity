@@ -80,24 +80,16 @@ namespace Lebeg134.Module.Structures
         public void Tick()
         {
             //TODO check if theres a better method than auto turn-on
-            if (GetUpkeep().Count >= 1)
-            {
-                Debug.Log("Upkeep is " + GetUpkeep()[0].GetStock() + " " + GetUpkeep()[0].GetName());
-                Debug.Log("Player has " + owner.GetRes(GetUpkeep()[0]) + " " + GetUpkeep()[0].GetName());
-            }
-            else
-                Debug.Log("Free Upkeep yay");
-            if (owner.CheckResources(GetUpkeep()))
-            {
-                owner.SubRes(GetUpkeep());
-                Debug.Log("Upkeep subtracted");
-                On();
-            }
-            else
-            {
-                Off();
-            }
-            Debug.Log("Building is on:" + isOn);
+            //Upkeep system turned off
+            //if (owner.CheckResources(GetUpkeep()))
+            //{
+            //    owner.SubRes(GetUpkeep());
+            //    On();
+            //}
+            //else
+            //{
+            //    Off();
+            //}
         }
 
         public void Register()
@@ -107,7 +99,10 @@ namespace Lebeg134.Module.Structures
         }
 
         // ========== Internal Methods
-        protected abstract List<Resource> GetUpkeep(int level);
+        protected virtual List<Resource> GetUpkeep(int level)
+        {
+            return new List<Resource>();
+        }
         override protected string GetBasePath()
         {
             return base.GetBasePath() + "Building/";

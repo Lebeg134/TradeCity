@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Lebeg134.Module.Resources;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Lebeg134.Scripts.GUI.ResourceDispalys
@@ -28,7 +29,14 @@ namespace Lebeg134.Scripts.GUI.ResourceDispalys
             if (Watched == null) return;
 
             int amount = Watched.GetStock();
-            display.text = amount.ToString();
+            if (Watched is ContinousResource)
+            {
+                display.text = amount + "/" + ((ContinousResource)Watched).Buffer;
+            }
+            else
+            {
+                display.text = Watched.GetStock().ToString();
+            }
             if (prevAmount == amount && (indicatorTime += Time.deltaTime) >= indicatorLimit)
             {
                 state = IndicatorState.NEUTRAL;

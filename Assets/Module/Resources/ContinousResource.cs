@@ -11,6 +11,7 @@ namespace Lebeg134.Module.Resources
     {
         private BufferResource buffer = new BufferResource();
         public ContinousResource(int amount) : base(amount) { }
+        public int Buffer { get { return buffer.GetStock(); } }
 
         public override Resource Gain(int amount)
         {

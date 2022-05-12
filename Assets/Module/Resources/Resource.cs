@@ -111,6 +111,52 @@ namespace Lebeg134.Module.Resources
             }
             return list;
         }
+        public static void Transfer(Resource to, Resource from, int amount, bool safe = false)
+        {
+            if (safe && amount > from.GetStock())
+                amount = from.GetStock();
+            from.Spend(amount);
+            to.Gain(amount);
+        }
+        public static void Transfer(Resource to, Resource from, bool safe = false)
+        {
+            Transfer(to, from, from.GetStock(), safe);
+        }
+        public static void Transfer(List<Resource> to, Resource from, int amount, bool safe = false)
+        {
+            foreach(Resource res in to)
+            {
+                if (res.GetType() == from.GetType())
+                {
+                    Transfer(res, from, amount, safe);
+                    return;
+                }
+            }
+            Resource newRes = from.GetNewResource(0);
+            Transfer(newRes, from, amount, safe);
+            to.Add(newRes);
+        }
+        public static void Transfer(List<Resource> to, Resource from, bool safe = false)
+        {
+            Transfer(to, from, from.GetStock(), safe);
+        }
+        public static void Transfer(List<Resource> to, List<Resource> from, bool safe = false)
+        {
+            foreach (Resource res in from)
+            {
+                Transfer(to, res, safe);
+            }
+        }
+        public static int GetStock(List<Resource> list, Resource type)
+        {
+            int stockSum = 0;
+            foreach(Resource res in list)
+            {
+                if (res.GetType() == type.GetType())
+                    stockSum += res.GetStock();
+            }
+            return stockSum;
+        }
 
         [Serializable]
         internal class NotEnoughResourceException : Exception

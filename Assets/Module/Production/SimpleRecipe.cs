@@ -34,8 +34,7 @@ namespace Lebeg134.Module.Production
                 int subtract = from.GetStock() * Limit;
                 if (subtract > resource.GetStock())
                     subtract = resource.GetStock();
-                resource.Spend(subtract);
-                input += resource.GetNewResource(subtract);
+                Resource.Transfer(input, resource, subtract);
                 return subtract;
             }
             else return 0;
@@ -48,12 +47,6 @@ namespace Lebeg134.Module.Production
             if (num > Limit)
                 Limit = num;
             resource.Spend(num * from.GetStock());
-            string inBuffer = "Resources in: ";
-            foreach (Resource res in input)
-            {
-                inBuffer += res.GetStock() + " " + res.GetName() + ", ";
-            }
-            Debug.Log(inBuffer);
             if (num > 0)
                 Debug.Log("Produced: " + to.GetStock() * num + " " + to.GetName());
             output.Add(to.GetNewResource(to.GetStock() * num));

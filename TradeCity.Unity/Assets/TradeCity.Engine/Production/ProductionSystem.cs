@@ -38,21 +38,21 @@ namespace TradeCity.Engine.Production
         public void Produce(List<IProducer> producers)
         {
             List<Recipe> recipes = new();
-            foreach (IProducer producer in producers)
+            foreach (var producer in producers)
             {
                 if (producer is Building building && !building.IsOn) continue;
                 recipes.AddRange(producer.Recipes);
             }
 
-            foreach (Resource playerRes in _owner.GetAllRes())
+            foreach (var playerRes in _owner.GetAllRes())
             {
                 DistributeResources(playerRes, recipes);
             }
 
             _outBuffer.Clear();
-            foreach (Recipe recipe in recipes)
+            foreach (var recipe in recipes)
             {
-                List<Resource> reslist = recipe.Produce();
+                var reslist = recipe.Produce();
                 _outBuffer.AddRange(reslist);
                 reslist.Clear();
                 //TODO Limit resources potencial bug!

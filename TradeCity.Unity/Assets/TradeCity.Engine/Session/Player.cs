@@ -1,7 +1,3 @@
-/**
-* @(#) Player.cs
-*/
-
 using System;
 using System.Collections.Generic;
 using TradeCity.Engine.Production;
@@ -44,7 +40,7 @@ namespace TradeCity.Engine.Session
         }
         public bool HasStructure(IOwnable structure)
         {
-            foreach (IOwnable ownable in _owned)
+            foreach (var ownable in _owned)
             {
                 if (ownable.GetType() == structure.GetType())
                     return true;
@@ -53,9 +49,9 @@ namespace TradeCity.Engine.Session
         }
         public bool CheckStructures(List<IOwnable> structures, bool throwException = false)
         {
-            bool valid = true;
+            var valid = true;
             List<IOwnable> missingStructures = new();
-            foreach (IOwnable ownable in structures)
+            foreach (var ownable in structures)
             {
                 if (!HasStructure(ownable))
                 {
@@ -75,7 +71,7 @@ namespace TradeCity.Engine.Session
         public List<Building> GetAllBuildings()
         {
             List<Building> ret = new();
-            foreach (IOwnable item in _owned)
+            foreach (var item in _owned)
             {
                 if (item is Building)
                 {
@@ -87,7 +83,7 @@ namespace TradeCity.Engine.Session
         public List<Land> GetLands()
         {
             List<Land> ret = new();
-            foreach (IOwnable item in _owned)
+            foreach (var item in _owned)
             {
                 if (item is Land)
                 {
@@ -106,13 +102,13 @@ namespace TradeCity.Engine.Session
         }
         public bool CheckResources(List<Resource> resources, bool throwException = false)
         {
-            bool valid = true;
+            var valid = true;
             List<Resource> missingResources = new();
-            foreach (Resource resource in resources)
+            foreach (var resource in resources)
             {
                 if (HasResource(resource))
                 {
-                    int dif = _ownedResources[resource.GetType()].GetStock() - resource.GetStock();
+                    var dif = _ownedResources[resource.GetType()].GetStock() - resource.GetStock();
                     if (dif < 0)
                     {
                         missingResources.Add(resource.GetNewResource(dif));
@@ -135,7 +131,7 @@ namespace TradeCity.Engine.Session
         }
         public void SubRes(List<Resource> resources)
         {
-            foreach (Resource res in resources)
+            foreach (var res in resources)
             {
                 SubRes(res);
             }
@@ -155,14 +151,14 @@ namespace TradeCity.Engine.Session
         }
         public void GiveRes(List<Resource> resources)
         {
-            foreach (Resource res in resources)
+            foreach (var res in resources)
             {
                 GiveRes(res);
             }
         }
         public void RegisterResources(List<Resource> newResList)
         {
-            foreach (Resource res in newResList)
+            foreach (var res in newResList)
             {
                 _ownedResources.Add(res.GetType(), res.GetNewResource(0));
             }

@@ -1,6 +1,3 @@
-/**
-* @(#) IPlayerStrategy.cs
-*/
 namespace TradeCity.Engine.Session
 {
     public interface IPlayerStrategy

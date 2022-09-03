@@ -1,7 +1,3 @@
-/**
- * @(#) CosmeticStructures.cs
- */
-
 namespace TradeCity.Engine.Structures
 {
     public abstract class CosmeticStructures : Structure

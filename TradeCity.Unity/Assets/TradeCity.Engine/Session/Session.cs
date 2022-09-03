@@ -1,7 +1,3 @@
-/**
- * @(#) Session.cs
- */
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -89,7 +85,7 @@ namespace TradeCity.Engine.Session
 
             //TODO add land offers randomly
 
-            foreach (Player player in _players)
+            foreach (var player in _players)
             {
                 player.Tick();
             }

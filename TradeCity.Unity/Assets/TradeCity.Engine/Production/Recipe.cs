@@ -34,7 +34,7 @@ namespace TradeCity.Engine.Production
         protected abstract void Process();
         public List<Resource> Produce()
         {
-            foreach (Resource resource in _input) //TODO Potential error if custom ticks are implemented
+            foreach (var resource in _input) //TODO Potential error if custom ticks are implemented
             {
                 resource.Tick();
             }

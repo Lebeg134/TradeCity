@@ -27,7 +27,7 @@ namespace TradeCity.Engine.Graphics
 
         public void Update()
         {
-            foreach (IUpdateable subscriber in _subscribers)
+            foreach (var subscriber in _subscribers)
             {
                 subscriber.Update();
             }

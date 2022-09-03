@@ -23,8 +23,8 @@ namespace TradeCity.Engine.Structures.EasyInheritance
             return GetUpkeep();
         }
 
-        public override abstract List<Resource> GetCost();
-        public override abstract List<IOwnable> GetCriteria();
-        public override abstract List<Resource> GetUpkeep();
+        public abstract override List<Resource> GetCost();
+        public abstract override List<IOwnable> GetCriteria();
+        public abstract override List<Resource> GetUpkeep();
     }
 }

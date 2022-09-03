@@ -26,8 +26,8 @@ namespace TradeCity.Engine.Market
         {
             // TODO check if Listing already exists
             Listing post = new(wantSellable, forSellable, by, amount);
-            List<Listing> relevantListings = _listings[forSellable.GetType()];
-            int newAmount = post.LockResources(all);
+            var relevantListings = _listings[forSellable.GetType()];
+            var newAmount = post.LockResources(all);
             if (amount != newAmount)
                 post = new Listing(wantSellable, forSellable, by, newAmount);
             relevantListings.Add(post);
@@ -42,7 +42,7 @@ namespace TradeCity.Engine.Market
 
         public Listing GetMinSell(ISellable wantSellable, ISellable forSellable)
         {
-            List<Listing> relevantListings = _listings[wantSellable.GetType()].FindAll(x => x.ForSellable.Equals(forSellable));
+            var relevantListings = _listings[wantSellable.GetType()].FindAll(x => x.ForSellable.Equals(forSellable));
             if (relevantListings.Count > 0)
             {
                 relevantListings.Sort();
@@ -54,7 +54,7 @@ namespace TradeCity.Engine.Market
 
         public Listing GetMaxBuy(ISellable wantSellable, ISellable forSellable)
         {
-            List<Listing> relevantListings = _listings[forSellable.GetType()].FindAll(x => x.WantSellable.Equals(wantSellable));
+            var relevantListings = _listings[forSellable.GetType()].FindAll(x => x.WantSellable.Equals(wantSellable));
             if (!(_listings?.Count > 0)) return null;
             relevantListings.Sort();
             return relevantListings.Last();
@@ -62,9 +62,9 @@ namespace TradeCity.Engine.Market
 
         public void RemovePlayer(Player player)
         {
-            foreach (List<Listing> list in _listings.Values)
+            foreach (var list in _listings.Values)
             {
-                foreach (Listing listing in list)
+                foreach (var listing in list)
                 {
                     if (listing.Poster.Equals(player))
                     {
@@ -78,7 +78,7 @@ namespace TradeCity.Engine.Market
         public List<Listing> GetPlayerListingsList(Player player)
         {
             List<Listing> myListings = new();
-            foreach (List<Listing> list in _listings.Values)
+            foreach (var list in _listings.Values)
             {
                 myListings.AddRange(list.FindAll(x => x.Poster.Equals(player)));
             }
@@ -95,9 +95,9 @@ namespace TradeCity.Engine.Market
         }
         public void Tick()
         {
-            foreach (List<Listing> list in _listings.Values)
+            foreach (var list in _listings.Values)
             {
-                foreach (Listing listing in list)
+                foreach (var listing in list)
                 {
                     listing.Tick();
                 }

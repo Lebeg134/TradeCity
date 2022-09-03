@@ -1,7 +1,3 @@
-/**
-* @(#) ContinousResource.cs
-*/
-
 using System;
 
 namespace TradeCity.Engine.Resources

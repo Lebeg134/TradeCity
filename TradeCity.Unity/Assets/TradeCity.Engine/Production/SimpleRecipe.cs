@@ -25,7 +25,7 @@ namespace TradeCity.Engine.Production
         {
             if (resource.GetType() == _from.GetType())
             {
-                int subtract = _from.GetStock() * Limit;
+                var subtract = _from.GetStock() * Limit;
                 if (subtract > resource.GetStock())
                     subtract = resource.GetStock();
                 Resource.Transfer(_input, resource, subtract);
@@ -37,8 +37,8 @@ namespace TradeCity.Engine.Production
 
         protected override void Process()
         {
-            Resource resource = _input.Find(res => res.GetType() == _from.GetType());
-            int num = resource.GetStock() / _from.GetStock();
+            var resource = _input.Find(res => res.GetType() == _from.GetType());
+            var num = resource.GetStock() / _from.GetStock();
             if (num > Limit)
                 Limit = num;
             resource.Spend(num * _from.GetStock());

@@ -1,7 +1,3 @@
-/**
-* @(#) StandardResource.cs
-*/
-
 using System;
 using TradeCity.Engine.Market;
 

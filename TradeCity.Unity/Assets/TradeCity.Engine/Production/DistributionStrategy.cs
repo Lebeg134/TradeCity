@@ -11,7 +11,7 @@ namespace TradeCity.Engine.Production
         }
         public static void DistributeDefault(Resource resource, List<Recipe> recipes)
         {
-            foreach (Recipe recipe in recipes)
+            foreach (var recipe in recipes)
             {
                 recipe.AddResource(resource);
             }

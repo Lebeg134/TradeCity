@@ -27,7 +27,7 @@ namespace TradeCity.Engine.Session
             newSession.Login(thisPlayer);
             GenerateStartingOffers(newSession);
             newSession.Missions.AddRange(GenerateMissions());
-            foreach (Mission m in newSession.Missions)
+            foreach (var m in newSession.Missions)
             {
                 m.Accept(Player.CurrentPlayer);
             }

@@ -14,15 +14,14 @@ namespace TradeCity.Engine.Missions
         private Player _owner;
         private readonly IAchievable _goal;
         private readonly IRewardable _reward;
-        private bool _isAccepted;
         private bool _isAchieved;
-        private bool _isClaimed;
         //Enum state? Strategy?
 
         public string Text => _goal.Text;
-        public bool IsAccepted => _isAccepted;
+        public bool IsAccepted { get; private set; }
+
         public bool IsAchieved => _goal.IsAchieved();
-        public bool IsClaimed => _isClaimed;
+        public bool IsClaimed { get; private set; }
 
         public Mission(IAchievable goal, IRewardable reward, Player owner = null)
         {
@@ -45,7 +44,7 @@ namespace TradeCity.Engine.Missions
             if (_isAchieved)
             {
                 _reward.Reward(_owner);
-                _isClaimed = true;
+                IsClaimed = true;
                 OnClaim?.Invoke();
             }
         }
@@ -53,7 +52,7 @@ namespace TradeCity.Engine.Missions
         {
             _owner = by;
             _goal.Accept(by);
-            _isAccepted = true;
+            IsAccepted = true;
             Register();
         }
 
@@ -64,7 +63,7 @@ namespace TradeCity.Engine.Missions
 
         public void Check()
         {
-            if (_isAccepted && !_isAchieved && _goal.IsAchieved())
+            if (IsAccepted && !_isAchieved && _goal.IsAchieved())
             {
                 _isAchieved = true;
                 OnAchievement?.Invoke();

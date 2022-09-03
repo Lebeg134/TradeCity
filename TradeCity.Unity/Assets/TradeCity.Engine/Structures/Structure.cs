@@ -1,7 +1,3 @@
-/**
-* @(#) Structure.cs
-*/
-
 using System;
 using System.Collections.Generic;
 using TradeCity.Engine.Graphics;

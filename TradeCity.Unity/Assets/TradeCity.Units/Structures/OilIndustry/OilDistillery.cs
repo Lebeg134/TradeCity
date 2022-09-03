@@ -26,7 +26,7 @@ namespace TradeCity.Units.Structures.OilIndustry
         public override void Upgrade()
         {
             base.Upgrade();
-            foreach (Recipe recipe in Recipes)
+            foreach (var recipe in Recipes)
             {
                 recipe.Limit = _level * _level;
             }

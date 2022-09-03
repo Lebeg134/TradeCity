@@ -1,7 +1,3 @@
-/**
-* @(#) Land.cs
-*/
-
 using System;
 using System.Collections.Generic;
 using TradeCity.Engine.Map;

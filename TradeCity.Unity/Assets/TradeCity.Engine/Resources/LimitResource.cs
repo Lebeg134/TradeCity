@@ -1,10 +1,5 @@
-
-
 using System;
 
-/**
-* @(#) LimitResource.cs
-*/
 namespace TradeCity.Engine.Resources
 {
     [Serializable]

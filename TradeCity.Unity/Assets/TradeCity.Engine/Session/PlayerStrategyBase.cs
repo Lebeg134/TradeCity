@@ -1,10 +1,6 @@
 using System;
-using TradeCity.Engine.Structures.Interfaces;
 using TradeCity.Engine.TimeManager;
 
-/**
-* @(#) PlayerStrategyBase.cs
-*/
 namespace TradeCity.Engine.Session
 {
 
@@ -34,7 +30,7 @@ namespace TradeCity.Engine.Session
 
             public virtual void Tick()
             {
-                foreach (IOwnable tickable in _player._owned)
+                foreach (var tickable in _player._owned)
                 {
 
                     if (tickable is ITickable)

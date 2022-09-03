@@ -14,7 +14,7 @@ namespace TradeCity.Engine.TimeManager
             set
             {
                 _instance = new Clock();
-                foreach (ITickable tickable in value._tickables.Where(tickable => tickable != null))
+                foreach (var tickable in value._tickables.Where(tickable => tickable != null))
                     _instance.Register(tickable);
             }
         }

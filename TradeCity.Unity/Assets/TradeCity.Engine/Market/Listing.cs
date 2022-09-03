@@ -30,7 +30,7 @@ namespace TradeCity.Engine.Market
         {
             if (number == -1)
                 number = _amount;
-            int count = 0;
+            var count = 0;
             if (number <= 0 || Poster == by) return 0;
             for (; count <= number; count++)
             {
@@ -55,11 +55,11 @@ namespace TradeCity.Engine.Market
 
         public int LockResources(bool all = false)
         {
-            int count = 0;
+            var count = 0;
             if (all)
             {
                 count = _amount;
-                Resource sub = ForSellable.GetNewResource(_amount);
+                var sub = ForSellable.GetNewResource(_amount);
                 Poster.CheckResource(sub);
                 Poster.SubRes(sub);
             }

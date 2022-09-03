@@ -1,7 +1,3 @@
-/**
-* @(#) IOwnable.cs
-*/
-
 using TradeCity.Engine.Session;
 
 namespace TradeCity.Engine.Structures.Interfaces

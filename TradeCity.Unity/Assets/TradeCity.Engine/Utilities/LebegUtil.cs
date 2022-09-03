@@ -6,7 +6,7 @@ namespace TradeCity.Engine.Utilities
     {
         public static int IndexInRange(ICollection collection, int index)
         {
-            int i = 0;
+            int i;
             if (index < 0)
                 i = 0;
             else if (index > collection.Count)

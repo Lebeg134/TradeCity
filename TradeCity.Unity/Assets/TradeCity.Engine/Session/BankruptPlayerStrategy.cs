@@ -1,7 +1,3 @@
-/**
-* @(#) BankruptPlayerStrategy.cs
-*/
-
 using TradeCity.Engine.Structures.Interfaces;
 
 namespace TradeCity.Engine.Session
@@ -16,7 +12,7 @@ namespace TradeCity.Engine.Session
             }
             private void DeleteOwnerships()
             {
-                foreach (IOwnable ownable in _player._owned)
+                foreach (var ownable in _player._owned)
                 {
                     ownable.Acquire(null);
                 }

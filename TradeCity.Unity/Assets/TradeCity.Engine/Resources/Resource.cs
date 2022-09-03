@@ -1,7 +1,3 @@
-/**
-* @(#) Resource.cs
-*/
-
 using System;
 using System.Collections.Generic;
 using TradeCity.Engine.Graphics;
@@ -67,7 +63,7 @@ namespace TradeCity.Engine.Resources
             {
                 throw new ArgumentException("Can not set negative amount");
             }
-            int prevStock = _stock;
+            var prevStock = _stock;
             _stock = amount;
             OnAmountChange?.Invoke(_stock - prevStock);
         }
@@ -103,7 +99,7 @@ namespace TradeCity.Engine.Resources
         }
         public static List<Resource> operator +(List<Resource> list, Resource b)
         {
-            foreach (Resource a in list)
+            foreach (var a in list)
             {
                 if (a.GetName() == b.GetName())
                 {
@@ -125,7 +121,7 @@ namespace TradeCity.Engine.Resources
         }
         public static void Transfer(List<Resource> to, Resource from, int amount, bool safe = false)
         {
-            foreach (Resource res in to)
+            foreach (var res in to)
             {
                 if (res.GetType() == from.GetType())
                 {
@@ -133,7 +129,7 @@ namespace TradeCity.Engine.Resources
                     return;
                 }
             }
-            Resource newRes = from.GetNewResource(0);
+            var newRes = from.GetNewResource(0);
             Transfer(newRes, from, amount, safe);
             to.Add(newRes);
         }
@@ -143,15 +139,15 @@ namespace TradeCity.Engine.Resources
         }
         public static void Transfer(List<Resource> to, List<Resource> from, bool safe = false)
         {
-            foreach (Resource res in from)
+            foreach (var res in from)
             {
                 Transfer(to, res, safe);
             }
         }
         public static int GetStock(List<Resource> list, Resource type)
         {
-            int stockSum = 0;
-            foreach (Resource res in list)
+            var stockSum = 0;
+            foreach (var res in list)
             {
                 if (res.GetType() == type.GetType())
                     stockSum += res.GetStock();

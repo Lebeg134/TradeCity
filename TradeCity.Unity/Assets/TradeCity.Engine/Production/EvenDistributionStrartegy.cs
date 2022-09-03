@@ -8,8 +8,8 @@ namespace TradeCity.Engine.Production
     {
         public override void Distribute(Resource resource, List<Recipe> inputs)
         {
-            int amount = resource.GetStock() / inputs.Count();
-            foreach (Recipe recipe in inputs)
+            var amount = resource.GetStock() / inputs.Count();
+            foreach (var recipe in inputs)
             {
                 resource.Spend(recipe.AddResource(resource.GetNewResource(amount)));
             }

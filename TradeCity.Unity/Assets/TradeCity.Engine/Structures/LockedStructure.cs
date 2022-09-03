@@ -1,9 +1,6 @@
 using System;
 using TradeCity.Units;
 
-/**
-* @(#) LockedStructure.cs
-*/
 namespace TradeCity.Engine.Structures
 {
     [Serializable]

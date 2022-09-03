@@ -1,7 +1,3 @@
-/**
-* @(#) Map.cs
-*/
-
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -35,7 +31,7 @@ namespace TradeCity.Engine.Map
 
         public void StartAuction(int x, int y, Player by)
         {
-            IMapStructure subject = _structures[x, y];
+            var subject = _structures[x, y];
             if (!subject.IsAuctionable())
                 throw new NotAuctionableException();
 
@@ -50,7 +46,7 @@ namespace TradeCity.Engine.Map
 
         public void Tick()
         {
-            foreach (Auction auction in _liveAuctions)
+            foreach (var auction in _liveAuctions)
             {
                 try
                 {

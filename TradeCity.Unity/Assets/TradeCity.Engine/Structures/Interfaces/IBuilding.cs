@@ -4,9 +4,6 @@ using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.TimeManager;
 
-/**
-* @(#) IUpgradeable.cs
-*/
 namespace TradeCity.Engine.Structures.Interfaces
 {
     public enum BuildingState

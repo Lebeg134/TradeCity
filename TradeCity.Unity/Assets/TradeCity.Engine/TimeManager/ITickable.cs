@@ -1,7 +1,3 @@
-/**
- * @(#) ITickable.cs
- */
-
 namespace TradeCity.Engine.TimeManager
 {
     public interface ITickable

@@ -11,7 +11,7 @@ namespace TradeCity.Engine.Production
         public ManyToOneRecipe(List<Resource> from, Resource to, int limit) : base(limit)
         {
             _from = from;
-            foreach (Resource res in from)
+            foreach (var res in from)
             {
                 _input.Add(res.GetNewResource(0));
             }
@@ -19,11 +19,11 @@ namespace TradeCity.Engine.Production
         }
         public override int AddResource(Resource resource)
         {
-            foreach (Resource res in _from)
+            foreach (var res in _from)
             {
                 if (resource.GetType() == res.GetType())
                 {
-                    int subtract = res.GetStock() * Limit - Resource.GetStock(Input, res);
+                    var subtract = res.GetStock() * Limit - Resource.GetStock(Input, res);
                     if (subtract < 0) return 0; //if limit gets lower somehow this is needed
                     if (subtract > resource.GetStock())
                         subtract = resource.GetStock();
@@ -46,7 +46,7 @@ namespace TradeCity.Engine.Production
             {
                 num.Add(line.inpt.GetStock() / line.from.GetStock());
             }
-            int craft = num.Min();
+            var craft = num.Min();
             foreach (var line in zipped)
             {
                 line.inpt.Spend(craft * line.from.GetStock());

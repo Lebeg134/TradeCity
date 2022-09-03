@@ -1,7 +1,3 @@
-/**
- * @(#) Building.cs
- */
-
 using System;
 using System.Collections.Generic;
 using TradeCity.Engine.Production;
@@ -41,7 +37,7 @@ namespace TradeCity.Engine.Structures
                 by.SubRes(GetCost(0));
                 by.GiveStructure(this);
                 _level = 1;
-                string buildings = "{ ";
+                var buildings = "{ ";
                 by.GetAllBuildings().ForEach(building => buildings += building.GetName() + ", ");
                 Acquire(by);
                 OnBuild?.Invoke(this);

@@ -1,7 +1,3 @@
-/**
- * @(#) IProducer.cs
- */
-
 using System.Collections.Generic;
 using TradeCity.Engine.Production;
 using TradeCity.Engine.Resources;

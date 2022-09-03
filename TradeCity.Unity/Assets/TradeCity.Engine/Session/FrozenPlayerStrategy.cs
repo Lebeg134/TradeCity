@@ -1,7 +1,3 @@
-/**
-* @(#) FrozenPlayerStrategy.cs
-*/
-
 namespace TradeCity.Engine.Session
 {
     public partial class Player

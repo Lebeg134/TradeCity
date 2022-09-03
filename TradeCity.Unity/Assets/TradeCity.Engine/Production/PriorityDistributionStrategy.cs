@@ -9,7 +9,7 @@ namespace TradeCity.Engine.Production
         public override void Distribute(Resource resource, List<Recipe> recipes)
         {
             Dictionary<RecipePriority, List<Recipe>> recDict = new();
-            foreach (Recipe recipe in recipes)
+            foreach (var recipe in recipes)
             {
                 if (!recDict.Keys.Contains(recipe.InputPriority))
                 {
@@ -17,9 +17,9 @@ namespace TradeCity.Engine.Production
                 }
                 recDict[recipe.InputPriority].Add(recipe);
             }
-            foreach (RecipePriority key in recDict.Keys)
+            foreach (var key in recDict.Keys)
             {
-                foreach (Recipe recipe in recDict[key])
+                foreach (var recipe in recDict[key])
                 {
                     try
                     {

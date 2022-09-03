@@ -1,11 +1,6 @@
-﻿/**
- * @(#) StandardPlayerStrategy.cs
- */
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using TradeCity.Engine.Production;
-using TradeCity.Engine.Resources;
 using TradeCity.Engine.Structures.Interfaces;
 
 namespace TradeCity.Engine.Session
@@ -21,7 +16,7 @@ namespace TradeCity.Engine.Session
             }
             public override void Tick()
             {
-                foreach (Resource res in _player.GetAllRes())
+                foreach (var res in _player.GetAllRes())
                 {
                     res.Tick();
                 }

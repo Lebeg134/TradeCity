@@ -1,81 +1,84 @@
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
 using System.Collections.Generic;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ResourceDisplayScript : MonoBehaviour
+namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
 {
-    string[] options = GetOptions().ToArray();
-    [Dropdown("options")]
-    public string resource;
-    public Resource Watched
+    public class ResourceDisplayScript : MonoBehaviour
     {
-        get
+        string[] options = GetOptions().ToArray();
+        [Dropdown("options")]
+        public string resource;
+        public Resource Watched
         {
-            return _watched;
+            get
+            {
+                return _watched;
+            }
+            set
+            {
+                _watched = value;
+                OnWatchedChanged();
+
+            }
         }
-        set
+        protected virtual void OnWatchedChanged()
         {
-            _watched = value;
-            OnWatchedChanged();
-
+            UpdateVisuals();
         }
-    }
-    protected virtual void OnWatchedChanged()
-    {
-        UpdateVisuals();
-    }
-    Resource _watched;
-    public Text display;
-    public Text resName;
-    public Image icon;
+        Resource _watched;
+        public Text display;
+        public Text resName;
+        public Image icon;
 
-    // Start is called before the first frame update
-    protected virtual void Start()
-    {
-        if (Watched == null)
-            Watched = ConvertToRes(resource);
-        UpdateVisuals();
-    }
-
-    // Update is called once per frame
-    protected virtual void Update()
-    {
-
-    }
-
-    protected virtual void UpdateVisuals()
-    {
-        if (Watched == null) return;
-        resName.text = Watched.GetName();
-        display.text = Watched.GetStock().ToString();
-        LoadSprite();
-    }
-    protected void LoadSprite()
-    {
-        var loadedSprite = Resources.Load<Sprite>(Watched.GetResourcepath());
-        if (loadedSprite != null)
-            icon.sprite = loadedSprite;
-    }
-
-    public static List<string> GetOptions()
-    {
-        List<Resource> reslist = SessionGenerator.GetResourceList();
-        List<string> strlist = new List<string>();
-        foreach (Resource res in reslist)
+        // Start is called before the first frame update
+        protected virtual void Start()
         {
-            strlist.Add(res.GetName());
+            if (Watched == null)
+                Watched = ConvertToRes(resource);
+            UpdateVisuals();
         }
-        return strlist;
-    }
-    public static Resource ConvertToRes(string name)
-    {
-        foreach (Resource res in SessionGenerator.GetResourceList())
+
+        // Update is called once per frame
+        protected virtual void Update()
         {
-            if (res.GetName() == name)
-                return res;
+
         }
-        return null;
+
+        protected virtual void UpdateVisuals()
+        {
+            if (Watched == null) return;
+            resName.text = Watched.GetName();
+            display.text = Watched.GetStock().ToString();
+            LoadSprite();
+        }
+        protected void LoadSprite()
+        {
+            var loadedSprite = Resources.Load<Sprite>(Watched.GetResourcepath());
+            if (loadedSprite != null)
+                icon.sprite = loadedSprite;
+        }
+
+        public static List<string> GetOptions()
+        {
+            List<Resource> reslist = SessionGenerator.GetResourceList();
+            List<string> strlist = new List<string>();
+            foreach (Resource res in reslist)
+            {
+                strlist.Add(res.GetName());
+            }
+            return strlist;
+        }
+        public static Resource ConvertToRes(string name)
+        {
+            foreach (Resource res in SessionGenerator.GetResourceList())
+            {
+                if (res.GetName() == name)
+                    return res;
+            }
+            return null;
+        }
     }
 }

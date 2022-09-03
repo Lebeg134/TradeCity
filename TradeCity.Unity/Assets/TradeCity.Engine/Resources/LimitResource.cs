@@ -1,10 +1,11 @@
 
 
 using System;
+
 /**
 * @(#) LimitResource.cs
 */
-namespace Lebeg134.Module.Resources
+namespace TradeCity.Engine.Resources
 {
     [Serializable]
     public abstract class LimitResource : Resource

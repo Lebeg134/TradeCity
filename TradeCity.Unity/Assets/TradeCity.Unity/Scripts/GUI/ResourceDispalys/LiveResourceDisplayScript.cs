@@ -1,8 +1,8 @@
-﻿using Lebeg134.Module.Resources;
+﻿using TradeCity.Engine.Resources;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Lebeg134.Scripts.GUI.ResourceDispalys
+namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
 {
     class LiveResourceDisplayScript : ResourceDisplayScript
     {

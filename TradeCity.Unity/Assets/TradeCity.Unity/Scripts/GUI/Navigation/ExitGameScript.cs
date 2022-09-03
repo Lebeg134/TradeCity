@@ -1,23 +1,26 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ExitGameScript : MonoBehaviour
+namespace TradeCity.Unity.Scripts.GUI.Navigation
 {
-    public Button exitButton;
-    // Start is called before the first frame update
-    void Start()
+    public class ExitGameScript : MonoBehaviour
     {
-        exitButton.onClick.AddListener(() => ExitGame());
-    }
+        public Button exitButton;
+        // Start is called before the first frame update
+        void Start()
+        {
+            exitButton.onClick.AddListener(() => ExitGame());
+        }
 
-    private void ExitGame()
-    {
-        Application.Quit();
-    }
+        private void ExitGame()
+        {
+            Application.Quit();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
+        // Update is called once per frame
+        void Update()
+        {
 
+        }
     }
 }

@@ -1,44 +1,48 @@
-using Lebeg134.Module.MarketNS;
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
 using System.Collections.Generic;
+using TradeCity.Engine.Market;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session;
+using TradeCity.Unity.Scripts.GUI.ResourceDispalys;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ResourceSelectorScript : MonoBehaviour
+namespace TradeCity.Unity.Scripts.GUI.Market
 {
-    public Resource selected;
-    public Dropdown dropdown;
-    List<string> options = GetOptions();
-    // Start is called before the first frame update
-    void Start()
+    public class ResourceSelectorScript : MonoBehaviour
     {
-        dropdown.captionText.text = "Select Resource...";
-        dropdown.ClearOptions();
-        dropdown.AddOptions(options);
-        dropdown.onValueChanged.AddListener((int i) =>
+        public Resource selected;
+        public Dropdown dropdown;
+        List<string> options = GetOptions();
+        // Start is called before the first frame update
+        void Start()
         {
-            selected = ResourceDisplayScript.ConvertToRes(options[i]);
-            dropdown.captionText.text = selected.GetName();
-            dropdown.Hide();
+            dropdown.captionText.text = "Select Resource...";
+            dropdown.ClearOptions();
+            dropdown.AddOptions(options);
+            dropdown.onValueChanged.AddListener((int i) =>
+                {
+                    selected = ResourceDisplayScript.ConvertToRes(options[i]);
+                    dropdown.captionText.text = selected.GetName();
+                    dropdown.Hide();
+                }
+            );
         }
-        );
-    }
 
-    private static List<string> GetOptions()
-    {
-        List<string> options = new List<string>();
-        foreach (Resource res in SessionGenerator.GetResourceList())
+        private static List<string> GetOptions()
         {
-            if (res is ISellable && res.GetName() != "Money")
-                options.Add(res.GetName());
+            List<string> options = new List<string>();
+            foreach (Resource res in SessionGenerator.GetResourceList())
+            {
+                if (res is ISellable && res.GetName() != "Money")
+                    options.Add(res.GetName());
+            }
+            return options;
         }
-        return options;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+        // Update is called once per frame
+        void Update()
+        {
 
+        }
     }
 }

@@ -1,65 +1,65 @@
-using Lebeg134.Module.Missions;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using TradeCity.Engine.Missions;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MissionListItemScript : MonoBehaviour
+namespace TradeCity.Unity.Scripts.GUI.Missions
 {
-    public Slider progressBar;
-    public Button claimButton;
-    public Text text;
-    Mission watched;
-    private void Awake()
+    public class MissionListItemScript : MonoBehaviour
     {
+        public Slider progressBar;
+        public Button claimButton;
+        public Text text;
+        Mission watched;
+        private void Awake()
+        {
         
-    }
-    public void Update()
-    {
-        if (watched != null)
+        }
+        public void Update()
+        {
+            if (watched != null)
+                UpdateVisuals();
+        }
+        public void SetWatched(Mission mission)
+        {
+            watched = mission;
+            mission.OnAchievement += UpdateButton;
+            text.text = watched.Text;
+            claimButton.onClick.RemoveAllListeners();
+            claimButton.onClick.AddListener(ClaimClick);
+            UpdateButton();
             UpdateVisuals();
-    }
-    public void SetWatched(Mission mission)
-    {
-        watched = mission;
-        mission.OnAchievement += UpdateButton;
-        text.text = watched.Text;
-        claimButton.onClick.RemoveAllListeners();
-        claimButton.onClick.AddListener(ClaimClick);
-        UpdateButton();
-        UpdateVisuals();
-    }
+        }
 
-    private void ClaimClick()
-    {
-        watched.Claim();
-        UpdateButton();
-    }
-    private void UpdateButton()
-    {
-        if (watched.IsClaimed)
+        private void ClaimClick()
         {
-            claimButton.interactable = false;
-            claimButton.GetComponentInChildren<Text>().text = "Claimed";
+            watched.Claim();
+            UpdateButton();
         }
-        else
+        private void UpdateButton()
         {
-            claimButton.interactable = watched.IsAchieved;
+            if (watched.IsClaimed)
+            {
+                claimButton.interactable = false;
+                claimButton.GetComponentInChildren<Text>().text = "Claimed";
+            }
+            else
+            {
+                claimButton.interactable = watched.IsAchieved;
+            }
+            claimButton.Select();
         }
-        claimButton.Select();
-    }
 
-    void UpdateVisuals()
-    {
-        if (watched.IsAchieved)
+        void UpdateVisuals()
         {
-            progressBar.value = 1;
+            if (watched.IsAchieved)
+            {
+                progressBar.value = 1;
+            }
+            else
+            {
+                progressBar.value = watched.CheckStatus();
+            }
+            UpdateButton();
         }
-        else
-        {
-            progressBar.value = watched.CheckStatus();
-        }
-        UpdateButton();
     }
 }

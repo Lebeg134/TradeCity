@@ -1,27 +1,31 @@
 /**
 * @(#) Player.cs
 */
-using Lebeg134.Module.Production;
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Structures;
-using Lebeg134.Module.TimeManager;
+
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Production;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Structures;
+using TradeCity.Engine.Structures.Interfaces;
+using TradeCity.Engine.TimeManager;
 
-namespace Lebeg134.Module.Session
+namespace TradeCity.Engine.Session
 {
 
     [Serializable]
     public partial class Player : ITickable
     {
         public event Action<Resource> OnResourceChange;
+
         //public event Action<IOwnable> OnAquire;
         //public event Action<Building> OnUpgrade;
 
-        List<IOwnable> owned = new List<IOwnable>();
-        Dictionary<Type, Resource> ownedResources = new Dictionary<Type, Resource>();
-        IPlayerStrategy playerStrategy;
-        ProductionSystem Production { get; set; }
+        private readonly List<IOwnable> owned = new();
+        private readonly Dictionary<Type, Resource> ownedResources = new();
+        private IPlayerStrategy playerStrategy;
+
+        private ProductionSystem Production { get; set; }
         public static Player CurrentPlayer { get; set; }
 
         public Player()
@@ -50,7 +54,7 @@ namespace Lebeg134.Module.Session
         public bool CheckStructures(List<IOwnable> structures, bool throwException = false)
         {
             bool valid = true;
-            List<IOwnable> missingStructures = new List<IOwnable>();
+            List<IOwnable> missingStructures = new();
             foreach (IOwnable ownable in structures)
             {
                 if (!HasStructure(ownable))
@@ -70,7 +74,7 @@ namespace Lebeg134.Module.Session
         }
         public List<Building> GetAllBuildings()
         {
-            List<Building> ret = new List<Building>();
+            List<Building> ret = new();
             foreach (IOwnable item in owned)
             {
                 if (item is Building)
@@ -82,7 +86,7 @@ namespace Lebeg134.Module.Session
         }
         public List<Land> GetLands()
         {
-            List<Land> ret = new List<Land>();
+            List<Land> ret = new();
             foreach (IOwnable item in owned)
             {
                 if (item is Land)
@@ -103,7 +107,7 @@ namespace Lebeg134.Module.Session
         public bool CheckResources(List<Resource> resources, bool throwException = false)
         {
             bool valid = true;
-            List<Resource> missingResources = new List<Resource>();
+            List<Resource> missingResources = new();
             foreach (Resource resource in resources)
             {
                 if (HasResource(resource))

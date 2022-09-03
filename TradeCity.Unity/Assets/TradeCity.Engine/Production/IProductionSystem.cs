@@ -1,13 +1,9 @@
-﻿using Lebeg134.Module.Structures;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using TradeCity.Engine.Structures.Interfaces;
 
-namespace Lebeg134.Module.Production
+namespace TradeCity.Engine.Production
 {
-    interface IProductionSystem
+    internal interface IProductionSystem
     {
         void Produce(List<IProducer> producers);
     }

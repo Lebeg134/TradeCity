@@ -1,14 +1,14 @@
-﻿using Lebeg134.Module.Resources;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using TradeCity.Engine.Resources;
 
-namespace Lebeg134.Module.Production
+namespace TradeCity.Engine.Production
 {
-    class ManyToOneRecipe : Recipe
+    internal class ManyToOneRecipe : Recipe
     {
-        List<Resource> from;
-        Resource to;
-        public ManyToOneRecipe(List<Resource> from, Resource to, int limit):base(limit)
+        private readonly List<Resource> from;
+        private readonly Resource to;
+        public ManyToOneRecipe(List<Resource> from, Resource to, int limit) : base(limit)
         {
             this.from = from;
             foreach (Resource res in from)
@@ -19,7 +19,7 @@ namespace Lebeg134.Module.Production
         }
         public override int AddResource(Resource resource)
         {
-            foreach(Resource res in from)
+            foreach (Resource res in from)
             {
                 if (resource.GetType() == res.GetType())
                 {
@@ -36,7 +36,7 @@ namespace Lebeg134.Module.Production
 
         protected override void Process()
         {
-            List<int> num = new List<int>();
+            List<int> num = new();
             var zipped = input.Zip(from, (inp, frm) => new
             {
                 inpt = inp,
@@ -47,7 +47,7 @@ namespace Lebeg134.Module.Production
                 num.Add(line.inpt.GetStock() / line.from.GetStock());
             }
             int craft = num.Min();
-            foreach(var line in zipped)
+            foreach (var line in zipped)
             {
                 line.inpt.Spend(craft * line.from.GetStock());
             }

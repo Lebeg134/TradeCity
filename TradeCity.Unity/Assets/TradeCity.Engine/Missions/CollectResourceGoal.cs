@@ -1,15 +1,15 @@
-﻿using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
-using Lebeg134.Module.Utilities;
-using System;
+﻿using System;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.Utilities;
 
-namespace Lebeg134.Module.Missions
+namespace TradeCity.Engine.Missions
 {
     [Serializable]
     public class CollectResourceGoal : ResourceGoalBase
     {
-        int goal;
-        int collected = 0;
+        private readonly int goal;
+        private int collected = 0;
         public CollectResourceGoal(Resource resource, Player player = null) : base(resource, player)
         {
             goal = resource.GetStock();

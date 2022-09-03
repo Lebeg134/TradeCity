@@ -1,16 +1,18 @@
-using Lebeg134.Scripts.GUI.VisualUpdaters;
 using UnityEngine;
 
-public class VisualUpdater : MonoBehaviour, IVisualUpdateable
+namespace TradeCity.Unity.Scripts.GUI.VisualUpdaters
 {
-    public GameObject target;
-
-    public void VisualUpdate()
+    public class VisualUpdater : MonoBehaviour, IVisualUpdateable
     {
-        target.GetComponent<IVisualUpdateable>().VisualUpdate();
+        public GameObject target;
+
+        public void VisualUpdate()
+        {
+            target.GetComponent<IVisualUpdateable>().VisualUpdate();
+        }
+        void Start() { }
+        void Update() { }
+
+
     }
-    void Start() { }
-    void Update() { }
-
-
 }

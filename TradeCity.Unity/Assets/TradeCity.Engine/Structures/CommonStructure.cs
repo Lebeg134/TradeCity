@@ -1,15 +1,10 @@
-﻿using Lebeg134.Module.Production;
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
-using Lebeg134.Module.Structures;
-using Lebeg134.Units;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.Structures.Interfaces;
 
-namespace Lebeg134.Module.Structures
+namespace TradeCity.Engine.Structures
 {
     public abstract class CommonStructure : Structure, IOwnable, IUpgradeable
     {

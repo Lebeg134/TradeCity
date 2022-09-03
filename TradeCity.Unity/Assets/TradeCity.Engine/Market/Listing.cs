@@ -1,13 +1,14 @@
 /**
 * @(#) Listing.cs
 */
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
-using Lebeg134.Module.TimeManager;
+
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.TimeManager;
 
-namespace Lebeg134.Module.MarketNS
+namespace TradeCity.Engine.Market
 {
     [Serializable]
     public class Listing : ITickable, IComparer<Listing>

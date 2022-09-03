@@ -1,7 +1,7 @@
-﻿using Lebeg134.Module.Resources;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using TradeCity.Engine.Resources;
 
-namespace Lebeg134.Module.Production
+namespace TradeCity.Engine.Production
 {
     public enum RecipePriority
     {
@@ -17,8 +17,8 @@ namespace Lebeg134.Module.Production
         protected List<Resource> output;
         public int Limit { get; set; }
         public RecipePriority InputPriority { get; set; }
-        public List<Resource>  Input => input;
-        
+        public List<Resource> Input => input;
+
         public Recipe(int limit)
         {
             input = new List<Resource>();

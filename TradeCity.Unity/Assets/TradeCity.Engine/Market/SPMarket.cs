@@ -1,7 +1,7 @@
-﻿using Lebeg134.Module.TimeManager;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using TradeCity.Engine.TimeManager;
 
-namespace Lebeg134.Module.Market
+namespace TradeCity.Engine.Market
 {
     public class SPMarket
     {
@@ -16,15 +16,12 @@ namespace Lebeg134.Module.Market
                 else
                     return instance;
             }
-            set
-            {
-                instance = value;
-            }
+            set => instance = value;
         }
-        static SPMarket instance;
 
-        List<SPListing> listings = new List<SPListing>();
-        public List<SPListing> Listings { get { return listings; } }
+        private static SPMarket instance;
+        private readonly List<SPListing> listings = new();
+        public List<SPListing> Listings => listings;
         public void RegisterListing(SPListing newListing)
         {
             listings.Add(newListing);

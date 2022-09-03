@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Lebeg134.Module.Graphics
+namespace TradeCity.Engine.Graphics
 {
     public class VisualUpdater : IUpdateable
     {
@@ -12,13 +12,11 @@ namespace Lebeg134.Module.Graphics
                     updater = new VisualUpdater();
                 return updater;
             }
-            set
-            {
-                updater = value;
-            }
+            set => updater = value;
         }
-        static VisualUpdater updater;
-        List<IUpdateable> subscribers = new List<IUpdateable>();
+
+        private static VisualUpdater updater;
+        private readonly List<IUpdateable> subscribers = new();
 
         public void Register(IUpdateable subscriber)
         {

@@ -1,8 +1,10 @@
 /**
 * @(#) IOwnable.cs
 */
-using Lebeg134.Module.Session;
-namespace Lebeg134.Module.Structures
+
+using TradeCity.Engine.Session;
+
+namespace TradeCity.Engine.Structures.Interfaces
 {
     public interface IOwnable
     {

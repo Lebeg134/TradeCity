@@ -1,9 +1,10 @@
-using Lebeg134.Module.Resources;
 using System;
+using TradeCity.Engine.Resources;
+
 /**
 * @(#) Wood.cs
 */
-namespace Lebeg134.Resources.Common
+namespace TradeCity.Units.Resources.Common
 {
     [Serializable]
     public class Wood : StandardResource

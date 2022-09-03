@@ -1,13 +1,14 @@
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Structures;
-using Lebeg134.Resources.Common;
-using Lebeg134.Resources.ConstructionIndustry;
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Structures;
+using TradeCity.Units.Resources.Common;
+using TradeCity.Units.Resources.ConstructionIndustry;
+
 /**
 * @(#) StoneQuarry.cs
 */
-namespace Lebeg134.Structures.Lands
+namespace TradeCity.Units.Structures.Lands
 {
     [Serializable]
     public class StoneQuarry : Land

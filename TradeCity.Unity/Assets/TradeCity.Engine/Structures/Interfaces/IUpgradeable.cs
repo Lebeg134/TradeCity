@@ -1,8 +1,6 @@
-﻿using Lebeg134.Module.Resources;
-using System;
-using System.Collections.Generic;
+﻿using System;
 
-namespace Lebeg134.Module.Structures
+namespace TradeCity.Engine.Structures.Interfaces
 {
     public interface IUpgradeable
     {

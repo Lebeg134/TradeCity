@@ -2,7 +2,7 @@
  * @(#) Gas.cs
  */
 
-namespace Lebeg134.Resources.OilIndustry
+namespace TradeCity.Units.Resources.OilIndustry
 {
     public class Gas
     {

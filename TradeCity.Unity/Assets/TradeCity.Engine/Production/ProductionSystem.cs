@@ -1,15 +1,17 @@
-﻿using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
-using Lebeg134.Module.Structures;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.Structures;
+using TradeCity.Engine.Structures.Interfaces;
 
-namespace Lebeg134.Module.Production
+namespace TradeCity.Engine.Production
 {
-    public class ProductionSystem: IProductionSystem
+    public class ProductionSystem : IProductionSystem
     {
-        private Player owner;
-        private List<Resource> outBuffer = new List<Resource>();
-        IDistributionStrategy DistStrategy { get; set; }
+        private readonly Player owner;
+        private readonly List<Resource> outBuffer = new();
+
+        private IDistributionStrategy DistStrategy { get; set; }
         public ProductionSystem(Player owner, IDistributionStrategy distributionStrategy)
         {
             this.owner = owner;
@@ -29,7 +31,7 @@ namespace Lebeg134.Module.Production
             {
                 foreach (Resource res in recipe.Input)
                 {
-                    if(res.GetType() == resource.GetType())
+                    if (res.GetType() == resource.GetType())
                     {
                         amount += res.GetStock();
                     }
@@ -45,7 +47,7 @@ namespace Lebeg134.Module.Production
 
         public void Produce(List<IProducer> producers)
         {
-            List<Recipe> recipes = new List<Recipe>();
+            List<Recipe> recipes = new();
             foreach (IProducer producer in producers)
             {
                 if (producer is Building && !((Building)producer).IsOn) continue;

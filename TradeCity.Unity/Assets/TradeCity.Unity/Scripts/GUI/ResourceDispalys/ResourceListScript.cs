@@ -1,31 +1,33 @@
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
 using System.Collections.Generic;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session;
 using UnityEngine;
 
-
-public class ResourceListScript : ListScript<Resource>
+namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
 {
-    protected override ICollection<Resource> GetCollection()
+    public class ResourceListScript : ListScript<Resource>
     {
-        List<Resource> ret = new List<Resource>();
-        foreach (Resource res in SessionGenerator.GetResourceList())
+        protected override ICollection<Resource> GetCollection()
         {
-            switch (res.GetName())
+            List<Resource> ret = new List<Resource>();
+            foreach (Resource res in SessionGenerator.GetResourceList())
             {
-                case "Money":
-                case "Electricity":
-                case "Water":
-                case "Workforce":
-                    continue;
+                switch (res.GetName())
+                {
+                    case "Money":
+                    case "Electricity":
+                    case "Water":
+                    case "Workforce":
+                        continue;
+                }
+                ret.Add(res);
             }
-            ret.Add(res);
+            return ret;
         }
-        return ret;
-    }
 
-    protected override void ProcessListItem(Resource item, GameObject newListItem)
-    {
-        newListItem.GetComponent<ResourceDisplayScript>().resource = item.GetName();
+        protected override void ProcessListItem(Resource item, GameObject newListItem)
+        {
+            newListItem.GetComponent<ResourceDisplayScript>().resource = item.GetName();
+        }
     }
 }

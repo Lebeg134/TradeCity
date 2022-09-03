@@ -1,24 +1,25 @@
 /**
 * @(#) ContinousResource.cs
 */
-using Lebeg134.Module.TimeManager;
+
 using System;
 
-namespace Lebeg134.Module.Resources
+namespace TradeCity.Engine.Resources
 {
     [Serializable]
     public abstract class ContinousResource : Resource
     {
-        private BufferResource buffer = new BufferResource();
+        private readonly BufferResource buffer = new();
         public ContinousResource(int amount) : base(amount) { }
-        public int Buffer { get { return buffer.GetStock(); } }
+        public int Buffer => buffer.GetStock();
 
         public override Resource Gain(int amount)
         {
             buffer.Gain(amount);
             return this;
         }
-        void LoadBuffer()
+
+        private void LoadBuffer()
         {
             stock = buffer.GetStock();
             buffer.Clear();

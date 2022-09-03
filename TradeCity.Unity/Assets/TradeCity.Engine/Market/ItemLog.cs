@@ -1,16 +1,13 @@
-/**
-* @(#) ItemLog.cs
-*/
 using System;
 using System.Collections.Generic;
 
-namespace Lebeg134.Module.MarketNS
+namespace TradeCity.Engine.Market
 {
     [Serializable]
-    struct ItemLog
+    internal struct ItemLog
     {
-        List<double> virtualLog;
-        List<double> sellLog;
-        List<int> buyLog;
+        private readonly List<double> _virtualLog;
+        private readonly List<double> _sellLog;
+        private readonly List<int> _buyLog;
     }
 }

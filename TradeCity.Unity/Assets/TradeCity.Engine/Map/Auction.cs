@@ -1,24 +1,25 @@
 /**
  * @(#) Auction.cs
  */
-using Lebeg134.Module.Session;
-using Lebeg134.Module.Structures;
-using Lebeg134.Module.TimeManager;
+
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.Structures;
+using TradeCity.Engine.TimeManager;
 
-namespace Lebeg134.Module.MapNS
+namespace TradeCity.Engine.Map
 {
     [Serializable]
     public class Auction : ITickable, IEqualityComparer<Auction>
     {
-        Land subject;
-        int currentPrice;
-        int minBid;
-        Player lastBidder;
-        int timeRemaining;
-        int timePerRound;
+        private readonly Land subject;
+        private readonly int currentPrice;
+        private readonly int minBid;
+        private Player lastBidder;
+        private int timeRemaining;
+        private readonly int timePerRound;
 
         public Auction(Land subject, int minBid, int timePerRound, Player initiater = null)
         {

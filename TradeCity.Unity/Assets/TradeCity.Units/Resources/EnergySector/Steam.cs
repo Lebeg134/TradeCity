@@ -2,7 +2,7 @@
  * @(#) Steam.cs
  */
 
-namespace Lebeg134.Resources.EnergySector
+namespace TradeCity.Units.Resources.EnergySector
 {
     public class Steam
     {

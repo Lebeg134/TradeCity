@@ -1,10 +1,6 @@
-﻿/**
- * @author Lebeg134
- */
-
-namespace Lebeg134.Module.Graphics
+﻿namespace TradeCity.Engine.Graphics
 {
-    interface IGetRes
+    public interface IGetRes
     {
         string GetResourcepath();
     }

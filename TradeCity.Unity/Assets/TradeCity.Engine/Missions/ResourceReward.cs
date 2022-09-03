@@ -1,13 +1,13 @@
-﻿using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
-using System;
+﻿using System;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session;
 
-namespace Lebeg134.Module.Missions
+namespace TradeCity.Engine.Missions
 {
     [Serializable]
     public class ResourceReward : IRewardable
     {
-        Resource resource;
+        private readonly Resource resource;
 
         public ResourceReward(Resource resource)
         {

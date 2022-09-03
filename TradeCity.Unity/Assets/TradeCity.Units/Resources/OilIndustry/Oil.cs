@@ -1,9 +1,10 @@
-using Lebeg134.Module.Resources;
 using System;
+using TradeCity.Engine.Resources;
+
 /**
 * @(#) Oil.cs
 */
-namespace Lebeg134.Resources.OilIndustry
+namespace TradeCity.Units.Resources.OilIndustry
 {
     [Serializable]
     public class Oil : StandardResource

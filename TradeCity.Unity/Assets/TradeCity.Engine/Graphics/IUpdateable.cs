@@ -1,4 +1,4 @@
-﻿namespace Lebeg134.Module.Graphics
+﻿namespace TradeCity.Engine.Graphics
 {
     public interface IUpdateable
     {

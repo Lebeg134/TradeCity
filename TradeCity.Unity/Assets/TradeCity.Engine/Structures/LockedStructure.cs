@@ -1,16 +1,17 @@
-using Lebeg134.Units;
 using System;
+using TradeCity.Units;
+
 /**
 * @(#) LockedStructure.cs
 */
-namespace Lebeg134.Module.Structures
+namespace TradeCity.Engine.Structures
 {
     [Serializable]
     public class LockedStructure : Structure
     {
-        Structure subject;
+        private readonly Structure subject;
 
-        LockedStructure(Structure subject)
+        private LockedStructure(Structure subject)
         {
             subject.Off();
             this.subject = subject;
@@ -35,7 +36,7 @@ namespace Lebeg134.Module.Structures
 
         public override string GetName()
         {
-            return "Locked "+subject.GetName();
+            return "Locked " + subject.GetName();
         }
 
         public override Branches GetBranch()

@@ -1,27 +1,30 @@
-using Lebeg134.Module.Session;
+using TradeCity.Engine.Session;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartGameScript : MonoBehaviour
+namespace TradeCity.Unity.Scripts.GUI.MainMenu
 {
-    public Button newGameBtn;
-    // Start is called before the first frame update
-    void Start()
+    public class StartGameScript : MonoBehaviour
     {
-        newGameBtn.onClick.AddListener(() => StartGame());
-    }
+        public Button newGameBtn;
+        // Start is called before the first frame update
+        void Start()
+        {
+            newGameBtn.onClick.AddListener(() => StartGame());
+        }
 
-    private void StartGame()
-    {
-        SceneManager.LoadScene(sceneName: "GameScene");
-        Session session = SessionGenerator.GenerateStandard();
-        session.Start();
-    }
+        private void StartGame()
+        {
+            SceneManager.LoadScene(sceneName: "GameScene");
+            Session session = SessionGenerator.GenerateStandard();
+            session.Start();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
+        // Update is called once per frame
+        void Update()
+        {
 
+        }
     }
 }

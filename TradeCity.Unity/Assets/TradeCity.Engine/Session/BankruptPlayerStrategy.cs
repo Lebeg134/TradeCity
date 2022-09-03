@@ -1,9 +1,10 @@
 /**
 * @(#) BankruptPlayerStrategy.cs
 */
-using Lebeg134.Module.Structures;
 
-namespace Lebeg134.Module.Session
+using TradeCity.Engine.Structures.Interfaces;
+
+namespace TradeCity.Engine.Session
 {
     public partial class Player
     {

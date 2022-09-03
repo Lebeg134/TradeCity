@@ -1,12 +1,13 @@
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
-using Lebeg134.Module.TimeManager;
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.TimeManager;
+
 /**
 * @(#) IUpgradeable.cs
 */
-namespace Lebeg134.Module.Structures
+namespace TradeCity.Engine.Structures.Interfaces
 {
     public enum BuildingState
     {

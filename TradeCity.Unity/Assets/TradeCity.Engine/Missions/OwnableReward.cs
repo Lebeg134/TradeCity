@@ -1,13 +1,13 @@
-﻿using Lebeg134.Module.Session;
-using Lebeg134.Module.Structures;
-using System;
+﻿using System;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.Structures.Interfaces;
 
-namespace Lebeg134.Module.Missions
+namespace TradeCity.Engine.Missions
 {
     [Serializable]
     public class OwnableReward : IRewardable
     {
-        IOwnable ownable;
+        private readonly IOwnable ownable;
         public OwnableReward(IOwnable ownable)
         {
             this.ownable = ownable;

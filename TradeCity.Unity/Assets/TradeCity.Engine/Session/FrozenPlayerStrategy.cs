@@ -2,7 +2,7 @@
 * @(#) FrozenPlayerStrategy.cs
 */
 
-namespace Lebeg134.Module.Session
+namespace TradeCity.Engine.Session
 {
     public partial class Player
     {

@@ -1,9 +1,10 @@
-using Lebeg134.Module.Resources;
 using System;
+using TradeCity.Engine.Resources;
+
 /**
 * @(#) Iron.cs
 */
-namespace Lebeg134.Resources.Common
+namespace TradeCity.Units.Resources.Common
 {
     [Serializable]
     public class Iron : StandardResource

@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 
-namespace Lebeg134.Module.Utilities
+namespace TradeCity.Engine.Utilities
 {
-    static class LebegUtil
+    internal static class LebegUtil
     {
         public static int IndexInRange(ICollection collection, int index)
         {

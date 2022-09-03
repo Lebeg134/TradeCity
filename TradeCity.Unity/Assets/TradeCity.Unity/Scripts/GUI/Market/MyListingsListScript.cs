@@ -1,8 +1,8 @@
-﻿using Lebeg134.Module.Market;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using TradeCity.Engine.Market;
 using UnityEngine;
 
-namespace Lebeg134.Scripts.GUI.Market
+namespace TradeCity.Unity.Scripts.GUI.Market
 {
     class MyListingsListScript : ListScript<SPListing>
     {

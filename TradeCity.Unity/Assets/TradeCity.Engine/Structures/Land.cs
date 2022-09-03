@@ -1,16 +1,17 @@
 /**
 * @(#) Land.cs
 */
-using Lebeg134.Module.MapNS;
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
-using Lebeg134.Module.TimeManager;
-using Lebeg134.Resources.Common;
-using Lebeg134.Units;
+
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Map;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.Structures.Interfaces;
+using TradeCity.Engine.TimeManager;
+using TradeCity.Units;
 
-namespace Lebeg134.Module.Structures
+namespace TradeCity.Engine.Structures
 {
     [Serializable]
     public abstract class Land : CommonStructure, ILand, IMapStructure
@@ -80,6 +81,6 @@ namespace Lebeg134.Module.Structures
             return base.GetBasePath() + "Land/";
         }
 
-        
+
     }
 }

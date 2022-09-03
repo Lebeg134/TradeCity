@@ -1,9 +1,10 @@
-using Lebeg134.Module.TimeManager;
 using System;
+using TradeCity.Engine.TimeManager;
+
 /**
 * @(#) PlayerStrategyBase.cs
 */
-namespace Lebeg134.Module.Session
+namespace TradeCity.Engine.Session
 {
 
     public partial class Player
@@ -34,7 +35,7 @@ namespace Lebeg134.Module.Session
             {
                 foreach (var tickable in player.owned)
                 {
-                    
+
                     if (tickable is ITickable)
                     {
                         ((ITickable)tickable).Tick();

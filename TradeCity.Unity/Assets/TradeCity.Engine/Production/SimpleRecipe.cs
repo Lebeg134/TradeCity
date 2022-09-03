@@ -1,10 +1,10 @@
-﻿using Lebeg134.Module.Resources;
+﻿using TradeCity.Engine.Resources;
 
-namespace Lebeg134.Module.Production
+namespace TradeCity.Engine.Production
 {
     public class SimpleRecipe : Recipe
     {
-        Resource from, to;
+        private readonly Resource from, to;
 
 
         /// <summary>
@@ -19,7 +19,7 @@ namespace Lebeg134.Module.Production
             input.Add(from.GetNewResource(0));
             this.to = to;
             output.Add(to.GetNewResource(0));
-            
+
         }
         public override int AddResource(Resource resource)
         {

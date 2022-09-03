@@ -1,6 +1,6 @@
-﻿using Lebeg134.Module.Session;
+﻿using TradeCity.Engine.Session;
 
-namespace Lebeg134.Scripts.GUI.ResourceDispalys
+namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
 {
     class LivePlayerResouceDisplayScript : LiveResourceDisplayScript
     {

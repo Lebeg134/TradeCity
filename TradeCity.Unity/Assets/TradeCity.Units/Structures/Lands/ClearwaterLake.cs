@@ -1,12 +1,13 @@
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Structures;
-using Lebeg134.Resources.Common;
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Structures;
+using TradeCity.Units.Resources.Common;
+
 /**
 * @(#) ClearwaterLake.cs
 */
-namespace Lebeg134.Structures.Lands
+namespace TradeCity.Units.Structures.Lands
 {
     [Serializable]
     public class ClearwaterLake : Land

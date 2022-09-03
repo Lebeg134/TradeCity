@@ -2,7 +2,7 @@
  * @(#) HighEnergyFuelPowerplant.cs
  */
 
-namespace Lebeg134.Structures.EnergySector
+namespace TradeCity.Units.Structures.EnergySector
 {
     public class HighEnergyFuelPowerplant
     {

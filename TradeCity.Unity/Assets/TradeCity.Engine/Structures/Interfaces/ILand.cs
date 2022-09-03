@@ -1,13 +1,12 @@
-﻿using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
-using Lebeg134.Module.TimeManager;
-using Lebeg134.Resources.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.TimeManager;
 
-namespace Lebeg134.Module.Structures
+namespace TradeCity.Engine.Structures.Interfaces
 {
-    internal interface ILand: IOwnable, IUpgradeable, ITickable
+    internal interface ILand : IOwnable, IUpgradeable, ITickable
     {
         event Action<Land> OnPurchase;
         Land GetNew();

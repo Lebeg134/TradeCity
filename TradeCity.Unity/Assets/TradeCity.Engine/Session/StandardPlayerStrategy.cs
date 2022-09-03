@@ -1,20 +1,21 @@
 ﻿/**
  * @(#) StandardPlayerStrategy.cs
  */
-using Lebeg134.Module.Production;
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Structures;
+
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Production;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Structures.Interfaces;
 
-namespace Lebeg134.Module.Session
+namespace TradeCity.Engine.Session
 {
     public partial class Player
     {
         [Serializable]
         public class StandardPlayerStrategy : PlayerStrategyBase
         {
-            public StandardPlayerStrategy(Player subject) : base(subject) 
+            public StandardPlayerStrategy(Player subject) : base(subject)
             {
                 player.Production = new ProductionSystem(player, new EvenDistributionStrartegy());
             }
@@ -29,8 +30,9 @@ namespace Lebeg134.Module.Session
             }
             private void Produce()
             {
-                List<IProducer> producers = new List<IProducer>();
-                player.owned.ForEach((owned) => {
+                List<IProducer> producers = new();
+                player.owned.ForEach((owned) =>
+                {
                     if (owned is IProducer)
                     {
                         producers.Add((IProducer)owned);

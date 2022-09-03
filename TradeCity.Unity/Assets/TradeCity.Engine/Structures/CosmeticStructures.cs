@@ -2,7 +2,7 @@
  * @(#) CosmeticStructures.cs
  */
 
-namespace Lebeg134.Module.Structures
+namespace TradeCity.Engine.Structures
 {
     public abstract class CosmeticStructures : Structure
     {

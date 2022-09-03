@@ -1,24 +1,24 @@
 /**
 * @(#) Map.cs
 */
-using Lebeg134.Module.Session;
-using Lebeg134.Module.Structures;
-using Lebeg134.Module.TimeManager;
+
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.Structures;
+using TradeCity.Engine.TimeManager;
 
-namespace Lebeg134.Module.MapNS
+namespace TradeCity.Engine.Map
 {
     [Serializable]
     public class Map : ITickable
     {
-        readonly int defaultBid = 100;
-        readonly int defaultTimePerRound = 100;
-
-        IMapStructure[,] structures;
-        readonly int sizeX, sizeY;
-        List<Auction> liveAuctions = new List<Auction>();
+        private readonly int defaultBid = 100;
+        private readonly int defaultTimePerRound = 100;
+        private readonly IMapStructure[,] structures;
+        private readonly int sizeX, sizeY;
+        private readonly List<Auction> liveAuctions = new();
 
         public Map(int sizeX, int sizeY)
         {
@@ -46,7 +46,7 @@ namespace Lebeg134.Module.MapNS
                 throw new NotAuctionableException();
             else
             {
-                Auction newAuction = new Auction((Land)subject, defaultBid, defaultTimePerRound, by);
+                Auction newAuction = new((Land)subject, defaultBid, defaultTimePerRound, by);
                 if (liveAuctions.Contains(newAuction))
                 {
                     throw new AuctionAlreadyExistsException();

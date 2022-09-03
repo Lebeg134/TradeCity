@@ -1,9 +1,10 @@
-using Lebeg134.Module.Resources;
 using System;
+using TradeCity.Engine.Resources;
+
 /**
 * @(#) Paint.cs
 */
-namespace Lebeg134.Resources.OilIndustry
+namespace TradeCity.Units.Resources.OilIndustry
 {
     [Serializable]
     public class Paint : StandardResource

@@ -1,11 +1,13 @@
 /**
 * @(#) Structure.cs
 */
-using Lebeg134.Module.Graphics;
-using Lebeg134.Units;
+
 using System;
 using System.Collections.Generic;
-namespace Lebeg134.Module.Structures
+using TradeCity.Engine.Graphics;
+using TradeCity.Units;
+
+namespace TradeCity.Engine.Structures
 {
     [Serializable]
     public abstract class Structure : IEqualityComparer<Structure>, IGetRes
@@ -13,12 +15,9 @@ namespace Lebeg134.Module.Structures
         public event Action<Structure> OnTurnOn;
         public event Action<Structure> OnTurnOff;
         protected bool isOn = true;
-        public bool IsOn 
-        { 
-            get
-            {
-                return isOn;
-            }
+        public bool IsOn
+        {
+            get => isOn;
             set
             {
                 if (value)
@@ -38,7 +37,7 @@ namespace Lebeg134.Module.Structures
                 isOn = true;
                 OnTurnOn?.Invoke(this);
             }
-            
+
         }
         public virtual void Off()
         {

@@ -1,7 +1,7 @@
-﻿using Lebeg134.Module.Resources;
-using System;
+﻿using System;
+using TradeCity.Engine.Resources;
 
-namespace Lebeg134.Resources.Common
+namespace TradeCity.Units.Resources.Common
 {
     [Serializable]
     public class Money : StandardResource

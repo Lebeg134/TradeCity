@@ -1,7 +1,7 @@
-﻿using Lebeg134.Module.Session;
+﻿using TradeCity.Engine.Session;
 using UnityEngine;
 
-namespace Lebeg134.Scripts.GUI.ResourceDispalys
+namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
 {
     internal class CostResourceDisplayScript : ResourceDisplayScript
     {

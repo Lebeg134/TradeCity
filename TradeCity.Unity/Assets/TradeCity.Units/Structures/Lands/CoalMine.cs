@@ -1,13 +1,14 @@
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Structures;
-using Lebeg134.Resources.Common;
-using Lebeg134.Resources.EnergySector;
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Structures;
+using TradeCity.Units.Resources.Common;
+using TradeCity.Units.Resources.EnergySector;
+
 /**
 * @(#) CoalMine.cs
 */
-namespace Lebeg134.Structures.Lands
+namespace TradeCity.Units.Structures.Lands
 {
     [Serializable]
     public class CoalMine : Land

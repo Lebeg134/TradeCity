@@ -1,16 +1,17 @@
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Structures;
-using Lebeg134.Resources.ConstructionIndustry;
-using Lebeg134.Resources.EnergySector;
-using Lebeg134.Resources.OilIndustry;
-using Lebeg134.Resources.Workforce;
-using Lebeg134.Units;
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Structures;
+using TradeCity.Engine.Structures.Interfaces;
+using TradeCity.Units.Resources.ConstructionIndustry;
+using TradeCity.Units.Resources.EnergySector;
+using TradeCity.Units.Resources.OilIndustry;
+using TradeCity.Units.Resources.Workforce;
+
 /**
 * @(#) ChemicalResearchFacility.cs
 */
-namespace Lebeg134.Structures.OilIndustry
+namespace TradeCity.Units.Structures.OilIndustry
 {
     [Serializable]
     public class ChemicalResearchFacility : Building

@@ -1,9 +1,10 @@
-using Lebeg134.Module.Resources;
 using System;
+using TradeCity.Engine.Resources;
+
 /**
 * @(#) Workforce.cs
 */
-namespace Lebeg134.Resources.Workforce
+namespace TradeCity.Units.Resources.Workforce
 {
     [Serializable]
     public class Workforce : LimitResource

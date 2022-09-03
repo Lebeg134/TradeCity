@@ -1,14 +1,15 @@
 /**
  * @(#) Building.cs
  */
-using Lebeg134.Module.Production;
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
-using Lebeg134.Units;
+
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Production;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.Structures.Interfaces;
 
-namespace Lebeg134.Module.Structures
+namespace TradeCity.Engine.Structures
 {
     [Serializable]
     public abstract class Building : CommonStructure, IOwnable, IBuilding
@@ -17,7 +18,7 @@ namespace Lebeg134.Module.Structures
         public event Action<Building> OnBuild;
 
         // ========== Attributes
-        protected List<Recipe> recipes = new List<Recipe>();
+        protected List<Recipe> recipes = new();
 
         // ========== Properties
         public BuildingState BuildingState

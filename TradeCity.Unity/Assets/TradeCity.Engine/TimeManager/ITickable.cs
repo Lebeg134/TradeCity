@@ -2,7 +2,7 @@
  * @(#) ITickable.cs
  */
 
-namespace Lebeg134.Module.TimeManager
+namespace TradeCity.Engine.TimeManager
 {
     public interface ITickable
     {

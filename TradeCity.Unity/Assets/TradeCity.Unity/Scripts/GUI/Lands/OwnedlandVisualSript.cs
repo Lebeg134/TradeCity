@@ -1,25 +1,29 @@
-using Lebeg134.Module.Structures;
+using TradeCity.Engine.Structures;
+using TradeCity.Unity.Scripts.GUI.ResourceDispalys;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OwnedlandVisualSript : MonoBehaviour
+namespace TradeCity.Unity.Scripts.GUI.Lands
 {
-    public Land watched;
-    public Image sprite;
-    public Text nameText;
-    public GameObject produceDisplay;
-
-    void Start()
+    public class OwnedlandVisualSript : MonoBehaviour
     {
-        nameText.text = watched.GetName();
-        produceDisplay.GetComponent<ResourceDisplayScript>().Watched = watched.GetProduce()[0]; //TODO if produces more than one!
+        public Land watched;
+        public Image sprite;
+        public Text nameText;
+        public GameObject produceDisplay;
 
-        var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
-        if (loadedSprite != null)
-            sprite.sprite = loadedSprite;
-    }
-    void Update()
-    {
+        void Start()
+        {
+            nameText.text = watched.GetName();
+            produceDisplay.GetComponent<ResourceDisplayScript>().Watched = watched.GetProduce()[0]; //TODO if produces more than one!
 
+            var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
+            if (loadedSprite != null)
+                sprite.sprite = loadedSprite;
+        }
+        void Update()
+        {
+
+        }
     }
 }

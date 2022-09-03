@@ -1,24 +1,25 @@
 /**
  * @(#) Session.cs
  */
-using Lebeg134.Module.Missions;
-using Lebeg134.Module.Structures;
-using Lebeg134.Module.TimeManager;
+
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using static Lebeg134.Module.Session.Player;
+using TradeCity.Engine.Missions;
+using TradeCity.Engine.Structures;
+using TradeCity.Engine.TimeManager;
+using static TradeCity.Engine.Session.Player;
 
-namespace Lebeg134.Module.Session
+namespace TradeCity.Engine.Session
 {
     [Serializable]
     public class Session : ITickable
     {
         public static readonly string Filename = "save.dat";
-        List<Player> players;
-        public Dictionary<Land, int> offers = new Dictionary<Land, int>();
-        public List<Mission> missions = new List<Mission>();
+        private readonly List<Player> players;
+        public Dictionary<Land, int> offers = new();
+        public List<Mission> missions = new();
         public bool Running = false;
         public static Session Instance
         {
@@ -47,7 +48,7 @@ namespace Lebeg134.Module.Session
         public static void Save()
         {
             Stream stream = File.OpenWrite(Filename);
-            BinaryFormatter b = new BinaryFormatter();
+            BinaryFormatter b = new();
             b.Serialize(stream, Instance);
             stream.Close();
         }
@@ -58,7 +59,7 @@ namespace Lebeg134.Module.Session
         public static void Load()
         {
             Stream stream = File.OpenRead(Filename);
-            BinaryFormatter b = new BinaryFormatter();
+            BinaryFormatter b = new();
             instance = (Session)b.Deserialize(stream);
             stream.Close();
             CurrentPlayer = Instance.players[0]; // TODO need to change when multiple players

@@ -1,7 +1,7 @@
 /**
 * @(#) IPlayerStrategy.cs
 */
-namespace Lebeg134.Module.Session
+namespace TradeCity.Engine.Session
 {
     public interface IPlayerStrategy
     {

@@ -1,9 +1,10 @@
-using Lebeg134.Module.Resources;
 using System;
+using TradeCity.Engine.Resources;
+
 /**
 * @(#) Glass.cs
 */
-namespace Lebeg134.Resources.ConstructionIndustry
+namespace TradeCity.Units.Resources.ConstructionIndustry
 {
     [Serializable]
     public class Glass : StandardResource

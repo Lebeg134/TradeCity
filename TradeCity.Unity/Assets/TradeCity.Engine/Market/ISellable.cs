@@ -1,9 +1,7 @@
-/**
-* @(#) ISellable.cs
-*/
-using Lebeg134.Module.Resources;
 using System.Collections.Generic;
-namespace Lebeg134.Module.MarketNS
+using TradeCity.Engine.Resources;
+
+namespace TradeCity.Engine.Market
 {
     public interface ISellable : IEqualityComparer<ISellable>
     {

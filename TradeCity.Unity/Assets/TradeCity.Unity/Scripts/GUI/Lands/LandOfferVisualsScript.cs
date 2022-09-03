@@ -1,77 +1,82 @@
-using Lebeg134.Module.Session;
-using Lebeg134.Module.Structures;
-using Lebeg134.Resources.Common;
 using System.Collections.Generic;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.Structures;
+using TradeCity.Units.Resources.Common;
+using TradeCity.Unity.Scripts.GUI.ResourceDispalys;
+using TradeCity.Unity.Scripts.GUI.VisualUpdaters;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LandOfferVisualsScript : MonoBehaviour
+namespace TradeCity.Unity.Scripts.GUI.Lands
 {
-    public Image sprite;
-    public Text buildingName;
-    public Button buildButton;
-    public GameObject costDisplay;
-    [Dropdown("options")]
-    public string target;
-    string[] options = GetOptions();
-    public Land watched;
-    public int price = 1000;
-    private static string[] GetOptions()
+    public class LandOfferVisualsScript : MonoBehaviour
     {
-
-        List<string> options = new List<string>();
-        foreach (Land land in SessionGenerator.GetAllLands())
+        public Image sprite;
+        public Text buildingName;
+        public Button buildButton;
+        public GameObject costDisplay;
+        [Dropdown("options")]
+        public string target;
+        string[] options = GetOptions();
+        public Land watched;
+        public int price = 1000;
+        private static string[] GetOptions()
         {
-            options.Add(land.GetName());
+
+            List<string> options = new List<string>();
+            foreach (Land land in SessionGenerator.GetAllLands())
+            {
+                options.Add(land.GetName());
+            }
+            return options.ToArray();
         }
-        return options.ToArray();
-    }
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        if (watched == null)
+        // Start is called before the first frame update
+        void Start()
         {
-            watched = ConvertStringToLand(target);
+            if (watched == null)
+            {
+                watched = ConvertStringToLand(target);
+            }
+            buildingName.text = watched.GetName();
+            costDisplay.GetComponent<ResourceDisplayScript>().Watched = new Money(price);
+
+            var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
+            if (loadedSprite != null)
+                sprite.sprite = loadedSprite;
+
+            buildButton.onClick.AddListener(() => OnClick());
+
         }
-        buildingName.text = watched.GetName();
-        costDisplay.GetComponent<ResourceDisplayScript>().Watched = new Money(price);
 
-        var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
-        if (loadedSprite != null)
-            sprite.sprite = loadedSprite;
-
-        buildButton.onClick.AddListener(() => OnClick());
-
-    }
-
-    private void OnClick()
-    {
-        if (Player.CurrentPlayer.CheckResource(new Money(price)))
+        private void OnClick()
         {
-            Player.CurrentPlayer.SubRes(new Money(price));
-            Player.CurrentPlayer.GiveStructure(watched);
-            Session.Instance.offers.Remove(watched);
-            int newPrice = price * 2;
-            Session.Instance.offers.Add(watched.GetNew(), newPrice);
-            gameObject.GetComponentInParent<AvailableLandsListScript>().Refresh();
-            gameObject.GetComponentInParent<VisualUpdater>().VisualUpdate();
+            if (Player.CurrentPlayer.CheckResource(new Money(price)))
+            {
+                Player.CurrentPlayer.SubRes(new Money(price));
+                Player.CurrentPlayer.GiveStructure(watched);
+                Session.Instance.offers.Remove(watched);
+                int newPrice = price * 2;
+                Session.Instance.offers.Add(watched.GetNew(), newPrice);
+                gameObject.GetComponentInParent<AvailableLandsListScript>().Refresh();
+                gameObject.GetComponentInParent<VisualUpdater>().VisualUpdate();
+            }
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        buildButton.interactable = Player.CurrentPlayer.CheckResource(new Money(price));
-    }
-    Land ConvertStringToLand(string name)
-    {
-        foreach (Land land in SessionGenerator.GetAllLands())
+        // Update is called once per frame
+        void Update()
         {
-            if (land.GetName() == name)
-                return land;
+            buildButton.interactable = Player.CurrentPlayer.CheckResource(new Money(price));
         }
-        return null;
+        Land ConvertStringToLand(string name)
+        {
+            foreach (Land land in SessionGenerator.GetAllLands())
+            {
+                if (land.GetName() == name)
+                    return land;
+            }
+            return null;
+        }
     }
 }

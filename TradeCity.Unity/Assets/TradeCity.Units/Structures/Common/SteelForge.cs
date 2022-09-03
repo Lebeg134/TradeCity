@@ -1,30 +1,25 @@
-using Lebeg134.Module.Production;
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Structures;
-using Lebeg134.Resources.Common;
-using Lebeg134.Resources.EnergySector;
-using Lebeg134.Resources.Workforce;
-using Lebeg134.Units;
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Production;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Structures;
+using TradeCity.Engine.Structures.Interfaces;
+using TradeCity.Units.Resources.Common;
+using TradeCity.Units.Resources.EnergySector;
+using TradeCity.Units.Resources.Workforce;
+
 /**
 * @(#) SteelForge.cs
 */
-namespace Lebeg134.Structures.Common
+namespace TradeCity.Units.Structures.Common
 {
     [Serializable]
     public class SteelForge : Building
     {
-        protected static List<Resource>[] GetCostArray
-        {
-            get
-            {
-                return new[]{
+        protected static List<Resource>[] GetCostArray => new[]{
                     new List<Resource> { new Wood(100), new Workforce(50) }, //Build cost
                     new List<Resource> { new Steel(100), new Workforce(25) }
                 };
-            }
-        }
         public SteelForge()
         {
             recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(1), new Iron(2) }, new Steel(1), 5));

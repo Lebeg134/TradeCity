@@ -1,28 +1,29 @@
 /**
 * @(#) Market.cs
 */
-using Lebeg134.Module.Session;
-using Lebeg134.Module.TimeManager;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.TimeManager;
 
-namespace Lebeg134.Module.MarketNS
+namespace TradeCity.Engine.Market
 {
     [Serializable]
     public class Market : ITickable
     {
-        private Dictionary<System.Type, ItemLog> registeredItems;
-        private Dictionary<System.Type, List<Listing>> listings;
+        private readonly Dictionary<System.Type, ItemLog> registeredItems;
+        private readonly Dictionary<System.Type, List<Listing>> listings;
 
-        void GenerateListing(ISellable of, int num)
+        private void GenerateListing(ISellable of, int num)
         {
 
         }
         public int PostListing(ISellable wantSellable, ISellable forSellable, Player by, int amount = 1, bool all = false)
         {
             // TODO check if Listing already exists
-            Listing post = new Listing(wantSellable, forSellable, by, amount);
+            Listing post = new(wantSellable, forSellable, by, amount);
             List<Listing> relevantListings = listings[forSellable.GetType()];
             int newAmount = post.LockResources(all);
             if (amount != newAmount)
@@ -73,7 +74,7 @@ namespace Lebeg134.Module.MarketNS
         }
         public List<Listing> GetPlayerListingsList(Player player)
         {
-            List<Listing> myListings = new List<Listing>();
+            List<Listing> myListings = new();
             foreach (List<Listing> list in listings.Values)
             {
                 myListings.AddRange(list.FindAll(x => x.Poster.Equals(player)));
@@ -84,7 +85,8 @@ namespace Lebeg134.Module.MarketNS
         {
             // Generate new listings
         }
-        void AutoCompleteListings()
+
+        private void AutoCompleteListings()
         {
             // Could be moved to postListing
         }

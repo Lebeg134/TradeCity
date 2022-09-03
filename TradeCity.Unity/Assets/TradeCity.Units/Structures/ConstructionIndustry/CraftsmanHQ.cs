@@ -1,15 +1,16 @@
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Structures;
-using Lebeg134.Resources.Common;
-using Lebeg134.Resources.ConstructionIndustry;
-using Lebeg134.Resources.EnergySector;
-using Lebeg134.Units;
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Structures.EasyInheritance;
+using TradeCity.Engine.Structures.Interfaces;
+using TradeCity.Units.Resources.Common;
+using TradeCity.Units.Resources.ConstructionIndustry;
+using TradeCity.Units.Resources.EnergySector;
+
 /**
 * @(#) CraftsmanHQ.cs
 */
-namespace Lebeg134.Structures.ConstructionIndustry
+namespace TradeCity.Units.Structures.ConstructionIndustry
 {
     [Serializable]
     public class CraftsmanHQ : SpecialBuilding

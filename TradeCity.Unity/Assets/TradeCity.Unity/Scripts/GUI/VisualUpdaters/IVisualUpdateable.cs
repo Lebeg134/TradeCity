@@ -1,4 +1,4 @@
-﻿namespace Lebeg134.Scripts.GUI.VisualUpdaters
+﻿namespace TradeCity.Unity.Scripts.GUI.VisualUpdaters
 {
     interface IVisualUpdateable
     {

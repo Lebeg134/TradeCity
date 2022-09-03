@@ -1,10 +1,11 @@
 /**
 * @(#) StandardResource.cs
 */
-using Lebeg134.Module.MarketNS;
-using System;
 
-namespace Lebeg134.Module.Resources
+using System;
+using TradeCity.Engine.Market;
+
+namespace TradeCity.Engine.Resources
 {
     [Serializable]
     public abstract class StandardResource : Resource, ISellable

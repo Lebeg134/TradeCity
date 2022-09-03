@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Lebeg134.Module.Missions;
-using Lebeg134.Module.Session;
+﻿using System.Collections.Generic;
+using TradeCity.Engine.Missions;
+using TradeCity.Engine.Session;
 using UnityEngine;
 
-namespace Assets.Scripts.GUI.Missions
+namespace TradeCity.Unity.Scripts.GUI.Missions
 {
     class MissionsListScript : ListScript<Mission>
     {

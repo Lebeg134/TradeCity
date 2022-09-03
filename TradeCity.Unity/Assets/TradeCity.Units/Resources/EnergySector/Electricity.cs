@@ -1,9 +1,10 @@
-using Lebeg134.Module.Resources;
 using System;
+using TradeCity.Engine.Resources;
+
 /**
 * @(#) Electricity.cs
 */
-namespace Lebeg134.Resources.EnergySector
+namespace TradeCity.Units.Resources.EnergySector
 {
     [Serializable]
     public class Electricity : ContinousResource

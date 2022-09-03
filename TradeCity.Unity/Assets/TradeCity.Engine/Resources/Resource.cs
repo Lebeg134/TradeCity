@@ -1,12 +1,13 @@
 /**
 * @(#) Resource.cs
 */
-using Lebeg134.Module.Graphics;
-using Lebeg134.Module.TimeManager;
+
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Graphics;
+using TradeCity.Engine.TimeManager;
 
-namespace Lebeg134.Module.Resources
+namespace TradeCity.Engine.Resources
 {
     [Serializable]
     public abstract class Resource : IGetRes, ITickable
@@ -96,7 +97,7 @@ namespace Lebeg134.Module.Resources
         {
             return A.Gain(B);
         }
-        public static Resource operator-(Resource A, int B)
+        public static Resource operator -(Resource A, int B)
         {
             return A.Spend(B);
         }
@@ -124,7 +125,7 @@ namespace Lebeg134.Module.Resources
         }
         public static void Transfer(List<Resource> to, Resource from, int amount, bool safe = false)
         {
-            foreach(Resource res in to)
+            foreach (Resource res in to)
             {
                 if (res.GetType() == from.GetType())
                 {
@@ -150,7 +151,7 @@ namespace Lebeg134.Module.Resources
         public static int GetStock(List<Resource> list, Resource type)
         {
             int stockSum = 0;
-            foreach(Resource res in list)
+            foreach (Resource res in list)
             {
                 if (res.GetType() == type.GetType())
                     stockSum += res.GetStock();
@@ -161,7 +162,7 @@ namespace Lebeg134.Module.Resources
         [Serializable]
         internal class NotEnoughResourceException : Exception
         {
-            List<Resource> missingResources;
+            private readonly List<Resource> missingResources;
             public NotEnoughResourceException(List<Resource> missingResources = null)
             {
                 this.missingResources = missingResources;

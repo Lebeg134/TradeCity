@@ -1,27 +1,27 @@
-﻿using Lebeg134.Module.Missions;
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Structures;
-using Lebeg134.Resources.Common;
-using Lebeg134.Resources.ConstructionIndustry;
-using Lebeg134.Resources.EnergySector;
-using Lebeg134.Resources.OilIndustry;
-using Lebeg134.Resources.Workforce;
-using Lebeg134.Structures.Common;
-using Lebeg134.Structures.ConstructionIndustry;
-using Lebeg134.Structures.EnergySector;
-using Lebeg134.Structures.Lands;
-using Lebeg134.Structures.OilIndustry;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using TradeCity.Engine.Missions;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Structures;
+using TradeCity.Units.Resources.Common;
+using TradeCity.Units.Resources.ConstructionIndustry;
+using TradeCity.Units.Resources.EnergySector;
+using TradeCity.Units.Resources.OilIndustry;
+using TradeCity.Units.Resources.Workforce;
+using TradeCity.Units.Structures.Common;
+using TradeCity.Units.Structures.ConstructionIndustry;
+using TradeCity.Units.Structures.EnergySector;
+using TradeCity.Units.Structures.Lands;
+using TradeCity.Units.Structures.OilIndustry;
 
-namespace Lebeg134.Module.Session
+namespace TradeCity.Engine.Session
 {
     static public class SessionGenerator
     {
-        static List<Building> allBuildings;
+        private static List<Building> allBuildings;
         public static Session GenerateStandard()
         {
-            Session newSession = new Session();
-            Player thisPlayer = new Player();
+            Session newSession = new();
+            Player thisPlayer = new();
             Player.CurrentPlayer = thisPlayer;
             FillPlayerWithStandard(thisPlayer);
             newSession.Login(thisPlayer);
@@ -34,7 +34,8 @@ namespace Lebeg134.Module.Session
 
             return newSession;
         }
-        static void FillPlayerWithStandard(Player player)
+
+        private static void FillPlayerWithStandard(Player player)
         {
             player.RegisterResources(GetResourceList());
             player.GiveRes(new Money(50000));
@@ -45,9 +46,9 @@ namespace Lebeg134.Module.Session
         }
         public static List<Resource> GetResourceList()
         {
-            Workforce workforce = new Workforce(0);
+            Workforce workforce = new(0);
             workforce.IncLimit(10000);
-            List<Resource> template = new List<Resource>
+            List<Resource> template = new()
             {
                 new Money(0),
                 new Iron(0), new Steel(0), new Water(0), new Wood(0),
@@ -56,10 +57,11 @@ namespace Lebeg134.Module.Session
                 new Chemicals(0), new Fuel(0), new Ink(0), new Kerosine(0), new Oil(0), new Paint(0), new Plastic(0),
                 workforce
             };
-            
+
             return template;
         }
-        static void GenerateStartingOffers(Session session)
+
+        private static void GenerateStartingOffers(Session session)
         {
             session.offers.Add(new ClearwaterLake(), 1000);
             session.offers.Add(new Well(), 2000);
@@ -94,7 +96,7 @@ namespace Lebeg134.Module.Session
                 new Mission(new CollectResourceGoal(new Coal(100)), new ResourceReward(new Bricks(250)))
 
             };
-        } 
+        }
         public static List<Building> GetAllBuildings()
         {
             if (allBuildings == null)

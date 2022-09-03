@@ -1,8 +1,8 @@
-﻿using Lebeg134.Module.Session;
-using Lebeg134.Module.TimeManager;
-using System;
+﻿using System;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.TimeManager;
 
-namespace Lebeg134.Module.Missions
+namespace TradeCity.Engine.Missions
 {
     [Serializable]
     public class Mission : ITickable
@@ -12,17 +12,17 @@ namespace Lebeg134.Module.Missions
         public event Action OnClaim;
 
         private Player owner;
-        private IAchievable goal;
-        private IRewardable reward;
+        private readonly IAchievable goal;
+        private readonly IRewardable reward;
         private bool isAccepted = false;
         private bool isAchieved = false;
         private bool isClaimed = false;
         //Enum state? Strategy?
 
-        public string Text { get { return goal.Text; } }
-        public bool IsAccepted { get { return isAccepted; } }
-        public bool IsAchieved { get { return goal.IsAchieved(); } }
-        public bool IsClaimed { get { return isClaimed; } }
+        public string Text => goal.Text;
+        public bool IsAccepted => isAccepted;
+        public bool IsAchieved => goal.IsAchieved();
+        public bool IsClaimed => isClaimed;
 
         public Mission(IAchievable goal, IRewardable reward, Player owner = null)
         {

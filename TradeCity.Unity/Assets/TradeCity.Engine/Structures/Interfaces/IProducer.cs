@@ -1,11 +1,12 @@
 /**
  * @(#) IProducer.cs
  */
-using Lebeg134.Module.Production;
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.TimeManager;
+
 using System.Collections.Generic;
-namespace Lebeg134.Module.Structures
+using TradeCity.Engine.Production;
+using TradeCity.Engine.Resources;
+
+namespace TradeCity.Engine.Structures.Interfaces
 {
     public interface IProducer
     {

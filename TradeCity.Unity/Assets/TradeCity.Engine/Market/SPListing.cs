@@ -1,11 +1,10 @@
-﻿using Lebeg134.Module.MarketNS;
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
-using Lebeg134.Module.TimeManager;
-using Lebeg134.Resources.Common;
-using System;
+﻿using System;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session;
+using TradeCity.Engine.TimeManager;
+using TradeCity.Units.Resources.Common;
 
-namespace Lebeg134.Module.Market
+namespace TradeCity.Engine.Market
 {
     [Serializable]
     public class SPListing : ITickable
@@ -21,8 +20,9 @@ namespace Lebeg134.Module.Market
                     throw new Exception("Resource not sellable");
             }
         }
-        public ISellable Sellable { get => sell; }
-        ISellable sell;
+        public ISellable Sellable => sell;
+
+        private ISellable sell;
         public int above;
         public SPListing(Resource sellable, int sellAbove)
         {

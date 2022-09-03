@@ -1,9 +1,10 @@
 /**
 * @(#) IMapStructure.cs
 */
-using Lebeg134.Module.Session;
 
-namespace Lebeg134.Module.MapNS
+using TradeCity.Engine.Session;
+
+namespace TradeCity.Engine.Map
 {
     public interface IMapStructure
     {

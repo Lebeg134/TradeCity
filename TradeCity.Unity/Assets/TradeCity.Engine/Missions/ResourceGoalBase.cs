@@ -1,8 +1,8 @@
-﻿using Lebeg134.Module.Resources;
-using Lebeg134.Module.Session;
-using System;
+﻿using System;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session;
 
-namespace Lebeg134.Module.Missions
+namespace TradeCity.Engine.Missions
 {
     [Serializable]
     public abstract class ResourceGoalBase : IAchievable

@@ -1,41 +1,44 @@
-using Lebeg134.Module.Session;
 using System;
+using TradeCity.Engine.Session;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ContinueButtonScript : MonoBehaviour
+namespace TradeCity.Unity.Scripts.GUI.MainMenu
 {
-    Button button;
-    // Start is called before the first frame update
-    void Start()
+    public class ContinueButtonScript : MonoBehaviour
     {
-        button = GetComponent<Button>();
-        UpdateVisuals();
-        button.onClick.AddListener(() => OnClick());
-    }
-
-    private void OnClick()
-    {
-        try
+        Button button;
+        // Start is called before the first frame update
+        void Start()
         {
-            Session.Load();
-            SceneManager.LoadScene(sceneName: "GameScene");
-            Session.Instance.Start();
+            button = GetComponent<Button>();
+            UpdateVisuals();
+            button.onClick.AddListener(() => OnClick());
         }
-        catch (Exception)
-        {
-            button.interactable = false;
-        }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        UpdateVisuals();
-    }
-    void UpdateVisuals()
-    {
-        button.interactable = Session.SaveExists();
+        private void OnClick()
+        {
+            try
+            {
+                Session.Load();
+                SceneManager.LoadScene(sceneName: "GameScene");
+                Session.Instance.Start();
+            }
+            catch (Exception)
+            {
+                button.interactable = false;
+            }
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            UpdateVisuals();
+        }
+        void UpdateVisuals()
+        {
+            button.interactable = Session.SaveExists();
+        }
     }
 }

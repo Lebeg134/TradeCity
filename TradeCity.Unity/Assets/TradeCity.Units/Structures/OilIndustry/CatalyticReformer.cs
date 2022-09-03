@@ -2,7 +2,7 @@
  * @(#) CatalyticReformer.cs
  */
 
-namespace Lebeg134.Structures.OilIndustry
+namespace TradeCity.Units.Structures.OilIndustry
 {
     public class CatalyticReformer
     {

@@ -1,7 +1,7 @@
-﻿using Lebeg134.Module.Session;
-using System;
+﻿using System;
+using TradeCity.Engine.Session;
 
-namespace Lebeg134.Module.Missions
+namespace TradeCity.Engine.Missions
 {
     public interface IAchievable
     {

@@ -1,22 +1,19 @@
-using Lebeg134.Module.Resources;
-using Lebeg134.Module.Structures;
-using Lebeg134.Module.Utilities;
-using Lebeg134.Resources.Common;
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Resources;
+using TradeCity.Engine.Structures;
+using TradeCity.Engine.Utilities;
+using TradeCity.Units.Resources.Common;
+
 /**
 * @(#) Forest.cs
 */
-namespace Lebeg134.Structures.Lands
+namespace TradeCity.Units.Structures.Lands
 {
     [Serializable]
     public class Forest : Land
     {
-        protected static List<Resource>[] GetCosttats
-        {
-            get
-            {
-                return new[] {
+        protected static List<Resource>[] GetCosttats => new[] {
                     new List<Resource> {new Wood(100)},
                     new List<Resource> {new Wood(200)},
                     new List<Resource> {new Wood(300)},
@@ -28,14 +25,8 @@ namespace Lebeg134.Structures.Lands
                     new List<Resource> {new Wood(900)},
                     new List<Resource> {new Wood(1000)}
                 };
-            }
-        }
 
-        protected static List<Resource>[] GetProducetats
-        {
-            get
-            {
-                return new[]
+        protected static List<Resource>[] GetProducetats => new[]
                 {
                     new List<Resource> {new Wood(10)},
                     new List<Resource> {new Wood(20)},
@@ -48,8 +39,6 @@ namespace Lebeg134.Structures.Lands
                     new List<Resource> {new Wood(90)},
                     new List<Resource> {new Wood(100)}
                 };
-            }
-        }
 
         public override string GetName()
         {

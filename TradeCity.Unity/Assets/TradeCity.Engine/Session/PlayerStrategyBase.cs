@@ -1,4 +1,5 @@
 using System;
+using TradeCity.Engine.Structures.Interfaces;
 using TradeCity.Engine.TimeManager;
 
 /**
@@ -12,19 +13,19 @@ namespace TradeCity.Engine.Session
         [Serializable]
         public abstract class PlayerStrategyBase : IPlayerStrategy
         {
-            protected Player player;
+            protected Player _player;
             public PlayerStrategyBase(Player subject)
             {
-                player = subject;
+                _player = subject;
             }
             public virtual void Freeze()
             {
-                if (!player.IsFrozen())
-                    player.playerStrategy = new FrozenPlayerStrategy(player);
+                if (!_player.IsFrozen())
+                    _player._playerStrategy = new FrozenPlayerStrategy(_player);
             }
             public virtual void GoBankrupt()
             {
-                player.playerStrategy = new BankruptPlayerStrategy(player);
+                _player._playerStrategy = new BankruptPlayerStrategy(_player);
             }
             public virtual bool IsFrozen()
             {
@@ -33,7 +34,7 @@ namespace TradeCity.Engine.Session
 
             public virtual void Tick()
             {
-                foreach (var tickable in player.owned)
+                foreach (IOwnable tickable in _player._owned)
                 {
 
                     if (tickable is ITickable)

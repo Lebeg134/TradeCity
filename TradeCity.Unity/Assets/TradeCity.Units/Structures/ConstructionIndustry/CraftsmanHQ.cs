@@ -13,7 +13,7 @@ using TradeCity.Units.Resources.EnergySector;
 namespace TradeCity.Units.Structures.ConstructionIndustry
 {
     [Serializable]
-    public class CraftsmanHQ : SpecialBuilding
+    public class CraftsmanHq : SpecialBuilding
     {
         public override List<Resource> GetCost()
         {
@@ -27,7 +27,7 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
 
         public override Branches GetBranch()
         {
-            return Branches.CONSTRUCTION;
+            return Branches.Construction;
         }
 
         public override string GetName()

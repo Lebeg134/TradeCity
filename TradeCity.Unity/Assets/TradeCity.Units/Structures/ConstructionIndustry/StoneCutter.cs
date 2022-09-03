@@ -20,11 +20,11 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
         public override void Upgrade()
         {
             base.Upgrade();
-            Recipes[0].Limit += level * 5 + 5;
+            Recipes[0].Limit += _level * 5 + 5;
         }
         public override Branches GetBranch()
         {
-            return Branches.CONSTRUCTION;
+            return Branches.Construction;
         }
 
         public override string GetName()

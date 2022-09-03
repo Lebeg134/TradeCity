@@ -14,17 +14,17 @@ namespace TradeCity.Engine.Resources
     {
         public event Action<int> OnAmountChange;
         //Amount of resource stored
-        protected int stock;
+        protected int _stock;
         public Resource(int amount = 0)
         {
             if (amount > 0)
-                stock = amount;
+                _stock = amount;
             else
-                stock = 0;
+                _stock = 0;
         }
         public int GetStock()
         {
-            return stock;
+            return _stock;
         }
         public abstract string GetName();
         virtual public string GetResourcepath()
@@ -43,7 +43,7 @@ namespace TradeCity.Engine.Resources
             {
                 throw new ArgumentException("Can not gain negative amount");
             }
-            stock += amount;
+            _stock += amount;
             OnAmountChange?.Invoke(amount);
             return this;
         }
@@ -53,9 +53,9 @@ namespace TradeCity.Engine.Resources
             {
                 throw new ArgumentException("Can not spend negative amount");
             }
-            if (stock >= amount)
+            if (_stock >= amount)
             {
-                stock -= amount;
+                _stock -= amount;
                 OnAmountChange?.Invoke(-amount);
             }
             else throw new NotEnoughResourceException();
@@ -67,9 +67,9 @@ namespace TradeCity.Engine.Resources
             {
                 throw new ArgumentException("Can not set negative amount");
             }
-            int prevStock = stock;
-            stock = amount;
-            OnAmountChange?.Invoke(stock - prevStock);
+            int prevStock = _stock;
+            _stock = amount;
+            OnAmountChange?.Invoke(_stock - prevStock);
         }
         public abstract Resource GetNewResource(int amount);
 
@@ -83,31 +83,31 @@ namespace TradeCity.Engine.Resources
             //Cannot be directly registered
         }
 
-        public static Resource operator +(Resource A, Resource B)
+        public static Resource operator +(Resource a, Resource b)
         {
-            if (A.GetType() != B.GetType()) throw new ArgumentException("Not same Type!");
-            return A.Gain(B.stock);
+            if (a.GetType() != b.GetType()) throw new ArgumentException("Not same Type!");
+            return a.Gain(b._stock);
         }
-        public static Resource operator -(Resource A, Resource B)
+        public static Resource operator -(Resource a, Resource b)
         {
-            if (A.GetType() != B.GetType()) throw new ArgumentException("Not same Type!");
-            return A.Spend(B.stock);
+            if (a.GetType() != b.GetType()) throw new ArgumentException("Not same Type!");
+            return a.Spend(b._stock);
         }
-        public static Resource operator +(Resource A, int B)
+        public static Resource operator +(Resource a, int b)
         {
-            return A.Gain(B);
+            return a.Gain(b);
         }
-        public static Resource operator -(Resource A, int B)
+        public static Resource operator -(Resource a, int b)
         {
-            return A.Spend(B);
+            return a.Spend(b);
         }
-        public static List<Resource> operator +(List<Resource> list, Resource B)
+        public static List<Resource> operator +(List<Resource> list, Resource b)
         {
-            foreach (Resource A in list)
+            foreach (Resource a in list)
             {
-                if (A.GetName() == B.GetName())
+                if (a.GetName() == b.GetName())
                 {
-                    A.Gain(B.stock);
+                    a.Gain(b._stock);
                 }
             }
             return list;
@@ -162,10 +162,10 @@ namespace TradeCity.Engine.Resources
         [Serializable]
         internal class NotEnoughResourceException : Exception
         {
-            private readonly List<Resource> missingResources;
+            private readonly List<Resource> _missingResources;
             public NotEnoughResourceException(List<Resource> missingResources = null)
             {
-                this.missingResources = missingResources;
+                _missingResources = missingResources;
             }
         }
     }

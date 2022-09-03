@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
@@ -8,41 +9,30 @@ namespace TradeCity.Engine.Production
 {
     public class ProductionSystem : IProductionSystem
     {
-        private readonly Player owner;
-        private readonly List<Resource> outBuffer = new();
+        private readonly Player _owner;
+        private readonly List<Resource> _outBuffer = new();
 
         private IDistributionStrategy DistStrategy { get; set; }
         public ProductionSystem(Player owner, IDistributionStrategy distributionStrategy)
         {
-            this.owner = owner;
+            _owner = owner;
             DistStrategy = distributionStrategy;
         }
         private void DistributeResources(Resource resource, List<Recipe> recipes)
         {
-            if (owner.HasResource(resource.GetNewResource(SumResFromRecipes(resource, recipes))))
+            if (_owner.HasResource(resource.GetNewResource(SumResFromRecipes(resource, recipes))))
                 DistributionStrategy.DistributeDefault(resource, recipes);
             else
                 DistStrategy.Distribute(resource, recipes);
         }
         private int SumResFromRecipes(Resource resource, List<Recipe> recipes)
         {
-            int amount = 0;
-            foreach (Recipe recipe in recipes)
-            {
-                foreach (Resource res in recipe.Input)
-                {
-                    if (res.GetType() == resource.GetType())
-                    {
-                        amount += res.GetStock();
-                    }
-                }
-            }
-            return amount;
+            return (from recipe in recipes from res in recipe.Input where res.GetType() == resource.GetType() select res.GetStock()).Sum();
         }
 
         public void GatherProducts()
         {
-            owner.GiveRes(outBuffer);
+            _owner.GiveRes(_outBuffer);
         }
 
         public void Produce(List<IProducer> producers)
@@ -50,20 +40,20 @@ namespace TradeCity.Engine.Production
             List<Recipe> recipes = new();
             foreach (IProducer producer in producers)
             {
-                if (producer is Building && !((Building)producer).IsOn) continue;
+                if (producer is Building building && !building.IsOn) continue;
                 recipes.AddRange(producer.Recipes);
             }
 
-            foreach (Resource playerRes in owner.GetAllRes())
+            foreach (Resource playerRes in _owner.GetAllRes())
             {
                 DistributeResources(playerRes, recipes);
             }
 
-            outBuffer.Clear();
+            _outBuffer.Clear();
             foreach (Recipe recipe in recipes)
             {
                 List<Resource> reslist = recipe.Produce();
-                outBuffer.AddRange(reslist);
+                _outBuffer.AddRange(reslist);
                 reslist.Clear();
                 //TODO Limit resources potencial bug!
             }

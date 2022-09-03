@@ -16,7 +16,7 @@ namespace TradeCity.Engine.Structures
     [Serializable]
     public abstract class Land : CommonStructure, ILand, IMapStructure
     {
-        private const int defaultMaxLevel = 100;
+        private const int DefaultMaxLevel = 100;
         // ========== Public events
         public event Action<Land> OnPurchase;
 
@@ -32,11 +32,11 @@ namespace TradeCity.Engine.Structures
         }
         public List<Resource> GetProduce()
         {
-            return GetProduce(level);
+            return GetProduce(_level);
         }
         public bool IsAuctionable()
         {
-            return owner == null;
+            return _owner == null;
         }
         public void Purchase(Player by)
         {
@@ -48,7 +48,7 @@ namespace TradeCity.Engine.Structures
         }
         public void Tick()
         {
-            owner.GiveRes(GetProduce());
+            _owner.GiveRes(GetProduce());
         }
         public abstract Land GetNew();
         //public abstract List<Resource> GetStartingCost();
@@ -66,7 +66,7 @@ namespace TradeCity.Engine.Structures
         // ========== Abstract method implementations
         protected override int GetMaxLevel()
         {
-            return defaultMaxLevel;
+            return DefaultMaxLevel;
         }
         public override Branches GetBranch()
         {

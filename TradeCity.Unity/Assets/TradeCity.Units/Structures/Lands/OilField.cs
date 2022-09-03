@@ -29,12 +29,12 @@ namespace TradeCity.Units.Structures.Lands
 
         protected override List<Resource> GetProduce(int level)
         {
-            return new List<Resource>() { new Oil(10) };
+            return new List<Resource> { new Oil(10) };
         }
 
         protected override List<Resource> GetCost(int level)
         {
-            return new List<Resource>() { new Money(100 * level) };
+            return new List<Resource> { new Money(100 * level) };
         }
     }
 

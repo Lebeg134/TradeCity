@@ -7,35 +7,36 @@ using TradeCity.Units.Resources.Common;
 namespace TradeCity.Engine.Market
 {
     [Serializable]
-    public class SPListing : ITickable
+    public class SpListing : ITickable
     {
         public Resource Sell
         {
-            get => (Resource)sell;
+            get => (Resource)Sellable;
             set
             {
-                if (value is ISellable)
-                    sell = (ISellable)value;
+                if (value is ISellable sellable)
+                    Sellable = sellable;
                 else
                     throw new Exception("Resource not sellable");
             }
         }
-        public ISellable Sellable => sell;
+        public ISellable Sellable { get; private set; }
+        public int Above;
 
-        private ISellable sell;
-        public int above;
-        public SPListing(Resource sellable, int sellAbove)
+        public SpListing(Resource sellable, int sellAbove)
         {
             Sell = sellable;
-            above = sellAbove;
+            Above = sellAbove;
         }
+
         public void Tick()
         {
             Complete();
         }
+
         public void Complete(bool throws = false)
         {
-            if (Player.CurrentPlayer.GetRes(Sell) > above && Player.CurrentPlayer.HasResource(Sell))
+            if (Player.CurrentPlayer.GetRes(Sell) > Above && Player.CurrentPlayer.HasResource(Sell))
             {
                 try
                 {
@@ -49,9 +50,10 @@ namespace TradeCity.Engine.Market
 
             }
         }
+
         public void CompleteAll()
         {
-            while (Player.CurrentPlayer.GetRes(Sell) > above && Player.CurrentPlayer.HasResource(Sell))
+            while (Player.CurrentPlayer.GetRes(Sell) > Above && Player.CurrentPlayer.HasResource(Sell))
             {
                 try
                 {
@@ -64,10 +66,12 @@ namespace TradeCity.Engine.Market
                 }
             }
         }
+
         public int GetValue()
         {
-            return (int)Math.Floor(sell.GetStock() * sell.GetValue());
+            return (int)Math.Floor(Sellable.GetStock() * Sellable.GetValue());
         }
+
         public void Register()
         {
             Clock.Instance.Register(this);

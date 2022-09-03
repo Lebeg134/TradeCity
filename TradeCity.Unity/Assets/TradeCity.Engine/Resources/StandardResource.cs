@@ -14,11 +14,11 @@ namespace TradeCity.Engine.Resources
         public abstract double GetValue();
         public void ReportListing(Listing listing)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
         public void SimulatePrice()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
         public bool Equals(ISellable x, ISellable y)
         {
@@ -28,7 +28,7 @@ namespace TradeCity.Engine.Resources
 
         public int GetHashCode(ISellable obj)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

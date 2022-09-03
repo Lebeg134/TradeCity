@@ -6,31 +6,28 @@ namespace TradeCity.Engine.Graphics
     {
         public static VisualUpdater Instance
         {
-            get
-            {
-                if (updater == null)
-                    updater = new VisualUpdater();
-                return updater;
-            }
-            set => updater = value;
+            get => _updater ??= new VisualUpdater();
+            set => _updater = value;
         }
 
-        private static VisualUpdater updater;
-        private readonly List<IUpdateable> subscribers = new();
+        private static VisualUpdater _updater;
+        private readonly List<IUpdateable> _subscribers = new();
 
         public void Register(IUpdateable subscriber)
         {
-            if (!subscribers.Contains(subscriber))
-                subscribers.Add(subscriber);
+            if (!_subscribers.Contains(subscriber))
+                _subscribers.Add(subscriber);
         }
+
         public void UnRegister(IUpdateable subscriber)
         {
-            if (subscribers.Contains(subscriber))
-                subscribers.Remove(subscriber);
+            if (_subscribers.Contains(subscriber))
+                _subscribers.Remove(subscriber);
         }
+
         public void Update()
         {
-            foreach (IUpdateable subscriber in subscribers)
+            foreach (IUpdateable subscriber in _subscribers)
             {
                 subscriber.Update();
             }

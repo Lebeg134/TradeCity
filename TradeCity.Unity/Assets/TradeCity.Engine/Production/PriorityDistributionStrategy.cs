@@ -17,7 +17,7 @@ namespace TradeCity.Engine.Production
                 }
                 recDict[recipe.InputPriority].Add(recipe);
             }
-            foreach (var key in recDict.Keys)
+            foreach (RecipePriority key in recDict.Keys)
             {
                 foreach (Recipe recipe in recDict[key])
                 {

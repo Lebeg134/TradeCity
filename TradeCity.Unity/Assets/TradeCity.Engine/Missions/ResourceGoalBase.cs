@@ -8,9 +8,9 @@ namespace TradeCity.Engine.Missions
     public abstract class ResourceGoalBase : IAchievable
     {
         public event Action OnAchieve;
-        protected Resource watched;
-        protected Player player;
-        private bool achieved = false;
+        protected Resource _watched;
+        protected Player _player;
+        private bool _achieved;
 
         public string Text => GetText();
 
@@ -18,7 +18,7 @@ namespace TradeCity.Engine.Missions
 
         public ResourceGoalBase(Resource watched, Player player = null)
         {
-            this.watched = watched;
+            _watched = watched;
             if (player != null)
                 Accept(player);
         }
@@ -30,25 +30,25 @@ namespace TradeCity.Engine.Missions
 
         public virtual bool IsAchieved()
         {
-            if (achieved) return true;
+            if (_achieved) return true;
             if (CheckStatus() >= 1)
             {
-                achieved = true;
+                _achieved = true;
                 OnAchieve?.Invoke();
                 return true;
             }
-            return achieved;
+            return _achieved;
         }
         public abstract void OnResourceChange(Resource resource);
 
         public void RegisterToEvents()
         {
-            player.OnResourceChange += OnResourceChange;
+            _player.OnResourceChange += OnResourceChange;
         }
 
         public void Accept(Player by)
         {
-            player = by;
+            _player = by;
             RegisterToEvents();
         }
     }

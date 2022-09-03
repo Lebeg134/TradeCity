@@ -2,10 +2,10 @@
 {
     public enum Branches
     {
-        COMMON,
-        CONSTRUCTION,
-        ENERGY,
-        OIL,
-        WORKFORCE
+        Common,
+        Construction,
+        Energy,
+        Oil,
+        Workforce
     }
 }

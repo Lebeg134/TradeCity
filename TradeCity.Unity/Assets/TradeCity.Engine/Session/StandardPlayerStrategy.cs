@@ -17,11 +17,11 @@ namespace TradeCity.Engine.Session
         {
             public StandardPlayerStrategy(Player subject) : base(subject)
             {
-                player.Production = new ProductionSystem(player, new EvenDistributionStrartegy());
+                _player.Production = new ProductionSystem(_player, new EvenDistributionStrartegy());
             }
             public override void Tick()
             {
-                foreach (Resource res in player.GetAllRes())
+                foreach (Resource res in _player.GetAllRes())
                 {
                     res.Tick();
                 }
@@ -31,15 +31,15 @@ namespace TradeCity.Engine.Session
             private void Produce()
             {
                 List<IProducer> producers = new();
-                player.owned.ForEach((owned) =>
+                _player._owned.ForEach(owned =>
                 {
                     if (owned is IProducer)
                     {
                         producers.Add((IProducer)owned);
                     }
                 });
-                player.Production.Produce(producers);
-                player.Production.GatherProducts();
+                _player.Production.Produce(producers);
+                _player.Production.GatherProducts();
             }
         }
     }

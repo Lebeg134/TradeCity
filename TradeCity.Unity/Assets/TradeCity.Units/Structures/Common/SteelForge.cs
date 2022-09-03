@@ -22,12 +22,12 @@ namespace TradeCity.Units.Structures.Common
                 };
         public SteelForge()
         {
-            recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(1), new Iron(2) }, new Steel(1), 5));
+            _recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(1), new Iron(2) }, new Steel(1), 5));
         }
         public override void Upgrade()
         {
             base.Upgrade();
-            recipes[0].Limit += 5;
+            _recipes[0].Limit += 5;
         }
 
         public override string GetName()
@@ -40,7 +40,7 @@ namespace TradeCity.Units.Structures.Common
         }
         public override Branches GetBranch()
         {
-            return Branches.COMMON;
+            return Branches.Common;
         }
 
         public override List<IOwnable> GetCriteria()

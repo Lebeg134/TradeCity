@@ -9,20 +9,20 @@ namespace TradeCity.Engine.Resources
     [Serializable]
     public abstract class ContinousResource : Resource
     {
-        private readonly BufferResource buffer = new();
+        private readonly BufferResource _buffer = new();
         public ContinousResource(int amount) : base(amount) { }
-        public int Buffer => buffer.GetStock();
+        public int Buffer => _buffer.GetStock();
 
         public override Resource Gain(int amount)
         {
-            buffer.Gain(amount);
+            _buffer.Gain(amount);
             return this;
         }
 
         private void LoadBuffer()
         {
-            stock = buffer.GetStock();
-            buffer.Clear();
+            _stock = _buffer.GetStock();
+            _buffer.Clear();
         }
         public override void Tick()
         {
@@ -42,7 +42,7 @@ namespace TradeCity.Engine.Resources
             }
             public void Clear()
             {
-                stock = 0;
+                _stock = 0;
             }
         }
     }

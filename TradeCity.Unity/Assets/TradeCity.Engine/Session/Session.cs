@@ -17,30 +17,29 @@ namespace TradeCity.Engine.Session
     public class Session : ITickable
     {
         public static readonly string Filename = "save.dat";
-        private readonly List<Player> players;
-        public Dictionary<Land, int> offers = new();
-        public List<Mission> missions = new();
-        public bool Running = false;
+        private readonly List<Player> _players;
+        public Dictionary<Land, int> Offers = new();
+        public List<Mission> Missions = new();
+        public bool Running;
         public static Session Instance
         {
             get
             {
-                if (instance != null)
-                    return instance;
-                else
-                    throw new System.Exception("No started Sessions");
+                if (_instance != null)
+                    return _instance;
+                throw new Exception("No started Sessions");
             }
         }
-        private static Session instance;
+        private static Session _instance;
 
         public Session()
         {
             Register();
-            players = new List<Player>();
+            _players = new List<Player>();
         }
         public void Start()
         {
-            instance = this;
+            _instance = this;
             Clock.Instance.Start();
             Running = true;
         }
@@ -60,28 +59,28 @@ namespace TradeCity.Engine.Session
         {
             Stream stream = File.OpenRead(Filename);
             BinaryFormatter b = new();
-            instance = (Session)b.Deserialize(stream);
+            _instance = (Session)b.Deserialize(stream);
             stream.Close();
-            CurrentPlayer = Instance.players[0]; // TODO need to change when multiple players
+            CurrentPlayer = Instance._players[0]; // TODO need to change when multiple players
             Clock.Instance.Clear();
             Clock.Instance.Register(Instance);
         }
         public void Login(Player player)
         {
-            if (!players.Contains(player))
-                players.Add(player);
+            if (!_players.Contains(player))
+                _players.Add(player);
             else
                 player.UnFreeze(new StandardPlayerStrategy(player));
         }
         public void Logout(Player player)
         {
-            if (players.Contains(player))
+            if (_players.Contains(player))
                 player.Freeze();
         }
         public void DeletePlayer(Player player)
         {
             player.GoBankrupt();
-            players.Remove(player);
+            _players.Remove(player);
             // TODO Remove ownerships?
         }
         public void Tick()
@@ -90,7 +89,7 @@ namespace TradeCity.Engine.Session
 
             //TODO add land offers randomly
 
-            foreach (Player player in players)
+            foreach (Player player in _players)
             {
                 player.Tick();
             }

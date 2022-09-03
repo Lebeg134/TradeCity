@@ -18,20 +18,20 @@ namespace TradeCity.Engine.Structures
         public event Action<Building> OnBuild;
 
         // ========== Attributes
-        protected List<Recipe> recipes = new();
+        protected List<Recipe> _recipes = new();
 
         // ========== Properties
         public BuildingState BuildingState
         {
             get
             {
-                if (level == 0) return BuildingState.BUILD;
-                if (level < GetMaxLevel()) return BuildingState.UPGRADE;
-                if (level >= GetMaxLevel()) return BuildingState.MAXLEVEL;
+                if (_level == 0) return BuildingState.Build;
+                if (_level < GetMaxLevel()) return BuildingState.Upgrade;
+                if (_level >= GetMaxLevel()) return BuildingState.Maxlevel;
                 throw new Exception("Illegal building state");
             }
         }
-        public List<Recipe> Recipes => recipes;
+        public List<Recipe> Recipes => _recipes;
 
         // ========== Interface Implementations
         public void Build(Player by)
@@ -40,31 +40,31 @@ namespace TradeCity.Engine.Structures
             {
                 by.SubRes(GetCost(0));
                 by.GiveStructure(this);
-                level = 1;
+                _level = 1;
                 string buildings = "{ ";
-                by.GetAllBuildings().ForEach((building) => buildings += building.GetName() + ", ");
+                by.GetAllBuildings().ForEach(building => buildings += building.GetName() + ", ");
                 Acquire(by);
                 OnBuild?.Invoke(this);
-                if (BuildingState == BuildingState.MAXLEVEL)
+                if (BuildingState == BuildingState.Maxlevel)
                     InvokeOnMaxLevelReached();
             }
         }
         public bool CanBuild(Player by)
         {
-            if (BuildingState != BuildingState.BUILD) return false;
-            return CheckCriteria(by, 0);
+            if (BuildingState != BuildingState.Build) return false;
+            return CheckCriteria(by);
         }
         public virtual List<Resource> GetUpkeep()
         {
-            return GetUpkeep(level);
+            return GetUpkeep(_level);
         }
         public virtual List<Resource> GetCost()
         {
-            return GetCost(level);
+            return GetCost(_level);
         }
         public virtual List<IOwnable> GetCriteria()
         {
-            return GetCriteria(level);
+            return GetCriteria(_level);
         }
         public void PutResources(List<Resource> resources)
         {

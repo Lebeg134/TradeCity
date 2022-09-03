@@ -3,34 +3,33 @@ using TradeCity.Engine.TimeManager;
 
 namespace TradeCity.Engine.Market
 {
-    public class SPMarket
+    public class SpMarket
     {
         public delegate void Notify();
         public static event Notify NotifySubscribers;
-        public static SPMarket Instance
+        public static SpMarket Instance
         {
             get
             {
-                if (instance == null)
-                    return instance = new SPMarket();
-                else
-                    return instance;
+                if (_instance == null)
+                    return _instance = new SpMarket();
+                return _instance;
             }
-            set => instance = value;
+            set => _instance = value;
         }
 
-        private static SPMarket instance;
-        private readonly List<SPListing> listings = new();
-        public List<SPListing> Listings => listings;
-        public void RegisterListing(SPListing newListing)
+        private static SpMarket _instance;
+        private readonly List<SpListing> _listings = new();
+        public List<SpListing> Listings => _listings;
+        public void RegisterListing(SpListing newListing)
         {
-            listings.Add(newListing);
+            _listings.Add(newListing);
             newListing.Register();
             NotifySubscribers?.Invoke();
         }
-        public void RemoveListing(SPListing listing)
+        public void RemoveListing(SpListing listing)
         {
-            listings.Remove(listing);
+            _listings.Remove(listing);
             Clock.Instance.UnRegister(listing);
             NotifySubscribers?.Invoke();
         }

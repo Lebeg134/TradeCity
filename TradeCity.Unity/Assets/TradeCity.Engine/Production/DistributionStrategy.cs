@@ -7,7 +7,7 @@ namespace TradeCity.Engine.Production
     {
         public static List<IDistributionStrategy> GetAllStrategys()
         {
-            return new List<IDistributionStrategy>() { new EvenDistributionStrartegy() };
+            return new List<IDistributionStrategy> { new EvenDistributionStrartegy() };
         }
         public static void DistributeDefault(Resource resource, List<Recipe> recipes)
         {

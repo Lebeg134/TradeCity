@@ -1,7 +1,3 @@
-/**
- * @(#) Auction.cs
- */
-
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -14,54 +10,56 @@ namespace TradeCity.Engine.Map
     [Serializable]
     public class Auction : ITickable, IEqualityComparer<Auction>
     {
-        private readonly Land subject;
-        private readonly int currentPrice;
-        private readonly int minBid;
-        private Player lastBidder;
-        private int timeRemaining;
-        private readonly int timePerRound;
+        private readonly Land _subject;
+        private readonly int _currentPrice;
+        private readonly int _minBid;
+        private Player _lastBidder;
+        private int _timeRemaining;
+        private readonly int _timePerRound;
 
-        public Auction(Land subject, int minBid, int timePerRound, Player initiater = null)
+        public Auction(Land subject, int minBid, int timePerRound, Player initiator = null)
         {
-            this.subject = subject;
-            currentPrice = subject.GetStartingPrice();
-            this.minBid = minBid;
-            timeRemaining = timePerRound;
-            this.timePerRound = timePerRound;
-            lastBidder = initiater;
+            _subject = subject;
+            _currentPrice = subject.GetStartingPrice();
+            _minBid = minBid;
+            _timeRemaining = timePerRound;
+            _timePerRound = timePerRound;
+            _lastBidder = initiator;
         }
+
         public void Bid(Player by, int bid)
         {
-            if (bid > currentPrice + minBid)
-            {
-                timeRemaining = timePerRound;
-                lastBidder = by;
-            }
+            if (bid <= _currentPrice + _minBid) return;
+            _timeRemaining = _timePerRound;
+            _lastBidder = by;
         }
+
         public void Finish()
         {
-            if (lastBidder != null)
-            {
-                subject.Acquire(lastBidder);
-                throw new AuctionFinishedException();
-            }
+            if (_lastBidder == null) return;
+            _subject.Acquire(_lastBidder);
+            throw new AuctionFinishedException();
         }
+
         public void Tick()
         {
-            if (--timeRemaining <= 0)
+            if (--_timeRemaining <= 0)
                 Finish();
         }
+
         public void Register()
         {
             //Do nothing - Auctions are ticked by container
         }
+
         public bool Equals(Auction x, Auction y)
         {
-            return x.subject.Equals(y.subject);
+            return x._subject.Equals(y._subject);
         }
+
         public int GetHashCode(Auction obj)
         {
-            return subject.GetHashCode();
+            return _subject.GetHashCode();
         }
     }
     [Serializable]

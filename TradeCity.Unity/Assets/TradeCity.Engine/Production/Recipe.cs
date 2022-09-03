@@ -5,24 +5,24 @@ namespace TradeCity.Engine.Production
 {
     public enum RecipePriority
     {
-        HIGHEST,
-        HIGH,
-        MEDIUM,
-        LOW,
+        Highest,
+        High,
+        Medium,
+        Low,
     }
     public abstract class Recipe
     {
         public string Name { get; set; }
-        protected List<Resource> input;
-        protected List<Resource> output;
+        protected List<Resource> _input;
+        protected List<Resource> _output;
         public int Limit { get; set; }
         public RecipePriority InputPriority { get; set; }
-        public List<Resource> Input => input;
+        public List<Resource> Input => _input;
 
         public Recipe(int limit)
         {
-            input = new List<Resource>();
-            output = new List<Resource>();
+            _input = new List<Resource>();
+            _output = new List<Resource>();
             Limit = limit;
         }
 
@@ -34,12 +34,12 @@ namespace TradeCity.Engine.Production
         protected abstract void Process();
         public List<Resource> Produce()
         {
-            foreach (Resource resource in input) //TODO Potential error if custom ticks are implemented
+            foreach (Resource resource in _input) //TODO Potential error if custom ticks are implemented
             {
                 resource.Tick();
             }
             Process();
-            return output;
+            return _output;
         }
     }
 }

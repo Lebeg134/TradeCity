@@ -14,10 +14,10 @@ namespace TradeCity.Engine.Structures
     {
         public event Action<Structure> OnTurnOn;
         public event Action<Structure> OnTurnOff;
-        protected bool isOn = true;
+        protected bool _isOn = true;
         public bool IsOn
         {
-            get => isOn;
+            get => _isOn;
             set
             {
                 if (value)
@@ -32,18 +32,18 @@ namespace TradeCity.Engine.Structures
         }
         public virtual void On()
         {
-            if (!isOn)
+            if (!_isOn)
             {
-                isOn = true;
+                _isOn = true;
                 OnTurnOn?.Invoke(this);
             }
 
         }
         public virtual void Off()
         {
-            if (isOn)
+            if (_isOn)
             {
-                isOn = false;
+                _isOn = false;
                 OnTurnOff?.Invoke(this);
             }
         }

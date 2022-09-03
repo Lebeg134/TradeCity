@@ -17,7 +17,7 @@ namespace TradeCity.Engine.Session
 {
     static public class SessionGenerator
     {
-        private static List<Building> allBuildings;
+        private static List<Building> _allBuildings;
         public static Session GenerateStandard()
         {
             Session newSession = new();
@@ -26,8 +26,8 @@ namespace TradeCity.Engine.Session
             FillPlayerWithStandard(thisPlayer);
             newSession.Login(thisPlayer);
             GenerateStartingOffers(newSession);
-            newSession.missions.AddRange(GenerateMissions());
-            foreach (Mission m in newSession.missions)
+            newSession.Missions.AddRange(GenerateMissions());
+            foreach (Mission m in newSession.Missions)
             {
                 m.Accept(Player.CurrentPlayer);
             }
@@ -63,15 +63,15 @@ namespace TradeCity.Engine.Session
 
         private static void GenerateStartingOffers(Session session)
         {
-            session.offers.Add(new ClearwaterLake(), 1000);
-            session.offers.Add(new Well(), 2000);
-            session.offers.Add(new Forest(), 5000);
-            session.offers.Add(new CoalMine(), 5000);
-            session.offers.Add(new IronMine(), 10000);
-            session.offers.Add(new SandQuarry(), 10000);
-            session.offers.Add(new StoneQuarry(), 10000);
-            session.offers.Add(new OilField(), 40000);
-            session.offers.Add(new OilRig(), 80000);
+            session.Offers.Add(new ClearwaterLake(), 1000);
+            session.Offers.Add(new Well(), 2000);
+            session.Offers.Add(new Forest(), 5000);
+            session.Offers.Add(new CoalMine(), 5000);
+            session.Offers.Add(new IronMine(), 10000);
+            session.Offers.Add(new SandQuarry(), 10000);
+            session.Offers.Add(new StoneQuarry(), 10000);
+            session.Offers.Add(new OilField(), 40000);
+            session.Offers.Add(new OilRig(), 80000);
         }
         public static List<Land> GetAllLands()
         {
@@ -99,16 +99,16 @@ namespace TradeCity.Engine.Session
         }
         public static List<Building> GetAllBuildings()
         {
-            if (allBuildings == null)
+            if (_allBuildings == null)
             {
-                allBuildings = new List<Building> {
+                _allBuildings = new List<Building> {
                     new SteelForge(),
-                    new ConcreteMixingPlant(), new CraftsmanHQ(), new GlassKiln(),new Lumberyard(),new StoneCutter(),
+                    new ConcreteMixingPlant(), new CraftsmanHq(), new GlassKiln(),new Lumberyard(),new StoneCutter(),
                     new CoalPowerplant(),
                     new ChemicalResearchFacility(), new ChemicalSafetyBureau(), new OilDistillery()
                 };
             }
-            return allBuildings;
+            return _allBuildings;
         }
     }
 }

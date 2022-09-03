@@ -4,19 +4,19 @@ using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.GUI.Market
 {
-    class MyListingsListScript : ListScript<SPListing>
+    class MyListingsListScript : ListScript<SpListing>
     {
         protected override void Start()
         {
             base.Start();
-            SPMarket.NotifySubscribers += Refresh;
+            SpMarket.NotifySubscribers += Refresh;
         }
-        protected override ICollection<SPListing> GetCollection()
+        protected override ICollection<SpListing> GetCollection()
         {
-            return SPMarket.Instance.Listings;
+            return SpMarket.Instance.Listings;
         }
 
-        protected override void ProcessListItem(SPListing item, GameObject newListItem)
+        protected override void ProcessListItem(SpListing item, GameObject newListItem)
         {
             newListItem.GetComponent<ListingItemVisualScript>().watched = item;
         }

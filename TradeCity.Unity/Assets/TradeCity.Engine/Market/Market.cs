@@ -1,7 +1,3 @@
-/**
-* @(#) Market.cs
-*/
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,54 +9,60 @@ namespace TradeCity.Engine.Market
     [Serializable]
     public class Market : ITickable
     {
-        private readonly Dictionary<System.Type, ItemLog> registeredItems;
-        private readonly Dictionary<System.Type, List<Listing>> listings;
+        private readonly Dictionary<Type, ItemLog> _registeredItems;
+        private readonly Dictionary<Type, List<Listing>> _listings;
+
+        public Market(Dictionary<Type, List<Listing>> listings)
+        {
+            _listings = listings;
+        }
 
         private void GenerateListing(ISellable of, int num)
         {
 
         }
+
         public int PostListing(ISellable wantSellable, ISellable forSellable, Player by, int amount = 1, bool all = false)
         {
             // TODO check if Listing already exists
             Listing post = new(wantSellable, forSellable, by, amount);
-            List<Listing> relevantListings = listings[forSellable.GetType()];
+            List<Listing> relevantListings = _listings[forSellable.GetType()];
             int newAmount = post.LockResources(all);
             if (amount != newAmount)
                 post = new Listing(wantSellable, forSellable, by, newAmount);
             relevantListings.Add(post);
             return amount;
         }
+
         public double GetValueOf(ISellable sellable)
         {
             //TODO
             return 0;
         }
+
         public Listing GetMinSell(ISellable wantSellable, ISellable forSellable)
         {
-            List<Listing> relevantListings = listings[wantSellable.GetType()].FindAll(x => x.ForSellable.Equals(forSellable));
+            List<Listing> relevantListings = _listings[wantSellable.GetType()].FindAll(x => x.ForSellable.Equals(forSellable));
             if (relevantListings.Count > 0)
             {
                 relevantListings.Sort();
                 return relevantListings.First();
             }
-            else
-                return null;
+
+            return null;
         }
+
         public Listing GetMaxBuy(ISellable wantSellable, ISellable forSellable)
         {
-            List<Listing> relevantListings = listings[forSellable.GetType()].FindAll(x => x.WantSellable.Equals(wantSellable));
-            if (listings?.Count > 0)
-            {
-                relevantListings.Sort();
-                return relevantListings.Last();
-            }
-            else
-                return null;
+            List<Listing> relevantListings = _listings[forSellable.GetType()].FindAll(x => x.WantSellable.Equals(wantSellable));
+            if (!(_listings?.Count > 0)) return null;
+            relevantListings.Sort();
+            return relevantListings.Last();
         }
+
         public void RemovePlayer(Player player)
         {
-            foreach (List<Listing> list in listings.Values)
+            foreach (List<Listing> list in _listings.Values)
             {
                 foreach (Listing listing in list)
                 {
@@ -72,10 +74,11 @@ namespace TradeCity.Engine.Market
                 }
             }
         }
+
         public List<Listing> GetPlayerListingsList(Player player)
         {
             List<Listing> myListings = new();
-            foreach (List<Listing> list in listings.Values)
+            foreach (List<Listing> list in _listings.Values)
             {
                 myListings.AddRange(list.FindAll(x => x.Poster.Equals(player)));
             }
@@ -92,7 +95,7 @@ namespace TradeCity.Engine.Market
         }
         public void Tick()
         {
-            foreach (List<Listing> list in listings.Values)
+            foreach (List<Listing> list in _listings.Values)
             {
                 foreach (Listing listing in list)
                 {
@@ -103,7 +106,7 @@ namespace TradeCity.Engine.Market
         }
         public void Register()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

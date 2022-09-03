@@ -12,20 +12,20 @@ namespace TradeCity.Unity.Scripts.GUI.Market
         public GameObject MoneyDisplay;
         public GameObject AboveDisplay;
         public Button CancelButton;
-        public SPListing watched;
+        public SpListing watched;
         // Start is called before the first frame update
         void Start()
         {
             ListingSubject.GetComponent<ResourceDisplayScript>().Watched = watched.Sell;
             MoneyDisplay.GetComponent<ResourceDisplayScript>().Watched = new Money(watched.GetValue());
-            AboveDisplay.GetComponent<ResourceDisplayScript>().Watched = watched.Sell.GetNewResource(watched.above);
+            AboveDisplay.GetComponent<ResourceDisplayScript>().Watched = watched.Sell.GetNewResource(watched.Above);
 
             CancelButton.onClick.AddListener(() => OnClick()); ;
         }
 
         private void OnClick()
         {
-            SPMarket.Instance.RemoveListing(watched);
+            SpMarket.Instance.RemoveListing(watched);
         }
 
         // Update is called once per frame

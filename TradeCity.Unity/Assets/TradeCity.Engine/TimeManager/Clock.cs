@@ -14,14 +14,14 @@ namespace TradeCity.Engine.TimeManager
             set
             {
                 _instance = new Clock();
-                foreach (var tickable in value.tickables.Where(tickable => tickable != null))
+                foreach (ITickable tickable in value._tickables.Where(tickable => tickable != null))
                     _instance.Register(tickable);
             }
         }
 
-        private readonly Timer timer = new();
-        private readonly List<ITickable> tickables = new();
-        private int interval = (int)Speed.NORMAL;
+        private readonly Timer _timer = new();
+        private readonly List<ITickable> _tickables = new();
+        private int _interval = (int)Speed.Normal;
 
         static Clock()
         {
@@ -29,8 +29,8 @@ namespace TradeCity.Engine.TimeManager
 
         private Clock()
         {
-            timer.Interval = interval;
-            timer.Elapsed += Tick;
+            _timer.Interval = _interval;
+            _timer.Elapsed += Tick;
         }
 
         public void Initialize()
@@ -39,17 +39,17 @@ namespace TradeCity.Engine.TimeManager
 
         public void Start()
         {
-            timer.Enabled = true;
+            _timer.Enabled = true;
         }
 
         public void Pause()
         {
-            timer.Enabled = false;
+            _timer.Enabled = false;
         }
 
         public void Toggle()
         {
-            if (timer.Enabled)
+            if (_timer.Enabled)
                 Pause();
             else
                 Start();
@@ -57,39 +57,39 @@ namespace TradeCity.Engine.TimeManager
 
         public void SetSpeed(Speed speed)
         {
-            interval = (int)speed;
+            _interval = (int)speed;
         }
 
         private void Tick(object source, ElapsedEventArgs e)
         {
-            tickables.ForEach((tickable) => tickable.Tick());
+            _tickables.ForEach(tickable => tickable.Tick());
         }
 
         public void Register(ITickable tickable)
         {
-            tickables.Add(tickable);
+            _tickables.Add(tickable);
         }
 
         public void UnRegister(ITickable tickable)
         {
-            tickables.Remove(tickable);
+            _tickables.Remove(tickable);
         }
 
         public bool IsEnabled()
         {
-            return timer.Enabled;
+            return _timer.Enabled;
         }
 
         public void Clear()
         {
-            tickables.Clear();
+            _tickables.Clear();
         }
     }
 
     public enum Speed
     {
-        SLOW = 2000,
-        NORMAL = 1000,
-        FAST = 250
+        Slow = 2000,
+        Normal = 1000,
+        Fast = 250
     }
 }

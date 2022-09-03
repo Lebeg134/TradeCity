@@ -22,12 +22,12 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
         }
         public override List<IOwnable> GetCriteria()
         {
-            return new List<IOwnable> { new CraftsmanHQ() };
+            return new List<IOwnable> { new CraftsmanHq() };
         }
 
         public override Branches GetBranch()
         {
-            return Branches.CONSTRUCTION;
+            return Branches.Construction;
         }
 
         protected override int GetMaxLevel()
@@ -42,7 +42,7 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
 
         public override List<Resource> GetProduce()
         {
-            return new List<Resource> { new Glass(5 * level) };
+            return new List<Resource> { new Glass(5 * _level) };
         }
 
         protected override List<Resource> GetUpkeep(int level)
@@ -54,8 +54,7 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
         {
             if (level == 0)
                 return new List<Resource> { new Bricks(150), new Workforce(25) };
-            else
-                return new List<Resource> { new Bricks(100 * level), new Concrete(50 * level) };
+            return new List<Resource> { new Bricks(100 * level), new Concrete(50 * level) };
         }
     }
 

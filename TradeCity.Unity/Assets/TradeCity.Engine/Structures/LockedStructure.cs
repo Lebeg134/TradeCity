@@ -9,12 +9,12 @@ namespace TradeCity.Engine.Structures
     [Serializable]
     public class LockedStructure : Structure
     {
-        private readonly Structure subject;
+        private readonly Structure _subject;
 
         private LockedStructure(Structure subject)
         {
             subject.Off();
-            this.subject = subject;
+            _subject = subject;
         }
         public static LockedStructure Wrap(Structure subject)
         {
@@ -22,8 +22,8 @@ namespace TradeCity.Engine.Structures
         }
         public Structure Unwrap()
         {
-            subject.On();
-            return subject;
+            _subject.On();
+            return _subject;
         }
         public override void On()
         {
@@ -36,7 +36,7 @@ namespace TradeCity.Engine.Structures
 
         public override string GetName()
         {
-            return "Locked " + subject.GetName();
+            return "Locked " + _subject.GetName();
         }
 
         public override Branches GetBranch()

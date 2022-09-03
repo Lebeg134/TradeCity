@@ -56,9 +56,9 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
             {
                 Player.CurrentPlayer.SubRes(new Money(price));
                 Player.CurrentPlayer.GiveStructure(watched);
-                Session.Instance.offers.Remove(watched);
+                Session.Instance.Offers.Remove(watched);
                 int newPrice = price * 2;
-                Session.Instance.offers.Add(watched.GetNew(), newPrice);
+                Session.Instance.Offers.Add(watched.GetNew(), newPrice);
                 gameObject.GetComponentInParent<AvailableLandsListScript>().Refresh();
                 gameObject.GetComponentInParent<VisualUpdater>().VisualUpdate();
             }

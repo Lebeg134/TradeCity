@@ -11,9 +11,9 @@ namespace TradeCity.Engine.Structures.Interfaces
 {
     public enum BuildingState
     {
-        BUILD,
-        UPGRADE,
-        MAXLEVEL
+        Build,
+        Upgrade,
+        Maxlevel
     }
     public interface IBuilding : IProducer, IOwnable, IUpgradeable, ITickable
     {

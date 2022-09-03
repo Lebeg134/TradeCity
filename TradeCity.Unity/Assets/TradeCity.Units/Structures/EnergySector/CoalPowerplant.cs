@@ -19,16 +19,16 @@ namespace TradeCity.Units.Structures.EnergySector
     {
         public CoalPowerplant()
         {
-            recipes.Add(new SimpleRecipe(new Coal(2), new Electricity(1), 10));
+            _recipes.Add(new SimpleRecipe(new Coal(2), new Electricity(1), 10));
         }
         public override void Upgrade()
         {
             base.Upgrade();
-            recipes[0].Limit += 10;
+            _recipes[0].Limit += 10;
         }
         public override Branches GetBranch()
         {
-            return Branches.ENERGY;
+            return Branches.Energy;
         }
 
         public override string GetName()
@@ -54,12 +54,11 @@ namespace TradeCity.Units.Structures.EnergySector
         {
             if (level == 0)
                 return new List<Resource> { new Stone(100), new Workforce(50) };
-            else if (level < 25)
+            if (level < 25)
                 return new List<Resource> { new Bricks(50 * level), new Steel(25 * level) };
-            else if (level < 75)
+            if (level < 75)
                 return new List<Resource> { new Concrete(50 * level), new Steel(25 * level) };
-            else
-                return new List<Resource> { new ReinforcedConcrete(50 * level), new Steel(25 * level) };
+            return new List<Resource> { new ReinforcedConcrete(50 * level), new Steel(25 * level) };
         }
 
         protected override int GetMaxLevel()

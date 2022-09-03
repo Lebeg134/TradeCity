@@ -28,7 +28,7 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
 
         public override Branches GetBranch()
         {
-            return Branches.CONSTRUCTION;
+            return Branches.Construction;
         }
 
         protected override int GetMaxLevel()
@@ -43,7 +43,7 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
 
         public override List<Resource> GetProduce()
         {
-            return new List<Resource> { new Lumber(level * 2) };
+            return new List<Resource> { new Lumber(_level * 2) };
         }
 
         protected override List<Resource> GetUpkeep(int level)
@@ -55,10 +55,9 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
         {
             if (level == 0)
                 return new List<Resource> { new Wood(100), new Workforce(10) };
-            else if (level < 10)
+            if (level < 10)
                 return new List<Resource> { new Lumber(50 * level), new Workforce(5) };
-            else
-                return new List<Resource> { new Concrete(50 * level), new Workforce(2) };
+            return new List<Resource> { new Concrete(50 * level), new Workforce(2) };
         }
     }
 

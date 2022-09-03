@@ -23,7 +23,7 @@ namespace TradeCity.Units.Structures.OilIndustry
 
         public override Branches GetBranch()
         {
-            return Branches.OIL;
+            return Branches.Oil;
         }
 
         protected override int GetMaxLevel()
@@ -45,8 +45,7 @@ namespace TradeCity.Units.Structures.OilIndustry
         {
             if (level == 0)
                 return new List<Resource> { new Concrete(100), new Workforce(25) };
-            else
-                return new List<Resource> { new Concrete(100 + 50 * level), new Glass(50 * level) };
+            return new List<Resource> { new Concrete(100 + 50 * level), new Glass(50 * level) };
         }
     }
 

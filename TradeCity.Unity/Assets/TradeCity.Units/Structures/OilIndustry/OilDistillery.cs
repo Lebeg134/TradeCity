@@ -28,7 +28,7 @@ namespace TradeCity.Units.Structures.OilIndustry
             base.Upgrade();
             foreach (Recipe recipe in Recipes)
             {
-                recipe.Limit = level * level;
+                recipe.Limit = _level * _level;
             }
         }
         public override List<IOwnable> GetCriteria()
@@ -38,7 +38,7 @@ namespace TradeCity.Units.Structures.OilIndustry
 
         public override Branches GetBranch()
         {
-            return Branches.OIL;
+            return Branches.Oil;
         }
 
         protected override int GetMaxLevel()
@@ -53,7 +53,7 @@ namespace TradeCity.Units.Structures.OilIndustry
 
         public override List<Resource> GetProduce()
         {
-            return new List<Resource> { new Fuel(2 * level * level), new Chemicals(4 * level * level) };
+            return new List<Resource> { new Fuel(2 * _level * _level), new Chemicals(4 * _level * _level) };
         }
 
         protected override List<Resource> GetUpkeep(int level)
@@ -65,8 +65,7 @@ namespace TradeCity.Units.Structures.OilIndustry
         {
             if (level == 0)
                 return new List<Resource> { new Concrete(500), new Workforce(100) };
-            else
-                return new List<Resource> { new Concrete(500 + 100 * level * level), new Steel(100 * level * level) };
+            return new List<Resource> { new Concrete(500 + 100 * level * level), new Steel(100 * level * level) };
         }
     }
 

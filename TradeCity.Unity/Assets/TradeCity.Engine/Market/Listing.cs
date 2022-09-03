@@ -1,7 +1,4 @@
-/**
-* @(#) Listing.cs
-*/
-
+#nullable enable
 using System;
 using System.Collections.Generic;
 using TradeCity.Engine.Resources;
@@ -13,25 +10,26 @@ namespace TradeCity.Engine.Market
     [Serializable]
     public class Listing : ITickable, IComparer<Listing>
     {
-        private static readonly int defaultTime = 100;
+        private static readonly int DefaultTime = 100;
         public ISellable WantSellable { get; }
         public ISellable ForSellable { get; }
         public Player Poster { get; }
-        private int amount;
-        private int timeLeft;
+        private int _amount;
+        private int _timeLeft;
 
         public Listing(ISellable wantSellable, ISellable forSellable, Player postedBy, int amount = 1)
         {
             WantSellable = wantSellable;
             ForSellable = forSellable;
             Poster = postedBy;
-            this.amount = amount;
-            timeLeft = defaultTime;
+            _amount = amount;
+            _timeLeft = DefaultTime;
         }
+
         public int Complete(Player by, int number = -1)
         {
             if (number == -1)
-                number = amount;
+                number = _amount;
             int count = 0;
             if (number <= 0 || Poster == by) return 0;
             for (; count <= number; count++)
@@ -48,18 +46,20 @@ namespace TradeCity.Engine.Market
             }
             return count;
         }
+
         public void Cancel()
         {
-            for (; amount > 0; amount--)
+            for (; _amount > 0; _amount--)
                 Poster.GiveRes((Resource)ForSellable);
         }
+
         public int LockResources(bool all = false)
         {
             int count = 0;
             if (all)
             {
-                count = amount;
-                Resource sub = ForSellable.GetNewResource(amount);
+                count = _amount;
+                Resource sub = ForSellable.GetNewResource(_amount);
                 Poster.CheckResource(sub);
                 Poster.SubRes(sub);
             }
@@ -67,31 +67,35 @@ namespace TradeCity.Engine.Market
             {
                 try
                 {
-                    for (; count < amount; count++)
+                    for (; count < _amount; count++)
                         Poster.SubRes((Resource)ForSellable);
                 }
                 catch (Exception)
                 {
-                    amount = count;
+                    _amount = count;
                 }
             }
             return count;
         }
+
         public double Value()
         {
             return WantSellable.GetStock() / ForSellable.GetStock();
         }
+
         public void Tick()
         {
-            if (--timeLeft <= 0)
+            if (--_timeLeft <= 0)
             {
                 Cancel();
             }
         }
+
         public void Register()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
+
         public int Compare(Listing x, Listing y)
         {
             return x.Value().CompareTo(y.Value());

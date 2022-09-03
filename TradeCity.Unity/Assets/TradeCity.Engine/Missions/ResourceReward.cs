@@ -7,20 +7,20 @@ namespace TradeCity.Engine.Missions
     [Serializable]
     public class ResourceReward : IRewardable
     {
-        private readonly Resource resource;
+        private readonly Resource _resource;
 
         public ResourceReward(Resource resource)
         {
-            this.resource = resource;
+            _resource = resource;
         }
         public object GetReward()
         {
-            return resource;
+            return _resource;
         }
 
         public void Reward(Player player)
         {
-            player.GiveRes(resource);
+            player.GiveRes(_resource);
         }
     }
 }

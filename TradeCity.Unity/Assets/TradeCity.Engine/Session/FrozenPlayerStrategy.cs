@@ -27,7 +27,7 @@ namespace TradeCity.Engine.Session
             }
             override public void UnFreeze(IPlayerStrategy newStrategy)
             {
-                player.playerStrategy = newStrategy;
+                _player._playerStrategy = newStrategy;
             }
         }
     }

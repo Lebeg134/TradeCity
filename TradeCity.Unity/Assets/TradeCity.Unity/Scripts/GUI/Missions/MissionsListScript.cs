@@ -9,7 +9,7 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
     {
         protected override ICollection<Mission> GetCollection()
         {
-            return Session.Instance.missions;
+            return Session.Instance.Missions;
         }
 
         protected override void ProcessListItem(Mission item, GameObject newListItem)

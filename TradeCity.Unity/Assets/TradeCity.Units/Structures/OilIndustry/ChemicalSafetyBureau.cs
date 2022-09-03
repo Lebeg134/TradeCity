@@ -27,7 +27,7 @@ namespace TradeCity.Units.Structures.OilIndustry
 
         public override Branches GetBranch()
         {
-            return Branches.OIL;
+            return Branches.Oil;
         }
 
         public override string GetName()

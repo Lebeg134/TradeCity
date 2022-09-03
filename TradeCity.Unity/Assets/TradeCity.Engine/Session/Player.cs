@@ -21,16 +21,16 @@ namespace TradeCity.Engine.Session
         //public event Action<IOwnable> OnAquire;
         //public event Action<Building> OnUpgrade;
 
-        private readonly List<IOwnable> owned = new();
-        private readonly Dictionary<Type, Resource> ownedResources = new();
-        private IPlayerStrategy playerStrategy;
+        private readonly List<IOwnable> _owned = new();
+        private readonly Dictionary<Type, Resource> _ownedResources = new();
+        private IPlayerStrategy _playerStrategy;
 
         private ProductionSystem Production { get; set; }
         public static Player CurrentPlayer { get; set; }
 
         public Player()
         {
-            playerStrategy = new StandardPlayerStrategy(this);
+            _playerStrategy = new StandardPlayerStrategy(this);
             //foreach (Resource res in ownedResources.Values)
             //{
             //    res.OnAmountChange += (amount) => OnResourceChange.Invoke(res.GetNewResource(amount));
@@ -40,11 +40,11 @@ namespace TradeCity.Engine.Session
 
         internal IEnumerable<Resource> GetAllRes()
         {
-            return ownedResources.Values;
+            return _ownedResources.Values;
         }
         public bool HasStructure(IOwnable structure)
         {
-            foreach (IOwnable ownable in owned)
+            foreach (IOwnable ownable in _owned)
             {
                 if (ownable.GetType() == structure.GetType())
                     return true;
@@ -69,13 +69,13 @@ namespace TradeCity.Engine.Session
         }
         public void GiveStructure(IOwnable structure)
         {
-            owned.Add(structure);
+            _owned.Add(structure);
             structure.Acquire(this);
         }
         public List<Building> GetAllBuildings()
         {
             List<Building> ret = new();
-            foreach (IOwnable item in owned)
+            foreach (IOwnable item in _owned)
             {
                 if (item is Building)
                 {
@@ -87,7 +87,7 @@ namespace TradeCity.Engine.Session
         public List<Land> GetLands()
         {
             List<Land> ret = new();
-            foreach (IOwnable item in owned)
+            foreach (IOwnable item in _owned)
             {
                 if (item is Land)
                 {
@@ -98,11 +98,11 @@ namespace TradeCity.Engine.Session
         }
         public bool HasResource(Resource res)
         {
-            return ownedResources.ContainsKey(res.GetType());
+            return _ownedResources.ContainsKey(res.GetType());
         }
         public bool CheckResource(Resource res)
         {
-            return CheckResources(new List<Resource>() { res });
+            return CheckResources(new List<Resource> { res });
         }
         public bool CheckResources(List<Resource> resources, bool throwException = false)
         {
@@ -112,7 +112,7 @@ namespace TradeCity.Engine.Session
             {
                 if (HasResource(resource))
                 {
-                    int dif = ownedResources[resource.GetType()].GetStock() - resource.GetStock();
+                    int dif = _ownedResources[resource.GetType()].GetStock() - resource.GetStock();
                     if (dif < 0)
                     {
                         missingResources.Add(resource.GetNewResource(dif));
@@ -130,7 +130,7 @@ namespace TradeCity.Engine.Session
         }
         public void SubRes(Resource resource)
         {
-            ownedResources[resource.GetType()] -= resource;
+            _ownedResources[resource.GetType()] -= resource;
             OnResourceChange?.Invoke(resource.GetNewResource(-resource.GetStock()));
         }
         public void SubRes(List<Resource> resources)
@@ -142,16 +142,16 @@ namespace TradeCity.Engine.Session
         }
         public int GetRes(Resource resource)
         {
-            return ownedResources[resource.GetType()].GetStock();
+            return _ownedResources[resource.GetType()].GetStock();
         }
         public Resource GetResRef(Resource resource)
         {
-            return ownedResources[resource.GetType()];
+            return _ownedResources[resource.GetType()];
         }
         public void GiveRes(Resource resource)
         {
             OnResourceChange?.Invoke(resource);
-            ownedResources[resource.GetType()] += resource;
+            _ownedResources[resource.GetType()] += resource;
         }
         public void GiveRes(List<Resource> resources)
         {
@@ -164,28 +164,28 @@ namespace TradeCity.Engine.Session
         {
             foreach (Resource res in newResList)
             {
-                ownedResources.Add(res.GetType(), res.GetNewResource(0));
+                _ownedResources.Add(res.GetType(), res.GetNewResource(0));
             }
         }
         public void Freeze()
         {
-            playerStrategy.Freeze();
+            _playerStrategy.Freeze();
         }
         public void UnFreeze(IPlayerStrategy newStrategy)
         {
-            playerStrategy.UnFreeze(newStrategy);
+            _playerStrategy.UnFreeze(newStrategy);
         }
         public bool IsFrozen()
         {
-            return playerStrategy.IsFrozen();
+            return _playerStrategy.IsFrozen();
         }
         public void GoBankrupt()
         {
-            playerStrategy.GoBankrupt();
+            _playerStrategy.GoBankrupt();
         }
         public void Tick()
         {
-            playerStrategy.Tick();
+            _playerStrategy.Tick();
         }
         public void Register()
         {

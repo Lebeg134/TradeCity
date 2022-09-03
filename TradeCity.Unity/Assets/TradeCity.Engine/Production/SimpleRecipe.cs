@@ -4,7 +4,7 @@ namespace TradeCity.Engine.Production
 {
     public class SimpleRecipe : Recipe
     {
-        private readonly Resource from, to;
+        private readonly Resource _from, _to;
 
 
         /// <summary>
@@ -15,33 +15,34 @@ namespace TradeCity.Engine.Production
         /// <param name="limit">Default number of times recipe can be crafted in a period</param>
         public SimpleRecipe(Resource from, Resource to, int limit) : base(limit)
         {
-            this.from = from;
-            input.Add(from.GetNewResource(0));
-            this.to = to;
-            output.Add(to.GetNewResource(0));
+            _from = from;
+            _input.Add(from.GetNewResource(0));
+            _to = to;
+            _output.Add(to.GetNewResource(0));
 
         }
         public override int AddResource(Resource resource)
         {
-            if (resource.GetType() == from.GetType())
+            if (resource.GetType() == _from.GetType())
             {
-                int subtract = from.GetStock() * Limit;
+                int subtract = _from.GetStock() * Limit;
                 if (subtract > resource.GetStock())
                     subtract = resource.GetStock();
-                Resource.Transfer(input, resource, subtract);
+                Resource.Transfer(_input, resource, subtract);
                 return subtract;
             }
-            else return 0;
+
+            return 0;
         }
 
         protected override void Process()
         {
-            Resource resource = input.Find((res) => res.GetType() == from.GetType());
-            int num = resource.GetStock() / from.GetStock();
+            Resource resource = _input.Find(res => res.GetType() == _from.GetType());
+            int num = resource.GetStock() / _from.GetStock();
             if (num > Limit)
                 Limit = num;
-            resource.Spend(num * from.GetStock());
-            output.Add(to.GetNewResource(to.GetStock() * num));
+            resource.Spend(num * _from.GetStock());
+            _output.Add(_to.GetNewResource(_to.GetStock() * num));
         }
     }
 }

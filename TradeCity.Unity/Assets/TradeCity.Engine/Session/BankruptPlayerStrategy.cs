@@ -16,7 +16,7 @@ namespace TradeCity.Engine.Session
             }
             private void DeleteOwnerships()
             {
-                foreach (IOwnable ownable in player.owned)
+                foreach (IOwnable ownable in _player._owned)
                 {
                     ownable.Acquire(null);
                 }

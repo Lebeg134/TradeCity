@@ -6,20 +6,20 @@ namespace TradeCity.Engine.Production
 {
     internal class ManyToOneRecipe : Recipe
     {
-        private readonly List<Resource> from;
-        private readonly Resource to;
+        private readonly List<Resource> _from;
+        private readonly Resource _to;
         public ManyToOneRecipe(List<Resource> from, Resource to, int limit) : base(limit)
         {
-            this.from = from;
+            _from = from;
             foreach (Resource res in from)
             {
-                input.Add(res.GetNewResource(0));
+                _input.Add(res.GetNewResource(0));
             }
-            this.to = to;
+            _to = to;
         }
         public override int AddResource(Resource resource)
         {
-            foreach (Resource res in from)
+            foreach (Resource res in _from)
             {
                 if (resource.GetType() == res.GetType())
                 {
@@ -27,7 +27,7 @@ namespace TradeCity.Engine.Production
                     if (subtract < 0) return 0; //if limit gets lower somehow this is needed
                     if (subtract > resource.GetStock())
                         subtract = resource.GetStock();
-                    Resource.Transfer(input, resource, subtract);
+                    Resource.Transfer(_input, resource, subtract);
                     return subtract;
                 }
             }
@@ -37,7 +37,7 @@ namespace TradeCity.Engine.Production
         protected override void Process()
         {
             List<int> num = new();
-            var zipped = input.Zip(from, (inp, frm) => new
+            var zipped = _input.Zip(_from, (inp, frm) => new
             {
                 inpt = inp,
                 from = frm
@@ -51,7 +51,7 @@ namespace TradeCity.Engine.Production
             {
                 line.inpt.Spend(craft * line.from.GetStock());
             }
-            output.Add(to.GetNewResource(craft * to.GetStock()));
+            _output.Add(_to.GetNewResource(craft * _to.GetStock()));
         }
     }
 }

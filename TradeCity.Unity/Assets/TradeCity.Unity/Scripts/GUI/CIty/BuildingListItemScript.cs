@@ -51,16 +51,16 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             Debug.Log(target.BuildingState);
             switch (target.BuildingState)
             {
-                case BuildingState.BUILD:
+                case BuildingState.Build:
                     target.Build(Player.CurrentPlayer);
                     break;
-                case BuildingState.UPGRADE:
+                case BuildingState.Upgrade:
                     if (Player.CurrentPlayer.HasStructure(target))
                     {
                         target.Upgrade();
                     }
                     break;
-                case BuildingState.MAXLEVEL:
+                case BuildingState.Maxlevel:
                     //Do nothing
                     break;
             }
@@ -72,15 +72,15 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
         {
             switch (target.BuildingState)
             {
-                case BuildingState.BUILD:
+                case BuildingState.Build:
                     buildButton.GetComponentInChildren<Text>().text = "Build";
                     buildButton.interactable = target.CanBuild(Player.CurrentPlayer);
                     break;
-                case BuildingState.UPGRADE:
+                case BuildingState.Upgrade:
                     buildButton.GetComponentInChildren<Text>().text = "Upgrade";
                     buildButton.interactable = target.CanUpgrade();
                     break;
-                case BuildingState.MAXLEVEL:
+                case BuildingState.Maxlevel:
                     buildButton.GetComponentInChildren<Text>().text = "Maxed";
                     buildButton.interactable = false;
                     break;

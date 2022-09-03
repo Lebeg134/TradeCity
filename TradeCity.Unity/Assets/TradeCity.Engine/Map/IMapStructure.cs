@@ -1,7 +1,3 @@
-/**
-* @(#) IMapStructure.cs
-*/
-
 using TradeCity.Engine.Session;
 
 namespace TradeCity.Engine.Map

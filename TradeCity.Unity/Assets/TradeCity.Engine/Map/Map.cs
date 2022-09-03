@@ -14,52 +14,43 @@ namespace TradeCity.Engine.Map
     [Serializable]
     public class Map : ITickable
     {
-        private readonly int defaultBid = 100;
-        private readonly int defaultTimePerRound = 100;
-        private readonly IMapStructure[,] structures;
-        private readonly int sizeX, sizeY;
-        private readonly List<Auction> liveAuctions = new();
+        private readonly int _defaultBid = 100;
+        private readonly int _defaultTimePerRound = 100;
+        private readonly IMapStructure[,] _structures;
+        private readonly int _sizeX, _sizeY;
+        private readonly List<Auction> _liveAuctions = new();
 
         public Map(int sizeX, int sizeY)
         {
-            this.sizeX = sizeX;
-            this.sizeY = sizeY;
-            structures = new IMapStructure[this.sizeX, this.sizeY];
+            _sizeX = sizeX;
+            _sizeY = sizeY;
+            _structures = new IMapStructure[_sizeX, _sizeY];
             Register();
         }
+
         public IMapStructure GetStructure(int x, int y)
         {
-            return structures[x, y];
+            return _structures[x, y];
         }
-        //public void SetStructure(int x, int y, IMapStructure structure, bool replace = false)
-        //{
-        //    if (replace || structures[x, y] == null)
-        //    {
-        //        structure.SetCoords(x, y);
-        //        structures[x, y] = structure;
-        //    }
-        //}
+
         public void StartAuction(int x, int y, Player by)
         {
-            IMapStructure subject = structures[x, y];
+            IMapStructure subject = _structures[x, y];
             if (!subject.IsAuctionable())
                 throw new NotAuctionableException();
-            else
+
+            Auction newAuction = new((Land)subject, _defaultBid, _defaultTimePerRound, by);
+            if (_liveAuctions.Contains(newAuction))
             {
-                Auction newAuction = new((Land)subject, defaultBid, defaultTimePerRound, by);
-                if (liveAuctions.Contains(newAuction))
-                {
-                    throw new AuctionAlreadyExistsException();
-                }
-                else
-                {
-                    liveAuctions.Add(newAuction);
-                }
+                throw new AuctionAlreadyExistsException();
             }
+
+            _liveAuctions.Add(newAuction);
         }
+
         public void Tick()
         {
-            foreach (Auction auction in liveAuctions)
+            foreach (Auction auction in _liveAuctions)
             {
                 try
                 {
@@ -67,10 +58,11 @@ namespace TradeCity.Engine.Map
                 }
                 catch (AuctionFinishedException)
                 {
-                    liveAuctions.Remove(auction);
+                    _liveAuctions.Remove(auction);
                 }
             }
         }
+
         public void Register()
         {
             Clock.Instance.Register(this);

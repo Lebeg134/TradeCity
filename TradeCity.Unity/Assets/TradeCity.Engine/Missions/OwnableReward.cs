@@ -7,19 +7,19 @@ namespace TradeCity.Engine.Missions
     [Serializable]
     public class OwnableReward : IRewardable
     {
-        private readonly IOwnable ownable;
+        private readonly IOwnable _ownable;
         public OwnableReward(IOwnable ownable)
         {
-            this.ownable = ownable;
+            _ownable = ownable;
         }
         public object GetReward()
         {
-            return ownable;
+            return _ownable;
         }
 
         public void Reward(Player player)
         {
-            player.GiveStructure(ownable);
+            player.GiveStructure(_ownable);
         }
     }
 }

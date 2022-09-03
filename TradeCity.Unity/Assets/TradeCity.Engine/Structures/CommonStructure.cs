@@ -13,35 +13,35 @@ namespace TradeCity.Engine.Structures
         public event Action<Structure> OnMaxLevelReached;
 
         // ========== Attributes
-        protected Player owner;
-        protected int level = 0;
+        protected Player _owner;
+        protected int _level;
 
         // ========== Properties
-        public Player Owner => owner;
-        public int Level => level;
+        public Player Owner => _owner;
+        public int Level => _level;
         public int MaxLevel => GetMaxLevel();
 
         // ========== Interface Implementations
         public virtual void Acquire(Player by)
         {
             //Possibility to transfer ownership?, can implement later if needed
-            owner = by;
+            _owner = by;
         }
         public virtual void Upgrade()
         {
             if (CanUpgrade())
             {
-                owner.SubRes(GetCost(Level));
-                level++;
+                _owner.SubRes(GetCost(Level));
+                _level++;
                 OnUpgrade?.Invoke(this);
-                if (level >= MaxLevel)
+                if (_level >= MaxLevel)
                     OnMaxLevelReached?.Invoke(this);
             }
         }
         public bool CanUpgrade()
         {
-            if (level >= MaxLevel) return false;
-            return CheckCriteria(owner, level);
+            if (_level >= MaxLevel) return false;
+            return CheckCriteria(_owner, _level);
         }
         // ========== Internal Methods
         protected abstract int GetMaxLevel();

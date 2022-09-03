@@ -36,7 +36,7 @@ namespace TradeCity.Unity.Scripts.GUI.Market
                 GetListing(false)?.CompleteAll()
             );
             createListingButton.onClick.AddListener(() =>
-                SPMarket.Instance.RegisterListing(GetListing(true))
+                SpMarket.Instance.RegisterListing(GetListing(true))
             );
         }
 
@@ -70,14 +70,14 @@ namespace TradeCity.Unity.Scripts.GUI.Market
             valueDisplay.GetComponent<ResourceDisplayScript>().Watched = money;
             forDisplay.GetComponent<ResourceDisplayScript>().Watched = res;
         }
-        SPListing GetListing(bool autoListing)
+        SpListing GetListing(bool autoListing)
         {
             Resource res = resourceSelector.GetComponent<ResourceSelectorScript>().selected;
             int amount = int.Parse(amountInput.text);
             int above = 0;
             if (autoListing)
                 int.TryParse(aboveInput.text, out above);
-            return new SPListing(res.GetNewResource(amount), above);
+            return new SpListing(res.GetNewResource(amount), above);
         }
     }
 }

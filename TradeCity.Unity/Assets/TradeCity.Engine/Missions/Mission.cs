@@ -11,25 +11,25 @@ namespace TradeCity.Engine.Missions
         public event Action OnAchievement;
         public event Action OnClaim;
 
-        private Player owner;
-        private readonly IAchievable goal;
-        private readonly IRewardable reward;
-        private bool isAccepted = false;
-        private bool isAchieved = false;
-        private bool isClaimed = false;
+        private Player _owner;
+        private readonly IAchievable _goal;
+        private readonly IRewardable _reward;
+        private bool _isAccepted;
+        private bool _isAchieved;
+        private bool _isClaimed;
         //Enum state? Strategy?
 
-        public string Text => goal.Text;
-        public bool IsAccepted => isAccepted;
-        public bool IsAchieved => goal.IsAchieved();
-        public bool IsClaimed => isClaimed;
+        public string Text => _goal.Text;
+        public bool IsAccepted => _isAccepted;
+        public bool IsAchieved => _goal.IsAchieved();
+        public bool IsClaimed => _isClaimed;
 
         public Mission(IAchievable goal, IRewardable reward, Player owner = null)
         {
-            this.goal = goal;
-            this.reward = reward;
+            _goal = goal;
+            _reward = reward;
             goal.OnAchieve += Check;
-            this.owner = owner;
+            _owner = owner;
             if (owner != null)
             {
                 Accept(owner);
@@ -37,23 +37,23 @@ namespace TradeCity.Engine.Missions
         }
         public float CheckStatus()
         {
-            return goal.CheckStatus();
+            return _goal.CheckStatus();
         }
 
         public void Claim()
         {
-            if (isAchieved)
+            if (_isAchieved)
             {
-                reward.Reward(owner);
-                isClaimed = true;
+                _reward.Reward(_owner);
+                _isClaimed = true;
                 OnClaim?.Invoke();
             }
         }
         public void Accept(Player by)
         {
-            owner = by;
-            goal.Accept(by);
-            isAccepted = true;
+            _owner = by;
+            _goal.Accept(by);
+            _isAccepted = true;
             Register();
         }
 
@@ -64,9 +64,9 @@ namespace TradeCity.Engine.Missions
 
         public void Check()
         {
-            if (isAccepted && !isAchieved && goal.IsAchieved())
+            if (_isAccepted && !_isAchieved && _goal.IsAchieved())
             {
-                isAchieved = true;
+                _isAchieved = true;
                 OnAchievement?.Invoke();
             }
         }

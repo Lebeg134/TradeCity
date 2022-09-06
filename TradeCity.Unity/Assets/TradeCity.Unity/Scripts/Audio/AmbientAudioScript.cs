@@ -1,37 +1,51 @@
+using AutSoft.UnitySupplements.Vitamins;
 using TradeCity.Unity.Scripts.GUI.Navigation;
 using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.Audio
 {
+    [RequireComponent(typeof(AudioSource))]
     public class AmbientAudioScript : MonoBehaviour
     {
-        public GameObject screenNavigator;
-        AudioSource audioSource;
-        public AudioClip cityAmbient;
-        public AudioClip mapAmbient;
-        public AudioClip marketAmbient;
-        // Start is called before the first frame update
-        void Start()
+        [SerializeField] private MenuController _screenNavigator = default!;
+        [SerializeField] private AudioClip _cityAmbient = default!;
+        [SerializeField] private AudioClip _mapAmbient = default!;
+        [SerializeField] private AudioClip _marketAmbient = default!;
+
+        private AudioSource _audioSource = default!;
+
+        private void Awake()
         {
-            audioSource = GetComponent<AudioSource>();
-            screenNavigator.GetComponent<MenuController>().OnScreenChanged += OnScreenChange;
+            this.CheckSerializedField(_screenNavigator, nameof(_screenNavigator));
+            this.CheckSerializedField(_cityAmbient, nameof(_cityAmbient));
+            this.CheckSerializedField(_mapAmbient, nameof(_mapAmbient));
+            this.CheckSerializedField(_marketAmbient, nameof(_marketAmbient));
+
+            _audioSource = GetComponent<AudioSource>();
         }
-        void OnScreenChange(ActiveScreen activeScreen)
+
+        private void Start()
+        {
+            _audioSource = GetComponent<AudioSource>();
+            _screenNavigator.OnScreenChanged += OnScreenChange;
+        }
+
+        private void OnScreenChange(ActiveScreen activeScreen)
         {
             switch (activeScreen)
             {
                 case ActiveScreen.CITY:
-                    audioSource.clip = cityAmbient;
+                    _audioSource.clip = _cityAmbient;
                     break;
                 case ActiveScreen.MAP:
-                    audioSource.clip = mapAmbient;
+                    _audioSource.clip = _mapAmbient;
                     break;
                 case ActiveScreen.MARKET:
-                    audioSource.clip = marketAmbient;
+                    _audioSource.clip = _marketAmbient;
                     break;
 
             }
-            audioSource.Play();
+            _audioSource.Play();
         }
     }
 }

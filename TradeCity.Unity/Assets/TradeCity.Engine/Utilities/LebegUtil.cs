@@ -2,7 +2,7 @@
 
 namespace TradeCity.Engine.Utilities
 {
-    internal static class LebegUtil
+    public static class LebegUtil
     {
         public static int IndexInRange(ICollection collection, int index)
         {

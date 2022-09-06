@@ -10,15 +10,18 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
         public Button claimButton;
         public Text text;
         Mission watched;
+
         private void Awake()
         {
         
         }
+
         public void Update()
         {
             if (watched != null)
                 UpdateVisuals();
         }
+
         public void SetWatched(Mission mission)
         {
             watched = mission;
@@ -35,6 +38,7 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
             watched.Claim();
             UpdateButton();
         }
+
         private void UpdateButton()
         {
             if (watched.IsClaimed)

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.GUI.Lands
 {
-    public class AvailableLandsListScript : ListScript<Land>
+    public class AvailableLandsList : ListScript<Land>
     {
         protected override ICollection<Land> GetCollection()
         {

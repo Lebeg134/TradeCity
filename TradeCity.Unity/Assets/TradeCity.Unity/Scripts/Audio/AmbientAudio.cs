@@ -5,7 +5,7 @@ using UnityEngine;
 namespace TradeCity.Unity.Scripts.Audio
 {
     [RequireComponent(typeof(AudioSource))]
-    public class AmbientAudioScript : MonoBehaviour
+    public class AmbientAudio : MonoBehaviour
     {
         [SerializeField] private MenuController _screenNavigator = default!;
         [SerializeField] private AudioClip _cityAmbient = default!;

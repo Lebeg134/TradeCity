@@ -59,7 +59,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
                 Session.Instance.Offers.Remove(watched);
                 int newPrice = price * 2;
                 Session.Instance.Offers.Add(watched.GetNew(), newPrice);
-                gameObject.GetComponentInParent<AvailableLandsListScript>().Refresh();
+                gameObject.GetComponentInParent<AvailableLandsList>().Refresh();
                 gameObject.GetComponentInParent<VisualUpdater>().VisualUpdate();
             }
         }

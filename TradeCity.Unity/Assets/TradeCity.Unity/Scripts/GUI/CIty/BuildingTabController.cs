@@ -29,16 +29,22 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             this.CheckSerializedField(_workforceBranch, nameof(_workforceBranch));
             this.CheckSerializedField(_content, nameof(_content));
             this.CheckSerializedField(_buildingListItemPrefab, nameof(_buildingListItemPrefab));
-        }
 
-        private void Start()
-        {
             _commonBranch.onClick.AddListener(() => Switch(Branches.Common));
             _constructionBranch.onClick.AddListener(() => Switch(Branches.Construction));
             _energyBranch.onClick.AddListener(() => Switch(Branches.Energy));
             _oilBranch.onClick.AddListener(() => Switch(Branches.Oil));
             _workforceBranch.onClick.AddListener(() => Switch(Branches.Workforce));
+        }
+
+        private void Start()
+        {
             Switch(Branches.Construction);
+        }
+
+        private void OnDestroy()
+        {
+            // TODO: Remove listeners
         }
 
         private void Switch(Branches tab)

@@ -1,3 +1,4 @@
+using AutSoft.UnitySupplements.Vitamins;
 using System.Collections.Generic;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
@@ -9,21 +10,24 @@ using UnityEngine.UI;
 
 namespace TradeCity.Unity.Scripts.GUI.Lands
 {
-    public class LandOfferVisualsScript : MonoBehaviour
+    public class LandOfferVisuals : MonoBehaviour
     {
-        public Image sprite;
-        public Text buildingName;
-        public Button buildButton;
-        public GameObject costDisplay;
+
+        private string[] options = GetOptions();
         [Dropdown("options")]
         public string target;
-        string[] options = GetOptions();
+
+        [SerializeField] private Image sprite;
+        [SerializeField] private Text buildingName;
+        [SerializeField] private Button buildButton;
+        [SerializeField] private GameObject costDisplay;
+
         public Land watched;
         public int price = 1000;
         private static string[] GetOptions()
         {
 
-            List<string> options = new List<string>();
+            List<string> options = new();
             foreach (Land land in SessionGenerator.GetAllLands())
             {
                 options.Add(land.GetName());
@@ -32,8 +36,14 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
         }
 
 
-        // Start is called before the first frame update
-        void Start()
+        private void Awake()
+        {
+            this.CheckSerializedField(sprite, nameof(sprite));
+            this.CheckSerializedField(buildingName, nameof(buildingName));
+            this.CheckSerializedField(buildButton, nameof(buildButton));
+            this.CheckSerializedField(costDisplay, nameof(costDisplay));
+        }
+        private void Start()
         {
             if (watched == null)
             {
@@ -64,12 +74,11 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
             }
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
             buildButton.interactable = Player.CurrentPlayer.CheckResource(new Money(price));
         }
-        Land ConvertStringToLand(string name)
+        private Land ConvertStringToLand(string name)
         {
             foreach (Land land in SessionGenerator.GetAllLands())
             {

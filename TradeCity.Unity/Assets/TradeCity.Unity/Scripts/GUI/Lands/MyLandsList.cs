@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.GUI.Lands
 {
-    public class MyLandsListScript : ListScript<Land>, IVisualUpdateable
+    public class MyLandsList : ListScript<Land>, IVisualUpdateable
     {
         public void VisualUpdate()
         {
@@ -20,7 +20,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
 
         protected override void ProcessListItem(Land item, GameObject newListItem)
         {
-            newListItem.GetComponent<OwnedlandVisualSript>().watched = item;
+            newListItem.GetComponent<OwnedlandVisual>().watched = item;
         }
     }
 }

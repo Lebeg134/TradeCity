@@ -1,3 +1,4 @@
+using AutSoft.UnitySupplements.Vitamins;
 using System;
 using TradeCity.Engine.Session;
 using UnityEngine;
@@ -6,11 +7,16 @@ using UnityEngine.UI;
 
 namespace TradeCity.Unity.Scripts.GUI.MainMenu
 {
-    public class ContinueButtonScript : MonoBehaviour
+    public class ContinueButton : MonoBehaviour
     {
-        Button button;
-        // Start is called before the first frame update
-        void Start()
+        [SerializeField] private Button button;
+
+        private void Awake()
+        {
+            this.CheckSerializedField(button, nameof(button));
+        }
+
+        private void Start()
         {
             button = GetComponent<Button>();
             UpdateVisuals();
@@ -31,11 +37,8 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
             }
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-            UpdateVisuals();
-        }
+        void Update() => UpdateVisuals();
+
         void UpdateVisuals()
         {
             button.interactable = Session.SaveExists();

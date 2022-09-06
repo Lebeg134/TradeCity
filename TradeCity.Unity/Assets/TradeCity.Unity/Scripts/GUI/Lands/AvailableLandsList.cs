@@ -14,8 +14,8 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
 
         protected override void ProcessListItem(Land item, GameObject newListItem)
         {
-            newListItem.GetComponent<LandOfferVisualsScript>().watched = item;
-            newListItem.GetComponent<LandOfferVisualsScript>().price = Session.Instance.Offers[item];
+            newListItem.GetComponent<LandOfferVisuals>().watched = item;
+            newListItem.GetComponent<LandOfferVisuals>().price = Session.Instance.Offers[item];
         }
     }
 }

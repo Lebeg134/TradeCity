@@ -115,7 +115,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             foreach (Resource res in _target.GetCost())
             {
                 GameObject listItem = Instantiate(_costDisplayPrefab);
-                listItem.GetComponent<ResourceDisplayScript>().Watched = res;
+                listItem.GetComponent<ResourceDisplay>().Watched = res;
                 listItem.transform.SetParent(_costsList.transform);
             }
         }

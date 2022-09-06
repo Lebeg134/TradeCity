@@ -3,37 +3,38 @@ using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
 using UnityEngine;
 using UnityEngine.UI;
+using AutSoft.UnitySupplements.Vitamins;
 
 namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
 {
-    public class ResourceDisplayScript : MonoBehaviour
+    public class ResourceDisplay : MonoBehaviour
     {
-        string[] options = GetOptions().ToArray();
+        [SerializeField] protected Text display;
+        [SerializeField] protected Text resName;
+        [SerializeField] protected Image icon;
+
+        private readonly string[] options = GetOptions().ToArray();
         [Dropdown("options")]
         public string resource;
+
+        private Resource _watched;
         public Resource Watched
         {
-            get
-            {
-                return _watched;
-            }
+            get => _watched;
             set
             {
                 _watched = value;
                 OnWatchedChanged();
-
             }
         }
-        protected virtual void OnWatchedChanged()
+        
+        protected virtual void Awake()
         {
-            UpdateVisuals();
+            this.CheckSerializedField(display, nameof(display));
+            this.CheckSerializedField(resName, nameof(resName));
+            this.CheckSerializedField(icon, nameof(icon));
         }
-        Resource _watched;
-        public Text display;
-        public Text resName;
-        public Image icon;
 
-        // Start is called before the first frame update
         protected virtual void Start()
         {
             if (Watched == null)
@@ -41,10 +42,14 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
             UpdateVisuals();
         }
 
-        // Update is called once per frame
         protected virtual void Update()
         {
+            // Overwritten in children
+        }
 
+        protected virtual void OnWatchedChanged()
+        {
+            UpdateVisuals();
         }
 
         protected virtual void UpdateVisuals()
@@ -54,6 +59,7 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
             display.text = Watched.GetStock().ToString();
             LoadSprite();
         }
+
         protected void LoadSprite()
         {
             var loadedSprite = Resources.Load<Sprite>(Watched.GetResourcepath());
@@ -64,13 +70,14 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
         public static List<string> GetOptions()
         {
             List<Resource> reslist = SessionGenerator.GetResourceList();
-            List<string> strlist = new List<string>();
+            List<string> strlist = new();
             foreach (Resource res in reslist)
             {
                 strlist.Add(res.GetName());
             }
             return strlist;
         }
+
         public static Resource ConvertToRes(string name)
         {
             foreach (Resource res in SessionGenerator.GetResourceList())

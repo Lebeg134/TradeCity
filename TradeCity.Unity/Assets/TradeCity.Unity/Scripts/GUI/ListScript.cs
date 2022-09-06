@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using AutSoft.UnitySupplements.Vitamins;
 
 namespace TradeCity.Unity.Scripts.GUI
 {
@@ -9,13 +10,19 @@ namespace TradeCity.Unity.Scripts.GUI
     /// <typeparam name="T"> Type of the displayed items</typeparam>
     /// <typeparam name="Script"> Script that is present on the ListItem Gameobjects</typeparam>
     /// <typeparam name="Collection"> Type of collection that is to be handled</typeparam>
-    public abstract class ListScript<T> : MonoBehaviour
+    public abstract class SimpleList<T> : MonoBehaviour
     {
-        public GameObject ListItem;
-        public GameObject Content;
+        [SerializeField] protected GameObject ListItem;
+        [SerializeField] protected GameObject Content;
+
+        protected virtual void Awake()
+        {
+            this.CheckSerializedField(ListItem, nameof(ListItem));
+            this.CheckSerializedField(Content, nameof(Content));
+        }
 
         /// <summary>
-        /// Gets called when the script is instantiated
+        /// Initial population of the list
         /// </summary>
         protected virtual void Start()
         {
@@ -70,7 +77,6 @@ namespace TradeCity.Unity.Scripts.GUI
         protected abstract ICollection<T> GetCollection();
 
         /// <summary>
-        /// Gets called once every frame
         /// Does nothing by default
         /// </summary>
         protected virtual void Update() { }

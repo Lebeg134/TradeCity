@@ -50,7 +50,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
                 watched = ConvertStringToLand(target);
             }
             buildingName.text = watched.GetName();
-            costDisplay.GetComponent<ResourceDisplayScript>().Watched = new Money(price);
+            costDisplay.GetComponent<ResourceDisplay>().Watched = new Money(price);
 
             var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
             if (loadedSprite != null)

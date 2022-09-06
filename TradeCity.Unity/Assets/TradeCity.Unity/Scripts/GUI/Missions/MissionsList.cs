@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.GUI.Missions
 {
-    class MissionsListScript : ListScript<Mission>
+    class MissionsList : SimpleList<Mission>
     {
         protected override ICollection<Mission> GetCollection()
         {
@@ -14,7 +14,7 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
 
         protected override void ProcessListItem(Mission item, GameObject newListItem)
         {
-            newListItem.GetComponent<MissionListItemScript>().SetWatched(item);
+            newListItem.GetComponent<MissionListItem>().SetWatched(item);
         }
     }
 }

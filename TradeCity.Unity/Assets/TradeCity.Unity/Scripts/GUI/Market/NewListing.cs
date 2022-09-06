@@ -14,8 +14,8 @@ namespace TradeCity.Unity.Scripts.GUI.Market
         [SerializeField] private Button sellAllButton;
         [SerializeField] private Button createListingButton;
         [SerializeField] private Dropdown _resourceDropdown;
-        [SerializeField] private ResourceDisplayScript valueDisplay;
-        [SerializeField] private ResourceDisplayScript forDisplay;
+        [SerializeField] private ResourceDisplay valueDisplay;
+        [SerializeField] private ResourceDisplay forDisplay;
         [SerializeField] private InputField amountInput;
         [SerializeField] private InputField aboveInput;
 

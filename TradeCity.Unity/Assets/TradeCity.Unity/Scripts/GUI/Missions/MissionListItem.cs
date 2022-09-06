@@ -1,22 +1,27 @@
+#nullable enable
+using AutSoft.UnitySupplements.Vitamins;
 using TradeCity.Engine.Missions;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace TradeCity.Unity.Scripts.GUI.Missions
 {
-    public class MissionListItemScript : MonoBehaviour
+    public class MissionListItem : MonoBehaviour
     {
-        public Slider progressBar;
-        public Button claimButton;
-        public Text text;
-        Mission watched;
+        [SerializeField] private Slider progressBar;
+        [SerializeField] private Button claimButton;
+        [SerializeField] private Text text;
+
+        private Mission? watched;
 
         private void Awake()
         {
-        
+            this.CheckSerializedField(progressBar, nameof(progressBar));
+            this.CheckSerializedField(claimButton, nameof(claimButton));
+            this.CheckSerializedField(text, nameof(text));
         }
 
-        public void Update()
+        private void Update()
         {
             if (watched != null)
                 UpdateVisuals();
@@ -35,33 +40,33 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
 
         private void ClaimClick()
         {
-            watched.Claim();
+            watched?.Claim();
             UpdateButton();
         }
 
         private void UpdateButton()
         {
-            if (watched.IsClaimed)
+            if (watched?.IsClaimed ?? false)
             {
                 claimButton.interactable = false;
                 claimButton.GetComponentInChildren<Text>().text = "Claimed";
             }
             else
             {
-                claimButton.interactable = watched.IsAchieved;
+                claimButton.interactable = watched?.IsAchieved ?? false;
             }
             claimButton.Select();
         }
 
-        void UpdateVisuals()
+        private void UpdateVisuals()
         {
-            if (watched.IsAchieved)
+            if (watched?.IsAchieved ?? false)
             {
                 progressBar.value = 1;
             }
             else
             {
-                progressBar.value = watched.CheckStatus();
+                progressBar.value = watched?.CheckStatus()?? 0;
             }
             UpdateButton();
         }

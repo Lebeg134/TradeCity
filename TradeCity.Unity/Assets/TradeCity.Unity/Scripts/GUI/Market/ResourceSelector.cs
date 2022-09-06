@@ -29,7 +29,7 @@ namespace TradeCity.Unity.Scripts.GUI.Market
             dropdown.AddOptions(options);
             dropdown.onValueChanged.AddListener((int i) =>
                 {
-                    selected = ResourceDisplayScript.ConvertToRes(options[i]);
+                    selected = ResourceDisplay.ConvertToRes(options[i]);
                     dropdown.captionText.text = selected.GetName();
                     dropdown.Hide();
                 }

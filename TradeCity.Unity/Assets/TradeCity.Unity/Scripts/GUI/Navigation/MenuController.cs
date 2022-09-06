@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using AutSoft.UnitySupplements.Vitamins;
 
 namespace TradeCity.Unity.Scripts.GUI.Navigation
 {
@@ -11,46 +12,49 @@ namespace TradeCity.Unity.Scripts.GUI.Navigation
     }
     public class MenuController : MonoBehaviour
     {
-        public Canvas city;
-        public Canvas map;
-        public Canvas market;
-        public Button cityButton;
-        public Button mapButton;
-        public Button marketButton;
+        [SerializeField] private Canvas city;
+        [SerializeField] private Canvas map;
+        [SerializeField] private Canvas market;
+        [SerializeField] private Button cityButton;
+        [SerializeField] private Button mapButton;
+        [SerializeField] private Button marketButton;
 
+        private ActiveScreen _active;
         public ActiveScreen Active
         {
-            get
-            {
-                return _active;
-            }
+            get => _active;
             set
             {
                 _active = value;
                 OnScreenChanged.Invoke(value);
             }
         }
-        //this should actually only be used through Property
-        private ActiveScreen _active;
+
         public delegate void ActiveChanged(ActiveScreen newScreen);
         public event ActiveChanged OnScreenChanged;
-        // Start is called before the first frame update
-        void Start()
+
+        private void Awake()
         {
+            this.CheckSerializedField(city, nameof(city));
+            this.CheckSerializedField(map, nameof(map));
+            this.CheckSerializedField(market, nameof(market));
+            this.CheckSerializedField(cityButton, nameof(cityButton));
+            this.CheckSerializedField(mapButton, nameof(mapButton));
+            this.CheckSerializedField(marketButton, nameof(marketButton));
+
+
             cityButton.onClick.AddListener(() => SwitchTo(ActiveScreen.CITY));
             mapButton.onClick.AddListener(() => SwitchTo(ActiveScreen.MAP));
             marketButton.onClick.AddListener(() => SwitchTo(ActiveScreen.MARKET));
+        }
+
+        private void Start()
+        {
             Active = ActiveScreen.CITY;
             SwitchTo(Active);
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-        // Switch to given screen
-        void SwitchTo(ActiveScreen screen)
+        private void SwitchTo(ActiveScreen screen)
         {
             if (Active != screen)
                 Active = screen;

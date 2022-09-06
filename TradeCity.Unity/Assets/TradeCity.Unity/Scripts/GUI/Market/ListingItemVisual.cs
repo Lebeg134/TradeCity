@@ -9,9 +9,9 @@ namespace TradeCity.Unity.Scripts.GUI.Market
 {
     public class ListingItemVisual : MonoBehaviour
     {
-        [SerializeField] private ResourceDisplayScript ListingSubject = default!;
-        [SerializeField] private ResourceDisplayScript MoneyDisplay = default!;
-        [SerializeField] private ResourceDisplayScript AboveDisplay = default!;
+        [SerializeField] private ResourceDisplay ListingSubject = default!;
+        [SerializeField] private ResourceDisplay MoneyDisplay = default!;
+        [SerializeField] private ResourceDisplay AboveDisplay = default!;
         [SerializeField] private Button CancelButton = default!;
 
         public SpListing watched;

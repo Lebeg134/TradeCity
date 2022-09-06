@@ -1,57 +1,71 @@
 ﻿using TradeCity.Engine.Resources;
 using UnityEngine;
 using UnityEngine.UI;
+using AutSoft.UnitySupplements.Vitamins;
 
 namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
 {
-    class LiveResourceDisplayScript : ResourceDisplayScript
+    enum IndicatorState
     {
-        enum IndicatorState
+        UP,
+        NEUTRAL,
+        DOWN
+    }
+
+    public class LiveResourceDisplay : ResourceDisplay
+    {
+        [SerializeField] private Image upIndicator;
+        [SerializeField] private Image downIndicator;
+        [SerializeField] private float indicatorTimeShown = 0.75f;
+
+        private float currentIndicatorTime;
+        private int prevAmount = 0;
+        private IndicatorState state = IndicatorState.NEUTRAL;
+
+        protected override void Awake()
         {
-            UP,
-            NEUTRAL,
-            DOWN
+            base.Awake();
+            this.CheckSerializedField(upIndicator, nameof(upIndicator));
+            this.CheckSerializedField(downIndicator, nameof(downIndicator));
         }
-        public float indicatorLimit;
-        float indicatorTime;
-        int prevAmount = 0;
-        public Image upIndicator;
-        public Image downIndicator;
-        IndicatorState state = IndicatorState.NEUTRAL;
+
         protected override void Start()
         {
             base.Start();
             prevAmount = Watched.GetStock();
             UpdateIndicator(state);
         }
+
         protected override void Update()
         {
             if (Watched == null) return;
 
             int amount = Watched.GetStock();
-            if (Watched is ContinousResource)
+            if (Watched is ContinousResource continousResource)
             {
-                display.text = amount + "/" + ((ContinousResource)Watched).Buffer;
+                display.text = amount + "/" + continousResource.Buffer;
             }
             else
             {
                 display.text = Watched.GetStock().ToString();
             }
-            if (prevAmount == amount && (indicatorTime += Time.deltaTime) >= indicatorLimit)
+
+            if (prevAmount == amount && (currentIndicatorTime += Time.deltaTime) >= indicatorTimeShown)
             {
                 state = IndicatorState.NEUTRAL;
-                indicatorTime = 0;
+                currentIndicatorTime = 0;
             }
             else if (prevAmount < amount)
             {
                 state = IndicatorState.UP;
-                indicatorTime = 0;
+                currentIndicatorTime = 0;
             }
             else if (prevAmount > amount)
             {
                 state = IndicatorState.DOWN;
-                indicatorTime = 0;
+                currentIndicatorTime = 0;
             }
+
             UpdateIndicator(state);
             prevAmount = amount;
         }

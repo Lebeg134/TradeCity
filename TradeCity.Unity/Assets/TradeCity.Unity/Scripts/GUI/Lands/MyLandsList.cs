@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.GUI.Lands
 {
-    public class MyLandsList : ListScript<Land>, IVisualUpdateable
+    public class MyLandsList : SimpleList<Land>, IVisualUpdateable
     {
         public void VisualUpdate()
         {

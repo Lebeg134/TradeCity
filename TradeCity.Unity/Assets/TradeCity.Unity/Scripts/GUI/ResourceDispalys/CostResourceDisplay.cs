@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
 {
-    internal class CostResourceDisplayScript : ResourceDisplayScript
+    public class CostResourceDisplay : ResourceDisplay
     {
         public bool redIfNotEnough = true;
         protected override void Update()

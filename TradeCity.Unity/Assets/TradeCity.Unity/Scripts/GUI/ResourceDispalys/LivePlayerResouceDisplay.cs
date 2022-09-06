@@ -2,7 +2,7 @@
 
 namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
 {
-    class LivePlayerResouceDisplayScript : LiveResourceDisplayScript
+    public class LivePlayerResouceDisplay : LiveResourceDisplay
     {
         protected override void Start()
         {

@@ -23,7 +23,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
         private void Start()
         {
             nameText.text = watched.GetName();
-            produceDisplay.GetComponent<ResourceDisplayScript>().Watched = watched.GetProduce()[0]; //TODO if produces more than one!
+            produceDisplay.GetComponent<ResourceDisplay>().Watched = watched.GetProduce()[0]; //TODO if produces more than one!
 
             var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
             if (loadedSprite != null)

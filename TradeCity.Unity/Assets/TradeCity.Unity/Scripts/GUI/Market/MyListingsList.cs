@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.GUI.Market
 {
-    class MyListingsList : ListScript<SpListing>
+    class MyListingsList : SimpleList<SpListing>
     {
         protected override void Start()
         {

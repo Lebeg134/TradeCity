@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 namespace TradeCity.Unity.Scripts.GUI.Navigation
 {
-    public class BackToMenuScript : MonoBehaviour
+    [RequireComponent(typeof(Button))]
+    public class BackToMenu : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             GetComponent<Button>().onClick.AddListener(() =>
             {
@@ -18,11 +18,7 @@ namespace TradeCity.Unity.Scripts.GUI.Navigation
                 SceneManager.LoadScene(sceneName: "MainMenu");
             });
         }
-        // Update is called once per frame
-        void Update()
-        {
 
-        }
         private void OnApplicationQuit()
         {
             Clock.Instance.Pause();

@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
 {
-    public class ResourceListScript : ListScript<Resource>
+    public class ResourceList : SimpleList<Resource>
     {
         protected override ICollection<Resource> GetCollection()
         {
-            List<Resource> ret = new List<Resource>();
+            List<Resource> ret = new();
             foreach (Resource res in SessionGenerator.GetResourceList())
             {
                 switch (res.GetName())
@@ -27,7 +27,7 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
 
         protected override void ProcessListItem(Resource item, GameObject newListItem)
         {
-            newListItem.GetComponent<ResourceDisplayScript>().resource = item.GetName();
+            newListItem.GetComponent<ResourceDisplay>().resource = item.GetName();
         }
     }
 }

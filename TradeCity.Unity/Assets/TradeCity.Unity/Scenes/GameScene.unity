@@ -455,6 +455,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4986462233131704704, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
   m_PrefabInstance: {fileID: 70865958}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &70865960 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3537512130792373198, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
+  m_PrefabInstance: {fileID: 70865958}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9b5427a33d8e04cb5d0f804749b336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &71783888
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,10 +730,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   play: {fileID: 21300000, guid: 7314def9bd526d645aa07aa23f64ac4a, type: 3}
   pause: {fileID: 21300000, guid: 2666130f7ed8a634d8cbe2e7003b543a, type: 3}
-  playColor: {r: 0, g: 0.7176471, b: 0.32156864, a: 1}
-  pauseColor: {r: 0.6415094, g: 0, b: 0, a: 1}
   icon: {fileID: 461846027}
   button: {fileID: 81634446}
+  playColor: {r: 0, g: 0.7176471, b: 0.32156864, a: 1}
+  pauseColor: {r: 0.6415094, g: 0, b: 0, a: 1}
 --- !u!1 &82441033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,11 +1963,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368890928}
   m_CullTransparentMesh: 1
---- !u!1 &374974483 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3918729144897826669, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
-  m_PrefabInstance: {fileID: 70865958}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &384355160
 GameObject:
   m_ObjectHideFlags: 0
@@ -7210,13 +7216,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70032d0a4713e034bab09f3beb4cf2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commonBranch: {fileID: 507687316}
-  constructionBranch: {fileID: 1976953780}
-  energyBranch: {fileID: 93954354}
-  oilBranch: {fileID: 651663078}
-  workforceBranch: {fileID: 1656577290}
-  content: {fileID: 394645379}
-  buildingListItemPrefab: {fileID: 5704568827536854281, guid: c383c9a3a1600b64f87dfbbb2b3e0567, type: 3}
+  _commonBranch: {fileID: 507687316}
+  _constructionBranch: {fileID: 1976953780}
+  _energyBranch: {fileID: 93954354}
+  _oilBranch: {fileID: 651663078}
+  _workforceBranch: {fileID: 1656577290}
+  _content: {fileID: 394645379}
+  _buildingListItemPrefab: {fileID: 5704568827536854281, guid: c383c9a3a1600b64f87dfbbb2b3e0567, type: 3}
 --- !u!1 &1241575159
 GameObject:
   m_ObjectHideFlags: 0
@@ -7604,9 +7610,9 @@ MonoBehaviour:
   sellOneButton: {fileID: 1241575161}
   sellAllButton: {fileID: 1536997935}
   createListingButton: {fileID: 367635463}
-  resourceSelector: {fileID: 1169126022}
+  _resourceDropdown: {fileID: 1169126022}
   valueDisplay: {fileID: 1868389198}
-  forDisplay: {fileID: 374974483}
+  forDisplay: {fileID: 70865960}
   amountInput: {fileID: 629376924}
   aboveInput: {fileID: 1218183928}
 --- !u!1001 &1314115123
@@ -10454,11 +10460,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4986462233131704704, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
   m_PrefabInstance: {fileID: 1868389196}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1868389198 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3918729144897826669, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
+--- !u!114 &1868389198 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3537512130792373198, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
   m_PrefabInstance: {fileID: 1868389196}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9b5427a33d8e04cb5d0f804749b336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1888628929
 GameObject:
   m_ObjectHideFlags: 0

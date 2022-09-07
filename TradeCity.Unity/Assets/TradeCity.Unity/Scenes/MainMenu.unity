@@ -705,7 +705,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09f26f9366284a44a9dd3194522720d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitButton: {fileID: 480691924}
 --- !u!1 &617208863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,6 +1013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a8643dd85336444b04610bfc2278b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 784757562}
 --- !u!1 &1044857367
 GameObject:
   m_ObjectHideFlags: 0

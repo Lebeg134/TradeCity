@@ -28,6 +28,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 266235221508801579}
   m_RootOrder: 0
@@ -108,6 +109,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1875946219269964457}
   - {fileID: 4682620896635679752}
@@ -116,7 +118,7 @@ RectTransform:
   - {fileID: 1588337625547924680}
   - {fileID: 5142847102058227551}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -173,13 +175,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf97a0803fde6e4695d5f380e53d8cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building: Concrete Mixing Plant
-  buildingImage: {fileID: 3171238924813224355}
-  buildingName: {fileID: 4926203824831279856}
-  buildButton: {fileID: 1441557463674241696}
-  levelText: {fileID: 5522973060803930692}
-  costsList: {fileID: 572808244295836742}
-  CostDisplayPrefab: {fileID: 3918729144897826669, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
+  Building: 
+  _buildingImage: {fileID: 3171238924813224355}
+  _buildingName: {fileID: 4926203824831279856}
+  _buildButton: {fileID: 1441557463674241696}
+  _levelText: {fileID: 5522973060803930692}
+  _costsList: {fileID: 572808244295836742}
+  _costDisplayPrefab: {fileID: 3918729144897826669, guid: 1afba662bd79c2e49ab3cf4759ed3e69, type: 3}
 --- !u!1 &5986649207140194442
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,6 +211,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2030092396379443104}
   m_Father: {fileID: 8307869593735939955}
@@ -341,6 +344,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8307869593735939955}
   m_RootOrder: 4
@@ -420,6 +424,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8307869593735939955}
   m_RootOrder: 1
@@ -498,6 +503,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8307869593735939955}
   m_RootOrder: 5
@@ -631,6 +637,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8307869593735939955}
   m_RootOrder: 0
@@ -707,6 +714,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8307869593735939955}
   m_RootOrder: 3

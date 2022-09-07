@@ -13,9 +13,8 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 {
     public class BuildingListItem : MonoBehaviour
     {
-    
-        private readonly string[] _options = GetOptions();
-        [Dropdown("options")]
+        private string[] _options = GetOptions();
+        [Dropdown("_options")]
         public string Building = default!;
         [SerializeField] private Image _buildingImage = default!;
         [SerializeField] private Text _buildingName = default!;

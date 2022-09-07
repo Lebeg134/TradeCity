@@ -1,6 +1,6 @@
+#nullable enable
 using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.TimeManager;
@@ -10,14 +10,17 @@ namespace TradeCity.Engine.Map
     [Serializable]
     public class Auction : ITickable, IEqualityComparer<Auction>
     {
+        public event Action<Auction>? OnFinish;
+        
         private readonly Land _subject;
         private readonly int _currentPrice;
         private readonly int _minBid;
-        private Player _lastBidder;
+        private Player? _lastBidder;
         private int _timeRemaining;
         private readonly int _timePerRound;
 
-        public Auction(Land subject, int minBid, int timePerRound, Player initiator = null)
+
+        public Auction(Land subject, int minBid, int timePerRound, Player? initiator = null)
         {
             _subject = subject;
             _currentPrice = subject.GetStartingPrice();
@@ -38,7 +41,7 @@ namespace TradeCity.Engine.Map
         {
             if (_lastBidder == null) return;
             _subject.Acquire(_lastBidder);
-            throw new AuctionFinishedException();
+            OnFinish?.Invoke(this);
         }
 
         public void Tick()
@@ -60,25 +63,6 @@ namespace TradeCity.Engine.Map
         public int GetHashCode(Auction obj)
         {
             return _subject.GetHashCode();
-        }
-    }
-    [Serializable]
-    internal class AuctionFinishedException : Exception
-    {
-        public AuctionFinishedException()
-        {
-        }
-
-        public AuctionFinishedException(string message) : base(message)
-        {
-        }
-
-        public AuctionFinishedException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected AuctionFinishedException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
         }
     }
 }

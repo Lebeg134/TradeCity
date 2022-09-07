@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
-using TradeCity.Engine.Graphics;
 using TradeCity.Units;
 
 namespace TradeCity.Engine.Structures
 {
     [Serializable]
-    public abstract class Structure : IEqualityComparer<Structure>, IGetRes
+    public abstract class Structure : IEqualityComparer<Structure>
     {
         public event Action<Structure> OnTurnOn;
         public event Action<Structure> OnTurnOff;

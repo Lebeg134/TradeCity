@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
-using TradeCity.Engine.Graphics;
 using TradeCity.Engine.TimeManager;
 
 namespace TradeCity.Engine.Resources
 {
     [Serializable]
-    public abstract class Resource : IGetRes, ITickable
+    public abstract class Resource : ITickable
     {
         public event Action<int> OnAmountChange;
         //Amount of resource stored

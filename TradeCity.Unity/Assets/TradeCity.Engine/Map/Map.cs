@@ -41,6 +41,7 @@ namespace TradeCity.Engine.Map
                 throw new AuctionAlreadyExistsException();
             }
 
+            newAuction.OnFinish += OnAuctionFinished;
             _liveAuctions.Add(newAuction);
         }
 
@@ -48,20 +49,19 @@ namespace TradeCity.Engine.Map
         {
             foreach (var auction in _liveAuctions)
             {
-                try
-                {
-                    auction.Tick();
-                }
-                catch (AuctionFinishedException)
-                {
-                    _liveAuctions.Remove(auction);
-                }
+                auction.Tick();
             }
         }
 
         public void Register()
         {
             Clock.Instance.Register(this);
+        }
+
+        private void OnAuctionFinished(Auction auction)
+        {
+            auction.OnFinish -= OnAuctionFinished;
+            _liveAuctions.Remove(auction);
         }
     }
     [Serializable]

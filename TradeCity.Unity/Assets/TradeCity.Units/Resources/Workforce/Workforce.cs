@@ -1,9 +1,6 @@
 using System;
 using TradeCity.Engine.Resources;
 
-/**
-* @(#) Workforce.cs
-*/
 namespace TradeCity.Units.Resources.Workforce
 {
     [Serializable]

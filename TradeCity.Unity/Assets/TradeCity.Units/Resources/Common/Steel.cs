@@ -1,9 +1,6 @@
 using System;
 using TradeCity.Engine.Resources;
 
-/**
-* @(#) Steel.cs
-*/
 namespace TradeCity.Units.Resources.Common
 {
     [Serializable]

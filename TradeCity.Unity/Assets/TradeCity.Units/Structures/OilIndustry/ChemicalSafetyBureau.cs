@@ -7,9 +7,6 @@ using TradeCity.Units.Resources.ConstructionIndustry;
 using TradeCity.Units.Resources.EnergySector;
 using TradeCity.Units.Resources.Workforce;
 
-/**
-* @(#) ChemicalSafetyBureau.cs
-*/
 namespace TradeCity.Units.Structures.OilIndustry
 {
     [Serializable]

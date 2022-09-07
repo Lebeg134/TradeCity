@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using TradeCity.Engine.Resources;
 
 namespace TradeCity.Engine.Production
 {
+    [Serializable]
     public class PriorityDistributionStrategy : DistributionStrategy
     {
         public override void Distribute(Resource resource, List<Recipe> recipes)

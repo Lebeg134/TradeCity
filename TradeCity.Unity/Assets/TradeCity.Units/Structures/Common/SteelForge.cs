@@ -8,9 +8,6 @@ using TradeCity.Units.Resources.Common;
 using TradeCity.Units.Resources.EnergySector;
 using TradeCity.Units.Resources.Workforce;
 
-/**
-* @(#) SteelForge.cs
-*/
 namespace TradeCity.Units.Structures.Common
 {
     [Serializable]

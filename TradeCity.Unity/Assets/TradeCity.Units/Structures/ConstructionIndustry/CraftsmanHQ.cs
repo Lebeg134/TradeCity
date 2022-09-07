@@ -7,9 +7,6 @@ using TradeCity.Units.Resources.Common;
 using TradeCity.Units.Resources.ConstructionIndustry;
 using TradeCity.Units.Resources.EnergySector;
 
-/**
-* @(#) CraftsmanHQ.cs
-*/
 namespace TradeCity.Units.Structures.ConstructionIndustry
 {
     [Serializable]

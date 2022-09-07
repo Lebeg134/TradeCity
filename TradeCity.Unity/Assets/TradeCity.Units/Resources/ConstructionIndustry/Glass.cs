@@ -1,9 +1,6 @@
 using System;
 using TradeCity.Engine.Resources;
 
-/**
-* @(#) Glass.cs
-*/
 namespace TradeCity.Units.Resources.ConstructionIndustry
 {
     [Serializable]

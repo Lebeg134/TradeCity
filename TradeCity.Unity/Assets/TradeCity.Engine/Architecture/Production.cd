@@ -1,75 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Lebeg134.Module.Production.DistributionStrategy">
-    <Position X="4.25" Y="5" Width="1.5" />
+  <Class Name="TradeCity.Engine.Production.DistributionStrategy" Collapsed="true">
+    <Position X="5.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAhAA=</HashCode>
-      <FileName>Assets\Module\Production\DistributionStrategy.cs</FileName>
+      <FileName>Assets\TradeCity.Engine\Production\DistributionStrategy.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Lebeg134.Module.Production.EvenDistributionStrartegy">
-    <Position X="4.25" Y="7.5" Width="2" />
+  <Class Name="TradeCity.Engine.Production.EvenDistributionStrartegy" Collapsed="true">
+    <Position X="4.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhAA=</HashCode>
-      <FileName>Assets\Module\Production\EvenDistributionStrartegy.cs</FileName>
+      <FileName>Assets\TradeCity.Engine\Production\EvenDistributionStrartegy.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lebeg134.Module.Production.PriorityDistributionStrategy">
-    <Position X="6.5" Y="7.5" Width="2.25" />
+  <Class Name="TradeCity.Engine.Production.ManyToOneRecipe" Collapsed="true">
+    <Position X="4.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAgAAAAAAAAAAACQAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\ManyToOneRecipe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TradeCity.Engine.Production.PriorityDistributionStrategy" Collapsed="true">
+    <Position X="6.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhAA=</HashCode>
-      <FileName>Assets\Module\Production\PriorityDistributionStrategy.cs</FileName>
+      <FileName>Assets\TradeCity.Engine\Production\PriorityDistributionStrategy.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lebeg134.Module.Production.ProductionSystem" BaseTypeListCollapsed="true">
-    <Position X="4.25" Y="0.5" Width="1.75" />
+  <Class Name="TradeCity.Engine.Production.ProductionSystem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAAAAAAEAAAgAgAAAAAAAAAAIAAAAAAAEAAAAAAgAA=</HashCode>
-      <FileName>Assets\Module\Production\ProductionSystem.cs</FileName>
+      <HashCode>BAAAgAAAEAAAAAgAAAAAAAAAAIAAAAAAAQAAAAAAgAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\ProductionSystem.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Lebeg134.Module.Production.Recipe">
-    <Position X="6.5" Y="0.5" Width="1.5" />
+  <Class Name="TradeCity.Engine.Production.Recipe" Collapsed="true">
+    <Position X="5.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAAAAAAAAAAAAAAIgAAAQQAGAAAABAAAAAAAAQAAAA=</HashCode>
-      <FileName>Assets\Module\Production\Recipe.cs</FileName>
+      <HashCode>BAAAAAAAAAIAAAAAIgAAAQQAEBAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\Recipe.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lebeg134.Module.Production.SimpleRecipe">
-    <Position X="8.25" Y="2.25" Width="1.5" />
+  <Class Name="TradeCity.Engine.Production.SimpleRecipe" Collapsed="true">
+    <Position X="6.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIAAAAAAAAAAgAAAAgAAAAAAAAAAAAAAAQAAAA=</HashCode>
-      <FileName>Assets\Module\Production\SimpleRecipe.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAgAAAAAAAAAAACQAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\SimpleRecipe.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lebeg134.Module.Production.ManyToOneRecipe">
-    <Position X="8.25" Y="5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAIAAAAAAAAAAgAAAAgAAAAAAAAAAAAAAAQAAAA=</HashCode>
-      <FileName>Assets\Module\Production\ManyToOneRecipe.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Interface Name="Lebeg134.Module.Production.IDistributionStrategy">
-    <Position X="6" Y="5.5" Width="1.75" />
+  <Interface Name="TradeCity.Engine.Production.IDistributionStrategy" Collapsed="true">
+    <Position X="9" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhAA=</HashCode>
-      <FileName>Assets\Module\Production\IDistributionStrategy.cs</FileName>
+      <FileName>Assets\TradeCity.Engine\Production\IDistributionStrategy.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Lebeg134.Module.Production.IProductionSystem">
-    <Position X="4.25" Y="3.5" Width="1.75" />
+  <Interface Name="TradeCity.Engine.Production.IProductionSystem" Collapsed="true">
+    <Position X="10.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Module\Production\IProductionSystem.cs</FileName>
+      <FileName>Assets\TradeCity.Engine\Production\IProductionSystem.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="Lebeg134.Module.Production.RecipePriority">
-    <Position X="8" Y="0.5" Width="1.5" />
+  <Enum Name="TradeCity.Engine.Production.RecipePriority" Collapsed="true">
+    <Position X="9" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAgAAABAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
-      <FileName>Assets\Module\Production\Recipe.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAAAQEAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\Recipe.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

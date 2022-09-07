@@ -1,9 +1,6 @@
 using System;
 using TradeCity.Engine.Resources;
 
-/**
-* @(#) Plastic.cs
-*/
 namespace TradeCity.Units.Resources.OilIndustry
 {
     [Serializable]

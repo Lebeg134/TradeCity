@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TradeCity.Engine.Production;
 using TradeCity.Engine.Resources;
@@ -6,11 +7,9 @@ using TradeCity.Units.Resources.Common;
 using TradeCity.Units.Resources.ConstructionIndustry;
 using TradeCity.Units.Resources.Workforce;
 
-/**
-* @(#) StoneCutter.cs
-*/
 namespace TradeCity.Units.Structures.ConstructionIndustry
 {
+    [Serializable]
     public class StoneCutter : Building
     {
         public StoneCutter()

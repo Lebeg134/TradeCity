@@ -5,9 +5,6 @@ using TradeCity.Engine.Structures;
 using TradeCity.Units.Resources.Common;
 using TradeCity.Units.Resources.EnergySector;
 
-/**
-* @(#) CoalMine.cs
-*/
 namespace TradeCity.Units.Structures.Lands
 {
     [Serializable]

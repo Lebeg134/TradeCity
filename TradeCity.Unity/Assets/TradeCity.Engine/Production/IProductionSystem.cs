@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TradeCity.Engine.Structures.Interfaces;
 
 namespace TradeCity.Engine.Production
 {
-    internal interface IProductionSystem
+    public interface IProductionSystem
     {
         void Produce(List<IProducer> producers);
     }

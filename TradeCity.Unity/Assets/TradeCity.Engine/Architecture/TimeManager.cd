@@ -1,27 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Lebeg134.Module.TimeManager.Clock">
-    <Position X="0.5" Y="0.5" Width="1.75" />
+  <Class Name="TradeCity.Engine.TimeManager.Clock" Collapsed="true">
+    <Position X="8" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQgAAAAACAAAQAAAAEAABCAAABBABAAQAAAAABAUEA=</HashCode>
-      <FileName>Assets\Module\TimeManager\Clock.cs</FileName>
+      <HashCode>AAAkAAAEACAgAQAAAAEAABAAAAABABAAQQAAAABAUAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\TimeManager\Clock.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="tickables" />
-    </ShowAsCollectionAssociation>
   </Class>
-  <Interface Name="Lebeg134.Module.TimeManager.ITickable">
-    <Position X="3.75" Y="2" Width="1.5" />
+  <Interface Name="TradeCity.Engine.TimeManager.ITickable" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAQAA=</HashCode>
-      <FileName>Assets\Module\TimeManager\ITickable.cs</FileName>
+      <FileName>Assets\TradeCity.Engine\TimeManager\ITickable.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="Lebeg134.Module.TimeManager.Speed">
-    <Position X="6.25" Y="0.5" Width="1.5" />
+  <Enum Name="TradeCity.Engine.TimeManager.Speed" Collapsed="true">
+    <Position X="8" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAABCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
-      <FileName>Assets\Module\TimeManager\Clock.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAIAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\TimeManager\Clock.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

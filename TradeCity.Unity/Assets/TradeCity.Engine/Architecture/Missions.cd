@@ -1,67 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Lebeg134.Module.Missions.Mission">
-    <Position X="4.25" Y="6.75" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AYABIAkAAAAAgAAACAAAAIABQACBAEAAIAAACAAAQAA=</HashCode>
-      <FileName>Assets\Module\Missions\Mission.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="goal" />
-      <Field Name="reward" />
-    </ShowAsAssociation>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Lebeg134.Module.Missions.ResourceReward" BaseTypeListCollapsed="true">
-    <Position X="9" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
-      <FileName>Assets\Module\Missions\ResourceReward.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Lebeg134.Module.Missions.ResourceGoalBase" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="3.5" Y="2" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AJgAAAAAAAAAAAAIAAAAQAABQAAAgAAFAAAACAAIAAA=</HashCode>
-      <FileName>Assets\Module\Missions\ResourceGoalBase.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Lebeg134.Module.Missions.OwnableReward" BaseTypeListCollapsed="true">
-    <Position X="7.25" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAQA=</HashCode>
-      <FileName>Assets\Module\Missions\OwnableReward.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Lebeg134.Module.Missions.ReachResourceGoal">
-    <Position X="2" Y="3.25" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAEAAAAAAAAIAAAAQAABAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Module\Missions\ReachResourceGoal.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Lebeg134.Module.Missions.CollectResourceGoal">
-    <Position X="4.5" Y="3.25" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAEAAAAAAAAIAAAAQAABAAAAAAAAAAAAAAAAAQA=</HashCode>
-      <FileName>Assets\Module\Missions\CollectResourceGoal.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Interface Name="Lebeg134.Module.Missions.IRewardable">
-    <Position X="7.25" Y="7.25" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
-      <FileName>Assets\Module\Missions\IRewardable.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="Lebeg134.Module.Missions.IAchievable">
-    <Position X="7.25" Y="8.75" Width="1.5" />
+  <Class Name="TradeCity.Engine.Missions.BuildGoal" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AJAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAACAAIAAA=</HashCode>
-      <FileName>Assets\Module\Missions\IAchievable.cs</FileName>
+      <FileName>Assets\TradeCity.Engine\Missions\BuildGoal.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TradeCity.Engine.Missions.CollectResourceGoal" Collapsed="true">
+    <Position X="5.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAIAAAAQgABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Missions\CollectResourceGoal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TradeCity.Engine.Missions.Mission" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAoAkAAIAAAAAACAAAAAABQACBAAAAIAAAKAAAwAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Missions\Mission.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TradeCity.Engine.Missions.MissionNotAchievedException" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Missions\MissionNotAchievedException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TradeCity.Engine.Missions.OwnableReward" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Missions\OwnableReward.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TradeCity.Engine.Missions.ReachResourceGoal" Collapsed="true">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAIAAAAQAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Missions\ReachResourceGoal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TradeCity.Engine.Missions.ResourceGoalBase" Collapsed="true">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJAAAAAAAAAAAAAIAAAASAABQAAAAAAEAAAQCAAYAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Missions\ResourceGoalBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TradeCity.Engine.Missions.ResourceReward" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAQA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Missions\ResourceReward.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="TradeCity.Engine.Missions.IAchievable" Collapsed="true">
+    <Position X="10.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAACAAIAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Missions\IAchievable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TradeCity.Engine.Missions.IRewardable" Collapsed="true">
+    <Position X="12" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Missions\IRewardable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

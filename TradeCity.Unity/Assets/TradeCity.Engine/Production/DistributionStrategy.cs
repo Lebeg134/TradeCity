@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TradeCity.Engine.Resources;
 
 namespace TradeCity.Engine.Production
 {
+    [Serializable]
     public abstract class DistributionStrategy : IDistributionStrategy
     {
         public static List<IDistributionStrategy> GetAllStrategys()

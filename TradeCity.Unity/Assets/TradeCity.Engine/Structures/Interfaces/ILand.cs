@@ -6,7 +6,7 @@ using TradeCity.Engine.TimeManager;
 
 namespace TradeCity.Engine.Structures.Interfaces
 {
-    internal interface ILand : IOwnable, IUpgradeable, ITickable
+    public interface ILand : IOwnable, IUpgradeable, ITickable
     {
         event Action<Land> OnPurchase;
         Land GetNew();

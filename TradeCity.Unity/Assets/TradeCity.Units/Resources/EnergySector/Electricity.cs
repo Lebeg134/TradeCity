@@ -1,9 +1,6 @@
 using System;
 using TradeCity.Engine.Resources;
 
-/**
-* @(#) Electricity.cs
-*/
 namespace TradeCity.Units.Resources.EnergySector
 {
     [Serializable]

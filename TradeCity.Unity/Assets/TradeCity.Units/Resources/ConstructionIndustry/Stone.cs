@@ -1,9 +1,6 @@
 using System;
 using TradeCity.Engine.Resources;
 
-/**
-* @(#) Stone.cs
-*/
 namespace TradeCity.Units.Resources.ConstructionIndustry
 {
     [Serializable]

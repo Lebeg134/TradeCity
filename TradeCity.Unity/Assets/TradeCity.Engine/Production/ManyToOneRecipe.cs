@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using TradeCity.Engine.Resources;
 
 namespace TradeCity.Engine.Production
 {
-    internal class ManyToOneRecipe : Recipe
+    [Serializable]
+    public class ManyToOneRecipe : Recipe
     {
         private readonly List<Resource> _from;
         private readonly Resource _to;

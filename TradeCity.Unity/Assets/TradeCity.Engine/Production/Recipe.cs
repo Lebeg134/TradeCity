@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TradeCity.Engine.Resources;
 
 namespace TradeCity.Engine.Production
@@ -10,6 +11,8 @@ namespace TradeCity.Engine.Production
         Medium,
         Low,
     }
+
+    [Serializable]
     public abstract class Recipe
     {
         public string Name { get; set; }

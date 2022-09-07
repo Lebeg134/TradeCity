@@ -10,9 +10,6 @@ using TradeCity.Units.Resources.EnergySector;
 using TradeCity.Units.Resources.OilIndustry;
 using TradeCity.Units.Resources.Workforce;
 
-/**
-* @(#) OilDistillery.cs
-*/
 namespace TradeCity.Units.Structures.OilIndustry
 {
     [Serializable]

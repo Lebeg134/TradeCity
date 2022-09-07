@@ -5,9 +5,6 @@ using TradeCity.Engine.Structures;
 using TradeCity.Engine.Utilities;
 using TradeCity.Units.Resources.Common;
 
-/**
-* @(#) Forest.cs
-*/
 namespace TradeCity.Units.Structures.Lands
 {
     [Serializable]

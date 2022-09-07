@@ -1,14 +1,16 @@
-﻿using TradeCity.Engine.Resources;
+﻿using System;
+using TradeCity.Engine.Resources;
 
 namespace TradeCity.Engine.Production
 {
+    [Serializable]
     public class SimpleRecipe : Recipe
     {
         private readonly Resource _from, _to;
 
 
         /// <summary>
-        /// Constructor of simple custom recipes where the two Resources define the ratio between convertion
+        /// Constructor of simple custom recipes where the two Resources define the ratio between conversion
         /// </summary>
         /// <param name="from">Input requirement of the Recipe</param>
         /// <param name="to">Output of the recipe</param>
@@ -23,16 +25,13 @@ namespace TradeCity.Engine.Production
         }
         public override int AddResource(Resource resource)
         {
-            if (resource.GetType() == _from.GetType())
-            {
-                var subtract = _from.GetStock() * Limit;
-                if (subtract > resource.GetStock())
-                    subtract = resource.GetStock();
-                Resource.Transfer(_input, resource, subtract);
-                return subtract;
-            }
+            if (resource.GetType() != _from.GetType()) return 0;
+            var subtract = _from.GetStock() * Limit;
+            if (subtract > resource.GetStock())
+                subtract = resource.GetStock();
+            Resource.Transfer(_input, resource, subtract);
+            return subtract;
 
-            return 0;
         }
 
         protected override void Process()

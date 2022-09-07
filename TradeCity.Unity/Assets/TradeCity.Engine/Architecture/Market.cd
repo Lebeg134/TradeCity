@@ -1,65 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Lebeg134.Module.MarketNS.Listing" BaseTypeListCollapsed="true">
-    <Position X="10.75" Y="0.5" Width="1.75" />
+  <Class Name="TradeCity.Engine.Market.Listing" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQAAAABIAgAAAAAAAAAAhkAAAAARgAAAgQAA=</HashCode>
-      <FileName>Assets\Module\Market\Listing.cs</FileName>
+      <HashCode>AAAAAAAAQAAAEBIAgAAAAAAAAAAhEAAAACBgAAAAQAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Market\Listing.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="WantSellable" />
-      <Property Name="ForSellable" />
-    </ShowAsAssociation>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Lebeg134.Module.MarketNS.Market" BaseTypeListCollapsed="true">
-    <Position X="15.25" Y="0.5" Width="1.5" />
+  <Class Name="TradeCity.Engine.Market.Market" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAAAAAEQgAAAAAADABACAAAAABAAAAAAAAASCAQAA=</HashCode>
-      <FileName>Assets\Module\Market\Market.cs</FileName>
+      <HashCode>AABAAAAAEQgAAAAAABCBACAACAABAAAAAAAAACCAQAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Market\Market.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Lebeg134.Module.Market.SPListing" BaseTypeListCollapsed="true">
-    <Position X="3.75" Y="0.75" Width="1.75" />
+  <Class Name="TradeCity.Engine.Market.SpListing" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAEIABAAAIAQAAAAAAAAAABAAAQAAAAAAAAQAA=</HashCode>
-      <FileName>Assets\Module\Market\SPListing.cs</FileName>
+      <HashCode>gAAAAAAEIAAAAAIAQAAAAAAAABABAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Market\SPListing.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="sell" />
-    </ShowAsAssociation>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Lebeg134.Module.Market.SPMarket">
-    <Position X="0.5" Y="0.75" Width="2" />
+  <Class Name="TradeCity.Engine.Market.SpMarket" Collapsed="true">
+    <Position X="9" Y="2.25" Width="1.5" />
     <NestedTypes>
-      <Delegate Name="Lebeg134.Module.Market.SPMarket.Notify" Collapsed="true">
+      <Delegate Name="TradeCity.Engine.Market.SpMarket.Notify" Collapsed="true">
         <TypeIdentifier>
-          <NewMemberFileName>Assets\Module\Market\SPMarket.cs</NewMemberFileName>
+          <NewMemberFileName>Assets\TradeCity.Engine\Market\SPMarket.cs</NewMemberFileName>
         </TypeIdentifier>
       </Delegate>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAgAAIAAAQBAAAABQAAAAQAAAAA=</HashCode>
-      <FileName>Assets\Module\Market\SPMarket.cs</FileName>
+      <HashCode>AAAEAAAAAAAAAAAAAAiAAIAAAQAAAAABQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Market\SPMarket.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="listings" />
-    </ShowAsCollectionAssociation>
   </Class>
-  <Struct Name="Lebeg134.Module.MarketNS.ItemLog">
-    <Position X="13.5" Y="0.5" Width="1.5" />
+  <Struct Name="TradeCity.Engine.Market.ItemLog" Collapsed="true">
+    <Position X="7.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAIAAAAAAAAAAAAIAAA=</HashCode>
-      <FileName>Assets\Module\Market\ItemLog.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAEAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Market\ItemLog.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Interface Name="Lebeg134.Module.MarketNS.ISellable">
-    <Position X="7" Y="1.5" Width="2.25" />
+  <Interface Name="TradeCity.Engine.Market.ISellable" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAQAIAAAAAAAAAAAAAAACAAAAAAQAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Module\Market\ISellable.cs</FileName>
+      <FileName>Assets\TradeCity.Engine\Market\ISellable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

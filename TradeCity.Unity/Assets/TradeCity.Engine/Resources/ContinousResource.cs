@@ -24,6 +24,7 @@ namespace TradeCity.Engine.Resources
         {
             LoadBuffer();
         }
+        [Serializable]
         internal class BufferResource : Resource
         {
             public BufferResource(int amount = 0) : base(amount) { }

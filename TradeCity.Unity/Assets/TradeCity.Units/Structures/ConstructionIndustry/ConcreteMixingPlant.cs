@@ -9,9 +9,6 @@ using TradeCity.Units.Resources.ConstructionIndustry;
 using TradeCity.Units.Resources.EnergySector;
 using TradeCity.Units.Resources.Workforce;
 
-/**
-* @(#) ConcreteMixingPlant.cs
-*/
 namespace TradeCity.Units.Structures.ConstructionIndustry
 {
     [Serializable]

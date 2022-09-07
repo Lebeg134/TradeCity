@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
@@ -7,6 +8,7 @@ using TradeCity.Engine.Structures.Interfaces;
 
 namespace TradeCity.Engine.Production
 {
+    [Serializable]
     public class ProductionSystem : IProductionSystem
     {
         private readonly Player _owner;

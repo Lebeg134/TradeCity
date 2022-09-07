@@ -6,6 +6,7 @@ using TradeCity.Engine.Structures.Interfaces;
 
 namespace TradeCity.Engine.Structures
 {
+    [Serializable]
     public abstract class CommonStructure : Structure, IOwnable, IUpgradeable
     {
         // ========== Public events

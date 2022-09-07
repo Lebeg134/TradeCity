@@ -1,28 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Lebeg134.Module.Graphics.VisualUpdater" BaseTypeListCollapsed="true">
-    <Position X="1" Y="2.25" Width="2.5" />
+  <Class Name="TradeCity.Engine.Graphics.VisualUpdater" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAABAAABQAAAAAAAEAE=</HashCode>
-      <FileName>Assets\Module\Graphics\VisualUpdater.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAABAAAAQAQAACAAEAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Graphics\VisualUpdater.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="subscribers" />
-    </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Interface Name="Lebeg134.Module.Graphics.IGetRes">
-    <Position X="4.5" Y="1.75" Width="2" />
+  <Interface Name="TradeCity.Engine.Graphics.IGetRes" Collapsed="true">
+    <Position X="7.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Module\Graphics\IGetRes.cs</FileName>
+      <FileName>Assets\TradeCity.Engine\Graphics\IGetRes.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Lebeg134.Module.Graphics.IUpdateable">
-    <Position X="2" Y="0.5" Width="1.5" />
+  <Interface Name="TradeCity.Engine.Graphics.IUpdateable" Collapsed="true">
+    <Position X="9.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Module\Graphics\IUpdateable.cs</FileName>
+      <FileName>Assets\TradeCity.Engine\Graphics\IUpdateable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

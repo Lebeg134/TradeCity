@@ -4,9 +4,6 @@ using TradeCity.Engine.Resources;
 using TradeCity.Engine.Structures;
 using TradeCity.Units.Resources.Common;
 
-/**
-* @(#) IronMine.cs
-*/
 namespace TradeCity.Units.Structures.Lands
 {
     [Serializable]

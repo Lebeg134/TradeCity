@@ -13,6 +13,7 @@ namespace TradeCity.Engine.Missions
         {
             _resource = resource;
         }
+
         public object GetReward()
         {
             return _resource;

@@ -8,10 +8,12 @@ namespace TradeCity.Engine.Missions
     public class OwnableReward : IRewardable
     {
         private readonly IOwnable _ownable;
+
         public OwnableReward(IOwnable ownable)
         {
             _ownable = ownable;
         }
+
         public object GetReward()
         {
             return _ownable;

@@ -33,12 +33,12 @@ namespace TradeCity.Engine.Map
         {
             var subject = _structures[x, y];
             if (!subject.IsAuctionable())
-                throw new NotAuctionableException();
+                throw new InvalidOperationException();
 
             Auction newAuction = new((Land)subject, _defaultBid, _defaultTimePerRound, by);
             if (_liveAuctions.Contains(newAuction))
             {
-                throw new AuctionAlreadyExistsException();
+                throw new InvalidOperationException();
             }
 
             newAuction.OnFinish += OnAuctionFinished;
@@ -62,44 +62,6 @@ namespace TradeCity.Engine.Map
         {
             auction.OnFinish -= OnAuctionFinished;
             _liveAuctions.Remove(auction);
-        }
-    }
-    [Serializable]
-    internal class AuctionAlreadyExistsException : Exception
-    {
-        public AuctionAlreadyExistsException()
-        {
-        }
-
-        public AuctionAlreadyExistsException(string message) : base(message)
-        {
-        }
-
-        public AuctionAlreadyExistsException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected AuctionAlreadyExistsException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
-    }
-    [Serializable]
-    internal class NotAuctionableException : Exception
-    {
-        public NotAuctionableException()
-        {
-        }
-
-        public NotAuctionableException(string message) : base(message)
-        {
-        }
-
-        public NotAuctionableException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected NotAuctionableException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
         }
     }
 }

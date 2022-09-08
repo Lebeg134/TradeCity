@@ -7,10 +7,11 @@ namespace TradeCity.Engine.Production
     [Serializable]
     public abstract class DistributionStrategy : IDistributionStrategy
     {
-        public static List<IDistributionStrategy> GetAllStrategys()
+        public static List<IDistributionStrategy> GetAllStrategies()
         {
             return new List<IDistributionStrategy> { new EvenDistributionStrartegy() };
         }
+
         public static void DistributeDefault(Resource resource, List<Recipe> recipes)
         {
             foreach (var recipe in recipes)
@@ -19,10 +20,8 @@ namespace TradeCity.Engine.Production
             }
         }
 
-
         public abstract void Distribute(Resource resource, List<Recipe> recipes);
-
-
+        
         public abstract string GetName();
     }
 }

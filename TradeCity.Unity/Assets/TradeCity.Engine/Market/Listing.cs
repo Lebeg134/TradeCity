@@ -14,6 +14,7 @@ namespace TradeCity.Engine.Market
         public ISellable WantSellable { get; }
         public ISellable ForSellable { get; }
         public Player Poster { get; }
+
         private int _amount;
         private int _timeLeft;
 

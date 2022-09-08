@@ -7,7 +7,7 @@ namespace TradeCity.Engine.Missions
     [Serializable]
     public class Mission : ITickable
     {
-        //public event Action OnProgress;
+        public event Action OnProgress;
         public event Action OnAchievement;
         public event Action OnClaim;
 
@@ -41,12 +41,11 @@ namespace TradeCity.Engine.Missions
 
         public void Claim()
         {
-            if (_isAchieved)
-            {
-                _reward.Reward(_owner);
-                IsClaimed = true;
-                OnClaim?.Invoke();
-            }
+            if (!_isAchieved) return;
+
+            _reward.Reward(_owner);
+            IsClaimed = true;
+            OnClaim?.Invoke();
         }
         public void Accept(Player by)
         {
@@ -61,18 +60,14 @@ namespace TradeCity.Engine.Missions
             Clock.Instance.Register(this);
         }
 
-        public void Check()
+        private void Check()
         {
-            if (IsAccepted && !_isAchieved && _goal.IsAchieved())
-            {
-                _isAchieved = true;
-                OnAchievement?.Invoke();
-            }
+            if (!IsAccepted || _isAchieved || !_goal.IsAchieved()) return;
+
+            _isAchieved = true;
+            OnAchievement?.Invoke();
         }
 
-        public void Tick()
-        {
-            Check();
-        }
+        public void Tick() => Check();
     }
 }

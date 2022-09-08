@@ -10,25 +10,27 @@ namespace TradeCity.Engine.Missions
     {
         private readonly int _goal;
         private int _collected;
+
         public CollectResourceGoal(Resource resource, Player player = null) : base(resource, player)
         {
             _goal = resource.GetStock();
         }
+
         public override float CheckStatus()
         {
-            return LebegUtil.Clamp((float)_collected / _goal, 0, 1);
+            return Math.Clamp(_collected / _goal, 0, 1);
         }
+
         public override void OnResourceChange(Resource resource)
         {
-            if (resource.GetType() == _watched.GetType() && resource.GetStock() > 0)
-            {
-                _collected += resource.GetStock();
-                IsAchieved();
-            }
+            if (resource.GetType() != _watched.GetType() || resource.GetStock() <= 0) return;
+            _collected += resource.GetStock();
+            IsAchieved();
         }
+
         protected override string GetText()
         {
-            return string.Format("Collect {0} {1}!", _goal, _watched.GetName());
+            return $"Collect {_goal} {_watched.GetName()}!";
         }
     }
 }

@@ -16,29 +16,30 @@ namespace TradeCity.Engine.Missions
 
         protected abstract string GetText();
 
-        public ResourceGoalBase(Resource watched, Player player = null)
+        protected ResourceGoalBase(Resource watched, Player player = null)
         {
             _watched = watched;
             if (player != null)
                 Accept(player);
         }
+
         protected void InvokeOnAchieve()
         {
             OnAchieve?.Invoke();
         }
+
         public abstract float CheckStatus();
 
         public virtual bool IsAchieved()
         {
             if (_achieved) return true;
-            if (CheckStatus() >= 1)
-            {
-                _achieved = true;
-                OnAchieve?.Invoke();
-                return true;
-            }
-            return _achieved;
+            if (!(CheckStatus() >= 1)) return _achieved;
+
+            _achieved = true;
+            OnAchieve?.Invoke();
+            return true;
         }
+
         public abstract void OnResourceChange(Resource resource);
 
         public void RegisterToEvents()

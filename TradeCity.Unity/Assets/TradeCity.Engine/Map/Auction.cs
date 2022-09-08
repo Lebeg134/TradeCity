@@ -1,6 +1,7 @@
 #nullable enable
 using System;
 using System.Collections.Generic;
+using Injecter;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.TimeManager;

@@ -11,9 +11,6 @@ namespace TradeCity.Engine.Market
     public class Listing : ITickable, IComparer<Listing>
     {
         private static readonly int DefaultTime = 100;
-        public ISellable WantSellable { get; }
-        public ISellable ForSellable { get; }
-        public Player Poster { get; }
 
         private int _amount;
         private int _timeLeft;
@@ -27,6 +24,25 @@ namespace TradeCity.Engine.Market
             _timeLeft = DefaultTime;
         }
 
+        public ISellable WantSellable { get; }
+        public ISellable ForSellable { get; }
+        public Player Poster { get; }
+
+        public int Compare(Listing x, Listing y)
+        {
+            return x.Value().CompareTo(y.Value());
+        }
+
+        public void Tick()
+        {
+            if (--_timeLeft <= 0) Cancel();
+        }
+
+        public void Register()
+        {
+            throw new NotImplementedException();
+        }
+
         public int Complete(Player by, int number = -1)
         {
             if (number == -1)
@@ -34,7 +50,6 @@ namespace TradeCity.Engine.Market
             var count = 0;
             if (number <= 0 || Poster == by) return 0;
             for (; count <= number; count++)
-            {
                 try
                 {
                     by.SubRes((Resource)WantSellable);
@@ -44,7 +59,7 @@ namespace TradeCity.Engine.Market
                 {
                     break;
                 }
-            }
+
             return count;
         }
 
@@ -76,30 +91,13 @@ namespace TradeCity.Engine.Market
                     _amount = count;
                 }
             }
+
             return count;
         }
 
         public double Value()
         {
             return WantSellable.GetStock() / ForSellable.GetStock();
-        }
-
-        public void Tick()
-        {
-            if (--_timeLeft <= 0)
-            {
-                Cancel();
-            }
-        }
-
-        public void Register()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Compare(Listing x, Listing y)
-        {
-            return x.Value().CompareTo(y.Value());
         }
     }
 }

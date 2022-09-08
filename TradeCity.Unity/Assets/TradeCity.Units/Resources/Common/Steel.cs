@@ -6,13 +6,16 @@ namespace TradeCity.Units.Resources.Common
     [Serializable]
     public class Steel : StandardResource
     {
-        public Steel(int amount) : base(amount) { }
+        public Steel(int amount) : base(amount)
+        {
+        }
 
         public override string GetName()
         {
             return "Steel";
         }
-        public override string GetResourcepath()
+
+        public override string GetResourcePath()
         {
             return BasePath() + "i-beam";
         }
@@ -27,5 +30,4 @@ namespace TradeCity.Units.Resources.Common
             return 45;
         }
     }
-
 }

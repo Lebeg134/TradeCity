@@ -13,10 +13,12 @@ namespace TradeCity.Units.Structures.Lands
         {
             return "Iron Mine";
         }
+
         public override string GetResourcepath()
         {
             return GetBasePath() + "IronMine";
         }
+
         public override Land GetNew()
         {
             return new IronMine();
@@ -32,5 +34,4 @@ namespace TradeCity.Units.Structures.Lands
             return new List<Resource> { new Money(100 * level + 250) };
         }
     }
-
 }

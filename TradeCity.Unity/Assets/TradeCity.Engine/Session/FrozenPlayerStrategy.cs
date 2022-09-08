@@ -4,24 +4,31 @@ namespace TradeCity.Engine.Session
     {
         public class FrozenPlayerStrategy : PlayerStrategyBase
         {
-            public FrozenPlayerStrategy(Player subject) : base(subject) { }
-            override public void Freeze()
+            public FrozenPlayerStrategy(Player subject) : base(subject)
+            {
+            }
+
+            public override void Freeze()
             {
                 // Do nothing, already frozen
             }
-            override public void GoBankrupt()
+
+            public override void GoBankrupt()
             {
                 // Frozen player can't go bankrupt
             }
-            override public bool IsFrozen()
+
+            public override bool IsFrozen()
             {
                 return true;
             }
-            override public void Tick()
+
+            public override void Tick()
             {
                 // Do nothing, player is frozen
             }
-            override public void UnFreeze(IPlayerStrategy newStrategy)
+
+            public override void UnFreeze(IPlayerStrategy newStrategy)
             {
                 _player._playerStrategy = newStrategy;
             }

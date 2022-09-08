@@ -3,10 +3,14 @@ using System;
 namespace TradeCity.Engine.Resources
 {
     [Serializable]
-    public abstract class ContinousResource : Resource
+    public abstract class ContinuousResource : Resource
     {
         private readonly BufferResource _buffer = new();
-        public ContinousResource(int amount) : base(amount) { }
+
+        protected ContinuousResource(int amount) : base(amount)
+        {
+        }
+
         public int Buffer => _buffer.GetStock();
 
         public override Resource Gain(int amount)
@@ -20,14 +24,19 @@ namespace TradeCity.Engine.Resources
             _stock = _buffer.GetStock();
             _buffer.Clear();
         }
+
         public override void Tick()
         {
             LoadBuffer();
         }
+
         [Serializable]
         internal class BufferResource : Resource
         {
-            public BufferResource(int amount = 0) : base(amount) { }
+            public BufferResource(int amount = 0) : base(amount)
+            {
+            }
+
             public override string GetName()
             {
                 return "BufferResource";
@@ -37,6 +46,7 @@ namespace TradeCity.Engine.Resources
             {
                 return new BufferResource(amount);
             }
+
             public void Clear()
             {
                 _stock = 0;

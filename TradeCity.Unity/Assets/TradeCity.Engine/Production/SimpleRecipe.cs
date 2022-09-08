@@ -10,7 +10,7 @@ namespace TradeCity.Engine.Production
 
 
         /// <summary>
-        /// Constructor of simple custom recipes where the two Resources define the ratio between conversion
+        ///     Constructor of simple custom recipes where the two Resources define the ratio between conversion
         /// </summary>
         /// <param name="from">Input requirement of the Recipe</param>
         /// <param name="to">Output of the recipe</param>
@@ -21,8 +21,8 @@ namespace TradeCity.Engine.Production
             _input.Add(from.GetNewResource(0));
             _to = to;
             _output.Add(to.GetNewResource(0));
-
         }
+
         public override int AddResource(Resource resource)
         {
             if (resource.GetType() != _from.GetType()) return 0;
@@ -31,7 +31,6 @@ namespace TradeCity.Engine.Production
                 subtract = resource.GetStock();
             Resource.Transfer(_input, resource, subtract);
             return subtract;
-
         }
 
         protected override void Process()

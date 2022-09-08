@@ -10,11 +10,11 @@ namespace TradeCity.Engine.Structures
     [Serializable]
     public abstract class Building : CommonStructure, IOwnable, IBuilding
     {
-        // ========== Public events
-        public event Action<Building> OnBuild;
-
         // ========== Attributes
         protected List<Recipe> _recipes = new();
+
+        // ========== Public events
+        public event Action<Building> OnBuild;
 
         // ========== Properties
         public BuildingState BuildingState
@@ -27,6 +27,7 @@ namespace TradeCity.Engine.Structures
                 throw new Exception("Illegal building state");
             }
         }
+
         public List<Recipe> Recipes => _recipes;
 
         // ========== Interface Implementations
@@ -45,27 +46,33 @@ namespace TradeCity.Engine.Structures
                     InvokeOnMaxLevelReached();
             }
         }
+
         public bool CanBuild(Player by)
         {
             if (BuildingState != BuildingState.Build) return false;
             return CheckCriteria(by);
         }
+
         public virtual List<Resource> GetUpkeep()
         {
             return GetUpkeep(_level);
         }
+
         public virtual List<Resource> GetCost()
         {
             return GetCost(_level);
         }
+
         public virtual List<IOwnable> GetCriteria()
         {
             return GetCriteria(_level);
         }
+
         public void PutResources(List<Resource> resources)
         {
             throw new NotImplementedException();
         }
+
         public virtual List<Resource> GetProduce()
         {
             throw new NotImplementedException();
@@ -97,7 +104,8 @@ namespace TradeCity.Engine.Structures
         {
             return new List<Resource>();
         }
-        override protected string GetBasePath()
+
+        protected override string GetBasePath()
         {
             return base.GetBasePath() + "Building/";
         }

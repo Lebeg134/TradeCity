@@ -9,18 +9,15 @@ namespace TradeCity.Engine.Structures
     [Serializable]
     public abstract class CommonStructure : Structure, IOwnable, IUpgradeable
     {
-        // ========== Public events
-        public event Action<Structure> OnUpgrade;
-        public event Action<Structure> OnMaxLevelReached;
+        protected int _level;
 
         // ========== Attributes
         protected Player _owner;
-        protected int _level;
+        public int Level => _level;
+        public int MaxLevel => GetMaxLevel();
 
         // ========== Properties
         public Player Owner => _owner;
-        public int Level => _level;
-        public int MaxLevel => GetMaxLevel();
 
         // ========== Interface Implementations
         public virtual void Acquire(Player by)
@@ -28,6 +25,11 @@ namespace TradeCity.Engine.Structures
             //Possibility to transfer ownership?, can implement later if needed
             _owner = by;
         }
+
+        // ========== Public events
+        public event Action<Structure> OnUpgrade;
+        public event Action<Structure> OnMaxLevelReached;
+
         public virtual void Upgrade()
         {
             if (CanUpgrade())
@@ -39,22 +41,27 @@ namespace TradeCity.Engine.Structures
                     OnMaxLevelReached?.Invoke(this);
             }
         }
+
         public bool CanUpgrade()
         {
             if (_level >= MaxLevel) return false;
             return CheckCriteria(_owner, _level);
         }
+
         // ========== Internal Methods
         protected abstract int GetMaxLevel();
         protected abstract List<Resource> GetCost(int level);
+
         protected virtual List<IOwnable> GetCriteria(int level)
         {
             return new List<IOwnable>();
         }
+
         protected virtual bool CheckCriteria(Player by, int level = 0)
         {
             return by.CheckResources(GetCost(level)) && by.CheckStructures(GetCriteria(level));
         }
+
         protected void InvokeOnMaxLevelReached()
         {
             OnMaxLevelReached?.Invoke(this);

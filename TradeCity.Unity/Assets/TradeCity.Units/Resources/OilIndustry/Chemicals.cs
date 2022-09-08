@@ -6,15 +6,20 @@ namespace TradeCity.Units.Resources.OilIndustry
     [Serializable]
     public class Chemicals : StandardResource
     {
-        public Chemicals(int amount) : base(amount) { }
+        public Chemicals(int amount) : base(amount)
+        {
+        }
+
         public override string GetName()
         {
             return "Chemicals";
         }
-        public override string GetResourcepath()
+
+        public override string GetResourcePath()
         {
             return BasePath() + "chemical-drop";
         }
+
         public override Resource GetNewResource(int amount)
         {
             return new Chemicals(amount);
@@ -25,5 +30,4 @@ namespace TradeCity.Units.Resources.OilIndustry
             return 18.75;
         }
     }
-
 }

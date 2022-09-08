@@ -16,11 +16,13 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
         {
             Recipes.Add(new SimpleRecipe(new Stone(3), new Bricks(1), 10));
         }
+
         public override void Upgrade()
         {
             base.Upgrade();
             Recipes[0].Limit += _level * 5 + 5;
         }
+
         public override Branches GetBranch()
         {
             return Branches.Construction;
@@ -41,5 +43,4 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
             return 10;
         }
     }
-
 }

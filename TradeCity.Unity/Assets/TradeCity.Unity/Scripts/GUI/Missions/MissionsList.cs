@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.GUI.Missions
 {
-    class MissionsList : SimpleList<Mission>
+    internal class MissionsList : SimpleList<Mission>
     {
         protected override ICollection<Mission> GetCollection()
         {

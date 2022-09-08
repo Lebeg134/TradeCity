@@ -7,5 +7,4 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
     public class InsulationFactory
     {
     }
-
 }

@@ -18,6 +18,7 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
         {
             Recipes.Add(new ManyToOneRecipe(new List<Resource> { new Water(1), new Sand(5) }, new Concrete(3), 5));
         }
+
         public override List<IOwnable> GetCriteria()
         {
             return new List<IOwnable>();
@@ -55,5 +56,4 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
             return new List<Resource> { new Concrete(50 + 50 * level), new Workforce(10) };
         }
     }
-
 }

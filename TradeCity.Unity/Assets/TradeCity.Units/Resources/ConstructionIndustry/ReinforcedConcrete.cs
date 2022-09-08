@@ -6,15 +6,20 @@ namespace TradeCity.Units.Resources.ConstructionIndustry
     [Serializable]
     public class ReinforcedConcrete : StandardResource
     {
-        public ReinforcedConcrete(int amount) : base(amount) { }
+        public ReinforcedConcrete(int amount) : base(amount)
+        {
+        }
+
         public override string GetName()
         {
             return "Reinforced Concrete";
         }
-        public override string GetResourcepath()
+
+        public override string GetResourcePath()
         {
             return BasePath() + "bunker";
         }
+
         public override Resource GetNewResource(int amount)
         {
             return new ReinforcedConcrete(amount);
@@ -25,5 +30,4 @@ namespace TradeCity.Units.Resources.ConstructionIndustry
             return 16.125;
         }
     }
-
 }

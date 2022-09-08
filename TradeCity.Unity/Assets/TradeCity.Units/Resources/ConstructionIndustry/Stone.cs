@@ -6,12 +6,16 @@ namespace TradeCity.Units.Resources.ConstructionIndustry
     [Serializable]
     public class Stone : StandardResource
     {
-        public Stone(int amount) : base(amount) { }
+        public Stone(int amount) : base(amount)
+        {
+        }
+
         public override string GetName()
         {
             return "Stone";
         }
-        public override string GetResourcepath()
+
+        public override string GetResourcePath()
         {
             return BasePath() + "stone-block";
         }
@@ -26,5 +30,4 @@ namespace TradeCity.Units.Resources.ConstructionIndustry
             return 2;
         }
     }
-
 }

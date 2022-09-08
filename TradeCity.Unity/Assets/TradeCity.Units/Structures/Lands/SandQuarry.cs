@@ -14,10 +14,12 @@ namespace TradeCity.Units.Structures.Lands
         {
             return "Sand Quarry";
         }
+
         public override string GetResourcepath()
         {
             return GetBasePath() + "SandQuarry";
         }
+
         public override Land GetNew()
         {
             return new SandQuarry();

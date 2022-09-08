@@ -10,5 +10,4 @@ namespace TradeCity.Engine.Structures.Interfaces
         void PutResources(List<Resource> resources);
         List<Resource> GetProduce();
     }
-
 }

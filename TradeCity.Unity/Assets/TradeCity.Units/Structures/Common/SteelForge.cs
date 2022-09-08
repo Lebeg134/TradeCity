@@ -13,14 +13,17 @@ namespace TradeCity.Units.Structures.Common
     [Serializable]
     public class SteelForge : Building
     {
-        protected static List<Resource>[] GetCostArray => new[]{
-                    new List<Resource> { new Wood(100), new Workforce(50) }, //Build cost
-                    new List<Resource> { new Steel(100), new Workforce(25) }
-                };
         public SteelForge()
         {
             _recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(1), new Iron(2) }, new Steel(1), 5));
         }
+
+        protected static List<Resource>[] GetCostArray => new[]
+        {
+            new List<Resource> { new Wood(100), new Workforce(50) }, //Build cost
+            new List<Resource> { new Steel(100), new Workforce(25) }
+        };
+
         public override void Upgrade()
         {
             base.Upgrade();
@@ -31,10 +34,12 @@ namespace TradeCity.Units.Structures.Common
         {
             return "Steel Forge";
         }
+
         public override string GetResourcepath()
         {
             return GetBasePath() + "steel_forge";
         }
+
         public override Branches GetBranch()
         {
             return Branches.Common;
@@ -55,5 +60,4 @@ namespace TradeCity.Units.Structures.Common
             return 2;
         }
     }
-
 }

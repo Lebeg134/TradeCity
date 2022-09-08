@@ -7,14 +7,9 @@ namespace TradeCity.Engine.Missions
     [Serializable]
     public abstract class ResourceGoalBase : IAchievable
     {
-        public event Action OnAchieve;
-        protected Resource _watched;
-        protected Player _player;
         private bool _achieved;
-
-        public string Text => GetText();
-
-        protected abstract string GetText();
+        protected Player _player;
+        protected Resource _watched;
 
         protected ResourceGoalBase(Resource watched, Player player = null)
         {
@@ -23,10 +18,9 @@ namespace TradeCity.Engine.Missions
                 Accept(player);
         }
 
-        protected void InvokeOnAchieve()
-        {
-            OnAchieve?.Invoke();
-        }
+        public event Action OnAchieve;
+
+        public string Text => GetText();
 
         public abstract float CheckStatus();
 
@@ -40,8 +34,6 @@ namespace TradeCity.Engine.Missions
             return true;
         }
 
-        public abstract void OnResourceChange(Resource resource);
-
         public void RegisterToEvents()
         {
             _player.OnResourceChange += OnResourceChange;
@@ -52,5 +44,14 @@ namespace TradeCity.Engine.Missions
             _player = by;
             RegisterToEvents();
         }
+
+        protected abstract string GetText();
+
+        protected void InvokeOnAchieve()
+        {
+            OnAchieve?.Invoke();
+        }
+
+        public abstract void OnResourceChange(Resource resource);
     }
 }

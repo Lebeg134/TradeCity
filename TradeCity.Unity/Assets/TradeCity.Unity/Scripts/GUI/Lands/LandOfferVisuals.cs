@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Units.Resources.Common;
-using TradeCity.Unity.Scripts.GUI.ResourceDispalys;
+using TradeCity.Unity.Scripts.GUI.ResourceDisplays;
 using TradeCity.Unity.Scripts.GUI.VisualUpdaters;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,17 +13,17 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
     public class LandOfferVisuals : MonoBehaviour
     {
 
-        private string[] options = GetOptions();
-        [Dropdown("options")]
-        public string target;
+        private readonly string[] _options = GetOptions();
+        [Dropdown("_options")]
+        [SerializeField] private string _target;
 
-        [SerializeField] private Image sprite;
-        [SerializeField] private Text buildingName;
-        [SerializeField] private Button buildButton;
-        [SerializeField] private GameObject costDisplay;
+        [SerializeField] private Image _sprite = default!;
+        [SerializeField] private Text _buildingName = default!;
+        [SerializeField] private Button _buildButton = default!;
+        [SerializeField] private GameObject _costDisplay = default!;
 
-        public Land watched;
-        public int price = 1000;
+        public Land Watched;
+        public int Price = 1000;
         private static string[] GetOptions()
         {
 
@@ -38,37 +38,37 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
 
         private void Awake()
         {
-            this.CheckSerializedField(sprite, nameof(sprite));
-            this.CheckSerializedField(buildingName, nameof(buildingName));
-            this.CheckSerializedField(buildButton, nameof(buildButton));
-            this.CheckSerializedField(costDisplay, nameof(costDisplay));
+            this.CheckSerializedField(_sprite, nameof(_sprite));
+            this.CheckSerializedField(_buildingName, nameof(_buildingName));
+            this.CheckSerializedField(_buildButton, nameof(_buildButton));
+            this.CheckSerializedField(_costDisplay, nameof(_costDisplay));
         }
         private void Start()
         {
-            if (watched == null)
+            if (Watched == null)
             {
-                watched = ConvertStringToLand(target);
+                Watched = ConvertStringToLand(_target);
             }
-            buildingName.text = watched.GetName();
-            costDisplay.GetComponent<ResourceDisplay>().Watched = new Money(price);
+            _buildingName.text = Watched.GetName();
+            _costDisplay.GetComponent<ResourceDisplay>().Watched = new Money(Price);
 
-            var loadedSprite = Resources.Load<Sprite>(watched.GetResourcepath());
+            Sprite loadedSprite = Resources.Load<Sprite>(Watched.GetResourcepath());
             if (loadedSprite != null)
-                sprite.sprite = loadedSprite;
+                _sprite.sprite = loadedSprite;
 
-            buildButton.onClick.AddListener(() => OnClick());
+            _buildButton.onClick.AddListener(() => OnClick());
 
         }
 
         private void OnClick()
         {
-            if (Player.CurrentPlayer.CheckResource(new Money(price)))
+            if (Player.CurrentPlayer.CheckResource(new Money(Price)))
             {
-                Player.CurrentPlayer.SubRes(new Money(price));
-                Player.CurrentPlayer.GiveStructure(watched);
-                Session.Instance.Offers.Remove(watched);
-                int newPrice = price * 2;
-                Session.Instance.Offers.Add(watched.GetNew(), newPrice);
+                Player.CurrentPlayer.SubRes(new Money(Price));
+                Player.CurrentPlayer.GiveStructure(Watched);
+                Session.Instance.Offers.Remove(Watched);
+                int newPrice = Price * 2;
+                Session.Instance.Offers.Add(Watched.GetNew(), newPrice);
                 gameObject.GetComponentInParent<AvailableLandsList>().Refresh();
                 gameObject.GetComponentInParent<VisualUpdater>().VisualUpdate();
             }
@@ -76,7 +76,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
 
         private void Update()
         {
-            buildButton.interactable = Player.CurrentPlayer.CheckResource(new Money(price));
+            _buildButton.interactable = Player.CurrentPlayer.CheckResource(new Money(Price));
         }
         private Land ConvertStringToLand(string name)
         {

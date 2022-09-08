@@ -14,6 +14,7 @@ namespace TradeCity.Units.Structures.Lands
         {
             return "Oil Field";
         }
+
         public override string GetResourcepath()
         {
             return GetBasePath() + "OilField";
@@ -34,5 +35,4 @@ namespace TradeCity.Units.Structures.Lands
             return new List<Resource> { new Money(100 * level) };
         }
     }
-
 }

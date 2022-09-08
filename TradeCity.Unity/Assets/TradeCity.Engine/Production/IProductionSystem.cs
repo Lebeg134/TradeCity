@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TradeCity.Engine.Structures.Interfaces;
 
 namespace TradeCity.Engine.Production

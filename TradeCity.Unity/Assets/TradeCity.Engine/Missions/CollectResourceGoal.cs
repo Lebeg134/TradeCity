@@ -1,7 +1,6 @@
 ﻿using System;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
-using TradeCity.Engine.Utilities;
 
 namespace TradeCity.Engine.Missions
 {

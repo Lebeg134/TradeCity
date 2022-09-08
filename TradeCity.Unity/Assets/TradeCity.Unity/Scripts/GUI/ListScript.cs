@@ -1,6 +1,6 @@
+using AutSoft.UnitySupplements.Vitamins;
 using System.Collections.Generic;
 using UnityEngine;
-using AutSoft.UnitySupplements.Vitamins;
 
 namespace TradeCity.Unity.Scripts.GUI
 {
@@ -12,13 +12,13 @@ namespace TradeCity.Unity.Scripts.GUI
     /// <typeparam name="Collection"> Type of collection that is to be handled</typeparam>
     public abstract class SimpleList<T> : MonoBehaviour
     {
-        [SerializeField] protected GameObject ListItem;
-        [SerializeField] protected GameObject Content;
+        [SerializeField] protected GameObject _listItem;
+        [SerializeField] protected GameObject _content;
 
         protected virtual void Awake()
         {
-            this.CheckSerializedField(ListItem, nameof(ListItem));
-            this.CheckSerializedField(Content, nameof(Content));
+            this.CheckSerializedField(_listItem, nameof(_listItem));
+            this.CheckSerializedField(_content, nameof(_content));
         }
 
         /// <summary>
@@ -37,9 +37,9 @@ namespace TradeCity.Unity.Scripts.GUI
         {
             foreach (T item in GetCollection())
             {
-                GameObject newListItem = Instantiate(ListItem);
+                GameObject newListItem = Instantiate(_listItem);
                 ProcessListItem(item, newListItem);
-                newListItem.transform.SetParent(Content.transform);
+                newListItem.transform.SetParent(_content.transform);
             }
         }
 
@@ -48,7 +48,7 @@ namespace TradeCity.Unity.Scripts.GUI
         /// </summary>
         protected void Clear()
         {
-            foreach (Transform child in Content.transform)
+            foreach (Transform child in _content.transform)
             {
                 Destroy(child.gameObject);
             }

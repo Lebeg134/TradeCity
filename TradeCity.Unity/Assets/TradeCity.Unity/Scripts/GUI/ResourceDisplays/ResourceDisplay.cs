@@ -1,21 +1,21 @@
+using AutSoft.UnitySupplements.Vitamins;
 using System.Collections.Generic;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
 using UnityEngine;
 using UnityEngine.UI;
-using AutSoft.UnitySupplements.Vitamins;
 
-namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
+namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
 {
     public class ResourceDisplay : MonoBehaviour
     {
-        [SerializeField] protected Text display;
-        [SerializeField] protected Text resName;
-        [SerializeField] protected Image icon;
+        [SerializeField] protected Text _display = default!;
+        [SerializeField] protected Text _resName = default!;
+        [SerializeField] protected Image _icon = default!;
 
-        private readonly string[] options = GetOptions().ToArray();
+        private readonly string[] _options = GetOptions().ToArray();
         [Dropdown("options")]
-        public string resource;
+        public string Resource;
 
         private Resource _watched;
         public Resource Watched
@@ -27,18 +27,18 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
                 OnWatchedChanged();
             }
         }
-        
+
         protected virtual void Awake()
         {
-            this.CheckSerializedField(display, nameof(display));
-            this.CheckSerializedField(resName, nameof(resName));
-            this.CheckSerializedField(icon, nameof(icon));
+            this.CheckSerializedField(_display, nameof(_display));
+            this.CheckSerializedField(_resName, nameof(_resName));
+            this.CheckSerializedField(_icon, nameof(_icon));
         }
 
         protected virtual void Start()
         {
             if (Watched == null)
-                Watched = ConvertToRes(resource);
+                Watched = ConvertToRes(Resource);
             UpdateVisuals();
         }
 
@@ -55,16 +55,16 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
         protected virtual void UpdateVisuals()
         {
             if (Watched == null) return;
-            resName.text = Watched.GetName();
-            display.text = Watched.GetStock().ToString();
+            _resName.text = Watched.GetName();
+            _display.text = Watched.GetStock().ToString();
             LoadSprite();
         }
 
         protected void LoadSprite()
         {
-            var loadedSprite = Resources.Load<Sprite>(Watched.GetResourcepath());
+            Sprite loadedSprite = Resources.Load<Sprite>(Watched.GetResourcePath());
             if (loadedSprite != null)
-                icon.sprite = loadedSprite;
+                _icon.sprite = loadedSprite;
         }
 
         public static List<string> GetOptions()

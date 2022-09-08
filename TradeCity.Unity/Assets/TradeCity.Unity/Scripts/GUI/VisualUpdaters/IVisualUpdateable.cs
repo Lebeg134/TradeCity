@@ -1,6 +1,6 @@
 ﻿namespace TradeCity.Unity.Scripts.GUI.VisualUpdaters
 {
-    interface IVisualUpdateable
+    internal interface IVisualUpdateable
     {
         void VisualUpdate();
     }

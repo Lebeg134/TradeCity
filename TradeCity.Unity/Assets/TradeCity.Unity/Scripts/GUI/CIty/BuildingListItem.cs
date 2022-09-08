@@ -1,11 +1,11 @@
+using AutSoft.UnitySupplements.Vitamins;
 using System.Collections.Generic;
 using System.Linq;
-using AutSoft.UnitySupplements.Vitamins;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.Structures.Interfaces;
-using TradeCity.Unity.Scripts.GUI.ResourceDispalys;
+using TradeCity.Unity.Scripts.GUI.ResourceDisplays;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +13,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 {
     public class BuildingListItem : MonoBehaviour
     {
-        private string[] _options = GetOptions();
+        private readonly string[] _options = GetOptions();
         [Dropdown("_options")]
         public string Building = default!;
         [SerializeField] private Image _buildingImage = default!;
@@ -22,7 +22,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
         [SerializeField] private Text _levelText = default!;
         [SerializeField] private HorizontalLayoutGroup _costsList = default!;
         [SerializeField] private GameObject _costDisplayPrefab = default!;
-        
+
         private Building _target;
 
         private void Awake()
@@ -41,7 +41,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
             _buildingName.text = _target.GetName();
 
-            var loadedSprite = Resources.Load<Sprite>(_target.GetResourcepath());
+            Sprite loadedSprite = Resources.Load<Sprite>(_target.GetResourcepath());
             if (loadedSprite != null)
                 _buildingImage.sprite = loadedSprite;
 
@@ -50,7 +50,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             UpdateCostDisplay();
             _buildButton.onClick.AddListener(OnClick);
         }
-        
+
         private void Update()
         {
             UpdateButton();
@@ -121,7 +121,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
         private static string[] GetOptions()
         {
-            var buildingList = SessionGenerator.GetAllBuildings();
+            IEnumerable<Building> buildingList = SessionGenerator.GetAllBuildings();
             return buildingList.Select(building => building.GetName()).ToArray();
         }
 

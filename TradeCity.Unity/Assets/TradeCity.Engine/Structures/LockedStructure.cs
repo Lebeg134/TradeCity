@@ -13,19 +13,23 @@ namespace TradeCity.Engine.Structures
             subject.Off();
             _subject = subject;
         }
+
         public static LockedStructure Wrap(Structure subject)
         {
             return new LockedStructure(subject);
         }
+
         public Structure Unwrap()
         {
             _subject.On();
             return _subject;
         }
+
         public override void On()
         {
             //Do nothing
         }
+
         public override void Off()
         {
             //Do nothing
@@ -41,5 +45,4 @@ namespace TradeCity.Engine.Structures
             throw new NotImplementedException();
         }
     }
-
 }

@@ -6,28 +6,28 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
 {
     public class MissionButton : MonoBehaviour
     {
-        [SerializeField] private ScrollRect scrollView;
-        [SerializeField] private Button missionButton;
+        [SerializeField] private ScrollRect _scrollView = default!;
+        [SerializeField] private Button _missionButton = default!;
 
-        private bool isShown = false;
+        private bool _isShown = false;
 
         private void Awake()
         {
-            this.CheckSerializedField(scrollView, nameof(scrollView));
-            this.CheckSerializedField(missionButton, nameof(missionButton));
+            this.CheckSerializedField(_scrollView, nameof(_scrollView));
+            this.CheckSerializedField(_missionButton, nameof(_missionButton));
 
-            missionButton.onClick.AddListener(OnClick);
+            _missionButton.onClick.AddListener(OnClick);
         }
 
         private void OnDestroy()
         {
-            missionButton.onClick.RemoveListener(OnClick);
+            _missionButton.onClick.RemoveListener(OnClick);
         }
 
         private void OnClick()
         {
-            isShown = !isShown;
-            scrollView.gameObject.SetActive(isShown);
+            _isShown = !_isShown;
+            _scrollView.gameObject.SetActive(_isShown);
         }
     }
 }

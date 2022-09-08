@@ -1,54 +1,60 @@
+using AutSoft.UnitySupplements.Vitamins;
 using TradeCity.Engine.TimeManager;
 using UnityEngine;
 using UnityEngine.UI;
-using AutSoft.UnitySupplements.Vitamins;
 
 namespace TradeCity.Unity.Scripts.GUI
 {
     public class TimeControlButton : MonoBehaviour
     {
-        [SerializeField] private Sprite play;
-        [SerializeField] private Sprite pause;
-        [SerializeField] private Image icon;
-        [SerializeField] private Button button;
-        [SerializeField] private Color playColor;
-        [SerializeField] private Color pauseColor;
-        private Clock clock;
+        [SerializeField] private Sprite _play;
+        [SerializeField] private Sprite _pause;
+        [SerializeField] private Image _icon;
+        [SerializeField] private Button _button;
+        [SerializeField] private Color _playColor;
+        [SerializeField] private Color _pauseColor;
+        private Clock _clock;
 
         private void Awake()
         {
-            this.CheckSerializedField(play, nameof(play));
-            this.CheckSerializedField(pause, nameof(pause));
-            this.CheckSerializedField(icon, nameof(icon));
-            this.CheckSerializedField(button, nameof(button));
+            this.CheckSerializedField(_play, nameof(_play));
+            this.CheckSerializedField(_pause, nameof(_pause));
+            this.CheckSerializedField(_icon, nameof(_icon));
+            this.CheckSerializedField(_button, nameof(_button));
         }
 
         private void Start()
         {
-            clock = Clock.Instance;
-            button.onClick.AddListener(Toggle);
+            _clock = Clock.Instance;
+            _button.onClick.AddListener(Toggle);
         }
 
         private void OnDestroy()
         {
-            button.onClick.RemoveListener(Toggle);
+            _button.onClick.RemoveListener(Toggle);
         }
 
-        private void Update() => UpdateVisuals();
+        private void Update()
+        {
+            UpdateVisuals();
+        }
 
-        private void Toggle() => clock.Toggle();
+        private void Toggle()
+        {
+            _clock.Toggle();
+        }
 
         private void UpdateVisuals()
         {
-            if (clock.IsEnabled())
+            if (_clock.IsEnabled())
             {
-                icon.sprite = pause;
-                button.image.color = pauseColor;
+                _icon.sprite = _pause;
+                _button.image.color = _pauseColor;
             }
             else
             {
-                icon.sprite = play;
-                button.image.color = playColor;
+                _icon.sprite = _play;
+                _button.image.color = _playColor;
             }
         }
     }

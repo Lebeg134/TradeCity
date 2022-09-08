@@ -9,18 +9,18 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
 {
     public class ContinueButton : MonoBehaviour
     {
-        [SerializeField] private Button button;
+        [SerializeField] private Button _button = default!;
 
         private void Awake()
         {
-            this.CheckSerializedField(button, nameof(button));
+            this.CheckSerializedField(_button, nameof(_button));
         }
 
         private void Start()
         {
-            button = GetComponent<Button>();
+            _button = GetComponent<Button>();
             UpdateVisuals();
-            button.onClick.AddListener(() => OnClick());
+            _button.onClick.AddListener(() => OnClick());
         }
 
         private void OnClick()
@@ -33,15 +33,18 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
             }
             catch (Exception)
             {
-                button.interactable = false;
+                _button.interactable = false;
             }
         }
 
-        void Update() => UpdateVisuals();
-
-        void UpdateVisuals()
+        private void Update()
         {
-            button.interactable = Session.SaveExists();
+            UpdateVisuals();
+        }
+
+        private void UpdateVisuals()
+        {
+            _button.interactable = Session.SaveExists();
         }
     }
 }

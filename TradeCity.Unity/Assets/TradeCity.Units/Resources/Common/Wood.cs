@@ -6,13 +6,16 @@ namespace TradeCity.Units.Resources.Common
     [Serializable]
     public class Wood : StandardResource
     {
-        public Wood(int amount) : base(amount) { }
+        public Wood(int amount) : base(amount)
+        {
+        }
 
         public override string GetName()
         {
             return "Wood";
         }
-        public override string GetResourcepath()
+
+        public override string GetResourcePath()
         {
             return BasePath() + "log";
         }
@@ -27,5 +30,4 @@ namespace TradeCity.Units.Resources.Common
             return 5;
         }
     }
-
 }

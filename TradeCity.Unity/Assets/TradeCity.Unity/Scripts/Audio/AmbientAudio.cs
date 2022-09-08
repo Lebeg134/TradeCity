@@ -34,13 +34,13 @@ namespace TradeCity.Unity.Scripts.Audio
         {
             switch (activeScreen)
             {
-                case ActiveScreen.CITY:
+                case ActiveScreen.City:
                     _audioSource.clip = _cityAmbient;
                     break;
-                case ActiveScreen.MAP:
+                case ActiveScreen.Map:
                     _audioSource.clip = _mapAmbient;
                     break;
-                case ActiveScreen.MARKET:
+                case ActiveScreen.Market:
                     _audioSource.clip = _marketAmbient;
                     break;
 

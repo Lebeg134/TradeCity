@@ -6,13 +6,16 @@ namespace TradeCity.Units.Resources.Common
     [Serializable]
     public class Money : StandardResource
     {
-        public Money(int amount) : base(amount) { }
+        public Money(int amount) : base(amount)
+        {
+        }
 
         public override string GetName()
         {
             return "Money";
         }
-        public override string GetResourcepath()
+
+        public override string GetResourcePath()
         {
             return BasePath() + "money-stack";
         }

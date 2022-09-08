@@ -6,12 +6,16 @@ namespace TradeCity.Units.Resources.ConstructionIndustry
     [Serializable]
     public class Bricks : StandardResource
     {
-        public Bricks(int amount) : base(amount) { }
+        public Bricks(int amount) : base(amount)
+        {
+        }
+
         public override string GetName()
         {
             return "Bricks";
         }
-        public override string GetResourcepath()
+
+        public override string GetResourcePath()
         {
             return BasePath() + "brick-pile";
         }
@@ -26,5 +30,4 @@ namespace TradeCity.Units.Resources.ConstructionIndustry
             return 18.75;
         }
     }
-
 }

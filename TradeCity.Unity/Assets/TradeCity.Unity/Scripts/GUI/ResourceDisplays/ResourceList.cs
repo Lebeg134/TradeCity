@@ -3,7 +3,7 @@ using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
 using UnityEngine;
 
-namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
+namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
 {
     public class ResourceList : SimpleList<Resource>
     {
@@ -27,7 +27,7 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDispalys
 
         protected override void ProcessListItem(Resource item, GameObject newListItem)
         {
-            newListItem.GetComponent<ResourceDisplay>().resource = item.GetName();
+            newListItem.GetComponent<ResourceDisplay>().Resource = item.GetName();
         }
     }
 }

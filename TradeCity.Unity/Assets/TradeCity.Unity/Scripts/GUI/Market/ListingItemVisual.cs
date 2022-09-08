@@ -1,7 +1,7 @@
 using AutSoft.UnitySupplements.Vitamins;
 using TradeCity.Engine.Market;
 using TradeCity.Units.Resources.Common;
-using TradeCity.Unity.Scripts.GUI.ResourceDispalys;
+using TradeCity.Unity.Scripts.GUI.ResourceDisplays;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,37 +9,37 @@ namespace TradeCity.Unity.Scripts.GUI.Market
 {
     public class ListingItemVisual : MonoBehaviour
     {
-        [SerializeField] private ResourceDisplay ListingSubject = default!;
-        [SerializeField] private ResourceDisplay MoneyDisplay = default!;
-        [SerializeField] private ResourceDisplay AboveDisplay = default!;
-        [SerializeField] private Button CancelButton = default!;
+        [SerializeField] private ResourceDisplay _listingSubject = default!;
+        [SerializeField] private ResourceDisplay _moneyDisplay = default!;
+        [SerializeField] private ResourceDisplay _aboveDisplay = default!;
+        [SerializeField] private Button _cancelButton = default!;
 
-        public SpListing watched;
+        public SpListing Watched;
 
         private void Awake()
         {
-            this.CheckSerializedField(ListingSubject, nameof(ListingSubject));
-            this.CheckSerializedField(MoneyDisplay, nameof(MoneyDisplay));
-            this.CheckSerializedField(AboveDisplay, nameof(AboveDisplay));
+            this.CheckSerializedField(_listingSubject, nameof(_listingSubject));
+            this.CheckSerializedField(_moneyDisplay, nameof(_moneyDisplay));
+            this.CheckSerializedField(_aboveDisplay, nameof(_aboveDisplay));
 
-            CancelButton.onClick.AddListener(OnClick);
+            _cancelButton.onClick.AddListener(OnClick);
         }
 
         private void Start()
         {
-            ListingSubject.Watched = watched.Sell;
-            MoneyDisplay.Watched = new Money(watched.GetValue());
-            AboveDisplay.Watched = watched.Sell.GetNewResource(watched.Above);
+            _listingSubject.Watched = Watched.Sell;
+            _moneyDisplay.Watched = new Money(Watched.GetValue());
+            _aboveDisplay.Watched = Watched.Sell.GetNewResource(Watched.Above);
         }
 
         private void OnDestroy()
         {
-            CancelButton.onClick.RemoveListener(OnClick);
+            _cancelButton.onClick.RemoveListener(OnClick);
         }
 
         private void OnClick()
         {
-            SpMarket.Instance.RemoveListing(watched);
+            SpMarket.Instance.RemoveListing(Watched);
         }
     }
 }

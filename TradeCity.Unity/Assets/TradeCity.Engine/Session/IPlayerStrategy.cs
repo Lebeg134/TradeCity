@@ -8,5 +8,4 @@ namespace TradeCity.Engine.Session
         void GoBankrupt();
         void Tick();
     }
-
 }

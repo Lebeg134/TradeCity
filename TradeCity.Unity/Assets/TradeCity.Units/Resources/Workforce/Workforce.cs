@@ -6,13 +6,16 @@ namespace TradeCity.Units.Resources.Workforce
     [Serializable]
     public class Workforce : LimitResource
     {
-        public Workforce(int amount) : base(amount) { }
+        public Workforce(int amount) : base(amount)
+        {
+        }
 
         public override string GetName()
         {
             return "Workforce";
         }
-        public override string GetResourcepath()
+
+        public override string GetResourcePath()
         {
             return BasePath() + "person";
         }
@@ -22,5 +25,4 @@ namespace TradeCity.Units.Resources.Workforce
             return new Workforce(amount);
         }
     }
-
 }

@@ -4,15 +4,18 @@ using TradeCity.Engine.Resources;
 namespace TradeCity.Units.Resources.Common
 {
     [Serializable]
-    public class Water : ContinousResource
+    public class Water : ContinuousResource
     {
-        public Water(int amount) : base(amount) { }
+        public Water(int amount) : base(amount)
+        {
+        }
 
         public override string GetName()
         {
             return "Water";
         }
-        public override string GetResourcepath()
+
+        public override string GetResourcePath()
         {
             return BasePath() + "water-drop";
         }
@@ -22,5 +25,4 @@ namespace TradeCity.Units.Resources.Common
             return new Water(amount);
         }
     }
-
 }

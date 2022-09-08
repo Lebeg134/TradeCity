@@ -13,6 +13,7 @@ namespace TradeCity.Units.Structures.Lands
         {
             return "Lake";
         }
+
         public override string GetResourcepath()
         {
             return GetBasePath() + "Clearwaterlake";
@@ -33,5 +34,4 @@ namespace TradeCity.Units.Structures.Lands
             return new List<Resource> { new Money(100 * level) };
         }
     }
-
 }

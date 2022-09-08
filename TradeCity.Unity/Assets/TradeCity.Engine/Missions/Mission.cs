@@ -7,14 +7,20 @@ namespace TradeCity.Engine.Missions
     [Serializable]
     public class Mission : ITickable
     {
-        public event Action OnProgress;
-        public event Action OnAchievement;
-        public event Action OnClaim;
-
-        private Player _owner;
         private readonly IAchievable _goal;
         private readonly IRewardable _reward;
         private bool _isAchieved;
+
+        private Player _owner;
+
+        public Mission(IAchievable goal, IRewardable reward, Player owner = null)
+        {
+            _goal = goal;
+            _reward = reward;
+            goal.OnAchieve += Check;
+            _owner = owner;
+            if (owner != null) Accept(owner);
+        }
         //Enum state? Strategy?
 
         public string Text => _goal.Text;
@@ -23,17 +29,20 @@ namespace TradeCity.Engine.Missions
         public bool IsAchieved => _goal.IsAchieved();
         public bool IsClaimed { get; private set; }
 
-        public Mission(IAchievable goal, IRewardable reward, Player owner = null)
+        public void Register()
         {
-            _goal = goal;
-            _reward = reward;
-            goal.OnAchieve += Check;
-            _owner = owner;
-            if (owner != null)
-            {
-                Accept(owner);
-            }
+            Clock.Instance.Register(this);
         }
+
+        public void Tick()
+        {
+            Check();
+        }
+
+        public event Action OnProgress;
+        public event Action OnAchievement;
+        public event Action OnClaim;
+
         public float CheckStatus()
         {
             return _goal.CheckStatus();
@@ -47,17 +56,13 @@ namespace TradeCity.Engine.Missions
             IsClaimed = true;
             OnClaim?.Invoke();
         }
+
         public void Accept(Player by)
         {
             _owner = by;
             _goal.Accept(by);
             IsAccepted = true;
             Register();
-        }
-
-        public void Register()
-        {
-            Clock.Instance.Register(this);
         }
 
         private void Check()
@@ -67,7 +72,5 @@ namespace TradeCity.Engine.Missions
             _isAchieved = true;
             OnAchievement?.Invoke();
         }
-
-        public void Tick() => Check();
     }
 }

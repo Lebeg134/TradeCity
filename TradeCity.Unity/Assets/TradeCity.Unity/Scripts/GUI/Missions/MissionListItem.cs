@@ -8,65 +8,65 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
 {
     public class MissionListItem : MonoBehaviour
     {
-        [SerializeField] private Slider progressBar;
-        [SerializeField] private Button claimButton;
-        [SerializeField] private Text text;
+        [SerializeField] private Slider _progressBar = default!;
+        [SerializeField] private Button _claimButton = default!;
+        [SerializeField] private Text _text = default!;
 
-        private Mission? watched;
+        private Mission? _watched;
 
         private void Awake()
         {
-            this.CheckSerializedField(progressBar, nameof(progressBar));
-            this.CheckSerializedField(claimButton, nameof(claimButton));
-            this.CheckSerializedField(text, nameof(text));
+            this.CheckSerializedField(_progressBar, nameof(_progressBar));
+            this.CheckSerializedField(_claimButton, nameof(_claimButton));
+            this.CheckSerializedField(_text, nameof(_text));
         }
 
         private void Update()
         {
-            if (watched != null)
+            if (_watched != null)
                 UpdateVisuals();
         }
 
         public void SetWatched(Mission mission)
         {
-            watched = mission;
+            _watched = mission;
             mission.OnAchievement += UpdateButton;
-            text.text = watched.Text;
-            claimButton.onClick.RemoveAllListeners();
-            claimButton.onClick.AddListener(ClaimClick);
+            _text.text = _watched.Text;
+            _claimButton.onClick.RemoveAllListeners();
+            _claimButton.onClick.AddListener(ClaimClick);
             UpdateButton();
             UpdateVisuals();
         }
 
         private void ClaimClick()
         {
-            watched?.Claim();
+            _watched?.Claim();
             UpdateButton();
         }
 
         private void UpdateButton()
         {
-            if (watched?.IsClaimed ?? false)
+            if (_watched?.IsClaimed ?? false)
             {
-                claimButton.interactable = false;
-                claimButton.GetComponentInChildren<Text>().text = "Claimed";
+                _claimButton.interactable = false;
+                _claimButton.GetComponentInChildren<Text>().text = "Claimed";
             }
             else
             {
-                claimButton.interactable = watched?.IsAchieved ?? false;
+                _claimButton.interactable = _watched?.IsAchieved ?? false;
             }
-            claimButton.Select();
+            _claimButton.Select();
         }
 
         private void UpdateVisuals()
         {
-            if (watched?.IsAchieved ?? false)
+            if (_watched?.IsAchieved ?? false)
             {
-                progressBar.value = 1;
+                _progressBar.value = 1;
             }
             else
             {
-                progressBar.value = watched?.CheckStatus()?? 0;
+                _progressBar.value = _watched?.CheckStatus() ?? 0;
             }
             UpdateButton();
         }

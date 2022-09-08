@@ -12,12 +12,13 @@ namespace TradeCity.Engine.Structures.Interfaces
         Upgrade,
         Maxlevel
     }
+
     public interface IBuilding : IProducer, IOwnable, IUpgradeable, ITickable
     {
-        public event Action<Building> OnBuild;
         BuildingState BuildingState { get; }
         int Level { get; }
         int MaxLevel { get; }
+        public event Action<Building> OnBuild;
         void Build(Player by);
         bool CanBuild(Player by);
         List<Resource> GetUpkeep();

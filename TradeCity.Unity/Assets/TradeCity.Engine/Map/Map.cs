@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.TimeManager;
@@ -12,9 +11,9 @@ namespace TradeCity.Engine.Map
     {
         private readonly int _defaultBid = 100;
         private readonly int _defaultTimePerRound = 100;
-        private readonly IMapStructure[,] _structures;
-        private readonly int _sizeX, _sizeY;
         private readonly List<Auction> _liveAuctions = new();
+        private readonly int _sizeX, _sizeY;
+        private readonly IMapStructure[,] _structures;
 
         public Map(int sizeX, int sizeY)
         {
@@ -22,6 +21,16 @@ namespace TradeCity.Engine.Map
             _sizeY = sizeY;
             _structures = new IMapStructure[_sizeX, _sizeY];
             Register();
+        }
+
+        public void Tick()
+        {
+            foreach (var auction in _liveAuctions) auction.Tick();
+        }
+
+        public void Register()
+        {
+            Clock.Instance.Register(this);
         }
 
         public IMapStructure GetStructure(int x, int y)
@@ -36,26 +45,10 @@ namespace TradeCity.Engine.Map
                 throw new InvalidOperationException();
 
             Auction newAuction = new((Land)subject, _defaultBid, _defaultTimePerRound, by);
-            if (_liveAuctions.Contains(newAuction))
-            {
-                throw new InvalidOperationException();
-            }
+            if (_liveAuctions.Contains(newAuction)) throw new InvalidOperationException();
 
             newAuction.OnFinish += OnAuctionFinished;
             _liveAuctions.Add(newAuction);
-        }
-
-        public void Tick()
-        {
-            foreach (var auction in _liveAuctions)
-            {
-                auction.Tick();
-            }
-        }
-
-        public void Register()
-        {
-            Clock.Instance.Register(this);
         }
 
         private void OnAuctionFinished(Auction auction)

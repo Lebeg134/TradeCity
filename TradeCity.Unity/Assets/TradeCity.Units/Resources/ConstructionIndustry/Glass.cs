@@ -6,15 +6,20 @@ namespace TradeCity.Units.Resources.ConstructionIndustry
     [Serializable]
     public class Glass : StandardResource
     {
-        public Glass(int amount) : base(amount) { }
+        public Glass(int amount) : base(amount)
+        {
+        }
+
         public override string GetName()
         {
             return "Glass";
         }
-        public override string GetResourcepath()
+
+        public override string GetResourcePath()
         {
             return BasePath() + "broken-bottle";
         }
+
         public override Resource GetNewResource(int amount)
         {
             return new Glass(amount);
@@ -25,5 +30,4 @@ namespace TradeCity.Units.Resources.ConstructionIndustry
             return 43.75;
         }
     }
-
 }

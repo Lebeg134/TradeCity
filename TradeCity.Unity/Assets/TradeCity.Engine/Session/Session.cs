@@ -13,10 +13,18 @@ namespace TradeCity.Engine.Session
     public class Session : ITickable
     {
         public static readonly string Filename = "save.dat";
+        private static Session _instance;
         private readonly List<Player> _players;
-        public Dictionary<Land, int> Offers = new();
         public List<Mission> Missions = new();
+        public Dictionary<Land, int> Offers = new();
         public bool Running;
+
+        public Session()
+        {
+            Register();
+            _players = new List<Player>();
+        }
+
         public static Session Instance
         {
             get
@@ -26,13 +34,21 @@ namespace TradeCity.Engine.Session
                 throw new Exception("No started Sessions");
             }
         }
-        private static Session _instance;
 
-        public Session()
+        public void Tick()
         {
-            Register();
-            _players = new List<Player>();
+            //TODO tick market and generate event stuff in the future
+
+            //TODO add land offers randomly
+
+            foreach (var player in _players) player.Tick();
         }
+
+        public void Register()
+        {
+            Clock.Instance.Register(this);
+        }
+
         public void Start()
         {
             _instance = this;
@@ -47,10 +63,12 @@ namespace TradeCity.Engine.Session
             b.Serialize(stream, Instance);
             stream.Close();
         }
+
         public static bool SaveExists()
         {
             return File.Exists(Filename);
         }
+
         public static void Load()
         {
             Stream stream = File.OpenRead(Filename);
@@ -61,6 +79,7 @@ namespace TradeCity.Engine.Session
             Clock.Instance.Clear();
             Clock.Instance.Register(Instance);
         }
+
         public void Login(Player player)
         {
             if (!_players.Contains(player))
@@ -68,32 +87,18 @@ namespace TradeCity.Engine.Session
             else
                 player.UnFreeze(new StandardPlayerStrategy(player));
         }
+
         public void Logout(Player player)
         {
             if (_players.Contains(player))
                 player.Freeze();
         }
+
         public void DeletePlayer(Player player)
         {
             player.GoBankrupt();
             _players.Remove(player);
             // TODO Remove ownerships?
         }
-        public void Tick()
-        {
-            //TODO tick market and generate event stuff in the future
-
-            //TODO add land offers randomly
-
-            foreach (var player in _players)
-            {
-                player.Tick();
-            }
-        }
-        public void Register()
-        {
-            Clock.Instance.Register(this);
-        }
     }
-
 }

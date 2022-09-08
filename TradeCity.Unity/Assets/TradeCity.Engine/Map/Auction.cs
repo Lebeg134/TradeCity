@@ -1,7 +1,6 @@
 #nullable enable
 using System;
 using System.Collections.Generic;
-using Injecter;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.TimeManager;
@@ -11,14 +10,13 @@ namespace TradeCity.Engine.Map
     [Serializable]
     public class Auction : ITickable, IEqualityComparer<Auction>
     {
-        public event Action<Auction>? OnFinish;
-        
-        private readonly Land _subject;
         private readonly int _currentPrice;
         private readonly int _minBid;
+
+        private readonly Land _subject;
+        private readonly int _timePerRound;
         private Player? _lastBidder;
         private int _timeRemaining;
-        private readonly int _timePerRound;
 
 
         public Auction(Land subject, int minBid, int timePerRound, Player? initiator = null)
@@ -31,18 +29,14 @@ namespace TradeCity.Engine.Map
             _lastBidder = initiator;
         }
 
-        public void Bid(Player by, int bid)
+        public bool Equals(Auction x, Auction y)
         {
-            if (bid <= _currentPrice + _minBid) return;
-            _timeRemaining = _timePerRound;
-            _lastBidder = by;
+            return x._subject.Equals(y._subject);
         }
 
-        public void Finish()
+        public int GetHashCode(Auction obj)
         {
-            if (_lastBidder == null) return;
-            _subject.Acquire(_lastBidder);
-            OnFinish?.Invoke(this);
+            return _subject.GetHashCode();
         }
 
         public void Tick()
@@ -56,14 +50,20 @@ namespace TradeCity.Engine.Map
             //Do nothing - Auctions are ticked by container
         }
 
-        public bool Equals(Auction x, Auction y)
+        public event Action<Auction>? OnFinish;
+
+        public void Bid(Player by, int bid)
         {
-            return x._subject.Equals(y._subject);
+            if (bid <= _currentPrice + _minBid) return;
+            _timeRemaining = _timePerRound;
+            _lastBidder = by;
         }
 
-        public int GetHashCode(Auction obj)
+        public void Finish()
         {
-            return _subject.GetHashCode();
+            if (_lastBidder == null) return;
+            _subject.Acquire(_lastBidder);
+            OnFinish?.Invoke(this);
         }
     }
 }

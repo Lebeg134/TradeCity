@@ -8,18 +8,18 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
 {
     public class StartGameScript : MonoBehaviour
     {
-        [SerializeField] private Button newGameBtn;
+        [SerializeField] private Button _newGameBtn = default!;
 
         private void Awake()
         {
-            this.CheckSerializedField(newGameBtn, nameof(newGameBtn));
+            this.CheckSerializedField(_newGameBtn, nameof(_newGameBtn));
 
-            newGameBtn.onClick.AddListener(StartGame);
+            _newGameBtn.onClick.AddListener(StartGame);
         }
 
         private void OnDestroy()
         {
-            newGameBtn.onClick.RemoveListener(StartGame);
+            _newGameBtn.onClick.RemoveListener(StartGame);
         }
 
         private void StartGame()

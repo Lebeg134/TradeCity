@@ -18,16 +18,16 @@ namespace TradeCity.Units.Structures.OilIndustry
         public OilDistillery()
         {
             Recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(15), new Oil(15) }, new Fuel(2), 1));
-            Recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(10), new Oil(15) }, new Chemicals(4), 1));
+            Recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(10), new Oil(15) }, new Chemicals(4),
+                1));
         }
+
         public override void Upgrade()
         {
             base.Upgrade();
-            foreach (var recipe in Recipes)
-            {
-                recipe.Limit = _level * _level;
-            }
+            foreach (var recipe in Recipes) recipe.Limit = _level * _level;
         }
+
         public override List<IOwnable> GetCriteria()
         {
             return new List<IOwnable> { new ChemicalResearchFacility(), new ChemicalSafetyBureau() };
@@ -65,5 +65,4 @@ namespace TradeCity.Units.Structures.OilIndustry
             return new List<Resource> { new Concrete(500 + 100 * level * level), new Steel(100 * level * level) };
         }
     }
-
 }

@@ -6,12 +6,16 @@ namespace TradeCity.Units.Resources.OilIndustry
     [Serializable]
     public class Plastic : StandardResource
     {
-        public Plastic(int amount) : base(amount) { }
+        public Plastic(int amount) : base(amount)
+        {
+        }
+
         public override string GetName()
         {
             return "Plastic";
         }
-        public override string GetResourcepath()
+
+        public override string GetResourcePath()
         {
             return BasePath() + "cubes";
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TradeCity.Engine.Market;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
-using TradeCity.Unity.Scripts.GUI.ResourceDispalys;
+using TradeCity.Unity.Scripts.GUI.ResourceDisplays;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,27 +11,27 @@ namespace TradeCity.Unity.Scripts.GUI.Market
 {
     public class ResourceSelector : MonoBehaviour
     {
-        [SerializeField] private Dropdown dropdown;
+        [SerializeField] private Dropdown _dropdown = default!;
 
-        public Resource selected;
+        public Resource Selected;
 
-        private readonly List<string> options = GetOptions();
+        private readonly List<string> _options = GetOptions();
 
         private void Awake()
         {
-            this.CheckSerializedField(dropdown, nameof(dropdown));
+            this.CheckSerializedField(_dropdown, nameof(_dropdown));
         }
 
         private void Start()
         {
-            dropdown.captionText.text = "Select Resource...";
-            dropdown.ClearOptions();
-            dropdown.AddOptions(options);
-            dropdown.onValueChanged.AddListener((int i) =>
+            _dropdown.captionText.text = "Select Resource...";
+            _dropdown.ClearOptions();
+            _dropdown.AddOptions(_options);
+            _dropdown.onValueChanged.AddListener((int i) =>
                 {
-                    selected = ResourceDisplay.ConvertToRes(options[i]);
-                    dropdown.captionText.text = selected.GetName();
-                    dropdown.Hide();
+                    Selected = ResourceDisplay.ConvertToRes(_options[i]);
+                    _dropdown.captionText.text = Selected.GetName();
+                    _dropdown.Hide();
                 }
             );
         }

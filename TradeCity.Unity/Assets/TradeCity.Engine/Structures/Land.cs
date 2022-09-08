@@ -13,6 +13,7 @@ namespace TradeCity.Engine.Structures
     public abstract class Land : CommonStructure, ILand, IMapStructure
     {
         private const int DefaultMaxLevel = 100;
+
         // ========== Public events
         public event Action<Land> OnPurchase;
 
@@ -22,37 +23,46 @@ namespace TradeCity.Engine.Structures
             base.Acquire(by);
             OnPurchase?.Invoke(this);
         }
-        public void GetPosition()
-        {
-            throw new NotImplementedException();
-        }
+
         public List<Resource> GetProduce()
         {
             return GetProduce(_level);
         }
-        public bool IsAuctionable()
-        {
-            return _owner == null;
-        }
+
         public void Purchase(Player by)
         {
             Acquire(by);
         }
+
         public void Register()
         {
             Clock.Instance.Register(this);
         }
+
         public void Tick()
         {
             _owner.GiveRes(GetProduce());
         }
+
         public abstract Land GetNew();
+
         //public abstract List<Resource> GetStartingCost();
         public List<Resource> GetStartingCost()
         {
             //TODO!!
             throw new NotImplementedException();
         }
+
+        public void GetPosition()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsAuctionable()
+        {
+            return _owner == null;
+        }
+
         public int GetStartingPrice()
         {
             //TODO replace!!
@@ -64,6 +74,7 @@ namespace TradeCity.Engine.Structures
         {
             return DefaultMaxLevel;
         }
+
         public override Branches GetBranch()
         {
             //TODO replace!!
@@ -72,11 +83,10 @@ namespace TradeCity.Engine.Structures
 
         // ========== Internal Methods
         protected abstract List<Resource> GetProduce(int level);
-        override protected string GetBasePath()
+
+        protected override string GetBasePath()
         {
             return base.GetBasePath() + "Land/";
         }
-
-
     }
 }

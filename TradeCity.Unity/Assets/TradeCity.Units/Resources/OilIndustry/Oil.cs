@@ -6,15 +6,20 @@ namespace TradeCity.Units.Resources.OilIndustry
     [Serializable]
     public class Oil : StandardResource
     {
-        public Oil(int amount) : base(amount) { }
+        public Oil(int amount) : base(amount)
+        {
+        }
+
         public override string GetName()
         {
             return "Oil";
         }
-        public override string GetResourcepath()
+
+        public override string GetResourcePath()
         {
             return BasePath() + "oil-drum";
         }
+
         public override Resource GetNewResource(int amount)
         {
             return new Oil(amount);

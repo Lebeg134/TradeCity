@@ -10,14 +10,17 @@ namespace TradeCity.Engine.Structures.EasyInheritance
         {
             return GetCost();
         }
+
         protected override List<IOwnable> GetCriteria(int level)
         {
             return GetCriteria();
         }
+
         protected override int GetMaxLevel()
         {
             return 1;
         }
+
         protected override List<Resource> GetUpkeep(int level)
         {
             return GetUpkeep();

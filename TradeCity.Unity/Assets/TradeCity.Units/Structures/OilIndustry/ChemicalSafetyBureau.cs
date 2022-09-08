@@ -37,5 +37,4 @@ namespace TradeCity.Units.Structures.OilIndustry
             return new List<Resource> { new Electricity(5) };
         }
     }
-
 }

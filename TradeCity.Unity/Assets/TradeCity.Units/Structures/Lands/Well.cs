@@ -13,10 +13,12 @@ namespace TradeCity.Units.Structures.Lands
         {
             return "Pumping Station";
         }
+
         public override string GetResourcepath()
         {
             return GetBasePath() + "Well";
         }
+
         public override Land GetNew()
         {
             return new Well();
@@ -32,5 +34,4 @@ namespace TradeCity.Units.Structures.Lands
             return new List<Resource> { new Money(100 * level) };
         }
     }
-
 }

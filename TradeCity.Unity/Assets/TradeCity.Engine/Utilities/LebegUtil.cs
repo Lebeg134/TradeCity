@@ -15,6 +15,7 @@ namespace TradeCity.Engine.Utilities
                 i = index;
             return i;
         }
+
         public static float Clamp(float num, float min, float max)
         {
             if (num < min)

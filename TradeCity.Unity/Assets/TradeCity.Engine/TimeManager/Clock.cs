@@ -7,20 +7,9 @@ namespace TradeCity.Engine.TimeManager
     public class Clock
     {
         private static Clock _instance = new();
-
-        public static Clock Instance
-        {
-            get => _instance;
-            set
-            {
-                _instance = new Clock();
-                foreach (var tickable in value._tickables.Where(tickable => tickable != null))
-                    _instance.Register(tickable);
-            }
-        }
+        private readonly List<ITickable> _tickables = new();
 
         private readonly Timer _timer = new();
-        private readonly List<ITickable> _tickables = new();
         private int _interval = (int)Speed.Normal;
 
         static Clock()
@@ -31,6 +20,17 @@ namespace TradeCity.Engine.TimeManager
         {
             _timer.Interval = _interval;
             _timer.Elapsed += Tick;
+        }
+
+        public static Clock Instance
+        {
+            get => _instance;
+            set
+            {
+                _instance = new Clock();
+                foreach (var tickable in value._tickables.Where(tickable => tickable != null))
+                    _instance.Register(tickable);
+            }
         }
 
         public void Initialize()

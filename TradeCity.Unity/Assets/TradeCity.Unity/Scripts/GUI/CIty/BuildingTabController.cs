@@ -1,5 +1,5 @@
-using System.Linq;
 using AutSoft.UnitySupplements.Vitamins;
+using System.Linq;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Units;
@@ -52,7 +52,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             GetBranchButton(_active).interactable = true;
             GetBranchButton(tab).interactable = false;
             _active = tab;
-            for (var i = 0; i < _content.transform.childCount; i++)
+            for (int i = 0; i < _content.transform.childCount; i++)
             {
                 Destroy(_content.transform.GetChild(i).gameObject);
             }
@@ -61,20 +61,20 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
         private void RegisterBuilding(Building building)
         {
-            var listItem = Instantiate(_buildingListItemPrefab);
+            GameObject listItem = Instantiate(_buildingListItemPrefab);
             listItem.GetComponent<BuildingListItem>().Building = building.GetName();
             listItem.transform.SetParent(_content.transform);
         }
 
         private void RegisterAllBuildings(Branches branch) //TODO add player checks
         {
-            foreach (var building in Player.CurrentPlayer.GetAllBuildings()
+            foreach (Building building in Player.CurrentPlayer.GetAllBuildings()
                          .Where(building => building.GetBranch() == branch))
             {
                 RegisterBuilding(building);
             }
 
-            foreach (var building in SessionGenerator.GetAllBuildings()
+            foreach (Building building in SessionGenerator.GetAllBuildings()
                          .Where(building => building.GetBranch() == branch && !Player.CurrentPlayer.HasStructure(building)))
             {
                 RegisterBuilding(building);

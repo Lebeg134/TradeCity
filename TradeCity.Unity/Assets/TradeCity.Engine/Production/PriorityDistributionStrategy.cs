@@ -13,26 +13,20 @@ namespace TradeCity.Engine.Production
             Dictionary<RecipePriority, List<Recipe>> recDict = new();
             foreach (var recipe in recipes)
             {
-                if (!recDict.Keys.Contains(recipe.InputPriority))
-                {
-                    recDict.Add(recipe.InputPriority, new List<Recipe>());
-                }
+                if (!recDict.Keys.Contains(recipe.InputPriority)) recDict.Add(recipe.InputPriority, new List<Recipe>());
                 recDict[recipe.InputPriority].Add(recipe);
             }
+
             foreach (var key in recDict.Keys)
-            {
-                foreach (var recipe in recDict[key])
+            foreach (var recipe in recDict[key])
+                try
                 {
-                    try
-                    {
-                        recipe.AddResource(resource);
-                    }
-                    catch
-                    {
-                        break;
-                    }
+                    recipe.AddResource(resource);
                 }
-            }
+                catch
+                {
+                    break;
+                }
         }
 
         public override string GetName()

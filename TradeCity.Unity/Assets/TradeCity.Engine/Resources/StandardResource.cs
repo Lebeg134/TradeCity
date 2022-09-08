@@ -6,23 +6,29 @@ namespace TradeCity.Engine.Resources
     [Serializable]
     public abstract class StandardResource : Resource, ISellable
     {
-        public StandardResource(int amount) : base(amount) { }
-        public abstract double GetValue();
-        public void ReportListing(Listing listing)
+        protected StandardResource(int amount) : base(amount)
         {
-            throw new NotImplementedException();
         }
+
+        public abstract double GetValue();
+
         public void SimulatePrice()
         {
             throw new NotImplementedException();
         }
+
         public bool Equals(ISellable x, ISellable y)
         {
             // POT
-            return (x.GetType() == y.GetType());
+            return x.GetType() == y.GetType();
         }
 
         public int GetHashCode(ISellable obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ReportListing(Listing listing)
         {
             throw new NotImplementedException();
         }

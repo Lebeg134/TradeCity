@@ -1,23 +1,23 @@
+using AutSoft.UnitySupplements.Vitamins;
 using UnityEngine;
 using UnityEngine.UI;
-using AutSoft.UnitySupplements.Vitamins;
 
 namespace TradeCity.Unity.Scripts.GUI.Navigation
 {
     public enum ActiveScreen
     {
-        CITY,
-        MAP,
-        MARKET
+        City,
+        Map,
+        Market
     }
     public class MenuController : MonoBehaviour
     {
-        [SerializeField] private Canvas city;
-        [SerializeField] private Canvas map;
-        [SerializeField] private Canvas market;
-        [SerializeField] private Button cityButton;
-        [SerializeField] private Button mapButton;
-        [SerializeField] private Button marketButton;
+        [SerializeField] private Canvas _city = default!;
+        [SerializeField] private Canvas _map = default!;
+        [SerializeField] private Canvas _market = default!;
+        [SerializeField] private Button _cityButton = default!;
+        [SerializeField] private Button _mapButton = default!;
+        [SerializeField] private Button _marketButton = default!;
 
         private ActiveScreen _active;
         public ActiveScreen Active
@@ -35,22 +35,22 @@ namespace TradeCity.Unity.Scripts.GUI.Navigation
 
         private void Awake()
         {
-            this.CheckSerializedField(city, nameof(city));
-            this.CheckSerializedField(map, nameof(map));
-            this.CheckSerializedField(market, nameof(market));
-            this.CheckSerializedField(cityButton, nameof(cityButton));
-            this.CheckSerializedField(mapButton, nameof(mapButton));
-            this.CheckSerializedField(marketButton, nameof(marketButton));
+            this.CheckSerializedField(_city, nameof(_city));
+            this.CheckSerializedField(_map, nameof(_map));
+            this.CheckSerializedField(_market, nameof(_market));
+            this.CheckSerializedField(_cityButton, nameof(_cityButton));
+            this.CheckSerializedField(_mapButton, nameof(_mapButton));
+            this.CheckSerializedField(_marketButton, nameof(_marketButton));
 
 
-            cityButton.onClick.AddListener(() => SwitchTo(ActiveScreen.CITY));
-            mapButton.onClick.AddListener(() => SwitchTo(ActiveScreen.MAP));
-            marketButton.onClick.AddListener(() => SwitchTo(ActiveScreen.MARKET));
+            _cityButton.onClick.AddListener(() => SwitchTo(ActiveScreen.City));
+            _mapButton.onClick.AddListener(() => SwitchTo(ActiveScreen.Map));
+            _marketButton.onClick.AddListener(() => SwitchTo(ActiveScreen.Market));
         }
 
         private void Start()
         {
-            Active = ActiveScreen.CITY;
+            Active = ActiveScreen.City;
             SwitchTo(Active);
         }
 
@@ -60,20 +60,20 @@ namespace TradeCity.Unity.Scripts.GUI.Navigation
                 Active = screen;
             switch (screen)
             {
-                case ActiveScreen.CITY:
-                    city.enabled = true;
-                    map.enabled = false;
-                    market.enabled = false;
+                case ActiveScreen.City:
+                    _city.enabled = true;
+                    _map.enabled = false;
+                    _market.enabled = false;
                     break;
-                case ActiveScreen.MAP:
-                    city.enabled = false;
-                    map.enabled = true;
-                    market.enabled = false;
+                case ActiveScreen.Map:
+                    _city.enabled = false;
+                    _map.enabled = true;
+                    _market.enabled = false;
                     break;
-                case ActiveScreen.MARKET:
-                    city.enabled = false;
-                    map.enabled = false;
-                    market.enabled = true;
+                case ActiveScreen.Market:
+                    _city.enabled = false;
+                    _map.enabled = false;
+                    _market.enabled = true;
                     break;
             }
         }

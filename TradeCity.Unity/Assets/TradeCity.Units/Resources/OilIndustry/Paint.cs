@@ -6,12 +6,16 @@ namespace TradeCity.Units.Resources.OilIndustry
     [Serializable]
     public class Paint : StandardResource
     {
-        public Paint(int amount) : base(amount) { }
+        public Paint(int amount) : base(amount)
+        {
+        }
+
         public override string GetName()
         {
             return "Paint";
         }
-        public override string GetResourcepath()
+
+        public override string GetResourcePath()
         {
             return BasePath() + "paint-bucket";
         }

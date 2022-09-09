@@ -53,8 +53,8 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
         private void Update()
         {
-            UpdateButton();
             if (_target == null) return;
+            UpdateButton();
         }
 
         private void OnDestroy()
@@ -125,7 +125,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             return buildingList.Select(building => building.GetName()).ToArray();
         }
 
-        public static Building ConvertToBuilding(string name)
+        private static Building ConvertToBuilding(string name)
         {
             return SessionGenerator.GetAllBuildings().FirstOrDefault(building => building.GetName() == name);
         }

@@ -248,11 +248,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9b5427a33d8e04cb5d0f804749b336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 380447340838638488}
-  resName: {fileID: 3118944157865276231}
-  icon: {fileID: 7912199296195920211}
-  resource: 
-  redIfNotEnough: 1
+  _display: {fileID: 380447340838638488}
+  _resName: {fileID: 3118944157865276231}
+  _icon: {fileID: 7912199296195920211}
+  Resource: 
+  _redIfNotEnough: 1
 --- !u!1 &8296679790581541016
 GameObject:
   m_ObjectHideFlags: 0

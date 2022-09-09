@@ -44,7 +44,11 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
         private void OnDestroy()
         {
-            // TODO: Remove listeners
+            _commonBranch.onClick.RemoveAllListeners();
+            _constructionBranch.onClick.RemoveAllListeners();
+            _energyBranch.onClick.RemoveAllListeners();
+            _oilBranch.onClick.RemoveAllListeners();
+            _workforceBranch.onClick.RemoveAllListeners();
         }
 
         private void Switch(Branches tab)

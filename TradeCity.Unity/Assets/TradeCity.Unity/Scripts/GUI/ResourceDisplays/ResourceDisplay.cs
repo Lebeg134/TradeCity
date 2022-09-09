@@ -14,7 +14,7 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
         [SerializeField] protected Image _icon = default!;
 
         private readonly string[] _options = GetOptions().ToArray();
-        [Dropdown("options")]
+        [Dropdown("_options")]
         public string Resource;
 
         private Resource _watched;
@@ -37,8 +37,7 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
 
         protected virtual void Start()
         {
-            if (Watched == null)
-                Watched = ConvertToRes(Resource);
+            Watched ??= ConvertToRes(Resource);
             UpdateVisuals();
         }
 

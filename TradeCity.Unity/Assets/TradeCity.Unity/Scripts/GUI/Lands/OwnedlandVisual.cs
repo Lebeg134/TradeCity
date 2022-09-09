@@ -9,7 +9,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
     public class OwnedlandVisual : MonoBehaviour
     {
         public Land Watched;
-        [SerializeField] private Image _sprite = default! ;
+        [SerializeField] private Image _sprite = default!;
         [SerializeField] private Text _nameText = default!;
         [SerializeField] private GameObject _produceDisplay = default!;
 

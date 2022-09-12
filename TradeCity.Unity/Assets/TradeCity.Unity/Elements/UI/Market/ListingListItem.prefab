@@ -310,11 +310,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a249527ffe76f409e560bd35124d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListingSubject: {fileID: 7742660857966437657}
-  MoneyDisplay: {fileID: 8399154451983279144}
-  AboveDisplay: {fileID: 2493278594113646703}
-  CancelButton: {fileID: 4108810078295322119}
-  watched:
+  _listingSubject: {fileID: 7742660857966437657}
+  _moneyDisplay: {fileID: 8399154451983279144}
+  _aboveDisplay: {fileID: 2493278594113646703}
+  _cancelButton: {fileID: 4108810078295322119}
+  Watched:
     Above: 0
 --- !u!1 &4418987616722041776
 GameObject:

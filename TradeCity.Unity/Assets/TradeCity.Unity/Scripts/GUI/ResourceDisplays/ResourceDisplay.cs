@@ -1,5 +1,6 @@
 using AutSoft.UnitySupplements.Vitamins;
 using System.Collections.Generic;
+using TMPro;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
 using UnityEngine;
@@ -9,8 +10,8 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
 {
     public class ResourceDisplay : MonoBehaviour
     {
-        [SerializeField] protected Text _display = default!;
-        [SerializeField] protected Text _resName = default!;
+        [SerializeField] protected TMP_Text _display = default!;
+        [SerializeField] protected TMP_Text _resName = default!;
         [SerializeField] protected Image _icon = default!;
 
         private readonly string[] _options = GetOptions().ToArray();

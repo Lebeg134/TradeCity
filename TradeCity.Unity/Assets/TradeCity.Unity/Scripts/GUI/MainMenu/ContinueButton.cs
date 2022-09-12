@@ -1,4 +1,3 @@
-using AutSoft.UnitySupplements.Vitamins;
 using System;
 using TradeCity.Engine.Session;
 using UnityEngine;
@@ -7,20 +6,21 @@ using UnityEngine.UI;
 
 namespace TradeCity.Unity.Scripts.GUI.MainMenu
 {
+    [RequireComponent(typeof(Button))]
     public class ContinueButton : MonoBehaviour
     {
-        [SerializeField] private Button _button = default!;
+        private Button _button = default!;
 
         private void Awake()
         {
-            this.CheckSerializedField(_button, nameof(_button));
+            _button = GetComponent<Button>();
         }
 
         private void Start()
         {
             _button = GetComponent<Button>();
             UpdateVisuals();
-            _button.onClick.AddListener(() => OnClick());
+            _button.onClick.AddListener(OnClick);
         }
 
         private void OnClick()

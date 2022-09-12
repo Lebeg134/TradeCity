@@ -43,7 +43,7 @@ namespace TradeCity.Engine.Market
 
         public void Complete(bool throws = false)
         {
-            if (Player.CurrentPlayer.GetRes(Sell) > Above && Player.CurrentPlayer.HasResource(Sell))
+            if (Player.CurrentPlayer.GetResCount(Sell) > Above && Player.CurrentPlayer.HasResource(Sell))
                 try
                 {
                     Player.CurrentPlayer.SubRes(Sell);
@@ -57,7 +57,7 @@ namespace TradeCity.Engine.Market
 
         public void CompleteAll()
         {
-            while (Player.CurrentPlayer.GetRes(Sell) > Above && Player.CurrentPlayer.HasResource(Sell))
+            while (Player.CurrentPlayer.GetResCount(Sell) > Above && Player.CurrentPlayer.HasResource(Sell))
                 try
                 {
                     Complete();

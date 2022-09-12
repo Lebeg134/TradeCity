@@ -1,5 +1,6 @@
 #nullable enable
 using AutSoft.UnitySupplements.Vitamins;
+using TMPro;
 using TradeCity.Engine.Missions;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +11,7 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
     {
         [SerializeField] private Slider _progressBar = default!;
         [SerializeField] private Button _claimButton = default!;
-        [SerializeField] private Text _text = default!;
+        [SerializeField] private TMP_Text _text = default!;
 
         private Mission? _watched;
 

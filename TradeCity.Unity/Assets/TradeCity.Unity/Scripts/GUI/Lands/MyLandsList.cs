@@ -20,7 +20,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
 
         protected override void ProcessListItem(Land item, GameObject newListItem)
         {
-            newListItem.GetComponent<OwnedlandVisual>().Watched = item;
+            newListItem.GetComponent<OwnedLandVisual>().Watched = item;
         }
     }
 }

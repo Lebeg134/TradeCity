@@ -1,4 +1,3 @@
-using AutSoft.UnitySupplements.Vitamins;
 using TradeCity.Engine.Session;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,13 +5,14 @@ using UnityEngine.UI;
 
 namespace TradeCity.Unity.Scripts.GUI.MainMenu
 {
+    [RequireComponent(typeof(Button))]
     public class StartGameScript : MonoBehaviour
     {
-        [SerializeField] private Button _newGameBtn = default!;
+        private Button _newGameBtn = default!;
 
         private void Awake()
         {
-            this.CheckSerializedField(_newGameBtn, nameof(_newGameBtn));
+            _newGameBtn = GetComponent<Button>();
 
             _newGameBtn.onClick.AddListener(StartGame);
         }
@@ -22,10 +22,10 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
             _newGameBtn.onClick.RemoveListener(StartGame);
         }
 
-        private void StartGame()
+        private static void StartGame()
         {
             SceneManager.LoadScene(sceneName: "GameScene");
-            Session session = SessionGenerator.GenerateStandard();
+            var session = SessionGenerator.GenerateStandard();
             session.Start();
         }
     }

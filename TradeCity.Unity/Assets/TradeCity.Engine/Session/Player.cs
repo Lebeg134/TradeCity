@@ -138,12 +138,12 @@ namespace TradeCity.Engine.Session
             foreach (var res in resources) SubRes(res);
         }
 
-        public int GetRes(Resource resource)
+        public int GetResCount(Resource resource)
         {
-            return _ownedResources[resource.GetType()].GetStock();
+            return GetRes(resource).GetStock();
         }
 
-        public Resource GetResRef(Resource resource)
+        public Resource GetRes(Resource resource)
         {
             return _ownedResources[resource.GetType()];
         }

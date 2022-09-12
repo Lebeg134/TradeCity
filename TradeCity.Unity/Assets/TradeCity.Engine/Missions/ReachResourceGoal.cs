@@ -16,7 +16,7 @@ namespace TradeCity.Engine.Missions
 
         public override float CheckStatus()
         {
-            return Math.Clamp((float)_player.GetRes(_watched) / _goal, 0, 1);
+            return Math.Clamp((float)_player.GetResCount(_watched) / _goal, 0, 1);
         }
 
         public override void OnResourceChange(Resource resource)

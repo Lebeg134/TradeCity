@@ -12,7 +12,7 @@ namespace TradeCity.Unity.Scripts.GUI.Market
             SpMarket.NotifySubscribers += Refresh;
         }
 
-        protected override ICollection<SpListing> GetCollection()
+        protected override IEnumerable<SpListing> GetCollection()
         {
             return SpMarket.Instance.Listings;
         }

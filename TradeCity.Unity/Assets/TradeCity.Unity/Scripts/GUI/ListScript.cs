@@ -1,3 +1,4 @@
+#nullable enable
 using AutSoft.UnitySupplements.Vitamins;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,12 +9,10 @@ namespace TradeCity.Unity.Scripts.GUI
     /// Generic List display code for Unity UI elements
     /// </summary>
     /// <typeparam name="T"> Type of the displayed items</typeparam>
-    /// <typeparam name="Script"> Script that is present on the ListItem Gameobjects</typeparam>
-    /// <typeparam name="Collection"> Type of collection that is to be handled</typeparam>
     public abstract class SimpleList<T> : MonoBehaviour
     {
-        [SerializeField] protected GameObject _listItem;
-        [SerializeField] protected GameObject _content;
+        [SerializeField] protected GameObject _listItem = default!;
+        [SerializeField] protected GameObject _content = default!;
 
         protected virtual void Awake()
         {
@@ -35,11 +34,10 @@ namespace TradeCity.Unity.Scripts.GUI
         /// </summary>
         protected void Fill()
         {
-            foreach (T item in GetCollection())
+            foreach (var item in GetCollection())
             {
-                GameObject newListItem = Instantiate(_listItem);
+                var newListItem = Instantiate(_listItem, _content.transform);
                 ProcessListItem(item, newListItem);
-                newListItem.transform.SetParent(_content.transform);
             }
         }
 
@@ -74,7 +72,7 @@ namespace TradeCity.Unity.Scripts.GUI
         /// Defines the collection to be shown in the list
         /// </summary>
         /// <returns> Collection of T </returns>
-        protected abstract ICollection<T> GetCollection();
+        protected abstract IEnumerable<T> GetCollection();
 
         /// <summary>
         /// Does nothing by default

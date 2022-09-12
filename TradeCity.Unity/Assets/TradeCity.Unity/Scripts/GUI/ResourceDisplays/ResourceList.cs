@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
@@ -7,10 +8,10 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
 {
     public class ResourceList : SimpleList<Resource>
     {
-        protected override ICollection<Resource> GetCollection()
+        protected override IEnumerable<Resource> GetCollection()
         {
             List<Resource> ret = new();
-            foreach (Resource res in SessionGenerator.GetResourceList())
+            foreach (var res in SessionGenerator.GetResourceList())
             {
                 switch (res.GetName())
                 {

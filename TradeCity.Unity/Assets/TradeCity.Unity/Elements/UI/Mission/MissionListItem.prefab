@@ -487,6 +487,7 @@ MonoBehaviour:
   _progressBar: {fileID: 6399481399658474708}
   _claimButton: {fileID: 1384271818701836831}
   _text: {fileID: 7473320316010416210}
+  _buttonText: {fileID: 2465996276832376664}
 --- !u!1001 &6608972635796225021
 PrefabInstance:
   m_ObjectHideFlags: 0

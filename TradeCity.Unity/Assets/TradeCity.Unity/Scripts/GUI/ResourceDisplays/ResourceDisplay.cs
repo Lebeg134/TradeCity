@@ -1,5 +1,7 @@
+#nullable enable
 using AutSoft.UnitySupplements.Vitamins;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
@@ -16,10 +18,10 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
 
         private readonly string[] _options = GetOptions().ToArray();
         [Dropdown("_options")]
-        public string Resource;
+        public string? Resource;
 
-        private Resource _watched;
-        public Resource Watched
+        private Resource? _watched;
+        public Resource? Watched
         {
             get => _watched;
             set
@@ -38,7 +40,9 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
 
         protected virtual void Start()
         {
-            Watched ??= ConvertToRes(Resource);
+            if (Resource != null)
+                Watched = ConvertToRes(Resource);
+
             UpdateVisuals();
         }
 
@@ -62,30 +66,20 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
 
         protected void LoadSprite()
         {
-            Sprite loadedSprite = Resources.Load<Sprite>(Watched.GetResourcePath());
+            Sprite loadedSprite = Resources.Load<Sprite>(Watched?.GetResourcePath());
             if (loadedSprite != null)
                 _icon.sprite = loadedSprite;
         }
 
         public static List<string> GetOptions()
         {
-            List<Resource> reslist = SessionGenerator.GetResourceList();
-            List<string> strlist = new();
-            foreach (Resource res in reslist)
-            {
-                strlist.Add(res.GetName());
-            }
-            return strlist;
+            List<Resource> resList = SessionGenerator.GetResourceList();
+            return resList.Select(res => res.GetName()).ToList();
         }
 
-        public static Resource ConvertToRes(string name)
+        public static Resource? ConvertToRes(string name)
         {
-            foreach (Resource res in SessionGenerator.GetResourceList())
-            {
-                if (res.GetName() == name)
-                    return res;
-            }
-            return null;
+            return SessionGenerator.GetResourceList().FirstOrDefault(res => res.GetName() == name);
         }
     }
 }

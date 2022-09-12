@@ -6,8 +6,10 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
     {
         protected override void Start()
         {
-            Watched = Player.CurrentPlayer.GetRes(ConvertToRes(Resource));
-            base.Start();
+            if (Resource != null)
+                Watched = Player.CurrentPlayer.GetRes(ConvertToRes(Resource));
+            UpdateVisuals();
+
         }
     }
 }

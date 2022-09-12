@@ -7,7 +7,7 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
 {
     internal class MissionsList : SimpleList<Mission>
     {
-        protected override ICollection<Mission> GetCollection()
+        protected override IEnumerable<Mission> GetCollection()
         {
             return Session.Instance.Missions;
         }

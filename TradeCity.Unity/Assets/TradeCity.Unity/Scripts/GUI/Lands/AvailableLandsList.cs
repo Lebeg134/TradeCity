@@ -1,3 +1,5 @@
+#nullable enable
+using System.Collections;
 using System.Collections.Generic;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
@@ -7,7 +9,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
 {
     public class AvailableLandsList : SimpleList<Land>
     {
-        protected override ICollection<Land> GetCollection()
+        protected override IEnumerable<Land> GetCollection()
         {
             return Session.Instance.Offers.Keys;
         }

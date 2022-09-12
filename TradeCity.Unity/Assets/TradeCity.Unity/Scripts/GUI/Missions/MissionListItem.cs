@@ -12,6 +12,7 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
         [SerializeField] private Slider _progressBar = default!;
         [SerializeField] private Button _claimButton = default!;
         [SerializeField] private TMP_Text _text = default!;
+        [SerializeField] private TMP_Text _buttonText = default!;
 
         private Mission? _watched;
 
@@ -20,6 +21,7 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
             this.CheckSerializedField(_progressBar, nameof(_progressBar));
             this.CheckSerializedField(_claimButton, nameof(_claimButton));
             this.CheckSerializedField(_text, nameof(_text));
+            this.CheckSerializedField(_buttonText, nameof(_buttonText));
         }
 
         private void Update()
@@ -50,7 +52,7 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
             if (_watched?.IsClaimed ?? false)
             {
                 _claimButton.interactable = false;
-                _claimButton.GetComponentInChildren<Text>().text = "Claimed";
+                _buttonText.text = "Claimed";
             }
             else
             {

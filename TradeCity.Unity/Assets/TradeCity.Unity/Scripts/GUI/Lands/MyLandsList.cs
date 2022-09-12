@@ -13,7 +13,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
             Refresh();
         }
 
-        protected override ICollection<Land> GetCollection()
+        protected override IEnumerable<Land> GetCollection()
         {
             return Player.CurrentPlayer.GetLands();
         }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
 {
-    public class ResourceList : SimpleList<Resource>
+    public class ResourceList : SimpleList<Resource, ResourceDisplay>
     {
         protected override IEnumerable<Resource> GetCollection()
         {
@@ -26,7 +26,7 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
             return ret;
         }
 
-        protected override void ProcessListItem(Resource item, GameObject newListItem)
+        protected override void ProcessListItem(Resource item, ResourceDisplay newListItem)
         {
             newListItem.GetComponent<ResourceDisplay>().Resource = item.GetName();
         }

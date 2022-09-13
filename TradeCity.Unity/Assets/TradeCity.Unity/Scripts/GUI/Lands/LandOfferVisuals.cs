@@ -5,7 +5,6 @@ using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Units.Resources.Common;
 using TradeCity.Unity.Scripts.GUI.ResourceDisplays;
-using TradeCity.Unity.Scripts.GUI.VisualUpdaters;
 using UnityEngine;
 using UnityEngine.UI;
 

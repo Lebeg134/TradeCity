@@ -8,10 +8,10 @@ namespace TradeCity.Unity.Scripts.GUI
     /// <summary>
     /// Generic List display code for Unity UI elements
     /// </summary>
-    /// <typeparam name="T"> Type of the displayed items</typeparam>
-    public abstract class SimpleList<T> : MonoBehaviour
+    /// <typeparam name="Type"> Type of the displayed items</typeparam>
+    public abstract class SimpleList<Type, ListItem> : MonoBehaviour where ListItem : MonoBehaviour
     {
-        [SerializeField] protected GameObject _listItem = default!;
+        [SerializeField] protected ListItem _listItem = default!;
         [SerializeField] protected GameObject _content = default!;
 
         protected virtual void Awake()
@@ -66,13 +66,13 @@ namespace TradeCity.Unity.Scripts.GUI
         /// </summary>
         /// <param name="item"> Item to be displayed</param>
         /// <param name="newListItem"> Displaying Gameobject that will be added to the list </param>
-        protected abstract void ProcessListItem(T item, GameObject newListItem);
+        protected abstract void ProcessListItem(Type item, ListItem newListItem);
 
         /// <summary>
         /// Defines the collection to be shown in the list
         /// </summary>
         /// <returns> Collection of T </returns>
-        protected abstract IEnumerable<T> GetCollection();
+        protected abstract IEnumerable<Type> GetCollection();
 
         /// <summary>
         /// Does nothing by default

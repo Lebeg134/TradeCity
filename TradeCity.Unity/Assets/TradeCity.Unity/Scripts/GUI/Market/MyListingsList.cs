@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.GUI.Market
 {
-    internal class MyListingsList : SimpleList<SpListing>
+    internal class MyListingsList : SimpleList<SpListing, ListingItemVisual>
     {
         protected override void Start()
         {
@@ -17,9 +17,9 @@ namespace TradeCity.Unity.Scripts.GUI.Market
             return SpMarket.Instance.Listings;
         }
 
-        protected override void ProcessListItem(SpListing item, GameObject newListItem)
+        protected override void ProcessListItem(SpListing item, ListingItemVisual newListItem)
         {
-            newListItem.GetComponent<ListingItemVisual>().Watched = item;
+            newListItem.Watched = item;
         }
 
     }

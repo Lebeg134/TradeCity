@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using AutSoft.UnitySupplements.EventBus;
+using PlasticGui.WorkspaceWindow;
 using TradeCity.Engine.Production;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Structures;
@@ -12,8 +14,6 @@ namespace TradeCity.Engine.Session
     [Serializable]
     public partial class Player : ITickable
     {
-        //public event Action<IOwnable> OnAquire;
-        //public event Action<Building> OnUpgrade;
 
         private readonly List<IOwnable> _owned = new();
         private readonly Dictionary<Type, Resource> _ownedResources = new();
@@ -182,6 +182,32 @@ namespace TradeCity.Engine.Session
         public void GoBankrupt()
         {
             _playerStrategy.GoBankrupt();
+        }
+
+        public sealed class OnResourceChanged: IEvent
+        {
+            public OnResourceChanged(Player ownerPlayer, Resource changedResource, int changeAmount)
+            {
+                OwnerPlayer = ownerPlayer;
+                ChangedResource = changedResource;
+                ChangeAmount = changeAmount;
+            }
+
+            public Resource ChangedResource { get; }
+            public int ChangeAmount { get; }
+            public Player OwnerPlayer { get; }
+        }
+
+        public sealed class OnStructureAcquired : IEvent
+        {
+            public OnStructureAcquired(Player ownerPlayer, Structure acquiredStructure)
+            {
+                OwnerPlayer = ownerPlayer;
+                AcquiredStructure = acquiredStructure;
+            }
+
+            public Structure AcquiredStructure { get; }
+            public Player OwnerPlayer { get; }
         }
     }
 }

@@ -10,13 +10,10 @@ namespace TradeCity.Engine.Structures
     [Serializable]
     public abstract class Building : CommonStructure, IOwnable, IBuilding
     {
-        // ========== Attributes
         protected List<Recipe> _recipes = new();
-
-        // ========== Public events
+        
         public event Action<Building> OnBuild;
-
-        // ========== Properties
+        
         public BuildingState BuildingState
         {
             get
@@ -29,8 +26,7 @@ namespace TradeCity.Engine.Structures
         }
 
         public List<Recipe> Recipes => _recipes;
-
-        // ========== Interface Implementations
+        
         public void Build(Player by)
         {
             if (CanBuild(by))
@@ -98,8 +94,7 @@ namespace TradeCity.Engine.Structures
             //cannot register directly
             throw new NotImplementedException();
         }
-
-        // ========== Internal Methods
+        
         protected virtual List<Resource> GetUpkeep(int level)
         {
             return new List<Resource>();

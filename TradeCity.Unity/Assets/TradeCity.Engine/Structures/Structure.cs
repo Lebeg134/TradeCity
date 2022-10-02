@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using AutSoft.UnitySupplements.EventBus;
 using TradeCity.Units;
 
 namespace TradeCity.Engine.Structures
@@ -63,6 +64,18 @@ namespace TradeCity.Engine.Structures
         protected virtual string GetBasePath()
         {
             return "Structure/";
+        }
+
+        public sealed class StructureStateChanged : IEvent
+        {
+            public StructureStateChanged(Structure subject, bool newState)
+            {
+                Subject = subject;
+                NewState = newState;
+            }
+
+            public Structure Subject { get; }
+            public bool NewState { get; }
         }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutSoft.UnitySupplements.EventBus;
+using Injecter;
 using PlasticGui.WorkspaceWindow;
 using TradeCity.Engine.Production;
 using TradeCity.Engine.Resources;
@@ -14,6 +15,7 @@ namespace TradeCity.Engine.Session
     [Serializable]
     public partial class Player : ITickable
     {
+        [Inject] private IEventBus _eventBus = default!;
 
         private readonly List<IOwnable> _owned = new();
         private readonly Dictionary<Type, Resource> _ownedResources = new();
@@ -22,10 +24,6 @@ namespace TradeCity.Engine.Session
         public Player()
         {
             _playerStrategy = new StandardPlayerStrategy(this);
-            //foreach (Resource res in ownedResources.Values)
-            //{
-            //    res.OnAmountChange += (amount) => OnResourceChange.Invoke(res.GetNewResource(amount));
-            //}
         }
 
         private ProductionSystem Production { get; set; }
@@ -40,9 +38,6 @@ namespace TradeCity.Engine.Session
         {
             Clock.Instance.Register(this);
         }
-
-        public event Action<Resource> OnResourceChange;
-
 
         public IEnumerable<Resource> GetAllRes()
         {
@@ -74,6 +69,7 @@ namespace TradeCity.Engine.Session
         {
             _owned.Add(structure);
             structure.Acquire(this);
+            _eventBus.Invoke(new StructureAcquired(this, structure));
         }
 
         public List<Building> GetAllBuildings()
@@ -130,7 +126,7 @@ namespace TradeCity.Engine.Session
         public void SubRes(Resource resource)
         {
             _ownedResources[resource.GetType()] -= resource;
-            OnResourceChange?.Invoke(resource.GetNewResource(-resource.GetStock()));
+            _eventBus.Invoke(new OnResourceChanged(this, resource, -resource.GetStock()));
         }
 
         public void SubRes(List<Resource> resources)
@@ -150,7 +146,7 @@ namespace TradeCity.Engine.Session
 
         public void GiveRes(Resource resource)
         {
-            OnResourceChange?.Invoke(resource);
+            _eventBus.Invoke(new OnResourceChanged(this, resource, resource.GetStock()));
             _ownedResources[resource.GetType()] += resource;
         }
 
@@ -198,15 +194,15 @@ namespace TradeCity.Engine.Session
             public Player OwnerPlayer { get; }
         }
 
-        public sealed class OnStructureAcquired : IEvent
+        public sealed class StructureAcquired : IEvent
         {
-            public OnStructureAcquired(Player ownerPlayer, Structure acquiredStructure)
+            public StructureAcquired(Player ownerPlayer, IOwnable acquiredStructure)
             {
                 OwnerPlayer = ownerPlayer;
                 AcquiredStructure = acquiredStructure;
             }
 
-            public Structure AcquiredStructure { get; }
+            public IOwnable AcquiredStructure { get; }
             public Player OwnerPlayer { get; }
         }
     }

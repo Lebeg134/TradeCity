@@ -42,7 +42,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
             _buildingName.text = _target.GetName();
 
-            var loadedSprite = Resources.Load<Sprite>(_target.GetResourcepath());
+            var loadedSprite = Resources.Load<Sprite>(_target.GetResourcePath());
             if (loadedSprite != null)
                 _buildingImage.sprite = loadedSprite;
 

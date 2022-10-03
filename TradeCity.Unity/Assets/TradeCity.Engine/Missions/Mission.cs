@@ -1,4 +1,6 @@
 ﻿using System;
+using AutSoft.UnitySupplements.EventBus;
+using Injecter;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.TimeManager;
 
@@ -7,6 +9,8 @@ namespace TradeCity.Engine.Missions
     [Serializable]
     public class Mission : ITickable
     {
+        [Inject] protected readonly IEventBus _eventBus = default!;
+
         private readonly IAchievable _goal;
         private readonly IRewardable _reward;
         private bool _isAchieved;
@@ -38,11 +42,7 @@ namespace TradeCity.Engine.Missions
         {
             Check();
         }
-
-        public event Action OnProgress;
-        public event Action OnAchievement;
-        public event Action OnClaim;
-
+        
         public float CheckStatus()
         {
             return _goal.CheckStatus();
@@ -54,7 +54,7 @@ namespace TradeCity.Engine.Missions
 
             _reward.Reward(_owner);
             IsClaimed = true;
-            OnClaim?.Invoke();
+            _eventBus.Invoke(new MissionRewardClaimed(_owner, this));
         }
 
         public void Accept(Player by)
@@ -63,6 +63,7 @@ namespace TradeCity.Engine.Missions
             _goal.Accept(by);
             IsAccepted = true;
             Register();
+            _eventBus.Invoke(new MissionAccepted(_owner, this));
         }
 
         private void Check()
@@ -70,7 +71,50 @@ namespace TradeCity.Engine.Missions
             if (!IsAccepted || _isAchieved || !_goal.IsAchieved()) return;
 
             _isAchieved = true;
-            OnAchievement?.Invoke();
+            _eventBus.Invoke(new MissionFinished(this));
+        }
+
+        public sealed class MissionAccepted : IEvent
+        {
+            public MissionAccepted(Player ownerPlayer, Mission acceptedMission)
+            {
+                OwnerPlayer = ownerPlayer;
+                AcceptedMission = acceptedMission;
+            }
+
+            public Player OwnerPlayer { get; }
+            public Mission AcceptedMission { get; }
+        }
+
+        public sealed class MissionFinished : IEvent
+        {
+            public MissionFinished(Mission finishedMission)
+            {
+                FinishedMission = finishedMission;
+            }
+
+            public Mission FinishedMission { get; }
+        }
+
+        public sealed class MissionProgress : IEvent
+        {
+            public MissionProgress(Mission progressedMission)
+            {
+                ProgressedMission = progressedMission;
+            }
+
+            public Mission ProgressedMission { get; }
+        }
+
+        public sealed class MissionRewardClaimed : IEvent
+        {
+            public MissionRewardClaimed(Player acceptedByPlayer, Mission claimedMission)
+            {
+                AcceptedByPlayer = acceptedByPlayer;
+                ClaimedMission = claimedMission;
+            }
+            public Player AcceptedByPlayer { get; }
+            public Mission ClaimedMission { get; }
         }
     }
 }

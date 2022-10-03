@@ -26,7 +26,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
             _nameText.text = Watched.GetName();
             _produceDisplay.Watched = Watched.GetProduce()[0]; //TODO if produces more than one!
 
-            var loadedSprite = Resources.Load<Sprite>(Watched.GetResourcepath());
+            var loadedSprite = Resources.Load<Sprite>(Watched.GetResourcePath());
             if (loadedSprite != null)
                 _sprite.sprite = loadedSprite;
         }

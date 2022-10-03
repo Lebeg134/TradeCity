@@ -35,7 +35,7 @@ namespace TradeCity.Units.Structures.Common
             return "Steel Forge";
         }
 
-        public override string GetResourcepath()
+        public override string GetResourcePath()
         {
             return GetBasePath() + "steel_forge";
         }

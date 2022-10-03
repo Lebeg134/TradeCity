@@ -2,6 +2,7 @@
 using AutSoft.UnitySupplements.Vitamins;
 using System.Collections.Generic;
 using System.Linq;
+using AutSoft.UnitySupplements.EventBus;
 using TMPro;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;

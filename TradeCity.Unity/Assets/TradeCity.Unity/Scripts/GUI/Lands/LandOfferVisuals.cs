@@ -42,7 +42,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
             _buildingName.text = Watched.GetName();
             _costDisplay.Watched = new Money(Price);
 
-            var loadedSprite = Resources.Load<Sprite>(Watched.GetResourcepath());
+            var loadedSprite = Resources.Load<Sprite>(Watched.GetResourcePath());
             if (loadedSprite != null)
                 _sprite.sprite = loadedSprite;
 

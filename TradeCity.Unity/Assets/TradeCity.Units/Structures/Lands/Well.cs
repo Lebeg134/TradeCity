@@ -14,7 +14,7 @@ namespace TradeCity.Units.Structures.Lands
             return "Pumping Station";
         }
 
-        public override string GetResourcepath()
+        public override string GetResourcePath()
         {
             return GetBasePath() + "Well";
         }

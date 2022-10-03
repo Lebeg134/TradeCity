@@ -35,7 +35,7 @@ namespace TradeCity.Units.Structures.EnergySector
             return "Coal Powerplant";
         }
 
-        public override string GetResourcepath()
+        public override string GetResourcePath()
         {
             return GetBasePath() + "coal_powerplant";
         }

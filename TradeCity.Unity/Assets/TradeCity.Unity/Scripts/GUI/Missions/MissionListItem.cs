@@ -1,14 +1,19 @@
 #nullable enable
+using AutSoft.UnitySupplements.EventBus;
 using AutSoft.UnitySupplements.Vitamins;
+using Injecter;
 using TMPro;
 using TradeCity.Engine.Missions;
 using UnityEngine;
 using UnityEngine.UI;
+using static TradeCity.Engine.Missions.Mission;
 
 namespace TradeCity.Unity.Scripts.GUI.Missions
 {
     public class MissionListItem : MonoBehaviour
     {
+        [Inject] private IEventBus _eventBus = default!;
+
         [SerializeField] private Slider _progressBar = default!;
         [SerializeField] private Button _claimButton = default!;
         [SerializeField] private TMP_Text _text = default!;
@@ -22,6 +27,8 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
             this.CheckSerializedField(_claimButton, nameof(_claimButton));
             this.CheckSerializedField(_text, nameof(_text));
             this.CheckSerializedField(_buttonText, nameof(_buttonText));
+
+            _eventBus.SubscribeWeak<MissionFinished>(this, OnMissionFinished);
         }
 
         private void Update()
@@ -33,7 +40,6 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
         public void SetWatched(Mission mission)
         {
             _watched = mission;
-            mission.OnAchievement += UpdateButton;
             _text.text = _watched.Text;
             _claimButton.onClick.RemoveAllListeners();
             _claimButton.onClick.AddListener(ClaimClick);
@@ -72,6 +78,11 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
                 _progressBar.value = _watched?.CheckStatus() ?? 0;
             }
             UpdateButton();
+        }
+        
+        private void OnMissionFinished(MissionFinished message)
+        {
+            UpdateVisuals();
         }
     }
 }

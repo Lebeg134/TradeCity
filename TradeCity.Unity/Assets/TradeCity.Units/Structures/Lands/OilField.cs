@@ -15,7 +15,7 @@ namespace TradeCity.Units.Structures.Lands
             return "Oil Field";
         }
 
-        public override string GetResourcepath()
+        public override string GetResourcePath()
         {
             return GetBasePath() + "OilField";
         }

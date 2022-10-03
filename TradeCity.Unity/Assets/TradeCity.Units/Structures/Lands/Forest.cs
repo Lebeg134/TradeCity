@@ -43,7 +43,7 @@ namespace TradeCity.Units.Structures.Lands
             return "Forest";
         }
 
-        public override string GetResourcepath()
+        public override string GetResourcePath()
         {
             return GetBasePath() + "Forest";
         }

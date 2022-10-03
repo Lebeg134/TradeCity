@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using AutSoft.UnitySupplements.EventBus;
+using Injecter;
 using TradeCity.Engine.Missions;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.TimeManager;
@@ -12,6 +14,8 @@ namespace TradeCity.Engine.Session
     [Serializable]
     public class Session : ITickable
     {
+        [Inject] private IEventBus _eventBus = default!;
+
         public static readonly string Filename = "save.dat";
         private static Session _instance;
         private readonly List<Player> _players;
@@ -54,6 +58,7 @@ namespace TradeCity.Engine.Session
             _instance = this;
             Clock.Instance.Start();
             Running = true;
+            _eventBus.Invoke(new SessionStarted(this));
         }
 
         public static void Save()
@@ -99,6 +104,16 @@ namespace TradeCity.Engine.Session
             player.GoBankrupt();
             _players.Remove(player);
             // TODO Remove ownerships?
+        }
+
+        public sealed class SessionStarted : IEvent
+        {
+            public SessionStarted(Session startedSession)
+            {
+                StartedSession = startedSession;
+            }
+
+            public Session StartedSession { get; }
         }
     }
 }

@@ -15,7 +15,7 @@ namespace TradeCity.Units.Structures.Lands
             return "Coal Mine";
         }
 
-        public override string GetResourcepath()
+        public override string GetResourcePath()
         {
             return GetBasePath() + "CoalMine";
         }

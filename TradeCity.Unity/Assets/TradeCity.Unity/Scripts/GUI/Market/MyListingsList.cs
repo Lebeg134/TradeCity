@@ -1,15 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using AutSoft.UnitySupplements.EventBus;
+using System.Collections.Generic;
+using Injecter;
 using TradeCity.Engine.Market;
 using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.GUI.Market
 {
-    internal class MyListingsList : SimpleList<SpListing, ListingItemVisual>
+    public class MyListingsList : SimpleList<SpListing, ListingItemVisual>
     {
+        [Inject] private readonly IEventBus _eventBus = default!;
+
         protected override void Start()
         {
             base.Start();
-            SpMarket.NotifySubscribers += Refresh;
+            _eventBus.SubscribeWeak<SpMarket.ListingRegistered>(this, (message)=> Refresh());
         }
 
         protected override IEnumerable<SpListing> GetCollection()

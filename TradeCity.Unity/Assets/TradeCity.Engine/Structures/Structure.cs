@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using AutSoft.UnitySupplements.EventBus;
+using Injecter;
+using TradeCity.Engine.Session;
 using TradeCity.Units;
 
 namespace TradeCity.Engine.Structures
@@ -8,6 +10,7 @@ namespace TradeCity.Engine.Structures
     [Serializable]
     public abstract class Structure : IEqualityComparer<Structure>
     {
+        [Inject] protected readonly IEventBus _eventBus = default!;
         protected bool _isOn = true;
 
         public bool IsOn
@@ -32,31 +35,24 @@ namespace TradeCity.Engine.Structures
             return obj.GetType().GetHashCode();
         }
 
-        public event Action<Structure> OnTurnOn;
-        public event Action<Structure> OnTurnOff;
-
         public virtual void On()
         {
-            if (!_isOn)
-            {
-                _isOn = true;
-                OnTurnOn?.Invoke(this);
-            }
+            if (_isOn) return;
+            _isOn = true;
+            _eventBus.Invoke( new StructureStateChanged(this, _isOn));
         }
 
         public virtual void Off()
         {
-            if (_isOn)
-            {
-                _isOn = false;
-                OnTurnOff?.Invoke(this);
-            }
+            if (!_isOn) return;
+            _isOn = false;
+            _eventBus.Invoke(new StructureStateChanged(this, _isOn));
         }
 
         public abstract string GetName();
         public abstract Branches GetBranch();
 
-        public virtual string GetResourcepath()
+        public virtual string GetResourcePath()
         {
             return "Structure/Default";
         }
@@ -66,7 +62,7 @@ namespace TradeCity.Engine.Structures
             return "Structure/";
         }
 
-        public sealed class StructureStateChanged : IEvent
+        public class StructureStateChanged : IEvent
         {
             public StructureStateChanged(Structure subject, bool newState)
             {

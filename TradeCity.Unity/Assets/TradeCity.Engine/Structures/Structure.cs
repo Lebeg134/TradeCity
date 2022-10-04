@@ -11,6 +11,7 @@ namespace TradeCity.Engine.Structures
     public abstract class Structure : IEqualityComparer<Structure>
     {
         [Inject] protected readonly IEventBus _eventBus = default!;
+
         protected bool _isOn = true;
 
         public bool IsOn

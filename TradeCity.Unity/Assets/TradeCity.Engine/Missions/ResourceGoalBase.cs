@@ -1,4 +1,6 @@
 ﻿using System;
+using AutSoft.UnitySupplements.EventBus;
+using Injecter;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
 
@@ -7,6 +9,8 @@ namespace TradeCity.Engine.Missions
     [Serializable]
     public abstract class ResourceGoalBase : IAchievable
     {
+        [Inject] protected readonly IEventBus _eventBus = default!;
+
         private bool _achieved;
         protected Player _player;
         protected Resource _watched;
@@ -36,7 +40,8 @@ namespace TradeCity.Engine.Missions
 
         public void RegisterToEvents()
         {
-            _player.OnResourceChange += OnResourceChange;
+            _eventBus.Subscribe<Player.ResourceChanged>(HandleResourceEvent);
+            //TODO unsubscribe!!
         }
 
         public void Accept(Player by)
@@ -50,6 +55,12 @@ namespace TradeCity.Engine.Missions
         protected void InvokeOnAchieve()
         {
             OnAchieve?.Invoke();
+        }
+
+        protected virtual void HandleResourceEvent(Player.ResourceChanged message)
+        {
+            if (_player != message.OwnerPlayer) return;
+            OnResourceChange(message.ChangedResource);
         }
 
         public abstract void OnResourceChange(Resource resource);

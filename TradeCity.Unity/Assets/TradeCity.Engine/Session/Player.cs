@@ -15,7 +15,7 @@ namespace TradeCity.Engine.Session
     [Serializable]
     public partial class Player : ITickable
     {
-        [Inject] private IEventBus _eventBus = default!;
+        [Inject] private readonly IEventBus _eventBus = default!;
 
         private readonly List<IOwnable> _owned = new();
         private readonly Dictionary<Type, Resource> _ownedResources = new();
@@ -24,6 +24,7 @@ namespace TradeCity.Engine.Session
         public Player()
         {
             _playerStrategy = new StandardPlayerStrategy(this);
+            
         }
 
         private ProductionSystem Production { get; set; }
@@ -126,7 +127,7 @@ namespace TradeCity.Engine.Session
         public void SubRes(Resource resource)
         {
             _ownedResources[resource.GetType()] -= resource;
-            _eventBus.Invoke(new OnResourceChanged(this, resource, -resource.GetStock()));
+            _eventBus.Invoke(new ResourceChanged(this, resource, -resource.GetStock()));
         }
 
         public void SubRes(List<Resource> resources)
@@ -146,7 +147,7 @@ namespace TradeCity.Engine.Session
 
         public void GiveRes(Resource resource)
         {
-            _eventBus.Invoke(new OnResourceChanged(this, resource, resource.GetStock()));
+            _eventBus.Invoke(new ResourceChanged(this, resource, resource.GetStock()));
             _ownedResources[resource.GetType()] += resource;
         }
 
@@ -180,9 +181,9 @@ namespace TradeCity.Engine.Session
             _playerStrategy.GoBankrupt();
         }
 
-        public sealed class OnResourceChanged: IEvent
+        public sealed class ResourceChanged: IEvent
         {
-            public OnResourceChanged(Player ownerPlayer, Resource changedResource, int changeAmount)
+            public ResourceChanged(Player ownerPlayer, Resource changedResource, int changeAmount)
             {
                 OwnerPlayer = ownerPlayer;
                 ChangedResource = changedResource;

@@ -1,4 +1,5 @@
 ﻿using System;
+using TradeCity.Engine.Core;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.TimeManager;
@@ -15,6 +16,11 @@ namespace TradeCity.Engine.Market
         {
             Sell = sellable;
             Above = sellAbove;
+        }
+
+        ~SpListing()
+        {
+            EngineCore.Instance.RemoveTickable(this);
         }
 
         public Resource Sell
@@ -38,7 +44,7 @@ namespace TradeCity.Engine.Market
 
         public void Register()
         {
-            Clock.Instance.Register(this);
+            EngineCore.Instance.RegisterTickable(this);
         }
 
         public void Complete(bool throws = false)

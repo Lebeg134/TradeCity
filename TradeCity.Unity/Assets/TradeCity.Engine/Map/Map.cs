@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Core;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.TimeManager;
@@ -23,6 +24,11 @@ namespace TradeCity.Engine.Map
             Register();
         }
 
+        ~Map()
+        {
+            EngineCore.Instance.RemoveTickable(this);
+        }
+
         public void Tick()
         {
             foreach (var auction in _liveAuctions) auction.Tick();
@@ -30,7 +36,7 @@ namespace TradeCity.Engine.Map
 
         public void Register()
         {
-            Clock.Instance.Register(this);
+            EngineCore.Instance.RegisterTickable(this);
         }
 
         public IMapStructure GetStructure(int x, int y)

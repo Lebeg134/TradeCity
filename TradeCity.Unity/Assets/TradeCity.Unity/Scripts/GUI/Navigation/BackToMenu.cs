@@ -1,3 +1,5 @@
+using Injecter;
+using TradeCity.Engine.Core;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.TimeManager;
 using UnityEngine;
@@ -9,11 +11,19 @@ namespace TradeCity.Unity.Scripts.GUI.Navigation
     [RequireComponent(typeof(Button))]
     public class BackToMenu : MonoBehaviour
     {
+        [Inject]
+        private IClock _clock;
+
+        private void Awake()
+        {
+            _clock = EngineCore.Instance.InjectClock();
+        }
+
         private void Start()
         {
             GetComponent<Button>().onClick.AddListener(() =>
             {
-                Clock.Instance.Pause();
+                _clock.Pause();
                 Session.Save();
                 SceneManager.LoadScene(sceneName: "MainMenu");
             });
@@ -21,7 +31,7 @@ namespace TradeCity.Unity.Scripts.GUI.Navigation
 
         private void OnApplicationQuit()
         {
-            Clock.Instance.Pause();
+            _clock.Pause();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using AutSoft.UnitySupplements.EventBus;
 using Injecter;
+using TradeCity.Engine.Core;
 using TradeCity.Engine.Missions;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.TimeManager;
@@ -14,7 +15,8 @@ namespace TradeCity.Engine.Session
     [Serializable]
     public class Session : ITickable
     {
-        [Inject] private IEventBus _eventBus = default!;
+        [Inject] private readonly IEventBus _eventBus;
+        [Inject] private readonly IClock _clock;
 
         public static readonly string Filename = "save.dat";
         private static Session _instance;
@@ -25,6 +27,8 @@ namespace TradeCity.Engine.Session
 
         public Session()
         {
+            _eventBus = EngineCore.Instance.InjectEventBus();
+            _clock = EngineCore.Instance.InjectClock();
             Register();
             _players = new List<Player>();
         }
@@ -50,13 +54,13 @@ namespace TradeCity.Engine.Session
 
         public void Register()
         {
-            Clock.Instance.Register(this);
+            _clock.Register(this);
         }
 
         public void Start()
         {
             _instance = this;
-            Clock.Instance.Start();
+            _clock.Start();
             Running = true;
             _eventBus.Invoke(new SessionStarted(this));
         }
@@ -74,15 +78,15 @@ namespace TradeCity.Engine.Session
             return File.Exists(Filename);
         }
 
-        public static void Load()
+        public void Load()
         {
             Stream stream = File.OpenRead(Filename);
             BinaryFormatter b = new();
             _instance = (Session)b.Deserialize(stream);
             stream.Close();
             CurrentPlayer = Instance._players[0]; // TODO need to change when multiple players
-            Clock.Instance.Clear();
-            Clock.Instance.Register(Instance);
+            _clock.Clear();
+            _clock.Register(Instance);
         }
 
         public void Login(Player player)

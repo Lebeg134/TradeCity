@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using AutSoft.UnitySupplements.EventBus;
 using Injecter;
+using TradeCity.Engine.Core;
 using TradeCity.Engine.TimeManager;
 
 namespace TradeCity.Engine.Market
@@ -34,7 +35,7 @@ namespace TradeCity.Engine.Market
         public void RemoveListing(SpListing listing)
         {
             Listings.Remove(listing);
-            Clock.Instance.UnRegister(listing);
+            EngineCore.Instance.RemoveTickable(listing);
             _eventBus.Invoke(new ListingRegistered(listing));
         }
 

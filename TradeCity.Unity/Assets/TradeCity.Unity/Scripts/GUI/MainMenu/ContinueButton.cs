@@ -27,7 +27,7 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
         {
             try
             {
-                Session.Load();
+                Session.Instance.Load();
                 SceneManager.LoadScene(sceneName: "GameScene");
                 Session.Instance.Start();
             }

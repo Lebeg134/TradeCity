@@ -1,46 +1,32 @@
+#nullable enable
 using AutSoft.UnitySupplements.EventBus;
 using System.Collections.Generic;
 using System.Linq;
 using System.Timers;
 using Injecter;
+using TradeCity.Engine.Core;
 
 namespace TradeCity.Engine.TimeManager
 {
-    public class Clock
+    public class Clock : IClock
     {
-        [Inject] private IEventBus _eventBus = default!;
-
-        private static Clock _instance = new();
+        [Inject] 
+        private readonly IEventBus _eventBus;
+        
         private readonly List<ITickable> _tickables = new();
 
         private readonly Timer _timer = new();
         private int _interval = (int)Speed.Normal;
 
-        static Clock()
+        public bool IsEnabled => _timer.Enabled;
+        
+        public Clock()
         {
-        }
-
-        private Clock()
-        {
+            _eventBus = EngineCore.Instance.InjectEventBus();
             _timer.Interval = _interval;
             _timer.Elapsed += Tick;
         }
-
-        public static Clock Instance
-        {
-            get => _instance;
-            set
-            {
-                _instance = new Clock();
-                foreach (var tickable in value._tickables.Where(tickable => tickable != null))
-                    _instance.Register(tickable);
-            }
-        }
-
-        public void Initialize()
-        {
-        }
-
+        
         public void Start()
         {
             _timer.Enabled = true;
@@ -76,16 +62,12 @@ namespace TradeCity.Engine.TimeManager
             _tickables.Add(tickable);
         }
 
-        public void UnRegister(ITickable tickable)
+        public void Remove(ITickable tickable)
         {
+            if (!_tickables.Contains((tickable))) return;
             _tickables.Remove(tickable);
         }
-
-        public bool IsEnabled()
-        {
-            return _timer.Enabled;
-        }
-
+        
         public void Clear()
         {
             _tickables.Clear();

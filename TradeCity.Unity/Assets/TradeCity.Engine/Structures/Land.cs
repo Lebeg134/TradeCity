@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
+using TradeCity.Engine.Core;
 using TradeCity.Engine.Map;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures.Interfaces;
-using TradeCity.Engine.TimeManager;
 using TradeCity.Units;
 
 namespace TradeCity.Engine.Structures
@@ -13,11 +13,9 @@ namespace TradeCity.Engine.Structures
     public abstract class Land : CommonStructure, ILand, IMapStructure
     {
         private const int DefaultMaxLevel = 100;
-
-        // ========== Public events
+        
         public event Action<Land> OnPurchase;
-
-        // ========== Interface Implementations
+        
         public override void Acquire(Player by)
         {
             base.Acquire(by);
@@ -36,7 +34,7 @@ namespace TradeCity.Engine.Structures
 
         public void Register()
         {
-            Clock.Instance.Register(this);
+            EngineCore.Instance.RegisterTickable(this);
         }
 
         public void Tick()
@@ -68,8 +66,7 @@ namespace TradeCity.Engine.Structures
             //TODO replace!!
             return 100;
         }
-
-        // ========== Abstract method implementations
+        
         protected override int GetMaxLevel()
         {
             return DefaultMaxLevel;
@@ -80,8 +77,7 @@ namespace TradeCity.Engine.Structures
             //TODO replace!!
             throw new NotImplementedException();
         }
-
-        // ========== Internal Methods
+        
         protected abstract List<Resource> GetProduce(int level);
 
         protected override string GetBasePath()

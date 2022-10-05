@@ -1,6 +1,7 @@
 ﻿using System;
 using AutSoft.UnitySupplements.EventBus;
 using Injecter;
+using TradeCity.Engine.Core;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.TimeManager;
 
@@ -25,7 +26,11 @@ namespace TradeCity.Engine.Missions
             _owner = owner;
             if (owner != null) Accept(owner);
         }
-        //Enum state? Strategy?
+
+        ~Mission()
+        {
+            EngineCore.Instance.RemoveTickable(this);
+        }
 
         public string Text => _goal.Text;
         public bool IsAccepted { get; private set; }
@@ -35,7 +40,7 @@ namespace TradeCity.Engine.Missions
 
         public void Register()
         {
-            Clock.Instance.Register(this);
+            EngineCore.Instance.RegisterTickable(this);
         }
 
         public void Tick()

@@ -1,4 +1,6 @@
 using AutSoft.UnitySupplements.Vitamins;
+using Injecter;
+using TradeCity.Engine.Core;
 using TradeCity.Engine.TimeManager;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,14 +9,16 @@ namespace TradeCity.Unity.Scripts.GUI
 {
     public class TimeControlButton : MonoBehaviour
     {
-        [SerializeField] private Sprite _play;
-        [SerializeField] private Sprite _pause;
-        [SerializeField] private Image _icon;
-        [SerializeField] private Button _button;
-        [SerializeField] private Color _playColor;
-        [SerializeField] private Color _pauseColor;
-        private Clock _clock;
+        [Inject]
+        private IClock _clock;
 
+        [SerializeField] private Sprite _play = default!;
+        [SerializeField] private Sprite _pause = default!;
+        [SerializeField] private Image _icon = default!;
+        [SerializeField] private Button _button = default!;
+        [SerializeField] private Color _playColor = default!;
+        [SerializeField] private Color _pauseColor = default!;
+        
         private void Awake()
         {
             this.CheckSerializedField(_play, nameof(_play));
@@ -25,7 +29,7 @@ namespace TradeCity.Unity.Scripts.GUI
 
         private void Start()
         {
-            _clock = Clock.Instance;
+            _clock = EngineCore.Instance.InjectClock();
             _button.onClick.AddListener(Toggle);
         }
 
@@ -46,7 +50,7 @@ namespace TradeCity.Unity.Scripts.GUI
 
         private void UpdateVisuals()
         {
-            if (_clock.IsEnabled())
+            if (_clock.IsEnabled)
             {
                 _icon.sprite = _pause;
                 _button.image.color = _pauseColor;

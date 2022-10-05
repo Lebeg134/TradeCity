@@ -4,6 +4,7 @@ using System.Linq;
 using AutSoft.UnitySupplements.EventBus;
 using Injecter;
 using PlasticGui.WorkspaceWindow;
+using TradeCity.Engine.Core;
 using TradeCity.Engine.Production;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Structures;
@@ -24,7 +25,11 @@ namespace TradeCity.Engine.Session
         public Player()
         {
             _playerStrategy = new StandardPlayerStrategy(this);
-            
+        }
+
+        ~Player()
+        {
+            EngineCore.Instance.RemoveTickable(this);
         }
 
         private ProductionSystem Production { get; set; }
@@ -37,7 +42,7 @@ namespace TradeCity.Engine.Session
 
         public void Register()
         {
-            Clock.Instance.Register(this);
+            EngineCore.Instance.RegisterTickable(this);
         }
 
         public IEnumerable<Resource> GetAllRes()
@@ -50,16 +55,15 @@ namespace TradeCity.Engine.Session
             return _owned.Any(ownable => ownable.GetType() == structure.GetType());
         }
 
-        public bool CheckStructures(List<IOwnable> structures, bool throwException = false)
+        public bool CheckStructures(IEnumerable<IOwnable> structures, bool throwException = false)
         {
             var valid = true;
             List<IOwnable> missingStructures = new();
-            foreach (var ownable in structures)
-                if (!HasStructure(ownable))
-                {
-                    valid = false;
-                    missingStructures.Add(ownable);
-                }
+            foreach (var ownable in structures.Where(ownable => !HasStructure(ownable)))
+            {
+                valid = false;
+                missingStructures.Add(ownable);
+            }
 
             if (!valid && throwException)
                 throw new Exception();

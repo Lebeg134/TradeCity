@@ -1,5 +1,6 @@
 ﻿using AutSoft.UnitySupplements.EventBus;
 using SimpleInjector;
+using TradeCity.Engine.TimeManager;
 
 namespace TradeCity.Engine.Core
 {
@@ -19,8 +20,17 @@ namespace TradeCity.Engine.Core
 
             //Register services here
             _container.Register<IEventBus, SimpleEventBus>();
+            _container.Register<IClock, Clock>(); //TODO possible Error!
 
             _container.Verify();
         }
+
+        public void RegisterTickable(ITickable tickable) => _container.GetInstance<IClock>().Register(tickable);
+
+        public void RemoveTickable(ITickable tickable) => _container.GetInstance<IClock>().Remove(tickable);
+
+        public IEventBus InjectEventBus() => _container.GetInstance<IEventBus>();
+
+        public IClock InjectClock() => _container.GetInstance<IClock>();
     }
 }

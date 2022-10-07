@@ -3,6 +3,7 @@ using AutSoft.UnitySupplements.EventBus;
 using AutSoft.UnitySupplements.Vitamins;
 using Injecter;
 using TMPro;
+using TradeCity.Engine.Core;
 using TradeCity.Engine.Missions;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,6 +24,8 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
 
         private void Awake()
         {
+            _eventBus = EngineCore.Instance.InjectEventBus();
+
             this.CheckSerializedField(_progressBar, nameof(_progressBar));
             this.CheckSerializedField(_claimButton, nameof(_claimButton));
             this.CheckSerializedField(_text, nameof(_text));

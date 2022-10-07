@@ -10,7 +10,7 @@ namespace TradeCity.Engine.Missions
     [Serializable]
     public class Mission : ITickable
     {
-        [Inject] protected readonly IEventBus _eventBus = default!;
+        [Inject] protected readonly IEventBus _eventBus;
 
         private readonly IAchievable _goal;
         private readonly IRewardable _reward;
@@ -20,6 +20,7 @@ namespace TradeCity.Engine.Missions
 
         public Mission(IAchievable goal, IRewardable reward, Player owner = null)
         {
+            _eventBus = EngineCore.Instance.InjectEventBus();
             _goal = goal;
             _reward = reward;
             goal.OnAchieve += Check;

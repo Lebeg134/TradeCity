@@ -1,6 +1,7 @@
 ﻿using System;
 using AutSoft.UnitySupplements.EventBus;
 using Injecter;
+using TradeCity.Engine.Core;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
 
@@ -9,7 +10,7 @@ namespace TradeCity.Engine.Missions
     [Serializable]
     public abstract class ResourceGoalBase : IAchievable
     {
-        [Inject] protected readonly IEventBus _eventBus = default!;
+        [Inject] protected readonly IEventBus _eventBus;
 
         private bool _achieved;
         protected Player _player;
@@ -17,6 +18,7 @@ namespace TradeCity.Engine.Missions
 
         protected ResourceGoalBase(Resource watched, Player player = null)
         {
+            _eventBus = EngineCore.Instance.InjectEventBus();
             _watched = watched;
             if (player != null)
                 Accept(player);

@@ -8,7 +8,7 @@ namespace TradeCity.Engine.Market
 {
     public class SpMarket
     {
-        [Inject] private readonly IEventBus _eventBus = default!;
+        [Inject] private readonly IEventBus _eventBus;
         
         private static SpMarket _instance;
 
@@ -21,6 +21,11 @@ namespace TradeCity.Engine.Market
                 return _instance;
             }
             set => _instance = value;
+        }
+
+        private SpMarket()
+        {
+            _eventBus = EngineCore.Instance.InjectEventBus();
         }
 
         public List<SpListing> Listings { get; } = new();

@@ -24,9 +24,9 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
 
         private static void StartGame()
         {
-            SceneManager.LoadScene(sceneName: "GameScene");
             var session = SessionGenerator.GenerateStandard();
             session.Start();
+            SceneManager.LoadScene(sceneName: "GameScene");
         }
     }
 }

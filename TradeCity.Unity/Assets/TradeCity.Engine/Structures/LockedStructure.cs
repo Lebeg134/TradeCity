@@ -8,7 +8,7 @@ namespace TradeCity.Engine.Structures
     {
         private readonly Structure _subject;
 
-        private LockedStructure(Structure subject)
+        public LockedStructure(Structure subject)
         {
             subject.Off();
             _subject = subject;

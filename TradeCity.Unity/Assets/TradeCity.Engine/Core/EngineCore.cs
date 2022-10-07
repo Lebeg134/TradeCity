@@ -1,4 +1,6 @@
 ﻿using AutSoft.UnitySupplements.EventBus;
+using Injecter;
+using Microsoft.Extensions.DependencyInjection;
 using SimpleInjector;
 using TradeCity.Engine.TimeManager;
 
@@ -11,26 +13,28 @@ namespace TradeCity.Engine.Core
         {
             get { return _instance ??= new EngineCore(); }
         }
-
-        private readonly Container _container;
+        
 
         private EngineCore()
         {
-            _container = new Container();
 
-            //Register services here
-            _container.Register<IEventBus, SimpleEventBus>();
-            _container.Register<IClock, Clock>(); //TODO possible Error!
+            IServiceCollection services = new ServiceCollection();
 
-            _container.Verify();
+            services.AddLogging();
+            services.AddEventBus();
+            services.AddSingleton<IClock, Clock>();
+
+
+            CompositionRoot.ServiceProvider = services.BuildServiceProvider();
+            
         }
 
-        public void RegisterTickable(ITickable tickable) => _container.GetInstance<IClock>().Register(tickable);
+        public void RegisterTickable(ITickable tickable) => ((IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock))).Register(tickable);
 
-        public void RemoveTickable(ITickable tickable) => _container.GetInstance<IClock>().Remove(tickable);
+        public void RemoveTickable(ITickable tickable) => ((IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock))).Remove(tickable);
 
-        public IEventBus InjectEventBus() => _container.GetInstance<IEventBus>();
+        public IEventBus InjectEventBus() => (IEventBus)CompositionRoot.ServiceProvider!.GetService(typeof(IEventBus));
 
-        public IClock InjectClock() => _container.GetInstance<IClock>();
+        public IClock InjectClock() => (IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock));
     }
 }

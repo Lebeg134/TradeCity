@@ -21,6 +21,8 @@ namespace TradeCity.Unity.Scripts.GUI
         
         private void Awake()
         {
+            _clock = EngineCore.Instance.InjectClock();
+
             this.CheckSerializedField(_play, nameof(_play));
             this.CheckSerializedField(_pause, nameof(_pause));
             this.CheckSerializedField(_icon, nameof(_icon));

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using AutSoft.UnitySupplements.EventBus;
 using Injecter;
+using TradeCity.Engine.Core;
 using TradeCity.Engine.Session;
 using TradeCity.Units;
 
@@ -10,7 +11,7 @@ namespace TradeCity.Engine.Structures
     [Serializable]
     public abstract class Structure : IEqualityComparer<Structure>
     {
-        [Inject] protected readonly IEventBus _eventBus = default!;
+        [Inject] protected readonly IEventBus _eventBus;
 
         protected bool _isOn = true;
 
@@ -24,6 +25,11 @@ namespace TradeCity.Engine.Structures
                 else
                     Off();
             }
+        }
+
+        public Structure()
+        {
+            _eventBus = EngineCore.Instance.InjectEventBus();
         }
 
         public virtual bool Equals(Structure x, Structure y)

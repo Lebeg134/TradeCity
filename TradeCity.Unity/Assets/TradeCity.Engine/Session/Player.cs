@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using AutSoft.UnitySupplements.EventBus;
 using Injecter;
-using PlasticGui.WorkspaceWindow;
 using TradeCity.Engine.Core;
 using TradeCity.Engine.Production;
 using TradeCity.Engine.Resources;
@@ -16,7 +15,7 @@ namespace TradeCity.Engine.Session
     [Serializable]
     public partial class Player : ITickable
     {
-        [Inject] private readonly IEventBus _eventBus = default!;
+        [Inject] private readonly IEventBus _eventBus;
 
         private readonly List<IOwnable> _owned = new();
         private readonly Dictionary<Type, Resource> _ownedResources = new();
@@ -24,6 +23,7 @@ namespace TradeCity.Engine.Session
 
         public Player()
         {
+            _eventBus = EngineCore.Instance.InjectEventBus();
             _playerStrategy = new StandardPlayerStrategy(this);
         }
 

@@ -25,6 +25,17 @@ public static partial class ResourcePaths
 
         }
 
+        public static partial class Materials
+        {
+
+            public const string LiberationSansSDF_DropShadow = "Fonts & Materials/LiberationSans SDF - Drop Shadow";
+            public static Material LoadLiberationSansSDF_DropShadow() => Resources.Load<Material>(LiberationSansSDF_DropShadow);
+
+            public const string LiberationSansSDF_Outline = "Fonts & Materials/LiberationSans SDF - Outline";
+            public static Material LoadLiberationSansSDF_Outline() => Resources.Load<Material>(LiberationSansSDF_Outline);
+
+        }
+
         public static partial class Sprites
         {
 
@@ -512,6 +523,12 @@ public static partial class ResourcePaths
 
             public const string license = "Gameicons/license";
             public static TextAsset Loadlicense() => Resources.Load<TextAsset>(license);
+
+            public const string LineBreakingFollowingCharacters = "LineBreaking Following Characters";
+            public static TextAsset LoadLineBreakingFollowingCharacters() => Resources.Load<TextAsset>(LineBreakingFollowingCharacters);
+
+            public const string LineBreakingLeadingCharacters = "LineBreaking Leading Characters";
+            public static TextAsset LoadLineBreakingLeadingCharacters() => Resources.Load<TextAsset>(LineBreakingLeadingCharacters);
 
             public const string sheet_black1x = "Gameicons/Spritesheet/sheet_black1x";
             public static TextAsset Loadsheet_black1x() => Resources.Load<TextAsset>(sheet_black1x);

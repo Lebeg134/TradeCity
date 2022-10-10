@@ -15,6 +15,7 @@ namespace TradeCity.Engine.Session
     [Serializable]
     public partial class Player : ITickable
     {
+        [NonSerialized]
         [Inject] private readonly IEventBus _eventBus;
 
         private readonly List<IOwnable> _owned = new();

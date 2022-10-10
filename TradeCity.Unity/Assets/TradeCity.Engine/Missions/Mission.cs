@@ -10,6 +10,7 @@ namespace TradeCity.Engine.Missions
     [Serializable]
     public class Mission : ITickable
     {
+        [NonSerialized]
         [Inject] protected readonly IEventBus _eventBus;
 
         private readonly IAchievable _goal;

@@ -10,6 +10,7 @@ namespace TradeCity.Engine.Missions
     [Serializable]
     public abstract class ResourceGoalBase : IAchievable
     {
+        [NonSerialized]
         [Inject] protected readonly IEventBus _eventBus;
 
         private bool _achieved;

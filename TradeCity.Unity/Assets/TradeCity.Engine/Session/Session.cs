@@ -15,7 +15,9 @@ namespace TradeCity.Engine.Session
     [Serializable]
     public class Session : ITickable
     {
+        [NonSerialized]
         [Inject] private readonly IEventBus _eventBus;
+        [NonSerialized]
         [Inject] private readonly IClock _clock;
 
         public static readonly string Filename = "save.dat";

@@ -11,6 +11,7 @@ namespace TradeCity.Engine.Structures
     [Serializable]
     public abstract class Structure : IEqualityComparer<Structure>
     {
+        [NonSerialized]
         [Inject] protected readonly IEventBus _eventBus;
 
         protected bool _isOn = true;

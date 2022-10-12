@@ -1,72 +1,143 @@
-﻿using AutSoft.UnitySupplements.Vitamins;
+﻿using System.Diagnostics.CodeAnalysis;
+using AutSoft.UnitySupplements.Vitamins;
 using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.CameraRig
 {
     [RequireComponent(typeof(Camera))]
-    public class CameraMovement: MonoBehaviour
+    public class CameraMovement : MonoBehaviour
     {
         [SerializeField] private GameObject _focusPointObject = default!;
-        [SerializeField] private Vector3 _maxMovementSpeed;
-        [SerializeField] private Vector3 _movementAcceleration;
-        [SerializeField] private float _maxRotationSpeed;
-        [SerializeField] private float _rotationAcceleration;
+        [SerializeField] private GameObject _cameraRigGameObject = default!;
+        [Header("Movement")]
+        [SerializeField] private float _maxMovementSpeed = default!;
+        [SerializeField] private float _movementAcceleration = default!;
+        [SerializeField] private float _turnRate = default!;
+        [SerializeField] private float _movementDeAcceleration = default;
+        [Header("Rotation")]
+        [SerializeField] private float _maxRotationSpeed = default!;
+        [SerializeField] private float _rotationAcceleration = default!;
+        [SerializeField] private float _rotationDeAcceleration = default!;
+        
+
 
         private Camera _camera;
-        private Vector3 _movementVelocity;
+        private Vector2 _movementVector;
+        private float _movementSpeed;
         private float _rotationVelocity;
 
         private void Awake()
         {
             _camera = GetComponent<Camera>();
             this.CheckSerializedField(_focusPointObject, nameof(_focusPointObject));
+            this.CheckSerializedField(_cameraRigGameObject, nameof(_cameraRigGameObject));
         }
 
         private void Update()
         {
-            if (Input.anyKey) HandleKeys();
+            HandleKeys();
+
+            _cameraRigGameObject.transform.position += Quaternion.Euler(0, _camera.transform.rotation.eulerAngles.y, 0) *
+                                                       new Vector3(_movementVector.x * _movementSpeed * Time.deltaTime,
+                                                              0, _movementVector.y * _movementSpeed * Time.deltaTime);
+            RotateAroundMiddle(_rotationVelocity);
         }
 
         private void HandleKeys()
         {
-            var offset = _camera.transform.forward;
-            offset.y = 0;
-            offset = offset.normalized* 0.01f;
+            var offset = _camera.transform.rotation;
 
-            const float defaultAngle = 0.1f;
+            var direction = new Vector2();
+
             if (Input.GetKey(KeyCode.W))
             {
-                _camera.transform.position += offset;
+                direction.y += 1;
             }
             if (Input.GetKey(KeyCode.S))
             {
-                _camera.transform.position -= offset;
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                _camera.transform.position += new Vector3(-offset.z, 0, offset.x);
+                direction.y -= 1;
             }
             if (Input.GetKey(KeyCode.D))
             {
-                _camera.transform.position -= new Vector3(-offset.z, 0, offset.x);
+                direction.x += 1;
             }
+            if (Input.GetKey(KeyCode.A))
+            {
+                direction.x -= 1;
+            }
+
+            if (direction.magnitude < float.Epsilon)
+            {
+                if (_movementSpeed < float.Epsilon)
+                {
+                    _movementSpeed = 0;
+                    _movementVector = new Vector2();
+                }
+                else
+                {
+                    _movementSpeed -= _movementDeAcceleration*Time.deltaTime;
+                    if (_movementSpeed < 0)
+                    {
+                        _movementSpeed = 0;
+                        _movementVector = new Vector2();
+                    }
+                }
+            }
+            else
+            {
+                _movementSpeed += _movementAcceleration * Time.deltaTime;
+                if (_movementSpeed > _maxMovementSpeed) _movementSpeed = _maxMovementSpeed;
+
+                _movementVector = Vector2.MoveTowards(_movementVector, direction.normalized, Time.deltaTime * _turnRate);
+            }
+
+            if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && 
+                !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
+            {
+                // nothing TODO remove this if not needed
+            }
+
+            
+
             if (Input.GetKey(KeyCode.Q))
             {
-                RotateAroundMiddle(defaultAngle);
+                _rotationVelocity += _rotationAcceleration * Time.deltaTime;
             }
             if (Input.GetKey(KeyCode.E))
             {
-                RotateAroundMiddle(-defaultAngle);
+                _rotationVelocity -= _rotationAcceleration * Time.deltaTime;
             }
+
+            if (!Input.GetKey(KeyCode.Q) && !Input.GetKey(KeyCode.E))
+            {
+                var abs = Mathf.Abs(_rotationVelocity);
+                var sign = Mathf.Sign(_rotationVelocity);
+                if (abs < float.Epsilon)
+                {
+                    _rotationVelocity = 0;
+                }
+                else
+                {
+                    _rotationVelocity -= _rotationDeAcceleration * Time.deltaTime * sign;
+                }
+
+                if (abs > Mathf.Abs(_rotationVelocity))
+                {
+                    _rotationVelocity = 0;
+                }
+            }
+
+            _rotationVelocity = _rotationVelocity > _maxRotationSpeed ? _maxRotationSpeed : _rotationVelocity;
+            _rotationVelocity = _rotationVelocity < -_maxRotationSpeed ? -_maxRotationSpeed : _rotationVelocity;
         }
 
         private void RotateAroundMiddle(float angle)
         {
-            var relative = _camera.transform.position - _focusPointObject.transform.up;
+            var relative = _camera.transform.position - _focusPointObject.transform.position;
             var rotation = Quaternion.Euler(new Vector3(0, angle, 0));
-            relative = rotation * relative;
-            _camera.transform.position =  relative + _focusPointObject.transform.position;
-            //_camera.transform.forward = rotation * _camera.transform.forward;
+
+            _camera.transform.position = rotation * relative + _focusPointObject.transform.position;
+            _camera.transform.eulerAngles = rotation.eulerAngles + _camera.transform.rotation.eulerAngles;
         }
     }
 }

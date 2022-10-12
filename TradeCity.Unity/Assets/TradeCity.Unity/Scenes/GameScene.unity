@@ -1609,7 +1609,7 @@ Transform:
   m_GameObject: {fileID: 324812951}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 383313806}
@@ -10079,10 +10079,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _focusPointObject: {fileID: 324812951}
-  _maxMovementSpeed: {x: 0, y: 0, z: 0}
-  _movementAcceleration: {x: 0, y: 0, z: 0}
-  _maxRotationSpeed: 0
-  _rotationAcceleration: 0
+  _cameraRigGameObject: {fileID: 383313805}
+  _maxMovementSpeed: 10
+  _movementAcceleration: 25
+  _turnRate: 1
+  _movementDeAcceleration: 25
+  _maxRotationSpeed: 0.4
+  _rotationAcceleration: 8
+  _rotationDeAcceleration: 1
 --- !u!1 &1732977621
 GameObject:
   m_ObjectHideFlags: 0

@@ -49,8 +49,8 @@ namespace TradeCity.Unity.Scripts.CameraRig
 
 
             _cameraRigGameObject.transform.position += Quaternion.Euler(0, _camera.transform.rotation.eulerAngles.y, 0) *
-                                                       new Vector3(_movementVector.x * _movementSpeed * Time.deltaTime,
-                                                              0, _movementVector.y * _movementSpeed * Time.deltaTime);
+                                                       new Vector3(_movementVector.x * _movementSpeed * _zoomScale * Time.deltaTime,
+                                                              0, _movementVector.y * _movementSpeed * _zoomScale * Time.deltaTime);
             _cameraRigGameObject.transform.Rotate(Vector3.up, _rotationVelocity);
         }
 

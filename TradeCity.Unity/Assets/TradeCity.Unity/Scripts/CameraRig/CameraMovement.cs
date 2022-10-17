@@ -9,7 +9,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
     {
         [SerializeField] private GameObject _focusPointObject = default!;
         [SerializeField] private GameObject _cameraRigGameObject = default!;
-        [SerializeField] private Camera _camera;
+        [SerializeField] private Camera _camera = default!;
 
         [Header("Movement")]
         [SerializeField] private float _maxMovementSpeed = default!;
@@ -46,8 +46,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
         {
             HandleKeys();
             HandleMouseWheel();
-
-
+            
             _cameraRigGameObject.transform.position += Quaternion.Euler(0, _camera.transform.rotation.eulerAngles.y, 0) *
                                                        new Vector3(_movementVector.x * _movementSpeed * _zoomScale * Time.deltaTime,
                                                               0, _movementVector.y * _movementSpeed * _zoomScale * Time.deltaTime);

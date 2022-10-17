@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 313098539514872616}
   - component: {fileID: 6455460117839436476}
   - component: {fileID: 1715917720162818242}
-  - component: {fileID: 184256730179788783}
+  - component: {fileID: 6786805664820797002}
   m_Layer: 0
   m_Name: OwnedLandListItem
   m_TagString: Untagged
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &184256730179788783
+--- !u!114 &6786805664820797002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

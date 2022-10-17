@@ -1,7 +1,9 @@
-﻿using AutSoft.UnitySupplements.EventBus;
+﻿using System;
+using AutSoft.UnitySupplements.EventBus;
 using AutSoft.UnitySupplements.Vitamins;
 using Injecter;
 using TradeCity.Engine.Core;
+using TradeCity.Unity.Scripts.GUI.Navigation;
 using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.CameraRig
@@ -37,7 +39,8 @@ namespace TradeCity.Unity.Scripts.CameraRig
         [SerializeField] private float _minZoomScale = default!;
         [SerializeField] private float _maxZoomScale = default!;
         [SerializeField] private float _zoomSpeed = default!;
-        
+
+        private CameraFocus _cameraFocus;
         private Vector2 _movementVector;
         private float _movementSpeed;
         private float _rotationVelocity;
@@ -51,7 +54,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
             this.CheckSerializedField(_cameraRigGameObject, nameof(_cameraRigGameObject));
             this.CheckSerializedField(_camera, nameof(_camera));
 
-
+            _eventBus.SubscribeWeak<MenuController.ScreenChanged>(this, HandleScreenChange);
         }
 
         private void Update()
@@ -63,11 +66,6 @@ namespace TradeCity.Unity.Scripts.CameraRig
                                                        new Vector3(_movementVector.x * _movementSpeed * _zoomScale * Time.deltaTime,
                                                               0, _movementVector.y * _movementSpeed * _zoomScale * Time.deltaTime);
             _cameraRigGameObject.transform.Rotate(Vector3.up, _rotationVelocity);
-        }
-        
-        private void Destroy()
-        {
-
         }
 
         private void HandleMouseWheel()
@@ -153,6 +151,16 @@ namespace TradeCity.Unity.Scripts.CameraRig
 
             _rotationVelocity = _rotationVelocity > _maxRotationSpeed ? _maxRotationSpeed : _rotationVelocity;
             _rotationVelocity = _rotationVelocity < -_maxRotationSpeed ? -_maxRotationSpeed : _rotationVelocity;
+        }
+
+        private void HandleScreenChange(MenuController.ScreenChanged message)
+        {
+            _cameraFocus = message.ActiveScreen switch
+            {
+                ActiveScreen.City => CameraFocus.City,
+                ActiveScreen.Map => CameraFocus.Map,
+                _ => _cameraFocus
+            };
         }
 
 

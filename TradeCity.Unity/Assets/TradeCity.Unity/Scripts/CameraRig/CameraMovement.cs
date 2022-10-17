@@ -1,12 +1,20 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using AutSoft.UnitySupplements.EventBus;
 using AutSoft.UnitySupplements.Vitamins;
+using Injecter;
+using TradeCity.Engine.Core;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace TradeCity.Unity.Scripts.CameraRig
 {
+    internal enum CameraFocus
+    {
+        Map,
+        City
+    }
     public class CameraMovement : MonoBehaviour
     {
+        [Inject] private IEventBus _eventBus = default!;
+
         [SerializeField] private GameObject _focusPointObject = default!;
         [SerializeField] private GameObject _cameraRigGameObject = default!;
         [SerializeField] private Camera _camera = default!;
@@ -37,9 +45,13 @@ namespace TradeCity.Unity.Scripts.CameraRig
 
         private void Awake()
         {
+            _eventBus = EngineCore.Instance.InjectEventBus();
+
             this.CheckSerializedField(_focusPointObject, nameof(_focusPointObject));
             this.CheckSerializedField(_cameraRigGameObject, nameof(_cameraRigGameObject));
             this.CheckSerializedField(_camera, nameof(_camera));
+
+
         }
 
         private void Update()
@@ -51,6 +63,11 @@ namespace TradeCity.Unity.Scripts.CameraRig
                                                        new Vector3(_movementVector.x * _movementSpeed * _zoomScale * Time.deltaTime,
                                                               0, _movementVector.y * _movementSpeed * _zoomScale * Time.deltaTime);
             _cameraRigGameObject.transform.Rotate(Vector3.up, _rotationVelocity);
+        }
+        
+        private void Destroy()
+        {
+
         }
 
         private void HandleMouseWheel()

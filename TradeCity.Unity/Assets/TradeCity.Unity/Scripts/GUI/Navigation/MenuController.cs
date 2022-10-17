@@ -1,4 +1,7 @@
+using AutSoft.UnitySupplements.EventBus;
 using AutSoft.UnitySupplements.Vitamins;
+using Injecter;
+using TradeCity.Engine.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +15,8 @@ namespace TradeCity.Unity.Scripts.GUI.Navigation
     }
     public class MenuController : MonoBehaviour
     {
+        [Inject] private IEventBus _eventBus = default!;
+
         [SerializeField] private Canvas _city = default!;
         [SerializeField] private Canvas _map = default!;
         [SerializeField] private Canvas _market = default!;
@@ -26,15 +31,17 @@ namespace TradeCity.Unity.Scripts.GUI.Navigation
             set
             {
                 _active = value;
-                OnScreenChanged.Invoke(value);
+                _eventBus.Invoke(new ScreenChanged(_active));
             }
         }
 
         public delegate void ActiveChanged(ActiveScreen newScreen);
-        public event ActiveChanged OnScreenChanged;
+
 
         private void Awake()
         {
+            _eventBus = EngineCore.Instance.InjectEventBus();
+
             this.CheckSerializedField(_city, nameof(_city));
             this.CheckSerializedField(_map, nameof(_map));
             this.CheckSerializedField(_market, nameof(_market));
@@ -76,6 +83,15 @@ namespace TradeCity.Unity.Scripts.GUI.Navigation
                     _market.enabled = true;
                     break;
             }
+        }
+        public class ScreenChanged : IEvent
+        {
+            public ScreenChanged(ActiveScreen screen)
+            {
+                ActiveScreen = screen;
+            }
+
+            public ActiveScreen ActiveScreen { get; }
         }
     }
 }

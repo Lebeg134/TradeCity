@@ -1,4 +1,7 @@
+using AutSoft.UnitySupplements.EventBus;
 using AutSoft.UnitySupplements.Vitamins;
+using Injecter;
+using TradeCity.Engine.Core;
 using TradeCity.Unity.Scripts.GUI.Navigation;
 using UnityEngine;
 
@@ -7,6 +10,8 @@ namespace TradeCity.Unity.Scripts.Audio
     [RequireComponent(typeof(AudioSource))]
     public class AmbientAudio : MonoBehaviour
     {
+        [Inject] private IEventBus _eventBus = default!;
+
         [SerializeField] private MenuController _screenNavigator = default!;
         [SerializeField] private AudioClip _cityAmbient = default!;
         [SerializeField] private AudioClip _mapAmbient = default!;
@@ -16,6 +21,8 @@ namespace TradeCity.Unity.Scripts.Audio
 
         private void Awake()
         {
+            _eventBus = EngineCore.Instance.InjectEventBus();
+
             this.CheckSerializedField(_screenNavigator, nameof(_screenNavigator));
             this.CheckSerializedField(_cityAmbient, nameof(_cityAmbient));
             this.CheckSerializedField(_mapAmbient, nameof(_mapAmbient));
@@ -27,12 +34,12 @@ namespace TradeCity.Unity.Scripts.Audio
         private void Start()
         {
             _audioSource = GetComponent<AudioSource>();
-            _screenNavigator.OnScreenChanged += OnScreenChange;
+            _eventBus.SubscribeWeak<MenuController.ScreenChanged>(this, OnScreenChange);
         }
 
-        private void OnScreenChange(ActiveScreen activeScreen)
+        private void OnScreenChange(MenuController.ScreenChanged message)
         {
-            switch (activeScreen)
+            switch (message.ActiveScreen)
             {
                 case ActiveScreen.City:
                     _audioSource.clip = _cityAmbient;

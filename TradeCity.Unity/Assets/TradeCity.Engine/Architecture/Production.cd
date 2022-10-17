@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TradeCity.Engine.Production.DistributionStrategy" Collapsed="true">
+    <Position X="5.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAhAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\DistributionStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TradeCity.Engine.Production.EvenDistributionStrartegy" Collapsed="true">
+    <Position X="4.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\EvenDistributionStrartegy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TradeCity.Engine.Production.ManyToOneRecipe" Collapsed="true">
+    <Position X="4.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAgAAAAAAAAAAACQAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\ManyToOneRecipe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TradeCity.Engine.Production.PriorityDistributionStrategy" Collapsed="true">
+    <Position X="6.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\PriorityDistributionStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TradeCity.Engine.Production.ProductionSystem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAgAAAEAAAAAgAAAAAAAAAAIAAAAAAAQAAAAAAgAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\ProductionSystem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TradeCity.Engine.Production.Recipe" Collapsed="true">
+    <Position X="5.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAIAAAAAIgAAAQQAEBAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\Recipe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TradeCity.Engine.Production.SimpleRecipe" Collapsed="true">
+    <Position X="6.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAgAAAAAAAAAAACQAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\SimpleRecipe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="TradeCity.Engine.Production.IDistributionStrategy" Collapsed="true">
+    <Position X="9" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\IDistributionStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TradeCity.Engine.Production.IProductionSystem" Collapsed="true">
+    <Position X="10.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\IProductionSystem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="TradeCity.Engine.Production.RecipePriority" Collapsed="true">
+    <Position X="9" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAAAQEAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Production\Recipe.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

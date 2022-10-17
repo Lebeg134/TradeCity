@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TradeCity.Engine.Session.Session">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEgIAAACAYQABAAAAAAAIAADABAAAIQAAQAAAAQAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Session\Session.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_instance" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_players" />
+      <Field Name="Missions" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TradeCity.Engine.Session.Player">
+    <Position X="6" Y="6" Width="1.5" />
+    <NestedTypes>
+      <Class Name="TradeCity.Engine.Session.Player.BankruptPlayerStrategy" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\TradeCity.Engine\Session\BankruptPlayerStrategy.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="TradeCity.Engine.Session.Player.FrozenPlayerStrategy" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\TradeCity.Engine\Session\FrozenPlayerStrategy.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="TradeCity.Engine.Session.Player.PlayerStrategyBase" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\TradeCity.Engine\Session\PlayerStrategyBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="TradeCity.Engine.Session.Player.StandardPlayerStrategy" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\TradeCity.Engine\Session\StandardPlayerStrategy.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IAASgCAhAABAAABAAAAIQhACACAFQAgABBBAgAIAQAI=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Session\BankruptPlayerStrategy.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_playerStrategy" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_owned" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TradeCity.Engine.Missions.Mission">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAoAkAAIAAAAAACAAAAAABQACBAAAAIAAAKAAAwAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Missions\Mission.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_goal" />
+      <Field Name="_reward" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TradeCity.Engine.Structures.Land" Collapsed="true">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAQgAAACAABAABAAAgAAQAAACQQAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\Land.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TradeCity.Engine.Resources.Resource">
+    <Position X="9.25" Y="8" Width="1.5" />
+    <NestedTypes>
+      <Class Name="TradeCity.Engine.Resources.Resource.NotEnoughResourceException" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\TradeCity.Engine\Resources\Resource.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAAAAAQAAAAAAEAAQAEAAQAgCMABAAAAAAAAAAAARAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Resources\Resource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="TradeCity.Engine.Missions.IAchievable" Collapsed="true">
+    <Position X="8.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAACAAIAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Missions\IAchievable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TradeCity.Engine.Missions.IRewardable" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Missions\IRewardable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TradeCity.Engine.Structures.Interfaces.IOwnable" Collapsed="true">
+    <Position X="9.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\Interfaces\IOwnable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TradeCity.Engine.Session.IPlayerStrategy" Collapsed="true">
+    <Position X="9.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAQAI=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Session\IPlayerStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

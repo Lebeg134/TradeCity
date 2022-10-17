@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="TradeCity.Engine.Market.Listing" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAEBIAgAAAAAAAAAAhEAAAACBgAAAAQAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Market\Listing.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TradeCity.Engine.Market.Market" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAEQgAAAAAABCBACAACAABAAAAAAAAACCAQAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Market\Market.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TradeCity.Engine.Market.SpListing" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAEIAAAAAIAQAAAAAAAABABAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Market\SPListing.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TradeCity.Engine.Market.SpMarket" Collapsed="true">
+    <Position X="9" Y="2.25" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="TradeCity.Engine.Market.SpMarket.Notify" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\TradeCity.Engine\Market\SPMarket.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAiAAIAAAQAAAAABQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Market\SPMarket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="TradeCity.Engine.Market.ItemLog" Collapsed="true">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAEAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Market\ItemLog.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="TradeCity.Engine.Market.ISellable" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAACAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Market\ISellable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

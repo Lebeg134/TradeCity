@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="TradeCity.Engine.Structures.EasyInheritance.SpecialBuilding" Collapsed="true">
+    <Position X="6.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAEAAAAAAAAAABAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\EasyInheritance\SpecialBuilding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TradeCity.Engine.Structures.Building" Collapsed="true">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAEAACAAAIAAABAgBgAAAIEQAABAAQgA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\Building.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TradeCity.Engine.Structures.CommonStructure" Collapsed="true">
+    <Position X="5.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgACAAAAAAEAAAgQgEQAABAAAAAAhAAAIAAAAgEA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\CommonStructure.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TradeCity.Engine.Structures.CosmeticStructures" Collapsed="true">
+    <Position X="8.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\CosmeticStructures.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TradeCity.Engine.Structures.Land" Collapsed="true">
+    <Position X="4.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAQgAAACAABAABAAAgAAQAAACQQAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\Land.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TradeCity.Engine.Structures.LockedStructure" Collapsed="true">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAIAAAAAAEAAAAAAAAAAAACAAAAAgAAAAAAAABIA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\LockedStructure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TradeCity.Engine.Structures.Structure" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAgAAAAAgABUAACIAgAAAAgAAABIA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\Structure.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="TradeCity.Engine.Structures.Interfaces.IBuilding" Collapsed="true">
+    <Position X="14.5" Y="7.5" Width="1.5" />
+    <InheritanceLine Type="TradeCity.Engine.Structures.Interfaces.IProducer" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.5" Y="6.562" />
+        <Point X="16.5" Y="6.852" />
+        <Point X="15.75" Y="6.852" />
+        <Point X="15.75" Y="7.5" />
+      </Path>
+    </InheritanceLine>
+    <InheritanceLine Type="TradeCity.Engine.Structures.Interfaces.IOwnable" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="5.312" />
+        <Point X="13" Y="6.297" />
+        <Point X="15.5" Y="6.297" />
+        <Point X="15.5" Y="7.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAEAAAAAAAAAAAAgAgAABIEAAAAAAAkA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\Interfaces\IBuilding.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TradeCity.Engine.Structures.Interfaces.ILand" Collapsed="true">
+    <Position X="10.25" Y="8" Width="1.5" />
+    <InheritanceLine Type="TradeCity.Engine.Structures.Interfaces.IOwnable" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="5.312" />
+        <Point X="13" Y="6.319" />
+        <Point X="10.562" Y="6.319" />
+        <Point X="10.562" Y="8" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAQAAAACAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\Interfaces\ILand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TradeCity.Engine.Structures.Interfaces.IOwnable" Collapsed="true">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\Interfaces\IOwnable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TradeCity.Engine.Structures.Interfaces.IProducer" Collapsed="true">
+    <Position X="15.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAABAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\Interfaces\IProducer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TradeCity.Engine.Structures.Interfaces.IUpgradeable" Collapsed="true">
+    <Position X="12.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQgAAAAAAAAAAAgAAAIAAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\Interfaces\IUpgradeable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="TradeCity.Engine.Structures.Interfaces.BuildingState">
+    <Position X="17.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\TradeCity.Engine\Structures\Interfaces\IBuilding.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

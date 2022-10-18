@@ -18,8 +18,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
     public class CameraMovement : MonoBehaviour
     {
         [Inject] private IEventBus _eventBus = default!;
-
-        [SerializeField] private GameObject _focusPointObject = default!;
+        
         [SerializeField] private GameObject _cameraRigGameObject = default!;
         [SerializeField] private Camera _camera = default!;
         [SerializeField] private Terrain _terrain = default!;
@@ -27,7 +26,6 @@ namespace TradeCity.Unity.Scripts.CameraRig
         [Header("BoundingBoxes")]
         [SerializeField] private Bounds _mapBounds = default!;
         [SerializeField] private Bounds _cityBounds = default!;
-
 
         [Header("Movement")]
         [SerializeField] private float _maxMovementSpeed = default!;
@@ -60,7 +58,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
         private Vector2 _movementVector;
         private float _movementSpeed;
         private float _rotationVelocity;
-        private float _zoomScale = 1f;
+        private float _zoomScale;
 
         private float _minHeight;
         private float _turnHeight;
@@ -69,17 +67,25 @@ namespace TradeCity.Unity.Scripts.CameraRig
         private float _maxZoomScale;
         private float _zoomSpeed;
 
+        private Vector3 _lastMapPos;
+        private Vector3 _lastCityPos;
+        private float _lastMapZoom;
+        private float _lastCityZoom;
+
         private void Awake()
         {
             _eventBus = EngineCore.Instance.InjectEventBus();
-
-            this.CheckSerializedField(_focusPointObject, nameof(_focusPointObject));
+            
             this.CheckSerializedField(_cameraRigGameObject, nameof(_cameraRigGameObject));
             this.CheckSerializedField(_camera, nameof(_camera));
             this.CheckSerializedField(_terrain, nameof(_terrain));
-
-
+            
             _eventBus.SubscribeWeak<MenuController.ScreenChanged>(this, HandleScreenChange);
+
+            _lastCityPos = _cameraRigGameObject.transform.position;
+            _lastCityZoom = _cityMaxZoomScale;
+            _lastMapPos = _cameraRigGameObject.transform.position;
+            _lastMapZoom = _mapMaxZoomScale;
         }
 
         private void Update()
@@ -97,7 +103,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
             _cameraRigGameObject.transform.position = pos;
 
 
-            _cameraRigGameObject.transform.Rotate(Vector3.up, _rotationVelocity);
+            _cameraRigGameObject.transform.Rotate(Vector3.up, _rotationVelocity* Time.deltaTime);
 
             Validate();
         }
@@ -205,6 +211,18 @@ namespace TradeCity.Unity.Scripts.CameraRig
 
         private void HandleScreenChange(MenuController.ScreenChanged message)
         {
+            switch (_cameraFocus)
+            {
+                case CameraFocus.Map:
+                    _lastMapPos = _cameraRigGameObject.transform.position;
+                    _lastMapZoom = _zoomScale;
+                    break;
+                case CameraFocus.City:
+                    _lastCityPos = _cameraRigGameObject.transform.position;
+                    _lastCityZoom = _zoomScale;
+                    break;
+            }
+
             _cameraFocus = message.ActiveScreen switch
             {
                 ActiveScreen.City => CameraFocus.City,
@@ -232,6 +250,18 @@ namespace TradeCity.Unity.Scripts.CameraRig
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
+            }
+            
+            switch (_cameraFocus)
+            {
+                case CameraFocus.Map:
+                    _cameraRigGameObject.transform.position = _lastMapPos;
+                    _zoomScale = _lastMapZoom;
+                    break;
+                case CameraFocus.City:
+                    _cameraRigGameObject.transform.position = _lastCityPos;
+                    _zoomScale = _lastCityZoom;
+                    break;
             }
             _zoomScale = Mathf.Clamp(_zoomScale, _minZoomScale, _maxZoomScale);
         }

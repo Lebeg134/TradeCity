@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Diagnostics;
 using AutSoft.UnitySupplements.EventBus;
 using AutSoft.UnitySupplements.Vitamins;
 using Injecter;
 using TradeCity.Engine.Core;
 using TradeCity.Unity.Scripts.GUI.Navigation;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace TradeCity.Unity.Scripts.CameraRig
 {
@@ -20,6 +22,12 @@ namespace TradeCity.Unity.Scripts.CameraRig
         [SerializeField] private GameObject _focusPointObject = default!;
         [SerializeField] private GameObject _cameraRigGameObject = default!;
         [SerializeField] private Camera _camera = default!;
+        [SerializeField] private Terrain _terrain = default!;
+
+        [Header("BoundingBoxes")]
+        [SerializeField] private Bounds _mapBounds = default!;
+        [SerializeField] private Bounds _cityBounds = default!;
+
 
         [Header("Movement")]
         [SerializeField] private float _maxMovementSpeed = default!;
@@ -32,19 +40,34 @@ namespace TradeCity.Unity.Scripts.CameraRig
         [SerializeField] private float _rotationAcceleration = default!;
         [SerializeField] private float _rotationDeAcceleration = default!;
 
-        [Header("Zoom")]
-        [SerializeField] private float _minHeight = default!;
-        [SerializeField] private float _turnHeight = default!;
-        [SerializeField] private float _basicCameraAngle = default!;
-        [SerializeField] private float _minZoomScale = default!;
-        [SerializeField] private float _maxZoomScale = default!;
-        [SerializeField] private float _zoomSpeed = default!;
+        [Header("MapZoom")]
+        [SerializeField] private float _mapMinHeight = default!;
+        [SerializeField] private float _mapTurnHeight = default!;
+        [SerializeField] private float _mapBasicCameraAngle = default!;
+        [SerializeField] private float _mapMinZoomScale = default!;
+        [SerializeField] private float _mapMaxZoomScale = default!;
+        [SerializeField] private float _mapZoomSpeed = default!;
+
+        [Header("CityZoom")]
+        [SerializeField] private float _cityMinHeight = default!;
+        [SerializeField] private float _cityTurnHeight = default!;
+        [SerializeField] private float _cityBasicCameraAngle = default!;
+        [SerializeField] private float _cityMinZoomScale = default!;
+        [SerializeField] private float _cityMaxZoomScale = default!;
+        [SerializeField] private float _cityZoomSpeed = default!;
 
         private CameraFocus _cameraFocus;
         private Vector2 _movementVector;
         private float _movementSpeed;
         private float _rotationVelocity;
         private float _zoomScale = 1f;
+
+        private float _minHeight;
+        private float _turnHeight;
+        private float _basicCameraAngle;
+        private float _minZoomScale;
+        private float _maxZoomScale;
+        private float _zoomSpeed;
 
         private void Awake()
         {
@@ -53,6 +76,8 @@ namespace TradeCity.Unity.Scripts.CameraRig
             this.CheckSerializedField(_focusPointObject, nameof(_focusPointObject));
             this.CheckSerializedField(_cameraRigGameObject, nameof(_cameraRigGameObject));
             this.CheckSerializedField(_camera, nameof(_camera));
+            this.CheckSerializedField(_terrain, nameof(_terrain));
+
 
             _eventBus.SubscribeWeak<MenuController.ScreenChanged>(this, HandleScreenChange);
         }
@@ -62,15 +87,40 @@ namespace TradeCity.Unity.Scripts.CameraRig
             HandleKeys();
             HandleMouseWheel();
             
-            _cameraRigGameObject.transform.position += Quaternion.Euler(0, _camera.transform.rotation.eulerAngles.y, 0) *
-                                                       new Vector3(_movementVector.x * _movementSpeed * _zoomScale * Time.deltaTime,
-                                                              0, _movementVector.y * _movementSpeed * _zoomScale * Time.deltaTime);
+
+            _cameraRigGameObject.transform.position +=
+                Quaternion.Euler(0, _camera.transform.rotation.eulerAngles.y, 0) * new Vector3(_movementVector.x * _movementSpeed * _zoomScale * Time.deltaTime,
+                    0, _movementVector.y * _movementSpeed * _zoomScale * Time.deltaTime);
+
+            var pos = _cameraRigGameObject.transform.position;
+            pos.y = _terrain.SampleHeight(pos);
+            _cameraRigGameObject.transform.position = pos;
+
+
             _cameraRigGameObject.transform.Rotate(Vector3.up, _rotationVelocity);
+
+            Validate();
+        }
+
+        private void Validate()
+        {
+            var pos = _cameraRigGameObject.transform.position;
+            var currentBounds = _cameraFocus switch
+            {
+                CameraFocus.Map => _mapBounds,
+                CameraFocus.City => _cityBounds,
+                _ => _mapBounds
+            };
+
+            if (!currentBounds.Contains(pos))
+            {
+                _cameraRigGameObject.transform.position = currentBounds.ClosestPoint(pos);
+            }
         }
 
         private void HandleMouseWheel()
         {
-            _zoomScale += -Input.mouseScrollDelta.y*_zoomSpeed;
+            _zoomScale += -Input.mouseScrollDelta.y * _zoomSpeed;
             _zoomScale = Mathf.Clamp(_zoomScale, _minZoomScale, _maxZoomScale);
             MoveCameraPosition();
         }
@@ -161,21 +211,44 @@ namespace TradeCity.Unity.Scripts.CameraRig
                 ActiveScreen.Map => CameraFocus.Map,
                 _ => _cameraFocus
             };
+
+            switch (_cameraFocus)
+            {
+                case CameraFocus.Map:
+                    _minHeight = _mapMinHeight;
+                    _turnHeight = _mapTurnHeight;
+                    _basicCameraAngle = _mapBasicCameraAngle;
+                    _minZoomScale = _mapMinZoomScale;
+                    _maxZoomScale = _mapMaxZoomScale;
+                    _zoomSpeed = _mapZoomSpeed;
+                    break;
+                case CameraFocus.City:
+                    _minHeight = _cityMinHeight;
+                    _turnHeight = _cityTurnHeight;
+                    _basicCameraAngle = _cityBasicCameraAngle;
+                    _minZoomScale = _cityMinZoomScale;
+                    _maxZoomScale = _cityMaxZoomScale;
+                    _zoomSpeed = _cityZoomSpeed;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            _zoomScale = Mathf.Clamp(_zoomScale, _minZoomScale, _maxZoomScale);
         }
 
 
         private void MoveCameraPosition()
         {
-            _camera.transform.localPosition = new Vector3(0, Mathf.Sin(_basicCameraAngle)*_zoomScale, -Mathf.Cos(_basicCameraAngle)*_zoomScale);
+            _camera.transform.localPosition = new Vector3(0, Mathf.Sin(_basicCameraAngle) * _zoomScale, -Mathf.Cos(_basicCameraAngle) * _zoomScale);
 
             var currentHeight = _camera.transform.localPosition.y;
-            var newCameraAngle =  _basicCameraAngle;
+            var newCameraAngle = _basicCameraAngle;
             if (currentHeight < _turnHeight)
             {
-                var endPhase = (_turnHeight - currentHeight) / (_turnHeight - _minHeight);
+                var endPhase = Mathf.Clamp((_turnHeight - currentHeight) / (_turnHeight - _minHeight), 0, 1);
                 newCameraAngle -= _basicCameraAngle * endPhase;
                 _camera.transform.localPosition =
-                    new Vector3(0, _camera.transform.localPosition.y + _minHeight * endPhase, _camera.transform.localPosition.z);
+                    new Vector3(0, _camera.transform.localPosition.y + _minHeight * endPhase , _camera.transform.localPosition.z);
             }
             _camera.transform.localRotation = Quaternion.Euler(newCameraAngle, 0, 0);
         }

@@ -2279,7 +2279,7 @@ Terrain:
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 2
-  m_MaterialTemplate: {fileID: 2100000, guid: 1f7fbf60fe696e94099fffa006880067, type: 2}
+  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -2371,14 +2371,16 @@ MonoBehaviour:
   _mapMinHeight: 10
   _mapTurnHeight: 25
   _mapBasicCameraAngle: 45
+  _mapEndCameraAngle: 35
   _mapMinZoomScale: 10
   _mapMaxZoomScale: 100
   _mapZoomSpeed: 10
-  _cityMinHeight: 1
-  _cityTurnHeight: 4
+  _cityMinHeight: 2.5
+  _cityTurnHeight: 10
   _cityBasicCameraAngle: 45
+  _cityEndCameraAngle: 10
   _cityMinZoomScale: 2.5
-  _cityMaxZoomScale: 20
+  _cityMaxZoomScale: 45
   _cityZoomSpeed: 1
 --- !u!1 &384355160
 GameObject:
@@ -4103,7 +4105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 652958787}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0, y: -1.8, z: 0}
   m_LocalScale: {x: 200, y: 0.01, z: 200}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -42,6 +42,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
         [SerializeField] private float _mapMinHeight = default!;
         [SerializeField] private float _mapTurnHeight = default!;
         [SerializeField] private float _mapBasicCameraAngle = default!;
+        [SerializeField] private float _mapEndCameraAngle = default!;
         [SerializeField] private float _mapMinZoomScale = default!;
         [SerializeField] private float _mapMaxZoomScale = default!;
         [SerializeField] private float _mapZoomSpeed = default!;
@@ -50,6 +51,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
         [SerializeField] private float _cityMinHeight = default!;
         [SerializeField] private float _cityTurnHeight = default!;
         [SerializeField] private float _cityBasicCameraAngle = default!;
+        [SerializeField] private float _cityEndCameraAngle = default!;
         [SerializeField] private float _cityMinZoomScale = default!;
         [SerializeField] private float _cityMaxZoomScale = default!;
         [SerializeField] private float _cityZoomSpeed = default!;
@@ -63,6 +65,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
         private float _minHeight;
         private float _turnHeight;
         private float _basicCameraAngle;
+        private float _endCameraAngle;
         private float _minZoomScale;
         private float _maxZoomScale;
         private float _zoomSpeed;
@@ -179,11 +182,11 @@ namespace TradeCity.Unity.Scripts.CameraRig
 
             if (Input.GetKey(KeyCode.Q))
             {
-                _rotationVelocity += _rotationAcceleration * Time.deltaTime;
+                _rotationVelocity -= _rotationAcceleration * Time.deltaTime;
             }
             if (Input.GetKey(KeyCode.E))
             {
-                _rotationVelocity -= _rotationAcceleration * Time.deltaTime;
+                _rotationVelocity += _rotationAcceleration * Time.deltaTime;
             }
 
             if (!Input.GetKey(KeyCode.Q) && !Input.GetKey(KeyCode.E))
@@ -236,6 +239,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
                     _minHeight = _mapMinHeight;
                     _turnHeight = _mapTurnHeight;
                     _basicCameraAngle = _mapBasicCameraAngle;
+                    _endCameraAngle = _mapEndCameraAngle;
                     _minZoomScale = _mapMinZoomScale;
                     _maxZoomScale = _mapMaxZoomScale;
                     _zoomSpeed = _mapZoomSpeed;
@@ -244,6 +248,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
                     _minHeight = _cityMinHeight;
                     _turnHeight = _cityTurnHeight;
                     _basicCameraAngle = _cityBasicCameraAngle;
+                    _endCameraAngle = _cityEndCameraAngle;
                     _minZoomScale = _cityMinZoomScale;
                     _maxZoomScale = _cityMaxZoomScale;
                     _zoomSpeed = _cityZoomSpeed;
@@ -276,9 +281,9 @@ namespace TradeCity.Unity.Scripts.CameraRig
             if (currentHeight < _turnHeight)
             {
                 var endPhase = Mathf.Clamp((_turnHeight - currentHeight) / (_turnHeight - _minHeight), 0, 1);
-                newCameraAngle -= _basicCameraAngle * endPhase;
+                newCameraAngle -= (_basicCameraAngle-_endCameraAngle) * endPhase;
                 _camera.transform.localPosition =
-                    new Vector3(0, _camera.transform.localPosition.y + _minHeight * endPhase , _camera.transform.localPosition.z);
+                    new Vector3(0, _camera.transform.localPosition.y + _minHeight * endPhase * endPhase, _camera.transform.localPosition.z);
             }
             _camera.transform.localRotation = Quaternion.Euler(newCameraAngle, 0, 0);
         }

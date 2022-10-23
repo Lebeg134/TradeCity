@@ -32,6 +32,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
         [SerializeField] private float _movementAcceleration = default!;
         [SerializeField] private float _turnRate = default!;
         [SerializeField] private float _movementDeAcceleration = default;
+        [SerializeField] private float _boostModifier = default!;
 
         [Header("Rotation")]
         [SerializeField] private float _maxRotationSpeed = default!;
@@ -95,11 +96,14 @@ namespace TradeCity.Unity.Scripts.CameraRig
         {
             HandleKeys();
             HandleMouseWheel();
-            
+
+            var boost = Input.GetKey(KeyCode.LeftShift) ? _boostModifier : 1;
 
             _cameraRigGameObject.transform.position +=
-                Quaternion.Euler(0, _camera.transform.rotation.eulerAngles.y, 0) * new Vector3(_movementVector.x * _movementSpeed * _zoomScale * Time.deltaTime,
-                    0, _movementVector.y * _movementSpeed * _zoomScale * Time.deltaTime);
+                Quaternion.Euler(0, _camera.transform.rotation.eulerAngles.y, 0) * new Vector3(
+                    _movementVector.x * _movementSpeed * _zoomScale * Time.deltaTime * boost,
+                    0, 
+                    _movementVector.y * _movementSpeed * _zoomScale * Time.deltaTime * boost);
 
             var pos = _cameraRigGameObject.transform.position;
             pos.y = _terrain.SampleHeight(pos);

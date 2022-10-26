@@ -1,4 +1,5 @@
 using System;
+using TradeCity.Engine.Session.Interfaces;
 using TradeCity.Engine.TimeManager;
 
 namespace TradeCity.Engine.Session

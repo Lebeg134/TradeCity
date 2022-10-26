@@ -6,6 +6,7 @@ using AutSoft.UnitySupplements.EventBus;
 using Injecter;
 using TradeCity.Engine.Core;
 using TradeCity.Engine.Missions;
+using TradeCity.Engine.Session.Interfaces;
 using TradeCity.Engine.TimeManager;
 using static TradeCity.Engine.Session.Player;
 
@@ -15,7 +16,7 @@ namespace TradeCity.Engine.Session
     public class Session : ISession
     {
         private const string SavePath = "/saves/";
-        private const string DefaultName = "/saves/";
+        private const string DefaultName = "NewSave";
 
         [NonSerialized]
         [Inject] private readonly IEventBus _eventBus;

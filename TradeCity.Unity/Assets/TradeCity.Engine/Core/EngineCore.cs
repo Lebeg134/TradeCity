@@ -14,7 +14,6 @@ namespace TradeCity.Engine.Core
             get { return _instance ??= new EngineCore(); }
         }
         
-
         private EngineCore()
         {
 

@@ -4,7 +4,7 @@ using TradeCity.Engine.Resources;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.Structures.Interfaces;
 
-namespace TradeCity.Engine.Session
+namespace TradeCity.Engine.Session.Interfaces
 {
     public interface ISessionTemplate
     {

@@ -1,4 +1,4 @@
-﻿namespace TradeCity.Engine.Core
+﻿namespace TradeCity.Engine.Core.Interfaces
 {
     public interface ISessionService
     {

@@ -1,3 +1,5 @@
+using TradeCity.Engine.Session.Interfaces;
+
 namespace TradeCity.Engine.Session
 {
     public partial class Player

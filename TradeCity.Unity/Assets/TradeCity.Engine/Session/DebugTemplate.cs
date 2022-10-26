@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TradeCity.Engine.Missions;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
+using TradeCity.Engine.Session.Interfaces;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.Structures.Interfaces;
 

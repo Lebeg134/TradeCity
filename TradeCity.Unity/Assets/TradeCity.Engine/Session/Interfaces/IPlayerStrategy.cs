@@ -1,4 +1,4 @@
-namespace TradeCity.Engine.Session
+namespace TradeCity.Engine.Session.Interfaces
 {
     public interface IPlayerStrategy
     {

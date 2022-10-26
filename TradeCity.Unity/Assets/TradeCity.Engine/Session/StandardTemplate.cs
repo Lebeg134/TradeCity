@@ -17,7 +17,7 @@ using TradeCity.Units.Structures.OilIndustry;
 
 namespace TradeCity.Engine.Session
 {
-    public class StandardTemplate:ISessionTemplate
+    public class StandardTemplate : ISessionTemplate
     {
         public ICollection<Resource> AllResources()
         {
@@ -37,7 +37,7 @@ namespace TradeCity.Engine.Session
             return template;
         }
 
-       
+
         public ICollection<ILand> AllLands()
         {
             return new List<ILand>

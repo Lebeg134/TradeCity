@@ -49,9 +49,9 @@ namespace TradeCity.Engine.Production
         private int SumResFromRecipes(Resource resource, List<Recipe> recipes)
         {
             return (from recipe in recipes
-                from res in recipe.Input
-                where res.GetType() == resource.GetType()
-                select res.GetStock()).Sum();
+                    from res in recipe.Input
+                    where res.GetType() == resource.GetType()
+                    select res.GetStock()).Sum();
         }
 
         public void GatherProducts()

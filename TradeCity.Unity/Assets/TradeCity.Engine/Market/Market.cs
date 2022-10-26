@@ -20,8 +20,8 @@ namespace TradeCity.Engine.Market
         public void Tick()
         {
             foreach (var list in _listings.Values)
-            foreach (var listing in list)
-                listing.Tick();
+                foreach (var listing in list)
+                    listing.Tick();
             Simulate();
         }
 
@@ -76,12 +76,12 @@ namespace TradeCity.Engine.Market
         public void RemovePlayer(Player player)
         {
             foreach (var list in _listings.Values)
-            foreach (var listing in list)
-                if (listing.Poster.Equals(player))
-                {
-                    listing.Cancel();
-                    list.Remove(listing);
-                }
+                foreach (var listing in list)
+                    if (listing.Poster.Equals(player))
+                    {
+                        listing.Cancel();
+                        list.Remove(listing);
+                    }
         }
 
         public List<Listing> GetPlayerListingsList(Player player)

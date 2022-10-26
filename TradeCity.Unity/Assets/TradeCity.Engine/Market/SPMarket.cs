@@ -1,15 +1,14 @@
-﻿using System.Collections.Generic;
-using AutSoft.UnitySupplements.EventBus;
+﻿using AutSoft.UnitySupplements.EventBus;
 using Injecter;
+using System.Collections.Generic;
 using TradeCity.Engine.Core;
-using TradeCity.Engine.TimeManager;
 
 namespace TradeCity.Engine.Market
 {
     public class SpMarket
     {
         [Inject] private readonly IEventBus _eventBus;
-        
+
         private static SpMarket _instance;
 
         public static SpMarket Instance
@@ -54,7 +53,7 @@ namespace TradeCity.Engine.Market
             public SpListing NewListing { get; }
         }
 
-        public sealed class ListingRemoved: IEvent
+        public sealed class ListingRemoved : IEvent
         {
             public ListingRemoved(SpListing removedListing)
             {

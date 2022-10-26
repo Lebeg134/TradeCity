@@ -18,15 +18,15 @@ namespace TradeCity.Engine.Production
             }
 
             foreach (var key in recDict.Keys)
-            foreach (var recipe in recDict[key])
-                try
-                {
-                    recipe.AddResource(resource);
-                }
-                catch
-                {
-                    break;
-                }
+                foreach (var recipe in recDict[key])
+                    try
+                    {
+                        recipe.AddResource(resource);
+                    }
+                    catch
+                    {
+                        break;
+                    }
         }
 
         public override string GetName()

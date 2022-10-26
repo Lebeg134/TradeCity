@@ -13,9 +13,9 @@ namespace TradeCity.Engine.Structures
     public abstract class Land : CommonStructure, ILand, IMapStructure
     {
         private const int DefaultMaxLevel = 100;
-        
+
         public event Action<Land> OnPurchase;
-        
+
         public override void Acquire(Player by)
         {
             base.Acquire(by);
@@ -66,7 +66,7 @@ namespace TradeCity.Engine.Structures
             //TODO replace!!
             return 100;
         }
-        
+
         protected override int GetMaxLevel()
         {
             return DefaultMaxLevel;
@@ -77,7 +77,7 @@ namespace TradeCity.Engine.Structures
             //TODO replace!!
             throw new NotImplementedException();
         }
-        
+
         protected abstract List<Resource> GetProduce(int level);
 
         protected override string GetBasePath()

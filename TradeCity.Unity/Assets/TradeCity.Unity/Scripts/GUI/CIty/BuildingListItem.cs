@@ -1,8 +1,10 @@
+#nullable enable
+using System;
 using AutSoft.UnitySupplements.Vitamins;
-using System.Collections.Generic;
-using System.Linq;
+using Injecter;
 using TMPro;
-using TradeCity.Engine.Resources;
+using TradeCity.Engine.Core;
+using TradeCity.Engine.Core.Interfaces;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.Structures.Interfaces;
@@ -14,8 +16,8 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 {
     public class BuildingListItem : MonoBehaviour
     {
-        private readonly string[] _options = GetOptions();
-        [Dropdown("_options")]
+        [Inject] private IPlayerService _playerService; 
+
         public string Building = default!;
         [SerializeField] private Image _buildingImage = default!;
         [SerializeField] private TMP_Text _buildingName = default!;
@@ -24,10 +26,12 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
         [SerializeField] private HorizontalLayoutGroup _costsList = default!;
         [SerializeField] private GameObject _costDisplayPrefab = default!;
 
-        private Building _target;
+        private Building? _target;
 
         private void Awake()
         {
+            _playerService = EngineCore.InjectPlayerService();
+
             this.CheckSerializedField(_buildingImage, nameof(_buildingImage));
             this.CheckSerializedField(_buildingName, nameof(_buildingName));
             this.CheckSerializedField(_buildButton, nameof(_buildButton));
@@ -38,8 +42,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
         private void Start()
         {
-            _target = ConvertToBuilding(Building);
-
+            if (_target == null) return;
             _buildingName.text = _target.GetName();
 
             var loadedSprite = Resources.Load<Sprite>(_target.GetResourcePath());
@@ -63,16 +66,21 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             _buildButton.onClick.RemoveListener(OnClick);
         }
 
+        public void SetTarget(Building target)
+        {
+            _target = target;
+        }
+
         private void OnClick()
         {
-            Debug.Log(_target.BuildingState);
+            if (_target == null) throw new InvalidOperationException();
             switch (_target.BuildingState)
             {
                 case BuildingState.Build:
-                    _target.Build(Player.CurrentPlayer);
+                    _target.Build(_playerService.CurrentPlayer);
                     break;
                 case BuildingState.Upgrade:
-                    if (Player.CurrentPlayer.HasStructure(_target))
+                    if (_playerService.CurrentPlayer.HasStructure(_target))
                     {
                         _target.Upgrade();
                     }
@@ -80,6 +88,8 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
                 case BuildingState.Maxlevel:
                     //Do nothing
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
             _levelText.text = "Lvl:" + _target.Level;
             UpdateButton();
@@ -88,11 +98,17 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
         private void UpdateButton()
         {
+            if (_target == null)
+            {
+                _buildButton.GetComponentInChildren<Text>().text = "null";
+                _buildButton.interactable = false;
+                return;
+            }
             switch (_target.BuildingState)
             {
                 case BuildingState.Build:
                     _buildButton.GetComponentInChildren<Text>().text = "Build";
-                    _buildButton.interactable = _target.CanBuild(Player.CurrentPlayer);
+                    _buildButton.interactable = _target.CanBuild(_playerService.CurrentPlayer);
                     break;
                 case BuildingState.Upgrade:
                     _buildButton.GetComponentInChildren<Text>().text = "Upgrade";
@@ -102,6 +118,8 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
                     _buildButton.GetComponentInChildren<Text>().text = "Maxed";
                     _buildButton.interactable = false;
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
             _buildButton.Select();
         }
@@ -112,23 +130,14 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             {
                 Destroy(child.gameObject);
             }
+
+            if (_target == null) return;
             foreach (var res in _target.GetCost())
             {
                 var listItem = Instantiate(_costDisplayPrefab);
                 listItem.GetComponent<ResourceDisplay>().Watched = res;
                 listItem.transform.SetParent(_costsList.transform);
             }
-        }
-
-        private static string[] GetOptions()
-        {
-            var buildingList = SessionGenerator.GetAllBuildings();
-            return buildingList.Select(building => building.GetName()).ToArray();
-        }
-
-        private static Building ConvertToBuilding(string name)
-        {
-            return SessionGenerator.GetAllBuildings().FirstOrDefault(building => building.GetName() == name);
         }
     }
 }

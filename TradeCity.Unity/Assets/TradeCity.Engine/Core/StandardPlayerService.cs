@@ -4,7 +4,7 @@ using TradeCity.Engine.Session;
 
 namespace TradeCity.Engine.Core
 {
-    public class StandardPlayerService: IPlayerService
+    public class StandardPlayerService : IPlayerService
     {
         public Player CurrentPlayer { get; set; }
     }

@@ -2,7 +2,7 @@
 
 namespace TradeCity.Engine.Session.Interfaces
 {
-    public interface ISession: ITickable
+    public interface ISession : ITickable
     {
         public void Start();
         public void Login(Player player);

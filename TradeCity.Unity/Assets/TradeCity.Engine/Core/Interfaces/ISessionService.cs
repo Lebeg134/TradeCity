@@ -2,6 +2,6 @@
 {
     public interface ISessionService
     {
-        Session.Session CurrentSession { get; }
+        Session.Session CurrentSession { get; set; }
     }
 }

@@ -1,6 +1,6 @@
-﻿using System;
-using AutSoft.UnitySupplements.EventBus;
+﻿using AutSoft.UnitySupplements.EventBus;
 using Injecter;
+using System;
 using TradeCity.Engine.Core;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;

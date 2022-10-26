@@ -1,5 +1,7 @@
 using AutSoft.UnitySupplements.Vitamins;
 using System.Linq;
+using Injecter;
+using TradeCity.Engine.Core.Interfaces;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Units;
@@ -10,6 +12,9 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 {
     public class BuildingTabController : MonoBehaviour
     {
+        [Inject] private IPlayerService _playerService;
+        [Inject] private ISessionService _sessionService;
+
         [SerializeField] private Button _commonBranch = default!;
         [SerializeField] private Button _constructionBranch = default!;
         [SerializeField] private Button _energyBranch = default!;
@@ -22,6 +27,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
         private void Awake()
         {
+
             this.CheckSerializedField(_commonBranch, nameof(_commonBranch));
             this.CheckSerializedField(_constructionBranch, nameof(_constructionBranch));
             this.CheckSerializedField(_energyBranch, nameof(_energyBranch));
@@ -56,7 +62,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             GetBranchButton(_active).interactable = true;
             GetBranchButton(tab).interactable = false;
             _active = tab;
-            for (int i = 0; i < _content.transform.childCount; i++)
+            for (var i = 0; i < _content.transform.childCount; i++)
             {
                 Destroy(_content.transform.GetChild(i).gameObject);
             }
@@ -65,21 +71,21 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
         private void RegisterBuilding(Building building)
         {
-            GameObject listItem = Instantiate(_buildingListItemPrefab);
+            var listItem = Instantiate(_buildingListItemPrefab);
             listItem.GetComponent<BuildingListItem>().Building = building.GetName();
             listItem.transform.SetParent(_content.transform);
         }
 
         private void RegisterAllBuildings(Branches branch) //TODO add player checks
         {
-            foreach (Building building in Player.CurrentPlayer.GetAllBuildings()
+            foreach (Building building in _playerService.CurrentPlayer.GetAllBuildings()
                          .Where(building => building.GetBranch() == branch))
             {
                 RegisterBuilding(building);
             }
 
             foreach (Building building in SessionGenerator.GetAllBuildings()
-                         .Where(building => building.GetBranch() == branch && !Player.CurrentPlayer.HasStructure(building)))
+                         .Where(building => building.GetBranch() == branch && !_playerService.CurrentPlayer.HasStructure(building)))
             {
                 RegisterBuilding(building);
             }

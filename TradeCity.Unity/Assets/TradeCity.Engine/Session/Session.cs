@@ -1,10 +1,11 @@
+using AutSoft.UnitySupplements.EventBus;
+using Injecter;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using AutSoft.UnitySupplements.EventBus;
-using Injecter;
 using TradeCity.Engine.Core;
+using TradeCity.Engine.Core.Interfaces;
 using TradeCity.Engine.Missions;
 using TradeCity.Engine.Session.Interfaces;
 using TradeCity.Engine.TimeManager;
@@ -22,12 +23,22 @@ namespace TradeCity.Engine.Session
         [Inject] private readonly IEventBus _eventBus;
         [NonSerialized]
         [Inject] private readonly IClock _clock;
+        [NonSerialized] 
+        [Inject] private static readonly IPlayerService _playerService;
+        [NonSerialized]
+        [Inject] private static readonly ISessionService _sessionService;
 
         public string Name;
         public List<Mission> Missions = new();
-        
+
         private readonly List<Player> _players;
         public bool Debug { get; protected set; }
+
+        static Session()
+        {
+            _playerService = EngineCore.InjectPlayerService();
+            _sessionService = EngineCore.InjectSessionService();
+        }
 
         public Session(string name = DefaultName)
         {
@@ -67,19 +78,19 @@ namespace TradeCity.Engine.Session
             return File.Exists(GetPath(Name));
         }
 
-        public static Session Load(string path)
+        public static void Load(string path)
         {
             Stream stream = File.OpenRead(path);
             BinaryFormatter b = new();
-           var session = (Session)b.Deserialize(stream);
+            var session = (Session)b.Deserialize(stream);
             stream.Close();
-            CurrentPlayer = session._players[0]; // TODO need to change when multiple players
             session._clock.Clear();
             session._clock.Register(session);
-            return session;
+            _playerService.CurrentPlayer = session._players[0]; // TODO need to change when multiple players
+            _sessionService.CurrentSession = session;
         }
 
-        public void Login(Player player)
+        public void Login(Player player)  
         {
             if (!_players.Contains(player))
                 _players.Add(player);

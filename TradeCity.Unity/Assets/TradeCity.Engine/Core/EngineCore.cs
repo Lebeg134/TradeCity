@@ -1,7 +1,7 @@
 ﻿using AutSoft.UnitySupplements.EventBus;
 using Injecter;
 using Microsoft.Extensions.DependencyInjection;
-using SimpleInjector;
+using TradeCity.Engine.Core.Interfaces;
 using TradeCity.Engine.TimeManager;
 
 namespace TradeCity.Engine.Core
@@ -13,7 +13,7 @@ namespace TradeCity.Engine.Core
         {
             get { return _instance ??= new EngineCore(); }
         }
-        
+
         private EngineCore()
         {
 
@@ -22,6 +22,8 @@ namespace TradeCity.Engine.Core
             services.AddLogging();
             services.AddEventBus();
             services.AddSingleton<IClock, Clock>();
+            services.AddSingleton<IPlayerService, StandardPlayerService>();
+            services.AddSingleton<ISessionService, StandardSessionService>();
 
 
             CompositionRoot.ServiceProvider = services.BuildServiceProvider();
@@ -34,5 +36,8 @@ namespace TradeCity.Engine.Core
         public static IEventBus InjectEventBus() => (IEventBus)CompositionRoot.ServiceProvider!.GetService(typeof(IEventBus));
 
         public static IClock InjectClock() => (IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock));
+
+        public static IPlayerService InjectPlayerService() => (IPlayerService)CompositionRoot.ServiceProvider!.GetService(typeof(IPlayerService));
+        public static ISessionService InjectSessionService() => (ISessionService)CompositionRoot.ServiceProvider!.GetService(typeof(ISessionService));
     }
 }

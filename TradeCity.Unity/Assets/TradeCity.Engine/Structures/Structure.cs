@@ -1,9 +1,8 @@
-using System;
-using System.Collections.Generic;
 using AutSoft.UnitySupplements.EventBus;
 using Injecter;
+using System;
+using System.Collections.Generic;
 using TradeCity.Engine.Core;
-using TradeCity.Engine.Session;
 using TradeCity.Units;
 
 namespace TradeCity.Engine.Structures
@@ -47,7 +46,7 @@ namespace TradeCity.Engine.Structures
         {
             if (_isOn) return;
             _isOn = true;
-            _eventBus.Invoke( new StructureStateChanged(this, _isOn));
+            _eventBus.Invoke(new StructureStateChanged(this, _isOn));
         }
 
         public virtual void Off()

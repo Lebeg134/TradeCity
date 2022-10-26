@@ -1,8 +1,8 @@
+using AutSoft.UnitySupplements.EventBus;
+using Injecter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using AutSoft.UnitySupplements.EventBus;
-using Injecter;
 using TradeCity.Engine.Core;
 using TradeCity.Engine.Production;
 using TradeCity.Engine.Resources;
@@ -35,7 +35,6 @@ namespace TradeCity.Engine.Session
         }
 
         private ProductionSystem Production { get; set; }
-        public static Player CurrentPlayer { get; set; }
 
         public void Tick()
         {
@@ -187,7 +186,7 @@ namespace TradeCity.Engine.Session
             _playerStrategy.GoBankrupt();
         }
 
-        public sealed class ResourceChanged: IEvent
+        public sealed class ResourceChanged : IEvent
         {
             public ResourceChanged(Player ownerPlayer, Resource changedResource, int changeAmount)
             {

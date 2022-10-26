@@ -15,10 +15,11 @@ namespace TradeCity.Unity.Scripts.CameraRig
         Map,
         City
     }
+
     public class CameraMovement : MonoBehaviour
     {
         [Inject] private IEventBus _eventBus = default!;
-        
+
         [SerializeField] private GameObject _cameraRigGameObject = default!;
         [SerializeField] private Camera _camera = default!;
         [SerializeField] private Terrain _terrain = default!;
@@ -79,11 +80,11 @@ namespace TradeCity.Unity.Scripts.CameraRig
         private void Awake()
         {
             _eventBus = EngineCore.Instance.InjectEventBus();
-            
+
             this.CheckSerializedField(_cameraRigGameObject, nameof(_cameraRigGameObject));
             this.CheckSerializedField(_camera, nameof(_camera));
             this.CheckSerializedField(_terrain, nameof(_terrain));
-            
+
             _eventBus.SubscribeWeak<MenuController.ScreenChanged>(this, HandleScreenChange);
 
             _lastCityPos = _cameraRigGameObject.transform.position;
@@ -102,7 +103,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
             _cameraRigGameObject.transform.position +=
                 Quaternion.Euler(0, _camera.transform.rotation.eulerAngles.y, 0) * new Vector3(
                     _movementVector.x * _movementSpeed * _zoomScale * Time.deltaTime * boost,
-                    0, 
+                    0,
                     _movementVector.y * _movementSpeed * _zoomScale * Time.deltaTime * boost);
 
             var pos = _cameraRigGameObject.transform.position;
@@ -110,7 +111,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
             _cameraRigGameObject.transform.position = pos;
 
 
-            _cameraRigGameObject.transform.Rotate(Vector3.up, _rotationVelocity* Time.deltaTime);
+            _cameraRigGameObject.transform.Rotate(Vector3.up, _rotationVelocity * Time.deltaTime);
 
             Validate();
         }
@@ -260,7 +261,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-            
+
             switch (_cameraFocus)
             {
                 case CameraFocus.Map:
@@ -285,7 +286,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
             if (currentHeight < _turnHeight)
             {
                 var endPhase = Mathf.Clamp((_turnHeight - currentHeight) / (_turnHeight - _minHeight), 0, 1);
-                newCameraAngle -= (_basicCameraAngle-_endCameraAngle) * endPhase;
+                newCameraAngle -= (_basicCameraAngle - _endCameraAngle) * endPhase;
                 _camera.transform.localPosition =
                     new Vector3(0, _camera.transform.localPosition.y + _minHeight * endPhase * endPhase, _camera.transform.localPosition.z);
             }

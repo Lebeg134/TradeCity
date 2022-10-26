@@ -1,4 +1,5 @@
 using TradeCity.Engine.Session;
+using TradeCity.Engine.Session.Templates;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -24,7 +25,7 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
 
         private static void StartGame()
         {
-            var session = SessionGenerator.GenerateStandard();
+            var session = SessionGenerator.Generate(new CampaignTemplate());
             session.Start();
             SceneManager.LoadScene(sceneName: "GameScene");
         }

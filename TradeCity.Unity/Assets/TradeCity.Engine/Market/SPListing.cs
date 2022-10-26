@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Injecter;
+using System;
 using TradeCity.Engine.Core;
+using TradeCity.Engine.Core.Interfaces;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.TimeManager;
@@ -10,10 +12,13 @@ namespace TradeCity.Engine.Market
     [Serializable]
     public class SpListing : ITickable
     {
+        [NonSerialized]
+        [Inject] private readonly IPlayerService _playerService;
         public int Above;
 
         public SpListing(Resource sellable, int sellAbove)
         {
+            _playerService = EngineCore.InjectPlayerService();
             Sell = sellable;
             Above = sellAbove;
         }
@@ -49,11 +54,11 @@ namespace TradeCity.Engine.Market
 
         public void Complete(bool throws = false)
         {
-            if (Player.CurrentPlayer.GetResCount(Sell) > Above && Player.CurrentPlayer.HasResource(Sell))
+            if (_playerService.CurrentPlayer.GetResCount(Sell) > Above && _playerService.CurrentPlayer.HasResource(Sell))
                 try
                 {
-                    Player.CurrentPlayer.SubRes(Sell);
-                    Player.CurrentPlayer.GiveRes(new Money(GetValue()));
+                    _playerService.CurrentPlayer.SubRes(Sell);
+                    _playerService.CurrentPlayer.GiveRes(new Money(GetValue()));
                 }
                 catch (Exception)
                 {
@@ -63,7 +68,7 @@ namespace TradeCity.Engine.Market
 
         public void CompleteAll()
         {
-            while (Player.CurrentPlayer.GetResCount(Sell) > Above && Player.CurrentPlayer.HasResource(Sell))
+            while (_playerService.CurrentPlayer.GetResCount(Sell) > Above && _playerService.CurrentPlayer.HasResource(Sell))
                 try
                 {
                     Complete();

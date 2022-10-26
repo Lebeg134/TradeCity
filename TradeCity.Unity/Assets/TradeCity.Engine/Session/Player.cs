@@ -106,7 +106,7 @@ namespace TradeCity.Engine.Session
             return CheckResources(new List<Resource> { res });
         }
 
-        public bool CheckResources(List<Resource> resources, bool throwException = false)
+        public bool CheckResources(ICollection<Resource> resources, bool throwException = false)
         {
             var valid = true;
             List<Resource> missingResources = new();
@@ -156,12 +156,12 @@ namespace TradeCity.Engine.Session
             _ownedResources[resource.GetType()] += resource;
         }
 
-        public void GiveRes(List<Resource> resources)
+        public void GiveRes(ICollection<Resource> resources)
         {
             foreach (var res in resources) GiveRes(res);
         }
 
-        public void RegisterResources(List<Resource> newResList)
+        public void RegisterResources(ICollection<Resource> newResList)
         {
             foreach (var res in newResList) _ownedResources.Add(res.GetType(), res.GetNewResource(0));
         }

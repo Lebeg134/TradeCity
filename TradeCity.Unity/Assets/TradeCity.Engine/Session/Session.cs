@@ -7,6 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using TradeCity.Engine.Core;
 using TradeCity.Engine.Core.Interfaces;
 using TradeCity.Engine.Missions;
+using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session.Interfaces;
 using TradeCity.Engine.TimeManager;
 using static TradeCity.Engine.Session.Player;
@@ -114,6 +115,11 @@ namespace TradeCity.Engine.Session
         private string GetPath(string name)
         {
             return SavePath + name;
+        }
+
+        internal IEnumerable<Resource> GetResourceList()
+        {
+            throw new NotImplementedException();
         }
 
         public sealed class SessionStarted : IEvent

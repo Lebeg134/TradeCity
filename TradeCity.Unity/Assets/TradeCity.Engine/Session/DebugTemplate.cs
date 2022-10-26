@@ -6,7 +6,7 @@ using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.Structures.Interfaces;
 
-namespace Assets.TradeCity.Engine.Session
+namespace TradeCity.Engine.Session
 {
     internal class DebugTemplate : ISessionTemplate
     {

@@ -24,13 +24,13 @@ namespace TradeCity.Engine.Session
 
         public Player()
         {
-            _eventBus = EngineCore.Instance.InjectEventBus();
+            _eventBus = EngineCore.InjectEventBus();
             _playerStrategy = new StandardPlayerStrategy(this);
         }
 
         ~Player()
         {
-            EngineCore.Instance.RemoveTickable(this);
+            EngineCore.RemoveTickable(this);
         }
 
         private ProductionSystem Production { get; set; }
@@ -43,7 +43,7 @@ namespace TradeCity.Engine.Session
 
         public void Register()
         {
-            EngineCore.Instance.RegisterTickable(this);
+            EngineCore.RegisterTickable(this);
         }
 
         public IEnumerable<Resource> GetAllRes()

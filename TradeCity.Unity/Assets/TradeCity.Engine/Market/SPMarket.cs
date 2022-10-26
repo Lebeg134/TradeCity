@@ -25,7 +25,7 @@ namespace TradeCity.Engine.Market
 
         private SpMarket()
         {
-            _eventBus = EngineCore.Instance.InjectEventBus();
+            _eventBus = EngineCore.InjectEventBus();
         }
 
         public List<SpListing> Listings { get; } = new();
@@ -40,7 +40,7 @@ namespace TradeCity.Engine.Market
         public void RemoveListing(SpListing listing)
         {
             Listings.Remove(listing);
-            EngineCore.Instance.RemoveTickable(listing);
+            EngineCore.RemoveTickable(listing);
             _eventBus.Invoke(new ListingRegistered(listing));
         }
 

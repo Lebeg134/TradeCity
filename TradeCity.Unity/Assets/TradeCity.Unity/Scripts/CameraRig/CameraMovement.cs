@@ -79,7 +79,7 @@ namespace TradeCity.Unity.Scripts.CameraRig
 
         private void Awake()
         {
-            _eventBus = EngineCore.Instance.InjectEventBus();
+            _eventBus = EngineCore.InjectEventBus();
 
             this.CheckSerializedField(_cameraRigGameObject, nameof(_cameraRigGameObject));
             this.CheckSerializedField(_camera, nameof(_camera));

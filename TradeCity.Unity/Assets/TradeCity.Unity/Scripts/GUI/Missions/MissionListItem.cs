@@ -24,7 +24,7 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
 
         private void Awake()
         {
-            _eventBus = EngineCore.Instance.InjectEventBus();
+            _eventBus = EngineCore.InjectEventBus();
 
             this.CheckSerializedField(_progressBar, nameof(_progressBar));
             this.CheckSerializedField(_claimButton, nameof(_claimButton));

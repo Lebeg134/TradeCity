@@ -16,7 +16,7 @@ namespace TradeCity.Unity.Scripts.GUI.Navigation
 
         private void Awake()
         {
-            _clock = EngineCore.Instance.InjectClock();
+            _clock = EngineCore.InjectClock();
         }
 
         private void Start()

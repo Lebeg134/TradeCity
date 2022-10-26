@@ -21,7 +21,7 @@ namespace TradeCity.Engine.Missions
 
         public Mission(IAchievable goal, IRewardable reward, Player owner = null)
         {
-            _eventBus = EngineCore.Instance.InjectEventBus();
+            _eventBus = EngineCore.InjectEventBus();
             _goal = goal;
             _reward = reward;
             goal.OnAchieve += Check;
@@ -31,7 +31,7 @@ namespace TradeCity.Engine.Missions
 
         ~Mission()
         {
-            EngineCore.Instance.RemoveTickable(this);
+            EngineCore.RemoveTickable(this);
         }
 
         public string Text => _goal.Text;
@@ -42,7 +42,7 @@ namespace TradeCity.Engine.Missions
 
         public void Register()
         {
-            EngineCore.Instance.RegisterTickable(this);
+            EngineCore.RegisterTickable(this);
         }
 
         public void Tick()

@@ -40,7 +40,7 @@ namespace TradeCity.Unity.Scripts.GUI.Navigation
 
         private void Awake()
         {
-            _eventBus = EngineCore.Instance.InjectEventBus();
+            _eventBus = EngineCore.InjectEventBus();
 
             this.CheckSerializedField(_city, nameof(_city));
             this.CheckSerializedField(_map, nameof(_map));

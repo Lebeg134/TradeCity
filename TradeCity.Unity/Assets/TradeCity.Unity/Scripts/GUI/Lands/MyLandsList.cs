@@ -15,7 +15,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
         protected override void Awake()
         {
             base.Awake();
-            _eventBus = EngineCore.Instance.InjectEventBus();
+            _eventBus = EngineCore.InjectEventBus();
             _eventBus.SubscribeWeak<Player.StructureAcquired>(this, OnStructureAcquired);
         }
 

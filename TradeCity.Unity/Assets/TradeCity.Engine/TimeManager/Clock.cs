@@ -23,7 +23,7 @@ namespace TradeCity.Engine.TimeManager
         
         public Clock()
         {
-            _eventBus = EngineCore.Instance.InjectEventBus();
+            _eventBus = EngineCore.InjectEventBus();
             _timer.Interval = _interval;
             _timer.Elapsed += Tick;
         }

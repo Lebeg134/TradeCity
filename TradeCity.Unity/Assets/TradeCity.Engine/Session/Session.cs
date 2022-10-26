@@ -6,51 +6,39 @@ using AutSoft.UnitySupplements.EventBus;
 using Injecter;
 using TradeCity.Engine.Core;
 using TradeCity.Engine.Missions;
-using TradeCity.Engine.Structures;
 using TradeCity.Engine.TimeManager;
 using static TradeCity.Engine.Session.Player;
 
 namespace TradeCity.Engine.Session
 {
     [Serializable]
-    public class Session : ITickable
+    public class Session : ISession
     {
+        private const string SavePath = "/saves/";
+        private const string DefaultName = "/saves/";
+
         [NonSerialized]
         [Inject] private readonly IEventBus _eventBus;
         [NonSerialized]
         [Inject] private readonly IClock _clock;
 
-        public static readonly string Filename = "save.dat";
-        private static Session _instance;
-        private readonly List<Player> _players;
+        public string Name;
         public List<Mission> Missions = new();
-        public Dictionary<Land, int> Offers = new();
-        public bool Running;
+        
+        private readonly List<Player> _players;
+        public bool Debug { get; protected set; }
 
-        public Session()
+        public Session(string name = DefaultName)
         {
-            _eventBus = EngineCore.Instance.InjectEventBus();
-            _clock = EngineCore.Instance.InjectClock();
-            Register();
+            _eventBus = EngineCore.InjectEventBus();
+            _clock = EngineCore.InjectClock();
             _players = new List<Player>();
-        }
-
-        public static Session Instance
-        {
-            get
-            {
-                if (_instance != null)
-                    return _instance;
-                throw new Exception("No started Sessions");
-            }
+            Name = name;
+            Register();
         }
 
         public void Tick()
         {
-            //TODO tick market and generate event stuff in the future
-
-            //TODO add land offers randomly
-
             foreach (var player in _players) player.Tick();
         }
 
@@ -61,34 +49,33 @@ namespace TradeCity.Engine.Session
 
         public void Start()
         {
-            _instance = this;
             _clock.Start();
-            Running = true;
             _eventBus.Invoke(new SessionStarted(this));
         }
 
-        public static void Save()
+        public void Save()
         {
-            Stream stream = File.OpenWrite(Filename);
+            Stream stream = File.OpenWrite(GetPath(Name));
             BinaryFormatter b = new();
-            b.Serialize(stream, Instance);
+            b.Serialize(stream, this);
             stream.Close();
         }
 
-        public static bool SaveExists()
+        public bool SaveExists()
         {
-            return File.Exists(Filename);
+            return File.Exists(GetPath(Name));
         }
 
-        public void Load()
+        public static Session Load(string path)
         {
-            Stream stream = File.OpenRead(Filename);
+            Stream stream = File.OpenRead(path);
             BinaryFormatter b = new();
-            _instance = (Session)b.Deserialize(stream);
+           var session = (Session)b.Deserialize(stream);
             stream.Close();
-            CurrentPlayer = Instance._players[0]; // TODO need to change when multiple players
-            _clock.Clear();
-            _clock.Register(Instance);
+            CurrentPlayer = session._players[0]; // TODO need to change when multiple players
+            session._clock.Clear();
+            session._clock.Register(session);
+            return session;
         }
 
         public void Login(Player player)
@@ -110,6 +97,11 @@ namespace TradeCity.Engine.Session
             player.GoBankrupt();
             _players.Remove(player);
             // TODO Remove ownerships?
+        }
+
+        private string GetPath(string name)
+        {
+            return SavePath + name;
         }
 
         public sealed class SessionStarted : IEvent

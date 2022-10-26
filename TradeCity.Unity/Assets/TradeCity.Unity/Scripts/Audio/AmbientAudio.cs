@@ -21,7 +21,7 @@ namespace TradeCity.Unity.Scripts.Audio
 
         private void Awake()
         {
-            _eventBus = EngineCore.Instance.InjectEventBus();
+            _eventBus = EngineCore.InjectEventBus();
 
             this.CheckSerializedField(_screenNavigator, nameof(_screenNavigator));
             this.CheckSerializedField(_cityAmbient, nameof(_cityAmbient));

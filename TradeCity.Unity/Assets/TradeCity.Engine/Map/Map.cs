@@ -26,7 +26,7 @@ namespace TradeCity.Engine.Map
 
         ~Map()
         {
-            EngineCore.Instance.RemoveTickable(this);
+            EngineCore.RemoveTickable(this);
         }
 
         public void Tick()
@@ -36,7 +36,7 @@ namespace TradeCity.Engine.Map
 
         public void Register()
         {
-            EngineCore.Instance.RegisterTickable(this);
+            EngineCore.RegisterTickable(this);
         }
 
         public IMapStructure GetStructure(int x, int y)

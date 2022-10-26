@@ -30,7 +30,7 @@ namespace TradeCity.Engine.Structures
 
         public Structure()
         {
-            _eventBus = EngineCore.Instance.InjectEventBus();
+            _eventBus = EngineCore.InjectEventBus();
         }
 
         public virtual bool Equals(Structure x, Structure y)

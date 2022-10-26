@@ -34,7 +34,7 @@ namespace TradeCity.Engine.Structures
 
         public void Register()
         {
-            EngineCore.Instance.RegisterTickable(this);
+            EngineCore.RegisterTickable(this);
         }
 
         public void Tick()

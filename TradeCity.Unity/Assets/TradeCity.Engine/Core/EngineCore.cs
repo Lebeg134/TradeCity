@@ -26,15 +26,14 @@ namespace TradeCity.Engine.Core
 
 
             CompositionRoot.ServiceProvider = services.BuildServiceProvider();
-            
         }
 
-        public void RegisterTickable(ITickable tickable) => ((IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock))).Register(tickable);
+        public static void RegisterTickable(ITickable tickable) => ((IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock))).Register(tickable);
 
-        public void RemoveTickable(ITickable tickable) => ((IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock))).Remove(tickable);
+        public static void RemoveTickable(ITickable tickable) => ((IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock))).Remove(tickable);
 
-        public IEventBus InjectEventBus() => (IEventBus)CompositionRoot.ServiceProvider!.GetService(typeof(IEventBus));
+        public static IEventBus InjectEventBus() => (IEventBus)CompositionRoot.ServiceProvider!.GetService(typeof(IEventBus));
 
-        public IClock InjectClock() => (IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock));
+        public static IClock InjectClock() => (IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock));
     }
 }

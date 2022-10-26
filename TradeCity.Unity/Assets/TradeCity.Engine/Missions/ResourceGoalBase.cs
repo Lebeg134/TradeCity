@@ -19,7 +19,7 @@ namespace TradeCity.Engine.Missions
 
         protected ResourceGoalBase(Resource watched, Player player = null)
         {
-            _eventBus = EngineCore.Instance.InjectEventBus();
+            _eventBus = EngineCore.InjectEventBus();
             _watched = watched;
             if (player != null)
                 Accept(player);

@@ -20,7 +20,7 @@ namespace TradeCity.Engine.Market
 
         ~SpListing()
         {
-            EngineCore.Instance.RemoveTickable(this);
+            EngineCore.RemoveTickable(this);
         }
 
         public Resource Sell
@@ -44,7 +44,7 @@ namespace TradeCity.Engine.Market
 
         public void Register()
         {
-            EngineCore.Instance.RegisterTickable(this);
+            EngineCore.RegisterTickable(this);
         }
 
         public void Complete(bool throws = false)

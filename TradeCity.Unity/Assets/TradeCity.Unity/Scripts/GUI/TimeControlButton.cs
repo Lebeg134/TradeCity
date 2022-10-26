@@ -21,7 +21,7 @@ namespace TradeCity.Unity.Scripts.GUI
         
         private void Awake()
         {
-            _clock = EngineCore.Instance.InjectClock();
+            _clock = EngineCore.InjectClock();
 
             this.CheckSerializedField(_play, nameof(_play));
             this.CheckSerializedField(_pause, nameof(_pause));
@@ -31,7 +31,7 @@ namespace TradeCity.Unity.Scripts.GUI
 
         private void Start()
         {
-            _clock = EngineCore.Instance.InjectClock();
+            _clock = EngineCore.InjectClock();
             _button.onClick.AddListener(Toggle);
         }
 

@@ -14,7 +14,7 @@ namespace TradeCity.Unity.Scripts.GUI.Market
         protected override void Start()
         {
             base.Start();
-            _eventBus = EngineCore.Instance.InjectEventBus();
+            _eventBus = EngineCore.InjectEventBus();
             _eventBus.SubscribeWeak<SpMarket.ListingRegistered>(this, (message)=> Refresh());
         }
 

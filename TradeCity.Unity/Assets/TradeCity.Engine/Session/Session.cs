@@ -27,7 +27,7 @@ namespace TradeCity.Engine.Session
 
         public bool Debug { get; protected set; }
         public string Name;
-        public List<Mission> Missions = new();
+        public IEnumerable<Mission> Missions { get; set; }
 
         private readonly List<Player> _players;
         private readonly ISessionTemplate _template;
@@ -97,7 +97,7 @@ namespace TradeCity.Engine.Session
             return SavePath + name;
         }
 
-        internal IEnumerable<Resource> GetResourceList()
+        public IEnumerable<Resource> GetResourceList()
         {
             return _template.AllResources();
         }

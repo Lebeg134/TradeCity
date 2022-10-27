@@ -4,6 +4,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using TradeCity.Engine.Core.Interfaces;
 using TradeCity.Engine.Resources;
+using TradeCity.Engine.Session.Interfaces;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.TimeManager;
 
@@ -15,12 +16,18 @@ namespace TradeCity.Engine.Core
 
         [Inject] private readonly IPlayerService _playerService;
         [Inject] private readonly IClock _clock;
-        public Session.Session CurrentSession { get; set; }
+        public ISession CurrentSession { get; private set; }
 
         public StandardSessionService(IPlayerService playerService, IClock clock)
         {
             _playerService = playerService;
             _clock = clock;
+        }
+
+        public void SwitchToSession(ISession session)
+        {
+            _playerService.CurrentPlayer = session.GetFirstPlayer();
+            CurrentSession = session;
         }
 
         public IEnumerable<Resource> GetResourceList()

@@ -13,6 +13,11 @@ using TradeCity.Units.Resources.ConstructionIndustry;
 using TradeCity.Units.Resources.EnergySector;
 using TradeCity.Units.Resources.OilIndustry;
 using TradeCity.Units.Resources.Workforce;
+using TradeCity.Units.Structures.Common;
+using TradeCity.Units.Structures.ConstructionIndustry;
+using TradeCity.Units.Structures.EnergySector;
+using TradeCity.Units.Structures.Lands;
+using TradeCity.Units.Structures.OilIndustry;
 
 namespace TradeCity.Engine.Session.Templates
 {
@@ -20,17 +25,34 @@ namespace TradeCity.Engine.Session.Templates
     {
         public ICollection<Building> AllBuildings()
         {
-            throw new NotImplementedException();
+            return new List<Building>
+            {
+                new SteelForge(),
+                new ConcreteMixingPlant(), new CraftsmanHq(), new GlassKiln(), new Lumberyard(), new StoneCutter(),
+                new CoalPowerplant(),
+                new ChemicalResearchFacility(), new ChemicalSafetyBureau(), new OilDistillery()
+            };
         }
 
         public ICollection<ILand> AllLands()
         {
-            throw new NotImplementedException();
+            return new List<ILand>
+            {
+                new ClearwaterLake(),
+                new Well(),
+                new Forest(),
+                new CoalMine(),
+                new IronMine(),
+                new SandQuarry(),
+                new StoneQuarry(),
+                new OilField(),
+                new OilRig()
+            };
         }
 
         public ICollection<Mission> AllMissions()
         {
-            throw new NotImplementedException();
+            return new List<Mission>();
         }
 
         public ICollection<Resource> AllResources()
@@ -52,22 +74,34 @@ namespace TradeCity.Engine.Session.Templates
 
         public ICollection<Building> StartingBuildings()
         {
-            throw new NotImplementedException();
+            return new List<Building>();
         }
 
         public ICollection<ILand> StartingLands()
         {
-            throw new NotImplementedException();
+            return new List<ILand>();
         }
 
         public ICollection<Mission> StartingMissions()
         {
-            throw new NotImplementedException();
+            return new List<Mission>
+            {
+                new(new ReachResourceGoal(new Money(100000)), new ResourceReward(new Workforce(1000))),
+                new(new CollectResourceGoal(new Steel(1000)), new ResourceReward(new Money(10000))),
+                new(new CollectResourceGoal(new Coal(100)), new ResourceReward(new Bricks(250)))
+            };
         }
 
         public ICollection<Resource> StartingResources()
         {
-            throw new NotImplementedException();
+            return new List<Resource>
+            {
+                new Money(50000),
+                new Workforce(2000),
+                new Wood(1000),
+                new Iron(1000),
+                new Stone(1000),
+            };
         }
     }
 }

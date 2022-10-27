@@ -7,7 +7,8 @@ namespace TradeCity.Engine.Core.Interfaces
 {
     public interface ISessionService
     {
-        Session.Session CurrentSession { get; set; }
+        ISession CurrentSession { get; }
+        void SwitchToSession(ISession session);
         IEnumerable<Resource> GetResourceList();
         IEnumerable<Building> GetAllBuildings();
         void Load(string name);

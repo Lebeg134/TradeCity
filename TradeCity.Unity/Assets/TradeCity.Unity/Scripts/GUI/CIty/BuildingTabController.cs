@@ -81,6 +81,8 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
         private void RegisterAllBuildings(Branches branch) //TODO add player checks
         {
+            if (_playerService.CurrentPlayer == null) return;
+
             foreach (var building in _playerService.CurrentPlayer.GetAllBuildings()
                          .Where(building => building.GetBranch() == branch))
             {

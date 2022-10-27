@@ -27,7 +27,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
 
         protected override IEnumerable<Land> GetCollection()
         {
-            return _playerService.CurrentPlayer.GetLands();
+            return _playerService.CurrentPlayer == null ? new List<Land>() : _playerService.CurrentPlayer.GetLands();
         }
 
         protected override void ProcessListItem(Land item, OwnedLandVisual newListItem)

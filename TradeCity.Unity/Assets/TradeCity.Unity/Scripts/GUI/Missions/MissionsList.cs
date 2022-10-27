@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using TradeCity.Engine.Core;
 using TradeCity.Engine.Core.Interfaces;
 using TradeCity.Engine.Missions;
-using TradeCity.Engine.Session;
-using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.GUI.Missions
 {
@@ -19,7 +17,7 @@ namespace TradeCity.Unity.Scripts.GUI.Missions
         }
         protected override IEnumerable<Mission> GetCollection()
         {
-            return _sessionService.CurrentSession.Missions;
+            return _sessionService == null ? new List<Mission>() : _sessionService.CurrentSession.Missions;
         }
 
         protected override void ProcessListItem(Mission item, MissionListItem newListItem)

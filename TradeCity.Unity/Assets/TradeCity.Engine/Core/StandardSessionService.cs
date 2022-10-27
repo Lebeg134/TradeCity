@@ -32,12 +32,12 @@ namespace TradeCity.Engine.Core
 
         public IEnumerable<Resource> GetResourceList()
         {
-            return CurrentSession.GetResourceList();
+            return CurrentSession == null ? new List<Resource>() : CurrentSession.GetResourceList();
         }
 
         public IEnumerable<Building> GetAllBuildings()
         {
-            return CurrentSession.GetAllBuildings();
+            return CurrentSession == null ? new List<Building>() : CurrentSession.GetAllBuildings();
         }
 
         public void Load(string name)

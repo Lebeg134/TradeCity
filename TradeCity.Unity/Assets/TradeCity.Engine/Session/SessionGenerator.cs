@@ -6,8 +6,8 @@ namespace TradeCity.Engine.Session
     {
         public static Session Generate(ISessionTemplate template)
         {
-            var session = new Session();
-            Player player = new Player();
+            var session = new Session(template);
+            var player = new Player();
             session.Login(player);
 
             player.RegisterResources(template.AllResources());

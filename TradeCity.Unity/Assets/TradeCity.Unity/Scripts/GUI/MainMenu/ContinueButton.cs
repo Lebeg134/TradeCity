@@ -1,4 +1,7 @@
 using System;
+using Injecter;
+using TradeCity.Engine.Core;
+using TradeCity.Engine.Core.Interfaces;
 using TradeCity.Engine.Session;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,10 +12,12 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
     [RequireComponent(typeof(Button))]
     public class ContinueButton : MonoBehaviour
     {
+        [Inject] private ISessionService _sessionService;
         private Button _button = default!;
 
         private void Awake()
         {
+            _sessionService = EngineCore.InjectSessionService();
             _button = GetComponent<Button>();
         }
 
@@ -27,9 +32,9 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
         {
             try
             {
-                Session.Instance.Load();
+                _sessionService.Load("NewSave");
                 SceneManager.LoadScene(sceneName: "GameScene");
-                Session.Instance.Start();
+                _sessionService.CurrentSession.Start();
             }
             catch (Exception)
             {
@@ -44,7 +49,7 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
 
         private void UpdateVisuals()
         {
-            _button.interactable = Session.SaveExists();
+            _button.interactable = _sessionService.SaveExists();
         }
     }
 }

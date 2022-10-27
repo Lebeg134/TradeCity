@@ -21,8 +21,8 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
 
         protected override void Start()
         {
-            if (Resource != null && _playerService.CurrentPlayer != null)
-                Watched = _playerService.CurrentPlayer.GetRes(ConvertToRes(Resource));
+            if (Watched != null && _playerService.CurrentPlayer != null)
+                Watched = _playerService.CurrentPlayer.GetRes(Watched);
             UpdateVisuals();
         }
     }

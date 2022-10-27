@@ -38,7 +38,7 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
 
         protected override void ProcessListItem(Resource item, ResourceDisplay newListItem)
         {
-            newListItem.GetComponent<ResourceDisplay>().Resource = item.GetName();
+            newListItem.GetComponent<ResourceDisplay>().Watched = item;
         }
     }
 }

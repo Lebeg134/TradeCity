@@ -5,7 +5,6 @@ using Injecter;
 using TMPro;
 using TradeCity.Engine.Core;
 using TradeCity.Engine.Core.Interfaces;
-using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.Structures.Interfaces;
 using TradeCity.Unity.Scripts.GUI.ResourceDisplays;
@@ -16,7 +15,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 {
     public class BuildingListItem : MonoBehaviour
     {
-        [Inject] private IPlayerService _playerService; 
+        [Inject] private IPlayerService _playerService = default!; 
 
         public string Building = default!;
         [SerializeField] private Image _buildingImage = default!;

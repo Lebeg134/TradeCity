@@ -1,6 +1,7 @@
 using AutSoft.UnitySupplements.Vitamins;
 using System.Linq;
 using Injecter;
+using TradeCity.Engine.Core;
 using TradeCity.Engine.Core.Interfaces;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
@@ -27,6 +28,8 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
         private void Awake()
         {
+            _playerService = EngineCore.InjectPlayerService();
+            _sessionService = EngineCore.InjectSessionService();
 
             this.CheckSerializedField(_commonBranch, nameof(_commonBranch));
             this.CheckSerializedField(_constructionBranch, nameof(_constructionBranch));
@@ -78,13 +81,13 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
         private void RegisterAllBuildings(Branches branch) //TODO add player checks
         {
-            foreach (Building building in _playerService.CurrentPlayer.GetAllBuildings()
+            foreach (var building in _playerService.CurrentPlayer.GetAllBuildings()
                          .Where(building => building.GetBranch() == branch))
             {
                 RegisterBuilding(building);
             }
 
-            foreach (Building building in SessionGenerator.GetAllBuildings()
+            foreach (var building in _sessionService.GetAllBuildings()
                          .Where(building => building.GetBranch() == branch && !_playerService.CurrentPlayer.HasStructure(building)))
             {
                 RegisterBuilding(building);

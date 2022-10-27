@@ -11,7 +11,11 @@ namespace TradeCity.Engine.Core
         private static EngineCore _instance;
         public static EngineCore Instance
         {
-            get { return _instance ??= new EngineCore(); }
+            get
+            {
+                EnsureObject();
+                return _instance;
+            }
         }
 
         private EngineCore()
@@ -29,15 +33,45 @@ namespace TradeCity.Engine.Core
             CompositionRoot.ServiceProvider = services.BuildServiceProvider();
         }
 
-        public static void RegisterTickable(ITickable tickable) => ((IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock))).Register(tickable);
+        private static void EnsureObject()
+        {
+            _instance ??= new EngineCore();
+        }
 
-        public static void RemoveTickable(ITickable tickable) => ((IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock))).Remove(tickable);
+        public static void RegisterTickable(ITickable tickable)
+        {
+            EnsureObject();
+            ((IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock))).Register(tickable);
+        }
 
-        public static IEventBus InjectEventBus() => (IEventBus)CompositionRoot.ServiceProvider!.GetService(typeof(IEventBus));
+        public static void RemoveTickable(ITickable tickable)
+        {
+            EnsureObject();
+            ((IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock))).Remove(tickable);
+        }
 
-        public static IClock InjectClock() => (IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock));
+        public static IEventBus InjectEventBus()
+        {
+            EnsureObject();
+            return (IEventBus)CompositionRoot.ServiceProvider!.GetService(typeof(IEventBus));
+        }
 
-        public static IPlayerService InjectPlayerService() => (IPlayerService)CompositionRoot.ServiceProvider!.GetService(typeof(IPlayerService));
-        public static ISessionService InjectSessionService() => (ISessionService)CompositionRoot.ServiceProvider!.GetService(typeof(ISessionService));
+        public static IClock InjectClock()
+        {
+            EnsureObject();
+            return (IClock)CompositionRoot.ServiceProvider!.GetService(typeof(IClock));
+        }
+
+        public static IPlayerService InjectPlayerService()
+        {
+            EnsureObject();
+            return (IPlayerService)CompositionRoot.ServiceProvider!.GetService(typeof(IPlayerService));
+        }
+
+        public static ISessionService InjectSessionService()
+        {
+            EnsureObject();
+            return (ISessionService)CompositionRoot.ServiceProvider!.GetService(typeof(ISessionService));
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace TradeCity.Units.Structures.Lands
     [Serializable]
     public class Forest : Land
     {
-        protected static List<Resource>[] GetCosttats => new[]
+        protected static List<Resource>[] GetCostStats => new[]
         {
             new List<Resource> { new Wood(100) },
             new List<Resource> { new Wood(200) },
@@ -24,7 +24,7 @@ namespace TradeCity.Units.Structures.Lands
             new List<Resource> { new Wood(1000) }
         };
 
-        protected static List<Resource>[] GetProducetats => new[]
+        protected static List<Resource>[] GetProduceStats => new[]
         {
             new List<Resource> { new Wood(10) },
             new List<Resource> { new Wood(20) },
@@ -55,7 +55,7 @@ namespace TradeCity.Units.Structures.Lands
 
         protected override List<Resource> GetProduce(int level)
         {
-            return GetProducetats[LebegUtil.IndexInRange(GetProducetats, level - 1)];
+            return GetProduceStats[LebegUtil.IndexInRange(GetProduceStats, level - 1)];
         }
 
         protected override List<Resource> GetCost(int level)

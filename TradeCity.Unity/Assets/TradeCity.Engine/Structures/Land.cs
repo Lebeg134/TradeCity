@@ -10,9 +10,9 @@ using TradeCity.Units;
 namespace TradeCity.Engine.Structures
 {
     [Serializable]
-    public abstract class Land : CommonStructure, ILand, IMapStructure
+    public abstract class Land : CommonStructure, ILand
     {
-        private const int DefaultMaxLevel = 100;
+        protected const int _defaultMaxLevel = 100;
 
         public event Action<Land> OnPurchase;
 
@@ -51,11 +51,6 @@ namespace TradeCity.Engine.Structures
             throw new NotImplementedException();
         }
 
-        public void GetPosition()
-        {
-            throw new NotImplementedException();
-        }
-
         public bool IsAuctionable()
         {
             return _owner == null;
@@ -69,7 +64,7 @@ namespace TradeCity.Engine.Structures
 
         protected override int GetMaxLevel()
         {
-            return DefaultMaxLevel;
+            return _defaultMaxLevel;
         }
 
         public override Branches GetBranch()

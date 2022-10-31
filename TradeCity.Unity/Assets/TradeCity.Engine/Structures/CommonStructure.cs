@@ -28,20 +28,17 @@ namespace TradeCity.Engine.Structures
 
         public virtual void Upgrade()
         {
-            if (CanUpgrade())
-            {
-                _owner.SubRes(GetCost(Level));
-                _level++;
-                OnUpgrade?.Invoke(this);
-                if (_level >= MaxLevel)
-                    OnMaxLevelReached?.Invoke(this);
-            }
+            if (!CanUpgrade()) return;
+            _owner.SubRes(GetCost(Level));
+            _level++;
+            OnUpgrade?.Invoke(this);
+            if (_level >= MaxLevel)
+                OnMaxLevelReached?.Invoke(this);
         }
 
         public bool CanUpgrade()
         {
-            if (_level >= MaxLevel) return false;
-            return CheckCriteria(_owner, _level);
+            return _level < MaxLevel && CheckCriteria(_owner, _level);
         }
 
         protected abstract int GetMaxLevel();

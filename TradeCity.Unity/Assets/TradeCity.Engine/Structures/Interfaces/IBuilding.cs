@@ -18,7 +18,6 @@ namespace TradeCity.Engine.Structures.Interfaces
         BuildingState BuildingState { get; }
         int Level { get; }
         int MaxLevel { get; }
-        public event Action<Building> OnBuild;
         void Build(Player by);
         bool CanBuild(Player by);
         List<Resource> GetUpkeep();

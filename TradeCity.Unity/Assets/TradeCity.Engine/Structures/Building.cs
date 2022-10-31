@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using AutSoft.UnitySupplements.EventBus;
 using TradeCity.Engine.Production;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
@@ -11,9 +12,7 @@ namespace TradeCity.Engine.Structures
     public abstract class Building : CommonStructure, IOwnable, IBuilding
     {
         protected List<Recipe> _recipes = new();
-
-        public event Action<Building> OnBuild;
-
+        
         public BuildingState BuildingState
         {
             get
@@ -37,9 +36,9 @@ namespace TradeCity.Engine.Structures
                 var buildings = "{ ";
                 by.GetAllBuildings().ForEach(building => buildings += building.GetName() + ", ");
                 Acquire(by);
-                OnBuild?.Invoke(this);
+                _eventBus.Invoke(new BuildingBuilt(this, by));
                 if (BuildingState == BuildingState.Maxlevel)
-                    InvokeOnMaxLevelReached();
+                    _eventBus.Invoke(new StructureMaxLevelReached(this));
             }
         }
 
@@ -76,17 +75,7 @@ namespace TradeCity.Engine.Structures
 
         public void Tick()
         {
-            //TODO check if theres a better method than auto turn-on
-            //Upkeep system turned off
-            //if (owner.CheckResources(GetUpkeep()))
-            //{
-            //    owner.SubRes(GetUpkeep());
-            //    On();
-            //}
-            //else
-            //{
-            //    Off();
-            //}
+
         }
 
         public void Register()
@@ -103,6 +92,18 @@ namespace TradeCity.Engine.Structures
         protected override string GetBasePath()
         {
             return base.GetBasePath() + "Building/";
+        }
+
+        public class BuildingBuilt:IEvent
+        {
+            public BuildingBuilt(Building building, Player byPlayer)
+            {
+                Building = building;
+                ByPlayer = byPlayer;
+            }
+
+            public Building Building { get; }
+            public Player ByPlayer { get; }
         }
     }
 }

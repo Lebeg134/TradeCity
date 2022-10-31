@@ -75,7 +75,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
         private void RegisterBuilding(Building building)
         {
             var listItem = Instantiate(_buildingListItemPrefab);
-            listItem.GetComponent<BuildingListItem>().Building = building.GetName();
+            listItem.GetComponent<BuildingListItem>().SetTarget(building);
             listItem.transform.SetParent(_content.transform);
         }
 

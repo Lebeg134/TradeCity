@@ -16,8 +16,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
     public class BuildingListItem : MonoBehaviour
     {
         [Inject] private IPlayerService _playerService = default!; 
-
-        public string Building = default!;
+        
         [SerializeField] private Image _buildingImage = default!;
         [SerializeField] private TMP_Text _buildingName = default!;
         [SerializeField] private Button _buildButton = default!;

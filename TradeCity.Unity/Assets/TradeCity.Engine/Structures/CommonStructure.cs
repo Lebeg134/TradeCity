@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using AutSoft.UnitySupplements.EventBus;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures.Interfaces;
@@ -23,17 +24,14 @@ namespace TradeCity.Engine.Structures
             _owner = by;
         }
 
-        public event Action<Structure> OnUpgrade;
-        public event Action<Structure> OnMaxLevelReached;
-
         public virtual void Upgrade()
         {
             if (!CanUpgrade()) return;
             _owner.SubRes(GetCost(Level));
             _level++;
-            OnUpgrade?.Invoke(this);
+            _eventBus.Invoke(new StructureUpgraded(this));
             if (_level >= MaxLevel)
-                OnMaxLevelReached?.Invoke(this);
+                _eventBus.Invoke(new StructureMaxLevelReached(this));
         }
 
         public bool CanUpgrade()
@@ -54,9 +52,22 @@ namespace TradeCity.Engine.Structures
             return by.CheckResources(GetCost(level)) && by.CheckStructures(GetCriteria(level));
         }
 
-        protected void InvokeOnMaxLevelReached()
+        public class StructureUpgraded : IEvent
         {
-            OnMaxLevelReached?.Invoke(this);
+            public StructureUpgraded(CommonStructure subject)
+            {
+                Subject = subject;
+            }
+            public CommonStructure Subject { get; }
+        }
+
+        public class StructureMaxLevelReached : IEvent
+        {
+            public StructureMaxLevelReached(CommonStructure subject)
+            {
+                Subject = subject;
+            }
+            public CommonStructure Subject { get; }
         }
     }
 }

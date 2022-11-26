@@ -5,11 +5,13 @@ using Injecter;
 using Mono.Cecil;
 using TradeCity.Engine.Core;
 using TradeCity.Engine.Structures;
+using TradeCity.Units.Structures.Lands;
+using TradeCity.Unity.Scripts.World_Elements.Raycasting;
 using UnityEngine;
 
 namespace TradeCity.Unity.Scripts.World_Elements.Lands
 {
-    public class CampaignLandPrefab : MonoBehaviour
+    public class CampaignLandPrefab : MonoBehaviour, IRaycastTarget
     {
         [Inject] private IEventBus _eventBus;
 
@@ -40,6 +42,13 @@ namespace TradeCity.Unity.Scripts.World_Elements.Lands
             {
                 _hideGameObjects[i].SetActive(i >= level);
             }
+        }
+
+        public void OnClick(Raycaster raycaster)
+        {
+            Debug.Log("clicked on gameObject: "+this);
+            
+
         }
     }
 }

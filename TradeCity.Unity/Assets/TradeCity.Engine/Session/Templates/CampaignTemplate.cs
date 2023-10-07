@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using TradeCity.Engine.Missions;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session.Interfaces;
@@ -27,10 +23,20 @@ namespace TradeCity.Engine.Session.Templates
         {
             return new List<Building>
             {
+                // Common
                 new SteelForge(),
-                new ConcreteMixingPlant(), new CraftsmanHq(), new GlassKiln(), new Lumberyard(), new StoneCutter(),
-                new CoalPowerplant(),
-                new ChemicalResearchFacility(), new ChemicalSafetyBureau(), new OilDistillery()
+                // Construction Industry
+                new ConcreteMixingPlant(), new GlassKiln(), new Lumberyard(), new StoneCutter(), new InsulationFactory(), new ReinforcedConcretePackager(),
+                // Construction Specials
+                new AdvancedMaterialResearchLab(), new CraftsmanHq(),
+                // Energy Sector
+                new BiomassPowerplant(), new CoalPowerplant(), new FuelPowerplant(),  new GasPowerplant(), new HighEnergyFuelPowerplant(),
+                // Energy Specials
+                new FireStation(), new FuelSafetyInstitute(), new GasSafetyInstitute(),
+                // Oil Industry
+                new OilDistillery(), new CatalyticReformer(), new MeroxPlant(), new Polymerizer(),
+                // Oil Specials
+                new ChemicalResearchFacility(), new ChemicalSafetyBureau(),
             };
         }
 

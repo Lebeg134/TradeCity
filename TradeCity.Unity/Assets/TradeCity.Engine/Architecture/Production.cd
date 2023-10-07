@@ -3,16 +3,16 @@
   <Class Name="TradeCity.Engine.Production.DistributionStrategy" Collapsed="true">
     <Position X="5.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAhAA=</HashCode>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhEA=</HashCode>
       <FileName>Assets\TradeCity.Engine\Production\DistributionStrategy.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="TradeCity.Engine.Production.EvenDistributionStrartegy" Collapsed="true">
+  <Class Name="TradeCity.Engine.Production.EvenDistributionStrategy" Collapsed="true">
     <Position X="4.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhAA=</HashCode>
-      <FileName>Assets\TradeCity.Engine\Production\EvenDistributionStrartegy.cs</FileName>
+      <FileName>Assets\TradeCity.Engine\Production\EvenDistributionStrategy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TradeCity.Engine.Production.ManyToOneRecipe" Collapsed="true">

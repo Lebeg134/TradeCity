@@ -18,17 +18,10 @@
   <Class Name="TradeCity.Engine.Missions.Mission" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="12" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAAoAkAAIAAAAAACAAAAAABQACBAAAAIAAAKAAAwAA=</HashCode>
+      <HashCode>AIAAoAkAAIAAAAAAAAAAAAABQACBAAAAAAAAOAAAwAA=</HashCode>
       <FileName>Assets\TradeCity.Engine\Missions\Mission.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="TradeCity.Engine.Missions.MissionNotAchievedException" Collapsed="true">
-    <Position X="13.75" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\TradeCity.Engine\Missions\MissionNotAchievedException.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="TradeCity.Engine.Missions.OwnableReward" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="10.25" Y="2.5" Width="1.5" />
@@ -48,7 +41,7 @@
   <Class Name="TradeCity.Engine.Missions.ResourceGoalBase" Collapsed="true">
     <Position X="6.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AJAAAAAAAAAAAAAIAAAASAABQAAAAAAEAAAQCAAYAAA=</HashCode>
+      <HashCode>AJAAAAAACAAAAAAIAAAASAABQAAAAAAEAAAQGAAYAAA=</HashCode>
       <FileName>Assets\TradeCity.Engine\Missions\ResourceGoalBase.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

@@ -3,7 +3,7 @@
   <Class Name="TradeCity.Engine.Session.Player" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="6.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAASgCAhAABAAABAAAAIQhACACAFQAgABBBAgAIAQAI=</HashCode>
+      <HashCode>IAASgCAhAABAAABAAAAIAhACACAFQAgAABBIEAIAQAI=</HashCode>
       <FileName>Assets\TradeCity.Engine\Session\BankruptPlayerStrategy.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -11,7 +11,7 @@
   <Class Name="TradeCity.Engine.Session.Session" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="8" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEgIAAACAYQABAAAAAAAIAADABAAAIQAAQAAAAQAA=</HashCode>
+      <HashCode>IAAAAIAAACAAAIDAEAAAAAYAADADYAgAAIAQEAAAQAA=</HashCode>
       <FileName>Assets\TradeCity.Engine\Session\Session.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -19,16 +19,9 @@
   <Class Name="TradeCity.Engine.Session.SessionGenerator" Collapsed="true">
     <Position X="6.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IABAAAAAAAAAAIAAAAAABAAAAIIAIAAAAAAAQAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>Assets\TradeCity.Engine\Session\SessionGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="TradeCity.Engine.Session.IPlayerStrategy" Collapsed="true">
-    <Position X="6.25" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAAABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAQAI=</HashCode>
-      <FileName>Assets\TradeCity.Engine\Session\IPlayerStrategy.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

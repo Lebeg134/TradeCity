@@ -12,6 +12,16 @@ namespace TradeCity.Units.Structures.OilIndustry
     [Serializable]
     public class ChemicalSafetyBureau : SpecialBuilding
     {
+        public override string GetName()
+        {
+            return "Chemical Safety Bureau";
+        }
+
+        public override Branches GetBranch()
+        {
+            return Branches.Oil;
+        }
+
         public override List<Resource> GetCost()
         {
             return new List<Resource> { new Bricks(250), new Workforce(25) };
@@ -22,15 +32,9 @@ namespace TradeCity.Units.Structures.OilIndustry
             return new List<IOwnable>();
         }
 
-        public override Branches GetBranch()
-        {
-            return Branches.Oil;
-        }
+        
 
-        public override string GetName()
-        {
-            return "Chemical Safety Bureau";
-        }
+        
 
         public override List<Resource> GetUpkeep()
         {

@@ -17,7 +17,7 @@ namespace TradeCity.Units.Structures.OilIndustry
 
         public override Branches GetBranch()
         {
-            throw new System.NotImplementedException();
+            return Branches.Oil;
         }
 
         protected override int GetMaxLevel()

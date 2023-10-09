@@ -17,7 +17,7 @@ namespace TradeCity.Units.Structures.EnergySector
 
         public override Branches GetBranch()
         {
-            throw new System.NotImplementedException();
+            return Branches.Energy;
         }
 
         protected override int GetMaxLevel()

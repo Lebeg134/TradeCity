@@ -13,9 +13,9 @@ namespace TradeCity.Units.Structures.OilIndustry
     [Serializable]
     public class ChemicalResearchFacility : Building
     {
-        public override List<IOwnable> GetCriteria()
+        public override string GetName()
         {
-            return new List<IOwnable>();
+            return "Chemical Research Facility";
         }
 
         public override Branches GetBranch()
@@ -23,15 +23,19 @@ namespace TradeCity.Units.Structures.OilIndustry
             return Branches.Oil;
         }
 
+        public override List<IOwnable> GetCriteria()
+        {
+            return new List<IOwnable>();
+        }
+
+        
+
         protected override int GetMaxLevel()
         {
             return 10;
         }
 
-        public override string GetName()
-        {
-            return "Chemical Research Facility";
-        }
+        
 
         protected override List<Resource> GetUpkeep(int level)
         {

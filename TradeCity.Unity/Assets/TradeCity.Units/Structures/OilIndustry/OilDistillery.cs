@@ -15,6 +15,16 @@ namespace TradeCity.Units.Structures.OilIndustry
     [Serializable]
     public class OilDistillery : Building
     {
+        public override string GetName()
+        {
+            return "Oil Distillery";
+        }
+
+        public override Branches GetBranch()
+        {
+            return Branches.Oil;
+        }
+
         public OilDistillery()
         {
             Recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(15), new Oil(15) }, new Fuel(2), 1));
@@ -33,20 +43,14 @@ namespace TradeCity.Units.Structures.OilIndustry
             return new List<IOwnable> { new ChemicalResearchFacility(), new ChemicalSafetyBureau() };
         }
 
-        public override Branches GetBranch()
-        {
-            return Branches.Oil;
-        }
+        
 
         protected override int GetMaxLevel()
         {
             return 10;
         }
 
-        public override string GetName()
-        {
-            return "Oil Distillery";
-        }
+        
 
         public override List<Resource> GetProduce()
         {

@@ -19,9 +19,9 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
             Recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(1), new Wood(10) }, new Lumber(5), 5));
         }
 
-        public override List<IOwnable> GetCriteria()
+        public override string GetName()
         {
-            return new List<IOwnable>();
+            return "Lumberyard";
         }
 
         public override Branches GetBranch()
@@ -29,15 +29,19 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
             return Branches.Construction;
         }
 
+        public override List<IOwnable> GetCriteria()
+        {
+            return new List<IOwnable>();
+        }
+
+        
+
         protected override int GetMaxLevel()
         {
             return 20;
         }
 
-        public override string GetName()
-        {
-            return "Lumberyard";
-        }
+        
 
         public override List<Resource> GetProduce()
         {

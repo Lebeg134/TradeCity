@@ -13,6 +13,15 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
     [Serializable]
     public class GlassKiln : Building
     {
+        public override string GetName()
+        {
+            return "Glass Kiln";
+        }
+        public override Branches GetBranch()
+        {
+            return Branches.Construction;
+        }
+
         public GlassKiln()
         {
             Recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(1), new Sand(1) }, new Glass(1), 10));
@@ -23,21 +32,14 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
             return new List<IOwnable> { new CraftsmanHq() };
         }
 
-        public override Branches GetBranch()
-        {
-            return Branches.Construction;
-        }
+        
 
         protected override int GetMaxLevel()
         {
             return 10;
         }
 
-        public override string GetName()
-        {
-            return "Glass Kiln";
-        }
-
+        
         public override List<Resource> GetProduce()
         {
             return new List<Resource> { new Glass(5 * _level) };

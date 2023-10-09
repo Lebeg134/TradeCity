@@ -17,10 +17,9 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
             Recipes.Add(new SimpleRecipe(new Stone(3), new Bricks(1), 10));
         }
 
-        public override void Upgrade()
+        public override string GetName()
         {
-            base.Upgrade();
-            Recipes[0].Limit += _level * 5 + 5;
+            return "Stone Cutter";
         }
 
         public override Branches GetBranch()
@@ -28,10 +27,12 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
             return Branches.Construction;
         }
 
-        public override string GetName()
+        public override void Upgrade()
         {
-            return "Stone Cutter";
+            base.Upgrade();
+            Recipes[0].Limit += _level * 5 + 5;
         }
+
 
         protected override List<Resource> GetCost(int level)
         {

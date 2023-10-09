@@ -12,6 +12,15 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
     [Serializable]
     public class CraftsmanHq : SpecialBuilding
     {
+        public override string GetName()
+        {
+            return "Craftsman HQ";
+        }
+        public override Branches GetBranch()
+        {
+            return Branches.Construction;
+        }
+
         public override List<Resource> GetCost()
         {
             return new List<Resource> { new Concrete(100), new Steel(100) };
@@ -22,15 +31,8 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
             return new List<IOwnable>();
         }
 
-        public override Branches GetBranch()
-        {
-            return Branches.Construction;
-        }
 
-        public override string GetName()
-        {
-            return "Craftsman HQ";
-        }
+        
 
         public override List<Resource> GetUpkeep()
         {

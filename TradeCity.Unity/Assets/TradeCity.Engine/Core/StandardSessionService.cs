@@ -55,9 +55,10 @@ namespace TradeCity.Engine.Core
         public bool SaveExists()
         {
             return false;
-            var di = new DirectoryInfo(SavePath);
+            //TODO
+            /*var di = new DirectoryInfo(SavePath);
             var saves = di.GetFiles("*.sav");
-            return saves.Length > 0;
+            return saves.Length > 0;*/
         }
     }
 }

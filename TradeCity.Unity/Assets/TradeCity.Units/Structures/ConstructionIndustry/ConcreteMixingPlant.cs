@@ -14,6 +14,16 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
     [Serializable]
     public class ConcreteMixingPlant : Building
     {
+        public override string GetName()
+        {
+            return "Concrete Mixing Plant";
+        }
+
+        public override Branches GetBranch()
+        {
+            return Branches.Construction;
+        }
+
         public ConcreteMixingPlant()
         {
             Recipes.Add(new ManyToOneRecipe(new List<Resource> { new Water(1), new Sand(5) }, new Concrete(3), 5));
@@ -24,20 +34,14 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
             return new List<IOwnable>();
         }
 
-        public override Branches GetBranch()
-        {
-            return Branches.Construction;
-        }
+        
 
         protected override int GetMaxLevel()
         {
             return 5;
         }
 
-        public override string GetName()
-        {
-            return "Concrete Mixing Plant";
-        }
+        
 
         public override List<Resource> GetProduce()
         {

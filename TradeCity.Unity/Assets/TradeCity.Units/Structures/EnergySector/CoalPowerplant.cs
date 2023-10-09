@@ -19,10 +19,9 @@ namespace TradeCity.Units.Structures.EnergySector
             _recipes.Add(new SimpleRecipe(new Coal(2), new Electricity(1), 10));
         }
 
-        public override void Upgrade()
+        public override string GetName()
         {
-            base.Upgrade();
-            _recipes[0].Limit += 10;
+            return "Coal Powerplant";
         }
 
         public override Branches GetBranch()
@@ -30,10 +29,12 @@ namespace TradeCity.Units.Structures.EnergySector
             return Branches.Energy;
         }
 
-        public override string GetName()
+        public override void Upgrade()
         {
-            return "Coal Powerplant";
+            base.Upgrade();
+            _recipes[0].Limit += 10;
         }
+
 
         public override string GetResourcePath()
         {

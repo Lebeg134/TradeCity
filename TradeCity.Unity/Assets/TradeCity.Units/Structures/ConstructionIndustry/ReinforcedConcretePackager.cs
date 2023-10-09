@@ -17,7 +17,7 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
 
         public override Branches GetBranch()
         {
-            throw new System.NotImplementedException();
+            return Branches.Construction;
         }
 
         protected override int GetMaxLevel()

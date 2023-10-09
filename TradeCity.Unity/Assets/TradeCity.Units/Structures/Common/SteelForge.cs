@@ -18,6 +18,16 @@ namespace TradeCity.Units.Structures.Common
             _recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(1), new Iron(2) }, new Steel(1), 5));
         }
 
+        public override string GetName()
+        {
+            return "Steel Forge";
+        }
+
+        public override Branches GetBranch()
+        {
+            return Branches.Common;
+        }
+
         protected static List<Resource>[] GetCostArray => new[]
         {
             new List<Resource> { new Wood(100), new Workforce(50) }, //Build cost
@@ -30,20 +40,14 @@ namespace TradeCity.Units.Structures.Common
             _recipes[0].Limit += 5;
         }
 
-        public override string GetName()
-        {
-            return "Steel Forge";
-        }
+        
 
         public override string GetResourcePath()
         {
             return GetBasePath() + "steel_forge";
         }
 
-        public override Branches GetBranch()
-        {
-            return Branches.Common;
-        }
+        
 
         public override List<IOwnable> GetCriteria()
         {

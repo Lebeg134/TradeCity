@@ -223,11 +223,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1656577289}
   - {fileID: 507687315}
   - {fileID: 1976953779}
   - {fileID: 93954353}
   - {fileID: 651663077}
-  - {fileID: 1656577289}
   m_Father: {fileID: 1892220482}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7594,7 +7594,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d45c40db20abc4847a182ff9782a877e, type: 3}
     - target: {fileID: 9029556020161820824, guid: 31003952bc6a50e479ef44f8b12fc743, type: 3}
       propertyPath: m_Name
-      value: WorkforceBranchButton
+      value: TownBranchButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9415,7 +9415,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1890652374}
   m_HandleRect: {fileID: 1890652373}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

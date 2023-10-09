@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Structures.EasyInheritance;
 using TradeCity.Engine.Structures.Interfaces;
-using TradeCity.Units.Resources.Common;
 using TradeCity.Units.Resources.ConstructionIndustry;
 using TradeCity.Units.Resources.EnergySector;
+using TradeCity.Units.Resources.Workforce;
 
-namespace TradeCity.Units.Structures.ConstructionIndustry
+namespace TradeCity.Units.Structures.OilIndustry
 {
     [Serializable]
-    public class CraftsmanHq : SpecialBuilding
+    public class ChemicalSafetyBureau : SpecialBuilding
     {
         public override string GetName()
         {
-            return "Craftsman HQ";
+            return "Chemical Safety Bureau";
         }
+
         public override Branches GetBranch()
         {
             return Branches.Town;
@@ -23,7 +24,7 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
 
         public override List<Resource> GetCost()
         {
-            return new List<Resource> { new Concrete(100), new Steel(100) };
+            return new List<Resource> { new Bricks(250), new Workforce(25) };
         }
 
         public override List<IOwnable> GetCriteria()
@@ -31,6 +32,7 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
             return new List<IOwnable>();
         }
 
+        
 
         
 

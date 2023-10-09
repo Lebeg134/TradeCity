@@ -28,7 +28,7 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
                     case "Money":
                     case "Electricity":
                     case "Water":
-                    case "Workforce":
+                    case "Town":
                         continue;
                 }
                 ret.Add(res);

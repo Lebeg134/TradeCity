@@ -6,6 +6,6 @@
         Construction,
         Energy,
         Oil,
-        Workforce
+        Town
     }
 }

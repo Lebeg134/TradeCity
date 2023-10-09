@@ -12,7 +12,7 @@ namespace TradeCity.Units.Resources.Workforce
 
         public override string GetName()
         {
-            return "Workforce";
+            return "Town";
         }
 
         public override string GetResourcePath()

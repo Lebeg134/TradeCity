@@ -14,6 +14,7 @@ using TradeCity.Units.Structures.ConstructionIndustry;
 using TradeCity.Units.Structures.EnergySector;
 using TradeCity.Units.Structures.Lands;
 using TradeCity.Units.Structures.OilIndustry;
+using TradeCity.Units.Structures.Town;
 
 namespace TradeCity.Engine.Session.Templates
 {

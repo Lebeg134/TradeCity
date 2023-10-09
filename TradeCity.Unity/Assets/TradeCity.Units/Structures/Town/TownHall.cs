@@ -1,23 +1,19 @@
-/**
- * @(#) FireStation.cs
- */
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Structures;
 
-namespace TradeCity.Units.Structures.EnergySector
+namespace TradeCity.Units.Structures.Common
 {
-    public class FireStation: Building
+    public class TownHall: Building
     {
         public override string GetName()
         {
-            return "Fire Station";
+            return "Town Hall";
         }
 
         public override Branches GetBranch()
         {
-            return Branches.Workforce;
+            return Branches.Town;
         }
 
         protected override int GetMaxLevel()

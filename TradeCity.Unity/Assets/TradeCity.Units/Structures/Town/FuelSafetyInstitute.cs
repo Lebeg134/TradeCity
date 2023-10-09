@@ -1,5 +1,5 @@
 /**
- * @(#) GasSafetyInstitute.cs
+ * @(#) FuelSafetyInstitute.cs
  */
 
 using System.Collections.Generic;
@@ -9,16 +9,16 @@ using TradeCity.Engine.Structures.Interfaces;
 
 namespace TradeCity.Units.Structures.EnergySector
 {
-    public class GasSafetyInstitute : SpecialBuilding
+    public class FuelSafetyInstitute :SpecialBuilding
     {
         public override string GetName()
         {
-            return "Gas Safety Institute";
+            return "Fuel Safety Institute";
         }
 
         public override Branches GetBranch()
         {
-            return Branches.Workforce;
+            return Branches.Town;
         }
 
         public override List<Resource> GetUpkeep()

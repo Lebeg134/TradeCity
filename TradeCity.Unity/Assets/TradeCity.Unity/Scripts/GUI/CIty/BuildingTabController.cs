@@ -43,7 +43,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             _constructionBranch.onClick.AddListener(() => Switch(Branches.Construction));
             _energyBranch.onClick.AddListener(() => Switch(Branches.Energy));
             _oilBranch.onClick.AddListener(() => Switch(Branches.Oil));
-            _workforceBranch.onClick.AddListener(() => Switch(Branches.Workforce));
+            _workforceBranch.onClick.AddListener(() => Switch(Branches.Town));
         }
 
         private void Start()
@@ -103,7 +103,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
                 Branches.Construction => _constructionBranch,
                 Branches.Energy => _energyBranch,
                 Branches.Oil => _oilBranch,
-                Branches.Workforce => _workforceBranch,
+                Branches.Town => _workforceBranch,
                 _ => null
             };
         }

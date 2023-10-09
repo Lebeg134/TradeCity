@@ -9,7 +9,7 @@ using TradeCity.Units.Resources.ConstructionIndustry;
 using TradeCity.Units.Resources.EnergySector;
 using TradeCity.Units.Resources.Workforce;
 
-namespace TradeCity.Units.Structures.ConstructionIndustry
+namespace TradeCity.Units.Structures.Common
 {
     [Serializable]
     public class Lumberyard : Building

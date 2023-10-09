@@ -19,7 +19,7 @@ namespace TradeCity.Units.Structures.OilIndustry
 
         public override Branches GetBranch()
         {
-            return Branches.Oil;
+            return Branches.Workforce;
         }
 
         public override List<Resource> GetCost()

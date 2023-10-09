@@ -18,7 +18,7 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
 
         public override Branches GetBranch()
         {
-            return Branches.Construction;
+            return Branches.Workforce;
         }
 
         public override List<Resource> GetUpkeep()

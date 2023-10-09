@@ -17,7 +17,7 @@ namespace TradeCity.Units.Structures.EnergySector
 
         public override Branches GetBranch()
         {
-            return Branches.Energy;
+            return Branches.Workforce;
         }
 
         protected override int GetMaxLevel()

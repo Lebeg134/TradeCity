@@ -48,7 +48,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
         private void Start()
         {
-            Switch(Branches.Construction);
+            Switch(Branches.Town);
         }
 
         private void OnDestroy()

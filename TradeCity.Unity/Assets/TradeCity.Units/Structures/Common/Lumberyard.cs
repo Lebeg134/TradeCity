@@ -16,7 +16,9 @@ namespace TradeCity.Units.Structures.Common
     {
         public Lumberyard()
         {
-            Recipes.Add(new ManyToOneRecipe(new List<Resource> { new Electricity(1), new Wood(10) }, new Lumber(5), 5));
+            Recipes.Add(new ManyToOneRecipe(
+                new List<Resource> { new Electricity(1), new Wood(10) }, 
+                new Lumber(5), 5));
         }
 
         public override string GetName()
@@ -34,14 +36,10 @@ namespace TradeCity.Units.Structures.Common
             return new List<IOwnable>();
         }
 
-        
-
         protected override int GetMaxLevel()
         {
             return 20;
         }
-
-        
 
         public override List<Resource> GetProduce()
         {

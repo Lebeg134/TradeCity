@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using AutSoft.UnitySupplements.EventBus;
+using Injecter;
+using TradeCity.Engine.Core;
 using TradeCity.Engine.Production;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
@@ -12,7 +14,7 @@ namespace TradeCity.Engine.Structures
     public abstract class Building : CommonStructure, IOwnable, IBuilding
     {
         protected List<Recipe> _recipes = new();
-        
+
         public BuildingState BuildingState
         {
             get
@@ -28,24 +30,21 @@ namespace TradeCity.Engine.Structures
 
         public void Build(Player by)
         {
-            if (CanBuild(by))
-            {
-                by.SubRes(GetCost(0));
-                by.GiveStructure(this);
-                _level = 1;
-                var buildings = "{ ";
-                by.GetAllBuildings().ForEach(building => buildings += building.GetName() + ", ");
-                Acquire(by);
-                _eventBus.Invoke(new BuildingBuilt(this, by));
-                if (BuildingState == BuildingState.Maxlevel)
-                    _eventBus.Invoke(new StructureMaxLevelReached(this));
-            }
+            if (!CanBuild(by)) return;
+
+            by.SubRes(GetCost(0));
+            by.GiveStructure(this);
+            _level = 1;
+            Acquire(by);
+            _eventBus.Invoke(new BuildingBuilt(this, by));
+            if (BuildingState == BuildingState.Maxlevel)
+                _eventBus.Invoke(new StructureMaxLevelReached(this));
+            _eventBus.Subscribe<Structure.StructureStateChanged>(HandleStructureChange);
         }
 
         public bool CanBuild(Player by)
         {
-            if (BuildingState != BuildingState.Build) return false;
-            return CheckCriteria(by);
+            return BuildingState == BuildingState.Build && CheckCriteria(by);
         }
 
         public virtual List<Resource> GetUpkeep()
@@ -92,6 +91,17 @@ namespace TradeCity.Engine.Structures
         protected override string GetBasePath()
         {
             return base.GetBasePath() + "Building/";
+        }
+        private void HandleStructureChange(StructureStateChanged message)
+        {
+            foreach (var criteria in GetCriteria())
+            {
+                if (criteria is not Structure criteriaStructure) continue;
+                if (criteriaStructure == message.Subject && !message.NewState)
+                {
+                    IsOn = false;
+                }
+            }
         }
 
         public class BuildingBuilt:IEvent

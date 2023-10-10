@@ -1,15 +1,17 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Text;
 using System.Text.Json;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Networking;
 
 namespace TradeCity.Unity.Scripts.Leaderboard
 {
-    public class WebScorePoster: MonoBehaviour
+    public class WebService: MonoBehaviour
     {
         private const string Url = "http://localhost:8080";
 
-        private Score SendScore(Score score)
+        public Score PostScore(Score score)
         {
             WWWForm form = new WWWForm();
             form.AddField("key", score.GetSecret());
@@ -24,6 +26,11 @@ namespace TradeCity.Unity.Scripts.Leaderboard
                 }
             }
             return score;
+        }
+
+        public List<Score> GetScores()
+        {
+            return new List<Score>();
         }
     }
 }

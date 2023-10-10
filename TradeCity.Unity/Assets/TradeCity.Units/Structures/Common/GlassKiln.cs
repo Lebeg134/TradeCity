@@ -7,6 +7,7 @@ using TradeCity.Engine.Structures.Interfaces;
 using TradeCity.Units.Resources.ConstructionIndustry;
 using TradeCity.Units.Resources.EnergySector;
 using TradeCity.Units.Resources.Workforce;
+using TradeCity.Units.Structures.Town;
 
 namespace TradeCity.Units.Structures.Common
 {

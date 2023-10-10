@@ -7,7 +7,7 @@ using TradeCity.Units.Resources.Common;
 using TradeCity.Units.Resources.ConstructionIndustry;
 using TradeCity.Units.Resources.EnergySector;
 
-namespace TradeCity.Units.Structures.Common
+namespace TradeCity.Units.Structures.Town
 {
     [Serializable]
     public class CraftsmanHq : SpecialBuilding

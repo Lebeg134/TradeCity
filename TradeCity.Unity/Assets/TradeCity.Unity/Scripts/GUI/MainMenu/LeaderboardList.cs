@@ -26,7 +26,6 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
 
         protected override void Start()
         {
-            base.Start();
             _loadingText.gameObject.SetActive(true);
             _loadFailText.gameObject.SetActive(false);
             StartCoroutine(_webService.GetScores(HandleResponse, HandleError));
@@ -37,7 +36,6 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
             _scores = scores;
             _loadingText.gameObject.SetActive(false);
             Refresh();
-
         }
 
         private void HandleError()

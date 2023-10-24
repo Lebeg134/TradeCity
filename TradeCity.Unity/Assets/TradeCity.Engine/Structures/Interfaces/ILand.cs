@@ -11,7 +11,7 @@ namespace TradeCity.Engine.Structures.Interfaces
         event Action<Land> OnPurchase;
         Land GetNew();
         public void Purchase(Player by);
-        int GetStartingPrice();
+        Resource GetStartingCost();
         List<Resource> GetProduce();
     }
 }

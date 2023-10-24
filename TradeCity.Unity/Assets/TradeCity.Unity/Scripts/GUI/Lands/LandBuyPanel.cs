@@ -4,6 +4,7 @@ using Injecter;
 using TMPro;
 using TradeCity.Engine.Core;
 using TradeCity.Engine.Core.Interfaces;
+using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Units.Resources.Common;
@@ -23,7 +24,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
         [SerializeField] private Button _buyButton = default!;
 
         private Land _watched;
-        private Money _price;
+        private Resource _price;
 
         private void Awake()
         {
@@ -45,20 +46,25 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
         private void Update()
         {
             var player = _playerService.CurrentPlayer;
-            _buyButton.enabled = !player.HasStructure(_watched) && player.HasResource(_price);
+            if (player.HasStructure(_watched))
+            {
+                Hide();
+                return;
+            }
+            _buyButton.enabled = player.HasResource(_price);
         }
 
         private void OnClicked()
         {
-            _playerService.CurrentPlayer.SubRes(_price);
-            _watched.Acquire(_playerService.CurrentPlayer);
+            var player = _playerService.CurrentPlayer;
+            _watched.Purchase(player);
             Hide();
         }
 
         public void Display(Land watchLand)
         {
             _watched = watchLand;
-            _price = new Money(_watched.GetStartingPrice());
+            _price = _watched.GetStartingCost();
 
             _nameText.text = _watched.GetName();
             _costDisplay.Watched = _price;

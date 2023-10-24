@@ -9,8 +9,6 @@ using TradeCity.Engine.Structures;
 using TradeCity.Unity.Scripts.GUI.ResourceDisplays;
 using UnityEngine;
 using UnityEngine.UI;
-using static TradeCity.Engine.Structures.CommonStructure;
-using static UnityEngine.GraphicsBuffer;
 
 namespace TradeCity.Unity.Scripts.GUI.Lands
 {
@@ -54,7 +52,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
 
         private void OnStructureUpgraded(CommonStructure.StructureUpgraded message)
         {
-            
+            UpdateVisuals();
         }
 
         private void OnUpgradeClicked()

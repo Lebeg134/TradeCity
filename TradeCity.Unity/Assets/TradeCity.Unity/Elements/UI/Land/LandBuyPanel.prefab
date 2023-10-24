@@ -363,7 +363,7 @@ MonoBehaviour:
   _sprite: {fileID: 6729643710128436729}
   _nameText: {fileID: 4564463533595626760}
   _costDisplay: {fileID: 7066633752963416202}
-  _buyButton: {fileID: 0}
+  _buyButton: {fileID: 6347005759824382417}
 --- !u!1 &7714392547265072340
 GameObject:
   m_ObjectHideFlags: 0

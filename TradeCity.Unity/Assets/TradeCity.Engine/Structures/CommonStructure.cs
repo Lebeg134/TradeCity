@@ -20,7 +20,7 @@ namespace TradeCity.Engine.Structures
 
         public virtual void Acquire(Player by)
         {
-            //Possibility to transfer ownership?, can implement later if needed
+            //TODO if want to make transfers
             _owner = by;
         }
 

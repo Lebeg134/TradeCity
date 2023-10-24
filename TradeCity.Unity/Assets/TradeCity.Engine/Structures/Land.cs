@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TradeCity.Engine.Core;
 using TradeCity.Engine.Map;
 using TradeCity.Engine.Resources;
@@ -27,7 +28,11 @@ namespace TradeCity.Engine.Structures
 
         public void Purchase(Player by)
         {
-            Acquire(by);
+
+            if (!by.CheckResources(GetCost(0))) throw new Resource.NotEnoughResourceException();
+
+            by.SubRes(GetCost(0));
+            by.GiveStructure(this);
         }
 
         public void Register()
@@ -39,10 +44,13 @@ namespace TradeCity.Engine.Structures
         {
             _owner.GiveRes(GetProduce());
         }
-
+        
         public abstract Land GetNew();
 
-        public abstract int GetStartingPrice();
+        public virtual Resource GetStartingCost()
+        {
+            return GetCost(0).FirstOrDefault();
+        }
 
         public bool IsAuctionable()
         {
@@ -51,7 +59,7 @@ namespace TradeCity.Engine.Structures
 
         public virtual Resource GetUpgradeCost()
         {
-            return GetUpgradeCost(_level);
+            return GetCost(_level).FirstOrDefault();
         }
 
         protected override int GetMaxLevel()
@@ -71,7 +79,5 @@ namespace TradeCity.Engine.Structures
         {
             return base.GetBasePath() + "Land/";
         }
-
-        protected abstract Resource GetUpgradeCost(int level);
     }
 }

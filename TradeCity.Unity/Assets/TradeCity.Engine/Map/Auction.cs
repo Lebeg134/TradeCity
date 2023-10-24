@@ -21,8 +21,10 @@ namespace TradeCity.Engine.Map
 
         public Auction(Land subject, int minBid, int timePerRound, Player? initiator = null)
         {
+            throw new NotImplementedException();
             _subject = subject;
-            _currentPrice = subject.GetStartingPrice();
+            //TODO
+            //_currentPrice = subject.GetStartingCost();
             _minBid = minBid;
             _timeRemaining = timePerRound;
             _timePerRound = timePerRound;

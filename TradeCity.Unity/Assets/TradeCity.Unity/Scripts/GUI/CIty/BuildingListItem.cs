@@ -22,11 +22,14 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
         [SerializeField] private Image _buildingImage = default!;
         [SerializeField] private TMP_Text _buildingName = default!;
         [SerializeField] private Button _buildButton = default!;
+        [SerializeField] private Button _thisButton= default!;
         [SerializeField] private TMP_Text _levelText = default!;
         [SerializeField] private HorizontalLayoutGroup _costsList = default!;
         [SerializeField] private GameObject _costDisplayPrefab = default!;
 
-        private Building? _target;
+        private Building? _watched;
+        private BuildingDetailsPanel? _detailsPanel;
+
 
         private void Awake()
         {
@@ -38,27 +41,29 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             this.CheckSerializedField(_levelText, nameof(_levelText));
             this.CheckSerializedField(_costsList, nameof(_costsList));
             this.CheckSerializedField(_costDisplayPrefab, nameof(_costDisplayPrefab));
+            this.CheckSerializedField(_thisButton, nameof(_thisButton));
 
         }
 
         private void Start()
         {
-            if (_target == null) return;
-            _buildingName.text = _target.GetName();
+            if (_watched == null) return;
+            _buildingName.text = _watched.GetName();
 
-            var loadedSprite = Resources.Load<Sprite>(_target.GetResourcePath());
+            var loadedSprite = Resources.Load<Sprite>(_watched.GetResourcePath());
             if (loadedSprite != null)
                 _buildingImage.sprite = loadedSprite;
 
-            _levelText.text = "Lvl:" + (_target).Level;
+            _levelText.text = "Lvl:" + (_watched).Level;
 
             UpdateCostDisplay();
             _buildButton.onClick.AddListener(OnClick);
+            _thisButton.onClick.AddListener(ShowDetails);
         }
 
         private void Update()
         {
-            if (_target == null) return;
+            if (_watched == null) return;
             UpdateButton();
         }
 
@@ -67,23 +72,28 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             _buildButton.onClick.RemoveListener(OnClick);
         }
 
-        public void SetTarget(Building target)
+        public void SetWatched(Building watched)
         {
-            _target = target;
+            _watched = watched;
+        }
+
+        public void SetPanel(BuildingDetailsPanel panel)
+        {
+            _detailsPanel = panel;
         }
 
         private void OnClick()
         {
-            if (_target == null) throw new InvalidOperationException();
-            switch (_target.BuildingState)
+            if (_watched == null) throw new InvalidOperationException();
+            switch (_watched.BuildingState)
             {
                 case BuildingState.Build:
-                    _target.Build(_playerService.CurrentPlayer);
+                    _watched.Build(_playerService.CurrentPlayer);
                     break;
                 case BuildingState.Upgrade:
-                    if (_playerService.CurrentPlayer.HasStructure(_target))
+                    if (_playerService.CurrentPlayer.HasStructure(_watched))
                     {
-                        _target.Upgrade();
+                        _watched.Upgrade();
                     }
                     break;
                 case BuildingState.Maxlevel:
@@ -92,28 +102,34 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-            _levelText.text = "Lvl:" + _target.Level;
+            _levelText.text = "Lvl:" + _watched.Level;
             UpdateButton();
             UpdateCostDisplay();
+        }
+        private void ShowDetails()
+        {
+            if (_detailsPanel == null) return;
+            _detailsPanel.SetWatched(_watched);
+            _detailsPanel.gameObject.SetActive(true);
         }
 
         private void UpdateButton()
         {
-            if (_target == null)
+            if (_watched == null)
             {
                 _buildButton.GetComponentInChildren<Text>().text = "null";
                 _buildButton.interactable = false;
                 return;
             }
-            switch (_target.BuildingState)
+            switch (_watched.BuildingState)
             {
                 case BuildingState.Build:
                     _buildButton.GetComponentInChildren<Text>().text = "Build";
-                    _buildButton.interactable = _target.CanBuild(_playerService.CurrentPlayer);
+                    _buildButton.interactable = _watched.CanBuild(_playerService.CurrentPlayer);
                     break;
                 case BuildingState.Upgrade:
                     _buildButton.GetComponentInChildren<Text>().text = "Upgrade";
-                    _buildButton.interactable = _target.CanUpgrade();
+                    _buildButton.interactable = _watched.CanUpgrade();
                     break;
                 case BuildingState.Maxlevel:
                     _buildButton.GetComponentInChildren<Text>().text = "Maxed";
@@ -132,8 +148,8 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
                 Destroy(child.gameObject);
             }
 
-            if (_target == null) return;
-            foreach (var res in _target.GetCost())
+            if (_watched == null) return;
+            foreach (var res in _watched.GetCost())
             {
                 var listItem = Instantiate(_costDisplayPrefab);
                 listItem.GetComponent<ResourceDisplay>().Watched = res;

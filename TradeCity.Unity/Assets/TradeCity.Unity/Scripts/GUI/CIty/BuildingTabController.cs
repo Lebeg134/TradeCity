@@ -23,6 +23,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
         [SerializeField] private Button _workforceBranch = default!;
         [SerializeField] private GameObject _content = default!;
         [SerializeField] private GameObject _buildingListItemPrefab = default!;
+        [SerializeField] private BuildingDetailsPanel _detailsPanel = default!;
 
         private Branches _active = Branches.Common;
 
@@ -38,6 +39,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             this.CheckSerializedField(_workforceBranch, nameof(_workforceBranch));
             this.CheckSerializedField(_content, nameof(_content));
             this.CheckSerializedField(_buildingListItemPrefab, nameof(_buildingListItemPrefab));
+            this.CheckSerializedField(_detailsPanel, nameof(_detailsPanel));
 
             _commonBranch.onClick.AddListener(() => Switch(Branches.Common));
             _constructionBranch.onClick.AddListener(() => Switch(Branches.Construction));
@@ -75,7 +77,9 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
         private void RegisterBuilding(Building building)
         {
             var listItem = Instantiate(_buildingListItemPrefab);
-            listItem.GetComponent<BuildingListItem>().SetTarget(building);
+            var component = listItem.GetComponent<BuildingListItem>();
+            component.SetWatched(building);
+            component.SetPanel(_detailsPanel);
             listItem.transform.SetParent(_content.transform);
         }
 

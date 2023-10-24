@@ -39,9 +39,9 @@ namespace TradeCity.Engine.Session.Templates
         }
 
 
-        public ICollection<ILand> AllLands()
+        public ICollection<Land> AllLands()
         {
-            return new List<ILand>
+            return new List<Land>
             {
                 new ClearwaterLake(),
                 new Well(),

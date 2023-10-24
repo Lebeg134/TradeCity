@@ -12,8 +12,6 @@ namespace TradeCity.Engine.Structures
     [Serializable]
     public abstract class Land : CommonStructure, ILand
     {
-        protected const int _defaultMaxLevel = 100;
-
         public event Action<Land> OnPurchase;
 
         public override void Acquire(Player by)
@@ -44,33 +42,27 @@ namespace TradeCity.Engine.Structures
 
         public abstract Land GetNew();
 
-        //public abstract List<Resource> GetStartingCost();
-        public List<Resource> GetStartingCost()
-        {
-            //TODO!!
-            throw new NotImplementedException();
-        }
+        public abstract int GetStartingPrice();
 
         public bool IsAuctionable()
         {
             return _owner == null;
         }
 
-        public int GetStartingPrice()
+        public virtual Resource GetUpgradeCost()
         {
-            //TODO replace!!
-            return 100;
+            return GetUpgradeCost(_level);
         }
 
         protected override int GetMaxLevel()
         {
-            return _defaultMaxLevel;
+            //Infinite Upgrade
+            return -1;
         }
 
         public override Branches GetBranch()
         {
-            //TODO replace!!
-            throw new NotImplementedException();
+            return Branches.Common;
         }
 
         protected abstract List<Resource> GetProduce(int level);
@@ -79,5 +71,7 @@ namespace TradeCity.Engine.Structures
         {
             return base.GetBasePath() + "Land/";
         }
+
+        protected abstract Resource GetUpgradeCost(int level);
     }
 }

@@ -1,10 +1,12 @@
 #nullable enable
 using System;
+using AutSoft.UnitySupplements.EventBus;
 using AutSoft.UnitySupplements.Vitamins;
 using Injecter;
 using TMPro;
 using TradeCity.Engine.Core;
 using TradeCity.Engine.Core.Interfaces;
+using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Engine.Structures.Interfaces;
 using TradeCity.Unity.Scripts.GUI.ResourceDisplays;
@@ -15,8 +17,8 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 {
     public class BuildingListItem : MonoBehaviour
     {
-        [Inject] private IPlayerService _playerService = default!; 
-        
+        [Inject] private IPlayerService _playerService = default!;
+
         [SerializeField] private Image _buildingImage = default!;
         [SerializeField] private TMP_Text _buildingName = default!;
         [SerializeField] private Button _buildButton = default!;
@@ -36,6 +38,7 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             this.CheckSerializedField(_levelText, nameof(_levelText));
             this.CheckSerializedField(_costsList, nameof(_costsList));
             this.CheckSerializedField(_costDisplayPrefab, nameof(_costDisplayPrefab));
+
         }
 
         private void Start()

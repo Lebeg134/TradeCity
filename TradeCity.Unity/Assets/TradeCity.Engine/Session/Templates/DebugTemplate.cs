@@ -15,7 +15,7 @@ namespace TradeCity.Engine.Session
             throw new NotImplementedException();
         }
 
-        public ICollection<ILand> AllLands()
+        public ICollection<Land> AllLands()
         {
             throw new NotImplementedException();
         }

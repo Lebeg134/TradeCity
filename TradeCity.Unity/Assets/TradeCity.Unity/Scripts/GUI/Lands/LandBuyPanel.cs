@@ -1,4 +1,5 @@
-﻿using AutSoft.UnitySupplements.Vitamins;
+﻿using AutSoft.UnitySupplements.EventBus;
+using AutSoft.UnitySupplements.Vitamins;
 using Injecter;
 using TMPro;
 using TradeCity.Engine.Core;
@@ -38,12 +39,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
 
         private void Start()
         {
-            _nameText.text = _watched.GetName();
-            _costDisplay.Watched = _price;
-
-            var loadedSprite = Resources.Load<Sprite>(_watched.GetResourcePath());
-            if (loadedSprite != null)
-                _sprite.sprite = loadedSprite;
+            Display(_watched);
         }
 
         private void Update()
@@ -56,12 +52,21 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
         {
             _playerService.CurrentPlayer.SubRes(_price);
             _watched.Acquire(_playerService.CurrentPlayer);
+            Hide();
         }
 
         public void Display(Land watchLand)
         {
             _watched = watchLand;
             _price = new Money(_watched.GetStartingPrice());
+
+            _nameText.text = _watched.GetName();
+            _costDisplay.Watched = _price;
+
+            var loadedSprite = Resources.Load<Sprite>(_watched.GetResourcePath());
+            if (loadedSprite != null)
+                _sprite.sprite = loadedSprite;
+
             gameObject.SetActive(true);
         }
 

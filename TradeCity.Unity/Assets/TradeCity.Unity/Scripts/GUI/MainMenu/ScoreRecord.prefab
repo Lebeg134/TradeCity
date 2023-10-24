@@ -354,6 +354,7 @@ GameObject:
   - component: {fileID: 596907546713446412}
   - component: {fileID: 5969093654190667799}
   - component: {fileID: 4914948717300456931}
+  - component: {fileID: 5137544871405715780}
   m_Layer: 5
   m_Name: ScoreRecord
   m_TagString: Untagged
@@ -421,3 +422,17 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5137544871405715780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8565039222630610438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fbd4fe965a2014a8486e650bd59463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _userNameDisplay: {fileID: 2080479444358295889}
+  _scoreDisplay: {fileID: 4571278073588769193}

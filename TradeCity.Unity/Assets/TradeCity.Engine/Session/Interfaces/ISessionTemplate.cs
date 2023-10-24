@@ -9,7 +9,7 @@ namespace TradeCity.Engine.Session.Interfaces
     public interface ISessionTemplate
     {
         public ICollection<Resource> AllResources();
-        public ICollection<ILand> AllLands();
+        public ICollection<Land> AllLands();
         public ICollection<Building> AllBuildings();
         public ICollection<Mission> AllMissions();
         public ICollection<Resource> StartingResources();

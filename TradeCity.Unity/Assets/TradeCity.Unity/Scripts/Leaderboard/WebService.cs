@@ -15,29 +15,28 @@ namespace TradeCity.Unity.Scripts.Leaderboard
 
         public Score PostScore(Score score)
         {
-            WWWForm form = new WWWForm();
+            var form = new WWWForm();
             form.AddField("key", score.GetSecret());
-            string jsonString = JsonSerializer.Serialize(score);
-            using (UnityWebRequest request = UnityWebRequest.PostWwwForm(Url, jsonString))
-            {
-                request.SendWebRequest();
+            var jsonString = JsonSerializer.Serialize(score);
+            using var request = UnityWebRequest.PostWwwForm(Url, jsonString);
+            request.SendWebRequest();
 
-                if (request.error != null)
-                {
-                    //TODO
-                }
+            if (request.error != null)
+            {
+                //TODO
             }
+
             return score;
         }
 
         public IEnumerator GetScores(Action<List<Score>> callback, Action error)
         {
             var items = new List<Score>();
-            using (UnityWebRequest webRequest = UnityWebRequest.Get(Url + "/scores"))
+            using (var webRequest = UnityWebRequest.Get(Url + "/scores"))
             {
                 yield return webRequest.SendWebRequest();
                 
-                if (webRequest.error == null)
+                if (webRequest.error != null)
                 {
                     error();
                 }

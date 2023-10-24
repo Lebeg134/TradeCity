@@ -17,7 +17,7 @@ namespace TradeCity.Units.Structures.Common
         public GlassKiln()
         {
             Recipes.Add(new ManyToOneRecipe(
-                new List<Resource> { new Electricity(1), new Sand(1) }, 
+                new List<Resource> { new Electricity(1), new Sand(10) }, 
                 new Glass(1), 10));
         }
 
@@ -38,16 +38,6 @@ namespace TradeCity.Units.Structures.Common
         protected override int GetMaxLevel()
         {
             return 10;
-        }
-        
-        public override List<Resource> GetProduce()
-        {
-            return new List<Resource> { new Glass(5 * _level) };
-        }
-
-        protected override List<Resource> GetUpkeep(int level)
-        {
-            return new List<Resource> { new Sand(25 * level), new Electricity(25 * level) };
         }
 
         protected override List<Resource> GetCost(int level)

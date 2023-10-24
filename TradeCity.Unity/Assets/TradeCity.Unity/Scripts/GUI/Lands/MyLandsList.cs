@@ -32,7 +32,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
 
         protected override void ProcessListItem(Land item, OwnedLandVisual newListItem)
         {
-            newListItem.Watched = item;
+            newListItem.SetWatched(item);
         }
     }
 }

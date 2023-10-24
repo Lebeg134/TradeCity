@@ -9,6 +9,7 @@ using TradeCity.Engine.Missions;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Session.Interfaces;
 using TradeCity.Engine.Structures;
+using TradeCity.Engine.Structures.Interfaces;
 using TradeCity.Engine.TimeManager;
 using static TradeCity.Engine.Session.Player;
 
@@ -27,6 +28,8 @@ namespace TradeCity.Engine.Session
 
         public bool Debug { get; protected set; }
         public string Name;
+        
+
         public IEnumerable<Mission> Missions { get; set; }
 
         private readonly List<Player> _players;
@@ -105,6 +108,11 @@ namespace TradeCity.Engine.Session
         public IEnumerable<Building> GetAllBuildings()
         {
             return _template.AllBuildings();
+        }
+
+        public IEnumerable<Land> GetAllLands()
+        {
+            return _template.AllLands();
         }
 
         public sealed class SessionStarted : IEvent

@@ -1,28 +1,38 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using AutSoft.UnitySupplements.EventBus;
 using AutSoft.UnitySupplements.Vitamins;
 using Injecter;
-using Mono.Cecil;
 using TradeCity.Engine.Core;
+using TradeCity.Engine.Core.Interfaces;
+using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
-using TradeCity.Units.Structures.Lands;
-using TradeCity.Unity.Scripts.World_Elements.Raycasting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace TradeCity.Unity.Scripts.World_Elements.Lands
 {
-    public class CampaignLandPrefab : MonoBehaviour, IRaycastTarget
+    public class CampaignLandPrefab : MonoBehaviour, IPointerClickHandler
     {
         [Inject] private IEventBus _eventBus;
+        [Inject] private IPlayerService _playerService;
+        [Inject] private ISessionService _sessionService;
 
         [SerializeField] private List<GameObject> _showGameObjects = default!;
         [SerializeField] private List<GameObject> _hideGameObjects = default!;
+        [SerializeField] private String _initName;
 
         private Land _focusLand;
 
         private void Awake()
         {
             _eventBus = EngineCore.InjectEventBus();
+            _playerService = EngineCore.InjectPlayerService();
+            _sessionService = EngineCore.InjectSessionService();
+
+            _focusLand = _sessionService.CurrentSession
+                .GetAllLands().FirstOrDefault(land => land.GetName() == _initName);
         }
 
         public void SetFocus(Land land)
@@ -44,11 +54,21 @@ namespace TradeCity.Unity.Scripts.World_Elements.Lands
             }
         }
 
-        public void OnClick(Raycaster raycaster)
+        public void OnPointerClick(PointerEventData eventData)
         {
-            Debug.Log("clicked on gameObject: "+this);
-            
+            _eventBus.Invoke(new LandClicked(_focusLand, _playerService.CurrentPlayer));
+        }
 
+        public class LandClicked : IEvent
+        {
+            public LandClicked(Land land, Player byPlayer)
+            {
+                Land = land;
+                Player = byPlayer;
+            }
+
+            public Land Land { get; }
+            public Player Player { get; }
         }
     }
 }

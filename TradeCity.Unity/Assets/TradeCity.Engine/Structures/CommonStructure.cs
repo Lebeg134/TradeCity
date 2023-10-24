@@ -36,6 +36,8 @@ namespace TradeCity.Engine.Structures
 
         public bool CanUpgrade()
         {
+            if (MaxLevel == -1) 
+                return CheckCriteria(_owner, _level);
             return _level < MaxLevel && CheckCriteria(_owner, _level);
         }
 

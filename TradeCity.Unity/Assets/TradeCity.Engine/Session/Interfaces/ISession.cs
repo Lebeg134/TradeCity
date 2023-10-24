@@ -2,6 +2,7 @@
 using TradeCity.Engine.Missions;
 using TradeCity.Engine.Resources;
 using TradeCity.Engine.Structures;
+using TradeCity.Engine.Structures.Interfaces;
 using TradeCity.Engine.TimeManager;
 
 namespace TradeCity.Engine.Session.Interfaces
@@ -15,6 +16,7 @@ namespace TradeCity.Engine.Session.Interfaces
         public Player GetFirstPlayer();
         IEnumerable<Resource> GetResourceList();
         IEnumerable<Building> GetAllBuildings();
+        IEnumerable<Land> GetAllLands();
         IEnumerable<Mission> Missions { get; set; }
         void Save();
     }

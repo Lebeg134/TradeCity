@@ -40,6 +40,11 @@ namespace TradeCity.Engine.Core
             return CurrentSession == null ? new List<Building>() : CurrentSession.GetAllBuildings();
         }
 
+        public IEnumerable<Land> GetAllLands()
+        {
+            return CurrentSession == null ? new List<Land>() : CurrentSession.GetAllLands();
+        }
+
         public void Load(string name)
         {
             Stream stream = File.OpenRead(SavePath + name);

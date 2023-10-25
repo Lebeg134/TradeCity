@@ -28,7 +28,7 @@ namespace TradeCity.Units.Structures.Common
 
         public override Branches GetBranch()
         {
-            return Branches.Construction;
+            return Branches.Common;
         }
 
         public override List<IOwnable> GetCriteria()

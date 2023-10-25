@@ -65,7 +65,6 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
 
         public void Display(Land watchLand)
         {
-            Debug.Log("Recieved: " + _watched.GetName());
             _watched = watchLand;
             _price = _watched.GetStartingCost();
 

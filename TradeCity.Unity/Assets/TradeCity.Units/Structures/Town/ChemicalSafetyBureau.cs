@@ -32,9 +32,6 @@ namespace TradeCity.Units.Structures.OilIndustry
             return new List<IOwnable>();
         }
 
-        
-
-        
 
         public override List<Resource> GetUpkeep()
         {

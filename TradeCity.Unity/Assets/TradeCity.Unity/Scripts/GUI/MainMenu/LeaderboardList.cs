@@ -5,6 +5,7 @@ using AutSoft.UnitySupplements.Vitamins;
 using TMPro;
 using TradeCity.Unity.Scripts.Leaderboard;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace TradeCity.Unity.Scripts.GUI.MainMenu
 {
@@ -13,6 +14,7 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
         [SerializeField] private WebService _webService = default!;
         [SerializeField] private TMP_Text _loadingText = default!;
         [SerializeField] private TMP_Text _loadFailText = default!;
+        [SerializeField] private Button _refreshButton = default!;
 
         private List<Score> _scores;
 
@@ -22,9 +24,17 @@ namespace TradeCity.Unity.Scripts.GUI.MainMenu
             this.CheckSerializedField(_webService, nameof(_webService));
             this.CheckSerializedField(_loadingText, nameof(_loadingText));
             this.CheckSerializedField(_loadFailText, nameof(_loadFailText));
+            this.CheckSerializedField(_refreshButton, nameof(_refreshButton));
+
+            _refreshButton.onClick.AddListener(Load);
         }
 
         protected override void Start()
+        {
+            Load();
+        }
+
+        private void Load()
         {
             _loadingText.gameObject.SetActive(true);
             _loadFailText.gameObject.SetActive(false);

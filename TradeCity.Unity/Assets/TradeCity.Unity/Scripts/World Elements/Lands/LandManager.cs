@@ -14,6 +14,8 @@ namespace TradeCity.Unity.Scripts.World_Elements.Lands
 
         [SerializeField] private LandBuyPanel _landBuyPanel = default!;
 
+        private CampaignLandPrefab.LandClicked _storedEvent = null;
+
         private void Awake()
         {
             _eventBus = EngineCore.InjectEventBus();
@@ -22,19 +24,29 @@ namespace TradeCity.Unity.Scripts.World_Elements.Lands
 
 
 
-            _eventBus.SubscribeWeak<CampaignLandPrefab.LandClicked>(this, OnLandClicked);
+            _eventBus.SubscribeWeak<CampaignLandPrefab.LandClicked>(this, QueueEvent);
+        }
+
+        private void QueueEvent(CampaignLandPrefab.LandClicked message)
+        {
+            _storedEvent = message;
+        }
+
+        private void Update()
+        {
+            if (_storedEvent == null) return;
+            OnLandClicked(_storedEvent);
+            _storedEvent=null;
         }
 
         private void OnLandClicked(CampaignLandPrefab.LandClicked message)
         {
-            Debug.Log("Recieved: "+ message.Land.GetName());
             var player = message.Player;
             var land = message.Land;
 
             if (player.HasStructure(land))
             {
-                //TODO highlight in Land list
-                Debug.Log("Already Has: " + message.Land.GetName());
+                //TODO highlight in Land list ?
                 return;
             }
 

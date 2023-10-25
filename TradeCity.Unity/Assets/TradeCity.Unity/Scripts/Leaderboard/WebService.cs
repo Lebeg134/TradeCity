@@ -32,7 +32,7 @@ namespace TradeCity.Unity.Scripts.Leaderboard
         public IEnumerator GetScores(Action<List<Score>> callback, Action error)
         {
             var items = new List<Score>();
-            using (var webRequest = UnityWebRequest.Get(Url + "/scores"))
+            using (var webRequest = UnityWebRequest.Get(Url + "/leaderboard"))
             {
                 yield return webRequest.SendWebRequest();
                 

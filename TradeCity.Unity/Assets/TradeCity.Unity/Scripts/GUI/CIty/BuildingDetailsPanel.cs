@@ -1,4 +1,6 @@
-﻿using AutSoft.UnitySupplements.Vitamins;
+﻿using AutSoft.UnitySupplements.EventBus;
+using AutSoft.UnitySupplements.Vitamins;
+using Injecter;
 using TMPro;
 using TradeCity.Engine.Structures;
 using UnityEngine;
@@ -8,6 +10,8 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 {
     public class BuildingDetailsPanel : MonoBehaviour
     {
+        [Inject] private IEventBus _eventBus;
+
         [SerializeField] private TMP_Text _name;
         [SerializeField] private TMP_Text _description;
         [SerializeField] private Toggle _operating;
@@ -39,7 +43,10 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
 
         private void UpdatePanel()
         {
-            //TODO
+            _name.text = _watched.GetName();
+            _description.text = _watched.GetName() + " and more";
+            _requirements.text = _watched.GetName() + " and requirements";
+
         }
     }
 }

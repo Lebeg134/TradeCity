@@ -16,7 +16,7 @@ namespace TradeCity.Unity.Scripts.GUI.ResourceDisplays
     {
         [SerializeField] private Image _upIndicator = default!;
         [SerializeField] private Image _downIndicator = default!;
-        [SerializeField] private float _indicatorTimeShown = 0.75f;
+        [SerializeField] private float _indicatorTimeShown = 1.2f;
 
         private float _currentIndicatorTime;
         private int _prevAmount = 0;

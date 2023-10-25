@@ -9,6 +9,7 @@ using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using TradeCity.Units.Resources.Common;
 using TradeCity.Unity.Scripts.GUI.ResourceDisplays;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -40,6 +41,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
 
         private void Start()
         {
+            if (_watched == null) return;
             Display(_watched);
         }
 
@@ -63,6 +65,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
 
         public void Display(Land watchLand)
         {
+            Debug.Log("Recieved: " + _watched.GetName());
             _watched = watchLand;
             _price = _watched.GetStartingCost();
 
@@ -72,7 +75,7 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
             var loadedSprite = Resources.Load<Sprite>(_watched.GetResourcePath());
             if (loadedSprite != null)
                 _sprite.sprite = loadedSprite;
-
+            Debug.Log("Activating: " + _watched.GetName());
             gameObject.SetActive(true);
         }
 

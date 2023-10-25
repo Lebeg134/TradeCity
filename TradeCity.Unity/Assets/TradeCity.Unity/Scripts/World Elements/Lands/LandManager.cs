@@ -27,12 +27,14 @@ namespace TradeCity.Unity.Scripts.World_Elements.Lands
 
         private void OnLandClicked(CampaignLandPrefab.LandClicked message)
         {
+            Debug.Log("Recieved: "+ message.Land.GetName());
             var player = message.Player;
             var land = message.Land;
 
             if (player.HasStructure(land))
             {
                 //TODO highlight in Land list
+                Debug.Log("Already Has: " + message.Land.GetName());
                 return;
             }
 

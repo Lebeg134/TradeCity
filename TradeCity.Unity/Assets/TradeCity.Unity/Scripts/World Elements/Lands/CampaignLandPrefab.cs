@@ -2,18 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutSoft.UnitySupplements.EventBus;
-using AutSoft.UnitySupplements.Vitamins;
 using Injecter;
 using TradeCity.Engine.Core;
 using TradeCity.Engine.Core.Interfaces;
 using TradeCity.Engine.Session;
 using TradeCity.Engine.Structures;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace TradeCity.Unity.Scripts.World_Elements.Lands
 {
-    public class CampaignLandPrefab : MonoBehaviour, IPointerClickHandler
+    public class CampaignLandPrefab : MonoBehaviour
     {
         [Inject] private IEventBus _eventBus;
         [Inject] private IPlayerService _playerService;
@@ -35,6 +33,12 @@ namespace TradeCity.Unity.Scripts.World_Elements.Lands
                 .GetAllLands().FirstOrDefault(land => land.GetName() == _initName);
         }
 
+        public void OnMouseDown()
+        {
+            Debug.Log(_focusLand.GetName());
+            _eventBus.Invoke(new LandClicked(_focusLand, _playerService.CurrentPlayer));
+        }
+
         public void SetFocus(Land land)
         {
             _focusLand = land;
@@ -53,11 +57,7 @@ namespace TradeCity.Unity.Scripts.World_Elements.Lands
                 _hideGameObjects[i].SetActive(i >= level);
             }
         }
-
-        public void OnPointerClick(PointerEventData eventData)
-        {
-            _eventBus.Invoke(new LandClicked(_focusLand, _playerService.CurrentPlayer));
-        }
+        
 
         public class LandClicked : IEvent
         {

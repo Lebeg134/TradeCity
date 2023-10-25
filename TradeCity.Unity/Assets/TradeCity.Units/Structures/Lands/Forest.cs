@@ -60,7 +60,7 @@ namespace TradeCity.Units.Structures.Lands
 
         protected override List<Resource> GetCost(int level)
         {
-            throw new NotImplementedException();
+            return new List<Resource> { new Money(100 * level + 100) };
         }
     }
 }

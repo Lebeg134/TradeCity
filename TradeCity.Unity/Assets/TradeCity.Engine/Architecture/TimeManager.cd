@@ -1,21 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="TradeCity.Engine.TimeManager.Clock" Collapsed="true">
-    <Position X="8" Y="2.25" Width="1.5" />
+  <Class Name="TradeCity.Engine.TimeManager.Clock">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <NestedTypes>
+      <Class Name="TradeCity.Engine.TimeManager.Clock.ClockStopped" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\TradeCity.Engine\TimeManager\Clock.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="TradeCity.Engine.TimeManager.Clock.ClockStarted" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\TradeCity.Engine\TimeManager\Clock.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAkAAAEACAgAQAAAAEAABAAAAABABAAQQAAAABAUAA=</HashCode>
+      <HashCode>AAAgAAAEACAgAAAAAAEABBAAAAABABAAAQAAEABAQAA=</HashCode>
       <FileName>Assets\TradeCity.Engine\TimeManager\Clock.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="TradeCity.Engine.TimeManager.ITickable" Collapsed="true">
-    <Position X="8" Y="3.5" Width="1.5" />
+  <Interface Name="TradeCity.Engine.TimeManager.ITickable">
+    <Position X="6" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAQAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>Assets\TradeCity.Engine\TimeManager\ITickable.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="TradeCity.Engine.TimeManager.Speed" Collapsed="true">
-    <Position X="8" Y="4.5" Width="1.5" />
+  <Enum Name="TradeCity.Engine.TimeManager.Speed">
+    <Position X="7.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAIAAAAAAAAAAAABAA=</HashCode>
       <FileName>Assets\TradeCity.Engine\TimeManager\Clock.cs</FileName>

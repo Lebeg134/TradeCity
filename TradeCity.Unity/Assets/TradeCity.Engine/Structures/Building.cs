@@ -62,16 +62,6 @@ namespace TradeCity.Engine.Structures
             return GetCriteria(_level);
         }
 
-        public void PutResources(List<Resource> resources)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual List<Resource> GetProduce()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Tick()
         {
 
@@ -80,7 +70,7 @@ namespace TradeCity.Engine.Structures
         public void Register()
         {
             //cannot register directly
-            throw new NotImplementedException();
+            throw new InvalidOperationException();
         }
 
         protected virtual List<Resource> GetUpkeep(int level)

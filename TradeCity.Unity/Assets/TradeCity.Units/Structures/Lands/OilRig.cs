@@ -27,7 +27,7 @@ namespace TradeCity.Units.Structures.Lands
 
         protected override List<Resource> GetProduce(int level)
         {
-            return new List<Resource> { new Oil(20) };
+            return new List<Resource> { new Oil(20 * level), new Gas(50*level) };
         }
 
         protected override List<Resource> GetCost(int level)

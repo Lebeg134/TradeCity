@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="TradeCity.Engine.Resources.ContinousResource" Collapsed="true">
+  <Class Name="TradeCity.Engine.Resources.ContinuousResource" Collapsed="true">
     <Position X="9" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIgAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAQAA=</HashCode>
-      <FileName>Assets\TradeCity.Engine\Resources\ContinousResource.cs</FileName>
+      <FileName>Assets\TradeCity.Engine\Resources\ContinuousResource.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TradeCity.Engine.Resources.LimitResource" Collapsed="true">
@@ -28,7 +28,21 @@
       <HashCode>AgAAAAAAIAAAAAAAgAAAAAAAAAAAAIAQAAAAAAAAAAA=</HashCode>
       <FileName>Assets\TradeCity.Engine\Resources\StandardResource.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Orientation="Right" Position="0.1" />
+  </Class>
+  <Class Name="TradeCity.Units.Resources.Common.Iron" Collapsed="true">
+    <Position X="11.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\TradeCity.Units\Resources\Common\Iron.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TradeCity.Units.Resources.Common.Money" Collapsed="true">
+    <Position X="13.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\TradeCity.Units\Resources\Common\Money.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

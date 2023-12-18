@@ -35,7 +35,6 @@ namespace TradeCity.Unity.Scripts.World_Elements.Lands
 
         public void OnMouseDown()
         {
-            Debug.Log(_focusLand.GetName());
             _eventBus.Invoke(new LandClicked(_focusLand, _playerService.CurrentPlayer));
         }
 

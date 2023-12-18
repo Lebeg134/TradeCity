@@ -25,10 +25,17 @@ namespace TradeCity.Engine.Production
         public void Produce(List<IProducer> producers)
         {
             List<Recipe> recipes = new();
-            foreach (var producer in producers.Where(producer => producer is not Building { IsOn: false }))
+            foreach (var producer in producers)
+            {
+                if (producer is Building building && (!building.IsOn || building.Level == 0))
+                    continue;
                 recipes.AddRange(producer.Recipes);
+            }
 
-            foreach (var playerRes in _owner.GetAllRes()) DistributeResources(playerRes, recipes);
+            foreach (var playerRes in _owner.GetAllRes())
+            {
+                DistributeResources(playerRes, recipes);
+            }
 
             _outBuffer.Clear();
             foreach (var resList in recipes.Select(recipe => recipe.Produce()))
@@ -41,12 +48,17 @@ namespace TradeCity.Engine.Production
         private void DistributeResources(Resource resource, List<Recipe> recipes)
         {
             if (_owner.HasResource(resource.GetNewResource(SumResFromRecipes(resource, recipes))))
+            {
+
                 DistributionStrategy.DistributeDefault(resource, recipes);
+            }
             else
+            {
                 DistStrategy.Distribute(resource, recipes);
+            }
         }
 
-        private int SumResFromRecipes(Resource resource, List<Recipe> recipes)
+        private int SumResFromRecipes(Resource resource, IEnumerable<Recipe> recipes)
         {
             return (from recipe in recipes
                     from res in recipe.Input

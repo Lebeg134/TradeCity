@@ -50,18 +50,6 @@ namespace TradeCity.Units.Structures.OilIndustry
             return 10;
         }
 
-        
-
-        public override List<Resource> GetProduce()
-        {
-            return new List<Resource> { new Fuel(2 * _level * _level), new Chemicals(4 * _level * _level) };
-        }
-
-        protected override List<Resource> GetUpkeep(int level)
-        {
-            return new List<Resource> { new Oil(30 * level * level), new Electricity(26 * level * level) };
-        }
-
         protected override List<Resource> GetCost(int level)
         {
             if (level == 0)

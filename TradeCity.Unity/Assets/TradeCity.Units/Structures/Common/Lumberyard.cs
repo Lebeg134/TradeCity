@@ -16,9 +16,9 @@ namespace TradeCity.Units.Structures.Common
     {
         public Lumberyard()
         {
-            Recipes.Add(new ManyToOneRecipe(
-                new List<Resource> { new Electricity(1), new Wood(10) }, 
-                new Lumber(5), 5));
+            Recipes.Add(new SimpleRecipe(
+                new Wood(10), 
+                new Lumber(5), 10));
         }
 
         public override string GetName()
@@ -39,16 +39,6 @@ namespace TradeCity.Units.Structures.Common
         protected override int GetMaxLevel()
         {
             return 20;
-        }
-
-        public override List<Resource> GetProduce()
-        {
-            return new List<Resource> { new Lumber(_level * 2) };
-        }
-
-        protected override List<Resource> GetUpkeep(int level)
-        {
-            return new List<Resource> { new Wood(3 * level), new Electricity(2 * level) };
         }
 
         protected override List<Resource> GetCost(int level)

@@ -26,6 +26,8 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
         [SerializeField] private TMP_Text _levelText = default!;
         [SerializeField] private HorizontalLayoutGroup _costsList = default!;
         [SerializeField] private GameObject _costDisplayPrefab = default!;
+        [SerializeField] private GameObject _onIndicator = default!;
+        [SerializeField] private GameObject _offIndicator = default!;
 
         private Building? _watched;
         private BuildingDetailsPanel? _detailsPanel;
@@ -42,6 +44,8 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
             this.CheckSerializedField(_costsList, nameof(_costsList));
             this.CheckSerializedField(_costDisplayPrefab, nameof(_costDisplayPrefab));
             this.CheckSerializedField(_thisButton, nameof(_thisButton));
+            this.CheckSerializedField(_onIndicator, nameof(_onIndicator));
+            this.CheckSerializedField(_offIndicator, nameof(_offIndicator));
 
         }
 
@@ -65,6 +69,9 @@ namespace TradeCity.Unity.Scripts.GUI.CIty
         {
             if (_watched == null) return;
             UpdateButton();
+            if (_watched.BuildingState == BuildingState.Build) return;
+            _onIndicator.gameObject.SetActive(_watched.IsOn);
+            _offIndicator.gameObject.SetActive(!_watched.IsOn);
         }
 
         private void OnDestroy()

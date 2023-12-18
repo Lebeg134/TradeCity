@@ -74,7 +74,6 @@ namespace TradeCity.Unity.Scripts.GUI.Lands
             var loadedSprite = Resources.Load<Sprite>(_watched.GetResourcePath());
             if (loadedSprite != null)
                 _sprite.sprite = loadedSprite;
-            Debug.Log("Activating: " + _watched.GetName());
             gameObject.SetActive(true);
         }
 

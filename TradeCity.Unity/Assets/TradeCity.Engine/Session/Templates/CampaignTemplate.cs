@@ -25,7 +25,7 @@ namespace TradeCity.Engine.Session.Templates
             return new List<Building>
             {
                 // Common
-                new SteelForge(),
+                new SteelForge(), new TownHall(), new Bank(),
                 // Construction Industry
                 new ConcreteMixingPlant(), new GlassKiln(), new Lumberyard(), new StoneCutter(), new InsulationFactory(), new ReinforcedConcretePackager(),
                 // Construction Specials
@@ -73,7 +73,7 @@ namespace TradeCity.Engine.Session.Templates
                 new Bricks(0), new Concrete(0), new Glass(0), new Insulation(0), new Lumber(0),
                 new ReinforcedConcrete(0), new Sand(0), new Stone(0),
                 new Electricity(0), new Coal(0),
-                new Chemicals(0), new Fuel(0), new Ink(0), new Kerosine(0), new Oil(0), new Paint(0), new Plastic(0),
+                new Chemicals(0), new Fuel(0), new Ink(0), new Kerosine(0), new Oil(0), new Paint(0), new Plastic(0), new Gas(0),
                 workforce
             };
             return template;

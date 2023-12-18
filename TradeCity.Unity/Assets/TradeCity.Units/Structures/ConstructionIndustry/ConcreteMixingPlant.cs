@@ -34,24 +34,11 @@ namespace TradeCity.Units.Structures.ConstructionIndustry
             return new List<IOwnable>();
         }
 
-        
-
         protected override int GetMaxLevel()
         {
             return 5;
         }
 
-        
-
-        public override List<Resource> GetProduce()
-        {
-            return new List<Resource> { new Concrete(5 * _level) };
-        }
-
-        protected override List<Resource> GetUpkeep(int level)
-        {
-            return new List<Resource> { new Water(5 * level), new Sand(15 * level), new Electricity(10 * level) };
-        }
 
         protected override List<Resource> GetCost(int level)
         {

@@ -7,7 +7,7 @@ namespace TradeCity.Engine.Structures.Interfaces
     public interface IProducer
     {
         List<Recipe> Recipes { get; }
-        void PutResources(List<Resource> resources);
-        List<Resource> GetProduce();
+        //void PutResources(List<Resource> resources);
+        //List<Resource> GetProduce();
     }
 }
